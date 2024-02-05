@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Конструкции (как получить новую топологию из уже
+существующих)</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="топология-и-топологическое-пространство.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="теорема-жордана-1.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="4"
+id="конструкции-как-получить-новую-топологию-из-уже-существующих">Конструкции
+(как получить новую топологию из уже существующих)</h1>
+<h2 data-number="4.1" id="дизъюнктивное-объединение">Дизъюнктивное
+объединение</h2>
+<div id="definition-41">
+<p><strong>Определение:</strong> (<em>дизъюнктивное объединение</em>,
+<em>несвязная сумма</em>) Пусть заданы топологии <span
+class="math inline">\(\tau_x\)</span> и <span
+class="math inline">\(\tau_y\)</span> на непересекающихся множествах
+<span class="math inline">\(X\)</span> и <span
+class="math inline">\(Y\)</span>. Тогда на множестве <span
+class="math inline">\(X \cup Y\)</span> можно задать топологию <span
+class="math inline">\(\tau_x \cup \tau_y\)</span>, то есть множество
+<span class="math inline">\(A \subset X \cup Y\)</span> открыто тогда и
+только тогда, когда оно представляется в виде объединения открытых
+множеств в топологиях <span class="math inline">\(X\)</span> и <span
+class="math inline">\(Y\)</span>.</p>
+</div>
+<p>Обозначается: <span class="math inline">\(X \sqcup Y\)</span>.</p>
+<h2 data-number="4.2" id="индуцированная-топология">Индуцированная
+топология</h2>
+<div id="definition-42">
+<p><strong>Определение:</strong> (<em>индуцированная топология</em>)
+Пусть задана топология <span class="math inline">\(\tau_x\)</span> на
+множестве <span class="math inline">\(X\)</span>. Пусть <span
+class="math inline">\(Y \subset X\)</span>. Тогда множество <span
+class="math inline">\(\tau_y = \{Y \cap U| \,\,\,\, U \in
+\tau_x\}\)</span> – топология на <span
+class="math inline">\(Y\)</span>.</p>
+</div>
+<p><strong>Пример:</strong> Отрезок с индуцированной топологией <span
+class="math inline">\(\mathbb{R}\)</span>.</p>
+<h2 data-number="4.3" id="фактор-топология">Фактор-топология</h2>
+<div id="definition-43">
+<p><strong>Определение:</strong> <em>Бинарное отношение</em> на
+множестве <span class="math inline">\(X\)</span> – это множество <span
+class="math inline">\(R \subset X \times X\)</span>. <span
+class="math inline">\((x_1, x_2) \in R, \,\,\,\, x_1, x_2 \in X\)</span>
+обозначается <span class="math inline">\(x_1Rx_2\)</span> или вместо
+<span class="math inline">\(R\)</span> можно взять любой другой символ,
+например <span class="math inline">\(x_1 \sim x_2\)</span>.</p>
+</div>
+<div id="definition-44">
+<p><strong>Определение:</strong> Бинарное отношение <span
+class="math inline">\(\sim\)</span> на множестве <span
+class="math inline">\(X\)</span> <em>отношение эквивалентности</em>,
+если <br>1. (рефлексивность) <span class="math inline">\(\forall x \in X
+\,\,\,\, x \sim x\)</span>.<br>2. (симметричность) <span
+class="math inline">\(\forall x, y \in X\)</span> если <span
+class="math inline">\(x \sim y\)</span>, то <span
+class="math inline">\(y \sim x\)</span>.<br>3. (транзитивность) <span
+class="math inline">\(\forall x, y, z \in X\)</span> если <span
+class="math inline">\(x \sim y\)</span> и <span class="math inline">\(x
+\sim z\)</span>, то <span class="math inline">\(y \sim z\)</span>.</p>
+</div>
+<div id="definition-45">
+<p><strong>Определение:</strong> Пусть на множестве <span
+class="math inline">\(X\)</span> задано отношение эквивалентности <span
+class="math inline">\(R\)</span>, <span class="math inline">\(x \in
+X\)</span>. Множество <span class="math inline">\([x]_R = \{y \in X:
+\,\,\,\, x \sim y\}\)</span> – <em>класс эквивалентности</em> элемента
+<span class="math inline">\(x\)</span>.</p>
+</div>
+<div id="definition-46">
+<p><strong>Определение:</strong> Пусть на множестве <span
+class="math inline">\(X\)</span> задано отношение эквивалентности <span
+class="math inline">\(R\)</span>. <em>Фактор-множество</em> – это
+множество всех классов эквивалентности.</p>
+</div>
+<p>Обозначается: <span class="math inline">\(X / R\)</span>.</p>
+<div id="statement-17">
+<p><strong>Утверждение:</strong> Пусть на множестве <span
+class="math inline">\(X\)</span> задано отношение эквивалентности <span
+class="math inline">\(R\)</span>. Тогда</p>
+<ol type="1">
+<li>Классы эквивалентности элементов множества <span
+class="math inline">\(X\)</span> попарно не пересекаются.</li>
+<li>Объединение всех классов эквивалентности совпадает с <span
+class="math inline">\(X\)</span>.</li>
+</ol>
+<p><em>Доказательство:</em></p>
+</div>
+<ol type="1">
+<li>Пусть <span class="math inline">\([x]_R \cap [y]_R \ne
+\varnothing\)</span>. Тогда <span class="math inline">\(\exists z \in
+[x]_R \cap [y]_R \Rightarrow z \sim x\)</span> и <span
+class="math inline">\(z \sim y \Rightarrow x \sim y \Rightarrow [x]_R =
+[y]_R\)</span>.</li>
+<li><span class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
+</ol>
+<div id="definition-47">
+<p><strong>Определение:</strong> Пусть на множестве <span
+class="math inline">\(X\)</span> задано отношение эквивалентности <span
+class="math inline">\(R\)</span>. Отображение <span
+class="math inline">\(\pi: X \to X/R, \,\,\,\, \pi: x \mapsto
+[x]_R\)</span> – <em>каноническая проекция</em> на фактор-множество.</p>
+</div>
+<div id="statement-18">
+<p><strong>Утверждение:</strong> Пусть <span
+class="math inline">\(\tau_x\)</span> топология на множестве <span
+class="math inline">\(X\)</span>. Пусть на множестве <span
+class="math inline">\(X\)</span> задано отношение эквивалентности <span
+class="math inline">\(R\)</span>. Тогда множество <span
+class="math inline">\(\tau_R = \{[x]_R \in X/R: \,\,\,\, \pi^{-1}([x]_R)
+\in \tau_x\}\)</span> – топология на <span
+class="math inline">\(X/R\)</span>.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="definition-48">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\tau_x\)</span> топология на множестве <span
+class="math inline">\(X\)</span>. Пусть на множестве <span
+class="math inline">\(X\)</span> задано отношение эквивалентности <span
+class="math inline">\(R\)</span>. <span class="math inline">\(\tau_R =
+\{[x]_R \in X/R: \,\,\,\, \pi^{-1}([x]_R) \in \tau_x\}\)</span> –
+<em>фактор-топология</em> на <span
+class="math inline">\(X/R\)</span>.</p>
+</div>
+<p>Топологическое пространство <span class="math inline">\((X/R,
+\tau_R)\)</span> – <em>фактор-пространство</em>.</p>
+<div id="lemma-2">
+<p><strong>Лемма:</strong> Пусть <span class="math inline">\((X/R,
+\tau_R)\)</span> – фактор-пространство. Тогда каноническая проекция
+<span class="math inline">\(\pi: x \mapsto [x]_R\)</span> – непрерывное
+отображение.</p>
+<p><em>Доказательство:</em> Полный прообраз открыт в <span
+class="math inline">\(X \,\,\,\,\blacksquare\)</span></p>
+</div>
+<h3 data-number="4.3.1" id="факторизация-по-подмножеству">Факторизация
+по подмножеству</h3>
+<div id="definition-49">
+<p><strong>Определение:</strong> Пусть <span class="math inline">\((X,
+\tau_x)\)</span> – топологическое пространство. <span
+class="math inline">\(A \subset X\)</span>. Определим на <span
+class="math inline">\(X\)</span> отношение эквивалентности <span
+class="math inline">\(R\)</span>: <span class="math inline">\(\forall x,
+y \in X \,\,\,\, x \sim y \Leftrightarrow x, y \in A\)</span> или <span
+class="math inline">\(x = y\)</span>.</p>
+</div>
+<p>Будем обозначать фактор-пространство <span
+class="math inline">\((X/R, \tau_R)\)</span>, так: <span
+class="math inline">\(X / A\)</span>. Такое фактор-пространство получено
+<em>факторизацией</em> по <span class="math inline">\(A\)</span>.</p>
+<h3 data-number="4.3.2" id="склеивание-пары-точек">Склеивание пары
+точек</h3>
+<div id="definition-50">
+<p><strong>Определение:</strong> Пусть <span class="math inline">\((X,
+\tau_x)\)</span> – топологическое пространство, <span
+class="math inline">\(x, y \in X\)</span>. Фактор-пространство <span
+class="math inline">\(X/{x, y}\)</span> получено <em>склеиванием пары
+точек</em> <span class="math inline">\(x\)</span> и <span
+class="math inline">\(y\)</span>.</p>
+</div>
+<h3 data-number="4.3.3" id="склеивание-концов-отрезка">Склеивание концов
+отрезка</h3>
+<div id="definition-51">
+<p><strong>Определение:</strong> Фактор-пространство <span
+class="math inline">\([a, b]/\{a, b\}\)</span> получено <em>склеиванием
+концов отрезка</em> <span class="math inline">\([a, b]\)</span>.</p>
+</div>
+<h3 data-number="4.3.4" id="букет">Букет</h3>
+<div id="definition-52">
+<p><strong>Определение:</strong> Пусть <span class="math inline">\(X
+\cap Y = \varnothing\)</span>, <span class="math inline">\((X, \tau_x),
+\,\,\,\, (Y, \tau_y)\)</span> – топологические пространства. Тогда
+фактор-пространство, полученное склеиванием точек <span
+class="math inline">\(x \in X\)</span> и <span class="math inline">\(y
+\in Y\)</span> несвязной суммы <span class="math inline">\(X \sqcup
+Y\)</span> (<span class="math inline">\((X \sqcup Y) / {x, y}\)</span>)
+– <em>букет</em> пространств <span class="math inline">\(X\)</span> и
+<span class="math inline">\(Y\)</span>.</p>
+</div>
+<h3 data-number="4.3.5" id="фактор-по-сюръекции">Фактор по
+сюръекции</h3>
+<div id="definition-53">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(X\)</span> топологическое пространство, <span
+class="math inline">\(f: X \to Y\)</span> его сюръективное отображение в
+некоторое множество <span class="math inline">\(Y\)</span>. Тогда
+множество полных прообразов <span class="math inline">\(y \in Y\)</span>
+разбивает <span class="math inline">\(X\)</span> на непересекающиеся
+классы, или что тоже самое, задает отношение эквивалентности <span
+class="math inline">\(R_f\)</span> на <span
+class="math inline">\(X\)</span>, при котором <span
+class="math inline">\(x \sim y, \,\,\,\, x, y \in X\)</span> тогда и
+только тогда, когда <span class="math inline">\(f(x) = f(y)\)</span>.
+Фактор-пространство <span class="math inline">\(X/R_f\)</span> получено
+<em>факторизацией по сюръекции</em> <span
+class="math inline">\(f\)</span>. <span class="math inline">\(X /
+R_f\)</span> обозначается <span class="math inline">\(X /
+f\)</span>.</p>
+</div>
+<h2 data-number="4.4" id="гомеоморфизм">Гомеоморфизм</h2>
+<div id="definition-54">
+<p><strong>Определение:</strong> Пусть <span class="math inline">\((X,
+\tau_x)\)</span> и <span class="math inline">\((Y, tau_y)\)</span> –
+топологические пространства. Отображение <span class="math inline">\(f:
+X \to Y\)</span> – <em>гомеоморфизм</em>, если <span
+class="math inline">\(f\)</span> взаимнооднозначно и отображения <span
+class="math inline">\(f\)</span> и <span
+class="math inline">\(f^{-1}\)</span> непрерывны.</p>
+</div>
+<div id="statement-19">
+<p><strong>Утверждение:</strong> Отношение гомеоморфности на всех
+топологических пространствах – это отношение эквивалентности.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="4.5"
+id="связность-и-линейная-связность-компоненты-связности">Связность и
+линейная связность, компоненты связности</h2>
+<div id="definition-55">
+<p><strong>Определение:</strong> Топологическое пространство <span
+class="math inline">\((X, \tau)\)</span> <em>связно</em>, если <span
+class="math inline">\(X\)</span> нельзя представить в виде объединения
+двух непустых непересекающихся открытых подмножеств <span
+class="math inline">\(X\)</span>. Если такое представление возможно, то
+пространство <span class="math inline">\((X, \tau)\)</span>
+<em>несвязно</em>.</p>
+</div>
+<div id="definition-56">
+<p><strong>Определение:</strong> Подмножество <span
+class="math inline">\(A\)</span> топологического пространства <span
+class="math inline">\((X, \tau)\)</span> <em>связно</em>, если связно
+топологическое пространство <span class="math inline">\(A\)</span> с
+топологией индуцированной из <span class="math inline">\(X\)</span>.</p>
+</div>
+<div id="statement-20">
+<p><strong>Утверждение:</strong> <span class="math inline">\([a, b]
+\subset \mathbb{R}^1\)</span> – связен.</p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\([a, b] = A
+\cup B\)</span>. Рассмотрим <span class="math inline">\(\varepsilon \ge
+0\)</span>, такие, что <span class="math inline">\(a, a + \varepsilon)
+\subset A\)</span>. Пусть <span class="math inline">\(\varepsilon_0 =
+\displaystyle \sup \{\varepsilon: [a, a + \varepsilon) \subset
+A\}\)</span>. <span class="math inline">\(\varepsilon_0 &gt; 0\)</span>,
+так как <span class="math inline">\(A\)</span> – открыто. <span
+class="math inline">\(a + \varepsilon_0 \in A\)</span>, так как <span
+class="math inline">\(A\)</span> – замкнуто. Пусть <span
+class="math inline">\(a + \varepsilon_0 \ne b\)</span>. Тогда, так как
+<span class="math inline">\(A\)</span> – открыто, <span
+class="math inline">\(\exists \delta &gt; 0: \,\,\,\, (a + \varepsilon_0
+- \delta, a + \varepsilon_0 + \delta) \subset A\)</span>. Противоречие
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="definition-57">
+<p><strong>Определение:</strong> Максимальное по включению связное
+подмножество топологического пространства <span
+class="math inline">\((X, \tau_x)\)</span> – <em>компонента
+связности</em> <span class="math inline">\(X\)</span>.</p>
+</div>
+<div id="statement-21">
+<p><strong>Утверждение:</strong> [Связные компоненты топологического
+пространства <span class="math inline">\((X, \tau_x)\)</span> попарно
+непересекаются и являются замкнутыми подмножествами в <span
+class="math inline">\(X\)</span>.</p>
+<p><em>Доказательство:</em> <a
+href="граф-определения.html#statement-0">см. утверждение</a> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h3 data-number="4.5.1" id="достаточное-условие-связности">Достаточное
+условие связности</h3>
+<div id="statement-22">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\((X,
+\tau)\)</span> – топологическое пространство. Если <span
+class="math inline">\(\forall x, y \in X \,\,\,\, \exists C_{xy} \subset
+X\)</span>, <span class="math inline">\(x, y \in C_{xy}\)</span> и <span
+class="math inline">\(C_{xy}\)</span> – связно. Тогда <span
+class="math inline">\(X\)</span> – связно.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-23">
+<p><strong>Утверждение:</strong> Образ связного подмножества <span
+class="math inline">\(U\)</span> топологического пространства <span
+class="math inline">\((X, \tau)\)</span> при непрерывном отображении
+<span class="math inline">\(f: X \to Y\)</span> связен.</p>
+<p><em>Доказательство:</em> Пусть это не так, то есть <span
+class="math inline">\(f(U) = A \cup B\)</span>, где <span
+class="math inline">\(A\)</span> и <span
+class="math inline">\(B\)</span> непустые открытые подмножества <span
+class="math inline">\(Y\)</span>. <span
+class="math inline">\(f^{-1}(A)\)</span> и <span
+class="math inline">\(f^{-1}(B)\)</span> – открытые подмножества <span
+class="math inline">\(X\)</span> по утверждению. Пусть <span
+class="math inline">\(f^{-1}(A) \cap f^{-1}(B) \ne \varnothing\)</span>.
+Тогда <span class="math inline">\(A \cap B \ne \varnothing\)</span>.
+Значит <span class="math inline">\(U = f^{-1}(A) \cup
+f^{-1}(B)\)</span>, то есть оно несвязно. Противоречие <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="corollary-2">
+<p><strong>Следствие:</strong> (Теорема Больцано-Коши) Непрерывная
+функция <span class="math inline">\(f: X \to \mathbb{R}\)</span>,
+заданная на связном топологическом пространстве <span
+class="math inline">\((X, \tau)\)</span>, принимает все промежуточные
+значения.</p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(f\)</span>
+принимает значения <span class="math inline">\(a\)</span> и <span
+class="math inline">\(b\)</span>, и не принимает значение <span
+class="math inline">\(c: \,\,\,\, a &lt; c &lt; b\)</span>. Тогда образ
+связного пространства <span class="math inline">\(X\)</span> представим
+в виде объединения <span class="math inline">\((-\infty, c) \cap
+f(X)\)</span> и <span class="math inline">\(f(X) \cap (c, +\infty)
+\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h3 data-number="4.5.2" id="линейная-связность">Линейная связность</h3>
+<div id="definition-58">
+<p><strong>Определение:</strong> <em>Непрерывная кривая</em> – это
+отображение <span class="math inline">\(\gamma: [a, b] \to X\)</span>.
+При этом говорят, что <span class="math inline">\(\gamma\)</span>
+<em>соединяет точки</em> <span class="math inline">\(\gamma(a)\)</span>
+и <span class="math inline">\(\gamma(b)\)</span>.</p>
+</div>
+<div id="definition-59">
+<p><strong>Определение:</strong> Топологическое пространство <span
+class="math inline">\((X, \tau_x)\)</span> – <em>линейно связно</em>,
+если любые две его точки можно соединить непрерывной кривой.</p>
+</div>
+<div id="definition-60">
+<p><strong>Определение:</strong> Подмножество <span
+class="math inline">\(A\)</span> топологического пространства <span
+class="math inline">\((X, \tau_x)\)</span> <em>линейно связно</em>, если
+линейно связно топологическое пространство <span
+class="math inline">\(A\)</span> с топологией индуцированной из <span
+class="math inline">\(X\)</span>.</p>
+</div>
+<div id="definition-61">
+<p><strong>Определение:</strong> Максимальное по включению линейно
+связное подмножество топологического пространства <span
+class="math inline">\((X, \tau_x)\)</span> – <em>компонента линейной
+связности</em> <span class="math inline">\(X\)</span>.</p>
+</div>
+<div id="statement-24">
+<p><strong>Утверждение:</strong> Образ линейно связного топологического
+пространства при непрерывном отображении линейно связен.</p>
+<p><em>Доказательство:</em> Композиция непрерывных отображений
+непрерывна, а следовательно будем иметь композицию <span
+class="math inline">\(\gamma: [a, b] \to X\)</span> и <span
+class="math inline">\(f: X \to Y \,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-25">
+<p><strong>Утверждение:</strong> Линейно связное топологическое
+пространство связно.</p>
+<p><em>Доказательство:</em> <a
+href="граф-определения.html#statement-3">Отрезок связен</a>, а <a
+href="топология-и-топологическое-пространство.html#statement-5">образ
+связного пространства при непрерывном отображении связен</a> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-26">
+<p><strong>Утверждение:</strong> <span class="math inline">\(\gamma,
+\gamma’, \gamma(b) = \gamma’(b) \Rightarrow \gamma +
+\gamma’\)</span></p>
+<p><strong>Утверждение:</strong><a name="statement-9"></a></p>
+<p><strong>Теорема:</strong><a name="theorem-0"></a> Зафиксируем в
+топологическом пространстве <span class="math inline">\(X\)</span> точку
+<span class="math inline">\(x_0\)</span>. Тогда <span
+class="math inline">\(X\)</span> линейно связно тогда и только тогда,
+когда любую точку пространства можно соединить непрерывной кривой с
+<span class="math inline">\(x_0\)</span>.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="4.6" id="хаусдорфовость">Хаусдорфовость</h2>
+<div id="definition-62">
+<p><strong>Определение:</strong> Топологическое пространство <span
+class="math inline">\(X\)</span> <em>хаусдорфово</em>, если для любых
+<span class="math inline">\(x, y \in X, \,\,\,\, x \ne y\)</span>
+существуют непересекающиеся окрестности <span
+class="math inline">\(U\)</span> и <span
+class="math inline">\(V\)</span>, содержащие <span
+class="math inline">\(x\)</span> и <span
+class="math inline">\(y\)</span> соответственно.</p>
+</div>
+<div id="statement-27">
+<p><strong>Утверждение:</strong> Любая метрическая топология
+хаусдорфова.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="corollary-3">
+<p><strong>Следствие:</strong> Нехаусдорфова топология не является
+метрической.</p>
+<p><em>Доказательство:</em> Мощное следствие, ничего не скажешь <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-28">
+<p><strong>Утверждение:</strong> Пусть <span
+class="math inline">\(X\)</span> хаусдорфово топологическое
+пространство. Тогда <span class="math inline">\(\forall x \in X\)</span>
+множество <span class="math inline">\(\{x\} \subset X\)</span> –
+замкнуто в <span class="math inline">\(X\)</span>.</p>
+<p><em>Доказательство:</em> Докажем, что дополнение <span
+class="math inline">\(\{x\}\)</span> открыто <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-29">
+<p><strong>Утверждение:</strong> Пусть <span
+class="math inline">\(X\)</span> – метрическое пространство. Тогда <span
+class="math inline">\(\forall x \in X\)</span> и любого замкнутого
+множества <span class="math inline">\(F \subset X: \,\,\,\, x \not\in
+F\)</span> существуют непересекающиеся окрестности, содержащие <span
+class="math inline">\(x\)</span> и <span
+class="math inline">\(F\)</span>.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="statement-30">
+<p><strong>Утверждение:</strong> У любых двух замкнутых непересекающихся
+подмножеств метричекого топологического пространства существуют
+непересекающиеся окрестности.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="definition-63">
+<p><strong>Определение:</strong> Топологическое пространство, обладающее
+свойством из <a
+href="топология-и-топологическое-пространство.html#statement-13">предыдущего
+утверждения</a> – <em>нормальное</em>.</p>
+</div>
+<h2 data-number="4.7" id="компактность">Компактность</h2>
+<div id="definition-64">
+<p><strong>Определение:</strong> <em>Открытое покрытие</em>
+топологического пространства <span class="math inline">\(X\)</span> –
+это семейство <span class="math inline">\(\{U\}_{\alpha}\)</span>
+открытых подмножеств <span class="math inline">\(X\)</span>, такое что
+<span class="math inline">\(X =
+\displaystyle\cup_{\alpha}U_{\alpha}\)</span>.<br><em>Открытое
+покрытие</em> множества <span class="math inline">\(Y \subset X\)</span>
+– это семейство <span class="math inline">\(\{U\}_{\alpha}\)</span>
+открытых подмножеств <span class="math inline">\(X\)</span>, такое что
+<span class="math inline">\(Y \subset
+\displaystyle\cup_{\alpha}U_{\alpha}\)</span>.<br> <em>Подпокрытие</em>
+– это подсемейство покрытия, само являющееся покрытием.</p>
+</div>
+<div id="definition-65">
+<p><strong>Определение:</strong> Топологическое пространство <span
+class="math inline">\(X\)</span> – <em>компактно</em>(<em>компакт</em>),
+если из любого открытого покрытия <span class="math inline">\(X\)</span>
+можно выделить конечное подпокрытие.</p>
+</div>
+<div id="statement-31">
+<p><strong>Утверждение:</strong> (теорема Бореля) <span
+class="math inline">\([a, b] \subset \mathbb{R}\)</span> компакт.</p>
+<p><em>Доказательство:</em> кажись, Подольскому было лень доказывать
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="definition-66">
+<p><strong>Определение:</strong> Подмножество метрического пространства
+<em>ограничено</em>, если содержится в некотором открытом шаре.</p>
+</div>
+<div id="theorem-3">
+<p><strong>Теорема:</strong> Множество <span class="math inline">\(A
+\subset \mathbb{R}^n\)</span> компактно <span
+class="math inline">\(\Leftrightarrow A\)</span> замкнуто и
+ограничено.</p>
+<p><em>Доказательство:</em> см. <a
+href="#https://mech-math-msu.github.io/2-semester/math-analysis/publish/lection-18.04.23#theorem-0"><span
+class="math inline">\(1\)</span></a> и <a
+href="#https://mech-math-msu.github.io/2-semester/math-analysis/publish/lection-18.04.23#theorem-1"><span
+class="math inline">\(2\)</span></a> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-32">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f: X
+\to Y\)</span> непрерывное отображение топологических пространств <span
+class="math inline">\(X\)</span> и <span
+class="math inline">\(Y\)</span>. Пусть <span
+class="math inline">\(X\)</span> компактно. Тогда <span
+class="math inline">\(f(X)\)</span> компактно.</p>
+<p><em>Доказательство:</em> Взять образ конечного подпокрытия прообраза
+покрытия <span
+class="math inline">\(f(X)\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="corollary-4">
+<p><strong>Следствие:</strong> Образ непрерывной кривой <span
+class="math inline">\(\gamma: [a, b] \to \mathbb{R}^n\)</span> компакт,
+а следовательно замкнут и ограничен.</p>
+<p>Откуда следствие? :)</p>
+<p><strong>Утверждение:</strong><a name="statement-16"></a>
+(Вейерштрасс) Пусть топологическое пространство <span
+class="math inline">\(X\)</span> компактно. Тогда непрерывная функция
+<span class="math inline">\(f: X \to \mathbb{R}\)</span>. Тогда <span
+class="math inline">\(f\)</span> ограничена и принимает свое наибольшее
+и наименьшее значение.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(X\)</span> –
+компактно, значит <a
+href="топология-и-топологическое-пространство.html#statement-15">по
+утверждению</a> <span class="math inline">\(f(X)\)</span> – компакто, то
+есть замкнуто и ограничено (<a
+href="граф-определения.html#theorem-1">см. теорему</a>). То есть <span
+class="math inline">\(f\)</span> ограничена, а так как <span
+class="math inline">\(f(X)\)</span> – замкнуто, <span
+class="math inline">\(\inf f(X)\)</span> и <span
+class="math inline">\(\sup f(X)\)</span> лежат в <span
+class="math inline">\(f(X) \,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-33">
+<p><strong>Утверждение:</strong> Замкнутое подмножество <span
+class="math inline">\(A \subset X\)</span> компактного пространства
+<span class="math inline">\(X\)</span> компактно.</p>
+<p><em>Доказательство:</em> Пусть <span
+class="math inline">\(\{U_{\alpha}\}\)</span> открытое покрытие <span
+class="math inline">\(A\)</span>. Так как <span
+class="math inline">\(A\)</span> замкнуто <span class="math inline">\(X
+\setminus A\)</span> – открыто, то есть <span
+class="math inline">\(\{U_{\alpha}\} \cup \{X \setminus A\}\)</span> –
+открытое покрытие <span class="math inline">\(X\)</span>. <span
+class="math inline">\(X\)</span> – компактно, а следовательно сущесвует
+конечное подпокрытие <span class="math inline">\(\{X \setminus A,
+U_{\alpha_1}, \ldots, U_{\alpha_k}\} \,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-34">
+<p><strong>Утверждение:</strong> Компактное подмножество <span
+class="math inline">\(A\)</span> хаусдорфова пространства <span
+class="math inline">\(X\)</span> замкнуто.</p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(x \in X
+\setminus A\)</span>. Докажем, что <span
+class="math inline">\(x\)</span> не является точкой прикосновения <span
+class="math inline">\(A\)</span>. В силу компактности <span
+class="math inline">\(A\)</span> выберем конечное покрытие <span
+class="math inline">\(A\)</span> окрестностями точек <span
+class="math inline">\(\{V(y_i)\}_{i = 1}^k\)</span>. Так как <span
+class="math inline">\(X\)</span> хаусдорфово, <span
+class="math inline">\(\forall y_i, \,\,\,\, i \in \{1, \ldots,
+k\}\,\,\,\, \exists\)</span> окерстность точки <span
+class="math inline">\(x \,\,\,\, U(x, y_i)\)</span>, такая, что <span
+class="math inline">\(U(x, y_i) \cap V(y_i) = \varnothing\)</span>.
+Пересечение окрестностей <span class="math inline">\(\displaytyle\cap_{i
+= 1}^k U(x, y_i)\)</span> – это окрестность точки <span
+class="math inline">\(x\)</span>, целиком лежащая в <span
+class="math inline">\(X \setminus A \,\,\,\,\blacksquare\)</span></p>
+</div>
+<p><strong>Упражнение:</strong><a name="exercise-0"></a> Пусть <span
+class="math inline">\(A\)</span> содержит все свои точки прикосновения.
+Докажите, что <span class="math inline">\(A\)</span> замкнуто.</p>
+<h3 data-number="4.7.1"
+id="способы-доказательства-гомеоморфности">Способы доказательства
+гомеоморфности</h3>
+<div id="statement-35">
+<p><strong>Утверждение:</strong> Непрерывное взаимнооднозначное
+отображение <span class="math inline">\(f: X \to Y\)</span> из
+компактного пространства <span class="math inline">\(X\)</span> в
+хаусдорфово пространство <span class="math inline">\(Y\)</span> –
+гомеоморфизм.</p>
+<p><em>Доказательство:</em> Необходимо доказать, что обратное
+отображение <span class="math inline">\(f^{-1}: Y \to
+X\)</span>(определено в силу взаимной однозначности) непрерывно.
+Докажем, что прообраз замкнутого множества замкнут. Тогда по утверждению
+отображение непрерывно. Пусть <span class="math inline">\(V\)</span>
+замкнутое множество в <span class="math inline">\(X\)</span>. Тогда
+<span class="math inline">\(V\)</span> – компакт <a
+href="конструкции-как-получить-новую-топологию-из-уже-существующих.html#statement-17">по
+утверждению</a>. <span class="math inline">\((f^{-1})^{-1}(V) =
+f(V)\)</span> компактно <a
+href="топология-и-топологическое-пространство.html#statement-15">по
+утверждению</a>. А <a
+href="конструкции-как-получить-новую-топологию-из-уже-существующих.html#statement-18">по
+утверждению</a> компактное подмножество хаусдорфова пространства
+замкнуто <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="theorem-4">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f: X \to
+Y\)</span> непрерывное сюръективное отображение компактного пространства
+<span class="math inline">\(X\)</span> в хаусдорфово пространство <span
+class="math inline">\(Y\)</span>. Тогда <span
+class="math inline">\(Y\)</span> гомеоморфно фактор-пространству <span
+class="math inline">\(X/f\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(\pi: X \to
+X/f\)</span> – каноническая проекция. Пусть <span
+class="math inline">\(g: X/f \to Y\)</span> переводит <span
+class="math inline">\(f^{-1}(y)\)</span> в <span
+class="math inline">\(y\)</span>. Это биекция и <span
+class="math inline">\(g\circ \pi = f\)</span>. Докажем, что <span
+class="math inline">\(g\)</span> и <span
+class="math inline">\(g^{-1}\)</span> непрерывны.</p>
+</div>
+<p>Докажем, что прообраз открытого множества при отображении <span
+class="math inline">\(g\)</span> открыт. Тогда по утверждению
+отображение <span class="math inline">\(g\)</span> непрерывно. Пусть
+<span class="math inline">\(V\)</span> открытое множество в <span
+class="math inline">\(Y\)</span>. <span
+class="math inline">\(\pi^{-1}(g^{-1}(V)) = f^{-1}(V)\)</span>, а <span
+class="math inline">\(f^{-1}(V)\)</span> открыто в <span
+class="math inline">\(X\)</span>, так как <span
+class="math inline">\(f\)</span> непрерывно (см. утверждение, а значит
+<span class="math inline">\(\pi^{-1}(g^{-1}(V))\)</span> открыт в <span
+class="math inline">\(X\)</span>, то есть <span
+class="math inline">\(g^{-1}(V)\)</span> принадлежит фактор-пространству
+<span class="math inline">\(X/f\)</span>, то есть открыто.</p>
+<p>Докажем, что прообраз замкнутого множества при отображении <span
+class="math inline">\(g^{-1}\)</span> замкнут. Тогда по утверждению
+отображение <span class="math inline">\(g^{-1}\)</span> непрерывно.
+Пусть <span class="math inline">\(V\)</span> замкнутое множество в <span
+class="math inline">\(X/f\)</span>. <span
+class="math inline">\((g^{-1})^{-1}(V) = g(V) = f(\pi^{-1}(V))\)</span>.
+<span class="math inline">\(\pi^{-1}(V)\)</span> замкнуто, так как <span
+class="math inline">\(\pi\)</span> - <a
+href="граф-определения.html#lemma-0">непрерывно</a>, а при непрерывном
+отображении полный прообраз замкнутого – замкнут. Так как <a
+href="конструкции-как-получить-новую-топологию-из-уже-существующих.html#statement-17"><span
+class="math inline">\(X\)</span> – компакт и <span
+class="math inline">\(\pi^{-1}(V)\)</span> замкнуто, <span
+class="math inline">\(\pi^{-1}(V)\)</span> – компакт</a>. <a
+href="топология-и-топологическое-пространство.html#statement-15">При
+непрерывном отображении образ компактного множества – компактен</a>, а
+значит <span class="math inline">\(f(\pi^{-1}(V))\)</span> – компакт. <a
+href="конструкции-как-получить-новую-топологию-из-уже-существующих.html#statement-18">Так
+как компактное подмножество хаусдорфова пространства замкнуто</a>, <span
+class="math inline">\(f(\pi^{-1}(V)) = (g^{-1})^{-1}(V)\)</span> –
+замкнуто <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<h2 data-number="4.8" id="локально-постоянные-функции">Локально
+постоянные функции</h2>
+<div id="definition-67">
+<p><strong>Определение:</strong> Функция <span class="math inline">\(f:
+X \to \mathbb{R}\)</span> <em>локально постоянная</em>, если для любой
+точки <span class="math inline">\(x_0 \in X\)</span> существует
+окрестность <span class="math inline">\(U(x_0)\)</span>, такая, что
+<span class="math inline">\(f\)</span> постоянна на <span
+class="math inline">\(U(x_0)\)</span>, то есть <span
+class="math inline">\(\forall x \in U(x_0) \,\,\,\, f(x) =
+f(x_0)\)</span>.</p>
+</div>
+<div id="statement-36">
+<p><strong>Утверждение:</strong> Локально постоянная функция <span
+class="math inline">\(f: X \to \mathbb{R}\)</span> непрерывна.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(\forall x_0 \in
+X \,\,\,\, \exists U(x_0)\)</span>, на которой <span
+class="math inline">\(f\)</span> постоянна, то есть <span
+class="math inline">\(f(U(x_0)) = \{f(x_0)\}\)</span>. Тогда <span
+class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists
+U(x_0): \,\,\,\, f(U(x_0)) \subset (f(x_0) - \varepsilon, f(x_0) +
+\varepsilon) \,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-37">
+<p><strong>Утверждение:</strong> Локально постоянная функция <span
+class="math inline">\(f: X \to \mathbb{R}\)</span> постоянна на каждой
+компоненте линейной связности проcтранства <span
+class="math inline">\(X\)</span>.</p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(x,
+y\)</span> две точки из компоненты линейной связности, <span
+class="math inline">\(\gamma: [a, b] \to X\)</span> – непрерывная
+кривая, соединяющая <span class="math inline">\(x\)</span> и <span
+class="math inline">\(y\)</span>. <a
+href="конструкции-как-получить-новую-топологию-из-уже-существующих.html#corollary-2">По
+следствию</a> образ <span class="math inline">\(\Gamma = \gamma([a,
+b])\)</span> – компакт. <span class="math inline">\(\forall x \in \Gamma
+\,\,\,\, \exists U(x_0)\)</span>, на которой <span
+class="math inline">\(f\)</span> постоянна. Множество всех таких
+окрестностей открытое покрытие <span
+class="math inline">\(\Gamma\)</span>, а в силу компактности <span
+class="math inline">\(\Gamma\)</span>, из него можно выделить конечное
+подпокрытие, то есть <span class="math inline">\(f\)</span> принимает на
+<span class="math inline">\(\Gamma\)</span> конечное число значений.
+Пусть <span class="math inline">\(f\)</span> принимает хотя бы <span
+class="math inline">\(2\)</span> различных значения. Тогда <span
+class="math inline">\(f\)</span> должна <a
+href="топология-и-топологическое-пространство.html#corollary-0">принимать
+все промежуточные значения</a>, которых континуум. Следовательно <span
+class="math inline">\(f\)</span> принимает одно значение на компоненте
+связности <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="4.9" id="пределы">Пределы</h2>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="топология-и-топологическое-пространство.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="теорема-жордана-1.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

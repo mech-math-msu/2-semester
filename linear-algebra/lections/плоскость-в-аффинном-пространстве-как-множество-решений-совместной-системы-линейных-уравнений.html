@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Плоскость в аффинном пространстве, как множество решений
+совместной системы линейных уравнений</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="свойства-плоскостей.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="аффинно-евклидовы-пространства.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="22"
+id="плоскость-в-аффинном-пространстве-как-множество-решений-совместной-системы-линейных-уравнений">Плоскость
+в аффинном пространстве, как множество решений совместной системы
+линейных уравнений</h1>
+<div id="statement-108">
+<p><strong>Утверждение:</strong> <span
+class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+class="math inline">\(\dim \mathbb{A} = n\)</span>.</p>
+<ol type="1">
+<li><p>Пусть дана совместная система линейных уравнений <span
+class="math inline">\((*)\)</span> с матрицей коэффицентов <span
+class="math inline">\(A\)</span>. Тогда множество ее решений совпадает с
+координатами точек некоторой плоскости <span class="math inline">\(\pi
+\subset \mathbb{A}\)</span> размерности <span class="math inline">\(n -
+\operatorname{rk} A\)</span>.</p></li>
+<li><p>Пусть дана плоскость <span class="math inline">\(\pi \subset
+\mathbb{A}\)</span>. Тогда существует совместная система линейных
+уравнений, такая, что множество ее решений совпадает с координатами
+точек <span class="math inline">\(\pi\)</span>.</p></li>
+</ol>
+<p><em>Доказательство:</em> ну, просто порассуждать <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="22.1" id="аффинные-отображения">Аффинные
+отображения</h2>
+<details>
+<summary>
+Хм
+</summary>
+Кажется, что это уже было
+</details>
+<p>Пусть <span class="math inline">\((\mathbb{A}, U)\)</span> и <span
+class="math inline">\((\mathbb{B}, W)\)</span> - аффинные
+пространства.</p>
+<div id="definition-106">
+<p><strong>Определение:</strong> <span class="math inline">\(f:
+\mathbb{A} \to \mathbb{B}\)</span> – <em>аффинное отображение</em>, если
+существует линейное отображение <span class="math inline">\(\varphi: U
+\to W\)</span>, такое, что <span
+class="math inline">\(\overline{f(x)f(y)} =
+\varphi(\overline{xy})\)</span>, при этом <span
+class="math inline">\(\varphi\)</span> – <em>линейная часть</em>
+(<em>дифференциал</em>) аффинного отображения <span
+class="math inline">\(f\)</span>.</p>
+</div>
+<div id="statement-109">
+<p><strong>Утверждение:</strong> Композиция аффинных отображений –
+аффинное отображение, линейная часть которого является композицией
+линейных частей исходных отображений.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="statement-110">
+<p><strong>Утверждение:</strong> Аффинное отображение <span
+class="math inline">\(\Phi\)</span> – биекция <span
+class="math inline">\(\Leftrightarrow\)</span> дифференциал <span
+class="math inline">\(\Phi\)</span> является биекцией соответствующих
+векторных пространств.</p>
+<p><em>Доказательство:</em> было <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="22.2" id="какая-то-муть-про-матрицы">Какая-то муть про
+матрицы</h2>
+<h2 data-number="22.3" id="аффинные-операторы">Аффинные операторы</h2>
+<div id="definition-107">
+<p><strong>Определение:</strong> <em>Аффинный оператор</em> – это
+аффинное отображение аффинного пространства <span
+class="math inline">\(\mathbb{A}\)</span> в себя.</p>
+</div>
+<div id="definition-108">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\Phi\)</span> - аффинное отображение.
+<em>Ранг</em> <span class="math inline">\(\Phi
+(\operatorname{rk}\Phi)\)</span> – это ранг матрицы линейной части <span
+class="math inline">\(\Phi\)</span>.</p>
+</div>
+<div id="definition-109">
+<p><strong>Определение:</strong> Аффинный оператор <span
+class="math inline">\(\Phi\)</span> <em>невырожден</em>, если <span
+class="math inline">\(\operatorname{rk}\Phi =
+\operatorname{rk}\mathbb{A}\)</span>.</p>
+</div>
+<div id="statement-111">
+<p><strong>Утверждение:</strong> Множество всех невырожденных операторов
+аффинного пространства <span class="math inline">\(\mathbb{A}\)</span>
+образует группу относительно композиции.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="definition-110">
+<p><strong>Определение:</strong> Эта группа обозначается <span
+class="math inline">\(\operatorname{Aff}(\mathbb{A})\)</span>.</p>
+</div>
+<div id="definition-111">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\((\mathbb{A}, V)\)</span> - аффинное пространство.
+<em>Сдвиг на вектор</em> <span class="math inline">\(v \in V\)</span> –
+это отображение <span class="math inline">\(f_v: \mathbb{A} \to
+\mathbb{A} \,\,\,\, f_v: a \mapsto a + v\)</span>.</p>
+</div>
+<div id="statement-112">
+<p><strong>Утверждение:</strong></p>
+<ol type="1">
+<li>Сдвиг на вектор – это аффинный оператор с тождественной линейной
+частью.</li>
+<li>Любой аффинный оператор с тождественной линейной частью является
+сдвигом на вектор.</li>
+</ol>
+<p><em>Доказательство:</em></p>
+<ol type="1">
+<li><span class="math inline">\(f_v(a) = a + v
+\,\,\,\,\blacksquare\)</span></li>
+<li>Пусть <span class="math inline">\(v = \overline{a\Phi(a)}
+\Rightarrow a + v = \Phi(a)\)</span>. Тогда <span
+class="math inline">\(\forall b \in \mathbb{A} \,\,\,\, \Phi(b) =
+\Phi(a) + \overline{ab} = a + v + \overline{ab} = b + v
+\,\,\,\,\blacksquare\)</span></li>
+</ol>
+</div>
+<div id="definition-112">
+<p><strong>Определение:</strong> Множество всех сдвигов на вектор
+обозначается <span
+class="math inline">\(\operatorname{tran}\mathbb{A}\)</span>.</p>
+</div>
+<div id="statement-113">
+<p><strong>Утверждение:</strong> <span
+class="math inline">\(\operatorname{tran}\mathbb{A}\)</span> подгруппа в
+группе <span
+class="math inline">\(\operatorname{Aff}(\mathbb{A})\)</span>.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="definition-113">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(a\)</span> точка аффинного пространства <span
+class="math inline">\(\mathbb{A}\)</span>. Множество всех невырожденных
+аффинных операторов <span class="math inline">\(\Phi\)</span>, таких,
+что <span class="math inline">\(\Phi(a) = a\)</span> обозначается <span
+class="math inline">\(G_a\)</span>.</p>
+</div>
+<div id="statement-114">
+<p><strong>Утверждение:</strong> (представление аффинного преобразование
+в виде композиции поворота и движения) Пусть <span
+class="math inline">\((\mathbb{A}, V)\)</span> - аффинное пространство.
+<span class="math inline">\(a \in \mathbb{A}\)</span>. <span
+class="math inline">\(\Phi\)</span> - аффинное отображение. Тогда <span
+class="math inline">\(\exists ! \Psi_a \in G_a, t_v \in
+\operatorname{tran}\mathbb{A}, t_w  \in \operatorname{tran}\mathbb{A}:
+\,\,\,\, \Phi = t_v \circ \Psi_a = \Psi_a \circ t_w\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<p>Пусть <span class="math inline">\(v = \overline{a\Phi(a)} \Rightarrow
+\Phi(a) = a + v\)</span>. Пусть <span class="math inline">\(\Psi =
+(t_{v})^{-1}\circ\Phi = t_{-v}\circ\Phi\)</span>(почему?)</p>
+<p>Докажем, что <span class="math inline">\(\Psi \in G_a \,\,\,\,
+\Psi(a) = t_{-v}(\Phi(a)) = \Phi(a) - v = a\)</span>.</p>
+<p>Имеем <span class="math inline">\(\Phi = t_v\circ \Psi\)</span></p>
+<p><span class="math inline">\(\Phi = \Psi \circ \Psi^{-1} \circ t_v
+\circ \Psi\)</span>.</p>
+<p>Докажем, что <span class="math inline">\(t_w = \Psi^{-1} \circ t_v
+\circ \Psi\)</span> – сдвиг на вектор. Дифференциал <span
+class="math inline">\(t_w\)</span> равен композиции дифференциалов <span
+class="math inline">\(\varphi^{-1}\varphi\)</span>, то есть
+тождественной линейной функции <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="22.4" id="аффинно-независимая-система-точек">Аффинно
+независимая система точек</h2>
+<div id="definition-114">
+<p><strong>Определение:</strong> Система точек <span
+class="math inline">\(a_0, a_1, \ldots, a_s\)</span> <em>аффинно
+независима</em>, если <span class="math inline">\(\dim \langle a_0, a_1,
+\ldots, a_s\rangle_A = s\)</span> (точек <span class="math inline">\(s +
+1\)</span> штука).</p>
+</div>
+<div id="statement-115">
+<p><strong>Утверждение:</strong> Система точек <span
+class="math inline">\(a_0, a_1, \ldots, a_s\)</span> аффинно независима
+<span class="math inline">\(\Leftrightarrow\)</span> векторы <span
+class="math inline">\(a_1 - a_0, \ldots, a_s - a_0\)</span> линейно
+независимы.</p>
+<p><em>Доказательство:</em></p>
+<p><span class="math display">\[\Leftarrow\]</span> <span
+class="math inline">\(\langle a_0, a_1, \ldots, a_s\rangle_A = a_0 +
+\langle a_1 - a_0, \ldots, a_s - a_0\rangle \Rightarrow \dim \langle
+a_0, a_1, \ldots, a_s\rangle_A = s \,\,\,\,\blacksquare\)</span></p>
+<p><span class="math display">\[\Rightarrow\]</span> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-116">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\((O,
+e)\)</span> - аффинная система координат. Тогда точки <span
+class="math inline">\(a_0, a_1, \ldots, a_s\)</span> с координатами
+<span class="math inline">\((x_1^0, \ldots, x_n^0), (x_1^1, \ldots,
+x_n^1), \ldots, (x_1^s, \ldots, x_n^s)\)</span> в <span
+class="math inline">\((O, e)\)</span> аффинно независимы <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(\operatorname{rk}\left(\begin{array}{ccc}x_1^0
+&amp; \ldots &amp; x_n^0\\x_1^1 &amp; \ldots &amp; x_n^1\\ &amp; \vdots
+&amp; \\x_1^s &amp; \ldots &amp; x_n^s\end{array}\right) =
+s\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<p><span
+class="math inline">\(\operatorname{rk}\left(\begin{array}{ccc}x_1^0
+&amp; \ldots &amp; x_n^0\\x_1^1 &amp; \ldots &amp; x_n^1\\ &amp; \vdots
+&amp; \\x_1^s &amp; \ldots &amp; x_n^s\end{array}\right)\)</span> – это
+количество линейно независимых векторов среди <span
+class="math inline">\(\overline{Oa_0}, \ldots, \overline{Oa_s}\)</span>.
+<span class="math inline">\(a_1 - a_0 = Oa_1 - Oa_0
+\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-117">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(a_0,
+\ldots, a_n\)</span> аффинно независимая система точек, <span
+class="math inline">\(b_0, \ldots, b_n \in \mathbb{A}\)</span>. Тогда
+<span class="math inline">\(\exists !\)</span> аффинный оператор <span
+class="math inline">\(\Phi: \mathbb{A} \to \mathbb{A}: \,\,\,\,
+\Phi(a_i) = b_i \,\,\,\, \forall i \in \{1, \ldots, n\}\)</span>,
+причем, если <span class="math inline">\(b_i\)</span> аффинно
+независимы, <span class="math inline">\(\Phi\)</span> невырожден.</p>
+<p><em>Доказательство:</em> Существует единственный линейный оператор,
+переводящий базисные векторы <span class="math inline">\(a_1 - a_0,
+\ldots, a_n - a_0\)</span> в векторы <span class="math inline">\(b_1 -
+b_0, \ldots, b_n - b_0 \,\,\,\,\blacksquare\)</span></p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="свойства-плоскостей.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="аффинно-евклидовы-пространства.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Существование жорданова базиса у линейного оператора над
+алгебраически замкнутым полем</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="аннулирующй-и-минимальный-многочлены.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="корневые-подпространства.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="10"
+id="существование-жорданова-базиса-у-линейного-оператора-над-алгебраически-замкнутым-полем">Существование
+жорданова базиса у линейного оператора над алгебраически замкнутым
+полем</h1>
+<div id="theorem-9">
+<p><strong>Теорема:</strong> Пусть <span
+class="math inline">\(V\)</span> – векторное пространство размерности
+<span class="math inline">\(n\)</span> над алгебраически замкнутым полем
+<span class="math inline">\(F\)</span>, <span
+class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
+class="math inline">\(V\)</span>. Тогда существует базис, в котором
+матрица оператора <span class="math inline">\(\mathcal{A}\)</span>
+является жордановой.</p>
+<p><em>Доказательство:</em></p>
+<p><img src="img/jordan-basis-exists.png" /></p>
+<p>Если <span class="math inline">\(\mathcal{A}\)</span> невырожден(его
+матрица невырождена), то можем рассматривать вырожденный линейный
+оператор <span class="math inline">\(\mathcal{A} - \lambda
+\mathcal{I}\)</span>, где <span class="math inline">\(\lambda\)</span> –
+собственное значение <span class="math inline">\(\mathcal{A}\)</span>
+(сущесвует, так как поле алгебраически замкнуто). Почему можно
+рассматривать такой оператор? И почему <span
+class="math inline">\(\mathcal{A} - \lambda \mathcal{I}\)</span> –
+вырожден?</p>
+<p>Если <span class="math inline">\(\ker \mathcal{A} = V\)</span>, то
+жорданова нормальная форма – нулевая матрица, и жордановым является
+любой базис. <span class="math inline">\(\mathcal{A}\)</span> –
+вырожден, а значит <span class="math inline">\(\ker \mathcal{A} \ne
+\{0\}\)</span>.(Почему?)</p>
+<p>Индукция по <span class="math inline">\(n\)</span>:</p>
+<p>Далее <span class="math inline">\(0 &lt; \dim \ker \mathcal{A} &lt;
+n\)</span>, тогда из <span class="math inline">\(\dim \ker \mathcal{A} +
+\dim \operatorname{img} \mathcal{A} = n\)</span> следует, что <span
+class="math inline">\(0 &lt; \dim \operatorname{img} \mathcal{A} &lt;
+n\)</span>, а значит по предположению индукции 🕵️‍ у <span
+class="math inline">\(\mathcal{A}_{|\operatorname{img}
+\mathcal{A}}\)</span> существует жорданова нормальная форма <span
+class="math inline">\(\operatorname{J}_{\operatorname{img}\mathcal{A}}\)</span>
+и в ней есть жордановы клетки с <span class="math inline">\(0\)</span>
+на диагонали, так как <span class="math inline">\(\mathcal{A}\)</span> –
+вырожден. (И что с того?) Пусть клеток с <span
+class="math inline">\(0\)</span> на диагонали <span
+class="math inline">\(s\)</span>. Жорданов базис матрицы <span
+class="math inline">\(\operatorname{J}_{\operatorname{img}\mathcal{A}}\)</span>
+– это объединение жордановых базисов ее клеток. Запишем жорданов базис
+для <span class="math inline">\(\mathcal{A}_{|\operatorname{img}
+\mathcal{A}}\)</span> <span class="math inline">\(e = \{e_{11}, \ldots,
+e_{1k_1}, \ldots, e_{s1}, \ldots, e_{sk_s}, \ldots, e_{s+1 1}, \ldots,
+e_{s + 1 k_{s + 1}}, e_{m1}, \ldots, e_{mk_m}\}\)</span>, где <span
+class="math inline">\(k_1, \ldots, k_m\)</span> – размеры жордановых
+клеток, <span class="math inline">\(\lambda_1 = \ldots = \lambda_s =
+0\)</span>, <span class="math inline">\(m\)</span> – количество
+жордановых клеток. Пусть <span class="math inline">\(V_0\)</span>
+подпространство в <span class="math inline">\(\operatorname{img}
+\mathcal{A}\)</span> с собственным значением ноль, имеем: <span
+class="math inline">\(V_0 = \{v \in V: \,\,\,\, \mathcal{A}(v) = 0 \cdot
+v\} = \ker \mathcal{A}\)</span>. То есть <span
+class="math inline">\(\operatorname{img} \mathcal{A} \cap \ker
+\mathcal{A} = V_0\)</span>. Размерность <span
+class="math inline">\(V_0\)</span> равна количеству клеток с <span
+class="math inline">\(0\)</span> на диагонали, то есть <span
+class="math inline">\(s\)</span>. Векторы <span
+class="math inline">\(e_{12}, \ldots, e_{s2}\)</span> линейно
+независимы, а следовательно являются базисом <span
+class="math inline">\(V_0\)</span>. Дополним <span
+class="math inline">\(e_{12}, \ldots, e_{s2}\)</span> векторами <span
+class="math inline">\(f_1, \ldots, f_q\)</span> до базиса <span
+class="math inline">\(f\)</span> подпространства <span
+class="math inline">\(\ker \mathcal{A}\)</span>. <span
+class="math display">\[\dim (\operatorname{img} \mathcal{A} \cap \ker
+\mathcal{A}) + \dim(\operatorname{img} \mathcal{A} + \ker \mathcal{A}) =
+\dim \operatorname{img} \mathcal{A} + \dim \ker \mathcal{A}\]</span>
+<span class="math display">\[\dim \operatorname{img} \mathcal{A} + \dim
+\ker \mathcal{A} = n\]</span> <span
+class="math display">\[\Downarrow\]</span> <span
+class="math display">\[\dim (\operatorname{img} \mathcal{A} + \ker
+\mathcal{A}) = n - s\]</span> Так как <span
+class="math inline">\(\operatorname{img} \mathcal{A} + \ker
+\mathcal{A}\)</span> – это линейная оболочка векторов из <span
+class="math inline">\(f\)</span> и <span
+class="math inline">\(e\)</span>, которые являются линейно независимыми,
+а следовательно базисом <span class="math inline">\(\operatorname{img}
+\mathcal{A} + \ker \mathcal{A}\)</span>, получаем, что нужно добавить
+<span class="math inline">\(s\)</span> векторов к <span
+class="math inline">\(f \cup e\)</span>, чтобы получить базис <span
+class="math inline">\(V\)</span>. Добавим векторы <span
+class="math inline">\(g = \{g_1, \ldots, g_s\}\)</span>: <span
+class="math display">\[\mathcal{A}(g_1) = e_{1k_1}\]</span> <span
+class="math display">\[\mathcal{A}(g_2) = e_{2k_2}\]</span> <span
+class="math display">\[\vdots\]</span> <span
+class="math display">\[\mathcal{A}(g_s) = e_{sk_s}\]</span> Такие
+векторы существуют, потому что <span class="math inline">\(e_{1k_1},
+\ldots, e_{sk_s}\)</span> принадлежат <span
+class="math inline">\(\operatorname{img}\mathcal{A}\)</span>.</p>
+<p>Докажем, что <span class="math inline">\(g \cup f \cup e\)</span> –
+базис в <span class="math inline">\(V\)</span>. Количество векторов
+верное, осталось доказать линейную независимость. Рассмотрим линейную
+комбинацию равную <span class="math inline">\(0\)</span>:</p>
+<p><span class="math display">\[\displaystyle \sum_{i = 1}^{s}\alpha_i
+g_i + \displaystyle \sum_{i = 1}^{q}\beta_i f_i + \displaystyle \sum_{i
+= 1}^{s}\displaystyle \sum_{j = 1}^{k_i}\gamma_{ij} e_{ij} +
+\displaystyle \sum_{i = s}^{n}\displaystyle \sum_{j =
+1}^{k_i}\gamma_{ij} e_{ij} = 0\]</span></p>
+<p>Применим к этой линейной комбинации <span
+class="math inline">\(\mathcal{A}\)</span>: <span
+class="math inline">\(0 + \displaystyle \sum_{i = 1}^{s}\alpha_i
+e_{ik_i} +\)</span> комбинация векторов <span
+class="math inline">\(e_{ij} = 0\)</span>, а так как все <span
+class="math inline">\(e_{ij}\)</span> линейно независимы, все
+коэффиценты равны <span class="math inline">\(0\)</span>.</p>
+<p>Если увеличить разверы всех клеток с <span
+class="math inline">\(0\)</span> на диагонали на <span
+class="math inline">\(1\)</span>(векторы <span
+class="math inline">\(g_1, \ldots, g_s\)</span>, дополняют базис каждой
+клетки до базиса клетки с размером на <span
+class="math inline">\(1\)</span> больше) и добавить <span
+class="math inline">\(q\)</span> клеток с <span
+class="math inline">\(0\)</span> на диагонали, то получим искомую
+жорданову нормальную форму <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="10.1"
+id="единственность-жордановой-нормальной-формы">Единственность
+жордановой нормальной формы</h2>
+<p>все так сложно</p>
+<h2 data-number="10.2"
+id="критерий-диагонализируемости-в-терминах-минимального-многочлена">Критерий
+диагонализируемости в терминах минимального многочлена</h2>
+<div id="theorem-10">
+<p><strong>Теорема:</strong> Пусть <span
+class="math inline">\(V\)</span> – конечномерное векторное пространство
+над алгебраически замкнутым полем <span
+class="math inline">\(F\)</span>, <span
+class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
+class="math inline">\(V\)</span>. Тогда <span
+class="math inline">\(\mathcal{A}\)</span> диагонализируем <span
+class="math inline">\(\Leftrightarrow\)</span> минимальный многочлен
+<span class="math inline">\(\mu_{\mathcal{A}}(t)\)</span> не имеет
+кратных корней.</p>
+<p><em>Доказательство:</em></p>
+<p><span class="math display">\[\Rightarrow\]</span> Поле алгебраически
+замкнуто, следовательно существует базис, в котором матрица <span
+class="math inline">\(\mathcal{A}\)</span> жорданова. <span
+class="math inline">\(\mu_{\mathcal{A}}(t) = \displaystyle \prod_{i =
+1}^{s}(t - \lambda_i)^k_i\)</span>, где <span
+class="math inline">\(k_i\)</span> размер жордановой клетки с <span
+class="math inline">\(\lambda_i\)</span> на диагонали. Оператор <span
+class="math inline">\(\mathcal{A}\)</span> диагонализируем,
+следовательно все клетки в жордановой нормальной форме размера <span
+class="math inline">\(1\)</span>, а значит <span
+class="math inline">\(\mu_{\mathcal{A}}\)</span> не имеет кратных
+корней. <span class="math display">\[\Leftarrow\]</span> В обратную
+сторону <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="10.3" id="подобная-матрица">Подобная матрица</h2>
+<div id="definition-42">
+<p><strong>Определение:</strong> Матрица <span class="math inline">\(A
+\in M_n(F)\)</span> <em>подобна</em> матрице <span
+class="math inline">\(B \in M_n(F)\)</span>, если <span
+class="math inline">\(\exists C \in M_n(F): \,\,\,\, A =
+C^{-1}BC\)</span>.</p>
+</div>
+<div id="corollary-4">
+<p><strong>Следствие:</strong> Любая матрица <span
+class="math inline">\(A\)</span> над алгебраически замкнутым полем
+подобна некоторой жордановой матрице.</p>
+<p><em>Доказательство:</em> По теореме существует базис в векторном
+пространстве строк, в котором матрица линейного оператора, заданного
+матрицей <span class="math inline">\(A\)</span>, жорданова. Далее по
+формуле перехода от одного базиса к другому получаем утверждение
+следствия <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="аннулирующй-и-минимальный-многочлены.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="корневые-подпространства.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

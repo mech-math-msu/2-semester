@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Топологическая классификация многогранных
+поверхностей</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="равновеликость-и-равносоставленность.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="10"
+id="топологическая-классификация-многогранных-поверхностей">Топологическая
+классификация многогранных поверхностей</h1>
+<div id="definition-121">
+<p><strong>Определение:</strong> <em>Связная многогранная
+поверхность</em> <span class="math inline">\(\mathcal{F}\)</span> в
+<span class="math inline">\(\mathbb{R}^n\)</span> – это конечное
+семейство <span class="math inline">\(\{F_i \subset
+\mathbb{R}^n\}\)</span> пространственных многоугольников
+(<em>граней</em>), для которых выполнены следующие условия:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\forall i \ne j \,\,\,\, F_i \cap
+F_j\)</span> или пусто, или состоит из одной общей для <span
+class="math inline">\(F_i\)</span> и <span
+class="math inline">\(F_j\)</span> вершины, или состоит из одного общего
+для <span class="math inline">\(F_i\)</span> и <span
+class="math inline">\(F_j\)</span> ребра <span
+class="math inline">\(e\)</span> (в этом случае грани <span
+class="math inline">\(F_i\)</span> и <span
+class="math inline">\(F_j\)</span> <em>смежны по ребру</em> <span
+class="math inline">\(e\)</span>).</p></li>
+<li><p>Для каждого ребра <span class="math inline">\(e \in F_i\)</span>
+существует не более одного многоугольника <span
+class="math inline">\(F_j \,\,\,\, j \ne i\)</span> смежного с <span
+class="math inline">\(F_i\)</span> по ребру <span
+class="math inline">\(e\)</span>.</p></li>
+<li><p>Для любых многогранников <span class="math inline">\(F_i\)</span>
+и <span class="math inline">\(F_j, \,\,\,\, i \ne j\)</span> существует
+последовательность многоугольников <span class="math inline">\(F_i =
+F_{i1}, F_{i2}, \ldots, F_{is} = F_j\)</span>, такие что <span
+class="math inline">\(\forall j \in \{1, \ldots s - 1\} \,\,\,\,
+F_{ij}\)</span> смежен с <span class="math inline">\(F_{ij+1}\)</span>
+по некоторому ребру. Такая последовательность – <em>цепочка
+многоугольников, соединяющая</em> <span
+class="math inline">\(F_i\)</span> и <span
+class="math inline">\(F_j\)</span>.</p></li>
+<li><p>Для любых двух многогранников, пересекающихся по вершине
+существует цепочка, соединяющая их, такая, что каждый из
+многоугольников, входящих в цепочку, содержит эту вершину.</p></li>
+</ol>
+<p>(Убрали требование «никакие две грани не лежат в одной
+плоскости»)</p>
+</div>
+<div id="definition-122">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F} = \{F_i\}\)</span> – многогранная
+поверхность <span class="math inline">\(\mathcal{F}\)</span> – это
+<em>вершины и ребра</em> поверхности <span
+class="math inline">\(\mathcal{F}\)</span>.</p>
+</div>
+<div id="definition-123">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F} = \{F_i\}\)</span> – многогранная
+поверхность. Вершина (ребро), принадлежащая грани, <em>инцидентна</em>
+этой грани. Ребро инцидентное ровно одной грани – <em>граничное</em>,
+иначе – <em>внутреннее</em>.<br> Если у <span
+class="math inline">\(\mathcal{F}\)</span> нет граничных ребер, то <span
+class="math inline">\(\mathcal{F}\)</span> – <em>замкнутая</em>.</p>
+</div>
+<div id="definition-124">
+<p><strong>Определение:</strong> Связная многогранная поверхность в
+<span class="math inline">\(\mathbb{R}^n\)</span> - <span
+class="math inline">\(n\)</span>-<em>мерная</em>. (хотя она в <span
+class="math inline">\(n + 1\)</span>)</p>
+</div>
+<p>Поверхность <span class="math inline">\(\mathcal{F}\)</span>
+подмножество <span class="math inline">\(\mathbb{R}^3\)</span>, поэтому
+на нем можно задать индуцированную из <span
+class="math inline">\(\mathbb{R}^3\)</span> топологию.</p>
+<p>Можно задать топологию на <span
+class="math inline">\(\mathcal{F}\)</span>, склеив по ребрам несвязную
+сумму индуцированных из плоскости топологий на гранях.</p>
+<div id="definition-125">
+<p><strong>Определение:</strong> Так как теперь в определении
+поверхности не нужно, чтобы грани не лежали в одной плоскости, можем
+разбить каждую грань на треугольники. Подученная при этом поверхность –
+<em>триангулированная</em>.</p>
+</div>
+<div id="statement-64">
+<p><strong>Утверждение:</strong> Любая связная замкнутая многогранная
+поверхность гомеоморфна некоторой поверхности, полученной из
+многоугольника склейкой его сторон.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<p><img src="img/surface.svg" width="300" height="300" /></p>
+<div id="definition-126">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F}\)</span> – связная многогранная
+поверхность. Пометим все ребра <span
+class="math inline">\(\mathcal{F}\)</span> стрелками и буквами. Будем
+обходить многогранник по его границе и записывать последовательно буквы
+ребер по правилу: если идем в направлении стрелки, то саму букву, иначе
+букву в степени <span class="math inline">\(-1\)</span>. Полученная
+последовательность букв – <em>слово склейки</em> поверхности <span
+class="math inline">\(\mathcal{F}\)</span>.</p>
+</div>
+<h2 data-number="10.1" id="модельные-поверхности">Модельные
+поверхности</h2>
+<p><strong>Обозначения:</strong></p>
+<p><span class="math inline">\(S^2\)</span> – сфера.</p>
+<p><span class="math inline">\(\mu\)</span> – пленка Мёбиуса.</p>
+<p><span class="math inline">\(D^2\)</span> – диск (круг).</p>
+<div id="definition-127">
+<p><strong>Определение:</strong> <em>Элементарные операции</em> с
+поверхностями – это: <br>1. <em>Вырезание диска</em>.<br>2.
+<em>Приклеивание ручки</em>.<br>1. <em>Вклейка пленки Мёбиуса</em>.</p>
+</div>
+<div id="definition-128">
+<p><strong>Определение:</strong> <em>Сфера с</em> <span
+class="math inline">\(g\)</span> <em>ручками</em> – это поверхность,
+полученная приклеиванием к сфере <span class="math inline">\(g\)</span>
+ручек.</p>
+<p><strong>Обозначается:</strong> <span
+class="math inline">\(M_g\)</span></p>
+</div>
+<div id="definition-129">
+<p><strong>Определение:</strong> <em>Сфера с</em> <span
+class="math inline">\(m\)</span> <em>пленками Мёбиуса</em> – это
+поверхность, полученная вклейкой в сферу <span
+class="math inline">\(m\)</span> пленок Мёбиуса.</p>
+<p><strong>Обозначается:</strong> <span
+class="math inline">\(N_m\)</span></p>
+</div>
+<p><strong>Замечание:</strong> Сфера с <span
+class="math inline">\(0\)</span> ручками – это просто сфера. Сферы с
+пленками Мёбиуса рассматриваются для <span class="math inline">\(m \ge
+1\)</span>.</p>
+<div id="statement-65">
+<p><strong>Утверждение:</strong> Слово склейки для <span
+class="math inline">\(M_g\)</span> имеет вид <span
+class="math inline">\(a_1b_1a_1^{-1}b_1^{-1}\ldots
+a_kb_ka_k^{-1}b_k^{-1}\)</span>, слово склейки для <span
+class="math inline">\(N_m\)</span> имеет вид <span
+class="math inline">\(a_1^2\ldots a_m^2\)</span>.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="definition-130">
+<p><strong>Определение:</strong> Сфера с <span
+class="math inline">\(g\)</span> ручками и сфера с <span
+class="math inline">\(m\)</span> пленками Мёбиуса – это <em>модельные
+поверхности</em>.</p>
+</div>
+<div id="theorem-16">
+<p><strong>Теорема:</strong> Каждая связная двумерная замкнутая
+многогранная поверхность гомеоморфна одной из модельных
+поверхностей.</p>
+<p><em>Доказательство:</em> куча картинок <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="10.2"
+id="ориентация-многогранных-поверхностей">Ориентация многогранных
+поверхностей</h2>
+<div id="definition-131">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F}\)</span> – связная замкнутая двумерная
+многогранная поверхность. <span class="math inline">\(F_1, \ldots,
+F_m\)</span> – ее грани. У каждой грани можно задать <em>ориентацию</em>
+(направление обхода границы или задать ориентацию плоскости, содержащей
+грань).<br> Пусть <span class="math inline">\(e\)</span> – ребро <span
+class="math inline">\(\mathcal{F}\)</span>. Оно инцидентно двум граням
+<span class="math inline">\(F_i\)</span> и <span
+class="math inline">\(F_j\)</span>, в которых задана ориентация, то есть
+на ребре <span class="math inline">\(e\)</span> указаны два направления.
+Если эти направления совпадают, то ориентации граней <span
+class="math inline">\(F_i\)</span> и <span
+class="math inline">\(F_j\)</span> – <em>согласованы</em>.</p>
+</div>
+<div id="definition-132">
+<p><strong>Определение:</strong> Многогранная поверхность
+<em>ориентирована</em>, если у каждой ее грани задана ориентация и для
+каждой пары смежных граней ориентации согласованы.<br> Семейство
+согласованных ориентаций граней – <em>ориентация
+поверхности</em>.<br>Если существует ориентация поверхности, то
+поверхность – <em>ориентируемая</em>.</p>
+</div>
+<div id="definition-133">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F}\)</span> – связная замкнутая двумерная
+многогранная поверхность. Рассмотрим замкнутую цепочку граней <span
+class="math inline">\(F_1, \ldots, F_m\)</span> (замкнутая - <span
+class="math inline">\(F_1\)</span> смежна с <span
+class="math inline">\(F_m\)</span>). Зададим на каждой грани цепочки
+ориентацию. Если ориентации <span class="math inline">\(F_1\)</span> и
+<span class="math inline">\(F_m\)</span> согласованы, то <em>цепочка
+сохраняет ориентацию</em>, в ином случае <em>цепочка обращает
+ориентацию</em>.</p>
+</div>
+<div id="statement-66">
+<p><strong>Утверждение:</strong> Связная двумерная многогранная
+поверхность <span class="math inline">\(\mathcal{F}\)</span>
+ориентируема <span class="math inline">\(\Leftrightarrow\)</span> в
+<span class="math inline">\(\mathcal{F}\)</span> нет цепочек обращающих
+ориентацию.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="statement-67">
+<p><strong>Утверждение:</strong> Поверхность, содержащая лист Мёбиуса,
+неориентируема.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="statement-68">
+<p><strong>Утверждение:</strong> Гомеоморфные многогранные поверхности
+ориентируемы или неориентируемы одновременно.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="10.3" id="эйлерова-характеристика">Эйлерова
+характеристика</h2>
+<div id="definition-134">
+<p><strong>Определение:</strong> <em>Эйлерова характеристика</em>
+многогранной поверхности – это число <span class="math inline">\(v - e +
+f\)</span>, где <span class="math inline">\(v\)</span> – число вершин,
+<span class="math inline">\(e\)</span> – число ребер и <span
+class="math inline">\(f\)</span> – число граней поверхности.</p>
+</div>
+<div id="statement-69">
+<p><strong>Утверждение:</strong> Эйлерова характеристика любых
+поверхности не зависит от разбиения на грани и не меняется при
+гомеоморфизмах.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="theorem-17">
+<p><strong>Теорема:</strong> Если многогранные поверхности гомеоморфны
+разным модельным поверхностям, то они не гомеоморфны.</p>
+<p><em>Доказательство:</em></p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="равновеликость-и-равносоставленность.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

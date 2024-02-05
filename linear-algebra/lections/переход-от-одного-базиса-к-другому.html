@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Переход от одного базиса к другому</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="векторное-пространство.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="линейные-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="3" id="переход-от-одного-базиса-к-другому">Переход от
+одного базиса к другому</h1>
+<p>Это было слишком много раз, чтобы писать заново.</p>
+<p>Матрица перехода от базиса <span class="math inline">\(e\)</span> к
+базису <span class="math inline">\(e’\)</span> обозначается <span
+class="math inline">\(C_{e \to e’}\)</span>.</p>
+<h2 data-number="3.1" id="свойства-матрицы-перехода">Свойства матрицы
+перехода</h2>
+<div id="statement-6">
+<p><strong>Утверждение:</strong> (<em>свойства матрицы
+перехода</em>)</p>
+<p>Пусть <span class="math inline">\(e, e’, e’’\)</span> – базисы в
+некотором конечномерном векторном пространстве.</p>
+<ol type="1">
+<li><span class="math inline">\(C_{e \to e’}\)</span> –
+невырождена.</li>
+<li><span class="math inline">\(C_{e \to e} = E\)</span>.</li>
+<li><span class="math inline">\(C_{e’ \to e} = C_{e \to
+e’}^{-1}\)</span>.</li>
+<li><span class="math inline">\(C_{e \to e’}\cdot C_{e’ \to e’’} = C_{e’
+\to e’’}\)</span>.</li>
+</ol>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="3.2"
+id="сумма-и-пересечение-векторных-подпространств">Сумма и пересечение
+векторных подпространств</h2>
+<div id="statement-7">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(U,
+\,\,\,\, W\)</span> подпространства векторного пространства <span
+class="math inline">\(V\)</span>. Тогда <span class="math inline">\(U
+\cap W\)</span> подпространство <span
+class="math inline">\(V\)</span>.</p>
+<p><em>Доказательство:</em> Проверим по определению.</p>
+<ol type="1">
+<li><span class="math inline">\(0\)</span> принадлежит и <span
+class="math inline">\(U\)</span>, и <span class="math inline">\(W
+\Rightarrow\)</span> принадлежит и пересечению.</li>
+<li>Пусть <span class="math inline">\(x, y \in U \cap W\)</span>, тогда
+<span class="math inline">\(x + y \in U \cap W\)</span>.</li>
+<li><span class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
+</ol>
+</div>
+<div id="definition-10">
+<p><strong>Определение:</strong> Пусть <span class="math inline">\(U,
+\,\,\,\, W\)</span> подпространства векторного пространства <span
+class="math inline">\(V\)</span>. <em>сумма</em> <span
+class="math inline">\(U + W\)</span> подпространств <span
+class="math inline">\(U\)</span> и <span
+class="math inline">\(W\)</span> – это <span class="math inline">\(U + W
+= \{u + w: \,\,\,\, u \in U, \,\,\,\, w \in W\}\)</span>.</p>
+</div>
+<div id="statement-8">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(U,
+\,\,\,\, W\)</span> подпространства векторного пространства <span
+class="math inline">\(V\)</span>. Тогда <span class="math inline">\(U +
+W\)</span> – подпространство в <span
+class="math inline">\(V\)</span>.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="theorem-3">
+<p><strong>Теорема:</strong> (<em>формула Грассмана</em>) Пусть <span
+class="math inline">\(U, \,\,\,\, W\)</span> подпространства векторного
+пространства <span class="math inline">\(V\)</span>. <span
+class="math display">\[\dim U + \dim W = \dim (U \cap W) + \dim (U +
+W)\]</span></p>
+<p><em>Доказательство:</em></p>
+<p><img src="img/vectors.png" /></p>
+<p>Пусть <span class="math inline">\(e_1, \ldots, e_k\)</span> – базис в
+<span class="math inline">\(U \cap W\)</span>,<br> <span
+class="math inline">\(e_1, \ldots, e_m\)</span> – базис в <span
+class="math inline">\(U\)</span>,<br> <span class="math inline">\(e_1,
+\ldots, e_k, e_{m + 1}, \ldots, e_{n}\)</span> – базис в <span
+class="math inline">\(W\)</span>. (<span class="math inline">\(\dim W =
+n - m + k\)</span>).</p>
+<p>Докажем, что <span class="math inline">\(e_1, \ldots, e_n\)</span> –
+базис в <span class="math inline">\(U + W\)</span>.</p>
+<ol type="1">
+<li>Любой вектор <span class="math inline">\(x \in U + W\)</span>
+представим выражается через базисы <span
+class="math inline">\(U\)</span> и <span
+class="math inline">\(W\)</span>, а следовательно через <span
+class="math inline">\(e_1, \ldots, e_n\)</span>.</li>
+<li>Докажем что эти векторы линейно независимы. Пусть <span
+class="math display">\[\underbrace{\mu_1 e_1+\ldots+\mu_k e_k}_{\vec{a}}
++ \underbrace{\mu_{k + 1} e_{k + 1} + \ldots + \mu_m e_{m}}_{\vec{b}} +
+\underbrace{\mu_{m + 1} e_{m + 1} + \ldots + \mu_n e_n}_{\vec{c}} =
+0\]</span> Поколдуем <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
+</ol>
+</div>
+<h2 data-number="3.3" id="прямая-сумма-подпространств-1">Прямая сумма
+подпространств</h2>
+<div id="definition-11">
+<p><strong>Определение:</strong> Пусть <span class="math inline">\(U,
+\,\,\,\, W\)</span> подпространства векторного пространства <span
+class="math inline">\(V\)</span>. Сумма <span class="math inline">\(U +
+W\)</span> <em>прямая</em>, если <span class="math inline">\(\forall x
+\in U + W \,\,\,\, \exists! \,\,u \in U, w \in W: \,\,\,\, u + w =
+x\)</span>.</p>
+<p>Обозначается прямая сумма так: <span class="math inline">\(U \oplus
+W\)</span>.</p>
+</div>
+<div id="statement-9">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(U,
+\,\,\,\, W\)</span> подпространства векторного пространства <span
+class="math inline">\(V\)</span>. Тогда <span class="math inline">\(U +
+W\)</span> – прямая <span class="math inline">\(\Leftrightarrow U \cap W
+= \{0\}\)</span>.</p>
+<p><em>Доказательство:</em> <span
+class="math display">\[\Rightarrow\]</span></p>
+<p>Пусть <span class="math inline">\(U \cap W \ne \{0\}\)</span>, тогда
+<span class="math inline">\(\exists x \in U \cap W\)</span>. <span
+class="math inline">\(x = x_{\in U} + 0_{\in W} = 0_{\in U} + x_{\in
+W}\)</span>, то есть существует два представления <span
+class="math inline">\(x\)</span>. противоречие.</p>
+<p><span class="math display">\[\Leftarrow\]</span> Пусть <span
+class="math inline">\(U + W\)</span> не прямая сумма, тогда <span
+class="math inline">\(\exists x \in U + W: \,\,\,\, x = u’ + w’ = u + w,
+\,\,\,\, u’, u \in U, \,\,\,\, w’, w \in W\)</span>. Значит <span
+class="math inline">\(u’ - u \in U = w - w’ \in W\)</span>, то есть
+<span class="math inline">\(U \cap W \ne \{0\}\)</span>. Противоречие
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-10">
+<p><strong>Утверждение:</strong> Сумма подпространств <span
+class="math inline">\(U = U_1 + U_2 + \ldots + U_n\)</span> – прямая
+<span class="math inline">\(\Leftrightarrow \,\,\,\, \forall i \in \{1,
+\ldots, n\} \,\,\,\, U_i \cap (U_{i + 1} + \ldots + U_n) =
+\{0\}\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<p><span class="math display">\[\Rightarrow\]</span> см. доказательство
+выше. <span class="math display">\[\Leftarrow\]</span> Пусть сумма не
+является прямой, тогда <span class="math inline">\(\exists u \in U:
+\,\,\,\, u = \Sigma u_i = \Sigma u_i’, \,\,\,\, u_i, u_i’ \in
+U\)</span>. Возьмем первую ненулевую разность <span
+class="math inline">\(u_i - u_i’\)</span> и остальное перенесем вправо:
+<span class="math inline">\(u_i - u_i’ = -u_{i + 1} + u_{i + 1}’ +
+\ldots - u_{n} + u_{n}’\)</span>. Следовательно пересечение содержит не
+только нулевой вектор. Противоречие <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="векторное-пространство.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="линейные-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

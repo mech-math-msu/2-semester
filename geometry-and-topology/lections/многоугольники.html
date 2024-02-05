@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Многоугольники</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="раскраски-плоских-графов.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="равновеликость-и-равносоставленность.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="8" id="многоугольники">Многоугольники</h1>
+<p>Пусть <span class="math inline">\(L \subset \mathbb{R}^2\)</span> –
+замкнутая ломаная без самопересечений. Тогда по теореме Жордана
+множество <span class="math inline">\(\mathbb{R}^2\setminus L\)</span>
+состоит из двух компонент линейной связности. При доказательстве теоремы
+Жордана была введена локально постоянная функция <span
+class="math inline">\(\eta\)</span>, принимающая на <span
+class="math inline">\(\mathbb{R}^2\setminus L\)</span> два значения:
+<span class="math inline">\(0\)</span> и <span
+class="math inline">\(1\)</span>. Пусть <span
+class="math inline">\(\Omega_1\)</span> – та компонента линейной
+связности <span class="math inline">\(\mathbb{R}^2\setminus L\)</span>,
+на которой <span class="math inline">\(\eta\)</span> равна <span
+class="math inline">\(1\)</span>, <span
+class="math inline">\(\Omega_0\)</span> – та компонента линейной
+связности <span class="math inline">\(\mathbb{R}^2\setminus L\)</span>,
+на которой <span class="math inline">\(\eta\)</span> равна <span
+class="math inline">\(0\)</span>.</p>
+<div id="statement-49">
+<p><strong>Утверждение:</strong> <span
+class="math inline">\(\Omega_1\)</span> – ограничено, <span
+class="math inline">\(\Omega_0\)</span> – неограничено.</p>
+<p><em>Доказательство:</em> Взять луч, который начинается “выше”
+ломаной. Плоскость без круга линейно связна <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="definition-93">
+<p><strong>Определение:</strong> Пусть <span class="math inline">\(L
+\subset \mathbb{R}^2\)</span> – замкнутая ломаная без самопересечений.
+<span class="math inline">\(F = L \cup \Omega_1\)</span> –
+<em>многоугольник</em>. (<a
+href="граф-определения.html#statement-0"><span
+class="math inline">\(\Omega_1\)</span> – ограниченная компонента <span
+class="math inline">\(\mathbb{R}^2\setminus L\)</span></a>).<br><br>
+<span class="math inline">\(\Omega_1\)</span> – <em>внутренность
+многоугольника</em> <span class="math inline">\(F\)</span>
+(Обозначается: <span class="math inline">\(\operatorname{Int}
+F\)</span>),<br> <span class="math inline">\(\Omega_0\)</span> –
+<em>внешность многоугольника</em> <span class="math inline">\(F\)</span>
+(Обозначается: <span class="math inline">\(\operatorname{Out}
+F\)</span>).<br> <span class="math inline">\(L\)</span> – <em>граница
+многоугольника</em> <span class="math inline">\(F\)</span>
+(Обозначается: <span class="math inline">\(\partial F\)</span>).</p>
+</div>
+<p><strong>Замечание:</strong> По утверждению граница многоугольника
+совпадает с топологической границей внешности и внутренности
+многоугольника.</p>
+<h2 data-number="8.1"
+id="многогранные-поверхности-и-многогранники">Многогранные поверхности и
+многогранники</h2>
+<div id="definition-94">
+<p><strong>Определение:</strong> <em>Пространственный многоугольник</em>
+– это многоугольник, построенный в аффинной плоскости <span
+class="math inline">\(\pi \subset \mathbb{R}^3\)</span>, при этом <span
+class="math inline">\(\pi\)</span> – <em>плокость
+многогранника</em>.</p>
+</div>
+<div id="definition-95">
+<p><strong>Определение:</strong> <em>Многогранная поверхность</em> <span
+class="math inline">\(\mathcal{F}\)</span> в <span
+class="math inline">\(\mathbb{R}^3\)</span> – это конечное семейство
+<span class="math inline">\(\{F_i\}\)</span> пространственных
+многоугольников (<em>граней</em>), для которых выполнены следующие
+условия:</p>
+</div>
+<ol type="1">
+<li><p><span class="math inline">\(\forall i \ne j \,\,\,\, F_i \cap
+F_j\)</span> или пусто, или состоит из одной общей для <span
+class="math inline">\(F_i\)</span> и <span
+class="math inline">\(F_j\)</span> вершины, или состоит из одного общего
+для <span class="math inline">\(F_i\)</span> и <span
+class="math inline">\(F_j\)</span> ребра <span
+class="math inline">\(e\)</span> (в этом случае грани <span
+class="math inline">\(F_i\)</span> и <span
+class="math inline">\(F_j\)</span> <em>смежны по ребру</em> <span
+class="math inline">\(e\)</span>).</p></li>
+<li><p>Для каждого ребра <span class="math inline">\(e \in F_i\)</span>
+существует не более одного многоугольника <span
+class="math inline">\(F_j \,\,\,\, j \ne i\)</span> смежного с <span
+class="math inline">\(F_i\)</span> по ребру <span
+class="math inline">\(e\)</span>.</p></li>
+<li><p>Для любых многогранников <span class="math inline">\(F_i\)</span>
+и <span class="math inline">\(F_j, \,\,\,\, i \ne j\)</span> существует
+последовательность многоугольников <span class="math inline">\(F_i =
+F_{i1}, F_{i2}, \ldots, F_{is} = F_j\)</span>, такие что <span
+class="math inline">\(\forall j \in \{1, \ldots s - 1\} \,\,\,\,
+F_{ij}\)</span> смежен с <span class="math inline">\(F_{ij+1}\)</span>
+по некоторому ребру. Такая последовательность – <em>цепочка
+многоугольников, соединяющая</em> <span
+class="math inline">\(F_i\)</span> и <span
+class="math inline">\(F_j\)</span>.</p></li>
+<li><p>Для любых двух многогранников, пересекающихся по вершине
+существует цепочка, соединяющая их, такая, что каждый из
+многоугольников, входящих в цепочку, содержит эту вершину.</p></li>
+<li><p>Никакие две грани не лежат в одной плоскости.</p></li>
+</ol>
+<div id="definition-96">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F} = \{F_i\}\)</span> – многогранная
+поверхность. Вершины и ребра граней <span
+class="math inline">\(\mathcal{F}\)</span> – это <em>вершины и
+ребра</em> поверхности <span
+class="math inline">\(\mathcal{F}\)</span>.</p>
+</div>
+<div id="definition-97">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F} = \{F_i\}\)</span> – многогранная
+поверхность. Вершина (ребро), принадлежащая грани, <em>инцидентна</em>
+этой грани. Ребро инцидентное ровно одной грани – <em>граничное</em>,
+иначе – <em>внутреннее</em>.<br> Если у <span
+class="math inline">\(\mathcal{F}\)</span> нет граничных ребер, то <span
+class="math inline">\(\mathcal{F}\)</span> – <em>замкнутая</em>.</p>
+</div>
+<div id="theorem-10">
+<p><strong>Теорема:</strong> (теорема Жордана для многогранников) Пусть
+<span class="math inline">\(\mathcal{F} \subset \mathbb{R}^3\)</span> –
+замкнутая многогранная поверхность. Тогда множество <span
+class="math inline">\(\mathbb{R}^3\setminus \mathcal{F}\)</span> состоит
+из двух открытых компонент линейной связности, причем <span
+class="math inline">\(\mathcal{F}\)</span> – граница каждой из
+компонент. Одна из этих компонент – ограниченное подмножество <span
+class="math inline">\(\mathbb{R}^3\)</span>, а другая – нет.</p>
+<p><em>Доказательство:</em> без доказательства <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="definition-98">
+<p><strong>Определение:</strong> <em>Многогранник</em> задается
+аналогично многоугольнику.</p>
+</div>
+<h2 data-number="8.2" id="графы-многогранной-поверхности">Графы
+многогранной поверхности</h2>
+<div id="definition-99">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F}\)</span> – многогранная поверхность.
+Пусть <span class="math inline">\(V\)</span> – множество его вершин,
+<span class="math inline">\(E\)</span> – множество его ребер. Тогда
+<span class="math inline">\(G = (V, E)\)</span> – простой граф,
+вложенный в <span class="math inline">\(\mathbb{R}^3\)</span>. <span
+class="math inline">\(G\)</span> – <em>граф многогранной
+поверхности</em> <span class="math inline">\(\mathcal{F}\)</span>.</p>
+</div>
+<div id="statement-50">
+<p><strong>Утверждение:</strong> (Свойства графа многогранной
+поверхности)</p>
+<p>Пусть <span class="math inline">\(\mathcal{F}\)</span> – многогранная
+поверхность, <span class="math inline">\(G\)</span> – ее граф. Тогда</p>
+<ol type="1">
+<li><span class="math inline">\(G\)</span> – простой и связный.</li>
+<li>Степень любой вершины <span class="math inline">\(v\)</span> графа
+<span class="math inline">\(G\)</span> не меньше <span
+class="math inline">\(2\)</span> и равна <span
+class="math inline">\(2\)</span>, если и только если оба выходящих из
+нее ребра – граничные.</li>
+</ol>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="definition-100">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F}\)</span> – многогранная поверхность.
+Пусть <span class="math inline">\(V’ = \{F_i\}\)</span>, <span
+class="math inline">\(E’\)</span> совпадает с множеством ребер <span
+class="math inline">\(\mathcal{F}\)</span>. Пусть <span
+class="math inline">\(\partial’(e) = \{F_i, F_j\} \Leftrightarrow
+e\)</span> является пересечением граней <span
+class="math inline">\(F_i\)</span> и <span
+class="math inline">\(F_j\)</span>. Полученный граф <span
+class="math inline">\(G = (V’, E’, \partial’)\)</span> –
+<em>двойственный граф многогранной поверхности</em>.</p>
+</div>
+<div id="statement-51">
+<p><strong>Утверждение:</strong> (свойства двойственного графа) Пусть
+<span class="math inline">\(\mathcal{F}\)</span> – замкнутая
+многогранная поверхность, <span class="math inline">\(G’\)</span> – ее
+двойственный граф. Тогда</p>
+<ol type="1">
+<li><span class="math inline">\(G’\)</span> – простой и связный.</li>
+<li><span class="math inline">\(\forall v \in V \,\,\,\,
+\operatorname{deg}v \ge 3\)</span>.</li>
+</ol>
+<div id="definition-101">
+<p><strong>Определение:</strong> Количество ребер, ограничивающих грань
+многогранной поверхности, – <em>гональность</em> или <em>степень
+грани</em>.</p>
+</div>
+<h3 data-number="8.2.1" id="выпуклые-многогранники">Выпуклые
+многогранники</h3>
+<div id="definition-102">
+<p><strong>Определение:</strong> Подмножество множества <span
+class="math inline">\(\mathbb{R}^n\)</span> – <em>выпуклое</em>, если
+вместе с любыми двумя своими точками содержит отрезок, который их
+соединяет.</p>
+</div>
+<p><strong>Утверждение:</strong><a name="statement-3"></a> Любое
+непустое пересечение выпуклых множеств – выпукло.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="theorem-11">
+<p><strong>Теорема:</strong> Многогранник <span class="math inline">\(W
+\subset \mathbb{R}^3\)</span> выпуклый <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(W\)</span> – это пересечение замкнутых
+полупространств, ограниченных плоскостями, проходящими через грани <span
+class="math inline">\(W\)</span>.</p>
+<p><em>Доказательство:</em> <span
+class="math display">\[\Leftarrow\]</span></p>
+</div>
+<p><a href="граф-определения.html#statement-3">см. утверждение</a> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="math display">\[\Rightarrow\]</span></p>
+<p><strong>Лемма 1:</strong><a name="lemma-0"></a> Любая грань
+многогранника совпадает с пересечением многогранника и плоскости,
+содержащей эту грань.</p>
+<p><em>Доказательство:</em> вода-водой <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Лемма 2:</strong><a name="lemma-1"></a> Пусть <span
+class="math inline">\(F\)</span> – грань многогранника <span
+class="math inline">\(W\)</span>, <span
+class="math inline">\(\pi\)</span> – плоскость, содержащая <span
+class="math inline">\(F\)</span>. Тогда <span
+class="math inline">\(W\)</span> целиком лежит в одном из замкнутых
+полупространств, ограниченных плоскостью <span
+class="math inline">\(\pi\)</span>.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p>Из этих лемм следует, что <span class="math inline">\(W \subset
+\displaystyle\cap_{i = 1}^s \Pi_s\)</span>, где <span
+class="math inline">\(\Pi_j\)</span> – закнутое полупространство,
+ограниченное <span class="math inline">\(\pi_j\)</span>. Докажем, что
+<span class="math inline">\(W = \displaystyle\cap_{i = 1}^s \Pi_s
+\,\,\,\,\blacksquare\)</span></p>
+<h2 data-number="8.3"
+id="планарность-графа-выпуклого-многогранника">Планарность графа
+выпуклого многогранника</h2>
+<div id="definition-103">
+<p><strong>Определение:</strong> (<em>радиальная проекция</em>)</p>
+</div>
+<div id="statement-52">
+<p><strong>Утверждение:</strong> Граф выпуклого многогранника
+планарен.</p>
+<p><em>Доказательство:</em> радиальная проекция <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="definition-104">
+<p><strong>Определение:</strong> (<em>диаграмма Шлегеля</em>)</p>
+</div>
+<div id="statement-53">
+<p><strong>Утверждение:</strong> Двойственный граф выпуклого
+многогранника планарен.</p>
+<p><em>Доказательство:</em> радиальная проекция на сферу внутри
+многогранника и утверждение про планарность графа многогранника <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="8.4" id="формула-эйлера-для-многогранников">Формула
+Эйлера для многогранников</h2>
+<div id="statement-54">
+<p><strong>Утверждение:</strong> Пусть <span
+class="math inline">\(W\)</span> – многогранник. <span
+class="math inline">\(v\)</span>, <span
+class="math inline">\(e\)</span>, <span class="math inline">\(f\)</span>
+– количество его вершин, ребер и граней соответственно. Тогда <span
+class="math display">\[v - e + f = 2\]</span></p>
+<p><em>Доказательство:</em> Следует из <a
+href="граф-определения.html#statement-4">планарности графа
+многогрнника</a> и формулы Эйлера для плоских графов <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="8.5" id="правильные-многогранники">Правильные
+многогранники</h2>
+<div id="definition-105">
+<p><strong>Определение:</strong> Многогранник <span
+class="math inline">\(W\)</span> – <em>правильный</em>, если каждая его
+вершина инцидентна одинаковому числу ребер и все двугранные углы между
+гранями равные.</p>
+</div>
+<div id="definition-106">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F} = \{F_i\}\)</span> - <span
+class="math inline">\(n\)</span>-мерный многогранник. Семейство <span
+class="math inline">\(F = \{F_0, \ldots, F_{n - 1}\}\)</span>
+<em>граней</em>(вершины, ребра – это тоже грани) многогранника –
+<em>флаг</em>, если размерность <span class="math inline">\(F_i\)</span>
+равна <span class="math inline">\(i\)</span> и <span
+class="math inline">\(F_i \subset F_{i + 1} \,\,\,\, \forall
+i\)</span>.</p>
+</div>
+<div id="definition-107">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F} = \{F_i\}\)</span> - <span
+class="math inline">\(n\)</span>-мерный многогранник. <span
+class="math inline">\(\mathcal{F}\)</span> – <em>правильный</em>, если
+для каждой пары его флагов существует движение многогранника,
+переводящее один из флагов в другой.</p>
+</div>
+<div id="definition-108">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F} = \{F_i\}\)</span> - <span
+class="math inline">\(n\)</span>-мерный многогранник. <span
+class="math inline">\(f = (k_0, \ldots, k_{n - 1})\)</span>, где <span
+class="math inline">\(k_i\)</span> – количество <span
+class="math inline">\(i\)</span>-мерных граней многогранника - <span
+class="math inline">\(f\)</span>-<em>вектор</em> многогранника <span
+class="math inline">\(\mathcal{F}\)</span>.</p>
+</div>
+<h2 data-number="8.6" id="теорема-минковского-о-еже">Теорема Минковского
+о «еже»</h2>
+<div id="definition-109">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathcal{F} \subset \mathbb{R}^3\)</span> –
+выпуклый многогранник. Пусть <span class="math inline">\(F_1, \ldots,
+F_m\)</span> – грани <span class="math inline">\(\mathcal{F}\)</span>.
+Пусть <span class="math inline">\(\mathbf{n}_i\)</span> – единичный
+вектор, перпендикулярный грани <span class="math inline">\(F_i\)</span>,
+направленный наружу многогранника <span
+class="math inline">\(\mathcal{F}\)</span>, а <span
+class="math inline">\(S_i\)</span> – площадь <span
+class="math inline">\(F_i\)</span>. <span
+class="math inline">\(\boldsymbol{\xi}_i = S_i \cdot
+\mathbf{n}_i\)</span>. Семейство <span
+class="math inline">\(\{\boldsymbol{\xi}_i\}\)</span> – <em>ёж
+многогранника</em> <span class="math inline">\(\mathcal{F}\)</span>.</p>
+</div>
+<div id="statement-55">
+<p><strong>Утверждение:</strong> (Минковского о «еже») Пусть <span
+class="math inline">\(\{\xi_1, \ldots, \xi_s\}\)</span> - ёж
+многогранника <span class="math inline">\(W\)</span>. Тогда <span
+class="math inline">\(\displaystyle \sum_{i = 1}^{s}\xi_i = 0\)</span> и
+<span class="math inline">\(\xi_i\)</span> некомпланарны.</p>
+<p><em>Доказательство:</em> Пусть векторы <span
+class="math inline">\(\xi_i\)</span> компланарны. Тогда все грани <span
+class="math inline">\(W\)</span> параллельны одной и той же прямой, а
+так как <span class="math inline">\(W\)</span> <a
+href="граф-определения.html#theorem-1">равен пересечению
+полупространств, ограниченных плоскостями, проходящими через грани</a>,
+получаем, что <span class="math inline">\(W\)</span> неограничен.
+Противоречие.</p>
+</div>
+<p>Докажем, что <span class="math inline">\(\displaystyle \sum_{i =
+1}^{s}\xi_i = 0\)</span>. <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<div id="theorem-12">
+<p><strong>Теорема:</strong> (Минковского о «еже») Пусть <span
+class="math inline">\(\{\xi_1, \ldots, \xi_s\}\)</span> некомпланарные
+векторы и <span class="math inline">\(\displaystyle \sum_{i =
+1}^{s}\xi_i = 0\)</span>. Тогда существует единственный с точностью до
+параллельного переноса многогранник, ёж которого равен <span
+class="math inline">\(\{\xi_i\}\)</span>.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="statement-56">
+<p><strong>Утверждение:</strong> Выпуклый многогранник <span
+class="math inline">\(W\)</span> центрально симметричен <span
+class="math inline">\(\Leftrightarrow\)</span> для каждой <span
+class="math inline">\(W\)</span> существует параллельная грань той же
+площади.</p>
+<p><em>Доказательство:</em> <span
+class="math display">\[\Rightarrow\]</span></p>
+</div>
+<p><span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="раскраски-плоских-графов.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="равновеликость-и-равносоставленность.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Аффинно-квадратичные функции</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="движения.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="аффинно-квадратичные-функции-в-аффинно-евклидовых-пространствах.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="25"
+id="аффинно-квадратичные-функции">Аффинно-квадратичные функции</h1>
+<div id="definition-123">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\((\mathbb{A}, V)\)</span> - аффинное пространство,
+<span class="math inline">\(V\)</span> - векторное пространство над
+полем <span class="math inline">\(F\)</span>. Отображение <span
+class="math inline">\(L: \mathbb{A} \to F\)</span> –
+<em>аффинно-линейное</em>, если существует линейная функция <span
+class="math inline">\(l: V \to F\)</span>, такая, что <span
+class="math inline">\(L(a) = L(b) + l(\overline{ba})\,\,\,\, \forall a,
+b \in \mathbb{A}\)</span>.</p>
+</div>
+<div id="definition-124">
+<p><strong>Определение:</strong> Отображение <span
+class="math inline">\(Q: \mathbb{A} \to F\)</span> –
+<em>аффинно-квадратичная функция</em>, если существует линейная функция
+<span class="math inline">\(l: V \to F\)</span> и квадратичная форма
+<span class="math inline">\(q: V \to F\)</span>, такие, что <span
+class="math inline">\(\forall a, b \in \mathbb{A} \,\,\,\, Q(b) = Q(a) +
+q(\overline{ab}) + 2l(\overline{ab})\)</span>.</p>
+</div>
+<h2 data-number="25.1"
+id="координатная-запись-аффинно-квадратичной-функции">Координатная
+запись аффинно-квадратичной функции</h2>
+<p>Пусть <span class="math inline">\((O, e)\)</span> - аффинная система
+координат. <span class="math inline">\(Q\)</span> - аффинно-квадратичная
+функция.</p>
+<p><span class="math display">\[\forall a \in \mathbb{A} \,\,\,\, Q(a) =
+Q(O) + q(\overline{Oa}) + 2 l(\overline{Oa})\]</span> <span
+class="math display">\[Q(a) = Q(O) + \displaystyle \sum_{i, j =
+1}^{n}b_{ij}x_ix_j + 2 \displaystyle \sum_{i = 1}^{n}s_i x_i\]</span>
+<span class="math display">\[Q(a) = Q(O) + X^T B X + 2 X^T S\]</span>
+<span class="math display">\[Q(a) = Q(O) + X^T B X + X^T S + S^T
+X\]</span></p>
+<p><span class="math inline">\(S\)</span> – столбец коэффицентов
+линейной части <span class="math inline">\(Q\)</span>.</p>
+<div id="definition-125">
+<p><strong>Определение:</strong> <span class="math inline">\(\tilde{B} =
+\left(\begin{array}{c|c} B &amp; S \\\hline S^T &amp;
+Q(O)\end{array}\right)\)</span> – <em>матрица аффинно-квадратичной
+функции</em> <span class="math inline">\(Q\)</span> в базисе <span
+class="math inline">\((O, e)\)</span>.</p>
+<p><span class="math display">\[\tilde{X} =
+\left(\begin{array}{c}X\\\hline 1\end{array}\right)\]</span></p>
+</div>
+<div id="statement-122">
+<p><strong>Утверждение:</strong> <span class="math display">\[Q(a) =
+\tilde{X}^T\tilde{B}\tilde{X}\]</span></p>
+<p>Пусть <span class="math inline">\((O’, e’)\)</span> - аффинная
+система координат. Матрица перехода от <span
+class="math inline">\(e\)</span> к <span
+class="math inline">\(e’\)</span> - <span class="math inline">\(C_{e \to
+e’}\)</span>.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="definition-126">
+<p><strong>Определение:</strong> <span class="math inline">\(\tilde{C} =
+\left(\begin{array}{ccc|c} &amp; &amp; &amp; v_1\\ &amp; C_{e \to e’}
+&amp; &amp; \vdots\\&amp; &amp; &amp; v_n \\\hline 0 &amp; \dots &amp; 0
+&amp; 1\end{array}\right)\)</span> – <em>матрица перехода от аффинной
+системы координат</em> <span class="math inline">\((O, e)\)</span> <em>к
+аффинной системе координат</em> <span class="math inline">\((O’,
+e’)\)</span>, <span class="math inline">\(w_1, \ldots, w_n\)</span>
+координаты <span class="math inline">\(\overline{OO’}\)</span> в базисе
+<span class="math inline">\(e\)</span>.</p>
+</div>
+<h3 data-number="25.1.1"
+id="изменение-матрицы-аффинно-квадратичной-функции-при-переходе-от-одной-аффинной-системы-координат-к-другой">Изменение
+матрицы аффинно-квадратичной функции при переходе от одной аффинной
+системы координат к другой</h3>
+<div id="statement-123">
+<p><strong>Утверждение:</strong></p>
+<p><span class="math display">\[B’ = C_{e \to e’}^T B C_{e \to
+e’}\]</span> <span class="math display">\[S’ = C_{e \to e’}^T(B W +
+S)\]</span> <span class="math inline">\(W\)</span> – столбец координат
+вектора <span class="math inline">\(\overline{OO’}\)</span> (догадайтесь
+в каком базисе) <span class="math inline">\(S\)</span> – столбец <span
+class="math inline">\(l(e_i)\)</span>, где <span
+class="math inline">\(e_i\)</span> – базисный вектор. <span
+class="math display">\[Q(O’) = W^T B W + S^T W + W^T S +
+Q(O)\]</span></p>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="25.2" id="центр-аффинно-квадратичной-функции">Центр
+аффинно-квадратичной функции</h2>
+<div id="definition-127">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(W\)</span> – столбец координат вектора <span
+class="math inline">\(\overline{OO’}\)</span>, таков, что <span
+class="math inline">\(B W + S = 0\)</span>. Тогда <span
+class="math inline">\(S’ = 0\)</span> и <span class="math inline">\(Q(O’
++ v) = q(v) + Q(O’) = Q(O’ - v) \,\,\,\, \forall v \in V\)</span>. Точка
+<span class="math inline">\(O’\)</span> – <em>центр аффинно-квадратичной
+функции</em> <span class="math inline">\(Q\)</span>.</p>
+</div>
+<div id="statement-124">
+<p><strong>Утверждение:</strong> Множество центров аффинно-квадратичной
+функции либо <span class="math inline">\(\varnothing\)</span>, либо
+плоскость.</p>
+<p><em>Доказательство:</em></p>
+<p>Если система <span class="math inline">\(BW + S = 0\)</span>
+разрешима относительно <span class="math inline">\(W\)</span>(столбец
+координат вектора <span class="math inline">\(\overline{OO’}\)</span>),
+то по утверждению получаем плоскость, иначе пустое множество <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="definition-128">
+<p><strong>Определение:</strong> Аффинно-квадратичная функция <span
+class="math inline">\(Q\)</span> <em>невырождена</em>, если существует
+аффинная система координат <span class="math inline">\((O, e)\)</span>,
+в которой матрица <span class="math inline">\(\tilde{B}\)</span>
+невырождена.</p>
+</div>
+<h3 data-number="25.2.1"
+id="инварианты-аффинно-квадратичной-функции">Инварианты
+аффинно-квадратичной функции</h3>
+<div id="statement-125">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(Q:
+\mathbb{A} \to F\)</span> - аффинно-квадратичная функция, <span
+class="math inline">\(\tilde{B}\)</span> - матрица <span
+class="math inline">\(Q\)</span>, <span class="math inline">\(B\)</span>
+- матрица <span class="math inline">\(q\)</span>. Тогда следующие
+величины инварианты <span class="math inline">\(Q\)</span>, то есть не
+зависят от системы координат:</p>
+<ol type="1">
+<li><span class="math inline">\(\operatorname{rk} B\)</span></li>
+<li><span class="math inline">\(\operatorname{rk}
+\tilde{B}\)</span></li>
+<li>Если <span class="math inline">\(F = \mathbb{R}\)</span>, то
+положительный и отрицательный индексы инерции <span
+class="math inline">\(q\)</span>.</li>
+</ol>
+<p><em>Доказательство:</em> Следует из соответствующих теорем :) <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="25.3"
+id="канонический-вид-аффинно-квадратичной-функции">Канонический вид
+аффинно-квадратичной функции</h2>
+<div id="theorem-29">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(Q:
+\mathbb{A} \to F\)</span> - аффинно-квадратичная функция, не являющаяся
+аффинно-линейной. Тогда существует аффинная система координат, в которой
+<span class="math inline">\(Q\)</span> имеет вид:</p>
+<p><span class="math display">\[Q(a) = \lambda_1 x^2_1 + \ldots +
+\lambda_r x^2_r + \lambda_{r + 1}\]</span></p>
+<p>или</p>
+<p><span class="math display">\[Q(a) = \lambda_1 x^2_1 + \ldots +
+\lambda_r x^2_r + 2 x_{r + 1}\]</span></p>
+<p><span class="math inline">\(\lambda_1, \ldots, \lambda_r\)</span> не
+равны <span class="math inline">\(0\)</span>.</p>
+<p><em>Доказательство:</em> Приведем <span
+class="math inline">\(q\)</span> к диагональному виду, и по-заменяем
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="движения.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="аффинно-квадратичные-функции-в-аффинно-евклидовых-пространствах.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Свойства плоскостей</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="аффинные-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="плоскость-в-аффинном-пространстве-как-множество-решений-совместной-системы-линейных-уравнений.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="21" id="свойства-плоскостей">Свойства плоскостей</h1>
+<div id="statement-103">
+<p><strong>Утверждение:</strong> Пусть <span
+class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+class="math inline">\(\pi = a + U\)</span> и <span
+class="math inline">\(\tau = b + W\)</span> - плоскости. Тогда <span
+class="math inline">\(\pi \cap \tau = \varnothing\)</span> или <span
+class="math inline">\(\pi \cap \tau = c + U \cap W\)</span>, где <span
+class="math inline">\(c \in \pi \cap \tau\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<p>Пусть <span class="math inline">\(\pi \cap \tau \ne \varnothing
+\Rightarrow \exists c \in \pi \cap \tau \Rightarrow\)</span></p>
+<p><span class="math inline">\(\pi = c + U\)</span> и <span
+class="math inline">\(\tau = c + W \Rightarrow\)</span></p>
+<p><span class="math inline">\(\forall d \in \tau \cap \pi \,\,\,\, d =
+c + u = c + w \Rightarrow u = w \Rightarrow \pi \cap \tau = c + U \cap
+W\)</span>.</p>
+</div>
+<div id="definition-101">
+<p><strong>Определение:</strong> <em>Аффинная оболочка</em> точек
+аффинного пространства – это плоскость наименьшей размерности,
+содержащая эти точки. Обозначается: <span
+class="math inline">\(&lt;...&gt;_A\)</span>.</p>
+</div>
+<div id="statement-104">
+<p><strong>Утверждение:</strong> Пусть <span
+class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+class="math inline">\(\pi = a + U\)</span> и <span
+class="math inline">\(\tau = b + W\)</span> - плоскости. Тогда аффинная
+оболочка <span class="math inline">\(\langle \pi, \tau\rangle_A = a +
+\langle\overline{ab}, U + W\rangle\)</span>.</p>
+<p><em>Доказательство:</em> туда обратно <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="theorem-26">
+<p><strong>Теорема:</strong> Пусть <span
+class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+class="math inline">\(\dim \mathbb{A} = n\)</span>, <span
+class="math inline">\(\pi = a + U\)</span> и <span
+class="math inline">\(\tau = b + W\)</span> - плоскости.</p>
+<ol type="1">
+<li>Если <span class="math inline">\(\pi \cap \tau =
+\varnothing\)</span>, то <span class="math inline">\(\dim \langle\pi,
+\tau\rangle = \dim \pi + \dim \tau - \dim U \cap W\)</span></li>
+<li>Если <span class="math inline">\(\pi \cap \tau \ne
+\varnothing\)</span>, то <span class="math inline">\(\dim \langle\pi,
+\tau\rangle = \dim \pi + \dim \tau - \dim U \cap W + 1\)</span>.</li>
+</ol>
+<p><em>Доказательство:</em></p>
+<p>Пусть <span class="math inline">\(\overline{ab} \in U + W\)</span>.
+По формуле Грассмана имеем <span class="math inline">\(\dim\langle\pi,
+\tau\rangle_A = \dim(U + W) = \dim U + \dim W - \dim(U \cap W)\)</span>.
+Иначе, <span class="math inline">\(\dim \langle\pi, \tau\rangle_A = \dim
+(U + W) + 1\)</span> и далее опять по формуле Грассмана <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="definition-102">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+class="math inline">\(\dim \mathbb{A} = n\)</span>, <span
+class="math inline">\(\pi = a + U\)</span> и <span
+class="math inline">\(\tau = b + W\)</span> - плоскости. <span
+class="math inline">\(\pi\)</span> <em>параллельна</em> <span
+class="math inline">\(\tau\)</span> (<span class="math inline">\(\pi
+\parallel \tau\)</span>), если <span class="math inline">\(U \subset
+W\)</span> или <span class="math inline">\(W \subset U\)</span>.</p>
+</div>
+<div id="statement-105">
+<p><strong>Утверждение:</strong> Пусть <span
+class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+class="math inline">\(\dim \mathbb{A} = n\)</span>, <span
+class="math inline">\(\pi = a + U\)</span> и <span
+class="math inline">\(\tau = b + W\)</span> - плоскости, <span
+class="math inline">\(\pi \parallel \tau\)</span>. Тогда <span
+class="math inline">\(\pi \cap \tau = \varnothing\)</span>, или <span
+class="math inline">\(\tau \subset \pi\)</span>, или <span
+class="math inline">\(\pi \subset \tau\)</span>.</p>
+<p><em>Доказательство:</em> см. здесь <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="definition-103">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+class="math inline">\(\dim \mathbb{A} = n\)</span>, <span
+class="math inline">\(\pi = a + U\)</span> и <span
+class="math inline">\(\tau = b + W\)</span> - плоскости. <span
+class="math inline">\(\pi\)</span> и <span
+class="math inline">\(\tau\)</span> <em>скрещиваются</em>, если <span
+class="math inline">\(\pi \cap \tau \ne \varnothing\)</span> и <span
+class="math inline">\(\pi \nparallel \tau\)</span>.</p>
+</div>
+<div id="statement-106">
+<p><strong>Утверждение:</strong> Пусть <span
+class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+class="math inline">\(\pi\)</span> и <span
+class="math inline">\(\tau\)</span> - гиперплоскости. Если <span
+class="math inline">\(\pi \cap \tau = \varnothing\)</span>, то <span
+class="math inline">\(\pi \parallel \tau\)</span>.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<h2 data-number="21.1" id="аффинные-линейные-функции">Аффинные линейные
+функции</h2>
+<div id="definition-104">
+<p><strong>Определение:</strong> <span class="math inline">\(f:
+\mathbb{A} \to F\)</span> – <em>аффинная линейная функция</em>, если
+существует линейная функция <span class="math inline">\(\varphi\)</span>
+на V, такая, что <span class="math inline">\(\forall a, b \in \mathbb{A}
+\,\,\,\, \overline{f(a)f(b)} = \varphi(\overline{ab})\)</span>. <span
+class="math inline">\(F\)</span> рассматривается как одномерное
+векторное пространство (базис в <span class="math inline">\(F\)</span> -
+<span class="math inline">\(1\)</span>).</p>
+</div>
+<h3 data-number="21.1.1"
+id="координатная-запись-аффинных-линейных-функций">Координатная запись
+аффинных линейных функций</h3>
+<p>Пусть <span class="math inline">\((O, e)\)</span> - аффинная система
+координат, <span class="math inline">\(f\)</span> - аффинная линейная
+функция, <span class="math inline">\(e = \{e_1, \ldots, e_n\}\)</span>.
+<span class="math inline">\(\forall a \in \mathbb{A} \,\,\,\, a = O +
+\overline{Oa}\)</span>. Пусть <span class="math inline">\(x_1, \ldots,
+x_n\)</span> координаты точки <span class="math inline">\(a\)</span> в
+<span class="math inline">\((O, e)\)</span>. <span
+class="math inline">\(f(a) = f(O) + \varphi(\overline{Oe}) = \alpha +
+\varphi(x_1 e_1 +\ldots + x_n e_n) = \alpha + \alpha_1 x_1 + \ldots +
+\alpha_n x_n\)</span>.</p>
+<div id="definition-105">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(f\)</span> - аффинная линейная функция.
+<em>Ядро</em> <span class="math inline">\(f\)</span> – это <span
+class="math inline">\(\ker f = \{a \in \mathbb{A}: \,\,\,\, f(a) =
+0\}\)</span>.</p>
+</div>
+<div id="statement-107">
+<p><strong>Утверждение:</strong> Пусть <span
+class="math inline">\(f\)</span> - аффинная линейная функция. Тогда</p>
+<ol type="1">
+<li><span class="math inline">\(\ker f\)</span> - аффинное
+подпространство или <span class="math inline">\(\ker f =
+\varnothing\)</span>.</li>
+<li>Если <span class="math inline">\(\ker f \ne \varnothing\)</span>, то
+<span class="math inline">\(ker f = c + \ker \varphi\)</span>, где <span
+class="math inline">\(f(c) = 0\)</span> и <span
+class="math inline">\(\varphi\)</span> - линейная часть аффинной функции
+<span class="math inline">\(f\)</span>.</li>
+</ol>
+<p><em>Доказательство:</em></p>
+<p>1-2. Пусть <span class="math inline">\(\ker f \ne \varnothing
+\Rightarrow \exists a \in \mathbb{A}: \,\,\,\, f(a) = 0\)</span>. <span
+class="math inline">\(f(a + v) = f(a) + \varphi(v) \Rightarrow \forall v
+\in \ker \varphi \,\,\,\, f(a + v) = 0 \,\,\,\,\blacksquare\)</span></p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="аффинные-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="плоскость-в-аффинном-пространстве-как-множество-решений-совместной-системы-линейных-уравнений.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Определенный интеграл Римана</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="неопределенный-интеграл.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="интеграл-с-переменным-верхним-пределом.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="2" id="определенный-интеграл-римана">Определенный
+интеграл Римана</h1>
+<h2 data-number="2.1" id="определения">Определения</h2>
+<div id="definition-2">
+<p><strong>Определение:</strong> <em>Положительное разбиение</em>
+отрезка <span class="math inline">\([a, b]\)</span> – это множество
+точек <span class="math inline">\(\{x_i\}_{i = 0}^{n}\)</span>, таких
+что <span class="math inline">\(a = x_0 &lt; x_1 &lt; \ldots &lt; x_{n -
+1} &lt; x_n = b\)</span>.</p>
+<p>Обозначается: <span class="math inline">\(\mathcal{T}_{[a,
+b]}^{+}\)</span>.</p>
+</div>
+<div id="definition-3">
+<p><strong>Определение:</strong> <em>Отрицательное разбиение</em>
+отрезка <span class="math inline">\([a, b]\)</span> – это множество
+точек <span class="math inline">\(\{x_i\}_{i = 0}^{n}\)</span>, таких
+что <span class="math inline">\(b = x_0 &gt; x_1 &gt; \ldots &gt; x_{n -
+1} &gt; x_n = a\)</span>.</p>
+<p>Обозначается: <span class="math inline">\(\mathcal{T}_{[a,
+b]}^{-}\)</span>.</p>
+</div>
+<div id="definition-4">
+<p><strong>Определение:</strong> Пусть дано разбиение <span
+class="math inline">\(\mathcal{T}_{[a, b]} = \{x_i\}_{i =
+0}^{n}\)</span> отрезка <span class="math inline">\([a, b]\)</span>.</p>
+<p><span class="math inline">\(i\)</span>-й <em>отрезок разбиения</em>
+<span class="math inline">\(\mathcal{T}_{[a, b]}\)</span> – это <span
+class="math inline">\(\Delta_i = [x_{i - 1}, x_i] \,\,\,\, \forall i \in
+\{1, \ldots, n\}\)</span>.<br></p>
+<p><em>длина</em> <span class="math inline">\(\Delta_i\)</span> равна
+<span class="math inline">\(|\Delta_i| = |x_{i} - x_{i -
+1}|\)</span>.<br></p>
+<p><em>диаметр разбиения</em> <span
+class="math inline">\(d(\mathcal{T}_{[a, b]})\)</span> – это <span
+class="math inline">\(\displaystyle \max_{i \in \{1, \ldots,
+n\}}{|\Delta_i|}\)</span>.</p>
+</div>
+<div id="definition-5">
+<p><strong>Определение:</strong> Пусть дано разбиение <span
+class="math inline">\(\mathcal{T}_{[a, b]} = \{x_i\}_{i =
+0}^{n}\)</span> отрезка <span class="math inline">\([a, b]\)</span>.</p>
+<p><em>Разметка</em> <span class="math inline">\(\mathcal{T}_{[a,
+b]}\)</span> – это множество точек <span class="math inline">\(\xi =
+\{\xi_1, \xi_2, \ldots, \xi_n\}\)</span>, таких что <span
+class="math inline">\(\xi_i \in \Delta_i\)</span>. Разбиение с заданной
+разметкой обозначается <span class="math inline">\(\mathcal{T}(\xi)_{[a,
+b]} = \{\mathcal{T}, \xi\}\)</span>.</p>
+</div>
+<div id="definition-6">
+<p><strong>Определение:</strong> <em>Интегральная сумма</em> – это <span
+class="math inline">\(\sigma_{f}(\mathcal{T}(\xi)) = \displaystyle
+\sum_{i = 1}^{n}f(\xi_i)\cdot(x_i - x_{i - 1})\)</span>.</p>
+</div>
+<div id="definition-7">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(f(x)\)</span> определена на <span
+class="math inline">\([a, b]\)</span>. Если <span
+class="math inline">\(\exists I \in \mathbb{R}\)</span>, такое что</p>
+<p><span class="math display">\[\forall \varepsilon &gt; 0 \,\,\,\,
+\exists \delta &gt; 0: \,\,\,\, \forall \mathcal{T}_{[a, b]}^{+}(\xi)
+\left(d(\mathcal{T}_{[a, b]}^{+}) &lt; \delta\right) \,\,\,\,
+|\sigma_{f}(\mathcal{T}(\xi)) - I| &lt; \varepsilon,\]</span> то функция
+<span class="math inline">\(f(x)\)</span> <em>интегрируема по
+Риману</em> на отрезке <span class="math inline">\([a, b]\)</span>, а
+число <span class="math inline">\(I\)</span> – <em>интеграл</em> <span
+class="math inline">\(f(x)\)</span> на отрезке <span
+class="math inline">\([a, b]\)</span>. Обозначается <span
+class="math inline">\(I = \displaystyle \int\limits_a^b
+f(x)dx\)</span>.</p>
+</div>
+<div id="definition-8">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(f(x)\)</span> определена на <span
+class="math inline">\([a, b]\)</span>. Если <span
+class="math inline">\(\exists I \in \mathbb{R}\)</span>, такое что</p>
+<p><span class="math display">\[\forall \varepsilon &gt; 0 \,\,\,\,
+\exists \delta &gt; 0: \,\,\,\, \forall \mathcal{T}_{[a, b]}^{-}(\xi)
+\left(d(\mathcal{T}_{[a, b]}^{-}) &lt; \delta\right) \,\,\,\,
+|\sigma_{f}(\mathcal{T}(\xi)) - I| &lt; \varepsilon,\]</span> то функция
+<span class="math inline">\(f(x)\)</span> <em>интегрируема по
+Риману</em> на отрезке <span class="math inline">\([a, b]\)</span>, а
+число <span class="math inline">\(I\)</span> – <em>интеграл</em> <span
+class="math inline">\(f(x)\)</span> на отрезке <span
+class="math inline">\([a, b]\)</span>. Обозначается <span
+class="math inline">\(I = \displaystyle \int\limits_b^a
+f(x)dx\)</span>.</p>
+</div>
+<div id="statement-1">
+<p><strong>Утверждение:</strong> <span
+class="math display">\[\displaystyle \int\limits_a^b f(x)dx =
+-\displaystyle \int\limits_{b}^{a} f(x)dx\]</span></p>
+<p><em>Доказательство:</em> нуу, очев <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="definition-9">
+<p><strong>Определение:</strong> Множество всех функций интегрируемых по
+Риману на отрезке <span class="math inline">\([a, b]\)</span>
+обозначается <span class="math inline">\(\mathcal{R}[a, b]\)</span>.</p>
+</div>
+<div id="theorem-1">
+<p><strong>Теорема:</strong> Если функция <span
+class="math inline">\(f(x) \in \mathcal{R}[a, b]\)</span>, то <span
+class="math inline">\(f(x)\)</span> ограничена на <span
+class="math inline">\([a, b]\)</span>.</p>
+<p><em>Доказательство:</em> (от противного) Пусть <span
+class="math inline">\(f(x)\)</span> неограничена на <span
+class="math inline">\([a, b]\)</span>, то есть <span
+class="math inline">\(\forall x \in \mathbb{R} \,\,\,\, \exists \xi \in
+[a, b]: \,\,\,\, f(\xi) &gt; x\)</span>. <span
+class="math inline">\(\exists \displaystyle\int\limits_a^b f(x)dx =
+I\)</span>. Возьмем <span class="math inline">\(\varepsilon =
+1\)</span>, имеем <span class="math display">\[\exists \delta &gt; 0:
+\,\,\,\, \forall \mathcal{T}_{[a, b]}^{+}(\xi) \left(d(\mathcal{T}_{[a,
+b]}^{+}) &lt; \delta\right) \,\,\,\, |\sigma_{f}(\mathcal{T}(\xi)) - I|
+&lt; 1\]</span></p>
+<p><span class="math display">\[I - 1 &lt; \displaystyle \sum_{i =
+1}^{n}f(\xi_i)\cdot(x_i - x_{i - 1}) &lt; I + 1\]</span></p>
+<p>Зафиксируем разметку <span class="math inline">\(\xi\)</span>. <span
+class="math inline">\(f(x)\)</span> неограничена на одном из <span
+class="math inline">\(\Delta_i\)</span>. Будем менять <span
+class="math inline">\(\xi_i \in \Delta_i\)</span>. <span
+class="math inline">\(|f(\xi_i)|\)</span> принимает сколь угодно большое
+значение, а значит сумма не будет ограничена <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="2.2" id="суммы-дарбу">Суммы Дарбу</h2>
+<div id="definition-10">
+<p><strong>Определение:</strong></p>
+<p>Пусть <span class="math inline">\(f(x)\)</span> ограничена на отрезке
+<span class="math inline">\([a, b]\)</span>. <span
+class="math inline">\(\mathcal{T}_{[a, b]}^{+}\)</span> – некоторое
+разбиение отрезка <span class="math inline">\([a, b]\)</span>. Пусть
+<span class="math inline">\(m_i = \displaystyle \inf_{x\in
+\Delta_i}f(x)\)</span> (точная нижняя грань <span
+class="math inline">\(f(x)\)</span> на <span
+class="math inline">\(i\)</span>-ом отрезке разбиения <span
+class="math inline">\(\mathcal{T}_{[a, b]}^{+}\)</span>), <span
+class="math inline">\(M_i = \displaystyle \sup_{x\in
+\Delta_i}f(x)\)</span>.</p>
+<p><span class="math inline">\(s(\mathcal{T}) = \displaystyle \sum_{i =
+1}^{n} m_i\cdot (x_{i} - x_{i - 1})\)</span> – это <em>нижняя сумма
+Дарбу</em> функции <span class="math inline">\(f(x)\)</span> по
+разбиению <span class="math inline">\(\mathcal{T}_{[a,
+b]}^{+}\)</span>.</p>
+<p><span class="math inline">\(S(\mathcal{T}) = \displaystyle \sum_{i =
+1}^{n} M_i\cdot (x_{i} - x_{i - 1})\)</span> – это <em>верхняя сумма
+Дарбу</em> функции <span class="math inline">\(f(x)\)</span> по
+разбиению <span class="math inline">\(\mathcal{T}_{[a,
+b]}^{+}\)</span>.</p>
+</div>
+<h2 data-number="2.3" id="свойства-сумм-дарбу">Свойства сумм Дарбу</h2>
+<div id="lemma-0">
+<p><strong>Лемма:</strong> Пусть <span class="math inline">\(\{X_i:
+\,\,\,\, X_i \subset \mathbb{R}\}_{i = 1}^n\)</span>, <span
+class="math inline">\(X_i\)</span> – ограничено <span
+class="math inline">\(\forall i \in \{1, \ldots, n\}\)</span>. <span
+class="math inline">\(\{a_i: \,\,\,\, a_i \ge 0\}_{i = 1}^n\)</span>.
+Тогда <span class="math display">\[\displaystyle\sup_{x_i \in
+X_i}\left\{\sum_{i = 1}^{n}a_ix_i\right\} = \displaystyle \sum_{i =
+1}^{n}a_i \displaystyle\sup\left(X_i\right)\]</span> <span
+class="math display">\[\displaystyle\inf_{x_i \in X_i}\left\{\sum_{i =
+1}^{n}a_ix_i\right\} = \displaystyle \sum_{i = 1}^{n}a_i
+\displaystyle\inf\left(X_i\right)\]</span></p>
+<p>Точная верхняя грань сумм – это точная верхняя грань множества всех
+сумм вида <span class="math inline">\(\displaystyle \sum_{i =
+1}^{n}a_ix_i\)</span>, где <span class="math inline">\(x_i \in
+X_i\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math display">\[\forall
+\varepsilon \,\,\,\, \forall i \,\,\,\, \exists x_i \in X_i:\,\,\,\, x_i
+&gt; \sup X_i - \varepsilon\]</span></p>
+<p>Домножая каждую сумму неравенства на <span
+class="math inline">\(a_i\)</span> и суммируя по <span
+class="math inline">\(i\)</span>, получаем:</p>
+<p><span class="math display">\[\forall \varepsilon &gt; 0 \,\,\,\,
+\exists \{x_i \in X_i\}_{i = 1}^n:\,\,\,\,\displaystyle \sum_{i =
+1}^{n}a_ix_i &gt; \displaystyle \sum_{i = 1}^{n}a_i\sup X_i -
+\varepsilon \displaystyle \sum_{i = 1}^{n}a_i\]</span></p>
+<p>Так как утверждение верно для любого <span
+class="math inline">\(\varepsilon &gt; 0\)</span>, то домножение <span
+class="math inline">\(\varepsilon\)</span> на положительную константу
+ничего не меняет, то есть:<br />
+<span class="math display">\[\forall \varepsilon &gt; 0 \,\,\,\, \exists
+\{x_i \in X_i\}_{i = 1}^n:\,\,\,\,\displaystyle \sum_{i = 1}^{n}a_ix_i
+&gt; \displaystyle \sum_{i = 1}^{n}a_i\sup X_i -
+\varepsilon\]</span></p>
+<p>Значит <span class="math display">\[\displaystyle\sup_{x_i \in
+X_i}\left\{\sum_{i = 1}^{n}a_ix_i\right\} = \displaystyle \sum_{i =
+1}^{n}a_i \displaystyle\sup\left(X_i\right)
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<div id="theorem-2">
+<p><strong>Теорема:</strong> (<em>Свойства сумм Дарбу</em>)</p>
+<ol type="1">
+<li><p>Пусть разбиение <span
+class="math inline">\(\mathcal{T}_2\)</span> измельчение <span
+class="math inline">\(\mathcal{T}_1\)</span>. Тогда <span
+class="math inline">\(S(\mathcal{T}_1) &gt; S(\mathcal{T}_2)\)</span> и
+<span class="math inline">\(s(\mathcal{T}_1) &lt;
+s(\mathcal{T}_2)\)</span>.</p></li>
+<li><p>Пусть <span class="math inline">\(\mathcal{T}_2\)</span> и <span
+class="math inline">\(\mathcal{T}_1\)</span> некоторые разбиения <span
+class="math inline">\([a, b]\)</span>. Тогда <span
+class="math inline">\(s(\mathcal{T}_1) &lt;
+S(\mathcal{T}_2)\)</span></p></li>
+<li><p><span class="math display">\[S(\mathcal{T}) =
+\displaystyle\sup_{\xi}\left\{\sigma_f(\mathcal{T}(\xi))\right\}\]</span>
+<span class="math display">\[s(\mathcal{T}) =
+\displaystyle\inf_{\xi}\left\{\sigma_f(\mathcal{T}(\xi))\right\}\]</span></p></li>
+</ol>
+<p><em>Доказательство:</em></p>
+<ol type="1">
+<li><p>Пусть <span class="math inline">\(\mathcal{T}_2 = \mathcal{T}_1
+\cup \{t\}, \,\,\,\, t \in [x_{j - 1}, x_j]\)</span>. Тогда <span
+class="math display">\[S(\mathcal{T}_2) - S(\mathcal{T}_1) =
+\displaystyle\sup_{[x_{j - 1}, t]}(f(x))\cdot (t - x_{j - 1}) +
+\displaystyle\sup_{[t, x_j]}(f(x))\cdot (x_j - t) -
+\displaystyle\sup_{[x_{j - 1}, x_j]}(f(x))\cdot (x_j - x_{j -
+1})=\]</span> <span class="math display">\[=\displaystyle\sup_{[x_{j -
+1}, t]}(f(x))\cdot (t - x_{j - 1}) + \displaystyle\sup_{[t,
+x_j]}(f(x))\cdot (x_j - t) - \displaystyle\sup_{[x_{j - 1},
+x_j]}(f(x))\cdot ((t - x_{j - 1}) + (x_j - t))\le 0
+\,\,\,\,\blacksquare\]</span></p></li>
+<li><p>Пусть <span class="math inline">\(\mathcal{T} = \mathcal{T}_1
+\cup \mathcal{T}_2\)</span>. Тогда по свойству <span
+class="math inline">\(1\)</span>: <span
+class="math display">\[s(\mathcal{T}_1) &lt; s(\mathcal{T}) &lt;
+S(\mathcal{T}) &lt; S(\mathcal{T}_2)
+\,\,\,\,\blacksquare\]</span></p></li>
+<li><p>По лемме <span
+class="math display">\[\displaystyle\sup_{\xi}\left\{\sigma_f(\mathcal{T}(\xi))\right\}
+= \displaystyle\sup_{\xi}\left\{\displaystyle \sum_{i =
+1}^{n}f(\xi_i)\cdot (x_{i} - x_{i - 1})\right\} = \displaystyle \sum_{i
+= 1}^{n}\displaystyle\sup_{\Delta x_i}\left(f(x)\right)\cdot(x_i -
+x_{i-1})\]</span>Множеством <span class="math inline">\(X_i\)</span>
+здесь будет отрезок <span class="math inline">\(\Delta x_i = [x_i, x_{i
+- 1}]\)</span>, так как точная верхняя грань ищется по множеству всех
+разметок и, следовательно, <span class="math inline">\(\xi_i\)</span>
+пробегает весь отрезок <span class="math inline">\(\Delta x_i
+\,\,\,\,\blacksquare\)</span></p></li>
+</ol>
+</div>
+<h2 data-number="2.4"
+id="критерий-интегрируемости-функции-по-риману">Критерий интегрируемости
+функции по Риману</h2>
+<div id="definition-11">
+<p><strong>Определение:</strong></p>
+<p><span class="math inline">\(I^{*} =
+\displaystyle\inf_{\mathcal{T}}S(\mathcal{T})\)</span> – <em>верхний
+интеграл Дарбу</em>.</p>
+<p><span class="math inline">\(I_{*} =
+\displaystyle\sup_{\mathcal{T}}s(\mathcal{T})\)</span> – <em>нижний
+интеграл Дарбу</em>.</p>
+<p>Замечание: определение верхнего и нижнего интеграла Дарбу корректно,
+так как выполняется свойство 2.</p>
+</div>
+<div id="theorem-3">
+<p><strong>Теорема:</strong> (<em>критерий интегрируемости</em>)</p>
+<p><span class="math display">\[f(x) \in R[a, b] \Leftrightarrow \forall
+\varepsilon &gt; 0 \,\,\,\, \exists \delta: \,\,\,\, \forall
+\mathcal{T}(\xi) \left(d(\mathcal{T}) &lt; \delta\right) \,\,\,\,
+S(\mathcal{T}) - s(\mathcal{T}) &lt; \varepsilon\]</span></p>
+<p><em>Доказательство:</em> <span
+class="math display">\[\Rightarrow\]</span></p>
+<p><span class="math inline">\(f(x) \in R[a, b]\)</span>, то есть <span
+class="math inline">\(\exists I \in \mathbb{R}:\,\,\,\,\forall
+\varepsilon &gt; 0 \,\,\,\, \exists \delta &gt;0: \,\,\,\, \forall
+\mathcal{T}(\xi) \left(d(\mathcal{T}) &lt; \delta\right) \,\,\,\,
+|\sigma_f(\mathcal{T}(\xi)) - I| &lt;\varepsilon\)</span>. Следовательно
+<span class="math display">\[I - \varepsilon &lt;
+\sigma_f(\mathcal{T}(\xi)) &lt; I + \varepsilon\]</span> <span
+class="math display">\[\Downarrow\]</span>(переходим к верхней и нижней
+граням и используем свойства <span class="math inline">\(2\)</span> и
+<span class="math inline">\(3\)</span>) <span class="math display">\[I -
+\varepsilon \le s(\mathcal{T}) &lt; S(\mathcal{T}) \le I + \varepsilon
+\,\,\,\,\blacksquare\]</span></p>
+<p><span class="math display">\[\Leftarrow\]</span></p>
+<p>Из определения верхнего и нижнего интегралов Дарбу следует, что <span
+class="math inline">\(s(\mathcal{T}) \le I_{*} \le I^{*} \le
+S(\mathcal{T}) \Rightarrow I_{*} = I^{*} = I\)</span>.</p>
+<p>Имеем <span class="math display">\[\begin{cases}
+s(\mathcal{T}) \le I \le S(\mathcal{T})\\
+S(\mathcal{T}) - s(\mathcal{T}) &lt; \varepsilon\\
+s(\mathcal{T}) \le \sigma_f(\mathcal{T}(\xi)) \le S(\mathcal{T})
+\end{cases} \Rightarrow |\sigma_f(\mathcal{T}(\xi)) - I| &lt;\varepsilon
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<h2 data-number="2.5"
+id="интегрируемость-непрерывных-и-монотонных-функций">Интегрируемость
+непрерывных и монотонных функций</h2>
+<div id="theorem-4">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x) \in
+C[a, b]\)</span>, тогда <span class="math inline">\(f(x) \in R[a,
+b]\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(\forall
+\varepsilon &gt; 0\)</span> возьмем <span class="math inline">\(\delta =
+\varepsilon\)</span>, тогда <span class="math inline">\(\forall
+\mathcal{T}(\xi) (d(\mathcal{T}) &lt; \delta = \varepsilon) \,\,\,\,
+S(\mathcal{T}) - s(\mathcal{T}) = \displaystyle \sum_{i =
+1}^{n}(\sup_{\Delta x_i}(f(x)) - \inf_{\Delta x_i}(f(x)))(x_{i} - x_{i -
+1})\)</span> <span class="math display">\[= \displaystyle \sum_{i =
+1}^{n}(\max_{\Delta x_i}(f(x)) - \min_{\Delta x_i}(f(x)))(x_{i} - x_{i -
+1})\]</span> <span class="math display">\[= \displaystyle \sum_{i =
+1}^{n}(f(x_{max_i}) - f(x_{min_i}))(x_{i} - x_{i - 1}) \le \displaystyle
+\sum_{i = 1}^{n}\varepsilon (x_{i} - x_{i - 1}) = \varepsilon (b - a)
+&lt; \varepsilon \,\,\,\,\blacksquare\]</span></p>
+</div>
+<div id="theorem-5">
+<p><strong>Теорема:</strong> Пусть <span
+class="math inline">\(f(x)\)</span> монотонна на <span
+class="math inline">\([a, b]\)</span>, тогда <span
+class="math inline">\(f(x) \in R[a, b]\)</span>.</p>
+<p><em>Доказательство:</em> Пусть <span
+class="math inline">\(f(x)\)</span> монотонно возрастает. <span
+class="math inline">\(\forall \varepsilon &gt; 0\)</span> возьмем <span
+class="math inline">\(\delta = \varepsilon\)</span>, тогда <span
+class="math inline">\(\forall \mathcal{T}(\xi) (d(\mathcal{T}) &lt;
+\delta = \varepsilon) \,\,\,\, S(\mathcal{T}) - s(\mathcal{T}) =
+\displaystyle \sum_{i = 1}^{n}(\sup_{\Delta x_i}(f(x)) - \inf_{\Delta
+x_i}(f(x)))(x_{i} - x_{i - 1}) =\)</span> <span
+class="math display">\[=\displaystyle \sum_{i = 1}^{n}(f(x_i) - f(x_{i -
+1}))(x_{i} - x_{i - 1})\le\]</span> <span class="math display">\[\le
+\displaystyle \sum_{i = 1}^{n}(f(x_i) - f(x_{i - 1}))\varepsilon =
+\varepsilon (f(b) - f(a)) &lt;
+\varepsilon\,\,\,\,\blacksquare\]</span></p>
+</div>
+<div id="definition-12">
+<p><strong>Определение:</strong> Множество <span class="math inline">\(A
+\subset \mathbb{R}\)</span> <em>имеет лебегову меру</em> <span
+class="math inline">\(0\)</span>, если <span
+class="math inline">\(\forall \varepsilon \,\,\,\, \exists \{(a_i,
+b_i)\}_i: \,\,\,\, A \subset \displaystyle\cup_i (a_i, b_i) \,\,\,\,
+\displaystyle\sup_{N &lt; \infty}\displaystyle \sum_{i = 1}^{N}|b_i -
+a_i| &lt; \varepsilon\)</span>.</p>
+</div>
+<div id="theorem-6">
+<p><strong>Теорема:</strong> <span class="math inline">\(f(x) \in R[a,
+b] \Leftrightarrow\)</span> множество предельных точек <span
+class="math inline">\(f(x)\)</span> на <span class="math inline">\([a,
+b]\)</span> имеет лебегову меру <span
+class="math inline">\(0\)</span>.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h2 data-number="2.6"
+id="основные-свойства-интегрируемых-по-риману-функций">Основные свойства
+интегрируемых по Риману функций</h2>
+<h3 data-number="2.6.1"
+id="интегрируемость-на-подотрезках">Интегрируемость на подотрезках</h3>
+<div id="statement-2">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f(x)
+\in R[a, b]\)</span>, тогда <span class="math inline">\(f(x) \in
+R[a^{*}, b^{*}]\)</span>, если <span class="math inline">\([a^{*},
+b^{*}] \subset [a, b]\)</span>.</p>
+<p><em>Доказательство:</em> Пусть <span
+class="math inline">\(\mathcal{T}_{[a, b]}\)</span> некоторое разбиение
+<span class="math inline">\([a, b]\)</span>, <span
+class="math inline">\(\mathcal{T}_{[a, b]}^{*} = \mathcal{T}_{[a, b]}
+\cup \{a^{*}, b^{*}\}\)</span>.</p>
+<p>Тогда <span class="math inline">\(\varepsilon &gt; S(\mathcal{T}_{[a,
+b]}) - s(\mathcal{T}_{[a, b]}) \ge S(\mathcal{T}_{[a, b]}^{*}) -
+s(\mathcal{T}_{[a, b]}^{*})=\)</span> <span class="math display">\[=
+S(\mathcal{T}_{[a, a^{*}]}^{*}) + S(\mathcal{T}_{[a^{*}, b^{*}]}^{*}) +
+S(\mathcal{T}_{[b^{*}, b]}^{*}) - s(\mathcal{T}_{[a, a^{*}]}^{*}) -
+s(\mathcal{T}_{[a^{*}, b^{*}]}^{*}) - s(\mathcal{T}_{[b^{*},
+b]}^{*})\ge\]</span> <span class="math display">\[\ge
+S(\mathcal{T}_{[a^{*}, b^{*}]}^{*}) - s(\mathcal{T}_{[a^{*},
+b^{*}]}^{*}) \,\,\,\,\blacksquare\]</span></p>
+</div>
+<h3 data-number="2.6.2" id="аддитивность">Аддитивность</h3>
+<div id="statement-3">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f(x)
+\in R[a, b]\)</span> и <span class="math inline">\(f(x) \in R[b,
+c]\)</span>, тогда <span class="math inline">\(f(x) \in R[a, c]\)</span>
+и <span class="math display">\[\displaystyle\int\limits_a^c f(x)dx =
+\displaystyle\int\limits_a^b f(x)dx + \displaystyle\int\limits_b^c
+f(x)dx\]</span></p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(b \in
+\Delta x_j = [x_{j - 1}, x_j]\)</span>. <span
+class="math display">\[S(\mathcal{T}_{[a, c]}) - s(\mathcal{T}_{[a, c]})
+= S(\mathcal{T}_{[a, c]} \cup \{b\}) - s(\mathcal{T}_{[a, c]} \cup
+\{b\})+\]</span> <span class="math display">\[+
+\displaystyle\sup_{\Delta_j}f(x)(x_j - x_{j - 1}) -
+\displaystyle\inf_{\Delta_j}f(x)(x_j - x_{j - 1}) -
+\displaystyle\sup_{[x_{j - 1}, b]}f(x)(b - x_{j - 1}) -
+\displaystyle\sup_{[b, x_j]}f(x)(x_j - b)+\]</span> <span
+class="math display">\[+ \displaystyle\inf_{[x_{j - 1}, b]}f(x)(b - x_{j
+- 1}) + \displaystyle\inf_{[b, x_j]}f(x)(x_j - b) &lt; 7 \varepsilon
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<h3 data-number="2.6.3" id="линейность">Линейность</h3>
+<div id="statement-4">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f(x),
+g(x) \in R[a, b], \,\,\,\, \lambda, \mu \in \mathbb{R}\)</span>, тогда
+<span class="math display">\[\lambda f(x) + \mu g(x) \in R[a,
+b]\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[S_{\lambda f(x)
++ \mu g(x)}(\mathcal{T}) - s_{\lambda f(x) + \mu
+g(x)}(\mathcal{T})=\]</span> <span class="math display">\[=\lambda
+S_{f(x)}(\mathcal{T}) + \mu S_{g(x)}(\mathcal{T}) - \lambda
+s_{f(x)}(\mathcal{T}) - \mu s_{g(x)}(\mathcal{T})=\]</span> <span
+class="math display">\[= \lambda (S_{f(x)}(\mathcal{T}) -
+s_{f(x)}(\mathcal{T})) + \mu (S_{g(x)}(\mathcal{T}) -
+s_{g(x)}(\mathcal{T})) &lt; (\lambda + \mu) \varepsilon
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<h3 data-number="2.6.4" id="мега-свойство">Мега-свойство</h3>
+<div id="statement-5">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f(x)
+\in R[a, b]\)</span>. Тогда <span
+class="math display">\[\displaystyle\int\limits_a^b f(x)dx \le
+\displaystyle\sup_{[a, b]} |f(x)| |b - a|\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\forall
+\mathcal{T}(\xi) \,\,\,\, |\sigma_f(\mathcal{T}(\xi))| =
+\left|\displaystyle \sum_{i = 1}^{n}f(\xi_i)(x_{i} - x_{i - 1})\right|
+\le \left|\displaystyle \sum_{i = 1}^{n}\sup_{[a, b]} |f(x)| (x_{i} -
+x_{i - 1})\right| = \displaystyle\sup_{[a, b]} |f(x)| |b - a|
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<h3 data-number="2.6.5" id="интегрируемость-модуля">Интегрируемость
+модуля</h3>
+<div id="statement-6">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f(x)
+\in R[a, b]\)</span>. Тогда <span class="math inline">\(|f(x)| \in R[a,
+b]\)</span> и <span
+class="math display">\[\left|\displaystyle\int\limits_a^b f(x)dx\right|
+\le \displaystyle\int\limits_a^b |f(x)|dx\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[||f(x_2)| -
+|f(x_1)|| \le |f(x_2) - f(x_1)|\]</span> Перейдем к супремуму: <span
+class="math display">\[\displaystyle \sup_{[a, b]}||f(x_2)| - |f(x_1)||
+\le \displaystyle\sup_{[a, b]}|f(x_2) - f(x_1)|\]</span> Так как <span
+class="math inline">\(\displaystyle\sup_{x, x’ \in [a, b]}|f(x) - f(x’)|
+= \displaystyle\sup_{[a, b]}f(x) - \displaystyle\inf_{[a,
+b]}f(x)\)</span>, получаем: <span class="math display">\[\displaystyle
+\sup_{[a, b]}|f(x_2)| - \displaystyle\inf_{[a, b]}|f(x_1)| \le
+\displaystyle \sup_{[a, b]}f(x_2) - \displaystyle\inf_{[a,
+b]}f(x_1)\]</span> <span class="math display">\[\Downarrow\]</span>
+<span class="math display">\[S_{|f|}(\mathcal{T}) - s_{|f|}(\mathcal{T})
+\le S_f(\mathcal{T}) - s_f(\mathcal{T}) &lt;
+\varepsilon  \,\,\,\,\blacksquare\]</span></p>
+</div>
+<h3 data-number="2.6.6"
+id="положительность-интеграла-от-положительной">Положительность
+интеграла от положительной</h3>
+<div id="statement-7">
+<p><strong>Утверждение:</strong> <span class="math display">\[f(x) \ge 0
+\Rightarrow \displaystyle\int\limits_a^b f(x)dx \ge 0\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\forall
+\mathcal{T}(\xi) \,\,\,\, \sigma_f(\mathcal{T}(\xi)) \ge 0
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<h3 data-number="2.6.7" id="более-сильная-положительность">Более сильная
+положительность</h3>
+<div id="statement-8">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f(x)
+\in R[a, b], \,\,\,\, f(x) \ge 0 \,\,\,\, \forall x \in [a, b], \,\,\,\,
+\exists c \in [a, b]: \,\,\,\, f(c) &gt; 0\)</span> и <span
+class="math inline">\(f(x)\)</span> непрерывна в точке <span
+class="math inline">\(c\)</span>. Тогда <span
+class="math display">\[\displaystyle\int\limits_a^b f(x)dx &gt;
+0\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\forall
+\varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \,\,\,\, \forall x: 0
+&lt; |x - c| &lt; \delta \,\,\,\, |f(x) - f(c)| &lt;
+\varepsilon\]</span></p>
+<p>Пусть <span class="math inline">\(\varepsilon = \frac{f(c)}{2}
+\Rightarrow \forall x \in (c - \delta, c + \delta) \,\,\,\, f(x) &gt;
+\frac{f(c)}{2} \Rightarrow \displaystyle\int\limits_{c - \delta}^{c +
+\delta} f(x)dx &gt; \frac{f(c)}{2} &gt; 0 \Rightarrow
+\displaystyle\int\limits_a^b f(x)dx &gt; 0
+\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h3 data-number="2.6.8"
+id="интегрируемость-произведения">Интегрируемость произведения</h3>
+<div id="statement-9">
+<p><strong>Утверждение:</strong> <span class="math display">\[f(x), g(x)
+\in R[a, b] \Rightarrow f(x)g(x) \in R[a, b]\]</span></p>
+<p><em>Доказательство:</em> <span class="math inline">\(|f(x_2)g(x_2) -
+f(x_1)g(x_1)| = |f(x_2)||g(x_2) - g(x_1)| + |g(x_1)||f(x_2) - f(x_1)|
+\,\,\,\,\blacksquare\)</span></p>
+</div>
+<h3 data-number="2.6.9" id="интегрируемость-частного">Интегрируемость
+частного</h3>
+<div id="statement-10">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f(x)
+\in R[a, b]\)</span> и <span class="math inline">\(\exists \delta &gt;
+0: \,\,\,\, \forall x \in [a, b] \,\,\,\, f(x) &gt; \delta\)</span>.
+Тогда <span class="math inline">\(\frac{1}{f(x)} \in R[a,
+b]\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math display">\[\frac{1}{f(x)}
+\le \frac{1}{\delta}\]</span> <span
+class="math display">\[\left|\frac{1}{f(x_2)} - \frac{1}{f(x_1)}\right|
+\le \frac{1}{\delta^2}|f(x_2) - f(x_1)|
+\,\,\,\,\blacksquare\]</span></p>
+</div>
+<h2 data-number="2.7" id="первая-теорема-о-среднем">Первая теорема о
+среднем</h2>
+<div id="theorem-7">
+<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x),
+g(x) \in R[a, b], \,\,\,\, g(x) \ge 0, \,\,\,\, m =
+\displaystyle\inf_{[a, b]} f(x), \,\,\,\, M = \displaystyle\sup_{[a, b]}
+f(x)\)</span>. Тогда <span class="math display">\[\exists \mu \in [m,
+M]: \,\,\,\, \displaystyle\int\limits_a^b f(x)g(x)dx =
+\mu\displaystyle\int\limits_a^b g(x)dx\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[m g(x) \le
+g(x)f(x) \le M g(x) \Rightarrow\]</span></p>
+<p><span class="math display">\[m \displaystyle\int\limits_a^b g(x)dx
+\le \displaystyle\int\limits_a^b f(x)g(x)dx \le
+M\displaystyle\int\limits_a^b g(x)dx\]</span> Если <span
+class="math inline">\(\displaystyle\int\limits_a^b g(x)dx \ne
+0\)</span>, то возьмем в качестве <span class="math inline">\(\mu =
+\,\,\,\, \frac{\displaystyle\int\limits_a^b
+f(x)g(x)dx}{\displaystyle\int\limits_a^b g(x)dx}\)</span>.</p>
+<p>Иначе, любое <span class="math inline">\(\mu\)</span> подходит <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="неопределенный-интеграл.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="интеграл-с-переменным-верхним-пределом.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

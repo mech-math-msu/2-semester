@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Решение задач</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="векторное-пространство.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="1" id="решение-задач">Решение задач</h1>
+<h2 data-number="1.1" id="векторные-подпространства">Векторные
+подпространства</h2>
+<h3 data-number="1.1.1"
+id="способы-задания-фундаментальная-система-решений">Способы задания:
+фундаментальная система решений</h3>
+<p>Пусть задана система <span class="math inline">\(m\)</span> линейных
+однородных <a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> уравнений с <span
+class="math inline">\(n\)</span> неизвестными. Тогда множество ее
+решений – векторное подпространство в пространстве строк длины <span
+class="math inline">\(n\)</span>. <a href="#fn2" class="footnote-ref"
+id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<h3 data-number="1.1.2" id="способы-задания-линейная-оболочка">Способы
+задания: линейная оболочка</h3>
+<p>Пусть <span class="math inline">\(V\)</span> – векторное пространство
+и <span class="math inline">\(u_1, \ldots, u_n \in V\)</span>. Тогда
+наименьшее по мощности векторное подпространство, содержащее <span
+class="math inline">\(u_1, \ldots, u_n\)</span> – это <em>линейная
+оболочка</em> векторов <span class="math inline">\(u_1, \ldots,
+u_n\)</span>.</p>
+<h3 data-number="1.1.3"
+id="как-перейти-от-фундаментальной-системы-решений-к-линейной-оболочке-и-обратно">Как
+перейти от фундаментальной системы решений к линейной оболочке и
+обратно?</h3>
+<p>Рассмотрим на примере. Пусть <span class="math inline">\(U = \langle
+(1, 1, 1, 1, 1), (0, 1, 0, 1, 1), (1, 1, 0, 0, 0), (2, 3, 1, 2,
+2)\rangle\)</span>. Хотим представить <span
+class="math inline">\(U\)</span> в виде системы линейных уравнений, для
+которых векторы <span class="math inline">\((1, 1, 1, 1, 1), (0, 1, 0,
+1, 1), (1, 1, 0, 0, 0), (2, 3, 1, 2, 2)\)</span> являются решениями, то
+есть выполнено <span class="math display">\[\begin{cases}
+x_1 + x_2 + x_3 + x_4 + x_5 = 0\\
+x_2 + x_4 + x_5 = 0\\
+x_1 + x_2 = 0\\
+2 \cdot x_1 + 3\cdot x_2 + x_3 + 2 \cdot x_4 + 2 \cdot x_5 = 0
+\end{cases}\]</span></p>
+<p>Решим полученную систему методом Гаусса:</p>
+<p><span class="math display">\[\left(\begin{array}{ccccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 1\\
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 1\\
+1 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+2 &amp; 3 &amp; 1 &amp; 2 &amp; 2\\
+\end{array}\right) \sim \left(\begin{array}{ccccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 1\\
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 1\\
+0 &amp; 1 &amp; -1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; -1 &amp; -1 &amp; -1\\
+\end{array}\right) \sim \left(\begin{array}{ccccc}
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 1\\
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 1\\
+0 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+\end{array}\right) \sim \left(\begin{array}{ccccc}
+1 &amp; 0 &amp; 0 &amp; -1 &amp; -1\\
+0 &amp; 1 &amp; 0 &amp; 1 &amp; 1\\
+0 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+\end{array}\right)\]</span></p>
+<p>Значит решение – это линейная комбинация векторов <span
+class="math inline">\(\left(\begin{array}{c}
+1\\
+-1\\
+-1\\
+1\\
+0\\
+\end{array}\right)\)</span> и <span
+class="math inline">\(\left(\begin{array}{c}
+1\\
+-1\\
+-1\\
+0\\
+1\\
+\end{array}\right)\)</span> <a href="#fn3" class="footnote-ref"
+id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>То есть <span class="math inline">\(U = \begin{cases}
+x_1 - x_2 - x_3 + x_4 = 0\\
+x_1 - x_2 - x_3 + x_5 = 0
+\end{cases}\)</span>.</p>
+<h3 data-number="1.1.4"
+id="нахождение-суммы-и-пересечения-подпространств">Нахождение суммы и
+пересечения подпространств</h3>
+<p>Сумма и пересечение подпространств – это подпространства.</p>
+<p>Чтобы найти сумму надо объединить векторы подпространств, заданных
+линейными оболочками.</p>
+<p>Чтобы найти пересечение надо пересечь системы уравнений, задающих
+подпространства.</p>
+<p>Как себя проверять? Должно выполняться <span
+class="math inline">\(\dim(U + W) + \dim(U \cap W) = \dim U + \dim
+W\)</span>.</p>
+<h2 data-number="1.2" id="прямая-сумма-подпространств">Прямая сумма
+подпространств</h2>
+<h2 data-number="1.3"
+id="нахождение-линейного-оператора-который-переводит-заданный-набор-векторов-в-другой-заданный-набор">Нахождение
+линейного оператора, который переводит заданный набор векторов в другой
+заданный набор</h2>
+<h2 data-number="1.4" id="образ-и-ядро-линейного-оператора">Образ и ядро
+линейного оператора</h2>
+<p><strong>критерий инъективности</strong> Отображение инъективно <span
+class="math inline">\(\iff\)</span> его ядро тривиально.</p>
+<p>Пусть <span class="math inline">\(U\)</span> и <span
+class="math inline">\(W\)</span> векторные пространства и <span
+class="math inline">\(f: U \to W\)</span> линейное отображение с
+матрицей <span class="math inline">\(A\)</span>. Ядро и образ <span
+class="math inline">\(f\)</span> – это подпространства в <span
+class="math inline">\(U\)</span> и <span
+class="math inline">\(W\)</span> соответственно.</p>
+<p>Чтобы найти ядро оператора, заданного матрицей, нужно посчитать ее
+фундаментальную систему решений.</p>
+<h2 data-number="1.5"
+id="собственные-значения-и-характеристический-многочлен">Собственные
+значения и характеристический многочлен</h2>
+<p><span class="math inline">\(v\)</span> – (<em>собственный</em>)
+вектор оператора <span class="math inline">\(f\)</span> с
+<em>собственным значением</em> <span class="math inline">\(\lambda \iff
+f(v) = \lambda v\)</span>.</p>
+<p>Пусть матрица линейного отображения <span
+class="math inline">\(f\)</span> – это <span
+class="math inline">\(A\)</span>. <span class="math inline">\(\det(A - t
+E)\)</span> – <em>характеристический многочлен</em>. <span
+class="math inline">\(\det(A - t E) = 0\)</span> –
+<em>характеристическое уравнение</em>.</p>
+<p><strong>критерий собственного значения</strong> <span
+class="math inline">\(\lambda\)</span> – собственное значение оператора
+<span class="math inline">\(f\iff \lambda\)</span> – корень
+характеристического уравнения.</p>
+<p><strong>факт</strong> все вектора с собственным значением <span
+class="math inline">\(\lambda\)</span> образуют подпространство.</p>
+<h3 data-number="1.5.1"
+id="как-найти-базис-подпространства-отвечающего-собственному-значению">Как
+найти базис подпространства, отвечающего собственному значению?</h3>
+<p>Найти ядро оператора <span class="math inline">\(\lambda
+\operatorname{id} - f\)</span>, где <span
+class="math inline">\(f\)</span> – линейный оператор, <span
+class="math inline">\(\lambda\)</span> его собственное значение, а <span
+class="math inline">\(\operatorname{id}\)</span> – тождественный
+оператор.</p>
+<h3 data-number="1.5.2"
+id="диагонализируемость-линейного-оператора">Диагонализируемость
+линейного оператора</h3>
+<p>Линейный оператор диагонализируем <span
+class="math inline">\(\iff\)</span> его характеристический многочлен
+раскладывается на линейные множители над полем векторного пространства
+<span class="math inline">\(\iff\)</span> векторное пространство
+раскладывается в прямую сумму собственных подпространств</p>
+<p><em>алгебраическая кратность</em> собственного значения <span
+class="math inline">\(\lambda\)</span> – это его кратность, как корня
+характеристического уравнения.</p>
+<p><em>геометрическая кратность</em> собственного значения <span
+class="math inline">\(\lambda\)</span> – это размерность векторного
+подпространства, отвечающего этому значению, а это в свою очередь
+размерность ядра <span class="math inline">\(\lambda \operatorname{id} -
+f\)</span>, которая равна рангу матрицы <span
+class="math inline">\(\lambda E - A_f\)</span>, где <span
+class="math inline">\(A_f\)</span> – матрица оператора <span
+class="math inline">\(f\)</span>.</p>
+<h2 data-number="1.6" id="жорданова-форма">Жорданова форма</h2>
+<h3 data-number="1.6.1" id="свойства-жордановых-клеток">Свойства
+жордановых клеток</h3>
+<ul>
+<li>Сумма размерностей жордановых клеток с <span
+class="math inline">\(\lambda\)</span> на диагонали равна алгебраической
+кратности <span class="math inline">\(\lambda\)</span></li>
+<li>Количество клеток с <span class="math inline">\(\lambda\)</span> на
+диагонали равно геометрической кратности <span
+class="math inline">\(\lambda\)</span>, то есть <span
+class="math inline">\(\dim V_{\lambda}\)</span></li>
+<li>Количество клеток с <span class="math inline">\(\lambda\)</span> на
+диагонали размерности <span class="math inline">\(k\times k\)</span>
+равно <span class="math inline">\(\operatorname{rk}(A - \lambda E)^{k -
+1} + \operatorname{rk}(A - \lambda E)^{k + 1} - 2\operatorname{rk}(A-
+\lambda E)^k\)</span> (Абсолютно бессмысленная формула, которую я
+никогда не знала :)</li>
+</ul>
+<h3 data-number="1.6.2" id="как-найти-жорданову-нормальную-форму">Как
+найти жорданову нормальную форму?</h3>
+<p>Пусть дана матрица <span
+class="math inline">\(\left(\begin{array}{ccc}
+3 &amp; 0 &amp; 8 \\
+3 &amp; -1 &amp; 6 \\
+-2 &amp; 0 &amp; -5
+\end{array}\right)\)</span>.</p>
+<p>Ищем ее характеристический многочлен <span
+class="math inline">\(\det(A - tE) = \left|\begin{array}{ccc}
+3 - t &amp; 0 &amp; 8 \\
+3 &amp; -1 - t &amp; 6 \\
+-2 &amp; 0 &amp; -5 - t
+\end{array}\right| = (x + 1)^3\)</span>.</p>
+<p>Далее найдем размерности клеток, пользуясь свойством <span
+class="math inline">\(1\)</span> и …</p>
+<h2 data-number="1.7" id="минимальный-многочлен">Минимальный
+многочлен</h2>
+<p>Это аннулирующий многочлен минимальной степени со старшим
+коэффицентом <span class="math inline">\(1\)</span>. Обозначается <span
+class="math inline">\(\mu_{f}(x)\)</span>, где <span
+class="math inline">\(f\)</span> – линейное отображение.</p>
+<p><strong>теорема Гамильтона-Кэли</strong> <span
+class="math inline">\(\mu_f(x) = \displaystyle \prod_{\lambda: \,\,
+\chi_{f}(\lambda) = 0}(x - \lambda)^\beta, \,\,\,\, \beta\)</span> –
+максимальный размер клеток с <span
+class="math inline">\(\lambda\)</span> в жордановой нормальной
+форме.</p>
+<h2 data-number="1.8" id="как-посчитать-функции-от-матриц">Как посчитать
+функции от матриц</h2>
+<p>Найти минимальный многочлен матрицы (см. теорему выше). Поделить ряд
+Тейлора функции <a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a> с остатком на минимальный многочлен.
+Остаток – это многочлен степени на один меньшей, чем степень
+минимального многочлена. Чтобы найти коэффиценты остатка, подставляем
+корни минимального многочлена, в производные от равенства <span
+class="math inline">\(f(x) = q(x)\mu_A(x) + r(x)\)</span>.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>То есть с нулем в правой части.<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Это понятно, так как сумма решений и решение, умноженное
+на константу, – решения и <span class="math inline">\(0\)</span>
+является решением, то есть множество решений замкнуто относительно
+операций векторного пространства и содержит <span
+class="math inline">\(0\)</span><a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Что бы их получить надо подставлять в качестве значений
+в столбцах, не входящих в единичную матрицу улучшенного ступенчатого
+вида, стандартные базисные векторы и вычислять оставшиеся значения.<a
+href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Хочется, конечно, чтобы он к ней равномерно сходился<a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="векторное-пространство.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

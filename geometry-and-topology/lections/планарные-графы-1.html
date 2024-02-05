@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Планарные графы</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="теорема-жордана-1.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="раскраски-плоских-графов.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="6" id="планарные-графы-1">Планарные графы</h1>
+<div id="definition-79">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(A\)</span> и <span
+class="math inline">\(B\)</span> подмножества множества <span
+class="math inline">\(C\)</span>. <span class="math inline">\(A \sqcup
+B\)</span> обозначает, что <span class="math inline">\(A \cap B =
+\varnothing\)</span> и <span class="math inline">\(C = A \cup
+B\)</span>.</p>
+</div>
+<div id="definition-80">
+<p><strong>Определение:</strong> Пусть <span class="math inline">\(G =
+(V, E, \partial)\)</span> и <span class="math inline">\(G’ = (V’, E’,
+\partial’)\)</span> – графы. <em>Отображение графа</em> <span
+class="math inline">\(G\)</span> <em>в граф</em> <span
+class="math inline">\(G’\)</span> – это <span class="math inline">\(f: V
+\sqcup E \to V’ \sqcup E’\)</span>, такое, что <span
+class="math inline">\(f(V) \subset V’\)</span>, <span
+class="math inline">\(f(E) \subset E’\)</span> и <span
+class="math inline">\(f(\partial(e)) = \partial’(f(e))\,\,\,\, \forall e
+\in E\)</span>. Если отображение <span class="math inline">\(f\)</span>
+графов <span class="math inline">\(G\)</span> и <span
+class="math inline">\(G’\)</span> взаимнооднозначно, то <span
+class="math inline">\(f\)</span> – <em>изоморфизм</em> графов <span
+class="math inline">\(G\)</span> и <span
+class="math inline">\(G’\)</span>, а графы <span
+class="math inline">\(G\)</span> и <span
+class="math inline">\(G’\)</span> – <em>изоморфные</em>.<br>
+<strong>Обозначается:</strong> <span class="math inline">\(G \cong
+G’\)</span>.</p>
+</div>
+<div id="definition-81">
+<p><strong>Определение:</strong> Граф <span class="math inline">\(G =
+(V, E, \partial)\)</span> иногда называют <em>комбинаторным</em>.</p>
+</div>
+<div id="statement-46">
+<p><strong>Утверждение:</strong> Отношение изоморфности на графах –
+отношение эквивалентности.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-47">
+<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(G
+\cong G’\)</span>. Тогда топологические графы <span
+class="math inline">\(X_{G}\)</span> и <span
+class="math inline">\(X_{G’}\)</span> гомеоморфны.</p>
+<p><em>Доказательство:</em></p>
+</div>
+<div id="definition-82">
+<p><strong>Определение:</strong> Пусть <span class="math inline">\(f:
+X_G \to Y\)</span> – вложение графа <span
+class="math inline">\(G\)</span> в пространство <span
+class="math inline">\(Y\)</span>. Образ <span
+class="math inline">\(f(X_G) \subset Y\)</span> – <em>геометрическая
+реализация</em> графа <span class="math inline">\(G\)</span>. <span
+class="math inline">\(f\)</span>-образы вершин и ребер графа <span
+class="math inline">\(X_G\)</span> – <em>вершины и ребра геометрической
+реализации</em>. Существует взаимнооднозначное соответствие между
+вершинами и ребрами реализации и вершинами и ребрами графа, поэтому их
+можно отождествить и смотреть на геометрическую реализацию, как на
+множество точек(вершин) <span class="math inline">\(Y\)</span>,
+соединенных непрерывными кривыми без самопересечений. В таком случае
+отображение инцидентности переводит кривую в множество ее концевых
+точек.</p>
+</div>
+<div id="definition-83">
+<p><strong>Определение:</strong> Граф – <em>планарный</em>, если
+существует его вложение в плоскость.</p>
+</div>
+<div id="definition-84">
+<p><strong>Определение:</strong> Геометрическая реализация планарного
+графа – <em>плоский граф</em>.</p>
+</div>
+<div id="definition-85">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\Gamma \subset \mathbb{R}^2\)</span> – плоский
+граф. Компоненты линейной связности <span
+class="math inline">\(\mathbb{R}^2\setminus \Gamma\)</span> –
+<em>грани</em> <span class="math inline">\(\Gamma\)</span>.</p>
+</div>
+<div id="definition-86">
+<p><strong>Определение:</strong> Граф без циклов – <em>лес</em>.</p>
+</div>
+<div id="definition-87">
+<p><strong>Определение:</strong> <em>Подразбиение ребра</em> графа <span
+class="math inline">\(G\)</span> – это …</p>
+</div>
+<h2 data-number="6.1" id="формула-эйлера-для-плоских-графов">Формула
+Эйлера для плоских графов</h2>
+<div id="theorem-6">
+<p><strong>Теорема:</strong> (формула Эйлера) Пусть <span
+class="math inline">\(G\)</span> – конечный плоский граф. <span
+class="math inline">\(v, e, f, k\)</span> – количество его вершин,
+ребер, граней и компонет связности. Тогда справедлива формула: <span
+class="math display">\[v - e + f = 1 + k\]</span></p>
+<p><em>Доказательство:</em></p>
+</div>
+<p>Можно доказывать для графа, все ребра которого отрезки, так как по
+утверждению можем построить граф, все ребра которого ломаные, а добавив
+в граф в качестве вершин точки ломаных, и вместо ребра-ломаной отдельные
+ребра для каждого звена ломаной, получим граф, для которого формула
+элера будет верна, если она была верна для исходного, и неверна
+иначе.</p>
+<p>Индукция по количеству ребер <span
+class="math inline">\(e\)</span>.</p>
+<p><strong>База:</strong> <span class="math inline">\(e = 0\)</span>.
+Тогда <span class="math inline">\(k = v\)</span> и <span
+class="math inline">\(f = 1 \,\,\,\,\blacksquare\)</span></p>
+<p><strong>Шаг:</strong> Разберем два случая.</p>
+<ol type="1">
+<li>Пусть <span class="math inline">\(G\)</span> содержит цикл <span
+class="math inline">\(C = v_{i_1}v_{i_2}\ldots v_{i_s}\)</span> (<span
+class="math inline">\(v_{i_1} = v_{i_k}\)</span>). Пусть ребро <span
+class="math inline">\(e\)</span> содержится в цикле. При выбрасывании
+<span class="math inline">\(e\)</span> количество ребер уменьшится на
+<span class="math inline">\(1\)</span>, количество вершин и компонент
+связности графа не изменится. Докажем, что количество граней также не
+изменится.</li>
+</ol>
+<p>По теореме Жордана <span class="math inline">\(\mathbb{R}^2 \setminus
+C\)</span> состоит из двух компонент линейной связности. Пусть <span
+class="math inline">\(p\)</span> произвольная внутренняя точка на ребре
+<span class="math inline">\(e\)</span>. Пусть <span
+class="math inline">\(U(p)\)</span> окрестность <span
+class="math inline">\(p\)</span>, такая, что <span
+class="math inline">\(U(p)\cap (G \setminus e) = \varnothing\)</span>.
+Ломаная <span class="math inline">\(C\)</span> разбивает <span
+class="math inline">\(U(p)\)</span> на две компоненты линейной
+связности. Возьмем точки в разных компонентах <span
+class="math inline">\(U(p)\setminus G\)</span>. До выбрасывания ребра
+<span class="math inline">\(e\)</span> они лежали в разных компонентах
+линейной связности <span class="math inline">\(\mathbb{R}^2 \setminus
+C\)</span>. После выбрасывания они находятся в одной и той же
+компоненте. То есть количество граней уменьшилось хотя бы на <span
+class="math inline">\(1\)</span>.</p>
+<p>Докажем, что количество граней уменьшилось ровно на <span
+class="math inline">\(1\)</span>. Пусть точки <span
+class="math inline">\(a\)</span> и <span
+class="math inline">\(b\)</span> до выбрасывания ребра <span
+class="math inline">\(e\)</span> были в одной грани, а после
+выбрасывания оказались в разных. Тогда можно соединить каждую из этих
+точек с <span class="math inline">\(U(p)\setminus G\)</span> ломаной, не
+пересекающей <span class="math inline">\(G\)</span>, то есть точки до
+выбрасывания лежали в гранях, примыкающих к ребру <span
+class="math inline">\(e\)</span>.</p>
+<p><img src="img/euler-formula.svg" width="900" height="800" /></p>
+<ol start="2" type="1">
+<li>Пусть <span class="math inline">\(G\)</span> не содержит циклов.
+Тогда в нем есть компонента связности – дерево. Рассмотрим в нем вершину
+<span class="math inline">\(v\)</span> степени <span
+class="math inline">\(1\)</span>. Пусть <span
+class="math inline">\(e\)</span> ребро инцидентное <span
+class="math inline">\(v\)</span>. При выбрасывании <span
+class="math inline">\(e\)</span> количество ребер и вершин уменьшится на
+<span class="math inline">\(1\)</span>, количество компонент связности
+графа не изменится. Докажем, что количество граней также не
+изменится.</li>
+</ol>
+<p>Пусть точки <span class="math inline">\(a\)</span> и <span
+class="math inline">\(b\)</span> можно соединить ломаной, не
+пересекающей <span class="math inline">\(G \setminus e\)</span>.</p>
+<p><span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<h2 data-number="6.2"
+id="критерий-планарности-графа-теорема-понтрягина-куратовского">Критерий
+планарности графа (теорема Понтрягина-Куратовского)</h2>
+<div id="definition-88">
+<p><strong>Определение:</strong> Графы <em>гомеоморфны</em>, если
+гомеоморфны их топологические графы.</p>
+</div>
+<div id="theorem-7">
+<p><strong>Теорема:</strong> Граф <span class="math inline">\(G\)</span>
+– планарен <span class="math inline">\(\Leftrightarrow\)</span> никакой
+подграф графа <span class="math inline">\(G\)</span> не гомеоморфен
+<span class="math inline">\(K_{3, 3}\)</span> или <span
+class="math inline">\(K_5\)</span>.</p>
+<p><em>Доказательство:</em> <span
+class="math display">\[\Rightarrow\]</span></p>
+</div>
+<p>Графы <span class="math inline">\(K_{3, 3}\)</span> и <span
+class="math inline">\(K_5\)</span> непланарны <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="math display">\[\Leftarrow\]</span></p>
+<p>сложно</p>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="теорема-жордана-1.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="раскраски-плоских-графов.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

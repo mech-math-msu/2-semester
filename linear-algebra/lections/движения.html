@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+    
+    
+    
+    
+    <title>Движения</title>
+    <style>
+        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        span.navlink { margin-left: 10px; }
+        span.navlink-label { display: inline-block; min-width: 4em; }
+        html {
+                    font-family: Georgia, serif;
+            
+                    font-size: 18px;
+            
+                    line-height: 1.45;
+            
+            color: #1a1a1a;
+
+            background-color: #fdfdfd;
+        }
+        body {
+            margin: 0 auto;
+            max-width: 64%;
+            padding-left: 20px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            text-rendering: optimizeLegibility;
+            font-kerning: normal;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+        @media print {
+            html {
+                background-color: white;
+            }
+            body {
+                background-color: transparent;
+                color: black;
+                font-size: 16px;
+            }
+            p, h2, h3 {
+                orphans: 3;
+                widows: 3;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        a {
+            color: #1a1a1a;
+        }
+        a:hover {
+            color: #7bc99a;
+        }
+        a:visited {
+            color: #1a1a1a;
+        }
+        img {
+            max-width: 100%;
+        }
+        svg {
+            height: auto;
+            max-width: 100%;
+        }
+
+        h1 {
+            padding-bottom: 3px;
+            border-bottom: 1px solid black;
+        }
+
+        h1.title {
+            font-size: 2.5rem;
+            border: none;
+        }
+        h2.toc-title {
+            border: none !important;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        ol, ul {
+            padding-left: 1.7rem;
+            margin-top: 1rem;
+        }
+        li > ol, li > ul {
+            margin-top: 0;
+        }
+        blockquote {
+            margin: 1rem 0 1rem 1.7rem;
+            padding-left: 1rem;
+            border-left: 2px solid #e6e6e6;
+            color: #606060;
+        }
+
+
+        code {
+            font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+                font-size: 85%;
+        /*    padding: 1rem 2rem;*/
+            margin: 0;
+            hyphens: manual;
+        }
+        pre {
+            margin: 1rem 0;
+                padding: 1rem 2rem;
+            overflow: auto;
+        }
+        pre code {
+        /*    padding: 1rem 2rem;*/
+            overflow: visible;
+            overflow-wrap: normal;
+        }
+        .sourceCode {
+            background-color: transparent;
+            overflow: visible;
+        }
+        div.sourceCode {
+            border-radius: 5px;
+            margin-left: 10px !important;
+        }
+        hr {
+            background-color: #1a1a1a;
+            border: none;
+            height: 1px;
+            margin: 1rem 0;
+        }
+        table {
+            margin: 1rem 0;
+            border-collapse: collapse;
+            width: 100%;
+            overflow-x: auto;
+            display: block;
+            font-variant-numeric: lining-nums tabular-nums;
+        }
+        table caption {
+            margin-bottom: 0.75rem;
+        }
+        tbody {
+            margin-top: 0.5rem;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        th {
+            border-top: 1px solid #1a1a1a;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        }
+        td {
+            padding: 0.125rem 0.5rem 0.25rem 0.5rem;
+        }
+        header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        #TOC li {
+            list-style: none;
+        }
+        #TOC ul {
+            padding-left: 1.3rem;
+        }
+        #TOC > ul {
+            padding-left: 0;
+        }
+        #TOC a:not(:hover) {
+            text-decoration: none;
+        }
+
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+            font-size: inherit;
+            width: 0.8rem;
+            margin: 0 0.8rem 0.2rem -1.6rem;
+            vertical-align: middle;
+        }
+
+
+    </style>
+
+    
+    <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+
+    
+            <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+            type="text/javascript"></script>
+    </head>
+<body>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="аффинно-евклидовы-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="аффинно-квадратичные-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+
+
+<h1 data-number="24" id="движения">Движения</h1>
+<div id="definition-120">
+<p><strong>Определение:</strong> Пусть <span
+class="math inline">\(\mathbb{A}\)</span> аффинное пространство.
+Отображение <span class="math inline">\(f: \mathbb{A} \to
+\mathbb{A}\)</span> – <em>движение</em>, если <span
+class="math inline">\(\rho(a, b) = \rho(f(a), f(b)), \,\,\,\, \forall a,
+b \in \mathbb{A}\)</span>.</p>
+</div>
+<div id="definition-121">
+<p><strong>Определение:</strong> Аффинный оператор <span
+class="math inline">\(\Phi\)</span> <em>ортогональный</em>, если его
+дифференциал - ортогональный линейный оператор.</p>
+</div>
+<div id="statement-120">
+<p><strong>Утверждение:</strong> Сдвиг на вектор – это движение и
+аффинный ортогональный оператор.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="statement-121">
+<p><strong>Утверждение:</strong> Композиция движений – это движение.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+</div>
+<div id="theorem-27">
+<p><strong>Теорема:</strong> Движение – это ортогональный аффинный
+оператор.</p>
+<p><em>Доказательство:</em></p>
+<p><span class="math display">\[\Leftarrow\]</span> Пусть <span
+class="math inline">\(\Phi\)</span> – ортогональный аффинный оператор.
+<span class="math inline">\(\rho(\Phi(a), \Phi(b)) =
+|\overline{\Phi(a)\Phi(b)}| = |\varphi(\overline{ab})| =\)</span> (<span
+class="math inline">\(\varphi\)</span> – ортогональный линейный
+оператор, а значит сохраняет длину вектора) <span
+class="math inline">\(= |\overline{ab}| = \rho(a, b)
+\,\,\,\,\blacksquare\)</span></p>
+<p><span class="math display">\[\Rightarrow\]</span> Пусть <span
+class="math inline">\(\Phi\)</span> – движение, то есть <span
+class="math inline">\(\rho(\Phi(a), \Phi(b)) = \rho(a, b)\)</span>.
+Пусть <span class="math inline">\(s \in \mathbb{A}\)</span>, <span
+class="math inline">\(u = \overline{s\Phi(s)}\)</span>, <span
+class="math inline">\(\Psi = \left(t_u\right)^{-1}\Phi\)</span>.</p>
+<p>Докажем, что <span class="math inline">\(\Psi\)</span> –
+ортогональный аффинный оператор.</p>
+<p>Пусть <span class="math inline">\(\psi: v \in V \mapsto
+\overline{s\Psi(s + v)} \in V\)</span>. <span
+class="math inline">\(\Psi(s) = t_{-u}(\Phi(s)) = \Phi(s) - u =
+s\)</span> Докажем, что <span class="math inline">\(\psi\)</span> –
+ортогональный линейный оператор. <span class="math inline">\(|\psi(v)| =
+|\overline{s\Psi(s + v)}| = \rho(s, \Psi(s + v)) = \rho(\Psi(s), \Psi(s
++ v)) = \rho(s, s + v) = |v|\)</span></p>
+<details>
+<summary>
+Кому-то было плохо (по предыдущей теореме :)
+</summary>
+<p>Пусть <span class="math inline">\(f\)</span> движение, по предыдущей
+теореме <span class="math inline">\(f\)</span> – ортогональный аффинный
+оператор. Пусть дифференициал <span class="math inline">\(f\)</span> –
+это <span class="math inline">\(\varphi\)</span>(ортогональный линейный
+оператор). Выберем аффинную систему координат <span
+class="math inline">\((O, e)\)</span>, где <span
+class="math inline">\(e\)</span> – ортонормированный базис. Тогда
+матрица <span class="math inline">\(A\)</span> оператора <span
+class="math inline">\(\varphi\)</span> – ортогональна. <span
+class="math inline">\(\forall a \in \mathbb{A} \,\,\,\, f(a) = f(O) +
+\varphi(\overline{Oa})\)</span>. Пусть <span
+class="math inline">\(X_0\)</span> – столбец координат <span
+class="math inline">\(f(O)\)</span> в <span class="math inline">\((O,
+e)\)</span>, <span class="math inline">\(X\)</span> – столбец координат
+<span class="math inline">\(f(a)\)</span>, <span
+class="math inline">\(X_{\overline{Oa}}\)</span> – столбец координат
+вектора <span class="math inline">\(\overline{Oa}\)</span> в <span
+class="math inline">\(e\)</span>. Тогда <span class="math inline">\(X =
+X_0 + A X_{\overline{Oa}}\)</span>.</p>
+</details>
+</div>
+<div id="definition-122">
+<p><strong>Определение:</strong></p>
+<p>Если <span class="math inline">\(\det A = 1\)</span>, то движение
+<em>собственное</em>.</p>
+<p>Если <span class="math inline">\(\det A = -1\)</span>, то движение
+<em>несобственное</em>.</p>
+<p>Если <span class="math inline">\(f(O) = O\)</span>, то движение –
+<em>поворот</em>.</p>
+</div>
+<h2 data-number="24.1" id="основная-теорема-о-движении">Основная теорема
+о движении</h2>
+<div id="theorem-28">
+<p><strong>Теорема:</strong> Пусть <span
+class="math inline">\(\mathbb{A}\)</span> аффинно-евклидово пространство
+над <span class="math inline">\(V\)</span>. Пусть <span
+class="math inline">\(\Phi\)</span> - движение с дифференциалом <span
+class="math inline">\(\varphi\)</span>. Тогда <span
+class="math inline">\(\exists u \in V: \,\,\,\, \varphi(u) = u\)</span>
+и <span class="math inline">\(\exists \Psi\)</span> - движение с
+неподвижной точкой, такое, что <span class="math inline">\(\Phi = t_u
+\circ \Psi\)</span> (<span class="math inline">\(t_u\)</span> - сдвиг на
+вектор).</p>
+<p><em>Доказательство:</em></p>
+<p>Если у <span class="math inline">\(\varphi\)</span> существует
+собственное значение <span class="math inline">\(1\)</span>, то берем
+вектор <span class="math inline">\(u\)</span> с таким собственным
+значением, иначе <span class="math inline">\(u = 0\)</span>. Пусть <span
+class="math inline">\(\Psi = (t_u)^{-1}\circ \Phi
+\,\,\,\,\blacksquare\)</span></p>
+</div>
+
+
+<nav id="sitenav">
+    <div class="sitenav">
+        <span class="navlink">
+                        <a href="аффинно-евклидовы-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                    </span>
+        <span class="navlink">
+                        <a href="аффинно-квадратичные-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                    </span>
+    </div>
+</nav>
+
+</body>
+</html>

@@ -12,7 +12,9 @@
     <title>Процесс ортогонализации Грама-Шмидта(существование
 ортогонального базиса)</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -90,7 +92,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -102,16 +104,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -232,15 +234,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="евклидовы-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="линейные-функции-в-евклидовом-пространстве.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="евклидовы-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="линейные-функции-в-евклидовом-пространстве.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -270,14 +279,14 @@ class="math inline">\(e_1, \ldots, e_{n - 1}\)</span> – ортогональн
 e_i)}{(e_i, e_i)}\)</span>, <span class="math inline">\(e_i \ne
 0\)</span>, так как …</p>
 <div id="theorem-13">
-<p><strong>Теорема:</strong> В любом <span
+<p><strong>Теорема: </strong>В любом <span
 class="math inline">\(n\)</span>-мерном евклидовом пространстве
 существоет ортогональный базис.</p>
 <p><em>Доказательство:</em> см. выше <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-6">
-<p><strong>Следствие:</strong> Пусть <span class="math inline">\(f =
+<p><strong>Следствие: </strong>Пусть <span class="math inline">\(f =
 \{f_1, \ldots, f_n\}\)</span> – базис евклидова пространства <span
 class="math inline">\(V\)</span>. <span class="math inline">\(e = \{e_1,
 \ldots, e_n\}\)</span> – ортогональный базис <span
@@ -289,7 +298,7 @@ class="math inline">\(e\)</span> унитреугольная.</p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-66">
-<p><strong>Утверждение:</strong> (о <span
+<p><strong>Утверждение: </strong>(о <span
 class="math inline">\(QR\)</span>- разложении) Любая невырожденная
 квадратная матрица <span class="math inline">\(A\)</span> представима в
 виде произведения унитреугольной матрицы <span
@@ -311,7 +320,7 @@ class="math inline">\(C_{e \to f} = C_{e \to e’} \cdot C_{e’ \to f}
 <h2 data-number="15.1" id="ортогональное-дополнение">Ортогональное
 дополнение</h2>
 <div id="definition-66">
-<p><strong>Определение:</strong> <span class="math inline">\(V\)</span>
+<p><strong>Определение: </strong><span class="math inline">\(V\)</span>
 – евклидово пространство, <span class="math inline">\(U\)</span> – его
 подпространство. Множество <span class="math inline">\(U^{\perp} = \{x
 \in V: \,\,\,\, (x, u) = 0 \,\,\,\, \forall u \in U\}\)</span> –
@@ -319,7 +328,7 @@ class="math inline">\(C_{e \to f} = C_{e \to e’} \cdot C_{e’ \to f}
 class="math inline">\(U\)</span>.</p>
 </div>
 <div id="statement-67">
-<p><strong>Утверждение:</strong> <span class="math inline">\(V\)</span>
+<p><strong>Утверждение: </strong><span class="math inline">\(V\)</span>
 – евклидово пространство, <span class="math inline">\(U\)</span> – его
 подпространство. Тогда <span class="math inline">\(U^{\perp}\)</span> –
 подпространство <span class="math inline">\(V\)</span>.</p>
@@ -327,7 +336,7 @@ class="math inline">\(U\)</span>.</p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-68">
-<p><strong>Утверждение:</strong> <span class="math inline">\(V\)</span>
+<p><strong>Утверждение: </strong><span class="math inline">\(V\)</span>
 – евклидово пространство, <span class="math inline">\(U\)</span> – его
 подпространство. Тогда</p>
 <ol type="1">
@@ -358,7 +367,7 @@ e_n\)</span>, где <span class="math inline">\(x_i = (x, e_i)\)</span>.
 </ol>
 </div>
 <div id="corollary-7">
-<p><strong>Следствие:</strong> <span class="math inline">\(V\)</span> –
+<p><strong>Следствие: </strong><span class="math inline">\(V\)</span> –
 евклидово пространство, <span class="math inline">\(U\)</span> – его
 подпространство. Тогда любой вектор <span
 class="math inline">\(x\)</span> из <span
@@ -369,7 +378,7 @@ class="math inline">\(u^{\perp} \in U^{\perp}\)</span>.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="definition-67">
-<p><strong>Определение:</strong></p>
+<p><strong>Определение: </strong><strong>Определение:</strong></p>
 <p><span class="math inline">\(u\)</span> – <em>ортогональная проекция
 вектора</em> <span class="math inline">\(x\)</span> <em>на</em> <span
 class="math inline">\(U\)</span>. Обозначается: <span
@@ -383,7 +392,7 @@ class="math inline">\(\operatorname{ort}_{U}x\)</span>.</p>
 id="расстояния-в-евклидовом-пространстве">Расстояния в евклидовом
 пространстве</h2>
 <div id="definition-68">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> – евклидово пространство.</p>
 <p><em>Расстояние между векторами</em> <span class="math inline">\(x, y
 \in V\)</span> – это <span class="math inline">\(\rho(x, y) = |x -
@@ -420,12 +429,12 @@ class="math inline">\(\operatorname{пр}_{U}x\)</span>.</li>
 <h2 data-number="15.3" id="изоморфизм-евклидовых-пространств">Изоморфизм
 евклидовых пространств</h2>
 <div id="definition-69">
-<p><strong>Определение:</strong> Евклидовы пространства <span
+<p><strong>Определение: </strong>Евклидовы пространства <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> <em>изоморфны</em>, если существует
 отображение <span class="math inline">\(\varphi: U \to W\)</span>:</p>
 <ol type="1">
-<li><span class="math inline">\(\varphi\)</span> - изоморфизм <span
+<li><span class="math inline">\(\varphi\)</span> – изоморфизм <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span>, как векторных пространств.</li>
 <li><span class="math inline">\(\forall x, y \in U \,\,\,\, (x, y) =
@@ -434,7 +443,7 @@ class="math inline">\(W\)</span>, как векторных пространст
 <p>Обозначается: <span class="math inline">\(U \cong W\)</span>.</p>
 </div>
 <div id="theorem-14">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – конечномерные евклидовы пространства.
 Тогда <span class="math inline">\(U \cong W \Leftrightarrow \dim U =
@@ -457,7 +466,7 @@ class="math inline">\(\varphi: e_i \mapsto f_i
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="евклидовы-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

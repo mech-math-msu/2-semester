@@ -11,7 +11,9 @@
     
     <title>Евклидовы пространства</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="квадратичные-формы-над-полями-действительных-и-комплексных-чисел.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="процесс-ортогонализации-грама-шмидтасуществование-ортогонального-базиса.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="квадратичные-формы-над-полями-действительных-и-комплексных-чисел.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="процесс-ортогонализации-грама-шмидтасуществование-ортогонального-базиса.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,8 +257,8 @@
 <h1 data-number="14" id="евклидовы-пространства">Евклидовы
 пространства</h1>
 <div id="definition-56">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(V\)</span> - векторное пространство над <span
+<p><strong>Определение: </strong>Пусть <span
+class="math inline">\(V\)</span> – векторное пространство над <span
 class="math inline">\(\mathbb{R}\)</span>. Симметрическая положительно
 определенная билинейная функция <span class="math inline">\(\beta: V
 \times V \to \mathbb{R}\)</span> – это <em>скалярное произведение</em>
@@ -259,7 +268,7 @@ class="math inline">\(\mathbb{R}\)</span>. Симметрическая поло
 v)\)</span> обозначается, как <span class="math inline">\((u,
 v)\)</span>.</p>
 <div id="definition-57">
-<p><strong>Определение:</strong> Векторное пространство <span
+<p><strong>Определение: </strong>Векторное пространство <span
 class="math inline">\(V\)</span> над полем <span
 class="math inline">\(R\)</span> – <em>евклидово</em>, если существует
 скалярное произведение на <span class="math inline">\(V\)</span>.</p>
@@ -267,7 +276,7 @@ class="math inline">\(R\)</span> – <em>евклидово</em>, если су�
 <h2 data-number="14.1" id="длина-вектора-и-угол-между-векторами">Длина
 вектора и угол между векторами</h2>
 <div id="definition-58">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> евклидово пространство. <em>Длина
 вектора</em> <span class="math inline">\(v \in V\)</span> – это число
 <span class="math inline">\(|x| = \sqrt{(x, x)}\)</span>.</p>
@@ -275,7 +284,7 @@ class="math inline">\(V\)</span> евклидово пространство. <e
 определеннная функция.</p>
 </div>
 <div id="definition-59">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> евклидово пространство. <em>Косинус
 угла</em> <span class="math inline">\(\alpha\)</span> <em>между
 векторами</em> <span class="math inline">\(u, v \in V\)</span> – это
@@ -283,7 +292,7 @@ class="math inline">\(V\)</span> евклидово пространство. <e
 v)}{|u|\cdot|v|}\)</span>.</p>
 </div>
 <div id="statement-59">
-<p><strong>Утверждение:</strong> (<em>Неравенство
+<p><strong>Утверждение: </strong>(<em>Неравенство
 Коши-Буняковского</em>) Пусть <span class="math inline">\(V\)</span>
 евклидово пространство. Тогда <span class="math inline">\(\forall x, y
 \in V\)</span>: <span class="math display">\[(x, y)^2 \le (x, x)\cdot(y,
@@ -305,7 +314,7 @@ y)^2 - 4 (x, x)(y, y) \le 0 \Rightarrow (x, y)^2 \le (x, x)\cdot(y, y)
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-5">
-<p><strong>Следствие:</strong> Пусть <span
+<p><strong>Следствие: </strong>Пусть <span
 class="math inline">\(V\)</span> – евклидово пространство. Тогда:</p>
 <ol type="1">
 <li><span class="math inline">\(|x + y| \le |x| + |y|\)</span>
@@ -320,7 +329,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="14.2" id="матрица-грама-и-объем">Матрица Грама и
 объем</h2>
 <div id="definition-60">
-<p><strong>Определение:</strong> Квадратная матрица <span
+<p><strong>Определение: </strong>Квадратная матрица <span
 class="math display">\[G(v_1, \ldots, v_m) = \left(\begin{array}{cccc}
 (v_1, v_1) &amp; (v_1, v_2) &amp; \dots &amp; (v_1, v_m)\\
 (v_2, v_1) &amp; (v_2, v_2) &amp; \dots &amp; (v_2, v_m)\\
@@ -331,14 +340,14 @@ class="math inline">\(v_1, \ldots, v_m\)</span> евклидова простр�
 <span class="math inline">\(V\)</span>.</p>
 </div>
 <div id="statement-60">
-<p><strong>Утверждение:</strong> Матрица Грама симметрическая, то есть
+<p><strong>Утверждение: </strong>Матрица Грама симметрическая, то есть
 <span class="math inline">\(G(v_1, \ldots, v_m) = G^T(v_1, \ldots,
 v_m)\)</span>.</p>
 <p><em>Доказательство:</em> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-61">
-<p><strong>Утверждение:</strong> Если <span class="math inline">\(e =
+<p><strong>Утверждение: </strong>Если <span class="math inline">\(e =
 \{e_1, \ldots, e_n\}\)</span> – базис евклидова пространства <span
 class="math inline">\(V\)</span>, то <span class="math inline">\(\forall
 x, y \in V \,\,\,\, (x, y) = \left(\begin{array}{ccc}x_1 \dots
@@ -350,7 +359,7 @@ e_n)\left(\begin{array}{c}y_1\\\vdots\\y_n\end{array}\right)\)</span>,
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-62">
-<p><strong>Утверждение:</strong> Векторы <span
+<p><strong>Утверждение: </strong>Векторы <span
 class="math inline">\(e_1, \ldots, e_m\)</span> евклидова пространства
 <span class="math inline">\(V\)</span> линейно независимы <span
 class="math inline">\(\Leftrightarrow\)</span> <span
@@ -387,7 +396,7 @@ m\} \Rightarrow\)</span> <span class="math inline">\(\exists\)</span>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-61">
-<p><strong>Определение:</strong> <em>Объем параллелепипеда, натянутого
+<p><strong>Определение: </strong><em>Объем параллелепипеда, натянутого
 на векторы</em> <span class="math inline">\(v_1, \ldots, v_m\)</span> –
 это число <span class="math inline">\(V(v_1, \ldots, v_m) = \sqrt{\det
 G(v_1, \ldots, v_m)}\)</span>.</p>
@@ -396,13 +405,13 @@ G(v_1, \ldots, v_m)}\)</span>.</p>
 id="ортогональные-и-ортонормированные-базисы">Ортогональные и
 ортонормированные базисы</h2>
 <div id="definition-62">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> – евклидово пространство. Векторы <span
 class="math inline">\(x, y \in V\)</span> – <em>ортогональны</em>, если
 <span class="math inline">\((x, y) = 0\)</span>.</p>
 </div>
 <div id="statement-63">
-<p><strong>Утверждение:</strong> Если <span class="math inline">\(v_1,
+<p><strong>Утверждение: </strong>Если <span class="math inline">\(v_1,
 \ldots, v_m\)</span> – ненулевые попарно ортогональные векторы евклидова
 пространства <span class="math inline">\(V\)</span>, то <span
 class="math inline">\(v_1, \ldots, v_m\)</span> – линейно
@@ -411,17 +420,17 @@ class="math inline">\(v_1, \ldots, v_m\)</span> – линейно
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-63">
-<p><strong>Определение:</strong> Базис евклидова пространства <span
+<p><strong>Определение: </strong>Базис евклидова пространства <span
 class="math inline">\(V\)</span>, состоящий из ортогональных векторов –
 <em>ортогональный</em>.</p>
 </div>
 <div id="definition-64">
-<p><strong>Определение:</strong> Отртогональный базис евклидова
+<p><strong>Определение: </strong>Отртогональный базис евклидова
 пространства <span class="math inline">\(V\)</span>, состоящий из
 единичных векторов – <em>ортонормированный</em>.</p>
 </div>
 <div id="statement-64">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(e =
+<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(e =
 \{e_1, \ldots, e_n\}\)</span> – ортонормированный базис евклидова
 пространства <span class="math inline">\(V\)</span>. Тогда</p>
 <ol type="1">
@@ -436,13 +445,13 @@ class="math inline">\(V\)</span>, состоящий из ортогональн
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-65">
-<p><strong>Определение:</strong> Квадратная матрица <span
+<p><strong>Определение: </strong>Квадратная матрица <span
 class="math inline">\(C\)</span> <em>ортогональна</em>, если <span
 class="math inline">\(C^T\cdot C = E\)</span>.</p>
 </div>
 <div id="statement-65">
-<p><strong>Утверждение:</strong></p>
 <ol type="1">
+<li><strong>Утверждение: </strong></li>
 <li><p>Пусть <span class="math inline">\(e = \{e_1, \ldots,
 e_n\}\)</span> и <span class="math inline">\(\tilde{e} = \{\tilde{e}_1,
 \ldots, \tilde{e}_n\}\)</span> – ортонормированные базисы евклидова
@@ -476,7 +485,7 @@ E \,\,\,\,\blacksquare\]</span></p></li>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="квадратичные-формы-над-полями-действительных-и-комплексных-чисел.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

@@ -12,7 +12,9 @@
     <title>Аффинно-квадратичные функции в аффинно-евклидовых
 пространствах</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -90,7 +92,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -102,16 +104,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -232,15 +234,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="аффинно-квадратичные-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="тензоры.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="аффинно-квадратичные-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="тензоры.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -250,17 +259,17 @@
 id="аффинно-квадратичные-функции-в-аффинно-евклидовых-пространствах">Аффинно-квадратичные
 функции в аффинно-евклидовых пространствах</h1>
 <div id="definition-129">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\mathbb{A}\)</span> - аффинно-евклидово
+<p><strong>Определение: </strong>Пусть <span
+class="math inline">\(\mathbb{A}\)</span> – аффинно-евклидово
 пространство. Аффинная система координат <span class="math inline">\((O,
 e)\)</span> <em>прямоугольная</em>, если базис <span
-class="math inline">\(e\)</span> - ортонормирован.</p>
+class="math inline">\(e\)</span> – ортонормирован.</p>
 </div>
 <div id="definition-130">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\mathbb{A}\)</span> - аффинно-евклидово
-пространство. <span class="math inline">\(Q\)</span> -
-аффинно-квадратичная функция, <span class="math inline">\(q\)</span> -
+<p><strong>Определение: </strong>Пусть <span
+class="math inline">\(\mathbb{A}\)</span> – аффинно-евклидово
+пространство. <span class="math inline">\(Q\)</span> –
+аффинно-квадратичная функция, <span class="math inline">\(q\)</span> –
 квадратичная форма функции <span class="math inline">\(Q\)</span>. Если
 матрица <span class="math inline">\(B\)</span> формы <span
 class="math inline">\(q\)</span> – диагональна в прямоугольной системе
@@ -268,10 +277,10 @@ class="math inline">\(q\)</span> – диагональна в прямоуго�
 class="math inline">\((O, e)\)</span> – <em>главные оси</em>.</p>
 </div>
 <div id="theorem-30">
-<p><strong>Теорема:</strong> Пусть <span
-class="math inline">\(\mathbb{A}\)</span> - аффинно-евклидово
+<p><strong>Теорема: </strong>Пусть <span
+class="math inline">\(\mathbb{A}\)</span> – аффинно-евклидово
 пространство. <span class="math inline">\(Q: \mathbb{A} \to
-\mathbb{R}\)</span> - аффинно-квадратичная функция, которая не является
+\mathbb{R}\)</span> – аффинно-квадратичная функция, которая не является
 аффинно-линейной. Тогда существует прямоугольная система координат, в
 которой <span class="math inline">\(Q\)</span> имеет вид (такой вид
 единственен с точностью до перенумерации координат):</p>
@@ -288,20 +297,20 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="26.1" id="квадрики">Квадрики</h2>
 <div id="definition-131">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\mathbb{A}\)</span> - аффинное пространство
+<p><strong>Определение: </strong>Пусть <span
+class="math inline">\(\mathbb{A}\)</span> – аффинное пространство
 ассоциированное с векторным пространством <span
 class="math inline">\(V\)</span> над полем <span
 class="math inline">\(F\)</span> и <span
 class="math inline">\(\operatorname{char}F \ne 2\)</span>, <span
-class="math inline">\(Q\)</span> - аффинно-квадратичная функция.
+class="math inline">\(Q\)</span> – аффинно-квадратичная функция.
 Множество <span class="math inline">\(\Gamma(Q) = \{a \in \mathbb{A}:
 \,\,\,\, Q(a) = 0\}\)</span>, если оно не пустое и не является
 плоскостью – <em>квадрика</em> или <em>гиперповерхность второго
 порядка</em>.</p>
 </div>
 <div id="statement-126">
-<p><strong>Утверждение:</strong> Любая прямая либо целиком лежит в
+<p><strong>Утверждение: </strong>Любая прямая либо целиком лежит в
 квадрике, либо пересекается с ней не более, чем в двух точках.</p>
 <p><em>Доказательство:</em></p>
 <p>Прямая – это плоскость размерности <span
@@ -313,14 +322,14 @@ class="math inline">\(1\)</span>, то есть <span class="math inline">\(p
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="definition-132">
-<p><strong>Определение:</strong> Точка <span
+<p><strong>Определение: </strong>Точка <span
 class="math inline">\(O\)</span> <em>центр</em> квадрики <span
 class="math inline">\(\Gamma(Q)\)</span>, если <span
 class="math inline">\(\forall v: \,\,\,\, O + v \in \Gamma(Q) \,\,\,\, O
 - v \in \Gamma(Q)\)</span>.</p>
 </div>
 <div id="definition-133">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(O\)</span> центр квадрики <span
 class="math inline">\(\Gamma(Q)\)</span>. Если <span
 class="math inline">\(O \in \Gamma(Q)\)</span>, то <span
@@ -328,7 +337,7 @@ class="math inline">\(O\)</span> – <em>вершина</em> <span
 class="math inline">\(\Gamma(Q)\)</span>.</p>
 </div>
 <div id="statement-127">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(\Gamma(Q)\)</span> квадрика, <span
 class="math inline">\(O\)</span> – ее вершина, <span
 class="math inline">\(a \in \Gamma(Q), \,\,\,\, a \ne O\)</span>. Тогда
@@ -344,7 +353,7 @@ class="math inline">\(O -\overline{Oa} \in Q\)</span>. Значит миниму
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-128">
-<p><strong>Утверждение:</strong> Любая квадрика содержит точку, не
+<p><strong>Утверждение: </strong>Любая квадрика содержит точку, не
 являющуюся ее вершиной.</p>
 <p><em>Доказательство:</em></p>
 <p>Пусть это неправда. Докажем, что <span
@@ -367,10 +376,10 @@ class="math inline">\(u_2 = \overline{ab_2}\)</span>. Так как любая
 id="пропорциональные-аффинно-квадратичные-функции-и-квадрики">Пропорциональные
 аффинно-квадратичные функции и квадрики</h2>
 <div id="theorem-31">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\Gamma =
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(\Gamma =
 \Gamma(Q_1) = \Gamma(Q_2)\)</span>, <span
-class="math inline">\(\Gamma\)</span> - квадрика, <span
-class="math inline">\(Q_1, Q_2\)</span> - аффинно-квадратичные функции
+class="math inline">\(\Gamma\)</span> – квадрика, <span
+class="math inline">\(Q_1, Q_2\)</span> – аффинно-квадратичные функции
 на аффинном пространстве над бесконечным полем характеристики отличной
 от <span class="math inline">\(2\)</span>. Тогда <span
 class="math inline">\(Q_1\)</span> пропорциональна <span
@@ -379,7 +388,7 @@ class="math inline">\(Q_2\)</span>.</p>
 <p>фуу</p>
 </div>
 <div id="definition-134">
-<p><strong>Определение:</strong> Квадрики <span
+<p><strong>Определение: </strong>Квадрики <span
 class="math inline">\(\Gamma_1\)</span> и <span
 class="math inline">\(\Gamma_2\)</span> <em>аффинно-эквивалентны</em>
 (<span
@@ -389,8 +398,8 @@ class="math inline">\(\Phi\)</span>, такой, что <span
 class="math inline">\(\Phi(\Gamma_1) = \Gamma_2\)</span>.</p>
 </div>
 <div id="theorem-32">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(Q_1,
-Q_2\)</span> - аффинно-квадратичные функции на аффинном пространстве над
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(Q_1,
+Q_2\)</span> – аффинно-квадратичные функции на аффинном пространстве над
 бесконечным полем характеристики отличной от <span
 class="math inline">\(2\)</span>. <span
 class="math inline">\(Q_1\)</span> и <span
@@ -401,7 +410,7 @@ class="math inline">\(Q_2\)</span> в некоторых системах коо
 <p><em>Доказательство:</em></p>
 </div>
 <div id="definition-135">
-<p><strong>Определение:</strong> Квадрики <span
+<p><strong>Определение: </strong>Квадрики <span
 class="math inline">\(\Gamma_1\)</span> и <span
 class="math inline">\(\Gamma_2\)</span> <em>изометрически
 эквивалентны</em> (<span
@@ -411,8 +420,8 @@ class="math inline">\(\Phi\)</span>, такой, что <span
 class="math inline">\(\Phi(\Gamma_1) = \Gamma_2\)</span>.</p>
 </div>
 <div id="theorem-33">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(Q_1,
-Q_2\)</span> - аффинно-квадратичные функции на аффинном пространстве над
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(Q_1,
+Q_2\)</span> – аффинно-квадратичные функции на аффинном пространстве над
 бесконечным полем характеристики отличной от <span
 class="math inline">\(2\)</span>. <span
 class="math inline">\(Q_1\)</span> и <span
@@ -426,7 +435,7 @@ class="math inline">\(Q_2\)</span> в некоторых прямоугольн�
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="аффинно-квадратичные-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

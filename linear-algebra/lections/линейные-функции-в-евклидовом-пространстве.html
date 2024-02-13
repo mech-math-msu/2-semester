@@ -11,7 +11,9 @@
     
     <title>Линейные функции в евклидовом пространстве</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="процесс-ортогонализации-грама-шмидтасуществование-ортогонального-базиса.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="свойства-самосопряженного-линейного-оператора.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="процесс-ортогонализации-грама-шмидтасуществование-ортогонального-базиса.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="свойства-самосопряженного-линейного-оператора.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -249,7 +258,7 @@
 id="линейные-функции-в-евклидовом-пространстве">Линейные функции в
 евклидовом пространстве</h1>
 <div id="theorem-15">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(V\)</span> – конечномерное евклидово пространство.
 Тогда</p>
 <ol type="1">
@@ -257,7 +266,7 @@ class="math inline">\(V\)</span> – конечномерное евклидов
 \exists\)</span> линейная функция <span class="math inline">\(\varphi_a:
 V \to V \,\,\,\, \varphi_a: x \mapsto (x, a)\)</span>.</li>
 <li>Отображение <span class="math inline">\(\psi: V \to V^{*} \,\,\,\,
-\psi: a \to \varphi_a\)</span> - изоморфизм пространств <span
+\psi: a \to \varphi_a\)</span> – изоморфизм пространств <span
 class="math inline">\(V\)</span> и <span
 class="math inline">\(V^{*}\)</span>.</li>
 <li>В ортонормированном базисе <span class="math inline">\(e\)</span>
@@ -288,7 +297,7 @@ x_2\)</span>, следовательно <span class="math inline">\(\psi\)</spa
 class="math inline">\(v = x \Rightarrow (x, x) = 0 \Rightarrow x =
 0\)</span>, следовательно <span class="math inline">\(\ker(\psi) =
 \{0\}\)</span>. Так как <span class="math inline">\(V\)</span> и <span
-class="math inline">\(V^{*}\)</span> - изоморфны размерности <span
+class="math inline">\(V^{*}\)</span> – изоморфны размерности <span
 class="math inline">\(V\)</span> и <span
 class="math inline">\(V^{*}\)</span> совпадают. По утверждению <span
 class="math inline">\(\dim V = \dim \operatorname{img}\psi + \dim \ker
@@ -304,7 +313,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 id="билинейные-функции-и-линейные-операторы-в-евклидовом-пространстве">Билинейные
 функции и линейные операторы в евклидовом пространстве</h2>
 <div id="theorem-16">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(V\)</span> – конечномерное евклидово пространство.
 Тогда</p>
 <ol type="1">
@@ -346,9 +355,9 @@ X^TAY \Rightarrow B = A \,\,\,\,\blacksquare\)</span></p></li>
 <h2 data-number="16.2" id="сопряженный-линейный-оператор">Сопряженный
 линейный оператор</h2>
 <div id="definition-70">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(V\)</span> - евклидово пространство, <span
-class="math inline">\(\mathcal{A}\)</span> - линейный оператор на <span
+<p><strong>Определение: </strong>Пусть <span
+class="math inline">\(V\)</span> – евклидово пространство, <span
+class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>. Линейный оператор <span
 class="math inline">\(\mathcal{A}^{*}\)</span> – <em>сопряженный</em> к
 <span class="math inline">\(\mathcal{A}\)</span>, если <span
@@ -356,8 +365,8 @@ class="math inline">\(\forall x, y \in V \,\,\,\, (\mathcal{A}(x), y) =
 (x, \mathcal{A}^{*}(y))\)</span>.</p>
 </div>
 <div id="theorem-17">
-<p><strong>Теорема:</strong> Пусть <span
-class="math inline">\(V\)</span> - евклидово пространство, <span
+<p><strong>Теорема: </strong>Пусть <span
+class="math inline">\(V\)</span> – евклидово пространство, <span
 class="math inline">\(\dim V = n\)</span>. Тогда у любого линейного
 оператора <span class="math inline">\(\mathcal{A}\)</span> существует
 единственный сопряженный линейный оператор <span
@@ -383,7 +392,7 @@ class="math inline">\(\mathcal{C}\)</span> сопадают <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-8">
-<p><strong>Следствие:</strong> Пусть <span
+<p><strong>Следствие: </strong>Пусть <span
 class="math inline">\(V\)</span> – конечномерное евклидово пространство.
 <span class="math inline">\(\mathcal{A}\)</span> – линейный оператор на
 <span class="math inline">\(V\)</span>, <span
@@ -401,14 +410,14 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 id="самосопряженный-линейный-оператор">Самосопряженный линейный
 оператор</h3>
 <div id="definition-71">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> – евклидово пространство. Линейный
 оператор <span class="math inline">\(\mathcal{A}\)</span> –
 <em>самосопряженный</em>, если <span
 class="math inline">\(\mathcal{A}^{*} = \mathcal{A}\)</span>.</p>
 </div>
 <div id="statement-69">
-<p><strong>Утверждение:</strong> Линейный оператор <span
+<p><strong>Утверждение: </strong>Линейный оператор <span
 class="math inline">\(\mathcal{A}\)</span> на конечномерном евклидовом
 пространстве самосопряженный <span
 class="math inline">\(\Leftrightarrow\)</span> его матрица <span
@@ -421,9 +430,9 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 id="канонический-вид-самосопряженного-линейного-оператора">Канонический
 вид самосопряженного линейного оператора</h4>
 <div id="lemma-2">
-<p><strong>Лемма:</strong> Пусть <span class="math inline">\(V\)</span>
+<p><strong>Лемма: </strong>Пусть <span class="math inline">\(V\)</span>
 – конечномерное евклидово пространство, <span
-class="math inline">\(\mathcal{A}\)</span> - самосопряженный линейный
+class="math inline">\(\mathcal{A}\)</span> – самосопряженный линейный
 оператор на <span class="math inline">\(V\)</span>, <span
 class="math inline">\(U\)</span> – инвариантное подпространство
 оператора <span class="math inline">\(\mathcal{A}\)</span>. Тогда <span
@@ -440,8 +449,8 @@ class="math inline">\(\forall u \in U \,\,\,\, (\mathcal{A}(u^{\perp}),
 u) = (u^{\perp}, \mathcal{A}(u)) = 0 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-18">
-<p><strong>Теорема:</strong> (канонический вид самосопряженного
-линейного оператора) Пусть <span class="math inline">\(V\)</span> -
+<p><strong>Теорема: </strong>(канонический вид самосопряженного
+линейного оператора) Пусть <span class="math inline">\(V\)</span> –
 евклидово пространство, <span class="math inline">\(\dim V = n\)</span>.
 Тогда у любого самосопряженного линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span> существует ортонормированный
@@ -483,7 +492,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="процесс-ортогонализации-грама-шмидтасуществование-ортогонального-базиса.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

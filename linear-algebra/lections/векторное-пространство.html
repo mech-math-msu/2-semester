@@ -11,7 +11,9 @@
     
     <title>Векторное пространство</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="решение-задач.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="переход-от-одного-базиса-к-другому.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="решение-задач.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="переход-от-одного-базиса-к-другому.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,7 +257,7 @@
 <h1 data-number="2" id="векторное-пространство">Векторное
 пространство</h1>
 <div id="definition-0">
-<p><strong>Определение:</strong> <em>Векторное пространство</em> <span
+<p><strong>Определение: </strong><em>Векторное пространство</em> <span
 class="math inline">\(V\)</span> над полем <span
 class="math inline">\(F\)</span> – это множество с операциями сложения
 <span class="math inline">\(+: \,\,\,\, V \times V \to V\)</span> и
@@ -276,11 +285,11 @@ a\)</span></p></li>
 </ol>
 </div>
 <div id="definition-1">
-<p><strong>Определение:</strong> Элементы векторного пространства <span
+<p><strong>Определение: </strong>Элементы векторного пространства <span
 class="math inline">\(V\)</span> – <em>векторы</em>.</p>
 </div>
 <div id="definition-2">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над <span
 class="math inline">\(F\)</span> с операциями сложения <span
 class="math inline">\(+\)</span> и умножения <span
@@ -300,7 +309,7 @@ class="math inline">\(V\)</span>)</li>
 </ol>
 </div>
 <div id="statement-0">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над <span
 class="math inline">\(F\)</span>. Векторное подпространство <span
 class="math inline">\(U\)</span> пространства <span
@@ -314,7 +323,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="2.1" id="линейная-зависимость-векторов">Линейная
 зависимость векторов</h2>
 <div id="definition-3">
-<p><strong>Определение:</strong> Пусть в векторном пространстве <span
+<p><strong>Определение: </strong>Пусть в векторном пространстве <span
 class="math inline">\(V\)</span> над полем <span
 class="math inline">\(F\)</span> заданa система векторов <span
 class="math inline">\(U = (v_1, \ldots, v_n)\)</span>. Выражение <span
@@ -327,7 +336,7 @@ class="math inline">\(U\)</span>.</p>
 <em>тривиальная</em>, иначе <em>нетривиальная</em>.</p>
 </div>
 <div id="definition-4">
-<p><strong>Определение:</strong> Пусть в векторном пространстве <span
+<p><strong>Определение: </strong>Пусть в векторном пространстве <span
 class="math inline">\(V\)</span> над полем <span
 class="math inline">\(F\)</span> заданa система векторов <span
 class="math inline">\(U = (v_1, \ldots, v_n)\)</span>. Если <span
@@ -337,7 +346,7 @@ class="math inline">\(\exists\)</span> их нетривиальная лине�
 зависима</em>.</p>
 </div>
 <div id="definition-5">
-<p><strong>Определение:</strong> Пусть в векторном пространстве <span
+<p><strong>Определение: </strong>Пусть в векторном пространстве <span
 class="math inline">\(V\)</span> над полем <span
 class="math inline">\(F\)</span> заданa система векторов <span
 class="math inline">\(U = (v_1, \ldots, v_n)\)</span>. Если только
@@ -347,7 +356,7 @@ class="math inline">\(0\)</span>, то система векторов <span
 class="math inline">\(U\)</span> <em>линейно независима</em>.</p>
 </div>
 <div id="definition-6">
-<p><strong>Определение:</strong> Пусть задана система векторов <span
+<p><strong>Определение: </strong>Пусть задана система векторов <span
 class="math inline">\(V = (v_1, \ldots, v_n)\)</span>. Множество всех
 линейных комбинаций векторов системы <span
 class="math inline">\(V\)</span> – это <em>линейная оболочка</em> <span
@@ -359,7 +368,7 @@ v_n\rangle\)</span>.</p>
 class="math inline">\(V\)</span>.</p>
 </div>
 <div id="statement-1">
-<p><strong>Утверждение:</strong> Линейная оболочка <span
+<p><strong>Утверждение: </strong>Линейная оболочка <span
 class="math inline">\(\langle U \rangle = \langle u_1, \ldots,
 u_n\rangle, \,\,\,\, u_i \in V\)</span>(<span
 class="math inline">\(V\)</span> векторное пространство) – это векторное
@@ -368,14 +377,14 @@ class="math inline">\(V\)</span> векторное пространство) �
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="lemma-0">
-<p><strong>Лемма:</strong> Система векторов линейно зависима <span
+<p><strong>Лемма: </strong>Система векторов линейно зависима <span
 class="math inline">\(\Leftrightarrow\)</span> существует вектор этой
 системы линейно выражающийся через остальные.</p>
 <p><em>Доказательство:</em> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="lemma-1">
-<p><strong>Лемма:</strong> (<em>Основная лемма о линейной
+<p><strong>Лемма: </strong>(<em>Основная лемма о линейной
 зависимости</em>) Пусть <span class="math inline">\(\{v_1, \ldots, v_m\}
 \subset \langle u_1, \ldots, u_n\rangle, \,\,\,\, m &gt; n\)</span>.
 Тогда векторы <span class="math inline">\(v_1, \ldots, v_m\)</span>
@@ -385,7 +394,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="2.2" id="базис">Базис</h2>
 <div id="definition-7">
-<p><strong>Определение:</strong> <em>Базис</em> векторного пространства
+<p><strong>Определение: </strong><em>Базис</em> векторного пространства
 <span class="math inline">\(V\)</span> – это:</p>
 <ol type="1">
 <li>Максимальная по включению линейно независимая система векторов <span
@@ -399,29 +408,29 @@ class="math inline">\(V\)</span> линейно выражается через 
 </ol>
 </div>
 <div id="statement-2">
-<p><strong>Утверждение:</strong> Все определения базиса
+<p><strong>Утверждение: </strong>Все определения базиса
 эквивалентны.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="definition-8">
-<p><strong>Определение:</strong> Векторное пространство, порождающее
+<p><strong>Определение: </strong>Векторное пространство, порождающее
 множество которого конечно, называется <em>конечномерным</em>, иначе
 векторное пространство <em>бесконечномерно</em>.</p>
 </div>
 <div id="statement-3">
-<p><strong>Утверждение:</strong> В любом конечномерном векторном
+<p><strong>Утверждение: </strong>В любом конечномерном векторном
 пространстве существует базис.</p>
 <p><em>Доказательство:</em> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-4">
-<p><strong>Утверждение:</strong> Количество векторов в любом базисе
+<p><strong>Утверждение: </strong>Количество векторов в любом базисе
 конечномерного векторного пространства одинаково.</p>
 <p><em>Доказательство:</em> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-0">
-<p><strong>Теорема:</strong> Любую линейно независимую систему векторов
+<p><strong>Теорема: </strong>Любую линейно независимую систему векторов
 в векторном пространстве можно дополнить до базиса.</p>
 <p><em>Доказательство:</em> Будем добавлять векторы до тех пор пока
 система остается линейно независимой <span
@@ -430,7 +439,7 @@ class="math inline">\(\Rightarrow\)</span> получим максимальну
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-1">
-<p><strong>Теорема:</strong> В <span
+<p><strong>Теорема: </strong>В <span
 class="math inline">\(n\)</span>-мерном векторном пространстве любые
 <span class="math inline">\(n\)</span> линейно независимых вектора
 образуют базис.</p>
@@ -445,7 +454,7 @@ class="math inline">\(n\)</span>-мерном векторном простра�
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-5">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(U\)</span> подпространство векторного пространства
 <span class="math inline">\(V\)</span>. Тогда <span
 class="math inline">\(\dim U \le \dim V\)</span>, при этом <span
@@ -455,7 +464,7 @@ V\)</span>.</p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-9">
-<p><strong>Определение:</strong> Векторное пространство <span
+<p><strong>Определение: </strong>Векторное пространство <span
 class="math inline">\(U\)</span> над полем <span
 class="math inline">\(F\)</span> <em>изоморфно</em> векторному
 пространству <span class="math inline">\(V\)</span> над полем <span
@@ -472,7 +481,7 @@ class="math inline">\(\varphi: \,\,\,\, U \to V\)</span>, такая что:</p>
 V\)</span>.</p>
 </div>
 <div id="theorem-2">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(V\)</span> конечномерные векторные пространства
 над полем <span class="math inline">\(F\)</span>. Тогда <span
@@ -485,7 +494,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="решение-задач.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

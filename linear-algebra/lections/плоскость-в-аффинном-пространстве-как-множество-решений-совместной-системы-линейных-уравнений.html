@@ -12,7 +12,9 @@
     <title>Плоскость в аффинном пространстве, как множество решений
 совместной системы линейных уравнений</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -90,7 +92,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -102,16 +104,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -232,15 +234,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="свойства-плоскостей.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="аффинно-евклидовы-пространства.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="свойства-плоскостей.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="аффинно-евклидовы-пространства.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -251,8 +260,8 @@ id="плоскость-в-аффинном-пространстве-как-мн�
 в аффинном пространстве, как множество решений совместной системы
 линейных уравнений</h1>
 <div id="statement-108">
-<p><strong>Утверждение:</strong> <span
-class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+<p><strong>Утверждение: </strong><span
+class="math inline">\(\mathbb{A}\)</span> – аффинное пространство, <span
 class="math inline">\(\dim \mathbb{A} = n\)</span>.</p>
 <ol type="1">
 <li><p>Пусть дана совместная система линейных уравнений <span
@@ -278,10 +287,10 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 Кажется, что это уже было
 </details>
 <p>Пусть <span class="math inline">\((\mathbb{A}, U)\)</span> и <span
-class="math inline">\((\mathbb{B}, W)\)</span> - аффинные
+class="math inline">\((\mathbb{B}, W)\)</span> – аффинные
 пространства.</p>
 <div id="definition-106">
-<p><strong>Определение:</strong> <span class="math inline">\(f:
+<p><strong>Определение: </strong><span class="math inline">\(f:
 \mathbb{A} \to \mathbb{B}\)</span> – <em>аффинное отображение</em>, если
 существует линейное отображение <span class="math inline">\(\varphi: U
 \to W\)</span>, такое, что <span
@@ -292,13 +301,13 @@ class="math inline">\(\varphi\)</span> – <em>линейная часть</em>
 class="math inline">\(f\)</span>.</p>
 </div>
 <div id="statement-109">
-<p><strong>Утверждение:</strong> Композиция аффинных отображений –
+<p><strong>Утверждение: </strong>Композиция аффинных отображений –
 аффинное отображение, линейная часть которого является композицией
 линейных частей исходных отображений.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="statement-110">
-<p><strong>Утверждение:</strong> Аффинное отображение <span
+<p><strong>Утверждение: </strong>Аффинное отображение <span
 class="math inline">\(\Phi\)</span> – биекция <span
 class="math inline">\(\Leftrightarrow\)</span> дифференциал <span
 class="math inline">\(\Phi\)</span> является биекцией соответствующих
@@ -310,43 +319,43 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 матрицы</h2>
 <h2 data-number="22.3" id="аффинные-операторы">Аффинные операторы</h2>
 <div id="definition-107">
-<p><strong>Определение:</strong> <em>Аффинный оператор</em> – это
+<p><strong>Определение: </strong><em>Аффинный оператор</em> – это
 аффинное отображение аффинного пространства <span
 class="math inline">\(\mathbb{A}\)</span> в себя.</p>
 </div>
 <div id="definition-108">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\Phi\)</span> - аффинное отображение.
+<p><strong>Определение: </strong>Пусть <span
+class="math inline">\(\Phi\)</span> – аффинное отображение.
 <em>Ранг</em> <span class="math inline">\(\Phi
 (\operatorname{rk}\Phi)\)</span> – это ранг матрицы линейной части <span
 class="math inline">\(\Phi\)</span>.</p>
 </div>
 <div id="definition-109">
-<p><strong>Определение:</strong> Аффинный оператор <span
+<p><strong>Определение: </strong>Аффинный оператор <span
 class="math inline">\(\Phi\)</span> <em>невырожден</em>, если <span
 class="math inline">\(\operatorname{rk}\Phi =
 \operatorname{rk}\mathbb{A}\)</span>.</p>
 </div>
 <div id="statement-111">
-<p><strong>Утверждение:</strong> Множество всех невырожденных операторов
+<p><strong>Утверждение: </strong>Множество всех невырожденных операторов
 аффинного пространства <span class="math inline">\(\mathbb{A}\)</span>
 образует группу относительно композиции.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="definition-110">
-<p><strong>Определение:</strong> Эта группа обозначается <span
+<p><strong>Определение: </strong>Эта группа обозначается <span
 class="math inline">\(\operatorname{Aff}(\mathbb{A})\)</span>.</p>
 </div>
 <div id="definition-111">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\((\mathbb{A}, V)\)</span> - аффинное пространство.
+<p><strong>Определение: </strong>Пусть <span
+class="math inline">\((\mathbb{A}, V)\)</span> – аффинное пространство.
 <em>Сдвиг на вектор</em> <span class="math inline">\(v \in V\)</span> –
 это отображение <span class="math inline">\(f_v: \mathbb{A} \to
 \mathbb{A} \,\,\,\, f_v: a \mapsto a + v\)</span>.</p>
 </div>
 <div id="statement-112">
-<p><strong>Утверждение:</strong></p>
 <ol type="1">
+<li><strong>Утверждение: </strong></li>
 <li>Сдвиг на вектор – это аффинный оператор с тождественной линейной
 частью.</li>
 <li>Любой аффинный оператор с тождественной линейной частью является
@@ -364,19 +373,19 @@ class="math inline">\(\forall b \in \mathbb{A} \,\,\,\, \Phi(b) =
 </ol>
 </div>
 <div id="definition-112">
-<p><strong>Определение:</strong> Множество всех сдвигов на вектор
+<p><strong>Определение: </strong>Множество всех сдвигов на вектор
 обозначается <span
 class="math inline">\(\operatorname{tran}\mathbb{A}\)</span>.</p>
 </div>
 <div id="statement-113">
-<p><strong>Утверждение:</strong> <span
+<p><strong>Утверждение: </strong><span
 class="math inline">\(\operatorname{tran}\mathbb{A}\)</span> подгруппа в
 группе <span
 class="math inline">\(\operatorname{Aff}(\mathbb{A})\)</span>.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="definition-113">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(a\)</span> точка аффинного пространства <span
 class="math inline">\(\mathbb{A}\)</span>. Множество всех невырожденных
 аффинных операторов <span class="math inline">\(\Phi\)</span>, таких,
@@ -384,11 +393,11 @@ class="math inline">\(\mathbb{A}\)</span>. Множество всех невы�
 class="math inline">\(G_a\)</span>.</p>
 </div>
 <div id="statement-114">
-<p><strong>Утверждение:</strong> (представление аффинного преобразование
+<p><strong>Утверждение: </strong>(представление аффинного преобразование
 в виде композиции поворота и движения) Пусть <span
-class="math inline">\((\mathbb{A}, V)\)</span> - аффинное пространство.
+class="math inline">\((\mathbb{A}, V)\)</span> – аффинное пространство.
 <span class="math inline">\(a \in \mathbb{A}\)</span>. <span
-class="math inline">\(\Phi\)</span> - аффинное отображение. Тогда <span
+class="math inline">\(\Phi\)</span> – аффинное отображение. Тогда <span
 class="math inline">\(\exists ! \Psi_a \in G_a, t_v \in
 \operatorname{tran}\mathbb{A}, t_w  \in \operatorname{tran}\mathbb{A}:
 \,\,\,\, \Phi = t_v \circ \Psi_a = \Psi_a \circ t_w\)</span>.</p>
@@ -411,14 +420,14 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="22.4" id="аффинно-независимая-система-точек">Аффинно
 независимая система точек</h2>
 <div id="definition-114">
-<p><strong>Определение:</strong> Система точек <span
+<p><strong>Определение: </strong>Система точек <span
 class="math inline">\(a_0, a_1, \ldots, a_s\)</span> <em>аффинно
 независима</em>, если <span class="math inline">\(\dim \langle a_0, a_1,
 \ldots, a_s\rangle_A = s\)</span> (точек <span class="math inline">\(s +
 1\)</span> штука).</p>
 </div>
 <div id="statement-115">
-<p><strong>Утверждение:</strong> Система точек <span
+<p><strong>Утверждение: </strong>Система точек <span
 class="math inline">\(a_0, a_1, \ldots, a_s\)</span> аффинно независима
 <span class="math inline">\(\Leftrightarrow\)</span> векторы <span
 class="math inline">\(a_1 - a_0, \ldots, a_s - a_0\)</span> линейно
@@ -432,8 +441,8 @@ a_0, a_1, \ldots, a_s\rangle_A = s \,\,\,\,\blacksquare\)</span></p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-116">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\((O,
-e)\)</span> - аффинная система координат. Тогда точки <span
+<p><strong>Утверждение: </strong>Пусть <span class="math inline">\((O,
+e)\)</span> – аффинная система координат. Тогда точки <span
 class="math inline">\(a_0, a_1, \ldots, a_s\)</span> с координатами
 <span class="math inline">\((x_1^0, \ldots, x_n^0), (x_1^1, \ldots,
 x_n^1), \ldots, (x_1^s, \ldots, x_n^s)\)</span> в <span
@@ -454,7 +463,7 @@ class="math inline">\(\overline{Oa_0}, \ldots, \overline{Oa_s}\)</span>.
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-117">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(a_0,
+<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(a_0,
 \ldots, a_n\)</span> аффинно независимая система точек, <span
 class="math inline">\(b_0, \ldots, b_n \in \mathbb{A}\)</span>. Тогда
 <span class="math inline">\(\exists !\)</span> аффинный оператор <span
@@ -470,7 +479,7 @@ b_0, \ldots, b_n - b_0 \,\,\,\,\blacksquare\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="свойства-плоскостей.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

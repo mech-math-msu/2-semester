@@ -12,7 +12,9 @@
     <title>Квадратичные формы над полями действительных и комплексных
 чисел</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -90,7 +92,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -102,16 +104,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -232,15 +234,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="симметрические-билинейные-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="евклидовы-пространства.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="симметрические-билинейные-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="евклидовы-пространства.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -252,7 +261,7 @@ id="квадратичные-формы-над-полями-действител
 <p>Пусть <span class="math inline">\(q: V \to F\)</span> – квадратичная
 функция, <span class="math inline">\(F\)</span> – это <span
 class="math inline">\(\mathbb{R}\)</span> или <span
-class="math inline">\(\mathbb{C}\)</span>. Тогда сущесвтует базис, в
+class="math inline">\(\mathbb{C}\)</span>. Тогда существует базис, в
 котором <span class="math inline">\(q\)</span> имеет канонический вид:
 <span class="math inline">\(q(x) = \lambda_1 x_1^2 + \ldots + \lambda_n
 x_n^2\)</span>. Считаем, что <span class="math inline">\(\lambda_1 \ne
@@ -260,7 +269,7 @@ x_n^2\)</span>. Считаем, что <span class="math inline">\(\lambda_1 \ne
 class="math inline">\(\lambda_{r + 1} = 0, \ldots, \lambda_{n} =
 0\)</span>.</p>
 <div id="statement-57">
-<p><strong>Утверждение:</strong> Над <span
+<p><strong>Утверждение: </strong>Над <span
 class="math inline">\(\mathbb{C}\)</span> в <span
 class="math inline">\(V\)</span> существует базис, в котором</p>
 <p><span class="math inline">\(q(x) = x_1^2 + \ldots +
@@ -269,24 +278,27 @@ x_r^2\)</span>.</p>
 class="math inline">\(\blacksquare\)</span></p>
 </div>
 <div id="statement-58">
-<p><strong>Утверждение:</strong> Над <span
+<p><strong>Утверждение: </strong>Над <span
 class="math inline">\(\mathbb{R}\)</span> в <span
 class="math inline">\(V\)</span> существует базис, в котором <span
 class="math inline">\(q(x) = x_1^2 + \ldots + x_k^2 - x_{k + 1}^2 -
 \ldots - x_{k + l}^2\)</span>, <span class="math inline">\(k + l =
-0\)</span>.</p>
+r\)</span>.</p>
 <p><em>Доказательство:</em> <span class="math inline">\(\lambda_i =
 \frac{1}{\sqrt{|\lambda_i|}} \,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="13.1" id="индексы-инерции">Индексы инерции</h2>
 <div id="definition-53">
-<p><strong>Определение:</strong> <br><br><span
-class="math inline">\(k\)</span> – <em>положительный индекс
-инерции</em>.<br><br><span class="math inline">\(l\)</span> –
-<em>отрицательный индекс инерции</em>.</p>
+<p><strong>Определение: </strong><span class="math inline">\(k\)</span>
+– <em>положительный индекс инерции</em>,</p>
+<p><span class="math inline">\(l\)</span> – <em>отрицательный индекс
+инерции</em>.</p>
+<p>Еще числа <span class="math inline">\(k\)</span> и <span
+class="math inline">\(l\)</span> называются <em>сигнатура квадратичной
+формы</em>.</p>
 </div>
 <div id="theorem-11">
-<p><strong>Теорема:</strong> Положительный и отрицательный индексы
+<p><strong>Теорема: </strong>Положительный и отрицательный индексы
 инерции инварианты вещественной квадратичной функции <span
 class="math inline">\(q: V \to \mathbb{R}\)</span>, то есть, если в
 базисах <span class="math inline">\(e = \{e_1, \ldots, e_n\}\)</span> и
@@ -303,9 +315,9 @@ r\)</span>, то есть достаточно доказать, что <span
 class="math inline">\(k = s\)</span>. Пусть <span
 class="math inline">\(k \ne s\)</span>. Без ограничения общности
 считаем, что <span class="math inline">\(s &gt; k\)</span>. Рассмотрим
-подпространства <span class="math inline">\(U = &lt;f_1, \ldots,
-f_s&gt;\)</span> и <span class="math inline">\(W = &lt;e_{k + 1},
-\ldots, e_{k + l}, \ldots, e_n&gt;\)</span>. Докажем, что <span
+подпространства <span class="math inline">\(U = \langle f_1, \ldots,
+f_s\rangle\)</span> и <span class="math inline">\(W = \langle e_{k + 1},
+\ldots, e_{k + l}, \ldots, e_n\rangle\)</span>. Докажем, что <span
 class="math inline">\(U \cap W \ne \varnothing\)</span>. По формуле
 Грассмана: <span class="math inline">\(\dim U \cap W = \dim U + \dim W -
 \dim U \cup W = s + n - k - \dim U \cup W &gt; 0\)</span>. То есть <span
@@ -323,13 +335,13 @@ id="положительно-определенные-квадратичные-�
 class="math inline">\(q: V \to \mathbb{R}\)</span> – квадратичная
 функция.</p>
 <div id="definition-54">
-<p><strong>Определение:</strong> <span class="math inline">\(q\)</span>
+<p><strong>Определение: </strong><span class="math inline">\(q\)</span>
 <em>положительно определена</em>, если <span
 class="math inline">\(\forall x \in V,\,\,\,\, x \ne 0 \,\,\,\, q(x)
 &gt; 0\)</span>.</p>
 </div>
 <div id="definition-55">
-<p><strong>Определение:</strong> <span class="math inline">\(q\)</span>
+<p><strong>Определение: </strong><span class="math inline">\(q\)</span>
 <em>отрицательно определена</em>, если <span
 class="math inline">\(\forall x \in V,\,\,\,\, x \ne 0 \,\,\,\, q(x)
 &lt; 0\)</span>.</p>
@@ -337,7 +349,7 @@ class="math inline">\(\forall x \in V,\,\,\,\, x \ne 0 \,\,\,\, q(x)
 <h3 data-number="13.2.1" id="критерий-сильвестра">Критерий
 Сильвестра</h3>
 <div id="theorem-12">
-<p><strong>Теорема:</strong> (критерий Сильвестра) Вещественная
+<p><strong>Теорема: </strong>(критерий Сильвестра) Вещественная
 симметричекая билинейная функция <span class="math inline">\(\beta:
 V\times V \to \mathbb{R}\)</span> положительно определена <span
 class="math inline">\(\Leftrightarrow\)</span> все угловые миноры
@@ -369,7 +381,7 @@ e}) = \det(C_{f \to e})^2\det(D) &gt; 0
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="симметрические-билинейные-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

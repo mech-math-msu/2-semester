@@ -11,7 +11,9 @@
     
     <title>Свойства самосопряженного линейного оператора</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="линейные-функции-в-евклидовом-пространстве.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="положительно-определенный-линейный-оператор.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="линейные-функции-в-евклидовом-пространстве.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="положительно-определенный-линейный-оператор.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -249,7 +258,7 @@
 id="свойства-самосопряженного-линейного-оператора">Свойства
 самосопряженного линейного оператора</h1>
 <div id="statement-70">
-<p><strong>Утверждение:</strong> (свойства) Пусть <span
+<p><strong>Утверждение: </strong>(свойства) Пусть <span
 class="math inline">\(\mathcal{A}\)</span> самосопряженный линейный
 оператор.</p>
 <ol type="1">
@@ -275,13 +284,13 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
 </ol>
 </div>
 <div id="definition-72">
-<p><strong>Определение:</strong> Матрица <span class="math inline">\(A
+<p><strong>Определение: </strong>Матрица <span class="math inline">\(A
 \in M_n(\mathbb{R})\)</span> – <em>симметрическая</em>, если <span
 class="math inline">\(A = A^T\)</span>.</p>
 </div>
 <div id="corollary-9">
-<p><strong>Следствие:</strong> Пусть <span
-class="math inline">\(A\)</span> - симметрическая вещественная матрица.
+<p><strong>Следствие: </strong>Пусть <span
+class="math inline">\(A\)</span> – симметрическая вещественная матрица.
 Тогда <span class="math inline">\(\exists D, C \in M_n(\mathbb{R}):
 \,\,\,\, D\)</span> – диагональна, <span
 class="math inline">\(C\)</span> – ортогональна и <span
@@ -298,7 +307,7 @@ class="math inline">\(D\)</span> – диагональна <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-10">
-<p><strong>Утверждение:</strong> Для любой симметрической билинейной
+<p><strong>Следствие: </strong>Для любой симметрической билинейной
 функции существует ортонормированный базис, такой, что в этом базисе
 матрица билинейной функции диагональна и <span
 class="math inline">\(\beta(x, y) = \lambda_1 x_1 y_1 + \ldots +
@@ -309,7 +318,7 @@ class="math inline">\(\beta(x, y) = \lambda_1 x_1 y_1 + \ldots +
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-19">
-<p><strong>Теорема:</strong> Для любой квадратичной функции <span
+<p><strong>Теорема: </strong>Для любой квадратичной функции <span
 class="math inline">\(q: V\times V \to \mathbb{R}\)</span> существует
 ортонормированный базис <span class="math inline">\(e\)</span>, в
 котором <span class="math inline">\(q(x) = \lambda_1 x_1^2 + \ldots +
@@ -320,7 +329,7 @@ class="math inline">\(q: V\times V \to \mathbb{R}\)</span> существует
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-73">
-<p><strong>Определение:</strong> Нахождение ортонормированного базиса, в
+<p><strong>Определение: </strong>Нахождение ортонормированного базиса, в
 котором квадратичная функция равна сумме квадратов – <em>приведение к
 главным осям</em>.</p>
 <p><strong>Например:</strong> Нахождение канонического базиса для кривой
@@ -330,17 +339,17 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 id="одновременное-приведение-пары-квадратичных-форм-к-сумме-квадратов">Одновременное
 приведение пары квадратичных форм к сумме квадратов</h2>
 <div id="theorem-20">
-<strong>Теорема:</strong>
+<strong>Теорема: </strong>
 <details>
 <summary>
 </summary>
 а что нет чего-то что нельзя описать
 </details>
-<p>Пусть <span class="math inline">\(V\)</span> - векторное
+<p>Пусть <span class="math inline">\(V\)</span> – векторное
 пространство. <span class="math inline">\(\dim V = n\)</span>. <span
 class="math inline">\(q\)</span> и <span
-class="math inline">\(h\)</span> - квадратичные функции, <span
-class="math inline">\(h\)</span> - положительно определена. Тогда
+class="math inline">\(h\)</span> – квадратичные функции, <span
+class="math inline">\(h\)</span> – положительно определена. Тогда
 существует базис, в котором: <span class="math display">\[q(x) =
 \lambda_1 x_1^2 + \ldots + \lambda_n x_n^2\]</span> <span
 class="math display">\[h(x) = x_1^2 + \ldots + x_n^2\]</span></p>
@@ -357,8 +366,8 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 id="ортогональный-линейный-оператор">Ортогональный линейный
 оператор</h2>
 <div id="definition-74">
-<p><strong>Определение:</strong> <span class="math inline">\(V\)</span>
-- евклидово пространство. Линейный оператор <span
+<p><strong>Определение: </strong><span class="math inline">\(V\)</span>
+– евклидово пространство. Линейный оператор <span
 class="math inline">\(\mathcal{A}\)</span> – <em>ортогональный</em>,
 если он сохраняет скалярное произведение, то есть <span
 class="math inline">\((\mathcal{A}(x), \mathcal{A}(y)) = (x,
@@ -368,8 +377,8 @@ y)\)</span>.</p>
 id="свойства-ортогонального-линейного-оператора">Свойства ортогонального
 линейного оператора</h2>
 <div id="statement-71">
-<p><strong>Утверждение:</strong> <span
-class="math inline">\(\mathcal{A}\)</span> - ортогональный линейный
+<p><strong>Утверждение: </strong><span
+class="math inline">\(\mathcal{A}\)</span> – ортогональный линейный
 оператор <span class="math inline">\(\Leftrightarrow\)</span> в
 ортонормированном базисе матрица <span class="math inline">\(A\)</span>
 линейного оператора <span class="math inline">\(\mathcal{A}\)</span>
@@ -381,8 +390,8 @@ y) = (\mathcal{A}(x), \mathcal{A}(y)) = (AX)^TAY = X^TA^TAY \Rightarrow
 A^TA = E \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-72">
-<p><strong>Утверждение:</strong> <span
-class="math inline">\(\mathcal{A}\)</span> - ортогональный линейный
+<p><strong>Утверждение: </strong><span
+class="math inline">\(\mathcal{A}\)</span> – ортогональный линейный
 оператор <span class="math inline">\(\Leftrightarrow\)</span> <span
 class="math inline">\(\mathcal{A}\mathcal{A}^{*} =
 \mathcal{I}\)</span>.</p>
@@ -390,10 +399,10 @@ class="math inline">\(\mathcal{A}\mathcal{A}^{*} =
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-73">
-<p><strong>Утверждение:</strong></p>
-<p>Пусть <span class="math inline">\(\mathcal{A}\)</span> –
-ортогональный линейный оператор. <span class="math inline">\(A\)</span>
-– его матрица. Тогда</p>
+<p><strong>Утверждение: </strong>Пусть <span
+class="math inline">\(\mathcal{A}\)</span> – ортогональный линейный
+оператор. <span class="math inline">\(A\)</span> – его матрица.
+Тогда</p>
 <ol type="1">
 <li><span class="math inline">\(\mathcal{A}\)</span> сохраняет длины
 векторов.</li>
@@ -413,7 +422,7 @@ class="math inline">\(\pm 1\)</span>.</li>
 id="канонический-вид-ортогонального-линейного-оператора">Канонический
 вид ортогонального линейного оператора</h3>
 <div id="lemma-3">
-<p><strong>Лемма:</strong> Пусть <span
+<p><strong>Лемма: </strong>Пусть <span
 class="math inline">\(\mathcal{A}\)</span> ортогональный линейный
 оператор на евклидовом пространстве <span
 class="math inline">\(V\)</span>, <span class="math inline">\(\dim V =
@@ -426,7 +435,7 @@ class="math inline">\(U^{\perp}\)</span> – инвариантное подпр
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-21">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(\mathcal{A}\)</span> ортогональный линейный
 оператор на евклидовом пространстве <span
 class="math inline">\(V\)</span>, <span class="math inline">\(\dim V =
@@ -445,7 +454,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="линейные-функции-в-евклидовом-пространстве.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

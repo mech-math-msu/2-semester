@@ -11,7 +11,9 @@
     
     <title>Еще про ядра и образы линейных отображений</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="матрица-перехода-сопряженного-базиса.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="собственные-векторы.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="матрица-перехода-сопряженного-базиса.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="собственные-векторы.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,7 +257,7 @@
 <h1 data-number="6" id="еще-про-ядра-и-образы-линейных-отображений">Еще
 про ядра и образы линейных отображений</h1>
 <div id="statement-21">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(\varphi\)</span> – линейное отображение векторных
 пространств <span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span>, <span class="math inline">\(e_1,
@@ -263,7 +272,7 @@ e_1 + \ldots + \lambda_n e_n \Rightarrow \forall w \in W:\)</span></p>
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-21">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(\varphi\)</span> – линейное отображение векторных
 пространств <span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span>. <span class="math inline">\(\dim
@@ -271,7 +280,7 @@ class="math inline">\(W\)</span>. <span class="math inline">\(\dim
 отображения</em> <span class="math inline">\(\varphi\)</span>.</p>
 </div>
 <div id="statement-22">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(\varphi\)</span> – линейное отображение векторных
 пространств <span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span>. Тогда <span
@@ -307,7 +316,7 @@ class="math inline">\(\lambda_{m + 1} \varphi(e_{m + 1}) + \ldots +
 <h2 data-number="6.1" id="линейные-операторы-и-их-матрицы">Линейные
 операторы и их матрицы</h2>
 <div id="definition-22">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(\varphi\)</span> – линейное отображение векторного
 пространства <span class="math inline">\(V\)</span> в себя. Тогда <span
 class="math inline">\(\varphi\)</span> – это <em>линейный оператор</em>
@@ -373,13 +382,13 @@ x_1\\
 x_n
 \end{array}\right)\]</span></p>
 <div id="definition-23">
-<p><strong>Определение:</strong> <span class="math inline">\(A\)</span>
+<p><strong>Определение: </strong><span class="math inline">\(A\)</span>
 – <em>матрица линейного оператора</em> <span
 class="math inline">\(\varphi\)</span> относительно базиса <span
 class="math inline">\(e_1, \ldots, e_n\)</span>.</p>
 </div>
 <div id="statement-23">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство, <span
 class="math inline">\(\varphi\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>, <span class="math inline">\(B,
@@ -393,8 +402,8 @@ class="math inline">\(V\)</span>, <span class="math inline">\(B,
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-24">
-<p><strong>Утверждение:</strong></p>
 <ol type="1">
+<li><strong>Утверждение: </strong></li>
 <li>Ранг матрицы линейного оператора не зависит от базиса.</li>
 <li>Определитель матрицы линейного оператора не зависит от базиса.</li>
 </ol>
@@ -417,7 +426,7 @@ C_{B \to \tilde{B}}| = |C^{-1}_{B \to \tilde{B}}||C_{B \to
 </ol>
 </div>
 <div id="statement-25">
-<p><strong>Утверждение:</strong> Матрица <span
+<p><strong>Утверждение: </strong>Матрица <span
 class="math inline">\(A\)</span> линейного оператора <span
 class="math inline">\(\varphi\)</span> на векторном пространстве <span
 class="math inline">\(V\)</span> невырождена <span
@@ -426,7 +435,7 @@ class="math inline">\(\varphi\)</span> – обратимо.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="statement-26">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(\varphi\)</span> – линейное отображение векторных
 пространств <span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span>. <span class="math inline">\(\ker
@@ -436,7 +445,7 @@ class="math inline">\(\Leftrightarrow\)</span> <span
 class="math inline">\(\varphi\)</span> – обратимо.</p>
 <p><em>Доказательство:</em> <span
 class="math display">\[\Rightarrow\]</span></p>
-<p><span class="math inline">\(\varphi\)</span> - биекция <span
+<p><span class="math inline">\(\varphi\)</span> – биекция <span
 class="math display">\[\Leftarrow\]</span> <span
 class="math inline">\(\varphi\)</span> – обратимо, следовательно
 инъекция и сюръекция <span class="math inline">\(\Rightarrow \ker
@@ -445,7 +454,7 @@ class="math inline">\(\operatorname{img} \varphi = W
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-27">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(\varphi\)</span> – линейный оператор пространства
 <span class="math inline">\(V\)</span>. Тогда</p>
 <ol type="1">
@@ -463,7 +472,7 @@ V\)</span>.</li>
 id="определение-алгебры-алгебра-линейных-операторов">Определение
 алгебры, алгебра линейных операторов</h2>
 <div id="definition-24">
-<p><strong>Определение:</strong> <em>Алгебра</em> над полем <span
+<p><strong>Определение: </strong><em>Алгебра</em> над полем <span
 class="math inline">\(F\)</span> – это множество <span
 class="math inline">\(\mathfrak{A}\)</span> с операциями сложения <span
 class="math inline">\(+: \mathfrak{A}\times \mathfrak{A} \to
@@ -484,13 +493,13 @@ y)\)</span>.</li>
 </ol>
 </div>
 <div id="definition-25">
-<p><strong>Определение:</strong> Множество всех линейных операторов на
+<p><strong>Определение: </strong>Множество всех линейных операторов на
 векторном пространстве <span class="math inline">\(V\)</span>
 обозначается <span class="math inline">\(\operatorname{end}
 V\)</span>.</p>
 </div>
 <div id="statement-28">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> векторное пространство над полем <span
 class="math inline">\(F\)</span>. Тогда <span
 class="math inline">\(\operatorname{end} V\)</span> – алгебра над полем
@@ -511,7 +520,7 @@ x)\)</span>.</li>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-26">
-<p><strong>Определение:</strong> Алгебра <span
+<p><strong>Определение: </strong>Алгебра <span
 class="math inline">\(\mathfrak{C}\)</span> над <span
 class="math inline">\(F\)</span> <em>изоморфна</em> алгебре <span
 class="math inline">\(\mathfrak{B}\)</span> над <span
@@ -523,13 +532,13 @@ class="math inline">\(\mathfrak{B}\)</span>, как кольцо и как ве�
 \mathfrak{B}\)</span>.</p>
 </div>
 <div id="definition-27">
-<p><strong>Определение:</strong> Множество всех матриц <span
+<p><strong>Определение: </strong>Множество всех матриц <span
 class="math inline">\(n \times n\)</span> с элементами из поля <span
 class="math inline">\(F\)</span> обозначается <span
 class="math inline">\(\mathbf{M}_{n}(F)\)</span>.</p>
 </div>
 <div id="statement-29">
-<p><strong>Утверждение:</strong> <span
+<p><strong>Утверждение: </strong><span
 class="math inline">\(M_{n}(F)\)</span> – алгебра над полем <span
 class="math inline">\(F\)</span> относительно операций матричного
 сложения, матричного умножения и умножения каждого элемента матрицы на
@@ -538,7 +547,7 @@ class="math inline">\(F\)</span> относительно операций ма�
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-30">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над полем
 <span class="math inline">\(F\)</span>. Тогда <span
 class="math display">\[\operatorname{end} V \cong
@@ -552,7 +561,7 @@ class="math inline">\(\mathcal{A} \,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="6.3" id="инвариантные-подпространства">Инвариантные
 подпространства</h2>
 <div id="definition-28">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(U\)</span> подпространство векторного пространства
 <span class="math inline">\(V\)</span> над полем <span
 class="math inline">\(F\)</span>, <span
@@ -564,7 +573,7 @@ class="math inline">\(\forall u \in U \,\,\,\, \mathcal{A}(u) \in
 U\)</span>.</p>
 </div>
 <div id="definition-29">
-<p><strong>Определение:</strong> Если <span
+<p><strong>Определение: </strong>Если <span
 class="math inline">\(U\)</span> инвариантное пространство относительно
 линейного оператора <span class="math inline">\(\mathcal{A}\)</span>, то
 ограничение <span class="math inline">\(\mathcal{A}\)</span> на <span
@@ -572,7 +581,7 @@ class="math inline">\(U\)</span> обозначается <span
 class="math inline">\(\mathcal{A}_{\vert U}\)</span>.</p>
 </div>
 <div id="statement-31">
-<p><strong>Утверждение:</strong> <span
+<p><strong>Утверждение: </strong><span
 class="math inline">\(\mathcal{A}_{\vert U}\)</span> – линейный оператор
 <span class="math inline">\(U\)</span>.</p>
 <p><em>Доказательство:</em></p>
@@ -580,7 +589,7 @@ class="math inline">\(\mathcal{A}_{\vert U}\)</span> – линейный опе
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="матрица-перехода-сопряженного-базиса.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

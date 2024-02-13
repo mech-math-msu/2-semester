@@ -11,7 +11,9 @@
     
     <title>Свойства плоскостей</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="аффинные-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="плоскость-в-аффинном-пространстве-как-множество-решений-совместной-системы-линейных-уравнений.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="аффинные-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="плоскость-в-аффинном-пространстве-как-множество-решений-совместной-системы-линейных-уравнений.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,10 +256,10 @@
 
 <h1 data-number="21" id="свойства-плоскостей">Свойства плоскостей</h1>
 <div id="statement-103">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+<p><strong>Утверждение: </strong>Пусть <span
+class="math inline">\(\mathbb{A}\)</span> – аффинное пространство, <span
 class="math inline">\(\pi = a + U\)</span> и <span
-class="math inline">\(\tau = b + W\)</span> - плоскости. Тогда <span
+class="math inline">\(\tau = b + W\)</span> – плоскости. Тогда <span
 class="math inline">\(\pi \cap \tau = \varnothing\)</span> или <span
 class="math inline">\(\pi \cap \tau = c + U \cap W\)</span>, где <span
 class="math inline">\(c \in \pi \cap \tau\)</span>.</p>
@@ -264,27 +273,27 @@ c + u = c + w \Rightarrow u = w \Rightarrow \pi \cap \tau = c + U \cap
 W\)</span>.</p>
 </div>
 <div id="definition-101">
-<p><strong>Определение:</strong> <em>Аффинная оболочка</em> точек
+<p><strong>Определение: </strong><em>Аффинная оболочка</em> точек
 аффинного пространства – это плоскость наименьшей размерности,
 содержащая эти точки. Обозначается: <span
 class="math inline">\(&lt;...&gt;_A\)</span>.</p>
 </div>
 <div id="statement-104">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+<p><strong>Утверждение: </strong>Пусть <span
+class="math inline">\(\mathbb{A}\)</span> – аффинное пространство, <span
 class="math inline">\(\pi = a + U\)</span> и <span
-class="math inline">\(\tau = b + W\)</span> - плоскости. Тогда аффинная
+class="math inline">\(\tau = b + W\)</span> – плоскости. Тогда аффинная
 оболочка <span class="math inline">\(\langle \pi, \tau\rangle_A = a +
 \langle\overline{ab}, U + W\rangle\)</span>.</p>
 <p><em>Доказательство:</em> туда обратно <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-26">
-<p><strong>Теорема:</strong> Пусть <span
-class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+<p><strong>Теорема: </strong>Пусть <span
+class="math inline">\(\mathbb{A}\)</span> – аффинное пространство, <span
 class="math inline">\(\dim \mathbb{A} = n\)</span>, <span
 class="math inline">\(\pi = a + U\)</span> и <span
-class="math inline">\(\tau = b + W\)</span> - плоскости.</p>
+class="math inline">\(\tau = b + W\)</span> – плоскости.</p>
 <ol type="1">
 <li>Если <span class="math inline">\(\pi \cap \tau =
 \varnothing\)</span>, то <span class="math inline">\(\dim \langle\pi,
@@ -302,22 +311,22 @@ class="math inline">\(\tau = b + W\)</span> - плоскости.</p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-102">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+<p><strong>Определение: </strong>Пусть <span
+class="math inline">\(\mathbb{A}\)</span> – аффинное пространство, <span
 class="math inline">\(\dim \mathbb{A} = n\)</span>, <span
 class="math inline">\(\pi = a + U\)</span> и <span
-class="math inline">\(\tau = b + W\)</span> - плоскости. <span
+class="math inline">\(\tau = b + W\)</span> – плоскости. <span
 class="math inline">\(\pi\)</span> <em>параллельна</em> <span
 class="math inline">\(\tau\)</span> (<span class="math inline">\(\pi
 \parallel \tau\)</span>), если <span class="math inline">\(U \subset
 W\)</span> или <span class="math inline">\(W \subset U\)</span>.</p>
 </div>
 <div id="statement-105">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+<p><strong>Утверждение: </strong>Пусть <span
+class="math inline">\(\mathbb{A}\)</span> – аффинное пространство, <span
 class="math inline">\(\dim \mathbb{A} = n\)</span>, <span
 class="math inline">\(\pi = a + U\)</span> и <span
-class="math inline">\(\tau = b + W\)</span> - плоскости, <span
+class="math inline">\(\tau = b + W\)</span> – плоскости, <span
 class="math inline">\(\pi \parallel \tau\)</span>. Тогда <span
 class="math inline">\(\pi \cap \tau = \varnothing\)</span>, или <span
 class="math inline">\(\tau \subset \pi\)</span>, или <span
@@ -326,21 +335,21 @@ class="math inline">\(\pi \subset \tau\)</span>.</p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-103">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+<p><strong>Определение: </strong>Пусть <span
+class="math inline">\(\mathbb{A}\)</span> – аффинное пространство, <span
 class="math inline">\(\dim \mathbb{A} = n\)</span>, <span
 class="math inline">\(\pi = a + U\)</span> и <span
-class="math inline">\(\tau = b + W\)</span> - плоскости. <span
+class="math inline">\(\tau = b + W\)</span> – плоскости. <span
 class="math inline">\(\pi\)</span> и <span
 class="math inline">\(\tau\)</span> <em>скрещиваются</em>, если <span
 class="math inline">\(\pi \cap \tau \ne \varnothing\)</span> и <span
 class="math inline">\(\pi \nparallel \tau\)</span>.</p>
 </div>
 <div id="statement-106">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(\mathbb{A}\)</span> - аффинное пространство, <span
+<p><strong>Утверждение: </strong>Пусть <span
+class="math inline">\(\mathbb{A}\)</span> – аффинное пространство, <span
 class="math inline">\(\pi\)</span> и <span
-class="math inline">\(\tau\)</span> - гиперплоскости. Если <span
+class="math inline">\(\tau\)</span> – гиперплоскости. Если <span
 class="math inline">\(\pi \cap \tau = \varnothing\)</span>, то <span
 class="math inline">\(\pi \parallel \tau\)</span>.</p>
 <p><em>Доказательство:</em></p>
@@ -348,7 +357,7 @@ class="math inline">\(\pi \parallel \tau\)</span>.</p>
 <h2 data-number="21.1" id="аффинные-линейные-функции">Аффинные линейные
 функции</h2>
 <div id="definition-104">
-<p><strong>Определение:</strong> <span class="math inline">\(f:
+<p><strong>Определение: </strong><span class="math inline">\(f:
 \mathbb{A} \to F\)</span> – <em>аффинная линейная функция</em>, если
 существует линейная функция <span class="math inline">\(\varphi\)</span>
 на V, такая, что <span class="math inline">\(\forall a, b \in \mathbb{A}
@@ -360,8 +369,8 @@ class="math inline">\(F\)</span> рассматривается как одно�
 <h3 data-number="21.1.1"
 id="координатная-запись-аффинных-линейных-функций">Координатная запись
 аффинных линейных функций</h3>
-<p>Пусть <span class="math inline">\((O, e)\)</span> - аффинная система
-координат, <span class="math inline">\(f\)</span> - аффинная линейная
+<p>Пусть <span class="math inline">\((O, e)\)</span> – аффинная система
+координат, <span class="math inline">\(f\)</span> – аффинная линейная
 функция, <span class="math inline">\(e = \{e_1, \ldots, e_n\}\)</span>.
 <span class="math inline">\(\forall a \in \mathbb{A} \,\,\,\, a = O +
 \overline{Oa}\)</span>. Пусть <span class="math inline">\(x_1, \ldots,
@@ -371,23 +380,23 @@ class="math inline">\(f(a) = f(O) + \varphi(\overline{Oe}) = \alpha +
 \varphi(x_1 e_1 +\ldots + x_n e_n) = \alpha + \alpha_1 x_1 + \ldots +
 \alpha_n x_n\)</span>.</p>
 <div id="definition-105">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f\)</span> - аффинная линейная функция.
+<p><strong>Определение: </strong>Пусть <span
+class="math inline">\(f\)</span> – аффинная линейная функция.
 <em>Ядро</em> <span class="math inline">\(f\)</span> – это <span
 class="math inline">\(\ker f = \{a \in \mathbb{A}: \,\,\,\, f(a) =
 0\}\)</span>.</p>
 </div>
 <div id="statement-107">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(f\)</span> - аффинная линейная функция. Тогда</p>
+<p><strong>Утверждение: </strong>Пусть <span
+class="math inline">\(f\)</span> – аффинная линейная функция. Тогда</p>
 <ol type="1">
-<li><span class="math inline">\(\ker f\)</span> - аффинное
+<li><span class="math inline">\(\ker f\)</span> – аффинное
 подпространство или <span class="math inline">\(\ker f =
 \varnothing\)</span>.</li>
 <li>Если <span class="math inline">\(\ker f \ne \varnothing\)</span>, то
 <span class="math inline">\(ker f = c + \ker \varphi\)</span>, где <span
 class="math inline">\(f(c) = 0\)</span> и <span
-class="math inline">\(\varphi\)</span> - линейная часть аффинной функции
+class="math inline">\(\varphi\)</span> – линейная часть аффинной функции
 <span class="math inline">\(f\)</span>.</li>
 </ol>
 <p><em>Доказательство:</em></p>
@@ -399,7 +408,7 @@ class="math inline">\(f(a + v) = f(a) + \varphi(v) \Rightarrow \forall v
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="аффинные-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

@@ -11,7 +11,9 @@
     
     <title>Корневые подпространства</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="существование-жорданова-базиса-у-линейного-оператора-над-алгебраически-замкнутым-полем.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="симметрические-билинейные-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="существование-жорданова-базиса-у-линейного-оператора-над-алгебраически-замкнутым-полем.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="симметрические-билинейные-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,7 +257,7 @@
 <h1 data-number="11" id="корневые-подпространства">Корневые
 подпространства</h1>
 <div id="definition-43">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> – конечномерное векторное пространство,
 <span class="math inline">\(\mathcal{A}\)</span> – линейный оператор на
 <span class="math inline">\(V\)</span>. <span class="math inline">\(v
@@ -273,7 +282,7 @@ class="math inline">\(\mathcal{A}\)</span>)</p>
 высотой <span class="math inline">\(1\)</span>.</p>
 </div>
 <div id="statement-49">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – конечномерное векторное пространство,
 <span class="math inline">\(\mathcal{A}\)</span> – линейный оператор на
 <span class="math inline">\(V\)</span>, <span
@@ -287,13 +296,13 @@ class="math inline">\(V\)</span>.</p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-44">
-<p><strong>Определение:</strong> <span
+<p><strong>Определение: </strong><span
 class="math inline">\(V(\lambda)\)</span> – <em>корневое</em>
 подпространство <span class="math inline">\(V\)</span>, отвечающее
 собственному значению <span class="math inline">\(\lambda\)</span>.</p>
 </div>
 <div id="statement-50">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – конечномерное векторное пространство,
 <span class="math inline">\(\mathcal{A}\)</span> – линейный оператор на
 <span class="math inline">\(V\)</span>, <span
@@ -306,7 +315,7 @@ V(\lambda) \,\,\,\, \exists m \in \mathbb{N}: \,\,\,\, (\mathcal{A} -
 \lambda \mathcal{I})^m(v) = 0\)</span> (ничего непонятно)</p>
 </div>
 <div id="statement-51">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – конечномерное векторное пространство,
 <span class="math inline">\(\mathcal{A}\)</span> – линейный оператор на
 <span class="math inline">\(V\)</span>, <span
@@ -352,7 +361,7 @@ class="math inline">\(\tilde{x} = 0 \Rightarrow x = x_i
 </div>
 <h2 data-number="11.1" id="билинейные-функции">Билинейные функции</h2>
 <div id="definition-45">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над полем
 <span class="math inline">\(F\)</span>. Отображение <span
 class="math inline">\(\beta: \,\,\,\, V \times V \to F\)</span> –
@@ -380,7 +389,7 @@ e_j) y_i\]</span></p>
 <p>Обозначим <span class="math inline">\(\beta(e_i, e_j) =
 b_{ij}\)</span>.</p>
 <div id="definition-46">
-<p><strong>Определение:</strong> <span class="math inline">\(B =
+<p><strong>Определение: </strong><span class="math inline">\(B =
 \left(\begin{array}{ccc}b_{11} &amp; \dots &amp; b_{1n}\\
 \vdots &amp; \ddots &amp; \vdots\\
 b_{n1} &amp; \dots &amp; b_{nn}\end{array}\right)\)</span> – <em>матрица
@@ -394,7 +403,7 @@ class="math inline">\(x, y\)</span> соответственно.</p>
 id="изменение-матрицы-билинейной-функции-при-переходе-от-одного-базиса-к-другому">Изменение
 матрицы билинейной функции при переходе от одного базиса к другому</h3>
 <div id="statement-52">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство размерности
 <span class="math inline">\(n\)</span> над полем <span
 class="math inline">\(F\)</span>, <span class="math inline">\(e,
@@ -411,7 +420,7 @@ class="math display">\[\tilde{B} = C_{e \to \tilde{e}}^TB C_{e \to
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="существование-жорданова-базиса-у-линейного-оператора-над-алгебраически-замкнутым-полем.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

@@ -11,7 +11,9 @@
     
     <title>Переход от одного базиса к другому</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="векторное-пространство.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="линейные-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="векторное-пространство.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="линейные-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -254,7 +263,7 @@ class="math inline">\(C_{e \to e’}\)</span>.</p>
 <h2 data-number="3.1" id="свойства-матрицы-перехода">Свойства матрицы
 перехода</h2>
 <div id="statement-6">
-<p><strong>Утверждение:</strong> (<em>свойства матрицы
+<p><strong>Утверждение: </strong>(<em>свойства матрицы
 перехода</em>)</p>
 <p>Пусть <span class="math inline">\(e, e’, e’’\)</span> – базисы в
 некотором конечномерном векторном пространстве.</p>
@@ -274,7 +283,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 id="сумма-и-пересечение-векторных-подпространств">Сумма и пересечение
 векторных подпространств</h2>
 <div id="statement-7">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(U,
+<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(U,
 \,\,\,\, W\)</span> подпространства векторного пространства <span
 class="math inline">\(V\)</span>. Тогда <span class="math inline">\(U
 \cap W\)</span> подпространство <span
@@ -290,7 +299,7 @@ class="math inline">\(U\)</span>, и <span class="math inline">\(W
 </ol>
 </div>
 <div id="definition-10">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(U,
+<p><strong>Определение: </strong>Пусть <span class="math inline">\(U,
 \,\,\,\, W\)</span> подпространства векторного пространства <span
 class="math inline">\(V\)</span>. <em>сумма</em> <span
 class="math inline">\(U + W\)</span> подпространств <span
@@ -299,7 +308,7 @@ class="math inline">\(W\)</span> – это <span class="math inline">\(U + W
 = \{u + w: \,\,\,\, u \in U, \,\,\,\, w \in W\}\)</span>.</p>
 </div>
 <div id="statement-8">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(U,
+<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(U,
 \,\,\,\, W\)</span> подпространства векторного пространства <span
 class="math inline">\(V\)</span>. Тогда <span class="math inline">\(U +
 W\)</span> – подпространство в <span
@@ -308,7 +317,7 @@ class="math inline">\(V\)</span>.</p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-3">
-<p><strong>Теорема:</strong> (<em>формула Грассмана</em>) Пусть <span
+<p><strong>Теорема: </strong>(<em>формула Грассмана</em>) Пусть <span
 class="math inline">\(U, \,\,\,\, W\)</span> подпространства векторного
 пространства <span class="math inline">\(V\)</span>. <span
 class="math display">\[\dim U + \dim W = \dim (U \cap W) + \dim (U +
@@ -341,7 +350,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
 <h2 data-number="3.3" id="прямая-сумма-подпространств-1">Прямая сумма
 подпространств</h2>
 <div id="definition-11">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(U,
+<p><strong>Определение: </strong>Пусть <span class="math inline">\(U,
 \,\,\,\, W\)</span> подпространства векторного пространства <span
 class="math inline">\(V\)</span>. Сумма <span class="math inline">\(U +
 W\)</span> <em>прямая</em>, если <span class="math inline">\(\forall x
@@ -351,7 +360,7 @@ x\)</span>.</p>
 W\)</span>.</p>
 </div>
 <div id="statement-9">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(U,
+<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(U,
 \,\,\,\, W\)</span> подпространства векторного пространства <span
 class="math inline">\(V\)</span>. Тогда <span class="math inline">\(U +
 W\)</span> – прямая <span class="math inline">\(\Leftrightarrow U \cap W
@@ -372,7 +381,7 @@ class="math inline">\(u’ - u \in U = w - w’ \in W\)</span>, то есть
 <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-10">
-<p><strong>Утверждение:</strong> Сумма подпространств <span
+<p><strong>Утверждение: </strong>Сумма подпространств <span
 class="math inline">\(U = U_1 + U_2 + \ldots + U_n\)</span> – прямая
 <span class="math inline">\(\Leftrightarrow \,\,\,\, \forall i \in \{1,
 \ldots, n\} \,\,\,\, U_i \cap (U_{i + 1} + \ldots + U_n) =
@@ -392,7 +401,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="векторное-пространство.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

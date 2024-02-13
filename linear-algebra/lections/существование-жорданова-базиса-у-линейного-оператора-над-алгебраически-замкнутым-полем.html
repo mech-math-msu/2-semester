@@ -12,7 +12,9 @@
     <title>Существование жорданова базиса у линейного оператора над
 алгебраически замкнутым полем</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -90,7 +92,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -102,16 +104,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -232,15 +234,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="аннулирующй-и-минимальный-многочлены.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="корневые-подпространства.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="аннулирующй-и-минимальный-многочлены.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="корневые-подпространства.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -251,7 +260,7 @@ id="существование-жорданова-базиса-у-линейно
 жорданова базиса у линейного оператора над алгебраически замкнутым
 полем</h1>
 <div id="theorem-9">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство размерности
 <span class="math inline">\(n\)</span> над алгебраически замкнутым полем
 <span class="math inline">\(F\)</span>, <span
@@ -375,7 +384,7 @@ id="единственность-жордановой-нормальной-фо�
 id="критерий-диагонализируемости-в-терминах-минимального-многочлена">Критерий
 диагонализируемости в терминах минимального многочлена</h2>
 <div id="theorem-10">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(V\)</span> – конечномерное векторное пространство
 над алгебраически замкнутым полем <span
 class="math inline">\(F\)</span>, <span
@@ -402,14 +411,14 @@ class="math inline">\(\mu_{\mathcal{A}}\)</span> не имеет кратных
 </div>
 <h2 data-number="10.3" id="подобная-матрица">Подобная матрица</h2>
 <div id="definition-42">
-<p><strong>Определение:</strong> Матрица <span class="math inline">\(A
+<p><strong>Определение: </strong>Матрица <span class="math inline">\(A
 \in M_n(F)\)</span> <em>подобна</em> матрице <span
 class="math inline">\(B \in M_n(F)\)</span>, если <span
 class="math inline">\(\exists C \in M_n(F): \,\,\,\, A =
 C^{-1}BC\)</span>.</p>
 </div>
 <div id="corollary-4">
-<p><strong>Следствие:</strong> Любая матрица <span
+<p><strong>Следствие: </strong>Любая матрица <span
 class="math inline">\(A\)</span> над алгебраически замкнутым полем
 подобна некоторой жордановой матрице.</p>
 <p><em>Доказательство:</em> По теореме существует базис в векторном
@@ -421,7 +430,7 @@ class="math inline">\(A\)</span> над алгебраически замкну�
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="аннулирующй-и-минимальный-многочлены.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

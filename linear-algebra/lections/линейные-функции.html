@@ -11,7 +11,9 @@
     
     <title>Линейные функции</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="переход-от-одного-базиса-к-другому.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="матрица-перехода-сопряженного-базиса.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="переход-от-одного-базиса-к-другому.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="матрица-перехода-сопряженного-базиса.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,7 +256,7 @@
 
 <h1 data-number="4" id="линейные-функции">Линейные функции</h1>
 <div id="definition-12">
-<p><strong>Определение:</strong> <em>Линейная функция</em> на векторном
+<p><strong>Определение: </strong><em>Линейная функция</em> на векторном
 пространстве <span class="math inline">\(V\)</span> – это отображение
 <span class="math inline">\(\varphi: \,\,\,\, V \to F\)</span>, где
 <span class="math inline">\(V\)</span> векторное пространство над полем
@@ -260,7 +269,7 @@ y) = \varphi(x) + \varphi(y)\)</span>.</li>
 </ol>
 </div>
 <div id="statement-11">
-<p><strong>Утверждение:</strong> Множество всех линейных функций <span
+<p><strong>Утверждение: </strong>Множество всех линейных функций <span
 class="math inline">\(V^{*}\)</span> на векторном пространстве <span
 class="math inline">\(V\)</span> над полем <span
 class="math inline">\(F\)</span> – это векторное пространство
@@ -272,13 +281,13 @@ class="math inline">\(F\)</span> – это векторное простран�
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-13">
-<p><strong>Определение:</strong> <span
+<p><strong>Определение: </strong><span
 class="math inline">\(V^{*}\)</span> <em>сопряженное</em> к <span
 class="math inline">\(V\)</span> векторное пространство.</p>
 </div>
 <div id="statement-12">
-<p><strong>Утверждение:</strong></p>
 <ol type="1">
+<li><strong>Утверждение: </strong></li>
 <li>Линейная функция на векторном пространстве <span
 class="math inline">\(V\)</span> однозначно задается значениями на
 векторах некоторого базиса <span class="math inline">\(V\)</span>.</li>
@@ -313,7 +322,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="4.1" id="сопряженные-базисы">Сопряженные базисы</h2>
 <div id="statement-13">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> векторное пространство над полем <span
 class="math inline">\(F\)</span>, <span class="math inline">\(e_1,
 \ldots, e_n\)</span> базис в <span class="math inline">\(V\)</span>.
@@ -345,12 +354,12 @@ class="math inline">\(\varepsilon_i\)</span>-е, ну, делается это �
 + \varphi(e_n)\varepsilon^n \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-0">
-<p><strong>Следствие:</strong> <span class="math inline">\(\dim V = \dim
+<p><strong>Следствие: </strong><span class="math inline">\(\dim V = \dim
 V^{*}\)</span> и <span class="math inline">\(V \cong V^{*}\)</span></p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="definition-14">
-<p><strong>Определение:</strong> Базис <span
+<p><strong>Определение: </strong>Базис <span
 class="math inline">\(\{\varepsilon^1, \ldots, \varepsilon^n\}\)</span>
 в <span class="math inline">\(V^{*}\)</span> <em>сопряженный</em> к
 базису <span class="math inline">\(e_1, \ldots, e_n\)</span> в <span
@@ -359,7 +368,7 @@ class="math inline">\(V\)</span>.</p>
 <h2 data-number="4.2" id="второе-сопряженное-пространство">Второе
 сопряженное пространство</h2>
 <div id="definition-15">
-<p><strong>Определение:</strong> <span
+<p><strong>Определение: </strong><span
 class="math inline">\(V^{**}\)</span> – это <span
 class="math inline">\((V^{*})^{*}\)</span>, то есть сопряженное к <span
 class="math inline">\(V^{*}\)</span> и <em>второе сопряженное к</em>
@@ -368,7 +377,7 @@ class="math inline">\(V^{*}\)</span> сопряжено векторному п�
 <span class="math inline">\(V\)</span> 🙄).</p>
 </div>
 <div id="statement-14">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> векторное пространство. Каждому вектору
 <span class="math inline">\(x \in V\)</span> сопоставим отображение
 <span class="math inline">\(f_x: \,\,\,\, V^{*} \to F\)</span>, такое
@@ -384,7 +393,7 @@ f_x(\psi)\)</span>.</li>
 </ol>
 </div>
 <div id="theorem-4">
-<p><strong>Теорема:</strong> (<em>Канонический изоморфизм</em> <span
+<p><strong>Теорема: </strong>(<em>Канонический изоморфизм</em> <span
 class="math inline">\(V\)</span> и <span
 class="math inline">\(V^{**}\)</span>) Отображение <span
 class="math inline">\(\Phi: \,\,\,\, v \mapsto f_v\)</span> – изоморфизм
@@ -436,7 +445,7 @@ v \in V \,\,\,\,\Phi(v) = \Phi(\lambda_1 e_1 + \ldots + \lambda_n e_n) =
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="переход-от-одного-базиса-к-другому.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

@@ -11,7 +11,9 @@
     
     <title>Комплексификация</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="собственные-векторы.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="аннулирующй-и-минимальный-многочлены.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="собственные-векторы.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="аннулирующй-и-минимальный-многочлены.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,7 +256,7 @@
 
 <h1 data-number="8" id="комплексификация">Комплексификация</h1>
 <div id="definition-35">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над <span
 class="math inline">\(\mathbb{R}\)</span>. Рассмотрим множество <span
 class="math inline">\(V(\mathbb{C}) = \{(v_1, v_2)| v_1, v_2 \in
@@ -269,7 +278,7 @@ V(\mathbb{C})\)</span>, как <span class="math inline">\(v\)</span>.
 записывается так: <span class="math inline">\(v_1 + i v_2\)</span>.</p>
 </div>
 <div id="statement-40">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над <span
 class="math inline">\(\mathbb{R}\)</span>. Тогда <span
 class="math inline">\(V(\mathbb{C})\)</span> – векторное пространство
@@ -278,7 +287,7 @@ class="math inline">\(V(\mathbb{C})\)</span> – векторное простр
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-41">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над <span
 class="math inline">\(\mathbb{R}\)</span>. Тогда любой базис <span
 class="math inline">\(V\)</span> является базисом в <span
@@ -287,7 +296,7 @@ class="math inline">\(V(\mathbb{C})\)</span>.</p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-42">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над <span
 class="math inline">\(\mathbb{R}\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -301,7 +310,7 @@ class="math inline">\(\mathcal{A}_{\mathbb{C}}\)</span> линейный
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-43">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над <span
 class="math inline">\(\mathbb{R}\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -316,7 +325,7 @@ class="math inline">\(B\)</span> совпадает с матрицей лине
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-44">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над <span
 class="math inline">\(\mathbb{R}\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -338,7 +347,7 @@ y) = \mathcal{A}(x) + i \mathcal{A}(y) \,\,\,\,\blacksquare\]</span>
 сторону.</p>
 </div>
 <div id="corollary-3">
-<p><strong>Следствие:</strong> Пусть <span
+<p><strong>Следствие: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над <span
 class="math inline">\(\mathbb{R}\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -355,13 +364,13 @@ class="math inline">\(\mathcal{A}_{\mathbb{C}}\)</span> имеет
 id="приведение-матрицы-линейного-оператора-к-треугольному-виду">Приведение
 матрицы линейного оператора к треугольному виду</h2>
 <div id="definition-36">
-<p><strong>Определение:</strong> Поле <span
+<p><strong>Определение: </strong>Поле <span
 class="math inline">\(F\)</span> <em>алгебраически замкнуто</em>, если
 любой многочлен над <span class="math inline">\(F\)</span> имеет хотя бы
 один корень.</p>
 </div>
 <div id="theorem-7">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство размерности
 <span class="math inline">\(n\)</span> над алгебраически замкнутым полем
 <span class="math inline">\(F\)</span>, <span
@@ -442,7 +451,7 @@ e_n\}\)</span>. Матрица <span class="math inline">\(\mathcal{A}\)</span>
 <h2 data-number="8.2" id="теорема-гамильтона-кэли">Теорема
 Гамильтона-Кэли</h2>
 <div id="theorem-8">
-<p><strong>Теорема:</strong> (<em>Теорема Гамильтона-Кэли</em>) Пусть
+<p><strong>Теорема: </strong>(<em>Теорема Гамильтона-Кэли</em>) Пусть
 <span class="math inline">\(\mathcal{A}\)</span> линейный оператор на
 векторном пространстве <span class="math inline">\(V\)</span>
 размерности <span class="math inline">\(n\)</span> над полем <span
@@ -508,7 +517,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="собственные-векторы.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

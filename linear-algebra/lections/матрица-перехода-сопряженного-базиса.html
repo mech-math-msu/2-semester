@@ -11,7 +11,9 @@
     
     <title>Матрица перехода сопряженного базиса</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="линейные-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="еще-про-ядра-и-образы-линейных-отображений.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="линейные-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="еще-про-ядра-и-образы-линейных-отображений.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,7 +257,7 @@
 <h1 data-number="5" id="матрица-перехода-сопряженного-базиса">Матрица
 перехода сопряженного базиса</h1>
 <div id="theorem-5">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство, <span
 class="math inline">\(B = \{e_1, \ldots, e_n\}\)</span> и <span
 class="math inline">\(\tilde{B} = \{\tilde{e}_1, \ldots,
@@ -297,7 +306,7 @@ C_{B^{*} \to \tilde{B}^{*}}^T = E \,\,\,\,\blacksquare\]</span></p>
 id="ядро-линейной-функциилинейного-функционала">Ядро линейной
 функции(линейного функционала)</h2>
 <div id="definition-16">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(\varphi\)</span> – линейная функция на векторном
 пространстве <span class="math inline">\(V\)</span>. Тогда <em>ядро</em>
 <span class="math inline">\(\varphi\)</span> – это <span
@@ -305,7 +314,7 @@ class="math inline">\(\ker \varphi = \{v \in V: \,\,\,\, \varphi(v) =
 0\}\)</span>.</p>
 </div>
 <div id="statement-15">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(\varphi\)</span> – линейная функция на векторном
 пространстве <span class="math inline">\(V\)</span>. Тогда <span
 class="math inline">\(\ker \varphi\)</span> – подпространство <span
@@ -322,7 +331,7 @@ class="math inline">\(V\)</span>.</p>
 </ol>
 </div>
 <div id="statement-16">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> векторное пространство, тогда любое его
 подпространство <span class="math inline">\(U\)</span> может быть
 представлено как конечное пересечение ядер некоторых линейных функций на
@@ -352,7 +361,7 @@ class="math inline">\(u \in \ker\varepsilon^{m + 1}, \ldots,
 1}^{n}\ker \varepsilon^i = U \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-17">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство, <span
 class="math inline">\(B = \{e_1, \ldots, e_m, e_{m + 1}, \ldots,
 e_n\}\)</span> – базис <span class="math inline">\(V\)</span>, <span
@@ -406,7 +415,7 @@ x_n
 <h2 data-number="5.2" id="линейные-отображения">Линейные
 отображения</h2>
 <div id="definition-17">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>. <span
@@ -422,7 +431,7 @@ class="math inline">\(\varphi: \,\,\,\, V \to W\)</span> – <em>линейно�
 <h3 data-number="5.2.1" id="матрицы-линейных-отображений">Матрицы
 линейных отображений</h3>
 <div id="definition-18">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
@@ -450,7 +459,7 @@ class="math inline">\(B\)</span> и <span
 class="math inline">\(B’\)</span>.</p>
 </div>
 <div id="statement-18">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
@@ -478,7 +487,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="5.3" id="ядро-и-образ-линейного-отображения">Ядро и
 образ линейного отображения</h2>
 <div id="definition-19">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
@@ -488,7 +497,7 @@ class="math inline">\(\ker \varphi = \{u \in U: \,\,\,\, \varphi(u) =
 0\}\)</span>.</p>
 </div>
 <div id="definition-20">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
@@ -498,7 +507,7 @@ class="math inline">\(\operatorname{Img} \varphi = \{w \in W:
 \,\,\,\,\exists u \in U \,\,\,\, \varphi(u) = w\}\)</span>.</p>
 </div>
 <div id="statement-19">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
@@ -511,7 +520,7 @@ class="math inline">\(\operatorname{Img} \varphi\)</span>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-20">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
@@ -528,7 +537,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="линейные-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

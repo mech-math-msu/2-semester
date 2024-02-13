@@ -11,7 +11,9 @@
     
     <title>Движения</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="аффинно-евклидовы-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="аффинно-квадратичные-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="аффинно-евклидовы-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="аффинно-квадратичные-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,7 +256,7 @@
 
 <h1 data-number="24" id="движения">Движения</h1>
 <div id="definition-120">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(\mathbb{A}\)</span> аффинное пространство.
 Отображение <span class="math inline">\(f: \mathbb{A} \to
 \mathbb{A}\)</span> – <em>движение</em>, если <span
@@ -255,23 +264,23 @@ class="math inline">\(\rho(a, b) = \rho(f(a), f(b)), \,\,\,\, \forall a,
 b \in \mathbb{A}\)</span>.</p>
 </div>
 <div id="definition-121">
-<p><strong>Определение:</strong> Аффинный оператор <span
+<p><strong>Определение: </strong>Аффинный оператор <span
 class="math inline">\(\Phi\)</span> <em>ортогональный</em>, если его
-дифференциал - ортогональный линейный оператор.</p>
+дифференциал – ортогональный линейный оператор.</p>
 </div>
 <div id="statement-120">
-<p><strong>Утверждение:</strong> Сдвиг на вектор – это движение и
+<p><strong>Утверждение: </strong>Сдвиг на вектор – это движение и
 аффинный ортогональный оператор.</p>
 <p><em>Доказательство:</em> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-121">
-<p><strong>Утверждение:</strong> Композиция движений – это движение.</p>
+<p><strong>Утверждение: </strong>Композиция движений – это движение.</p>
 <p><em>Доказательство:</em> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-27">
-<p><strong>Теорема:</strong> Движение – это ортогональный аффинный
+<p><strong>Теорема: </strong>Движение – это ортогональный аффинный
 оператор.</p>
 <p><em>Доказательство:</em></p>
 <p><span class="math display">\[\Leftarrow\]</span> Пусть <span
@@ -323,9 +332,8 @@ X_0 + A X_{\overline{Oa}}\)</span>.</p>
 </details>
 </div>
 <div id="definition-122">
-<p><strong>Определение:</strong></p>
-<p>Если <span class="math inline">\(\det A = 1\)</span>, то движение
-<em>собственное</em>.</p>
+<p><strong>Определение: </strong>Если <span class="math inline">\(\det A
+= 1\)</span>, то движение <em>собственное</em>.</p>
 <p>Если <span class="math inline">\(\det A = -1\)</span>, то движение
 <em>несобственное</em>.</p>
 <p>Если <span class="math inline">\(f(O) = O\)</span>, то движение –
@@ -334,15 +342,15 @@ X_0 + A X_{\overline{Oa}}\)</span>.</p>
 <h2 data-number="24.1" id="основная-теорема-о-движении">Основная теорема
 о движении</h2>
 <div id="theorem-28">
-<p><strong>Теорема:</strong> Пусть <span
+<p><strong>Теорема: </strong>Пусть <span
 class="math inline">\(\mathbb{A}\)</span> аффинно-евклидово пространство
 над <span class="math inline">\(V\)</span>. Пусть <span
-class="math inline">\(\Phi\)</span> - движение с дифференциалом <span
+class="math inline">\(\Phi\)</span> – движение с дифференциалом <span
 class="math inline">\(\varphi\)</span>. Тогда <span
 class="math inline">\(\exists u \in V: \,\,\,\, \varphi(u) = u\)</span>
-и <span class="math inline">\(\exists \Psi\)</span> - движение с
+и <span class="math inline">\(\exists \Psi\)</span> – движение с
 неподвижной точкой, такое, что <span class="math inline">\(\Phi = t_u
-\circ \Psi\)</span> (<span class="math inline">\(t_u\)</span> - сдвиг на
+\circ \Psi\)</span> (<span class="math inline">\(t_u\)</span> – сдвиг на
 вектор).</p>
 <p><em>Доказательство:</em></p>
 <p>Если у <span class="math inline">\(\varphi\)</span> существует
@@ -355,7 +363,7 @@ class="math inline">\(\Psi = (t_u)^{-1}\circ \Phi
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="аффинно-евклидовы-пространства.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

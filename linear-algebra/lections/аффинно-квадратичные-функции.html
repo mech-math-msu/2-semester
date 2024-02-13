@@ -11,7 +11,9 @@
     
     <title>Аффинно-квадратичные функции</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="движения.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="аффинно-квадратичные-функции-в-аффинно-евклидовых-пространствах.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="движения.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="аффинно-квадратичные-функции-в-аффинно-евклидовых-пространствах.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,9 +257,9 @@
 <h1 data-number="25"
 id="аффинно-квадратичные-функции">Аффинно-квадратичные функции</h1>
 <div id="definition-123">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\((\mathbb{A}, V)\)</span> - аффинное пространство,
-<span class="math inline">\(V\)</span> - векторное пространство над
+<p><strong>Определение: </strong>Пусть <span
+class="math inline">\((\mathbb{A}, V)\)</span> – аффинное пространство,
+<span class="math inline">\(V\)</span> – векторное пространство над
 полем <span class="math inline">\(F\)</span>. Отображение <span
 class="math inline">\(L: \mathbb{A} \to F\)</span> –
 <em>аффинно-линейное</em>, если существует линейная функция <span
@@ -259,7 +268,7 @@ class="math inline">\(L(a) = L(b) + l(\overline{ba})\,\,\,\, \forall a,
 b \in \mathbb{A}\)</span>.</p>
 </div>
 <div id="definition-124">
-<p><strong>Определение:</strong> Отображение <span
+<p><strong>Определение: </strong>Отображение <span
 class="math inline">\(Q: \mathbb{A} \to F\)</span> –
 <em>аффинно-квадратичная функция</em>, если существует линейная функция
 <span class="math inline">\(l: V \to F\)</span> и квадратичная форма
@@ -270,8 +279,8 @@ q(\overline{ab}) + 2l(\overline{ab})\)</span>.</p>
 <h2 data-number="25.1"
 id="координатная-запись-аффинно-квадратичной-функции">Координатная
 запись аффинно-квадратичной функции</h2>
-<p>Пусть <span class="math inline">\((O, e)\)</span> - аффинная система
-координат. <span class="math inline">\(Q\)</span> - аффинно-квадратичная
+<p>Пусть <span class="math inline">\((O, e)\)</span> – аффинная система
+координат. <span class="math inline">\(Q\)</span> – аффинно-квадратичная
 функция.</p>
 <p><span class="math display">\[\forall a \in \mathbb{A} \,\,\,\, Q(a) =
 Q(O) + q(\overline{Oa}) + 2 l(\overline{Oa})\]</span> <span
@@ -283,7 +292,7 @@ X\]</span></p>
 <p><span class="math inline">\(S\)</span> – столбец коэффицентов
 линейной части <span class="math inline">\(Q\)</span>.</p>
 <div id="definition-125">
-<p><strong>Определение:</strong> <span class="math inline">\(\tilde{B} =
+<p><strong>Определение: </strong><span class="math inline">\(\tilde{B} =
 \left(\begin{array}{c|c} B &amp; S \\\hline S^T &amp;
 Q(O)\end{array}\right)\)</span> – <em>матрица аффинно-квадратичной
 функции</em> <span class="math inline">\(Q\)</span> в базисе <span
@@ -292,9 +301,9 @@ class="math inline">\((O, e)\)</span>.</p>
 \left(\begin{array}{c}X\\\hline 1\end{array}\right)\]</span></p>
 </div>
 <div id="statement-122">
-<p><strong>Утверждение:</strong> <span class="math display">\[Q(a) =
+<p><strong>Утверждение: </strong><span class="math display">\[Q(a) =
 \tilde{X}^T\tilde{B}\tilde{X}\]</span></p>
-<p>Пусть <span class="math inline">\((O’, e’)\)</span> - аффинная
+<p>Пусть <span class="math inline">\((O’, e’)\)</span> – аффинная
 система координат. Матрица перехода от <span
 class="math inline">\(e\)</span> к <span
 class="math inline">\(e’\)</span> - <span class="math inline">\(C_{e \to
@@ -302,7 +311,7 @@ e’}\)</span>.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="definition-126">
-<p><strong>Определение:</strong> <span class="math inline">\(\tilde{C} =
+<p><strong>Определение: </strong><span class="math inline">\(\tilde{C} =
 \left(\begin{array}{ccc|c} &amp; &amp; &amp; v_1\\ &amp; C_{e \to e’}
 &amp; &amp; \vdots\\&amp; &amp; &amp; v_n \\\hline 0 &amp; \dots &amp; 0
 &amp; 1\end{array}\right)\)</span> – <em>матрица перехода от аффинной
@@ -317,7 +326,7 @@ id="изменение-матрицы-аффинно-квадратичной-ф
 матрицы аффинно-квадратичной функции при переходе от одной аффинной
 системы координат к другой</h3>
 <div id="statement-123">
-<p><strong>Утверждение:</strong></p>
+<p><strong>Утверждение: </strong><strong>Утверждение:</strong></p>
 <p><span class="math display">\[B’ = C_{e \to e’}^T B C_{e \to
 e’}\]</span> <span class="math display">\[S’ = C_{e \to e’}^T(B W +
 S)\]</span> <span class="math inline">\(W\)</span> – столбец координат
@@ -332,7 +341,7 @@ Q(O)\]</span></p>
 <h2 data-number="25.2" id="центр-аффинно-квадратичной-функции">Центр
 аффинно-квадратичной функции</h2>
 <div id="definition-127">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(W\)</span> – столбец координат вектора <span
 class="math inline">\(\overline{OO’}\)</span>, таков, что <span
 class="math inline">\(B W + S = 0\)</span>. Тогда <span
@@ -342,7 +351,7 @@ class="math inline">\(S’ = 0\)</span> и <span class="math inline">\(Q(O’
 функции</em> <span class="math inline">\(Q\)</span>.</p>
 </div>
 <div id="statement-124">
-<p><strong>Утверждение:</strong> Множество центров аффинно-квадратичной
+<p><strong>Утверждение: </strong>Множество центров аффинно-квадратичной
 функции либо <span class="math inline">\(\varnothing\)</span>, либо
 плоскость.</p>
 <p><em>Доказательство:</em></p>
@@ -353,7 +362,7 @@ class="math inline">\(S’ = 0\)</span> и <span class="math inline">\(Q(O’
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-128">
-<p><strong>Определение:</strong> Аффинно-квадратичная функция <span
+<p><strong>Определение: </strong>Аффинно-квадратичная функция <span
 class="math inline">\(Q\)</span> <em>невырождена</em>, если существует
 аффинная система координат <span class="math inline">\((O, e)\)</span>,
 в которой матрица <span class="math inline">\(\tilde{B}\)</span>
@@ -363,11 +372,11 @@ class="math inline">\(Q\)</span> <em>невырождена</em>, если су�
 id="инварианты-аффинно-квадратичной-функции">Инварианты
 аффинно-квадратичной функции</h3>
 <div id="statement-125">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(Q:
-\mathbb{A} \to F\)</span> - аффинно-квадратичная функция, <span
-class="math inline">\(\tilde{B}\)</span> - матрица <span
+<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(Q:
+\mathbb{A} \to F\)</span> – аффинно-квадратичная функция, <span
+class="math inline">\(\tilde{B}\)</span> – матрица <span
 class="math inline">\(Q\)</span>, <span class="math inline">\(B\)</span>
-- матрица <span class="math inline">\(q\)</span>. Тогда следующие
+– матрица <span class="math inline">\(q\)</span>. Тогда следующие
 величины инварианты <span class="math inline">\(Q\)</span>, то есть не
 зависят от системы координат:</p>
 <ol type="1">
@@ -385,8 +394,8 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 id="канонический-вид-аффинно-квадратичной-функции">Канонический вид
 аффинно-квадратичной функции</h2>
 <div id="theorem-29">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(Q:
-\mathbb{A} \to F\)</span> - аффинно-квадратичная функция, не являющаяся
+<p><strong>Теорема: </strong>Пусть <span class="math inline">\(Q:
+\mathbb{A} \to F\)</span> – аффинно-квадратичная функция, не являющаяся
 аффинно-линейной. Тогда существует аффинная система координат, в которой
 <span class="math inline">\(Q\)</span> имеет вид:</p>
 <p><span class="math display">\[Q(a) = \lambda_1 x^2_1 + \ldots +
@@ -403,7 +412,7 @@ class="math inline">\(q\)</span> к диагональному виду, и по
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="движения.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

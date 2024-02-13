@@ -11,7 +11,9 @@
     
     <title>Аннулирующй и минимальный многочлены</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="комплексификация.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="существование-жорданова-базиса-у-линейного-оператора-над-алгебраически-замкнутым-полем.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="комплексификация.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="существование-жорданова-базиса-у-линейного-оператора-над-алгебраически-замкнутым-полем.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -249,7 +258,7 @@
 id="аннулирующй-и-минимальный-многочлены">Аннулирующй и минимальный
 многочлены</h1>
 <div id="definition-37">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> векторное пространство над полем <span
 class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -265,7 +274,7 @@ class="math inline">\(f(\mathcal{A}) = 0\)</span>.</p>
 1\)</span>, т.к. <span class="math inline">\(\mathcal{A} - 1 \mathcal{I}
 = 0\)</span>.</p>
 <div id="definition-38">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> векторное пространство над полем <span
 class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -281,7 +290,7 @@ class="math inline">\(\mu_{\mathcal{A}}(t)\)</span>.</p>
 id="простейшие-свойства-аннулирующего-многочлена">Простейшие свойства
 аннулирующего многочлена</h2>
 <div id="statement-45">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> векторное пространство над полем <span
 class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -335,7 +344,7 @@ f(\lambda)e \Rightarrow 0 = \mu_{\mathcal{A}}(\mathcal{A})(e) =
 нормальная форма</h2>
 <h3 data-number="9.2.1" id="определения">Определения</h3>
 <div id="definition-39">
-<p><strong>Определение:</strong> Квадратная матрица вида <span
+<p><strong>Определение: </strong>Квадратная матрица вида <span
 class="math inline">\(\operatorname{J}_k(\lambda) =
 \left(\begin{array}{ccccc}
 \lambda &amp; 1 &amp; 0 &amp; \dots &amp; 0\\
@@ -350,14 +359,14 @@ class="math inline">\(k\)</span>.</p>
 class="math inline">\(\operatorname{J}_k(\lambda)\)</span>.</p>
 </div>
 <div id="definition-40">
-<p><strong>Определение:</strong> Квадратная матрица размера <span
+<p><strong>Определение: </strong>Квадратная матрица размера <span
 class="math inline">\(n \times n\)</span>, состоящая из жордановых
 клеток на диагонали и нулей на остальных местах – это <em>жорданова
 матрица</em> размера <span class="math inline">\(n \times
 n\)</span>.</p>
 </div>
 <div id="definition-41">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>. Если существует базис, в котором
@@ -369,7 +378,7 @@ class="math inline">\(\mathcal{A}\)</span>.</p>
 <h3 data-number="9.2.2" id="простейшие-свойства">Простейшие
 свойства</h3>
 <div id="statement-46">
-<p><strong>Утверждение:</strong> Пусть матрица линейного оператора <span
+<p><strong>Утверждение: </strong>Пусть матрица линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span> имеет жорданову нормальную
 форму размера <span class="math inline">\(n \times n\)</span> и состоит
 из жордановых клеток <span
@@ -391,8 +400,8 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
 </ol>
 </div>
 <div id="statement-47">
-<p><strong>Утверждение:</strong></p>
 <ol type="1">
+<li><strong>Утверждение: </strong></li>
 <li><span class="math inline">\(\operatorname{J}_{k}(0)^m =
 \begin{cases}
 m,\,\,\,\, m &lt; k\\
@@ -416,7 +425,7 @@ class="math inline">\(3\)</span> очевидно <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-48">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство размерности
 <span class="math inline">\(n\)</span>. Пусть матрица линейного
 оператора <span class="math inline">\(\mathcal{A}\)</span> в некотором
@@ -451,7 +460,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="комплексификация.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

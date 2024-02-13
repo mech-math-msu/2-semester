@@ -11,7 +11,9 @@
     
     <title>Собственные векторы</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -89,7 +91,7 @@
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -101,16 +103,16 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -231,15 +233,22 @@
 
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="еще-про-ядра-и-образы-линейных-отображений.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="комплексификация.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="еще-про-ядра-и-образы-линейных-отображений.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="комплексификация.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,7 +256,7 @@
 
 <h1 data-number="7" id="собственные-векторы">Собственные векторы</h1>
 <div id="definition-30">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -263,7 +272,7 @@ class="math inline">\(\mathcal{A}\)</span>.(вектор <span
 class="math inline">\(v\)</span> <em>отвечает</em> собственному значению
 <span class="math inline">\(\lambda\)</span>).</p>
 <div id="statement-32">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -288,13 +297,13 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 id="характеристическое-уравнение-и-многочлен">Характеристическое
 уравнение и многочлен</h2>
 <div id="definition-31">
-<p><strong>Определение:</strong> <span
+<p><strong>Определение: </strong><span
 class="math inline">\(\mathcal{I}\)</span> – <em>тождественный линейный
 оператор</em>, то есть <span class="math inline">\(\forall v \in V:
 \,\,\,\, \mathcal{I}(v) = v\)</span>.</p>
 </div>
 <div id="definition-32">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -308,7 +317,7 @@ class="math inline">\(V\)</span>, <span class="math inline">\(A\)</span>
 class="math inline">\(\mathcal{A}\)</span>.</p>
 </div>
 <div id="statement-33">
-<p><strong>Утверждение:</strong> (<em>определение корректно</em>)
+<p><strong>Утверждение: </strong>(<em>определение корректно</em>)
 Определение корректно, то есть характеристический многочлен и
 характеристическое уравнение не зависят от выбора базиса.</p>
 <p><em>Доказательство:</em> Пусть <span class="math inline">\(V\)</span>
@@ -326,7 +335,7 @@ class="math inline">\(\tilde{B}\)</span>.</p>
 \to \tilde{B}}| = |A - t E| \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="statement-34">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -359,7 +368,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="7.2" id="собственные-подпространства">Собственные
 подпространства</h2>
 <div id="definition-33">
-<p><strong>Определение:</strong> Пусть <span
+<p><strong>Определение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -371,19 +380,19 @@ class="math inline">\(V_{\lambda}\)</span> – это множество соб�
 class="math inline">\(\lambda\)</span> и нулевой вектор.</p>
 </div>
 <div id="statement-35">
-<p><strong>Утверждение:</strong> <span
+<p><strong>Утверждение: </strong><span
 class="math inline">\(V_{\lambda}\)</span> – подпространство векторного
 пространства <span class="math inline">\(V\)</span>.</p>
 <p><em>Доказательство:</em> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-34">
-<p><strong>Определение:</strong> <span
+<p><strong>Определение: </strong><span
 class="math inline">\(V_{\lambda}\)</span> – <em>собственное
 подпространство</em>.</p>
 </div>
 <div id="statement-36">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
@@ -397,7 +406,7 @@ class="math display">\[V_{\lambda} = \ker (\mathcal{A} - \lambda
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-37">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над полем
 <span class="math inline">\(F\)</span> размерности <span
 class="math inline">\(n\)</span>, <span
@@ -412,7 +421,7 @@ class="math inline">\(\dim V_{\lambda} = \dim \ker (\mathcal{A} -
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-38">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над полем
 <span class="math inline">\(F\)</span> размерности <span
 class="math inline">\(n\)</span>, <span
@@ -425,7 +434,7 @@ class="math inline">\(\chi(t) = |\mathcal{A} - t E|\)</span>. Тогда
 <p><em>Доказательство:</em></p>
 </div>
 <div id="statement-39">
-<p><strong>Утверждение:</strong> Пусть <span
+<p><strong>Утверждение: </strong>Пусть <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>, <span class="math inline">\(\lambda_1,
 \ldots, \lambda_s\)</span> – его различные собственные значения. Тогда
@@ -455,13 +464,13 @@ class="math display">\[\begin{cases}
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-1">
-<p><strong>Следствие:</strong> Сумма собственных подпространств
+<p><strong>Следствие: </strong>Сумма собственных подпространств
 отвечающих различным значениям <span
 class="math inline">\(\lambda\)</span> – прямая.</p>
 <p><em>Доказательство:</em></p>
 </div>
 <div id="corollary-2">
-<p><strong>Следствие:</strong> Пусть <span
+<p><strong>Следствие: </strong>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство над полем
 <span class="math inline">\(F\)</span> размерности <span
 class="math inline">\(n\)</span>, <span
@@ -475,7 +484,7 @@ class="math inline">\(V\)</span> существует базис, состоящ
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-6">
-<p><strong>Теорема:</strong> (<em>критерий диагонализируемости линейного
+<p><strong>Теорема: </strong>(<em>критерий диагонализируемости линейного
 оператора</em>) Пусть <span class="math inline">\(V\)</span> – векторное
 пространство над полем <span class="math inline">\(F\)</span>
 размерности <span class="math inline">\(n\)</span>, <span
@@ -522,7 +531,7 @@ class="math inline">\(V_{\lambda_i} \,\,\,\,\blacksquare\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="еще-про-ядра-и-образы-линейных-отображений.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

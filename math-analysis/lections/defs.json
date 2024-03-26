@@ -1,0 +1,322 @@
+[
+    {
+        "keyword": "первообразная",
+        "html": "<p><a href=\"неопределенный-интеграл.html#definition-0\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> определена на <span\nclass=\"math inline\">\\((a, b)\\)</span>. Пусть <span\nclass=\"math inline\">\\(F(x)\\)</span>, такова что <span\nclass=\"math inline\">\\(F’(x) = f(x) \\,\\,\\,\\, \\forall x \\in (a,\nb)\\)</span>. Тогда <span class=\"math inline\">\\(F(x)\\)</span>\n<em>первообразная</em> <span class=\"math inline\">\\(f(x)\\)</span> на\n<span class=\"math inline\">\\((a, b)\\)</span>.</p>",
+        "url": "неопределенный-интеграл.html#definition-0"
+    },
+    {
+        "keyword": "неопределенный интеграл",
+        "html": "<p><a href=\"неопределенный-интеграл.html#definition-1\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Неопределенный интеграл</em> <span\nclass=\"math inline\">\\(f(x)\\)</span> на <span class=\"math inline\">\\((a,\nb)\\)</span> – это множество всех первообразных <span\nclass=\"math inline\">\\(f(x)\\)</span> на <span class=\"math inline\">\\((a,\nb)\\)</span>. Обозначается <span class=\"math inline\">\\(\\displaystyle \\int\nf(x)dx\\)</span>.</p>",
+        "url": "неопределенный-интеграл.html#definition-1"
+    },
+    {
+        "keyword": "положительное разбиение",
+        "html": "<p><a href=\"определенный-интеграл-римана.html#definition-2\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Положительное разбиение</em> отрезка <span class=\"math inline\">\\([a,\nb]\\)</span> – это множество точек <span class=\"math inline\">\\(\\{x_i\\}_{i\n= 0}^{n}\\)</span>, таких что <span class=\"math inline\">\\(a = x_0 &lt;\nx_1 &lt; \\ldots &lt; x_{n - 1} &lt; x_n = b\\)</span>.</p>\n<p>Обозначается: <span class=\"math inline\">\\(\\mathcal{T}_{[a,\nb]}^{+}\\)</span>.</p>",
+        "url": "определенный-интеграл-римана.html#definition-2"
+    },
+    {
+        "keyword": "отрицательное разбиение",
+        "html": "<p><a href=\"определенный-интеграл-римана.html#definition-3\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Отрицательное разбиение</em> отрезка <span class=\"math inline\">\\([a,\nb]\\)</span> – это множество точек <span class=\"math inline\">\\(\\{x_i\\}_{i\n= 0}^{n}\\)</span>, таких что <span class=\"math inline\">\\(b = x_0 &gt;\nx_1 &gt; \\ldots &gt; x_{n - 1} &gt; x_n = a\\)</span>.</p>\n<p>Обозначается: <span class=\"math inline\">\\(\\mathcal{T}_{[a,\nb]}^{-}\\)</span>.</p>",
+        "url": "определенный-интеграл-римана.html#definition-3"
+    },
+    {
+        "keyword": "отрезок разбиения длина диаметр разбиения",
+        "html": "<p><a href=\"определенный-интеграл-римана.html#definition-4\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть дано разбиение <span class=\"math inline\">\\(\\mathcal{T}_{[a, b]} =\n\\{x_i\\}_{i = 0}^{n}\\)</span> отрезка <span class=\"math inline\">\\([a,\nb]\\)</span>.</p>\n<p><span class=\"math inline\">\\(i\\)</span>-й <em>отрезок разбиения</em>\n<span class=\"math inline\">\\(\\mathcal{T}_{[a, b]}\\)</span> – это <span\nclass=\"math inline\">\\(\\Delta_i = [x_{i - 1}, x_i] \\,\\,\\,\\, \\forall i \\in\n\\{1, \\ldots, n\\}\\)</span>.<br></p>\n<p><em>длина</em> <span class=\"math inline\">\\(\\Delta_i\\)</span> равна\n<span class=\"math inline\">\\(|\\Delta_i| = |x_{i} - x_{i -\n1}|\\)</span>.<br></p>\n<p><em>диаметр разбиения</em> <span\nclass=\"math inline\">\\(d(\\mathcal{T}_{[a, b]})\\)</span> – это <span\nclass=\"math inline\">\\(\\displaystyle \\max_{i \\in \\{1, \\ldots,\nn\\}}{|\\Delta_i|}\\)</span>.</p>",
+        "url": "определенный-интеграл-римана.html#definition-4"
+    },
+    {
+        "keyword": "разметка",
+        "html": "<p><a href=\"определенный-интеграл-римана.html#definition-5\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть дано разбиение <span class=\"math inline\">\\(\\mathcal{T}_{[a, b]} =\n\\{x_i\\}_{i = 0}^{n}\\)</span> отрезка <span class=\"math inline\">\\([a,\nb]\\)</span>.</p>\n<p><em>Разметка</em> <span class=\"math inline\">\\(\\mathcal{T}_{[a,\nb]}\\)</span> – это множество точек <span class=\"math inline\">\\(\\xi =\n\\{\\xi_1, \\xi_2, \\ldots, \\xi_n\\}\\)</span>, таких что <span\nclass=\"math inline\">\\(\\xi_i \\in \\Delta_i\\)</span>. Разбиение с заданной\nразметкой обозначается <span class=\"math inline\">\\(\\mathcal{T}(\\xi)_{[a,\nb]} = \\{\\mathcal{T}, \\xi\\}\\)</span>.</p>",
+        "url": "определенный-интеграл-римана.html#definition-5"
+    },
+    {
+        "keyword": "интегральная сумма",
+        "html": "<p><a href=\"определенный-интеграл-римана.html#definition-6\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Интегральная сумма</em> – это <span\nclass=\"math inline\">\\(\\sigma_{f}(\\mathcal{T}(\\xi)) = \\displaystyle\n\\sum_{i = 1}^{n}f(\\xi_i)\\cdot(x_i - x_{i - 1})\\)</span>.</p>",
+        "url": "определенный-интеграл-римана.html#definition-6"
+    },
+    {
+        "keyword": "интегрируема по риману интеграл",
+        "html": "<p><a href=\"определенный-интеграл-римана.html#definition-7\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> определена на <span\nclass=\"math inline\">\\([a, b]\\)</span>. Если <span\nclass=\"math inline\">\\(\\exists I \\in \\mathbb{R}\\)</span>, такое что</p>\n<p><span class=\"math display\">\\[\\forall \\varepsilon &gt; 0 \\,\\,\\,\\,\n\\exists \\delta &gt; 0: \\,\\,\\,\\, \\forall \\mathcal{T}_{[a, b]}^{+}(\\xi)\n\\left(d(\\mathcal{T}_{[a, b]}^{+}) &lt; \\delta\\right) \\,\\,\\,\\,\n|\\sigma_{f}(\\mathcal{T}(\\xi)) - I| &lt; \\varepsilon,\\]</span> то функция\n<span class=\"math inline\">\\(f(x)\\)</span> <em>интегрируема по\nРиману</em> на отрезке <span class=\"math inline\">\\([a, b]\\)</span>, а\nчисло <span class=\"math inline\">\\(I\\)</span> – <em>интеграл</em> <span\nclass=\"math inline\">\\(f(x)\\)</span> на отрезке <span\nclass=\"math inline\">\\([a, b]\\)</span>. Обозначается <span\nclass=\"math inline\">\\(I = \\displaystyle \\int\\limits_a^b\nf(x)dx\\)</span>.</p>",
+        "url": "определенный-интеграл-римана.html#definition-7"
+    },
+    {
+        "keyword": "интегрируема по риману интеграл",
+        "html": "<p><a href=\"определенный-интеграл-римана.html#definition-8\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> определена на <span\nclass=\"math inline\">\\([a, b]\\)</span>. Если <span\nclass=\"math inline\">\\(\\exists I \\in \\mathbb{R}\\)</span>, такое что</p>\n<p><span class=\"math display\">\\[\\forall \\varepsilon &gt; 0 \\,\\,\\,\\,\n\\exists \\delta &gt; 0: \\,\\,\\,\\, \\forall \\mathcal{T}_{[a, b]}^{-}(\\xi)\n\\left(d(\\mathcal{T}_{[a, b]}^{-}) &lt; \\delta\\right) \\,\\,\\,\\,\n|\\sigma_{f}(\\mathcal{T}(\\xi)) - I| &lt; \\varepsilon,\\]</span> то функция\n<span class=\"math inline\">\\(f(x)\\)</span> <em>интегрируема по\nРиману</em> на отрезке <span class=\"math inline\">\\([a, b]\\)</span>, а\nчисло <span class=\"math inline\">\\(I\\)</span> – <em>интеграл</em> <span\nclass=\"math inline\">\\(f(x)\\)</span> на отрезке <span\nclass=\"math inline\">\\([a, b]\\)</span>. Обозначается <span\nclass=\"math inline\">\\(I = \\displaystyle \\int\\limits_b^a\nf(x)dx\\)</span>.</p>",
+        "url": "определенный-интеграл-римана.html#definition-8"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"определенный-интеграл-римана.html#definition-9\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМножество всех функций интегрируемых по Риману на отрезке <span\nclass=\"math inline\">\\([a, b]\\)</span> обозначается <span\nclass=\"math inline\">\\(\\mathcal{R}[a, b]\\)</span>.</p>",
+        "url": "определенный-интеграл-римана.html#definition-9"
+    },
+    {
+        "keyword": "нижняя сумма дарбу верхняя сумма дарбу",
+        "html": "<p><a href=\"определенный-интеграл-римана.html#definition-10\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<strong>Определение:</strong></p>\n<p>Пусть <span class=\"math inline\">\\(f(x)\\)</span> ограничена на отрезке\n<span class=\"math inline\">\\([a, b]\\)</span>. <span\nclass=\"math inline\">\\(\\mathcal{T}_{[a, b]}^{+}\\)</span> – некоторое\nразбиение отрезка <span class=\"math inline\">\\([a, b]\\)</span>. Пусть\n<span class=\"math inline\">\\(m_i = \\displaystyle \\inf_{x\\in\n\\Delta_i}f(x)\\)</span> (точная нижняя грань <span\nclass=\"math inline\">\\(f(x)\\)</span> на <span\nclass=\"math inline\">\\(i\\)</span>-ом отрезке разбиения <span\nclass=\"math inline\">\\(\\mathcal{T}_{[a, b]}^{+}\\)</span>), <span\nclass=\"math inline\">\\(M_i = \\displaystyle \\sup_{x\\in\n\\Delta_i}f(x)\\)</span>.</p>\n<p><span class=\"math inline\">\\(s(\\mathcal{T}) = \\displaystyle \\sum_{i =\n1}^{n} m_i\\cdot (x_{i} - x_{i - 1})\\)</span> – это <em>нижняя сумма\nДарбу</em> функции <span class=\"math inline\">\\(f(x)\\)</span> по\nразбиению <span class=\"math inline\">\\(\\mathcal{T}_{[a,\nb]}^{+}\\)</span>.</p>\n<p><span class=\"math inline\">\\(S(\\mathcal{T}) = \\displaystyle \\sum_{i =\n1}^{n} M_i\\cdot (x_{i} - x_{i - 1})\\)</span> – это <em>верхняя сумма\nДарбу</em> функции <span class=\"math inline\">\\(f(x)\\)</span> по\nразбиению <span class=\"math inline\">\\(\\mathcal{T}_{[a,\nb]}^{+}\\)</span>.</p>",
+        "url": "определенный-интеграл-римана.html#definition-10"
+    },
+    {
+        "keyword": "верхний интеграл дарбу нижний интеграл дарбу",
+        "html": "<p><a href=\"определенный-интеграл-римана.html#definition-11\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(I^{*} =\n\\displaystyle\\inf_{\\mathcal{T}}S(\\mathcal{T})\\)</span> – <em>верхний\nинтеграл Дарбу</em>.</p>\n<p><span class=\"math inline\">\\(I_{*} =\n\\displaystyle\\sup_{\\mathcal{T}}s(\\mathcal{T})\\)</span> – <em>нижний\nинтеграл Дарбу</em>.</p>\n<p>Замечание: определение верхнего и нижнего интеграла Дарбу корректно,\nтак как выполняется свойство 2.</p>",
+        "url": "определенный-интеграл-римана.html#definition-11"
+    },
+    {
+        "keyword": "имеет лебегову меру",
+        "html": "<p><a href=\"определенный-интеграл-римана.html#definition-12\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМножество <span class=\"math inline\">\\(A \\subset \\mathbb{R}\\)</span>\n<em>имеет лебегову меру</em> <span class=\"math inline\">\\(0\\)</span>,\nесли <span class=\"math inline\">\\(\\forall \\varepsilon \\,\\,\\,\\, \\exists\n\\{(a_i, b_i)\\}_i: \\,\\,\\,\\, A \\subset \\displaystyle\\cup_i (a_i, b_i)\n\\,\\,\\,\\, \\displaystyle\\sup_{N &lt; \\infty}\\displaystyle \\sum_{i =\n1}^{N}|b_i - a_i| &lt; \\varepsilon\\)</span>.</p>",
+        "url": "определенный-интеграл-римана.html#definition-12"
+    },
+    {
+        "keyword": "(непрерывная) кривая первая координата точка точка самопересечения кратность простая простая замкнутая",
+        "html": "<p><a href=\"кривые.html#definition-13\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nНепрерывное отображение <span class=\"math inline\">\\(\\gamma: [a, b] \\to\n\\mathbb{R}^n\\)</span> – это <em>(непрерывная) кривая</em>.</p>\n<p><span class=\"math inline\">\\(t \\in [a, b] \\,\\,\\,\\, \\gamma(t) =\n(x_1(t), \\ldots, x_n(t))\\)</span>, где <span\nclass=\"math inline\">\\(x_1(t)\\)</span> – <em>первая координата</em>…</p>\n<p><span class=\"math inline\">\\(\\forall t \\in [a, b] \\,\\,\\,\\, M =\n\\gamma(t)\\)</span> – <em>точка</em> кривой <span\nclass=\"math inline\">\\(\\gamma\\)</span>.</p>\n<p>Если <span class=\"math inline\">\\(\\exists t_1 \\ne t_2 (t_1, t_2 \\in\n[a, b]): \\,\\,\\,\\, M = \\gamma(t_1) = \\gamma(t_2)\\)</span>, то <span\nclass=\"math inline\">\\(M\\)</span> <em>точка самопересечения</em> кривой\n<span class=\"math inline\">\\(\\gamma\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\operatorname{card}\\{t: \\,\\,\\,\\, M =\n\\gamma(t), \\,\\,\\,\\, t \\in [a, b]\\}\\)</span> – <em>кратность</em> точки\n<span class=\"math inline\">\\(M\\)</span>.</p>\n<p>Если точек самопересечения нет, то кривая <span\nclass=\"math inline\">\\(\\gamma\\)</span> – <em>простая</em>.</p>\n<p>Если существует единственная точка самопересечения и ее кратность\nравна <span class=\"math inline\">\\(2\\)</span>, то кривая <span\nclass=\"math inline\">\\(\\gamma\\)</span> – <em>простая замкнутая</em>.</p>",
+        "url": "кривые.html#definition-13"
+    },
+    {
+        "keyword": "длина ломаной",
+        "html": "<p><a href=\"кривые.html#definition-14\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{T} = \\{t_i\\}_{i =\n0}^k\\)</span> разбиение <span class=\"math inline\">\\([a, b]\\)</span>,\n<span class=\"math inline\">\\(\\gamma\\)</span> – кривая.</p>\n<p><span class=\"math inline\">\\(|l_{\\gamma}(\\mathcal{T})| = \\displaystyle\n\\sum_{i = 1}^{k}|\\gamma(t_i) - \\gamma(t_{i - 1})|\\)</span> – <em>длина\nломаной</em>, отвечающей разметке <span\nclass=\"math inline\">\\(\\mathcal{T}\\)</span>.</p>",
+        "url": "кривые.html#definition-14"
+    },
+    {
+        "keyword": "спрямляемая длина кривой",
+        "html": "<p><a href=\"кривые.html#definition-15\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\gamma\\)</span> – кривая. Если\nмножество <span\nclass=\"math inline\">\\(\\{|l_{\\gamma}(\\mathcal{T})|\\}_{\\mathcal{T}}\\)</span>\nограничено сверху, то <span class=\"math inline\">\\(\\gamma\\)</span>\n<em>спрямляемая</em> и <span class=\"math inline\">\\(\\sup\n\\{|l_{\\gamma}(\\mathcal{T})|\\}_{\\mathcal{T}} = |\\gamma|\\)</span> –\n<em>длина кривой</em> <span class=\"math inline\">\\(\\gamma\\)</span>.</p>",
+        "url": "кривые.html#definition-15"
+    },
+    {
+        "keyword": "плоская фигура точка окрестность",
+        "html": "<p><a href=\"фигуры-и-площади.html#definition-16\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(A \\subset \\mathbb{R}^2\\)</span> –\n<em>плоская фигура</em>.</p>\n<p><span class=\"math inline\">\\((x, y) \\in A\\)</span> – <em>точка</em>\nфигуры.</p>\n<p><span class=\"math inline\">\\(B_{\\varepsilon}(x_0, y_0) = \\{(x, y) \\in\nA: \\,\\,\\,\\, (x - x_0)^2 + (y - y_0)^2 &lt; \\varepsilon^2\\}\\)</span> -\n<span class=\"math inline\">\\(\\varepsilon\\)</span>-<em>окрестность</em>\nточки <span class=\"math inline\">\\((x_0, y_0) \\in A\\)</span>.</p>",
+        "url": "фигуры-и-площади.html#definition-16"
+    },
+    {
+        "keyword": "площадь",
+        "html": "<p><a href=\"фигуры-и-площади.html#definition-17\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\{A_{\\alpha}\\}_{\\alpha}\\)</span> –\nмножество плоских фигур.</p>\n<p>Отображение <span class=\"math inline\">\\(\\mu: \\,\\,\\,\\,\n\\{A_{\\alpha}\\}_{\\alpha} \\to \\mathbb{R}\\)</span> – <em>площадь</em>\nфигуры, если:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(\\forall A \\,\\,\\,\\, \\mu(A_{\\alpha}) \\ge\n0\\)</span>.</li>\n<li><span class=\"math inline\">\\(\\forall A_1, A_2: \\,\\,\\,\\, A_1 \\cap A_2\n= \\varnothing \\,\\,\\,\\, \\mu(A_1) + \\mu(A_2) = \\mu(A_1 \\cup\nA_2)\\)</span>.</li>\n<li><span class=\"math inline\">\\(\\forall A_1, A_2: \\,\\,\\,\\, A_1 \\subset\nA_2 \\,\\,\\,\\, \\mu(A_1) \\le \\mu(A_2)\\)</span>.</li>\n<li>Площадь фигур, которые можно совместить движением, одинакова.</li>\n<li>Площадь прямоугольника со сторонами <span class=\"math inline\">\\(a\n\\ge 0\\)</span> и <span class=\"math inline\">\\(b \\ge 0\\)</span> равна\n<span class=\"math inline\">\\(a\\cdot b\\)</span>.</li>\n</ol>",
+        "url": "фигуры-и-площади.html#definition-17"
+    },
+    {
+        "keyword": "многоугольная фигура",
+        "html": "<p><a href=\"фигуры-и-площади.html#definition-18\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПлоская фигура, состоящая из непересекающихся треугольников –\n<em>многоугольная фигура</em>. Пустое множество является многоугольной\nфигурой по определению.</p>",
+        "url": "фигуры-и-площади.html#definition-18"
+    },
+    {
+        "keyword": "описанная вписанная",
+        "html": "<p><a href=\"фигуры-и-площади.html#definition-19\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(A \\subset \\mathbb{R}^2\\)</span> –\nплоская фигура.</p>\n<p>Любое замкнутое множество <span class=\"math inline\">\\(P\\)</span>,\nтакое что <span class=\"math inline\">\\(A \\subset P\\)</span> –\n<em>описанная</em> около <span class=\"math inline\">\\(A\\)</span>\nфигура.</p>\n<p>Любое открытое множество <span class=\"math inline\">\\(Q\\)</span>,\nтакое что <span class=\"math inline\">\\(Q \\subset A\\)</span> –\n<em>вписанная</em> в <span class=\"math inline\">\\(A\\)</span> фигура.</p>",
+        "url": "фигуры-и-площади.html#definition-19"
+    },
+    {
+        "keyword": "верхняя площадь нижняя площадь квадрируема",
+        "html": "<p><a href=\"фигуры-и-площади.html#definition-20\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(A\\)</span> – ограниченная плоская\nфигура, <span class=\"math inline\">\\(\\{P\\}\\)</span> – множество всех\nописанных около нее фигур, <span class=\"math inline\">\\(\\{Q\\}\\)</span> –\nмножество всех вписанных в нее фигур.</p>\n<p><span class=\"math inline\">\\(\\mu^{*}(A) =\n\\displaystyle\\inf_{P}\\mu(P)\\)</span> – <em>верхняя площадь</em> фигуры\n<span class=\"math inline\">\\(A\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\mu_{*}(A) =\n\\displaystyle\\sup_{Q}\\mu(Q)\\)</span> – <em>нижняя площадь</em> фигуры\n<span class=\"math inline\">\\(A\\)</span>.</p>\n<p>Если <span class=\"math inline\">\\(\\mu(A) = \\mu^{*}(A) =\n\\mu_{*}(A)\\)</span>, то <span class=\"math inline\">\\(A\\)</span> –\n<em>квадрируема</em> (имеет площадь по-русски).</p>",
+        "url": "фигуры-и-площади.html#definition-20"
+    },
+    {
+        "keyword": "несобственный интеграл i рода сходящийся расходящийся",
+        "html": "<p><a href=\"несобственные-интегралы.html#definition-21\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть функция <span class=\"math inline\">\\(f(t)\\)</span> определена на\nполуинтервале <span class=\"math inline\">\\([a, b)\\)</span> и <span\nclass=\"math inline\">\\(f(t) \\in R[a, x]\\,\\,\\,\\, \\forall x \\in [a,\nb)\\)</span>. <span class=\"math inline\">\\(\\displaystyle\\lim_{x \\to\nb-0}\\displaystyle\\int\\limits_a^x f(t)dt\\)</span> – <em>несобственный\nинтеграл I рода</em> функции <span class=\"math inline\">\\(f(t)\\)</span>\nна <span class=\"math inline\">\\([a, b)\\)</span>.</p>\n<p>Если <span class=\"math inline\">\\(\\displaystyle\\lim_{x \\to\nb-0}\\displaystyle\\int\\limits_a^x f(t)dt\\)</span> существует, то\nнесобственный интеграл I рода – <em>сходящийся</em>.</p>\n<p>Если <span class=\"math inline\">\\(\\displaystyle\\lim_{x \\to\nb-0}\\displaystyle\\int\\limits_a^x f(t)dt\\)</span> не существует, то\nнесобственный интеграл I рода – <em>расходящийся</em>.</p>\n<p>Обозначается: <span\nclass=\"math inline\">\\(\\displaystyle\\int\\limits_a^b f(t)dt\\)</span>.</p>",
+        "url": "несобственные-интегралы.html#definition-21"
+    },
+    {
+        "keyword": "несобственный интеграл ii рода сходящийся расходящийся",
+        "html": "<p><a href=\"несобственные-интегралы.html#definition-22\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть функция <span class=\"math inline\">\\(f(t)\\)</span> определена на\n<span class=\"math inline\">\\([a, +\\infty)\\)</span> и <span\nclass=\"math inline\">\\(f(t) \\in R[a, x]\\,\\,\\,\\, \\forall x \\in [a,\n+\\infty)\\)</span>. <span class=\"math inline\">\\(\\displaystyle\\lim_{x \\to\n+\\infty}\\displaystyle\\int\\limits_a^x f(t)dt\\)</span> – <em>несобственный\nинтеграл II рода</em> функции <span class=\"math inline\">\\(f(t)\\)</span>\nна <span class=\"math inline\">\\([a, +\\infty)\\)</span>.</p>\n<p>Если <span class=\"math inline\">\\(\\displaystyle\\lim_{x \\to\n+\\infty}\\displaystyle\\int\\limits_a^x f(t)dt\\)</span> существует, то\nнесобственный интеграл II рода – <em>сходящийся</em>.</p>\n<p>Если <span class=\"math inline\">\\(\\displaystyle\\lim_{x \\to\n+\\infty}\\displaystyle\\int\\limits_a^x f(t)dt\\)</span> не существует, то\nнесобственный интеграл II рода – <em>расходящийся</em>.</p>\n<p>Обозначается: <span\nclass=\"math inline\">\\(\\displaystyle\\int\\limits_a^{+\\infty}\nf(t)dt\\)</span>.</p>",
+        "url": "несобственные-интегралы.html#definition-22"
+    },
+    {
+        "keyword": "абсолютно сходящийся условно сходящийся",
+        "html": "<p><a href=\"несобственные-интегралы.html#definition-23\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли <span class=\"math inline\">\\(\\exists \\displaystyle\\int\\limits_a^w\n|f(x)|dx\\)</span>, то <span\nclass=\"math inline\">\\(\\displaystyle\\int\\limits_a^w f(x)dx\\)</span> –\n<em>абсолютно сходящийся</em>.</p>\n<p>Если <span class=\"math inline\">\\(\\exists \\displaystyle\\int\\limits_a^w\nf(x)dx\\)</span> и <span class=\"math inline\">\\(\\not\\exists\n\\displaystyle\\int\\limits_a^w |f(x)|dx\\)</span>, то <span\nclass=\"math inline\">\\(\\displaystyle\\int\\limits_a^w f(x)dx\\)</span> –\n<em>условно сходящийся</em>.</p>",
+        "url": "несобственные-интегралы.html#definition-23"
+    },
+    {
+        "keyword": "главное значение интеграла в смысле коши",
+        "html": "<p><a href=\"несобственные-интегралы.html#definition-24\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> определена на <span\nclass=\"math inline\">\\([a, b]\\)</span> и не ограничена в точке <span\nclass=\"math inline\">\\(c \\in (a, b)\\)</span>. Если <span\nclass=\"math inline\">\\(\\exists \\displaystyle\\lim_{\\varepsilon \\to\n0+0}\\left(\\displaystyle\\int\\limits_a^{c - \\varepsilon} f(x)dx +\n\\displaystyle\\int\\limits_{c + \\varepsilon}^b f(x)dx \\right)\\)</span>, то\nон обозначается <span\nclass=\"math inline\">\\(v.p.\\displaystyle\\int\\limits_a^b f(x)dx\\)</span> и\nназывается <em>главное значение интеграла</em> <span\nclass=\"math inline\">\\(\\displaystyle\\int\\limits_a^b f(x)dx\\)</span> <em>в\nсмысле Коши</em>.</p>",
+        "url": "несобственные-интегралы.html#definition-24"
+    },
+    {
+        "keyword": "главное значение интеграла в смысле коши",
+        "html": "<p><a href=\"несобственные-интегралы.html#definition-25\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> определена на <span\nclass=\"math inline\">\\(\\mathbb{R}\\)</span> и не ограничена. Если <span\nclass=\"math inline\">\\(\\exists \\displaystyle\\lim_{a \\to\n+\\infty}\\displaystyle\\int\\limits_{-a}^{a} f(x)dx\\)</span>, то он\nобозначается <span\nclass=\"math inline\">\\(v.p.\\displaystyle\\int\\limits_{-\\infty}^{+\\infty}\nf(x)dx\\)</span> и называется <em>главное значение интеграла</em> <span\nclass=\"math inline\">\\(\\displaystyle\\int\\limits_{-\\infty}^{+\\infty}\nf(x)dx\\)</span> <em>в смысле Коши</em>.</p>",
+        "url": "несобственные-интегралы.html#definition-25"
+    },
+    {
+        "keyword": "вариация функции на разбиении",
+        "html": "<p><a href=\"функции-ограниченной-вариации.html#definition-26\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{T} = \\{x_i\\}_{i =\n0}^n\\)</span> разбиение отрезка <span class=\"math inline\">\\([a,\nb]\\)</span>. <span class=\"math inline\">\\(f(x)\\)</span> определена на\n<span class=\"math inline\">\\([a, b]\\)</span>.</p>\n<p>Величина <span class=\"math inline\">\\(\\operatorname{V}(f, \\mathcal{T})\n= \\displaystyle \\sum_{i = 1}^{n}|f(x_i) - f(x_{i - 1})|\\)</span> –\n<em>вариация функции</em> <span class=\"math inline\">\\(f(x)\\)</span>\n<em>на разбиении</em> <span\nclass=\"math inline\">\\(\\mathcal{T}\\)</span>.</p>",
+        "url": "функции-ограниченной-вариации.html#definition-26"
+    },
+    {
+        "keyword": "функция ограниченной вариации (полная) вариация функции",
+        "html": "<p><a href=\"функции-ограниченной-вариации.html#definition-27\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> определена на <span\nclass=\"math inline\">\\([a, b]\\)</span>.</p>\n<p>Если множество вариаций функции <span\nclass=\"math inline\">\\(f(x)\\)</span> по всем разбиениям ограничено, то\n<span class=\"math inline\">\\(f(x)\\)</span> – <em>функция ограниченной\nвариации</em>.</p>\n<p>Величина <span class=\"math inline\">\\(\\operatorname{V}_a^b f(x) =\n\\displaystyle\\sup_{\\mathcal{T}_{[a,b]}}\\operatorname{V}(f,\n\\mathcal{T}_{[a,b]})\\)</span> – <em>(полная) вариация функции</em> <span\nclass=\"math inline\">\\(f(x)\\)</span> на <span class=\"math inline\">\\([a,\nb]\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\operatorname{V}[a, b]\\)</span> –\nмножество всех функций ограниченной вариации на <span\nclass=\"math inline\">\\([a, b]\\)</span>.</p>",
+        "url": "функции-ограниченной-вариации.html#definition-27"
+    },
+    {
+        "keyword": "интегральная сумма стилтьеса",
+        "html": "<p><a href=\"интеграл-римана-стилтьеса.html#definition-28\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> и <span\nclass=\"math inline\">\\(g(x)\\)</span> определена на <span\nclass=\"math inline\">\\([a, b]\\)</span>. Для <span\nclass=\"math inline\">\\(\\mathcal{T}_{[a, b]}(\\xi)\\)</span> сумма:</p>\n<p><span class=\"math display\">\\[\\sigma_f(g, \\mathcal{T}(\\xi)) =\n\\displaystyle \\sum_{i  = 1}^{n}f(\\xi_i)(g(x_i) - g(x_{i - 1}))\\]</span>\n<em>интегральная сумма Стилтьеса</em> для <span\nclass=\"math inline\">\\(f(x)\\)</span> по <span\nclass=\"math inline\">\\(g(x)\\)</span> на <span class=\"math inline\">\\([a,\nb]\\)</span>.</p>",
+        "url": "интеграл-римана-стилтьеса.html#definition-28"
+    },
+    {
+        "keyword": "интегрируема по",
+        "html": "<p><a href=\"интеграл-римана-стилтьеса.html#definition-29\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли <span class=\"math inline\">\\(\\forall \\varepsilon &gt; 0 \\,\\,\\,\\,\n\\exists \\delta &gt; 0: \\,\\,\\,\\, \\forall \\mathcal{T}(\\xi)\n(d(\\mathcal{T}(\\xi)) &lt; \\delta)\\)</span></p>\n<p><span class=\"math inline\">\\(|\\sigma_f(g, \\mathcal{T}(\\xi)) - I| &lt;\n\\varepsilon\\)</span>, то <span class=\"math inline\">\\(f(x)\\)</span>\n<em>интегрируема по</em> <span class=\"math inline\">\\(g(x)\\)</span> на\n<span class=\"math inline\">\\([a, b]\\)</span>.</p>\n<p>Обозначается: <span\nclass=\"math inline\">\\(\\displaystyle\\int\\limits_a^b\nf(x)dg(x)\\)</span></p>",
+        "url": "интеграл-римана-стилтьеса.html#definition-29"
+    },
+    {
+        "keyword": "липшицева",
+        "html": "<p><a href=\"интеграл-римана-стилтьеса.html#definition-30\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> определена на <span\nclass=\"math inline\">\\([a, b]\\)</span>. Если <span\nclass=\"math inline\">\\(\\exists M &gt; 0\\)</span>, такое что <span\nclass=\"math inline\">\\(\\forall x, y \\in [a, b] \\,\\,\\,\\, |f(x) - f(y)|\n&lt; M \\cdot |x - y|\\)</span>, то <span\nclass=\"math inline\">\\(f(x)\\)</span> – <em>липшицева</em> функция.</p>\n<p>Множество всех липшицевых функций на отрезке <span\nclass=\"math inline\">\\([a, b]\\)</span> обозначается: <span\nclass=\"math inline\">\\(\\operatorname{Lip}[a, b]\\)</span>.</p>",
+        "url": "интеграл-римана-стилтьеса.html#definition-30"
+    },
+    {
+        "keyword": "гёльдерова",
+        "html": "<p><a href=\"интеграл-римана-стилтьеса.html#definition-31\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> определена на <span\nclass=\"math inline\">\\([a, b]\\)</span>. Если <span\nclass=\"math inline\">\\(\\exists M &gt; 0\\)</span> и <span\nclass=\"math inline\">\\(\\exists \\alpha \\in (0, 1)\\)</span>, такие что\n<span class=\"math inline\">\\(\\forall x, y \\in [a, b] \\,\\,\\,\\, |f(x) -\nf(y)| &lt; M \\cdot |x - y|^{\\alpha}\\)</span>, то <span\nclass=\"math inline\">\\(f(x)\\)</span> – <em>гёльдерова</em> функция.</p>\n<p>Множество всех гёльдеровых функций на отрезке <span\nclass=\"math inline\">\\([a, b]\\)</span> с заданной <span\nclass=\"math inline\">\\(\\alpha\\)</span> обозначается: <span\nclass=\"math inline\">\\(\\operatorname{Gel}^{\\alpha}[a, b]\\)</span>.</p>",
+        "url": "интеграл-римана-стилтьеса.html#definition-31"
+    },
+    {
+        "keyword": "норма",
+        "html": "<p><a href=\"норма,-метрика.html#definition-32\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nФункция <span class=\"math inline\">\\(f: \\mathbb{R}^n \\to\n\\mathbb{R}\\)</span> – <em>норма</em>, если:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(\\forall x \\in \\mathbb{R}^n \\,\\,\\,\\, f(x)\n\\ge 0\\)</span></li>\n<li><span class=\"math inline\">\\(f(x) = 0 \\Leftrightarrow x =\n0\\)</span></li>\n<li><span class=\"math inline\">\\(\\forall x \\in \\mathbb{R}^n, \\,\\,\\,\\,\n\\lambda \\in \\mathbb{R} \\,\\,\\,\\, |\\lambda|\\cdot f(x) = f(\\lambda\nx)\\)</span></li>\n<li><span class=\"math inline\">\\(\\forall x, y \\in \\mathbb{R}^n \\,\\,\\,\\,\nf(x + y) \\le f(x) + f(y)\\)</span></li>\n</ol>\n<p><span class=\"math inline\">\\(f(x)\\)</span> обозначается <span\nclass=\"math inline\">\\(||x||\\)</span></p>\n<p>Скалярное произведение на <span\nclass=\"math inline\">\\(\\mathbb{R}^n\\)</span> – это попарное произведение\nкоординат векторов (точек). (нет)</p>\n<p>Скалярное произведение векторов (точек) <span class=\"math inline\">\\(x\n\\in \\mathbb{R}^n\\)</span> и <span class=\"math inline\">\\(y \\in\n\\mathbb{R}^n\\)</span> обозначается <span class=\"math inline\">\\((x,\ny)\\)</span>.</p>",
+        "url": "норма,-метрика.html#definition-32"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"норма,-метрика.html#definition-33\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nНорма на <span class=\"math inline\">\\(\\mathbb{R}^n\\)</span> задается так:\n<span class=\"math inline\">\\(||x|| = \\sqrt{(x, x)}\\)</span>.</p>\n<p><strong>Замечание:</strong> Норм много, и это не единственный способ\nзадать норму.</p>",
+        "url": "норма,-метрика.html#definition-33"
+    },
+    {
+        "keyword": "метрика (функция расстояния)",
+        "html": "<p><a href=\"норма,-метрика.html#definition-34\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nФункция <span class=\"math inline\">\\(\\rho: \\mathbb{R}^n \\times\n\\mathbb{R}^n \\to \\mathbb{R}\\)</span> – <em>метрика (функция\nрасстояния)</em>, если:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(\\forall x, y \\in \\mathbb{R}^n \\,\\,\\,\\,\n\\rho(x, y) \\ge 0\\)</span></li>\n<li><span class=\"math inline\">\\(\\rho(x, y) = 0 \\Leftrightarrow x =\ny\\)</span></li>\n<li><span class=\"math inline\">\\(\\forall x, y \\in \\mathbb{R}^n \\,\\,\\,\\,\n\\rho(x, y) = \\rho(y, x)\\)</span></li>\n<li><span class=\"math inline\">\\(\\forall x, y, z \\in \\mathbb{R}^n\n\\,\\,\\,\\, \\rho(x, y) \\le \\rho(x, z) + \\rho(y, z)\\)</span></li>\n</ol>\n<p>На <span class=\"math inline\">\\(\\mathbb{R}^n\\)</span> зададим функцию\nрасстояния так: <span class=\"math inline\">\\(\\rho(x, y) = ||x -\ny||\\)</span>.</p>\n<p><strong>Замечание:</strong> Если хотите строгости, то посмотрите\nлинал и топологию.</p>",
+        "url": "норма,-метрика.html#definition-34"
+    },
+    {
+        "keyword": "сходящаяся (имеет предел)",
+        "html": "<p><a href=\"норма,-метрика.html#definition-35\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПоследовательность <span class=\"math inline\">\\(\\{x\\}_{k =\n1}^{\\infty}\\)</span> – <em>сходящаяся (имеет предел)</em> равный <span\nclass=\"math inline\">\\(a \\in \\mathbb{R}^n\\)</span>, если <span\nclass=\"math inline\">\\(\\forall \\varepsilon &gt; 0 \\,\\,\\,\\, \\exists K \\in\nN: \\,\\,\\,\\, \\forall k &gt; K \\,\\,\\,\\, \\rho(x_k, a) &lt;\n\\varepsilon\\)</span>.</p>",
+        "url": "норма,-метрика.html#definition-35"
+    },
+    {
+        "keyword": "ограничено",
+        "html": "<p><a href=\"норма,-метрика.html#definition-36\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМножество <span class=\"math inline\">\\(A \\subset \\mathbb{R}^n\\)</span> –\n<em>ограничено</em>, если содержится в некотором открытом шаре.</p>",
+        "url": "норма,-метрика.html#definition-36"
+    },
+    {
+        "keyword": "параллелепипед",
+        "html": "<p><a href=\"норма,-метрика.html#definition-37\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМножество <span class=\"math inline\">\\(\\Pi_{[a, b]} = \\{x \\in\n\\mathbb{R}^n: \\,\\,\\,\\, a_i \\le x_i \\le b_i\\}\\)</span> –\n<em>параллелепипед</em>.</p>",
+        "url": "норма,-метрика.html#definition-37"
+    },
+    {
+        "keyword": "расстояние между множествами",
+        "html": "<p><a href=\"норма,-метрика.html#definition-38\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(A, B \\subset \\mathbb{R}^n\\)</span>.\nТогда <span class=\"math inline\">\\(\\rho(A, B) = \\displaystyle\\inf_{a \\in\nA, b \\in B}\\rho(a, b)\\)</span> – <em>расстояние между множествами</em>\n<span class=\"math inline\">\\(A\\)</span> и <span\nclass=\"math inline\">\\(B\\)</span>.</p>",
+        "url": "норма,-метрика.html#definition-38"
+    },
+    {
+        "keyword": "компакт",
+        "html": "<p><a href=\"норма,-метрика.html#definition-39\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(A \\subset \\mathbb{R}^n\\)</span> –\n<em>компакт</em>, если из любого откытого покрытия <span\nclass=\"math inline\">\\(A\\)</span> можно выделить конечное\nподпокрытие.</p>",
+        "url": "норма,-метрика.html#definition-39"
+    },
+    {
+        "keyword": "секвенциальный компакт",
+        "html": "<p><a href=\"норма,-метрика.html#definition-40\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(A \\subset \\mathbb{R}^n\\)</span> –\n<em>секвенциальный компакт</em>, если у любой последовательности из\n<span class=\"math inline\">\\(A\\)</span> существует сходящаяся\nподпоследовательность.</p>",
+        "url": "норма,-метрика.html#definition-40"
+    },
+    {
+        "keyword": "линейно связно",
+        "html": "<p><a href=\"норма,-метрика.html#definition-41\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(A \\subset \\mathbb{R}^n\\)</span> –\n<em>линейно связно</em>, если любые две точки из <span\nclass=\"math inline\">\\(A\\)</span> можно соединить непрерывной кривой.</p>",
+        "url": "норма,-метрика.html#definition-41"
+    },
+    {
+        "keyword": "область",
+        "html": "<p><a href=\"норма,-метрика.html#definition-42\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли <span class=\"math inline\">\\(A \\subset \\mathbb{R}^n\\)</span> –\nоткрыто и линейно связно, то <span class=\"math inline\">\\(A\\)</span> –\n<em>область</em>.</p>",
+        "url": "норма,-метрика.html#definition-42"
+    },
+    {
+        "keyword": "замкнутая область",
+        "html": "<p><a href=\"норма,-метрика.html#definition-43\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЗамыкание области – <em>замкнутая область</em>.</p>",
+        "url": "норма,-метрика.html#definition-43"
+    },
+    {
+        "keyword": "выпуклое",
+        "html": "<p><a href=\"норма,-метрика.html#definition-44\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли любые две точки множества <span class=\"math inline\">\\(A \\subset\n\\mathbb{R}^n\\)</span> можно соединить отрезком, содержащащимся в <span\nclass=\"math inline\">\\(A\\)</span>, то <span\nclass=\"math inline\">\\(A\\)</span> – <em>выпуклое</em>.</p>",
+        "url": "норма,-метрика.html#definition-44"
+    },
+    {
+        "keyword": "линия уровня",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-45\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f\\)</span> – функция в <span\nclass=\"math inline\">\\(\\mathbb{R}^n\\)</span>. Множество <span\nclass=\"math inline\">\\(A = \\{x \\in \\mathbb{R}^n: \\,\\,\\,\\, f(x) =\nc\\}\\)</span> – <em>линия уровня</em> (для константы <span\nclass=\"math inline\">\\(c\\)</span>).</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-45"
+    },
+    {
+        "keyword": "предел функции",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-46\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли <span class=\"math inline\">\\(x_0 \\in D_f’\\)</span> (множество\nпредельных точек области определения) и <span\nclass=\"math inline\">\\(\\exists a \\in \\mathbb{R}: \\,\\,\\,\\, \\forall\n\\varepsilon &gt; 0 \\,\\,\\,\\, \\exists \\delta &gt; 0: \\,\\,\\,\\, \\forall x\n\\in \\mathring{O}_{\\delta}(x_0) \\cap D_f \\,\\,\\,\\, |f(x) - a| &lt;\n\\varepsilon\\)</span>, то <span class=\"math inline\">\\(a\\)</span> –\n<em>предел функции</em> <span class=\"math inline\">\\(f(x)\\)</span> в\nточке <span class=\"math inline\">\\(x_0\\)</span>.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-46"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-47\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nСформулируйте определение по Гейне для функции многих переменных.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-47"
+    },
+    {
+        "keyword": "предел функции вдоль кривой",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-48\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли <span class=\"math inline\">\\(x_0 \\in D_f’\\)</span> (множество\nпредельных точек области определения), <span\nclass=\"math inline\">\\(\\gamma(t)\\)</span> – непрерывная кривая, <span\nclass=\"math inline\">\\(\\gamma(t_0) = x_0\\)</span>, если <span\nclass=\"math inline\">\\(\\exists a \\in \\mathbb{R}: \\,\\,\\,\\, \\forall\n\\varepsilon &gt; 0 \\,\\,\\,\\, \\exists \\delta &gt; 0: \\,\\,\\,\\, \\forall t\n\\in (t_0 - \\delta, t_0) \\cup (t_0, t_0 + \\delta) \\,\\,\\,\\, |f(x) - a|\n&lt; \\varepsilon\\)</span>, то <span class=\"math inline\">\\(a\\)</span> –\n<em>предел функции</em> <span class=\"math inline\">\\(f(x)\\)</span>\n<em>вдоль кривой</em> <span class=\"math inline\">\\(\\gamma\\)</span> в\nточке <span class=\"math inline\">\\(x_0\\)</span>.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-48"
+    },
+    {
+        "keyword": "непрерывна",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-49\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли <span class=\"math inline\">\\(x_0 \\in D_f’\\)</span> (множество\nпредельных точек области определения). Если существует <span\nclass=\"math inline\">\\(\\displaystyle \\lim_{x\\to x_0}f(x) = x_0\\)</span>,\nто функция <span class=\"math inline\">\\(f(x)\\)</span> <em>непрерывна</em>\nв точке <span class=\"math inline\">\\(x_0\\)</span>.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-49"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-50\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМножество всех непрерывных на <span class=\"math inline\">\\(A \\subset\n\\mathbb{R}^n\\)</span> функций обозначается <span\nclass=\"math inline\">\\(C(A)\\)</span>.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-50"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-51\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nКак было так и осталось.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-51"
+    },
+    {
+        "keyword": "частная производная",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-52\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> определена в <span\nclass=\"math inline\">\\(O(x_0)\\)</span>. Если <span\nclass=\"math inline\">\\(\\exists \\displaystyle \\lim_{\\Delta x_i\\to\nx_0}\\frac{f(x_{01}, \\ldots, x_{0i} + \\Delta x_i, \\ldots, x_n) -\nf(x_0)}{\\Delta x_i} := f’_{x_i} := \\frac{\\partial f}{\\partial x_i}_{|_{x\n= x_0}}\\)</span>, то <span class=\"math inline\">\\(f’_{x_i}\\)</span> –\n<em>частная производная</em> <span class=\"math inline\">\\(f(x)\\)</span>\nпо переменной <span class=\"math inline\">\\(x_i\\)</span>.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-52"
+    },
+    {
+        "keyword": "дифференцируема дифференциал",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-53\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> определена в <span\nclass=\"math inline\">\\(O(x_0)\\)</span>. Если <span\nclass=\"math inline\">\\(\\exists \\{A_i\\}_{i = 1}^n: \\,\\,\\,\\,\\)</span><span\nclass=\"math display\">\\[f(x) - f(x_0) = \\displaystyle \\sum_{i =\n1}^{n}A_i(x_i - x_{0i}) + \\overline{\\overline{o}}(\\rho(x, x_0)),\n\\,\\,\\,\\, x \\to x_0,\\]</span>то <span class=\"math inline\">\\(f(x)\\)</span>\n<em>дифференцируема</em> в точке <span\nclass=\"math inline\">\\(x_0\\)</span> и <em>дифференциал</em> <span\nclass=\"math inline\">\\(df_{|_{x_0}} = \\sum_{i = 1}^{n}A_i(x_i -\nx_{0i})\\)</span>.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-53"
+    },
+    {
+        "keyword": "производная в направлении",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-54\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x)\\)</span> дифференцируема в точке\n<span class=\"math inline\">\\(x_0\\)</span>. Пусть <span\nclass=\"math inline\">\\(l = (\\cos \\alpha_1, \\cos \\alpha_2, \\ldots, \\cos\n\\alpha_n)\\)</span> и <span class=\"math inline\">\\(||l|| = 1\\)</span>.</p>\n<p><span class=\"math display\">\\[\\frac{\\partial f}{\\partial l}_{|_{x_0}}\n= \\displaystyle \\sum_{i = 1}^{n}\\cos \\alpha_i \\cdot \\frac{\\partial\nf}{\\partial x_i}\\]</span> – <em>производная</em> <span\nclass=\"math inline\">\\(f\\)</span> <em>в направлении</em> <span\nclass=\"math inline\">\\(l\\)</span>.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-54"
+    },
+    {
+        "keyword": "градиент функции",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-55\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nВектор (на самом деле ковектор, т.к. вектор из сопряженного\nпространства) <span class=\"math display\">\\[\\left(\\frac{\\partial\nf}{\\partial x_1}, \\ldots, \\frac{\\partial f}{\\partial\nx_n}\\right)\\]</span> – <em>градиент функции</em> <span\nclass=\"math inline\">\\(f\\)</span>. Обозначается: <span\nclass=\"math inline\">\\(\\operatorname{grad} f\\)</span> или <span\nclass=\"math inline\">\\(\\nabla f\\)</span>.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-55"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-56\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли <span class=\"math inline\">\\(f\\)</span> и все частные производные до\n<span class=\"math inline\">\\(k - 1\\)</span> порядка дифференцируемы в\nокрестности точки <span class=\"math inline\">\\(x_0\\)</span> и все <span\nclass=\"math inline\">\\(k\\)</span> производные непрерывны в точке <span\nclass=\"math inline\">\\(x_0\\)</span>, то <span class=\"math inline\">\\(f \\in\nC^k(x_0)\\)</span>.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-56"
+    },
+    {
+        "keyword": "касательная плоскость",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-57\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f\\)</span> определена в <span\nclass=\"math inline\">\\(B(x_0)\\)</span> и <span\nclass=\"math inline\">\\(\\exists \\operatorname{grad}f_{|_{x=x_0}}\\)</span>.\nЕсли угол между направляющим вектором секущей к графику, проходящей\nчерез точки <span class=\"math inline\">\\((x_{01}, \\ldots, x_{0n},\nf(x_0))\\)</span> и <span class=\"math inline\">\\((x_{1}, \\ldots, x_{n},\nf(x))\\)</span> и вектором <span\nclass=\"math inline\">\\(\\left(\\frac{\\partial f}{\\partial x_1}_{|_{x =\nx_0}}, \\ldots, \\frac{\\partial f}{\\partial x_n}_{|_{x = x_0}},\n-1\\right)\\)</span> стремится к <span\nclass=\"math inline\">\\(\\frac{\\pi}{2}\\)</span> при <span\nclass=\"math inline\">\\(\\rho \\to 0\\)</span>, то плоскость <span\nclass=\"math inline\">\\(Y = f(x_0) + \\displaystyle \\sum_{i = 1}^{n}\n\\frac{\\partial f}{\\partial x_i}_{|_{x = x_0}} (x_i - x_{0i})\\)</span> –\n<em>касательная плоскость</em> к графику <span\nclass=\"math inline\">\\(f\\)</span> в точке <span\nclass=\"math inline\">\\(x_0\\)</span>.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-57"
+    },
+    {
+        "keyword": "-й дифференциал",
+        "html": "<p><a href=\"функции-в-\\mathbb{r}^n.html#definition-58\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f(x) \\in C^2(B(x_0))\\)</span>. Запишем\nпервый дифференциал <span class=\"math inline\">\\(f(x)\\)</span> в точке\n<span class=\"math inline\">\\(x_0\\)</span>. <span\nclass=\"math display\">\\[df(x)_{|_{x_0}} = \\displaystyle \\sum_{i =\n1}^{n}\\frac{\\partial f}{\\partial x_i}_{|_{x_0}}dx_i\\]</span>\nПродифференцируем <span class=\"math inline\">\\(df(x):\\)</span><span\nclass=\"math display\">\\[d(df(x)) = \\displaystyle \\sum_{j =\n1}^{n}\\frac{\\partial \\left(\\displaystyle \\sum_{i = 1}^{n}\\frac{\\partial\nf}{\\partial x_i}_{|_{x_0}}dx_i\\right)}{\\partial x_j}dx_j = \\displaystyle\n\\sum_{i, j = 0}^{n}\\frac{\\partial^2 f}{\\partial x_i \\partial x_j}d x_i d\nx_j\\]</span> – это <span class=\"math inline\">\\(2\\)</span><em>-й\nдифференциал</em> <span class=\"math inline\">\\(f(x)\\)</span>.</p>",
+        "url": "функции-в-\mathbb{r}^n.html#definition-58"
+    },
+    {
+        "keyword": "дифференцируемо",
+        "html": "<p><a href=\"теорема-о-неявной-функции.html#definition-59\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nОтображение <span class=\"math inline\">\\(f: \\mathbb{R}^n \\to\n\\mathbb{R}^m\\)</span> <em>дифференцируемо</em> в точке <span\nclass=\"math inline\">\\(x_0\\)</span>, если существует линейное отображение\n<span class=\"math inline\">\\(\\varphi: \\mathbb{R}^n \\to\n\\mathbb{R}^m\\)</span>, такое, что <span\nclass=\"math inline\">\\(f(\\mathbf{x_0} + \\Delta \\mathbf{x}) -\nf(\\mathbf{x_0}) = \\varphi(\\Delta \\mathbf{x}) +\n\\overline{\\overline{o}}(\\mathbf{x_0}, \\mathbf{x_0} + \\Delta \\mathbf{x}),\n\\,\\,\\,\\, \\rho(\\mathbf{x_0}, \\mathbf{x_0} + \\Delta \\mathbf{x}) \\to\n0\\)</span>.</p>",
+        "url": "теорема-о-неявной-функции.html#definition-59"
+    },
+    {
+        "keyword": "матрица якоби якобиан",
+        "html": "<p><a href=\"теорема-о-неявной-функции.html#definition-60\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f: \\mathbb{R}^n \\to \\mathbb{R}^m,\n\\,\\,\\,\\, f(\\mathbf{x}) =\n\\left(\\begin{array}{c}f_1(\\mathbf{x})\\\\\\vdots\\\\f_m(\\mathbf{x})\\end{array}\\right),\n\\,\\,\\,\\, \\forall \\mathbf{x} \\in \\mathbb{R}^n\\)</span>. Пусть <span\nclass=\"math inline\">\\(f(\\mathbf{x})\\)</span> дифференцируемо в <span\nclass=\"math inline\">\\(B(\\mathbf{x_0})\\)</span>. Матрица <span\nclass=\"math display\">\\[\\left(\\begin{array}{ccc} \\frac{\\partial\nf_1}{\\partial x_1} &amp; \\dots &amp; \\frac{\\partial f_1}{\\partial x_n}\n\\\\ \\vdots &amp; \\ddots &amp; \\vdots \\\\ \\frac{\\partial f_m}{\\partial x_1}\n&amp; \\dots &amp; \\frac{\\partial f_m}{\\partial x_n}\n\\end{array}\\right)\\]</span> – <em>матрица Якоби</em> <span\nclass=\"math inline\">\\(f\\)</span>. Если <span class=\"math inline\">\\(m =\nn\\)</span>, то определитель матрицы Якоби – <em>якобиан</em>.</p>\n<p><strong>Обозначается:</strong> <span\nclass=\"math display\">\\[J\\]</span></p>",
+        "url": "теорема-о-неявной-функции.html#definition-60"
+    },
+    {
+        "keyword": "функционально зависимы функционально зависима",
+        "html": "<p><a href=\"теорема-о-неявной-функции.html#definition-61\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\Omega \\subset \\mathbb{R}^n\\)</span> –\nобласть. <span class=\"math inline\">\\(\\{\\varphi_i: \\mathbb{R}^n \\to\n\\mathbb{R}, \\,\\,\\,\\, \\varphi_i \\in C^1(\\Omega)\\}_{i = 1}^m\\)</span>.\nПусть <span class=\"math inline\">\\(\\hat{\\Omega} \\subset\n\\displaystyle\\bigtimes_{i = 1}^{m - 1}\\varphi_i(\\Omega) \\subset R^{m -\n1}\\)</span>. Если <span class=\"math inline\">\\(\\exists \\Phi:\n\\mathbb{R}^{m - 1} \\to \\mathbb{R}, \\,\\,\\,\\, \\Phi \\in\nC^1(\\hat{\\Omega})\\)</span>, такое, что <span\nclass=\"math inline\">\\(\\varphi_m(\\mathbf{x}) =\n\\Phi(\\varphi_1(\\mathbf{x}), \\ldots, \\varphi_{m - 1}(\\mathbf{x}))\n\\,\\,\\,\\, \\forall \\mathbf{x} \\in \\Omega\\)</span>, то функции <span\nclass=\"math inline\">\\(\\varphi_1, \\ldots, \\varphi_{m - 1}\\)</span>\n<em>функционально зависимы</em> от функции <span\nclass=\"math inline\">\\(\\varphi_m\\)</span>. Если <span\nclass=\"math inline\">\\(\\exists \\varphi_i\\)</span> функционально зависящая\nот остальных функций, то система <span class=\"math inline\">\\(\\varphi_1,\n\\ldots, \\varphi_m\\)</span> – <em>функционально зависима</em>.</p>",
+        "url": "теорема-о-неявной-функции.html#definition-61"
+    },
+    {
+        "keyword": "условный максимум функции уравнения связи",
+        "html": "<p><a href=\"теорема-о-неявной-функции.html#definition-62\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f, f_1, \\ldots, f_m\\)</span>\nопределены в <span class=\"math inline\">\\(B(\\mathbf{x_0}), \\,\\,\\,\\,\n\\mathbf{x_0} \\in \\mathbb{R}^n\\)</span>. Если <span\nclass=\"math inline\">\\(\\forall \\mathbf{x} \\in \\{\\mathbf{x} \\in\n{B}(\\mathbf{x_0}): \\,\\,\\,\\, f_i(\\mathbf{x}) = 0, \\forall i \\in \\{1,\n\\ldots, m\\}\\} \\,\\,\\,\\, f(\\mathbf{x_0}) &gt; f(\\mathbf{x})\\)</span>, то\n<span class=\"math inline\">\\(\\mathbf{x_0}\\)</span> – <em>условный\nмаксимум функции</em> <span class=\"math inline\">\\(f\\)</span>. Система\nуравнений <span class=\"math inline\">\\(f_i(\\mathbf{x}) = 0\\)</span> – это\n<em>уравнения связи</em>.</p>",
+        "url": "теорема-о-неявной-функции.html#definition-62"
+    },
+    {
+        "keyword": "функция лагранжа множители лагранжа",
+        "html": "<p><a href=\"теорема-о-неявной-функции.html#definition-63\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f, f_1, \\ldots, f_m\\)</span>\nопределены в <span class=\"math inline\">\\(B(\\mathbf{x_0})\\)</span>.\nФункция <span class=\"math inline\">\\(\\mathcal{L}(\\lambda_1, \\ldots,\n\\lambda_m, x_1, \\ldots, x_n) = f(\\mathbf{x}) + \\displaystyle \\sum_{i =\n1}^{m}\\lambda_i \\cdot f_i(\\mathbf{x})\\)</span> – <em>функция\nЛагранжа</em> системы <span class=\"math inline\">\\(f, f_1, \\ldots,\nf_m\\)</span>. <span class=\"math inline\">\\(\\boldsymbol{\\lambda} =\n(\\lambda_1, \\ldots, \\lambda_n)\\)</span> – <em>множители\nЛагранжа</em>.</p>",
+        "url": "теорема-о-неявной-функции.html#definition-63"
+    }
+]

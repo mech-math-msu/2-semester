@@ -11,6 +11,7 @@
     
     <title>Комплексификация</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -256,10 +266,10 @@
 
 <h1 data-number="8" id="комплексификация">Комплексификация</h1>
 <div id="definition-35">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над <span
-class="math inline">\(\mathbb{R}\)</span>. Рассмотрим множество <span
-class="math inline">\(V(\mathbb{C}) = \{(v_1, v_2)| v_1, v_2 \in
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+<span class="math inline">\(\mathbb{R}\)</span>. Рассмотрим множество
+<span class="math inline">\(V(\mathbb{C}) = \{(v_1, v_2)| v_1, v_2 \in
 V\}\)</span>. Определим</p>
 <p>сложение: <span class="math inline">\(\forall (v_1, v_2),
 (\tilde{v}_1, \tilde{v}_2) \in V(\mathbb{C}) \,\,\,\,\,\,\,\, (v_1, v_2)
@@ -278,27 +288,27 @@ V(\mathbb{C})\)</span>, как <span class="math inline">\(v\)</span>.
 записывается так: <span class="math inline">\(v_1 + i v_2\)</span>.</p>
 </div>
 <div id="statement-40">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над <span
-class="math inline">\(\mathbb{R}\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+<span class="math inline">\(\mathbb{R}\)</span>. Тогда <span
 class="math inline">\(V(\mathbb{C})\)</span> – векторное пространство
 над <span class="math inline">\(\mathbb{C}\)</span>.</p>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-41">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над <span
-class="math inline">\(\mathbb{R}\)</span>. Тогда любой базис <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+<span class="math inline">\(\mathbb{R}\)</span>. Тогда любой базис <span
 class="math inline">\(V\)</span> является базисом в <span
 class="math inline">\(V(\mathbb{C})\)</span>.</p>
-<p><em>Доказательство:</em> не очев <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> не очев
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-42">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над <span
-class="math inline">\(\mathbb{R}\)</span>, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+<span class="math inline">\(\mathbb{R}\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>. Определим отображение <span
 class="math inline">\(\mathcal{A}_{\mathbb{C}}: V(\mathbb{C}) \to
@@ -306,13 +316,13 @@ V(\mathbb{C}) \,\,\,\,\,\,\,\, v_1 + i v_2 \in V(\mathbb{C}) \mapsto
 \mathcal{A}(v_1) + i \mathcal{A}(v_2)\)</span>. Тогда <span
 class="math inline">\(\mathcal{A}_{\mathbb{C}}\)</span> линейный
 оператор на <span class="math inline">\(V(\mathbb{C})\)</span>.</p>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-43">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над <span
-class="math inline">\(\mathbb{R}\)</span>, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+<span class="math inline">\(\mathbb{R}\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>, <span class="math inline">\(B\)</span>
 – базис в <span class="math inline">\(V\)</span>. Тогда матрица
@@ -321,13 +331,13 @@ class="math inline">\(\mathcal{A}_{\mathbb{C}}\)</span> в базисе <span
 class="math inline">\(B\)</span> совпадает с матрицей линейного
 оператора <span class="math inline">\(\mathcal{A}\)</span> в базисе
 <span class="math inline">\(B\)</span>.</p>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-44">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над <span
-class="math inline">\(\mathbb{R}\)</span>, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+<span class="math inline">\(\mathbb{R}\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>. Тогда линейный оператор <span
 class="math inline">\(\mathcal{A}_{\mathbb{C}}\)</span> имеет
@@ -338,7 +348,7 @@ class="math display">\[\begin{cases}
     \mathcal{A}(x) = \alpha x - \beta y\\
     \mathcal{A}(y) = \beta x + \alpha y
 \end{cases}\]</span></p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span></p>
 <p><span class="math display">\[\mathcal{A}_{\mathbb{C}}(x + i y) =
 (\alpha + i \beta)(x + i y) = \alpha x - \beta y + i (\beta x + \alpha
@@ -347,9 +357,9 @@ y) = \mathcal{A}(x) + i \mathcal{A}(y) \,\,\,\,\blacksquare\]</span>
 сторону.</p>
 </div>
 <div id="corollary-3">
-<p><strong>Следствие: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над <span
-class="math inline">\(\mathbb{R}\)</span>, <span
+<p><span class="margin-lft"><strong>Следствие: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+<span class="math inline">\(\mathbb{R}\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>. Линейный оператор <span
 class="math inline">\(\mathcal{A}_{\mathbb{C}}\)</span> имеет
@@ -358,19 +368,19 @@ class="math inline">\(\mathcal{A}_{\mathbb{C}}\)</span> имеет
 \beta\)</span>. Тогда <span class="math inline">\(&lt;x , y
 &gt;\)</span> – двумерное инвариантное подпространство линейного
 оператора <span class="math inline">\(\mathcal{A}\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="8.1"
 id="приведение-матрицы-линейного-оператора-к-треугольному-виду">Приведение
 матрицы линейного оператора к треугольному виду</h2>
 <div id="definition-36">
-<p><strong>Определение: </strong>Поле <span
-class="math inline">\(F\)</span> <em>алгебраически замкнуто</em>, если
-любой многочлен над <span class="math inline">\(F\)</span> имеет хотя бы
-один корень.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Поле
+<span class="math inline">\(F\)</span> <em>алгебраически замкнуто</em>,
+если любой многочлен над <span class="math inline">\(F\)</span> имеет
+хотя бы один корень.</p>
 </div>
 <div id="theorem-7">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство размерности
 <span class="math inline">\(n\)</span> над алгебраически замкнутым полем
 <span class="math inline">\(F\)</span>, <span
@@ -390,8 +400,8 @@ class="math display">\[\exists C \in M_n(F), \,\,\,\, \det(C) \ne 0:
 \vdots &amp; \ddots &amp; \ddots &amp; \vdots\\
 0 &amp; \dots &amp; 0 &amp; \star
 \end{array}\right)\]</span></p>
-<p><em>Доказательство:</em> (индукция по <span
-class="math inline">\(n\)</span>)</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> (индукция по
+<span class="math inline">\(n\)</span>)</p>
 <p>Пусть утверждение верно для <span class="math inline">\(n -
 1\)</span>, докажем, что оно верно для <span
 class="math inline">\(n\)</span>. <span class="math inline">\(F\)</span>
@@ -451,14 +461,15 @@ e_n\}\)</span>. Матрица <span class="math inline">\(\mathcal{A}\)</span>
 <h2 data-number="8.2" id="теорема-гамильтона-кэли">Теорема
 Гамильтона-Кэли</h2>
 <div id="theorem-8">
-<p><strong>Теорема: </strong>(<em>Теорема Гамильтона-Кэли</em>) Пусть
-<span class="math inline">\(\mathcal{A}\)</span> линейный оператор на
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(<em>Теорема Гамильтона-Кэли</em>) Пусть <span
+class="math inline">\(\mathcal{A}\)</span> линейный оператор на
 векторном пространстве <span class="math inline">\(V\)</span>
 размерности <span class="math inline">\(n\)</span> над полем <span
 class="math inline">\(F\)</span>. Тогда <span
 class="math inline">\(A\)</span> является корнем своего
 характеристического многочлена.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li>Пусть <span class="math inline">\(F\)</span> – алгебраически
 замкнуто. Тогда в <span class="math inline">\(V\)</span> существует

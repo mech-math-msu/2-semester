@@ -11,6 +11,7 @@
     
     <title>Аффинно-квадратичные функции</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -257,28 +267,29 @@
 <h1 data-number="25"
 id="аффинно-квадратичные-функции">Аффинно-квадратичные функции</h1>
 <div id="definition-123">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\((\mathbb{A}, V)\)</span> – аффинное пространство,
-<span class="math inline">\(V\)</span> – векторное пространство над
-полем <span class="math inline">\(F\)</span>. Отображение <span
-class="math inline">\(L: \mathbb{A} \to F\)</span> –
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\((\mathbb{A}, V)\)</span> – аффинное
+пространство, <span class="math inline">\(V\)</span> – векторное
+пространство над полем <span class="math inline">\(F\)</span>.
+Отображение <span class="math inline">\(L: \mathbb{A} \to F\)</span> –
 <em>аффинно-линейное</em>, если существует линейная функция <span
 class="math inline">\(l: V \to F\)</span>, такая, что <span
 class="math inline">\(L(a) = L(b) + l(\overline{ba})\,\,\,\, \forall a,
 b \in \mathbb{A}\)</span>.</p>
 </div>
 <div id="definition-124">
-<p><strong>Определение: </strong>Отображение <span
-class="math inline">\(Q: \mathbb{A} \to F\)</span> –
-<em>аффинно-квадратичная функция</em>, если существует линейная функция
-<span class="math inline">\(l: V \to F\)</span> и квадратичная форма
-<span class="math inline">\(q: V \to F\)</span>, такие, что <span
-class="math inline">\(\forall a, b \in \mathbb{A} \,\,\,\, Q(b) = Q(a) +
-q(\overline{ab}) + 2l(\overline{ab})\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Отображение <span class="math inline">\(Q: \mathbb{A}
+\to F\)</span> – <em>аффинно-квадратичная функция</em>, если существует
+линейная функция <span class="math inline">\(l: V \to F\)</span> и
+квадратичная форма <span class="math inline">\(q: V \to F\)</span>,
+такие, что <span class="math inline">\(\forall a, b \in \mathbb{A}
+\,\,\,\, Q(b) = Q(a) + q(\overline{ab}) +
+2l(\overline{ab})\)</span>.</p>
 </div>
-<h2 data-number="25.1"
+<h3 data-number="25.0.1"
 id="координатная-запись-аффинно-квадратичной-функции">Координатная
-запись аффинно-квадратичной функции</h2>
+запись аффинно-квадратичной функции</h3>
 <p>Пусть <span class="math inline">\((O, e)\)</span> – аффинная система
 координат. <span class="math inline">\(Q\)</span> – аффинно-квадратичная
 функция.</p>
@@ -292,41 +303,43 @@ X\]</span></p>
 <p><span class="math inline">\(S\)</span> – столбец коэффицентов
 линейной части <span class="math inline">\(Q\)</span>.</p>
 <div id="definition-125">
-<p><strong>Определение: </strong><span class="math inline">\(\tilde{B} =
-\left(\begin{array}{c|c} B &amp; S \\\hline S^T &amp;
-Q(O)\end{array}\right)\)</span> – <em>матрица аффинно-квадратичной
-функции</em> <span class="math inline">\(Q\)</span> в базисе <span
-class="math inline">\((O, e)\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(\tilde{B} = \left(\begin{array}{c|c} B &amp; S
+\\\hline S^T &amp; Q(O)\end{array}\right)\)</span> – <em>матрица
+аффинно-квадратичной функции</em> <span class="math inline">\(Q\)</span>
+в базисе <span class="math inline">\((O, e)\)</span>.</p>
 <p><span class="math display">\[\tilde{X} =
 \left(\begin{array}{c}X\\\hline 1\end{array}\right)\]</span></p>
 </div>
 <div id="statement-122">
-<p><strong>Утверждение: </strong><span class="math display">\[Q(a) =
-\tilde{X}^T\tilde{B}\tilde{X}\]</span></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
+class="math display">\[Q(a) = \tilde{X}^T\tilde{B}\tilde{X}\]</span></p>
 <p>Пусть <span class="math inline">\((O’, e’)\)</span> – аффинная
 система координат. Матрица перехода от <span
 class="math inline">\(e\)</span> к <span
 class="math inline">\(e’\)</span> - <span class="math inline">\(C_{e \to
 e’}\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="definition-126">
-<p><strong>Определение: </strong><span class="math inline">\(\tilde{C} =
-\left(\begin{array}{ccc|c} &amp; &amp; &amp; v_1\\ &amp; C_{e \to e’}
-&amp; &amp; \vdots\\&amp; &amp; &amp; v_n \\\hline 0 &amp; \dots &amp; 0
-&amp; 1\end{array}\right)\)</span> – <em>матрица перехода от аффинной
-системы координат</em> <span class="math inline">\((O, e)\)</span> <em>к
-аффинной системе координат</em> <span class="math inline">\((O’,
-e’)\)</span>, <span class="math inline">\(w_1, \ldots, w_n\)</span>
-координаты <span class="math inline">\(\overline{OO’}\)</span> в базисе
-<span class="math inline">\(e\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(\tilde{C} = \left(\begin{array}{ccc|c} &amp; &amp;
+&amp; v_1\\ &amp; C_{e \to e’} &amp; &amp; \vdots\\&amp; &amp; &amp; v_n
+\\\hline 0 &amp; \dots &amp; 0 &amp; 1\end{array}\right)\)</span> –
+<em>матрица перехода от аффинной системы координат</em> <span
+class="math inline">\((O, e)\)</span> <em>к аффинной системе
+координат</em> <span class="math inline">\((O’, e’)\)</span>, <span
+class="math inline">\(w_1, \ldots, w_n\)</span> координаты <span
+class="math inline">\(\overline{OO’}\)</span> в базисе <span
+class="math inline">\(e\)</span>.</p>
 </div>
-<h3 data-number="25.1.1"
+<h4 data-number="25.0.1.1"
 id="изменение-матрицы-аффинно-квадратичной-функции-при-переходе-от-одной-аффинной-системы-координат-к-другой">Изменение
 матрицы аффинно-квадратичной функции при переходе от одной аффинной
-системы координат к другой</h3>
+системы координат к другой</h4>
 <div id="statement-123">
-<p><strong>Утверждение: </strong><strong>Утверждение:</strong></p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span><strong>Утверждение:</strong></p>
 <p><span class="math display">\[B’ = C_{e \to e’}^T B C_{e \to
 e’}\]</span> <span class="math display">\[S’ = C_{e \to e’}^T(B W +
 S)\]</span> <span class="math inline">\(W\)</span> – столбец координат
@@ -336,13 +349,13 @@ class="math inline">\(l(e_i)\)</span>, где <span
 class="math inline">\(e_i\)</span> – базисный вектор. <span
 class="math display">\[Q(O’) = W^T B W + S^T W + W^T S +
 Q(O)\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
-<h2 data-number="25.2" id="центр-аффинно-квадратичной-функции">Центр
-аффинно-квадратичной функции</h2>
+<h3 data-number="25.0.2" id="центр-аффинно-квадратичной-функции">Центр
+аффинно-квадратичной функции</h3>
 <div id="definition-127">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(W\)</span> – столбец координат вектора <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(W\)</span> – столбец координат вектора <span
 class="math inline">\(\overline{OO’}\)</span>, таков, что <span
 class="math inline">\(B W + S = 0\)</span>. Тогда <span
 class="math inline">\(S’ = 0\)</span> и <span class="math inline">\(Q(O’
@@ -351,10 +364,10 @@ class="math inline">\(S’ = 0\)</span> и <span class="math inline">\(Q(O’
 функции</em> <span class="math inline">\(Q\)</span>.</p>
 </div>
 <div id="statement-124">
-<p><strong>Утверждение: </strong>Множество центров аффинно-квадратичной
-функции либо <span class="math inline">\(\varnothing\)</span>, либо
-плоскость.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Множество центров аффинно-квадратичной функции либо
+<span class="math inline">\(\varnothing\)</span>, либо плоскость.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>Если система <span class="math inline">\(BW + S = 0\)</span>
 разрешима относительно <span class="math inline">\(W\)</span>(столбец
 координат вектора <span class="math inline">\(\overline{OO’}\)</span>),
@@ -362,18 +375,20 @@ class="math inline">\(S’ = 0\)</span> и <span class="math inline">\(Q(O’
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-128">
-<p><strong>Определение: </strong>Аффинно-квадратичная функция <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Аффинно-квадратичная функция <span
 class="math inline">\(Q\)</span> <em>невырождена</em>, если существует
 аффинная система координат <span class="math inline">\((O, e)\)</span>,
 в которой матрица <span class="math inline">\(\tilde{B}\)</span>
 невырождена.</p>
 </div>
-<h3 data-number="25.2.1"
+<h4 data-number="25.0.2.1"
 id="инварианты-аффинно-квадратичной-функции">Инварианты
-аффинно-квадратичной функции</h3>
+аффинно-квадратичной функции</h4>
 <div id="statement-125">
-<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(Q:
-\mathbb{A} \to F\)</span> – аффинно-квадратичная функция, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(Q: \mathbb{A} \to F\)</span> –
+аффинно-квадратичная функция, <span
 class="math inline">\(\tilde{B}\)</span> – матрица <span
 class="math inline">\(Q\)</span>, <span class="math inline">\(B\)</span>
 – матрица <span class="math inline">\(q\)</span>. Тогда следующие
@@ -387,17 +402,19 @@ class="math inline">\(Q\)</span>, <span class="math inline">\(B\)</span>
 положительный и отрицательный индексы инерции <span
 class="math inline">\(q\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em> Следует из соответствующих теорем :) <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Следует из
+соответствующих теорем :) <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
-<h2 data-number="25.3"
+<h3 data-number="25.0.3"
 id="канонический-вид-аффинно-квадратичной-функции">Канонический вид
-аффинно-квадратичной функции</h2>
+аффинно-квадратичной функции</h3>
 <div id="theorem-29">
-<p><strong>Теорема: </strong>Пусть <span class="math inline">\(Q:
-\mathbb{A} \to F\)</span> – аффинно-квадратичная функция, не являющаяся
-аффинно-линейной. Тогда существует аффинная система координат, в которой
-<span class="math inline">\(Q\)</span> имеет вид:</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(Q: \mathbb{A} \to F\)</span> –
+аффинно-квадратичная функция, не являющаяся аффинно-линейной. Тогда
+существует аффинная система координат, в которой <span
+class="math inline">\(Q\)</span> имеет вид:</p>
 <p><span class="math display">\[Q(a) = \lambda_1 x^2_1 + \ldots +
 \lambda_r x^2_r + \lambda_{r + 1}\]</span></p>
 <p>или</p>
@@ -405,9 +422,10 @@ id="канонический-вид-аффинно-квадратичной-фу
 \lambda_r x^2_r + 2 x_{r + 1}\]</span></p>
 <p><span class="math inline">\(\lambda_1, \ldots, \lambda_r\)</span> не
 равны <span class="math inline">\(0\)</span>.</p>
-<p><em>Доказательство:</em> Приведем <span
-class="math inline">\(q\)</span> к диагональному виду, и по-заменяем
-<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Приведем
+<span class="math inline">\(q\)</span> к диагональному виду, и
+по-заменяем <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 
 

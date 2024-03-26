@@ -11,6 +11,7 @@
     
     <title>Еще про ядра и образы линейных отображений</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -257,53 +267,55 @@
 <h1 data-number="6" id="еще-про-ядра-и-образы-линейных-отображений">Еще
 про ядра и образы линейных отображений</h1>
 <div id="statement-21">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(\varphi\)</span> – линейное отображение векторных
-пространств <span class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\varphi\)</span> – линейное отображение
+векторных пространств <span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span>, <span class="math inline">\(e_1,
 \ldots, e_n\)</span> – базис в <span class="math inline">\(U\)</span>.
 Тогда <span class="math display">\[\operatorname{img} \varphi = \langle
 \varphi(e_1), \ldots, \varphi(e_n) \rangle\]</span></p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall u \in U
-\,\,\,\, \exists \lambda_1, \ldots, \lambda_n: \,\,\,\, u = \lambda_1
-e_1 + \ldots + \lambda_n e_n \Rightarrow \forall w \in W:\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall u \in U \,\,\,\, \exists \lambda_1,
+\ldots, \lambda_n: \,\,\,\, u = \lambda_1 e_1 + \ldots + \lambda_n e_n
+\Rightarrow \forall w \in W:\)</span></p>
 <p><span class="math inline">\(\exists u \in U: \,\,\,\, \varphi(u) = w
 \,\,\,\, w \in \langle \varphi(e_1), \ldots, \varphi(e_n) \rangle
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-21">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(\varphi\)</span> – линейное отображение векторных
-пространств <span class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\varphi\)</span> – линейное отображение
+векторных пространств <span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span>. <span class="math inline">\(\dim
 \operatorname{img} \varphi\)</span> – это <em>ранг линейного
 отображения</em> <span class="math inline">\(\varphi\)</span>.</p>
 </div>
 <div id="statement-22">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(\varphi\)</span> – линейное отображение векторных
-пространств <span class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\varphi\)</span> – линейное отображение
+векторных пространств <span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span>. Тогда <span
 class="math display">\[\dim \operatorname{img} \varphi + \dim \ker
 \varphi = \dim U\]</span></p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(e_1,
-\ldots, e_m\)</span> – базис <span class="math inline">\(\ker
-\varphi\)</span>, дополним его до базиса <span class="math inline">\(U
-\Rightarrow e_1, \ldots, e_m, e_{m + 1}, \ldots, e_n\)</span> – базис
-<span class="math inline">\(U\)</span>. По предыдущему утверждению <span
-class="math inline">\(\operatorname{img} \varphi = \langle \varphi(e_1),
-\ldots, \varphi(e_m), \varphi(e_{m + 1}), \ldots, \varphi(e_n)
-\rangle\)</span>. <span class="math inline">\(\varphi(e_1) = 0, \ldots,
-\varphi(e_m) = 0\)</span>, так как <span class="math inline">\(e_1,
-\ldots, e_m \in \ker \varphi \Rightarrow \operatorname{img} \varphi =
-\langle \varphi(e_{m + 1}), \ldots, \varphi(e_n) \rangle\)</span>.
-Докажем, что векторы <span class="math inline">\(\varphi(e_{m + 1}),
-\ldots, \varphi(e_n)\)</span> линейно независимы, то есть образуют базис
-<span class="math inline">\(\operatorname{img} \varphi\)</span>.
-Рассмотрим их линейную комбинацию равную нулю: <span
-class="math inline">\(\lambda_{m + 1} \varphi(e_{m + 1}) + \ldots +
-\lambda_n\varphi(e_n) = \varphi(\lambda_{m + 1} e_{m + 1} + \ldots +
-\lambda_n e_n) = 0 \Rightarrow\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(e_1, \ldots, e_m\)</span> – базис <span
+class="math inline">\(\ker \varphi\)</span>, дополним его до базиса
+<span class="math inline">\(U \Rightarrow e_1, \ldots, e_m, e_{m + 1},
+\ldots, e_n\)</span> – базис <span class="math inline">\(U\)</span>. По
+предыдущему утверждению <span class="math inline">\(\operatorname{img}
+\varphi = \langle \varphi(e_1), \ldots, \varphi(e_m), \varphi(e_{m +
+1}), \ldots, \varphi(e_n) \rangle\)</span>. <span
+class="math inline">\(\varphi(e_1) = 0, \ldots, \varphi(e_m) =
+0\)</span>, так как <span class="math inline">\(e_1, \ldots, e_m \in
+\ker \varphi \Rightarrow \operatorname{img} \varphi = \langle
+\varphi(e_{m + 1}), \ldots, \varphi(e_n) \rangle\)</span>. Докажем, что
+векторы <span class="math inline">\(\varphi(e_{m + 1}), \ldots,
+\varphi(e_n)\)</span> линейно независимы, то есть образуют базис <span
+class="math inline">\(\operatorname{img} \varphi\)</span>. Рассмотрим их
+линейную комбинацию равную нулю: <span class="math inline">\(\lambda_{m
++ 1} \varphi(e_{m + 1}) + \ldots + \lambda_n\varphi(e_n) =
+\varphi(\lambda_{m + 1} e_{m + 1} + \ldots + \lambda_n e_n) = 0
+\Rightarrow\)</span></p>
 <p><span class="math inline">\(\Rightarrow \lambda_{m + 1} e_{m + 1} +
 \ldots + \lambda_n e_n \in \ker \varphi \Rightarrow \exists \lambda_1,
 \ldots, \lambda_m:\)</span></p>
@@ -316,11 +328,11 @@ class="math inline">\(\lambda_{m + 1} \varphi(e_{m + 1}) + \ldots +
 <h2 data-number="6.1" id="линейные-операторы-и-их-матрицы">Линейные
 операторы и их матрицы</h2>
 <div id="definition-22">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(\varphi\)</span> – линейное отображение векторного
-пространства <span class="math inline">\(V\)</span> в себя. Тогда <span
-class="math inline">\(\varphi\)</span> – это <em>линейный оператор</em>
-пространства <span class="math inline">\(V\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\varphi\)</span> – линейное отображение
+векторного пространства <span class="math inline">\(V\)</span> в себя.
+Тогда <span class="math inline">\(\varphi\)</span> – это <em>линейный
+оператор</em> пространства <span class="math inline">\(V\)</span>.</p>
 </div>
 <p>Пусть <span class="math inline">\(V\)</span> – векторное пространство
 над полем <span class="math inline">\(F\)</span>, <span
@@ -382,14 +394,14 @@ x_1\\
 x_n
 \end{array}\right)\]</span></p>
 <div id="definition-23">
-<p><strong>Определение: </strong><span class="math inline">\(A\)</span>
-– <em>матрица линейного оператора</em> <span
-class="math inline">\(\varphi\)</span> относительно базиса <span
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(A\)</span> – <em>матрица линейного оператора</em>
+<span class="math inline">\(\varphi\)</span> относительно базиса <span
 class="math inline">\(e_1, \ldots, e_n\)</span>.</p>
 </div>
 <div id="statement-23">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство, <span
 class="math inline">\(\varphi\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>, <span class="math inline">\(B,
 \tilde{B}\)</span> – базисы <span class="math inline">\(V\)</span>,
@@ -398,23 +410,23 @@ class="math inline">\(V\)</span>, <span class="math inline">\(B,
 <span class="math inline">\(B, \tilde{B}\)</span> соответственно. Тогда
 <span class="math display">\[\tilde{A} = C^{-1}_{B \to \tilde{B}}A C_{B
 \to \tilde{B}}\]</span></p>
-<p><em>Доказательство:</em> следует отсюда <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> следует
+отсюда <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-24">
+<span class="margin-lft"><strong>Утверждение: </strong></span>
 <ol type="1">
-<li><strong>Утверждение: </strong></li>
 <li>Ранг матрицы линейного оператора не зависит от базиса.</li>
 <li>Определитель матрицы линейного оператора не зависит от базиса.</li>
 </ol>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(V\)</span>
-– векторное пространство, <span class="math inline">\(\varphi\)</span> –
-линейный оператор на <span class="math inline">\(V\)</span>, <span
-class="math inline">\(B, \tilde{B}\)</span> – базисы <span
-class="math inline">\(V\)</span>, <span class="math inline">\(A,
-\tilde{A}\)</span> – матрицы линейного оператора <span
-class="math inline">\(\varphi\)</span> относительно <span
-class="math inline">\(B, \tilde{B}\)</span> соответственно.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(V\)</span> – векторное пространство, <span
+class="math inline">\(\varphi\)</span> – линейный оператор на <span
+class="math inline">\(V\)</span>, <span class="math inline">\(B,
+\tilde{B}\)</span> – базисы <span class="math inline">\(V\)</span>,
+<span class="math inline">\(A, \tilde{A}\)</span> – матрицы линейного
+оператора <span class="math inline">\(\varphi\)</span> относительно
+<span class="math inline">\(B, \tilde{B}\)</span> соответственно.</p>
 <ol type="1">
 <li><span class="math inline">\(\tilde{A} = C^{-1}_{B \to \tilde{B}}A
 C_{B \to \tilde{B}} \Rightarrow\)</span> строки матрицы <span
@@ -426,24 +438,24 @@ C_{B \to \tilde{B}}| = |C^{-1}_{B \to \tilde{B}}||C_{B \to
 </ol>
 </div>
 <div id="statement-25">
-<p><strong>Утверждение: </strong>Матрица <span
-class="math inline">\(A\)</span> линейного оператора <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Матрица
+<span class="math inline">\(A\)</span> линейного оператора <span
 class="math inline">\(\varphi\)</span> на векторном пространстве <span
 class="math inline">\(V\)</span> невырождена <span
 class="math inline">\(\Leftrightarrow\)</span> <span
 class="math inline">\(\varphi\)</span> – обратимо.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="statement-26">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(\varphi\)</span> – линейное отображение векторных
-пространств <span class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\varphi\)</span> – линейное отображение
+векторных пространств <span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span>. <span class="math inline">\(\ker
 \varphi = \{0\}\)</span> и <span
 class="math inline">\(\operatorname{img} \varphi = W\)</span> <span
 class="math inline">\(\Leftrightarrow\)</span> <span
 class="math inline">\(\varphi\)</span> – обратимо.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span></p>
 <p><span class="math inline">\(\varphi\)</span> – биекция <span
 class="math display">\[\Leftarrow\]</span> <span
@@ -454,9 +466,9 @@ class="math inline">\(\operatorname{img} \varphi = W
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-27">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(\varphi\)</span> – линейный оператор пространства
-<span class="math inline">\(V\)</span>. Тогда</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\varphi\)</span> – линейный оператор
+пространства <span class="math inline">\(V\)</span>. Тогда</p>
 <ol type="1">
 <li><span class="math inline">\(\varphi\)</span> обратимо <span
 class="math inline">\(\Leftrightarrow \ker \varphi =
@@ -465,14 +477,16 @@ class="math inline">\(\Leftrightarrow \ker \varphi =
 class="math inline">\(\Leftrightarrow \operatorname{img} \varphi =
 V\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em> это <span class="math inline">\(+\)</span>
-это <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> это <span
+class="math inline">\(+\)</span> это <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="6.2"
 id="определение-алгебры-алгебра-линейных-операторов">Определение
 алгебры, алгебра линейных операторов</h2>
 <div id="definition-24">
-<p><strong>Определение: </strong><em>Алгебра</em> над полем <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Алгебра</em> над полем <span
 class="math inline">\(F\)</span> – это множество <span
 class="math inline">\(\mathfrak{A}\)</span> с операциями сложения <span
 class="math inline">\(+: \mathfrak{A}\times \mathfrak{A} \to
@@ -493,15 +507,15 @@ y)\)</span>.</li>
 </ol>
 </div>
 <div id="definition-25">
-<p><strong>Определение: </strong>Множество всех линейных операторов на
-векторном пространстве <span class="math inline">\(V\)</span>
-обозначается <span class="math inline">\(\operatorname{end}
-V\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество всех линейных операторов на векторном
+пространстве <span class="math inline">\(V\)</span> обозначается <span
+class="math inline">\(\operatorname{end} V\)</span>.</p>
 </div>
 <div id="statement-28">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> векторное пространство над полем <span
-class="math inline">\(F\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> векторное пространство над полем
+<span class="math inline">\(F\)</span>. Тогда <span
 class="math inline">\(\operatorname{end} V\)</span> – алгебра над полем
 <span class="math inline">\(F\)</span> относительно операций:</p>
 <ol type="1">
@@ -516,12 +530,12 @@ class="math inline">\(\operatorname{end} V\)</span> – алгебра над п
 \in V \,\,\,\, \lambda\mathcal{A}(x) = \mathcal{A}(\lambda
 x)\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-26">
-<p><strong>Определение: </strong>Алгебра <span
-class="math inline">\(\mathfrak{C}\)</span> над <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Алгебра
+<span class="math inline">\(\mathfrak{C}\)</span> над <span
 class="math inline">\(F\)</span> <em>изоморфна</em> алгебре <span
 class="math inline">\(\mathfrak{B}\)</span> над <span
 class="math inline">\(F\)</span>, если <span
@@ -532,38 +546,39 @@ class="math inline">\(\mathfrak{B}\)</span>, как кольцо и как ве�
 \mathfrak{B}\)</span>.</p>
 </div>
 <div id="definition-27">
-<p><strong>Определение: </strong>Множество всех матриц <span
-class="math inline">\(n \times n\)</span> с элементами из поля <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество всех матриц <span class="math inline">\(n
+\times n\)</span> с элементами из поля <span
 class="math inline">\(F\)</span> обозначается <span
 class="math inline">\(\mathbf{M}_{n}(F)\)</span>.</p>
 </div>
 <div id="statement-29">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math inline">\(M_{n}(F)\)</span> – алгебра над полем <span
 class="math inline">\(F\)</span> относительно операций матричного
 сложения, матричного умножения и умножения каждого элемента матрицы на
 элемент из поля <span class="math inline">\(F\)</span>.</p>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-30">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над полем
-<span class="math inline">\(F\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+полем <span class="math inline">\(F\)</span>. Тогда <span
 class="math display">\[\operatorname{end} V \cong
 \mathbf{M}_{n}(F)\]</span></p>
-<p><em>Доказательство:</em> Построим биекцию <span
-class="math inline">\(\varphi: \mathcal{A} \in \operatorname{end} V
-\mapsto A \in \mathbf{M}_{n}(F)\)</span>, где <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Построим
+биекцию <span class="math inline">\(\varphi: \mathcal{A} \in
+\operatorname{end} V \mapsto A \in \mathbf{M}_{n}(F)\)</span>, где <span
 class="math inline">\(A\)</span> – матрица линейного оператора <span
 class="math inline">\(\mathcal{A} \,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="6.3" id="инвариантные-подпространства">Инвариантные
 подпространства</h2>
 <div id="definition-28">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(U\)</span> подпространство векторного пространства
-<span class="math inline">\(V\)</span> над полем <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(U\)</span> подпространство векторного
+пространства <span class="math inline">\(V\)</span> над полем <span
 class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>. <span class="math inline">\(U\)</span>
@@ -573,18 +588,19 @@ class="math inline">\(\forall u \in U \,\,\,\, \mathcal{A}(u) \in
 U\)</span>.</p>
 </div>
 <div id="definition-29">
-<p><strong>Определение: </strong>Если <span
-class="math inline">\(U\)</span> инвариантное пространство относительно
-линейного оператора <span class="math inline">\(\mathcal{A}\)</span>, то
-ограничение <span class="math inline">\(\mathcal{A}\)</span> на <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+<span class="math inline">\(U\)</span> инвариантное пространство
+относительно линейного оператора <span
+class="math inline">\(\mathcal{A}\)</span>, то ограничение <span
+class="math inline">\(\mathcal{A}\)</span> на <span
 class="math inline">\(U\)</span> обозначается <span
 class="math inline">\(\mathcal{A}_{\vert U}\)</span>.</p>
 </div>
 <div id="statement-31">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math inline">\(\mathcal{A}_{\vert U}\)</span> – линейный оператор
 <span class="math inline">\(U\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 
 

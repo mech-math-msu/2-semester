@@ -11,7 +11,10 @@
     
     <title>Фигуры и площади</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,17 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="кривые.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="несобственные-интегралы.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="кривые.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="несобственные-интегралы.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,8 +266,9 @@
 
 <h1 data-number="5" id="фигуры-и-площади">Фигуры и площади</h1>
 <div id="definition-16">
-<p><strong>Определение:</strong> <span class="math inline">\(A \subset
-\mathbb{R}^2\)</span> – <em>плоская фигура</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(A \subset \mathbb{R}^2\)</span> – <em>плоская
+фигура</em>.</p>
 <p><span class="math inline">\((x, y) \in A\)</span> – <em>точка</em>
 фигуры.</p>
 <p><span class="math inline">\(B_{\varepsilon}(x_0, y_0) = \{(x, y) \in
@@ -257,8 +277,8 @@ A: \,\,\,\, (x - x_0)^2 + (y - y_0)^2 &lt; \varepsilon^2\}\)</span> -
 точки <span class="math inline">\((x_0, y_0) \in A\)</span>.</p>
 </div>
 <div id="definition-17">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\{A_{\alpha}\}_{\alpha}\)</span> – множество
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\{A_{\alpha}\}_{\alpha}\)</span> – множество
 плоских фигур.</p>
 <p>Отображение <span class="math inline">\(\mu: \,\,\,\,
 \{A_{\alpha}\}_{\alpha} \to \mathbb{R}\)</span> – <em>площадь</em>
@@ -278,44 +298,49 @@ A_2 \,\,\,\, \mu(A_1) \le \mu(A_2)\)</span>.</li>
 </ol>
 </div>
 <div id="statement-12">
-<p><strong>Утверждение:</strong> Площадь открытого и замкнутого
-прямоугольников равны.</p>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Площадь
+открытого и замкнутого прямоугольников равны.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-13">
-<p><strong>Утверждение:</strong> Площадь прямоугольного треугольника с
-катетами <span class="math inline">\(a\)</span> и <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Площадь
+прямоугольного треугольника с катетами <span
+class="math inline">\(a\)</span> и <span
 class="math inline">\(b\)</span> равна <span
 class="math inline">\(\frac{1}{2}ab\)</span>.</p>
-<p><em>Доказательство:</em> половина прямоугольника <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> половина
+прямоугольника <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-14">
-<p><strong>Утверждение:</strong> Площадь треугольника с основанием <span
-class="math inline">\(a\)</span> и высотой <span
-class="math inline">\(h\)</span> равна <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Площадь
+треугольника с основанием <span class="math inline">\(a\)</span> и
+высотой <span class="math inline">\(h\)</span> равна <span
 class="math inline">\(\frac12 ah\)</span>.</p>
-<p><em>Доказательство:</em> сумма двух прямоугольных треугольников <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> сумма двух
+прямоугольных треугольников <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-18">
-<p><strong>Определение:</strong> Плоская фигура, состоящая из
-непересекающихся треугольников – <em>многоугольная фигура</em>. Пустое
-множество является многоугольной фигурой по определению.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Плоская
+фигура, состоящая из непересекающихся треугольников – <em>многоугольная
+фигура</em>. Пустое множество является многоугольной фигурой по
+определению.</p>
 </div>
 <div id="statement-15">
-<p><strong>Утверждение:</strong> Площадь многоугольной фигуры равна
-сумме площадей составляющих ее треугольников и не зависит от разбиения
-на треугольники.</p>
-<p><em>Доказательство:</em> определение площади <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Площадь
+многоугольной фигуры равна сумме площадей составляющих ее треугольников
+и не зависит от разбиения на треугольники.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> определение
+площади <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="5.1" id="верхняя-и-нижняя-площади">Верхняя и нижняя
 площади</h2>
 <div id="definition-19">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(A
-\subset \mathbb{R}^2\)</span> – плоская фигура.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(A \subset \mathbb{R}^2\)</span> – плоская
+фигура.</p>
 <p>Любое замкнутое множество <span class="math inline">\(P\)</span>,
 такое что <span class="math inline">\(A \subset P\)</span> –
 <em>описанная</em> около <span class="math inline">\(A\)</span>
@@ -325,19 +350,19 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <em>вписанная</em> в <span class="math inline">\(A\)</span> фигура.</p>
 </div>
 <div id="statement-16">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(A\)</span> – ограниченная плоская фигура. Тогда
-множество площадей описанных около нее фигур ограничено снизу, а
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(A\)</span> – ограниченная плоская фигура.
+Тогда множество площадей описанных около нее фигур ограничено снизу, а
 множество площадей вписанных в нее фигур ограничено сверху.</p>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-20">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(A\)</span> – ограниченная плоская фигура, <span
-class="math inline">\(\{P\}\)</span> – множество всех описанных около
-нее фигур, <span class="math inline">\(\{Q\}\)</span> – множество всех
-вписанных в нее фигур.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(A\)</span> – ограниченная плоская фигура,
+<span class="math inline">\(\{P\}\)</span> – множество всех описанных
+около нее фигур, <span class="math inline">\(\{Q\}\)</span> – множество
+всех вписанных в нее фигур.</p>
 <p><span class="math inline">\(\mu^{*}(A) =
 \displaystyle\inf_{P}\mu(P)\)</span> – <em>верхняя площадь</em> фигуры
 <span class="math inline">\(A\)</span>.</p>
@@ -352,13 +377,14 @@ class="math inline">\(\{P\}\)</span> – множество всех описа�
 id="равенство-определенного-интеграла-площади-под-графиком-функции">Равенство
 определенного интеграла площади под графиком функции</h2>
 <div id="statement-17">
-<p><strong>Утверждение:</strong> (первый критерий квадрируемости) Пусть
-<span class="math inline">\(A\)</span> – ограниченная плоская фигура.
-Тогда <span class="math inline">\(A\)</span> – квадрируема <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>(первый
+критерий квадрируемости) Пусть <span class="math inline">\(A\)</span> –
+ограниченная плоская фигура. Тогда <span
+class="math inline">\(A\)</span> – квадрируема <span
 class="math inline">\(\Leftrightarrow \,\,\,\, \forall \varepsilon &gt;
 0 \,\,\,\, \exists P, Q: \,\,\,\, \mu(P) - \mu(Q) &lt;
 \varepsilon\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span> <span
 class="math inline">\(A\)</span> -квадрируема, следовательно <span
 class="math inline">\(\mu^{*}(A) = \mu_{*}(A)\)</span>. <span
@@ -375,39 +401,41 @@ P, Q: \,\,\,\, \mu^{*}(A) - \mu_{*}(A) \le \mu(P) - \mu(Q) &lt;
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="statement-18">
-<p><strong>Утверждение:</strong> (геометричекий смысл интеграла Римана)
-Пусть <span class="math inline">\(f(x) \in R[a, b], \,\,\,\, f(x) \ge 0
-\,\,\,\, \forall x \in [a, b]\)</span>.</p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>(геометричекий смысл интеграла Римана) Пусть <span
+class="math inline">\(f(x) \in R[a, b], \,\,\,\, f(x) \ge 0 \,\,\,\,
+\forall x \in [a, b]\)</span>.</p>
 <p>Тогда фигура <span class="math inline">\(A = \{(x, y): \,\,\,\, a \le
 x \le b, 0 \le y \le f(x)\}\)</span> – квадрируема и ее площадь равна
 <span class="math inline">\(\displaystyle\int\limits_a^b
 f(x)dx\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(f(x)\)</span> –
-интегрируема на <span class="math inline">\([a, b]\)</span>,
-следовательно <span class="math inline">\(\forall \varepsilon &gt; 0
-\,\,\,\, \exists \delta &gt; 0: \,\,\,\, \forall \mathcal{T}
-(d(\mathcal{T}) &lt; \delta) \,\,\,\, S(\mathcal{T}) - s(\mathcal{T})
-&lt; \varepsilon\)</span>. Для любой разметки <span
-class="math inline">\(S(\mathcal{T})\)</span> – это площадь описанной
-около <span class="math inline">\(A\)</span> фигуры, а <span
-class="math inline">\(s(\mathcal{T})\)</span> – площадь вписанной в
-<span class="math inline">\(A\)</span> фигуры <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(f(x)\)</span> – интегрируема на <span
+class="math inline">\([a, b]\)</span>, следовательно <span
+class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists \delta
+&gt; 0: \,\,\,\, \forall \mathcal{T} (d(\mathcal{T}) &lt; \delta)
+\,\,\,\, S(\mathcal{T}) - s(\mathcal{T}) &lt; \varepsilon\)</span>. Для
+любой разметки <span class="math inline">\(S(\mathcal{T})\)</span> – это
+площадь описанной около <span class="math inline">\(A\)</span> фигуры, а
+<span class="math inline">\(s(\mathcal{T})\)</span> – площадь вписанной
+в <span class="math inline">\(A\)</span> фигуры <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-16">
-<p><strong>Теорема:</strong> (второй критерий квадрируемости) Плоская
-фигура <span class="math inline">\(A\)</span> квадрируема <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(второй
+критерий квадрируемости) Плоская фигура <span
+class="math inline">\(A\)</span> квадрируема <span
 class="math inline">\(\Leftrightarrow \,\,\,\, \mu^{*}(\partial A) =
 0\)</span>. (<span class="math inline">\(\partial A\)</span> – множество
 граничных точек <span class="math inline">\(A\)</span>)</p>
-<p><em>Доказательство:</em> запомните, что нужно получить <span
-class="math inline">\(32 \varepsilon\)</span> и вперед <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> запомните,
+что нужно получить <span class="math inline">\(32 \varepsilon\)</span> и
+вперед <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="кривые.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

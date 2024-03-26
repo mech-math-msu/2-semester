@@ -12,6 +12,7 @@
     <title>Плоскость в аффинном пространстве, как множество решений
 совместной системы линейных уравнений</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -86,7 +87,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -101,6 +102,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -219,7 +221,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -231,6 +237,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -260,7 +270,7 @@ id="плоскость-в-аффинном-пространстве-как-мн�
 в аффинном пространстве, как множество решений совместной системы
 линейных уравнений</h1>
 <div id="statement-108">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math inline">\(\mathbb{A}\)</span> – аффинное пространство, <span
 class="math inline">\(\dim \mathbb{A} = n\)</span>.</p>
 <ol type="1">
@@ -275,7 +285,8 @@ class="math inline">\(A\)</span>. Тогда множество ее решен�
 уравнений, такая, что множество ее решений совпадает с координатами
 точек <span class="math inline">\(\pi\)</span>.</p></li>
 </ol>
-<p><em>Доказательство:</em> ну, просто порассуждать <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> ну, просто
+порассуждать <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="22.1" id="аффинные-отображения">Аффинные
@@ -290,10 +301,10 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 class="math inline">\((\mathbb{B}, W)\)</span> – аффинные
 пространства.</p>
 <div id="definition-106">
-<p><strong>Определение: </strong><span class="math inline">\(f:
-\mathbb{A} \to \mathbb{B}\)</span> – <em>аффинное отображение</em>, если
-существует линейное отображение <span class="math inline">\(\varphi: U
-\to W\)</span>, такое, что <span
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(f: \mathbb{A} \to \mathbb{B}\)</span> –
+<em>аффинное отображение</em>, если существует линейное отображение
+<span class="math inline">\(\varphi: U \to W\)</span>, такое, что <span
 class="math inline">\(\overline{f(x)f(y)} =
 \varphi(\overline{xy})\)</span>, при этом <span
 class="math inline">\(\varphi\)</span> – <em>линейная часть</em>
@@ -301,67 +312,73 @@ class="math inline">\(\varphi\)</span> – <em>линейная часть</em>
 class="math inline">\(f\)</span>.</p>
 </div>
 <div id="statement-109">
-<p><strong>Утверждение: </strong>Композиция аффинных отображений –
-аффинное отображение, линейная часть которого является композицией
-линейных частей исходных отображений.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Композиция аффинных отображений – аффинное отображение,
+линейная часть которого является композицией линейных частей исходных
+отображений.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="statement-110">
-<p><strong>Утверждение: </strong>Аффинное отображение <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Аффинное отображение <span
 class="math inline">\(\Phi\)</span> – биекция <span
 class="math inline">\(\Leftrightarrow\)</span> дифференциал <span
 class="math inline">\(\Phi\)</span> является биекцией соответствующих
 векторных пространств.</p>
-<p><em>Доказательство:</em> было <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> было <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="22.2" id="какая-то-муть-про-матрицы">Какая-то муть про
 матрицы</h2>
 <h2 data-number="22.3" id="аффинные-операторы">Аффинные операторы</h2>
 <div id="definition-107">
-<p><strong>Определение: </strong><em>Аффинный оператор</em> – это
-аффинное отображение аффинного пространства <span
-class="math inline">\(\mathbb{A}\)</span> в себя.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Аффинный оператор</em> – это аффинное отображение
+аффинного пространства <span class="math inline">\(\mathbb{A}\)</span> в
+себя.</p>
 </div>
 <div id="definition-108">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(\Phi\)</span> – аффинное отображение.
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\Phi\)</span> – аффинное отображение.
 <em>Ранг</em> <span class="math inline">\(\Phi
 (\operatorname{rk}\Phi)\)</span> – это ранг матрицы линейной части <span
 class="math inline">\(\Phi\)</span>.</p>
 </div>
 <div id="definition-109">
-<p><strong>Определение: </strong>Аффинный оператор <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Аффинный оператор <span
 class="math inline">\(\Phi\)</span> <em>невырожден</em>, если <span
 class="math inline">\(\operatorname{rk}\Phi =
 \operatorname{rk}\mathbb{A}\)</span>.</p>
 </div>
 <div id="statement-111">
-<p><strong>Утверждение: </strong>Множество всех невырожденных операторов
-аффинного пространства <span class="math inline">\(\mathbb{A}\)</span>
-образует группу относительно композиции.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Множество всех невырожденных операторов аффинного
+пространства <span class="math inline">\(\mathbb{A}\)</span> образует
+группу относительно композиции.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="definition-110">
-<p><strong>Определение: </strong>Эта группа обозначается <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Эта
+группа обозначается <span
 class="math inline">\(\operatorname{Aff}(\mathbb{A})\)</span>.</p>
 </div>
 <div id="definition-111">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\((\mathbb{A}, V)\)</span> – аффинное пространство.
-<em>Сдвиг на вектор</em> <span class="math inline">\(v \in V\)</span> –
-это отображение <span class="math inline">\(f_v: \mathbb{A} \to
-\mathbb{A} \,\,\,\, f_v: a \mapsto a + v\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\((\mathbb{A}, V)\)</span> – аффинное
+пространство. <em>Сдвиг на вектор</em> <span class="math inline">\(v \in
+V\)</span> – это отображение <span class="math inline">\(f_v: \mathbb{A}
+\to \mathbb{A} \,\,\,\, f_v: a \mapsto a + v\)</span>.</p>
 </div>
 <div id="statement-112">
+<span class="margin-lft"><strong>Утверждение: </strong></span>
 <ol type="1">
-<li><strong>Утверждение: </strong></li>
 <li>Сдвиг на вектор – это аффинный оператор с тождественной линейной
 частью.</li>
 <li>Любой аффинный оператор с тождественной линейной частью является
 сдвигом на вектор.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li><span class="math inline">\(f_v(a) = a + v
 \,\,\,\,\blacksquare\)</span></li>
@@ -373,35 +390,37 @@ class="math inline">\(\forall b \in \mathbb{A} \,\,\,\, \Phi(b) =
 </ol>
 </div>
 <div id="definition-112">
-<p><strong>Определение: </strong>Множество всех сдвигов на вектор
-обозначается <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество всех сдвигов на вектор обозначается <span
 class="math inline">\(\operatorname{tran}\mathbb{A}\)</span>.</p>
 </div>
 <div id="statement-113">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math inline">\(\operatorname{tran}\mathbb{A}\)</span> подгруппа в
 группе <span
 class="math inline">\(\operatorname{Aff}(\mathbb{A})\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="definition-113">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(a\)</span> точка аффинного пространства <span
-class="math inline">\(\mathbb{A}\)</span>. Множество всех невырожденных
-аффинных операторов <span class="math inline">\(\Phi\)</span>, таких,
-что <span class="math inline">\(\Phi(a) = a\)</span> обозначается <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(a\)</span> точка аффинного пространства
+<span class="math inline">\(\mathbb{A}\)</span>. Множество всех
+невырожденных аффинных операторов <span
+class="math inline">\(\Phi\)</span>, таких, что <span
+class="math inline">\(\Phi(a) = a\)</span> обозначается <span
 class="math inline">\(G_a\)</span>.</p>
 </div>
 <div id="statement-114">
-<p><strong>Утверждение: </strong>(представление аффинного преобразование
-в виде композиции поворота и движения) Пусть <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>(представление аффинного преобразование в виде
+композиции поворота и движения) Пусть <span
 class="math inline">\((\mathbb{A}, V)\)</span> – аффинное пространство.
 <span class="math inline">\(a \in \mathbb{A}\)</span>. <span
 class="math inline">\(\Phi\)</span> – аффинное отображение. Тогда <span
 class="math inline">\(\exists ! \Psi_a \in G_a, t_v \in
 \operatorname{tran}\mathbb{A}, t_w  \in \operatorname{tran}\mathbb{A}:
 \,\,\,\, \Phi = t_v \circ \Psi_a = \Psi_a \circ t_w\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>Пусть <span class="math inline">\(v = \overline{a\Phi(a)} \Rightarrow
 \Phi(a) = a + v\)</span>. Пусть <span class="math inline">\(\Psi =
 (t_{v})^{-1}\circ\Phi = t_{-v}\circ\Phi\)</span>(почему?)</p>
@@ -420,19 +439,19 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="22.4" id="аффинно-независимая-система-точек">Аффинно
 независимая система точек</h2>
 <div id="definition-114">
-<p><strong>Определение: </strong>Система точек <span
-class="math inline">\(a_0, a_1, \ldots, a_s\)</span> <em>аффинно
-независима</em>, если <span class="math inline">\(\dim \langle a_0, a_1,
-\ldots, a_s\rangle_A = s\)</span> (точек <span class="math inline">\(s +
-1\)</span> штука).</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Система
+точек <span class="math inline">\(a_0, a_1, \ldots, a_s\)</span>
+<em>аффинно независима</em>, если <span class="math inline">\(\dim
+\langle a_0, a_1, \ldots, a_s\rangle_A = s\)</span> (точек <span
+class="math inline">\(s + 1\)</span> штука).</p>
 </div>
 <div id="statement-115">
-<p><strong>Утверждение: </strong>Система точек <span
-class="math inline">\(a_0, a_1, \ldots, a_s\)</span> аффинно независима
-<span class="math inline">\(\Leftrightarrow\)</span> векторы <span
-class="math inline">\(a_1 - a_0, \ldots, a_s - a_0\)</span> линейно
-независимы.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Система
+точек <span class="math inline">\(a_0, a_1, \ldots, a_s\)</span> аффинно
+независима <span class="math inline">\(\Leftrightarrow\)</span> векторы
+<span class="math inline">\(a_1 - a_0, \ldots, a_s - a_0\)</span>
+линейно независимы.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math display">\[\Leftarrow\]</span> <span
 class="math inline">\(\langle a_0, a_1, \ldots, a_s\rangle_A = a_0 +
 \langle a_1 - a_0, \ldots, a_s - a_0\rangle \Rightarrow \dim \langle
@@ -441,18 +460,18 @@ a_0, a_1, \ldots, a_s\rangle_A = s \,\,\,\,\blacksquare\)</span></p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-116">
-<p><strong>Утверждение: </strong>Пусть <span class="math inline">\((O,
-e)\)</span> – аффинная система координат. Тогда точки <span
-class="math inline">\(a_0, a_1, \ldots, a_s\)</span> с координатами
-<span class="math inline">\((x_1^0, \ldots, x_n^0), (x_1^1, \ldots,
-x_n^1), \ldots, (x_1^s, \ldots, x_n^s)\)</span> в <span
-class="math inline">\((O, e)\)</span> аффинно независимы <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\((O, e)\)</span> – аффинная система
+координат. Тогда точки <span class="math inline">\(a_0, a_1, \ldots,
+a_s\)</span> с координатами <span class="math inline">\((x_1^0, \ldots,
+x_n^0), (x_1^1, \ldots, x_n^1), \ldots, (x_1^s, \ldots, x_n^s)\)</span>
+в <span class="math inline">\((O, e)\)</span> аффинно независимы <span
 class="math inline">\(\Leftrightarrow\)</span> <span
 class="math inline">\(\operatorname{rk}\left(\begin{array}{ccc}x_1^0
 &amp; \ldots &amp; x_n^0\\x_1^1 &amp; \ldots &amp; x_n^1\\ &amp; \vdots
 &amp; \\x_1^s &amp; \ldots &amp; x_n^s\end{array}\right) =
 s\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span
 class="math inline">\(\operatorname{rk}\left(\begin{array}{ccc}x_1^0
 &amp; \ldots &amp; x_n^0\\x_1^1 &amp; \ldots &amp; x_n^1\\ &amp; \vdots
@@ -463,18 +482,20 @@ class="math inline">\(\overline{Oa_0}, \ldots, \overline{Oa_s}\)</span>.
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-117">
-<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(a_0,
-\ldots, a_n\)</span> аффинно независимая система точек, <span
-class="math inline">\(b_0, \ldots, b_n \in \mathbb{A}\)</span>. Тогда
-<span class="math inline">\(\exists !\)</span> аффинный оператор <span
-class="math inline">\(\Phi: \mathbb{A} \to \mathbb{A}: \,\,\,\,
-\Phi(a_i) = b_i \,\,\,\, \forall i \in \{1, \ldots, n\}\)</span>,
-причем, если <span class="math inline">\(b_i\)</span> аффинно
-независимы, <span class="math inline">\(\Phi\)</span> невырожден.</p>
-<p><em>Доказательство:</em> Существует единственный линейный оператор,
-переводящий базисные векторы <span class="math inline">\(a_1 - a_0,
-\ldots, a_n - a_0\)</span> в векторы <span class="math inline">\(b_1 -
-b_0, \ldots, b_n - b_0 \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(a_0, \ldots, a_n\)</span> аффинно
+независимая система точек, <span class="math inline">\(b_0, \ldots, b_n
+\in \mathbb{A}\)</span>. Тогда <span class="math inline">\(\exists
+!\)</span> аффинный оператор <span class="math inline">\(\Phi:
+\mathbb{A} \to \mathbb{A}: \,\,\,\, \Phi(a_i) = b_i \,\,\,\, \forall i
+\in \{1, \ldots, n\}\)</span>, причем, если <span
+class="math inline">\(b_i\)</span> аффинно независимы, <span
+class="math inline">\(\Phi\)</span> невырожден.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Существует
+единственный линейный оператор, переводящий базисные векторы <span
+class="math inline">\(a_1 - a_0, \ldots, a_n - a_0\)</span> в векторы
+<span class="math inline">\(b_1 - b_0, \ldots, b_n - b_0
+\,\,\,\,\blacksquare\)</span></p>
 </div>
 
 

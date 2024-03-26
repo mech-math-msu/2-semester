@@ -11,6 +11,7 @@
     
     <title>Корневые подпространства</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -257,15 +267,16 @@
 <h1 data-number="11" id="корневые-подпространства">Корневые
 подпространства</h1>
 <div id="definition-43">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – конечномерное векторное пространство,
-<span class="math inline">\(\mathcal{A}\)</span> – линейный оператор на
-<span class="math inline">\(V\)</span>. <span class="math inline">\(v
-\in V\)</span> – <em>корневой вектор</em> линейного оператора <span
-class="math inline">\(\mathcal{A}\)</span>, <em>отвечающий</em>
-собственному значению <span class="math inline">\(\lambda\)</span>, если
-<span class="math inline">\(\exists m \in \mathbb{N}: \,\,\,\,
-(\mathcal{A} - \lambda \mathcal{I})^m(v) = 0\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – конечномерное векторное
+пространство, <span class="math inline">\(\mathcal{A}\)</span> –
+линейный оператор на <span class="math inline">\(V\)</span>. <span
+class="math inline">\(v \in V\)</span> – <em>корневой вектор</em>
+линейного оператора <span class="math inline">\(\mathcal{A}\)</span>,
+<em>отвечающий</em> собственному значению <span
+class="math inline">\(\lambda\)</span>, если <span
+class="math inline">\(\exists m \in \mathbb{N}: \,\,\,\, (\mathcal{A} -
+\lambda \mathcal{I})^m(v) = 0\)</span>.</p>
 <p>(<span class="math inline">\((\mathcal{A} - \lambda \mathcal{I})^m(v)
 = (\mathcal{A} - \lambda \mathcal{I})((\mathcal{A} - \lambda
 \mathcal{I})^{m - 1}(v)) = (\mathcal{A} - \lambda \mathcal{I})(y) = 0
@@ -282,51 +293,52 @@ class="math inline">\(\mathcal{A}\)</span>)</p>
 высотой <span class="math inline">\(1\)</span>.</p>
 </div>
 <div id="statement-49">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – конечномерное векторное пространство,
-<span class="math inline">\(\mathcal{A}\)</span> – линейный оператор на
-<span class="math inline">\(V\)</span>, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – конечномерное векторное
+пространство, <span class="math inline">\(\mathcal{A}\)</span> –
+линейный оператор на <span class="math inline">\(V\)</span>, <span
 class="math inline">\(\lambda\)</span> – собственное значение <span
 class="math inline">\(\mathcal{A}\)</span>. Тогда <span
 class="math inline">\(V(\lambda) = \{v \in V| \,\,\,\, \exists m \in
 \mathbb{N}: \,\,\,\, (\mathcal{A} - \lambda \mathcal{I})(v) =
 0\}\)</span> – подпространство в <span
 class="math inline">\(V\)</span>.</p>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-44">
-<p><strong>Определение: </strong><span
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
 class="math inline">\(V(\lambda)\)</span> – <em>корневое</em>
 подпространство <span class="math inline">\(V\)</span>, отвечающее
 собственному значению <span class="math inline">\(\lambda\)</span>.</p>
 </div>
 <div id="statement-50">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – конечномерное векторное пространство,
-<span class="math inline">\(\mathcal{A}\)</span> – линейный оператор на
-<span class="math inline">\(V\)</span>, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – конечномерное векторное
+пространство, <span class="math inline">\(\mathcal{A}\)</span> –
+линейный оператор на <span class="math inline">\(V\)</span>, <span
 class="math inline">\(\lambda\)</span> – собственное значение <span
 class="math inline">\(\mathcal{A}\)</span>. Тогда <span
 class="math inline">\(V(\lambda)\)</span> инвариантное подпространство
 оператора <span class="math inline">\(\mathcal{A}\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall v \in
-V(\lambda) \,\,\,\, \exists m \in \mathbb{N}: \,\,\,\, (\mathcal{A} -
-\lambda \mathcal{I})^m(v) = 0\)</span> (ничего непонятно)</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall v \in V(\lambda) \,\,\,\, \exists m \in
+\mathbb{N}: \,\,\,\, (\mathcal{A} - \lambda \mathcal{I})^m(v) =
+0\)</span> (ничего непонятно)</p>
 </div>
 <div id="statement-51">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – конечномерное векторное пространство,
-<span class="math inline">\(\mathcal{A}\)</span> – линейный оператор на
-<span class="math inline">\(V\)</span>, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – конечномерное векторное
+пространство, <span class="math inline">\(\mathcal{A}\)</span> –
+линейный оператор на <span class="math inline">\(V\)</span>, <span
 class="math inline">\(\lambda_1, \ldots, \lambda_s\)</span> – все
 собственные значения <span class="math inline">\(\mathcal{A}\)</span>.
 Тогда все пространство <span class="math inline">\(V\)</span>
 разбивается на прямую сумму корневых подпространств, отвечающих
 значениям <span class="math inline">\(\lambda_1, \ldots,
 \lambda_s\)</span>.</p>
-<p><em>Доказательство:</em> Так как поле алгебраически замкнуто,
-существует базис, в котором матрица <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Так как поле
+алгебраически замкнуто, существует базис, в котором матрица <span
 class="math inline">\(A\)</span> линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span> жорданова. Базис жордановой
 матрицы – это объединение базисов ее клеток. Пусть жорданов базис <span
@@ -361,9 +373,9 @@ class="math inline">\(\tilde{x} = 0 \Rightarrow x = x_i
 </div>
 <h2 data-number="11.1" id="билинейные-функции">Билинейные функции</h2>
 <div id="definition-45">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над полем
-<span class="math inline">\(F\)</span>. Отображение <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+полем <span class="math inline">\(F\)</span>. Отображение <span
 class="math inline">\(\beta: \,\,\,\, V \times V \to F\)</span> –
 <em>билинейная функция</em>, если:</p>
 <ol type="1">
@@ -375,8 +387,8 @@ class="math inline">\(\beta: \,\,\,\, V \times V \to F\)</span> –
 \beta(x, z)\)</span></li>
 </ol>
 </div>
-<h3 data-number="11.1.1" id="матрица-билинейной-функции">Матрица
-билинейной функции</h3>
+<h4 data-number="11.1.0.1" id="матрица-билинейной-функции">Матрица
+билинейной функции</h4>
 <p>Пусть <span class="math inline">\(V\)</span> – векторное пространство
 размерности <span class="math inline">\(n\)</span> над полем <span
 class="math inline">\(F\)</span>, <span class="math inline">\(e = \{e_1,
@@ -389,8 +401,9 @@ e_j) y_i\]</span></p>
 <p>Обозначим <span class="math inline">\(\beta(e_i, e_j) =
 b_{ij}\)</span>.</p>
 <div id="definition-46">
-<p><strong>Определение: </strong><span class="math inline">\(B =
-\left(\begin{array}{ccc}b_{11} &amp; \dots &amp; b_{1n}\\
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(B = \left(\begin{array}{ccc}b_{11} &amp; \dots
+&amp; b_{1n}\\
 \vdots &amp; \ddots &amp; \vdots\\
 b_{n1} &amp; \dots &amp; b_{nn}\end{array}\right)\)</span> – <em>матрица
 билинейной функции</em> <span class="math inline">\(\beta\)</span> <em>в
@@ -399,13 +412,13 @@ b_{n1} &amp; \dots &amp; b_{nn}\end{array}\right)\)</span> – <em>матриц�
 class="math inline">\(X, Y\)</span> столбцы координат векторов <span
 class="math inline">\(x, y\)</span> соответственно.</p>
 </div>
-<h3 data-number="11.1.2"
+<h3 data-number="11.1.1"
 id="изменение-матрицы-билинейной-функции-при-переходе-от-одного-базиса-к-другому">Изменение
 матрицы билинейной функции при переходе от одного базиса к другому</h3>
 <div id="statement-52">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство размерности
-<span class="math inline">\(n\)</span> над полем <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство
+размерности <span class="math inline">\(n\)</span> над полем <span
 class="math inline">\(F\)</span>, <span class="math inline">\(e,
 \tilde{e}\)</span> – базисы <span class="math inline">\(V\)</span>,
 <span class="math inline">\(\beta\)</span> – билинейная функция, <span
@@ -414,8 +427,9 @@ class="math inline">\(e\)</span> и <span
 class="math inline">\(\tilde{e}\)</span> соответственно. Тогда <span
 class="math display">\[\tilde{B} = C_{e \to \tilde{e}}^TB C_{e \to
 \tilde{e}}\]</span></p>
-<p><em>Доказательство:</em> записать все и подставить одно в другое
-<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> записать все
+и подставить одно в другое <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 
 

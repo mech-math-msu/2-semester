@@ -11,7 +11,10 @@
     
     <title>Неопределенный интеграл</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,17 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="определенный-интеграл-римана.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="определенный-интеграл-римана.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,8 +267,8 @@
 <h1 data-number="1" id="неопределенный-интеграл">Неопределенный
 интеграл</h1>
 <div id="definition-0">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f(x)\)</span> определена на <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена на <span
 class="math inline">\((a, b)\)</span>. Пусть <span
 class="math inline">\(F(x)\)</span>, такова что <span
 class="math inline">\(F’(x) = f(x) \,\,\,\, \forall x \in (a,
@@ -258,7 +277,8 @@ b)\)</span>. Тогда <span class="math inline">\(F(x)\)</span>
 <span class="math inline">\((a, b)\)</span>.</p>
 </div>
 <div id="definition-1">
-<p><strong>Определение:</strong> <em>Неопределенный интеграл</em> <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Неопределенный интеграл</em> <span
 class="math inline">\(f(x)\)</span> на <span class="math inline">\((a,
 b)\)</span> – это множество всех первообразных <span
 class="math inline">\(f(x)\)</span> на <span class="math inline">\((a,
@@ -270,14 +290,14 @@ dF(x)\)</span>. То есть интеграл – это множество в�
 дифференциал которых равен некоторой заданной функции <span
 class="math inline">\(f(x)\)</span>.</p>
 <div id="theorem-0">
-<p><strong>Теорема:</strong> Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(F(x)\)</span> первообразная <span
 class="math inline">\(f(x)\)</span> на <span class="math inline">\((a,
 b)\)</span>. Тогда <span class="math display">\[\displaystyle \int
 f(x)dx = \{F(x) + g(x), \,\,\,\, g(x) = C, \,\,\,\, C \in
 \mathbb{R}\}\]</span></p>
-<p><em>Доказательство:</em> Докажем, что <span
-class="math inline">\(F(x) + C\)</span> – это первообразная <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Докажем, что
+<span class="math inline">\(F(x) + C\)</span> – это первообразная <span
 class="math inline">\(f(x)\)</span> на <span class="math inline">\((a,
 b)\)</span>. <span class="math inline">\((F(x) + C)’ = F’(x) + C’ =
 f(x)\)</span>.</p>
@@ -297,8 +317,8 @@ F(x) + C\)</span>, подразумевая множество всех перв
 <h2 data-number="1.1" id="свойства-неопределенного-интеграла">Свойства
 неопределенного интеграла</h2>
 <div id="statement-0">
-<p><strong>Утверждение:</strong> (<em>Свойства неопределенного
-интеграла</em>)</p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>(<em>Свойства неопределенного интеграла</em>)</p>
 <ol type="1">
 <li><p><span class="math inline">\(\displaystyle \int k \cdot f(x) dx =
 k \cdot \displaystyle \int f(x) dx\)</span> (Множество умножить на число
@@ -313,7 +333,7 @@ class="math inline">\(f(x)\)</span>.</p></li>
 <li><p><span class="math inline">\(\displaystyle \int f’(x) g(x) dx =
 f(x)g(x) - \displaystyle \int f(x) g’(x) dx\)</span></p></li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li>– 3. очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
@@ -396,7 +416,7 @@ class="math display">\[\displaystyle\int \frac{dt}{t^2 + e^2} =
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

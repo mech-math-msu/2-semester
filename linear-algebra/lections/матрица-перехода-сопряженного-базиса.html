@@ -11,6 +11,7 @@
     
     <title>Матрица перехода сопряженного базиса</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -257,7 +267,7 @@
 <h1 data-number="5" id="матрица-перехода-сопряженного-базиса">Матрица
 перехода сопряженного базиса</h1>
 <div id="theorem-5">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство, <span
 class="math inline">\(B = \{e_1, \ldots, e_n\}\)</span> и <span
 class="math inline">\(\tilde{B} = \{\tilde{e}_1, \ldots,
@@ -269,7 +279,7 @@ class="math inline">\(\tilde{B} = \{\tilde{e}_1, \ldots,
 class="math inline">\(\tilde{B}\)</span> базисы. Тогда <span
 class="math inline">\(C_{B \to \tilde{B}}^T = C_{\tilde{B}^{*} \to
 B^{*}}\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math display">\[\tilde{e}_1 = \lambda_{11}e_1 + \ldots +
 \lambda_{n1}e_n\]</span> <span class="math display">\[\tilde{e}_2 =
 \lambda_{12}e_1 + \ldots + \lambda_{n2}e_n\]</span> <span
@@ -306,20 +316,20 @@ C_{B^{*} \to \tilde{B}^{*}}^T = E \,\,\,\,\blacksquare\]</span></p>
 id="ядро-линейной-функциилинейного-функционала">Ядро линейной
 функции(линейного функционала)</h2>
 <div id="definition-16">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(\varphi\)</span> – линейная функция на векторном
-пространстве <span class="math inline">\(V\)</span>. Тогда <em>ядро</em>
-<span class="math inline">\(\varphi\)</span> – это <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\varphi\)</span> – линейная функция на
+векторном пространстве <span class="math inline">\(V\)</span>. Тогда
+<em>ядро</em> <span class="math inline">\(\varphi\)</span> – это <span
 class="math inline">\(\ker \varphi = \{v \in V: \,\,\,\, \varphi(v) =
 0\}\)</span>.</p>
 </div>
 <div id="statement-15">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(\varphi\)</span> – линейная функция на векторном
-пространстве <span class="math inline">\(V\)</span>. Тогда <span
-class="math inline">\(\ker \varphi\)</span> – подпространство <span
-class="math inline">\(V\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\varphi\)</span> – линейная функция на
+векторном пространстве <span class="math inline">\(V\)</span>. Тогда
+<span class="math inline">\(\ker \varphi\)</span> – подпространство
+<span class="math inline">\(V\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li><span class="math inline">\(0 \in \ker \varphi\)</span>, так как
 <span class="math inline">\(\varphi(0) = \varphi(0 + 0) = \varphi(0) +
@@ -331,16 +341,16 @@ class="math inline">\(V\)</span>.</p>
 </ol>
 </div>
 <div id="statement-16">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> векторное пространство, тогда любое его
-подпространство <span class="math inline">\(U\)</span> может быть
-представлено как конечное пересечение ядер некоторых линейных функций на
-<span class="math inline">\(V\)</span>.</p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(B = \{e_1,
-\ldots, e_m\}\)</span> – базис в <span class="math inline">\(U\)</span>.
-Дополним его до базиса <span class="math inline">\(V\)</span>: <span
-class="math inline">\(B’ = \{e_1, \ldots, e_m, e_{m + 1} \ldots,
-e_n\}\)</span>.</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> векторное пространство, тогда
+любое его подпространство <span class="math inline">\(U\)</span> может
+быть представлено как конечное пересечение ядер некоторых линейных
+функций на <span class="math inline">\(V\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(B = \{e_1, \ldots, e_m\}\)</span> – базис в <span
+class="math inline">\(U\)</span>. Дополним его до базиса <span
+class="math inline">\(V\)</span>: <span class="math inline">\(B’ =
+\{e_1, \ldots, e_m, e_{m + 1} \ldots, e_n\}\)</span>.</p>
 <p>Пусть <span class="math inline">\(v \in V\)</span>, разложим его по
 базису: <span class="math inline">\(v = \lambda_1e_1 + \ldots +
 \lambda_n e_n\)</span>.</p>
@@ -361,8 +371,8 @@ class="math inline">\(u \in \ker\varepsilon^{m + 1}, \ldots,
 1}^{n}\ker \varepsilon^i = U \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-17">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство, <span
 class="math inline">\(B = \{e_1, \ldots, e_m, e_{m + 1}, \ldots,
 e_n\}\)</span> – базис <span class="math inline">\(V\)</span>, <span
 class="math inline">\(U\)</span> – попространство <span
@@ -371,9 +381,9 @@ class="math inline">\(V\)</span>, <span class="math inline">\(B’ =
 class="math inline">\(U\)</span>. Тогда <span
 class="math inline">\(U\)</span> – это множество решений некоторой
 однородной системы линейных уравнений.</p>
-<p><em>Доказательство:</em> Рассмотрим некоторой базис <span
-class="math inline">\(\tilde{B} = \{\tilde{e}_1, \ldots,
-\tilde{e}_n\}\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Рассмотрим
+некоторой базис <span class="math inline">\(\tilde{B} = \{\tilde{e}_1,
+\ldots, \tilde{e}_n\}\)</span>.</p>
 <p>Тогда координаты вектора в базисе <span
 class="math inline">\(B\)</span> выражаются через координаты в базисе
 <span class="math inline">\(\tilde{B}\)</span> так: <span
@@ -415,8 +425,8 @@ x_n
 <h2 data-number="5.2" id="линейные-отображения">Линейные
 отображения</h2>
 <div id="definition-17">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>. <span
 class="math inline">\(\varphi: \,\,\,\, V \to W\)</span> – <em>линейное
@@ -431,8 +441,8 @@ class="math inline">\(\varphi: \,\,\,\, V \to W\)</span> – <em>линейно�
 <h3 data-number="5.2.1" id="матрицы-линейных-отображений">Матрицы
 линейных отображений</h3>
 <div id="definition-18">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\varphi: U \to W\)</span> – линейное отображение.
@@ -459,8 +469,8 @@ class="math inline">\(B\)</span> и <span
 class="math inline">\(B’\)</span>.</p>
 </div>
 <div id="statement-18">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\varphi: U \to W\)</span> – линейное отображение.
@@ -477,9 +487,9 @@ class="math inline">\(\tilde{B}\)</span> и <span
 class="math inline">\(\tilde{B}’\)</span>. Тогда <span
 class="math display">\[\mathcal{A}’ = C_{\tilde{B} \to
 \tilde{B}’}^{-1}\mathcal{A}C_{B \to B’}\]</span></p>
-<p><em>Доказательство:</em> записать все в матричном виде (<span
-class="math inline">\(Y = \mathcal{A}X\)</span>, <span
-class="math inline">\(Y\)</span> – координаты вектора в <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> записать все
+в матричном виде (<span class="math inline">\(Y = \mathcal{A}X\)</span>,
+<span class="math inline">\(Y\)</span> – координаты вектора в <span
 class="math inline">\(W\)</span>, <span class="math inline">\(X\)</span>
 – координаты вектора в <span class="math inline">\(U\)</span>) <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
@@ -487,8 +497,8 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="5.3" id="ядро-и-образ-линейного-отображения">Ядро и
 образ линейного отображения</h2>
 <div id="definition-19">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\varphi: U \to W\)</span> – линейное отображение.
@@ -497,8 +507,8 @@ class="math inline">\(\ker \varphi = \{u \in U: \,\,\,\, \varphi(u) =
 0\}\)</span>.</p>
 </div>
 <div id="definition-20">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\varphi: U \to W\)</span> – линейное отображение.
@@ -507,8 +517,8 @@ class="math inline">\(\operatorname{Img} \varphi = \{w \in W:
 \,\,\,\,\exists u \in U \,\,\,\, \varphi(u) = w\}\)</span>.</p>
 </div>
 <div id="statement-19">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\varphi: U \to W\)</span> – линейное отображение.
@@ -516,12 +526,12 @@ class="math inline">\(\varphi: U \to W\)</span> – линейное отобр�
 в <span class="math inline">\(U\)</span> и <span
 class="math inline">\(\operatorname{Img} \varphi\)</span>
 подпространство в <span class="math inline">\(W\)</span>.</p>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-20">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – векторные пространства над полем
 <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\varphi: U \to W\)</span> – линейное
@@ -531,8 +541,8 @@ class="math inline">\(\Leftrightarrow \operatorname{Img} \varphi =
 W\)</span></p>
 <p><span class="math inline">\(\varphi\)</span> – инъективно <span
 class="math inline">\(\Leftrightarrow \ker \varphi = \{0\}\)</span></p>
-<p><em>Доказательство:</em> ну, почти очев <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> ну, почти
+очев <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 
 

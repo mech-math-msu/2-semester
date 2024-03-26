@@ -11,6 +11,7 @@
     
     <title>Линейные функции в евклидовом пространстве</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -258,7 +268,7 @@
 id="линейные-функции-в-евклидовом-пространстве">Линейные функции в
 евклидовом пространстве</h1>
 <div id="theorem-15">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(V\)</span> – конечномерное евклидово пространство.
 Тогда</p>
 <ol type="1">
@@ -274,7 +284,7 @@ class="math inline">\(V^{*}\)</span>.</li>
 коэффицентами <span class="math inline">\(\varphi_a\)</span> в
 сопряженном к <span class="math inline">\(e\)</span> базисе.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li>По определению скалярного произведения.</li>
 <li>Докажем, что <span class="math inline">\(\psi\)</span> – линейно.
@@ -313,7 +323,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 id="билинейные-функции-и-линейные-операторы-в-евклидовом-пространстве">Билинейные
 функции и линейные операторы в евклидовом пространстве</h2>
 <div id="theorem-16">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(V\)</span> – конечномерное евклидово пространство.
 Тогда</p>
 <ol type="1">
@@ -331,7 +341,7 @@ class="math inline">\(\beta_{\mathcal{A}}\)</span> совпадает с мат�
 линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li><p>Докажем, что <span class="math inline">\(\beta\)</span>
 билинейная функция. <span class="math inline">\(\beta(x + y, z) = (x +
@@ -355,8 +365,8 @@ X^TAY \Rightarrow B = A \,\,\,\,\blacksquare\)</span></p></li>
 <h2 data-number="16.2" id="сопряженный-линейный-оператор">Сопряженный
 линейный оператор</h2>
 <div id="definition-70">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – евклидово пространство, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – евклидово пространство, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>. Линейный оператор <span
 class="math inline">\(\mathcal{A}^{*}\)</span> – <em>сопряженный</em> к
@@ -365,14 +375,14 @@ class="math inline">\(\forall x, y \in V \,\,\,\, (\mathcal{A}(x), y) =
 (x, \mathcal{A}^{*}(y))\)</span>.</p>
 </div>
 <div id="theorem-17">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(V\)</span> – евклидово пространство, <span
 class="math inline">\(\dim V = n\)</span>. Тогда у любого линейного
 оператора <span class="math inline">\(\mathcal{A}\)</span> существует
 единственный сопряженный линейный оператор <span
 class="math inline">\(\mathcal{A}^{*}\)</span>.</p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(A\)</span>
-матрица линейного оператора <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(A\)</span> матрица линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span>. Рассмотрим <span
 class="math inline">\(\mathcal{B}\)</span> – линейный оператор с
 матрицей <span class="math inline">\(A^T\)</span>. Имеем <span
@@ -392,10 +402,10 @@ class="math inline">\(\mathcal{C}\)</span> сопадают <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-8">
-<p><strong>Следствие: </strong>Пусть <span
-class="math inline">\(V\)</span> – конечномерное евклидово пространство.
-<span class="math inline">\(\mathcal{A}\)</span> – линейный оператор на
-<span class="math inline">\(V\)</span>, <span
+<p><span class="margin-lft"><strong>Следствие: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – конечномерное евклидово
+пространство. <span class="math inline">\(\mathcal{A}\)</span> –
+линейный оператор на <span class="math inline">\(V\)</span>, <span
 class="math inline">\(A\)</span> – матрица <span
 class="math inline">\(\mathcal{A}\)</span> в ортонормированном базисе
 <span class="math inline">\(e\)</span>. Тогда матрица сопряженного к
@@ -403,43 +413,46 @@ class="math inline">\(\mathcal{A}\)</span> в ортонормированном
 <span class="math inline">\(\mathcal{A}^{*}\)</span> в базисе <span
 class="math inline">\(e\)</span> – это <span
 class="math inline">\(A^T\)</span>.</p>
-<p><em>Доказательство:</em> см. утверждение <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> см.
+утверждение <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h3 data-number="16.2.1"
 id="самосопряженный-линейный-оператор">Самосопряженный линейный
 оператор</h3>
 <div id="definition-71">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – евклидово пространство. Линейный
-оператор <span class="math inline">\(\mathcal{A}\)</span> –
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – евклидово пространство.
+Линейный оператор <span class="math inline">\(\mathcal{A}\)</span> –
 <em>самосопряженный</em>, если <span
 class="math inline">\(\mathcal{A}^{*} = \mathcal{A}\)</span>.</p>
 </div>
 <div id="statement-69">
-<p><strong>Утверждение: </strong>Линейный оператор <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Линейный оператор <span
 class="math inline">\(\mathcal{A}\)</span> на конечномерном евклидовом
 пространстве самосопряженный <span
 class="math inline">\(\Leftrightarrow\)</span> его матрица <span
 class="math inline">\(A\)</span> <em>симметрическая</em>, то есть <span
 class="math inline">\(A = A^T\)</span>.</p>
-<p><em>Доказательство:</em> см. утверждение <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> см.
+утверждение <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h4 data-number="16.2.1.1"
 id="канонический-вид-самосопряженного-линейного-оператора">Канонический
 вид самосопряженного линейного оператора</h4>
 <div id="lemma-2">
-<p><strong>Лемма: </strong>Пусть <span class="math inline">\(V\)</span>
-– конечномерное евклидово пространство, <span
-class="math inline">\(\mathcal{A}\)</span> – самосопряженный линейный
-оператор на <span class="math inline">\(V\)</span>, <span
+<p><span class="margin-lft"><strong>Лемма: </strong></span>Пусть <span
+class="math inline">\(V\)</span> – конечномерное евклидово пространство,
+<span class="math inline">\(\mathcal{A}\)</span> – самосопряженный
+линейный оператор на <span class="math inline">\(V\)</span>, <span
 class="math inline">\(U\)</span> – инвариантное подпространство
 оператора <span class="math inline">\(\mathcal{A}\)</span>. Тогда <span
 class="math inline">\(U^{\perp}\)</span> (ортогональное дополнение <span
 class="math inline">\(U\)</span>) – инвариантное подпространство
 оператора <span class="math inline">\(\mathcal{A}\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math inline">\(U\)</span> – инвариантное пространство
 относительно оператора <span class="math inline">\(\mathcal{A}\)</span>,
 то есть <span class="math inline">\(\forall u \in U \,\,\,\,
@@ -449,14 +462,15 @@ class="math inline">\(\forall u \in U \,\,\,\, (\mathcal{A}(u^{\perp}),
 u) = (u^{\perp}, \mathcal{A}(u)) = 0 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-18">
-<p><strong>Теорема: </strong>(канонический вид самосопряженного
-линейного оператора) Пусть <span class="math inline">\(V\)</span> –
-евклидово пространство, <span class="math inline">\(\dim V = n\)</span>.
-Тогда у любого самосопряженного линейного оператора <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(канонический вид самосопряженного линейного оператора)
+Пусть <span class="math inline">\(V\)</span> – евклидово пространство,
+<span class="math inline">\(\dim V = n\)</span>. Тогда у любого
+самосопряженного линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span> существует ортонормированный
 базис, состоящий из собственных векторов <span
 class="math inline">\(\mathcal{A}\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>По индукции по размерности пространства.</p>
 <p><strong>База:</strong></p>
 <p><span class="math inline">\(n = 1\)</span> Очевидно <span

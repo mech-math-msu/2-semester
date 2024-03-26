@@ -11,7 +11,10 @@
     
     <title>Теорема Жордана</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,40 +237,51 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="конструкции-как-получить-новую-топологию-из-уже-существующих.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="планарные-графы-1.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="конструкции-как-получить-новую-топологию-из-уже-существующих.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="планарные-графы-1.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
 
 
-<h1 data-number="5" id="теорема-жордана-1">Теорема Жордана</h1>
+<h1 data-number="6" id="теорема-жордана-1">Теорема Жордана</h1>
 <div id="definition-68">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(X\)</span> – топологическое пространство. Пусть
-<span class="math inline">\(\gamma: [a, b] \to X\)</span> – непрерывная
-кривая.<br> <span class="math inline">\(\gamma\)</span> –
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(X\)</span> – топологическое пространство.
+Пусть <span class="math inline">\(\gamma: [a, b] \to X\)</span> –
+непрерывная кривая.<br> <span class="math inline">\(\gamma\)</span> –
 <em>замкнутая</em>, если <span class="math inline">\(\gamma(a) =
 \gamma(b)\)</span>.<br> <span class="math inline">\(\gamma\)</span> –
 <em>незамкнутая</em>, если <span class="math inline">\(\gamma(a) \ne
 \gamma(b)\)</span>.</p>
 </div>
 <div id="definition-69">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(X\)</span> – топологическое пространство. Пусть
-<span class="math inline">\(\gamma: [a, b] \to X\)</span> – непрерывная
-кривая. <br> Пусть <span class="math inline">\(\gamma\)</span>
-<strong>незамкнутая</strong> кривая. <span
-class="math inline">\(\gamma\)</span> – <em>кривая без
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(X\)</span> – топологическое пространство.
+Пусть <span class="math inline">\(\gamma: [a, b] \to X\)</span> –
+непрерывная кривая. <br> Пусть <span
+class="math inline">\(\gamma\)</span> <strong>незамкнутая</strong>
+кривая. <span class="math inline">\(\gamma\)</span> – <em>кривая без
 самопересечений</em>, если ее образ <span
 class="math inline">\(\gamma([a, b])\)</span> – взаимнооднозначен с
 <span class="math inline">\([a, b]\)</span>. <br> Пусть <span
@@ -274,10 +293,10 @@ class="math inline">\(b\)</span> выполнено <span
 class="math inline">\(\gamma(a) = \gamma(b)\)</span>.</p>
 </div>
 <div id="theorem-5">
-<p><strong>Теорема:</strong> (теорема Жордана) Пусть <span
-class="math inline">\(\gamma: [a, b] \to \mathbb{R}^2\)</span> –
-непрерывная кривая без самопересечений. Пусть <span
-class="math inline">\(\Gamma = \gamma([a, b])\)</span> – образ
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(теорема
+Жордана) Пусть <span class="math inline">\(\gamma: [a, b] \to
+\mathbb{R}^2\)</span> – непрерывная кривая без самопересечений. Пусть
+<span class="math inline">\(\Gamma = \gamma([a, b])\)</span> – образ
 отображения <span class="math inline">\(\gamma\)</span> и <span
 class="math inline">\(\Omega = \mathbb{R}^2 \setminus \Gamma\)</span>.
 Тогда</p>
@@ -289,25 +308,25 @@ class="math inline">\(\Omega = \mathbb{R}^2 \setminus \Gamma\)</span>.
 линейной связности.</li>
 </ol>
 <div id="definition-70">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(a, b
-\in \mathbb{R}^n, \,\,\,\, n &gt; 1\)</span>. Множество <span
-class="math inline">\(\{a + (b - a)\cdot t, \,\,\,\, t \in [0,
-1]\}\)</span> – <em>отрезок</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(a, b \in \mathbb{R}^n, \,\,\,\, n &gt;
+1\)</span>. Множество <span class="math inline">\(\{a + (b - a)\cdot t,
+\,\,\,\, t \in [0, 1]\}\)</span> – <em>отрезок</em>.</p>
 </div>
 <div id="definition-71">
-<p><strong>Определение:</strong> <em>Ломаная</em> <span
-class="math inline">\(L\)</span> в <span
-class="math inline">\(\mathbb{R}^n\)</span> – это последовательность
-точек <span class="math inline">\(\{a_i \in \mathbb{R}\}_{i =
-0}^m\)</span> и последовательность отрезков <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Ломаная</em> <span class="math inline">\(L\)</span>
+в <span class="math inline">\(\mathbb{R}^n\)</span> – это
+последовательность точек <span class="math inline">\(\{a_i \in
+\mathbb{R}\}_{i = 0}^m\)</span> и последовательность отрезков <span
 class="math inline">\(\{[a_i, a_{i + 1}]\}_{i = 0}^{m -
 1}\)</span>.<br>Если <span class="math inline">\(a_0 = a_m\)</span>, то
 ломаная – <em>замкнутая</em>, иначе ломаная – <em>незамкнутая</em>.</p>
 </div>
 <div id="definition-72">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(L\)</span> – <strong>незамкнутая</strong> ломаная.
-<span class="math inline">\(L\)</span> – <em>ломаная без
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(L\)</span> – <strong>незамкнутая</strong>
+ломаная. <span class="math inline">\(L\)</span> – <em>ломаная без
 самопересечений</em>, если никакие два отрезки <span
 class="math inline">\(L\)</span>, кроме <span
 class="math inline">\([a_{i - 1}, a_i] \cap [a_i, a_{i + 1}] = \{a_i\},
@@ -341,13 +360,14 @@ class="math inline">\(\Omega\)</span> состоит из двух компон�
 href="граф-определения.html#theorem-1">Теорема Жордана для ломаных</a> –
 частный случай <a href="граф-определения.html#theorem-0">теоремы
 Жордана</a>.</p>
-<p><em>Доказательство:</em> Построить непрерывную кривую, образом
-которой является ломаная <span class="math inline">\(L \subset
-\mathbb{R}^2 \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Построить
+непрерывную кривую, образом которой является ломаная <span
+class="math inline">\(L \subset \mathbb{R}^2
+\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-73">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(A\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(A\)</span> и <span
 class="math inline">\(B\)</span> непустые подмножества <span
 class="math inline">\(\mathbb{R}^n\)</span>. <em>Расстояние между
 подмножествами</em> <span class="math inline">\(A\)</span> и <span
@@ -359,22 +379,24 @@ class="math inline">\(A\)</span> - <span
 class="math inline">\(\rho(\{a\}, A)\)</span>.</p>
 </div>
 <div id="statement-38">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\([a_1,
-b_1]\)</span> и <span class="math inline">\([a_2, b_2]\)</span> отрезки
-в <span class="math inline">\(\mathbb{R}^n\)</span>. <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\([a_1, b_1]\)</span> и <span
+class="math inline">\([a_2, b_2]\)</span> отрезки в <span
+class="math inline">\(\mathbb{R}^n\)</span>. <span
 class="math inline">\(\rho([a_1, b_1], [a_2, b_2]) = 0 \Leftrightarrow
 [a_1, b_1] \cap [a_2, b_2] \ne \varnothing\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\([a_1, b_1] =
-\{a_1 + (b_1 - a_1)\cdot t_1, \,\,\,\, t_1 \in [0, 1]\}\)</span> и <span
-class="math inline">\([a_2, b_2] = \{a_2 + (b_2 - a_2)\cdot t_2,
-\,\,\,\, t_2 \in [0, 1]\)</span>. Рассмотрим функцию <span
-class="math inline">\(f(t_1, t_2) = \rho(a_1 + (b_1 - a_1)\cdot t_1, a_2
-+ (b_2 - a_2)\cdot t_2), \,\,\,\, t_1, t_2 \in [0, 1]\)</span> (здесь
-<span class="math inline">\(\rho\)</span> метрика, а не расстояние между
-подмножествами). <span class="math inline">\(f\)</span> непрерывна, как
-композиция непрерывных. <span class="math inline">\(f\)</span>
-определена на <span class="math inline">\([0, 1]\times[0, 1]\)</span>.
-<span class="math inline">\([0, 1]\times[0, 1]\)</span> – замкнуто и
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\([a_1, b_1] = \{a_1 + (b_1 - a_1)\cdot t_1,
+\,\,\,\, t_1 \in [0, 1]\}\)</span> и <span class="math inline">\([a_2,
+b_2] = \{a_2 + (b_2 - a_2)\cdot t_2, \,\,\,\, t_2 \in [0, 1]\)</span>.
+Рассмотрим функцию <span class="math inline">\(f(t_1, t_2) = \rho(a_1 +
+(b_1 - a_1)\cdot t_1, a_2 + (b_2 - a_2)\cdot t_2), \,\,\,\, t_1, t_2 \in
+[0, 1]\)</span> (здесь <span class="math inline">\(\rho\)</span>
+метрика, а не расстояние между подмножествами). <span
+class="math inline">\(f\)</span> непрерывна, как композиция непрерывных.
+<span class="math inline">\(f\)</span> определена на <span
+class="math inline">\([0, 1]\times[0, 1]\)</span>. <span
+class="math inline">\([0, 1]\times[0, 1]\)</span> – замкнуто и
 ограничено, а значит компакт. Непрерывная функция на компакте достигает
 своего наименьшего и наибольшего значения. Если <span
 class="math inline">\([a_1, b_1] \cap [a_2, b_2] = \varnothing\)</span>,
@@ -384,13 +406,14 @@ t_2) &gt; 0 \,\,\,\, \forall t_1, t_2 \in [0, 1]
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-5">
-<p><strong>Следствие:</strong> Расстояние между ломаными равно нулю
-тогда и только тогда, когда они пересекаются.</p>
+<p><span class="margin-lft"><strong>Следствие:
+</strong></span>Расстояние между ломаными равно нулю тогда и только
+тогда, когда они пересекаются.</p>
 <div id="definition-74">
-<p><strong>Определение:</strong> Любое открытое покрытие множества – это
-его <em>окрестность</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Любое
+открытое покрытие множества – это его <em>окрестность</em>.</p>
 </div>
-<h2 data-number="5.1"
+<h2 data-number="6.1"
 id="доказательство-теоремы-жордана-для-замкнутых-ломаных">Доказательство
 теоремы Жордана для замкнутых ломаных</h2>
 <details>
@@ -518,13 +541,13 @@ class="math inline">\(\mathbb{R}^2 \setminus L\)</span> состоит не ме
 чем из двух компонент линейной связности.</p>
 <p>Теорема Жордана для ломаных доказана <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
-<h2 data-number="5.2"
+<h2 data-number="6.2"
 id="доказательство-теоремы-жордана-для-незамкнутых-ломаных">Доказательство
 теоремы Жордана для незамкнутых ломаных</h2>
 <p>Все приведенные выше рассуждения остается неизменными, только <span
 class="math inline">\(U(a_0)\setminus L\)</span> линейно связно <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
-<h2 data-number="5.3"
+<h2 data-number="6.3"
 id="следствие-про-четыре-точки-на-ломаной">Следствие про четыре точки на
 ломаной</h2>
 <p><strong>Утверждение:</strong><a name="statement-2"></a> Пусть <span
@@ -541,23 +564,24 @@ class="math inline">\(L_{ac}\)</span> и <span
 class="math inline">\(L_{bd}\)</span> лежат в одной компоненте линейной
 связности связности <span class="math inline">\(\mathbb{R}^2 \setminus
 L\)</span>.</p>
-<p><em>Доказательство:</em> бла-бла-бла… ура <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> бла-бла-бла…
+ура <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-75">
-<p><strong>Определение:</strong> Простой граф с <span
-class="math inline">\(n\)</span> вершинами – <em>полный</em>, если любые
-две его вершины соединены ребром..<br><strong>Обозначается:</strong>
-<span class="math inline">\(K_n\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Простой
+граф с <span class="math inline">\(n\)</span> вершинами –
+<em>полный</em>, если любые две его вершины соединены
+ребром..<br><strong>Обозначается:</strong> <span
+class="math inline">\(K_n\)</span>.</p>
 </div>
 <div id="definition-76">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(G =
-(E, V, \sigma)\)</span> простой граф, <span class="math inline">\(|V| =
-n\)</span>. <span class="math inline">\(V_1 \subset V, \,\,\,\, V_2
-\subset V, \,\,\,\, V_1\cap V_2 = \varnothing, \,\,\,\, V_1\cup V_2 =
-V\)</span>. <span class="math inline">\(|V_1| = n_1, \,\,\,\, |V_2| =
-n_2\)</span>. Если любые две вершины из <span
-class="math inline">\(V_1\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(G = (E, V, \sigma)\)</span> простой граф,
+<span class="math inline">\(|V| = n\)</span>. <span
+class="math inline">\(V_1 \subset V, \,\,\,\, V_2 \subset V, \,\,\,\,
+V_1\cap V_2 = \varnothing, \,\,\,\, V_1\cup V_2 = V\)</span>. <span
+class="math inline">\(|V_1| = n_1, \,\,\,\, |V_2| = n_2\)</span>. Если
+любые две вершины из <span class="math inline">\(V_1\)</span> и <span
 class="math inline">\(V_2\)</span> соединены ребром, то граф <span
 class="math inline">\(G\)</span> – <em>полный двудольный граф</em>, а
 множества <span class="math inline">\(V_1\)</span> и <span
@@ -565,16 +589,17 @@ class="math inline">\(V_2\)</span> –
 <em>доли</em>.<br><strong>Обозначается:</strong> <span
 class="math inline">\(K_{n_1,n_2}\)</span>.</p>
 </div>
-<h2 data-number="5.4" id="топологичекий-граф">Топологичекий граф</h2>
+<h3 data-number="6.3.1" id="топологичекий-граф">Топологичекий граф</h3>
 <div id="definition-77">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(G =
-(E, V, \sigma)\)</span> – граф. Каждому ребру <span
-class="math inline">\(e \in E\)</span> поставим в соответствие отрезок
-<span class="math inline">\([a_e, b_e]\)</span>, так, чтобы полученные
-отрезки для различных ребер не пересекались. Рассмотрим дизъюнктивное
-объединение <span class="math inline">\(\displaystyle\sqcup_{e \in
-E}[a_e, b_e]\)</span>. Сопоставим каждой вершине графа точку, так чтобы
-для различных вершин точки не совпадали. Рассмотрим множество <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(G = (E, V, \sigma)\)</span> – граф. Каждому
+ребру <span class="math inline">\(e \in E\)</span> поставим в
+соответствие отрезок <span class="math inline">\([a_e, b_e]\)</span>,
+так, чтобы полученные отрезки для различных ребер не пересекались.
+Рассмотрим дизъюнктивное объединение <span
+class="math inline">\(\displaystyle\sqcup_{e \in E}[a_e, b_e]\)</span>.
+Сопоставим каждой вершине графа точку, так чтобы для различных вершин
+точки не совпадали. Рассмотрим множество <span
 class="math inline">\((\displaystyle\sqcup_{v \in V}\{x_v\}) \cup
 (\displaystyle\sqcup_{e \in E}[a_e, b_e])\)</span>. <span
 class="math inline">\(\forall e \in E\)</span>, если <span
@@ -593,96 +618,99 @@ class="math inline">\(b_e\)</span>. Полученное топологичес�
 <em>топологический граф</em>.</p>
 </div>
 <div id="definition-78">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(Y\)</span> – топологическое пространство. <span
-class="math inline">\(X_G\)</span> – топологический граф. Непрерывное
-взаимнооднозначное отображение <span class="math inline">\(f: X_G \to
-Y\)</span> – <em>вложение графа</em> <span
-class="math inline">\(G\)</span> <em>в пространство</em> <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(Y\)</span> – топологическое пространство.
+<span class="math inline">\(X_G\)</span> – топологический граф.
+Непрерывное взаимнооднозначное отображение <span
+class="math inline">\(f: X_G \to Y\)</span> – <em>вложение графа</em>
+<span class="math inline">\(G\)</span> <em>в пространство</em> <span
 class="math inline">\(Y\)</span>.</p>
 </div>
 <div id="statement-39">
-<p><strong>Утверждение:</strong> Граф <span class="math inline">\(K_{3,
-3}\)</span> нельзя вложить в плоскость.</p>
-<p><em>Доказательство:</em> <a
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Граф
+<span class="math inline">\(K_{3, 3}\)</span> нельзя вложить в
+плоскость.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <a
 href="граф-определения.html#statement-2">см.лемму о <span
 class="math inline">\(4\)</span>-х точках</a> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-40">
-<p><strong>Утверждение:</strong> Если граф вложим в плоскость, то он
-вложим так, чтобы все непрерывные кривые соответствующие ребрам были
-ломаными.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Если
+граф вложим в плоскость, то он вложим так, чтобы все непрерывные кривые
+соответствующие ребрам были ломаными.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <p><img src="img/plane-graph.svg" width="300" height="300" /></p>
 <div id="statement-41">
-<p><strong>Утверждение:</strong> Пусть образ непрерывной кривой <span
-class="math inline">\(\gamma: [a, b] \to \mathbb{R}^2\)</span>
-содержится в некоторой открытой окрестности <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+образ непрерывной кривой <span class="math inline">\(\gamma: [a, b] \to
+\mathbb{R}^2\)</span> содержится в некоторой открытой окрестности <span
 class="math inline">\(U\)</span>. Тогда <span
 class="math inline">\(\exists\)</span> ломаная <span
 class="math inline">\(L \subset U\)</span>, соединяющая <span
 class="math inline">\(\gamma(a)\)</span> и <span
 class="math inline">\(\gamma(b)\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <p><img src="img/caterpillar.svg" width="300" height="300" /></p>
 <p><img src="img/curve-line.svg" width="300" height="300" /></p>
-<h2 data-number="5.5"
+<h2 data-number="6.4"
 id="теорема-жордана-для-кривых-компонент-не-меньше-двух">Теорема Жордана
 для кривых: компонент не меньше двух</h2>
 <div id="statement-42">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(\gamma: [a, b] \to \mathbb{R}^2\)</span> –
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\gamma: [a, b] \to \mathbb{R}^2\)</span> –
 замкнутая непрерывная кривая без самопересечений. Пусть <span
 class="math inline">\(\Gamma = \gamma([a, b])\)</span> – образ
 отображения <span class="math inline">\(\gamma\)</span> и <span
 class="math inline">\(\Omega = \mathbb{R}^2 \setminus \Gamma\)</span>.
 Тогда <span class="math inline">\(\Omega\)</span> не является линейно
 связным.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <p><img src="img/jordan-two.svg" width="300" height="300" /></p>
-<h2 data-number="5.6"
+<h2 data-number="6.5"
 id="теорема-жордана-для-ломаных-компонент-ровно-две">Теорема Жордана для
 ломаных: компонент ровно две</h2>
 <div id="statement-43">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f:
-X_G \to \mathbb{R}^2\)</span> вложение графа в плоскость. Пусть <span
-class="math inline">\(\Gamma = f(X_G)\)</span> – образ графа при
-отображении <span class="math inline">\(f\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(f: X_G \to \mathbb{R}^2\)</span> вложение
+графа в плоскость. Пусть <span class="math inline">\(\Gamma =
+f(X_G)\)</span> – образ графа при отображении <span
+class="math inline">\(f\)</span>. Тогда <span
 class="math inline">\(\mathbb{R}^2\setminus \Gamma\)</span> содержит
 ровно одну неограниченную компоненту линейной связности.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="statement-44">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(\gamma: [a, b] \to \mathbb{R}^2\)</span>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\gamma: [a, b] \to \mathbb{R}^2\)</span>
 незамкнутая ломаная без самопересечений. Пусть <span
 class="math inline">\(\Gamma = \gamma([a, b])\)</span> – образ
 отображения <span class="math inline">\(\gamma\)</span>. Тогда <span
 class="math inline">\(\mathbb{R}^2\setminus \Gamma\)</span> линейно
 связно.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <p><img src="img/exactly-two-1.svg" width="300" height="300" /></p>
 <div id="statement-45">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(\gamma: [a, b] \to \mathbb{R}^2\)</span> замкнутая
-ломаная без самопересечений. Пусть <span class="math inline">\(\Gamma =
-\gamma([a, b])\)</span> – образ отображения <span
-class="math inline">\(\gamma\)</span>. Пусть <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\gamma: [a, b] \to \mathbb{R}^2\)</span>
+замкнутая ломаная без самопересечений. Пусть <span
+class="math inline">\(\Gamma = \gamma([a, b])\)</span> – образ
+отображения <span class="math inline">\(\gamma\)</span>. Пусть <span
 class="math inline">\(A\)</span> одна из компонент линейной связности
 <span class="math inline">\(\mathbb{R}^2\setminus \Gamma\)</span>. Тогда
 граница <span class="math inline">\(\partial A\)</span> содержит <span
 class="math inline">\(\Gamma\)</span>.</p>
-<p><em>Доказательство:</em> непонятно</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span>
+непонятно</p>
 </div>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="конструкции-как-получить-новую-топологию-из-уже-существующих.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

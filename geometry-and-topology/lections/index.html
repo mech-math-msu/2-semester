@@ -11,7 +11,10 @@
     
     <title>Введение в введение в топологию</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,19 +237,31 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                    </span>
-        <span class="navlink">
-                    </span>
-        <span class="navlink">
-                        <a href="решения-избранных-задач.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                            </span>
+            <span class="navlink">
+                            </span>
+            <span class="navlink">
+                                <a href="решения-избранных-задач.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
 <header id="title-block-header">
+
     <h1 class="title">Введение в введение в топологию</h1>
 
     
@@ -252,7 +272,7 @@
 <nav id="TOC" role="doc-toc">
         <h2 id="toc-title" class="toc-title">Содержание</h2>
         <ul>
-        <li><a href="решения-избранных-задач.html"
+        <li><a href="решения-избранных-задач.html#решения-избранных-задач"
         id="toc-решения-избранных-задач">Решения избранных задач</a>
         <ul>
         <li><a href="решения-избранных-задач.html#элементы-теории-графов"
@@ -270,8 +290,8 @@
         id="toc-замкнутые-двумерные-поверхности">Замкнутые двумерные
         поверхности</a></li>
         </ul></li>
-        <li><a href="граф-определения.html" id="toc-граф-определения">Граф:
-        определения</a>
+        <li><a href="граф-определения.html#граф-определения"
+        id="toc-граф-определения">Граф: определения</a>
         <ul>
         <li><a href="граф-определения.html#эйлеров-граф"
         id="toc-эйлеров-граф">Эйлеров граф</a></li>
@@ -280,7 +300,8 @@
         <li><a href="граф-определения.html#подграфы"
         id="toc-подграфы">Подграфы</a></li>
         </ul></li>
-        <li><a href="топология-и-топологическое-пространство.html"
+        <li><a
+        href="топология-и-топологическое-пространство.html#топология-и-топологическое-пространство"
         id="toc-топология-и-топологическое-пространство">Топология и
         топологическое пространство</a>
         <ul>
@@ -307,7 +328,7 @@
         топологии</a></li>
         </ul></li>
         <li><a
-        href="конструкции-как-получить-новую-топологию-из-уже-существующих.html"
+        href="конструкции-как-получить-новую-топологию-из-уже-существующих.html#конструкции-как-получить-новую-топологию-из-уже-существующих"
         id="toc-конструкции-как-получить-новую-топологию-из-уже-существующих">Конструкции
         (как получить новую топологию из уже существующих)</a>
         <ul>
@@ -374,8 +395,8 @@
         href="конструкции-как-получить-новую-топологию-из-уже-существующих.html#пределы"
         id="toc-пределы">Пределы</a></li>
         </ul></li>
-        <li><a href="теорема-жордана-1.html" id="toc-теорема-жордана-1">Теорема
-        Жордана</a>
+        <li><a href="теорема-жордана-1.html#теорема-жордана-1"
+        id="toc-теорема-жордана-1">Теорема Жордана</a>
         <ul>
         <li><a href="теорема-жордана-1.html#топологичекий-граф"
         id="toc-топологичекий-граф">Топологичекий граф</a></li>
@@ -388,7 +409,7 @@
         id="toc-теорема-жордана-для-ломаных-компонент-ровно-две">Теорема Жордана
         для ломаных: компонент ровно две</a></li>
         </ul></li>
-        <li><a href="планарные-графы-1.html"
+        <li><a href="планарные-графы-1.html#планарные-графы-1"
         id="toc-планарные-графы-1">Планарные графы</a>
         <ul>
         <li><a href="планарные-графы-1.html#формула-эйлера-для-плоских-графов"
@@ -399,13 +420,13 @@
         id="toc-критерий-планарности-графа-теорема-понтрягина-куратовского">Критерий
         планарности графа (теорема Понтрягина-Куратовского)</a></li>
         </ul></li>
-        <li><a href="раскраски-плоских-графов.html"
+        <li><a href="раскраски-плоских-графов.html#раскраски-плоских-графов"
         id="toc-раскраски-плоских-графов">Раскраски плоских графов</a>
         <ul>
         <li><a href="раскраски-плоских-графов.html#лемма-шпернера"
         id="toc-лемма-шпернера">Лемма Шпернера</a></li>
         </ul></li>
-        <li><a href="многоугольники.html"
+        <li><a href="многоугольники.html#многоугольники"
         id="toc-многоугольники">Многоугольники</a>
         <ul>
         <li><a
@@ -427,7 +448,8 @@
         <li><a href="многоугольники.html#теорема-минковского-о-еже"
         id="toc-теорема-минковского-о-еже">Теорема Минковского о «еже»</a></li>
         </ul></li>
-        <li><a href="равновеликость-и-равносоставленность.html"
+        <li><a
+        href="равновеликость-и-равносоставленность.html#равновеликость-и-равносоставленность"
         id="toc-равновеликость-и-равносоставленность">Равновеликость и
         равносоставленность</a>
         <ul>
@@ -462,7 +484,7 @@
         условие равносоставленности многогранников</a></li>
         </ul></li>
         <li><a
-        href="топологическая-классификация-многогранных-поверхностей.html"
+        href="топологическая-классификация-многогранных-поверхностей.html#топологическая-классификация-многогранных-поверхностей"
         id="toc-топологическая-классификация-многогранных-поверхностей">Топологическая
         классификация многогранных поверхностей</a>
         <ul>
@@ -484,7 +506,7 @@
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                     </span>
         <span class="navlink">

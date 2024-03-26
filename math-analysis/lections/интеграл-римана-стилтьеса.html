@@ -11,7 +11,10 @@
     
     <title>Интеграл Римана-Стилтьеса</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,17 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="функции-ограниченной-вариации.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="норма-метрика.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="функции-ограниченной-вариации.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="норма-метрика.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,8 +267,8 @@
 <h1 data-number="8" id="интеграл-римана-стилтьеса">Интеграл
 Римана-Стилтьеса</h1>
 <div id="definition-28">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f(x)\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> и <span
 class="math inline">\(g(x)\)</span> определена на <span
 class="math inline">\([a, b]\)</span>. Для <span
 class="math inline">\(\mathcal{T}_{[a, b]}(\xi)\)</span> сумма:</p>
@@ -261,10 +280,10 @@ class="math inline">\(g(x)\)</span> на <span class="math inline">\([a,
 b]\)</span>.</p>
 </div>
 <div id="definition-29">
-<p><strong>Определение:</strong> Если <span
-class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists \delta
-&gt; 0: \,\,\,\, \forall \mathcal{T}(\xi) (d(\mathcal{T}(\xi)) &lt;
-\delta)\)</span></p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+<span class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists
+\delta &gt; 0: \,\,\,\, \forall \mathcal{T}(\xi) (d(\mathcal{T}(\xi))
+&lt; \delta)\)</span></p>
 <p><span class="math inline">\(|\sigma_f(g, \mathcal{T}(\xi)) - I| &lt;
 \varepsilon\)</span>, то <span class="math inline">\(f(x)\)</span>
 <em>интегрируема по</em> <span class="math inline">\(g(x)\)</span> на
@@ -276,7 +295,7 @@ f(x)dg(x)\)</span></p>
 <h2 data-number="8.1" id="свойства-интеграла-стилтьеса">Свойства
 интеграла Стилтьеса</h2>
 <div id="statement-22">
-<p><strong>Утверждение:</strong></p>
+<span class="margin-lft"><strong>Утверждение: </strong></span>
 <ol type="1">
 <li><p>Если <span class="math inline">\(\exists
 \displaystyle\int\limits_a^b f_1(x)dg(x)\)</span> и <span
@@ -284,8 +303,8 @@ class="math inline">\(\exists \displaystyle\int\limits_a^b
 f_2(x)dg(x)\)</span>, то <span class="math inline">\(\exists
 \displaystyle\int\limits_a^b (\alpha f_1(x) + \beta f_2(x))dg(x) =
 \alpha \displaystyle\int\limits_a^b f_1(x)dg(x) + \beta
-\displaystyle\int\limits_a^b f_2(x)dg(x)\)</span>.
-<em>Доказательство:</em> очев <span
+\displaystyle\int\limits_a^b f_2(x)dg(x)\)</span>. <span
+class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p></li>
 <li><p>Если <span class="math inline">\(\exists
 \displaystyle\int\limits_a^b f(x)dg_1(x)\)</span> и <span
@@ -295,7 +314,7 @@ f(x)dg_2(x)\)</span>, то <span class="math inline">\(\exists
 \alpha \displaystyle\int\limits_a^b f(x)dg_1(x) + \beta
 \displaystyle\int\limits_a^b f(x)dg_2(x)\)</span>.</p></li>
 </ol>
-<p><em>Доказательство:</em> очев <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> очев <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <ol start="3" type="1">
 <li>Если <span class="math inline">\(\exists
@@ -308,34 +327,37 @@ class="math display">\[\displaystyle\int\limits_a^b f(x)dg(x) = \exists
 \displaystyle\int\limits_a^c f(x)dg(x) + \exists
 \displaystyle\int\limits_c^b f(x)dg(x)\]</span></li>
 </ol>
-<p><em>Доказательство:</em> записать определение <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> записать
+определение <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-23">
-<p><strong>Утверждение:</strong> Если <span
-class="math inline">\(\exists \displaystyle\int\limits_a^b
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Если
+<span class="math inline">\(\exists \displaystyle\int\limits_a^b
 f(x)dg(x)\)</span>, то <span class="math inline">\(\forall c \in (a, b)
 \,\,\,\, \exists \displaystyle\int\limits_a^c f(x)dg(x)\)</span> и <span
 class="math inline">\(\exists \displaystyle\int\limits_c^b
 f(x)dg(x)\)</span>.</p>
-<p><em>Доказательство:</em> без доказательства <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> без
+доказательства <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="8.2"
 id="обязательный-пример-показывающий-что-интеграл-римана-стилтьеса-не-аддитивен">Обязательный
 пример, показывающий, что интеграл Римана-Стилтьеса не аддитивен</h2>
 <div id="theorem-23">
-<p><strong>Теорема:</strong> Если <span class="math inline">\(\exists
-\displaystyle\int\limits_a^b f(x)dg(x)\)</span>, то <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если <span
 class="math inline">\(\exists \displaystyle\int\limits_a^b
-g(x)df(x)\)</span> и <span
+f(x)dg(x)\)</span>, то <span class="math inline">\(\exists
+\displaystyle\int\limits_a^b g(x)df(x)\)</span> и <span
 class="math display">\[\displaystyle\int\limits_a^b f(x)dg(x) =
 f(x)g(x){|^b_a} - \displaystyle\int\limits_a^b g(x)df(x)\]</span></p>
-<p><em>Доказательство:</em> <span class="math display">\[\sigma_f(g,
-\mathcal{T}(\xi)) = \displaystyle \sum_{i = 1}^{n}g(\xi_i)(f(x_i) -
-f(x_{i - 1}))=\]</span> <span class="math display">\[= g(\xi_1)(f(x_1) -
-f(a)) + g(\xi_2)(f(x_2) - f(x_1)) + \ldots + g(\xi_{n - 1})(f(x_{n - 1})
-- f(x_{n - 2})) + g(\xi_n)(f(b) - f(x_{n - 1}))=\]</span> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math display">\[\sigma_f(g, \mathcal{T}(\xi)) = \displaystyle
+\sum_{i = 1}^{n}g(\xi_i)(f(x_i) - f(x_{i - 1}))=\]</span> <span
+class="math display">\[= g(\xi_1)(f(x_1) - f(a)) + g(\xi_2)(f(x_2) -
+f(x_1)) + \ldots + g(\xi_{n - 1})(f(x_{n - 1}) - f(x_{n - 2})) +
+g(\xi_n)(f(b) - f(x_{n - 1}))=\]</span> <span
 class="math display">\[=-g(\xi_1)f(a) - f(x_1)(g(\xi_2) - g(\xi_1)) -
 \ldots - f(x_{n - 1})(g(\xi_n) - g(\xi_{n - 1})) + g(\xi_n)f(b) +
 f(a)g(a) + f(b)g(b) - f(a)g(a) - f(b)g(b)=\]</span> <span
@@ -347,13 +369,13 @@ class="math display">\[\Rightarrow \sigma_g(f, \mathcal{T}) =
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-24">
-<p><strong>Теорема:</strong> Если <span class="math inline">\(f(x) \in
-C[a, b], \,\,\,\, g(x) \in \operatorname{V}[a, b]\)</span>, то <span
-class="math inline">\(\exists \displaystyle\int\limits_a^b
-f(x)dg(x)\)</span></p>
-<p><em>Доказательство:</em> Достаточно доказать для <span
-class="math inline">\(g(x)\)</span> возрастающей. <span
-class="math display">\[\mathcal{T}_{[a, b]}(\xi) \,\,\,\, m_i =
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если <span
+class="math inline">\(f(x) \in C[a, b], \,\,\,\, g(x) \in
+\operatorname{V}[a, b]\)</span>, то <span class="math inline">\(\exists
+\displaystyle\int\limits_a^b f(x)dg(x)\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Достаточно
+доказать для <span class="math inline">\(g(x)\)</span> возрастающей.
+<span class="math display">\[\mathcal{T}_{[a, b]}(\xi) \,\,\,\, m_i =
 \displaystyle\min_{\Delta x_i}f(x) \,\,\,\, M_i =
 \displaystyle\max_{\Delta x_i}f(x)\]</span></p>
 <p>Пусть <span class="math display">\[s(\mathcal{T}) = \displaystyle
@@ -385,8 +407,8 @@ class="math inline">\(\varepsilon\)</span> за знак суммы, далее 
 <h2 data-number="8.3" id="липшицевы-и-гёльдеровы-функции">Липшицевы и
 Гёльдеровы функции</h2>
 <div id="definition-30">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f(x)\)</span> определена на <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена на <span
 class="math inline">\([a, b]\)</span>. Если <span
 class="math inline">\(\exists M &gt; 0\)</span>, такое что <span
 class="math inline">\(\forall x, y \in [a, b] \,\,\,\, |f(x) - f(y)|
@@ -397,8 +419,8 @@ class="math inline">\([a, b]\)</span> обозначается: <span
 class="math inline">\(\operatorname{Lip}[a, b]\)</span>.</p>
 </div>
 <div id="definition-31">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f(x)\)</span> определена на <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена на <span
 class="math inline">\([a, b]\)</span>. Если <span
 class="math inline">\(\exists M &gt; 0\)</span> и <span
 class="math inline">\(\exists \alpha \in (0, 1)\)</span>, такие что
@@ -414,38 +436,41 @@ class="math inline">\(\operatorname{Gel}^{\alpha}[a, b]\)</span>.</p>
 id="липшицева-функция-является-функцией-ограниченной-вариации">Липшицева
 функция является функцией ограниченной вариации</h3>
 <div id="statement-24">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f(x)
-\in \operatorname{Lip}[a, b]\)</span>. Тогда <span
-class="math inline">\(f(x) \in \operatorname{V}[a, b]\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(f(x) \in
-\operatorname{Lip}[a, b] \Rightarrow \exists M: \,\,\,\,  \forall
-\mathcal{T}_{[a, b]} \,\,\,\, \displaystyle \sum_{i = 1}^{n}(f(x_i) -
-f(x_{i - 1})) \le \displaystyle \sum_{i = 1}^{n} M \cdot |x_i - x_{i -
-1}| \le M |b - a| \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(f(x) \in \operatorname{Lip}[a, b]\)</span>.
+Тогда <span class="math inline">\(f(x) \in \operatorname{V}[a,
+b]\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(f(x) \in \operatorname{Lip}[a, b] \Rightarrow
+\exists M: \,\,\,\,  \forall \mathcal{T}_{[a, b]} \,\,\,\, \displaystyle
+\sum_{i = 1}^{n}(f(x_i) - f(x_{i - 1})) \le \displaystyle \sum_{i =
+1}^{n} M \cdot |x_i - x_{i - 1}| \le M |b - a|
+\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-25">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f(x)
-\in \mathcal{D}[a, b]\)</span> и <span class="math inline">\(\exists M
-&gt; 0: \,\,\,\, |f’(x)| &lt; M \,\,\,\, \forall x \in [a, b]\)</span>.
-Тогда <span class="math inline">\(f(x) \in \operatorname{Lip}[a,
-b]\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall x, y \in
-[a, b] \,\,\,\, |f(x) - f(y)| = |f’(\xi) \cdot (x_i - x_{i - 1})| \le M
-\cdot |x - y|\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(f(x) \in \mathcal{D}[a, b]\)</span> и <span
+class="math inline">\(\exists M &gt; 0: \,\,\,\, |f’(x)| &lt; M \,\,\,\,
+\forall x \in [a, b]\)</span>. Тогда <span class="math inline">\(f(x)
+\in \operatorname{Lip}[a, b]\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall x, y \in [a, b] \,\,\,\, |f(x) - f(y)| =
+|f’(\xi) \cdot (x_i - x_{i - 1})| \le M \cdot |x -
+y|\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="8.4"
 id="связь-интеграла-стилтьеса-и-интеграла-римана">Связь интеграла
 Стилтьеса и интеграла Римана</h2>
 <div id="theorem-25">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x) \in
-C[a, b], \,\,\,\, g(x) \in \mathcal{D}[a, b], \,\,\,\, g’(x) \in R[a,
-b]\)</span>. Тогда существует интеграл Стилтьеса <span
-class="math inline">\(\displaystyle\int\limits_a^b f(x)dg(x)\)</span>,
-существует интеграл Римана <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x) \in C[a, b], \,\,\,\, g(x) \in \mathcal{D}[a,
+b], \,\,\,\, g’(x) \in R[a, b]\)</span>. Тогда существует интеграл
+Стилтьеса <span class="math inline">\(\displaystyle\int\limits_a^b
+f(x)dg(x)\)</span>, существует интеграл Римана <span
 class="math inline">\(\displaystyle\int\limits_a^b f(x)g’(x)dx\)</span>
 и <span class="math display">\[\displaystyle\int\limits_a^b f(x)dg(x) =
 \displaystyle\int\limits_a^b f(x)g’(x)dx\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li>Существование <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
@@ -464,19 +489,19 @@ f(\xi_i)(g(x_i) - g(x_{i - 1})) = f(\xi_i)g’(\xi_i)(x_i - x_{i - 1}) =
 id="первая-и-вторая-теоремы-о-средних-для-интеграла-стилтьеса">Первая и
 вторая теоремы о средних для интеграла Стилтьеса</h2>
 <div id="theorem-26">
-<p><strong>Теорема:</strong> (первая теорема о среднем) Пусть <span
-class="math inline">\(g(x)\)</span> монотонно возрастает на <span
-class="math inline">\([a, b]\)</span>, <span class="math inline">\(f(x)
-\in C[a, b]\)</span>. Тогда <span class="math inline">\(\exists c \in
-[a, b]: \,\,\,\, \displaystyle\int\limits_a^b f(x)dg(x) = f(c)(g(b) -
-g(a))\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(m =
-\displaystyle\min_{[a, b]}f(x) \,\,\,\, M = \displaystyle\max_{[a,
-b]}f(x)\)</span></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(первая
+теорема о среднем) Пусть <span class="math inline">\(g(x)\)</span>
+монотонно возрастает на <span class="math inline">\([a, b]\)</span>,
+<span class="math inline">\(f(x) \in C[a, b]\)</span>. Тогда <span
+class="math inline">\(\exists c \in [a, b]: \,\,\,\,
+\displaystyle\int\limits_a^b f(x)dg(x) = f(c)(g(b) - g(a))\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(m = \displaystyle\min_{[a, b]}f(x) \,\,\,\, M =
+\displaystyle\max_{[a, b]}f(x)\)</span></p>
 <p>Существуют по теоремам Вейерштрасса.</p>
 <p><span class="math inline">\(g(x)\)</span> – монотонно возрастает на
 <span class="math inline">\([a, b]\)</span>, следовательно <span
-class="math inline">\(g(x)\)</span> - функция ограниченной вариации на
+class="math inline">\(g(x)\)</span> – функция ограниченной вариации на
 <span class="math inline">\([a, b]\)</span>. А значит по теореме
 интеграл <span class="math inline">\(\displaystyle\int\limits_a^b
 f(x)dg(x)\)</span> существует.</p>
@@ -492,13 +517,14 @@ class="math inline">\(c \in [a, b]\)</span> по теореме.</p>
 class="math inline">\([a, b] \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-27">
-<p><strong>Теорема:</strong> (вторая теорема о средних) Пусть <span
-class="math inline">\(g(x)\)</span> монотонно возрастает на <span
-class="math inline">\([a, b]\)</span>, <span class="math inline">\(f(x)
-\in C[a, b]\)</span>. Тогда <span class="math inline">\(\exists c \in
-[a, b]: \,\,\,\, \displaystyle\int\limits_a^b f(x)dg(x) = g(a)(f(c) -
-f(a)) + g(b)(f(b) - f(c))\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(вторая
+теорема о средних) Пусть <span class="math inline">\(g(x)\)</span>
+монотонно возрастает на <span class="math inline">\([a, b]\)</span>,
+<span class="math inline">\(f(x) \in C[a, b]\)</span>. Тогда <span
+class="math inline">\(\exists c \in [a, b]: \,\,\,\,
+\displaystyle\int\limits_a^b f(x)dg(x) = g(a)(f(c) - f(a)) + g(b)(f(b) -
+f(c))\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\displaystyle\int\limits_a^b f(x)dg(x) =
 f(x)g(x)|^b_a - \displaystyle\int\limits_a^b f(x)dg(x) =\)</span> по
 первой теореме о среднем</p>
@@ -510,17 +536,18 @@ f(x)g(x)|^b_a - \displaystyle\int\limits_a^b f(x)dg(x) =\)</span> по
 id="вторая-теорема-о-среднем-для-интеграла-римана-усиленная-версия">Вторая
 теорема о среднем для интеграла Римана (усиленная версия)</h2>
 <div id="theorem-28">
-<p><strong>Теорема:</strong> Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(g(x)\)</span> монотонно возрастает на <span
 class="math inline">\([a, b]\)</span>, <span class="math inline">\(f(x)
 \in C[a, b]\)</span>. Тогда <span class="math inline">\(\exists c \in
 [a, b]: \,\,\,\, \displaystyle\int\limits_a^b f(x)g(x)dx =
 g(a)\displaystyle\int\limits_a^c f(x)dx + g(b)
 \displaystyle\int\limits_c^b f(x)dx\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(g(x) \in R[a,
-b]\)</span> по теореме, следовательно по свойству интеграла интеграл
-<span class="math inline">\(\displaystyle\int\limits_a^b
-f(x)g(x)dx\)</span> существует.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(g(x) \in R[a, b]\)</span> по теореме,
+следовательно по свойству интеграла интеграл <span
+class="math inline">\(\displaystyle\int\limits_a^b f(x)g(x)dx\)</span>
+существует.</p>
 <p><span class="math inline">\(F(x) = \displaystyle\int\limits_a^x
 f(t)dt \in \operatorname{Lip}[a, b]\)</span>, так как <span
 class="math inline">\(|F(x) - F(y)| = \left|\displaystyle\int\limits_y^x
@@ -539,7 +566,7 @@ g(b)\displaystyle\int\limits_c^b f(x)dx
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="функции-ограниченной-вариации.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

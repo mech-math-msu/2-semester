@@ -12,6 +12,7 @@
     <title>Ортогональные и ортонормированные базисы в унитарном
 пространстве</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -86,7 +87,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -101,6 +102,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -219,7 +221,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -231,6 +237,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -259,19 +269,19 @@
 id="ортогональные-и-ортонормированные-базисы-в-унитарном-пространстве">Ортогональные
 и ортонормированные базисы в унитарном пространстве</h1>
 <div id="definition-85">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – унитарное пространство. Векторы <span
-class="math inline">\(x, y \in V, \,\,\,\, x \ne 0, \,\,\,\, y \ne
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – унитарное пространство. Векторы
+<span class="math inline">\(x, y \in V, \,\,\,\, x \ne 0, \,\,\,\, y \ne
 0\)</span> – <em>ортогональны</em>, если <span class="math inline">\((x,
 y) = 0\)</span>.</p>
 </div>
 <div id="statement-84">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – унитарное пространство, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – унитарное пространство, <span
 class="math inline">\(e_1, \ldots, e_k\)</span> – ортогональные векторы.
 Тогда <span class="math inline">\(e_1, \ldots, e_k\)</span> – линейно
 независимы.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math display">\[\lambda_1 e_1 + \ldots + \lambda_n e_n =
 0\]</span> <span class="math display">\[(\lambda_1 e_1 + \ldots +
 \lambda_n e_n, e_1) = (0, e_1)\]</span> <span
@@ -281,22 +291,24 @@ e_1) = 0\]</span> <span class="math display">\[\Downarrow\]</span> <span
 class="math display">\[\lambda_1 = 0 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="definition-86">
-<p><strong>Определение: </strong>Базис унитарного пространства,
-состоящий из ортогональных векторов – <em>ортогональный</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Базис
+унитарного пространства, состоящий из ортогональных векторов –
+<em>ортогональный</em>.</p>
 </div>
 <div id="definition-87">
-<p><strong>Определение: </strong>Ортогональный базис унитарного
-пространства, состоящий из единичных векторов –
-<em>ортонормированный</em>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Ортогональный базис унитарного пространства, состоящий
+из единичных векторов – <em>ортонормированный</em>.</p>
 </div>
 <div id="definition-88">
-<p><strong>Определение: </strong>Квадратная матрица <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Квадратная матрица <span
 class="math inline">\(A\)</span> – <em>унитарная</em>, если <span
 class="math inline">\(A^T\overline{A} = E\)</span>.</p>
 </div>
 <div id="statement-85">
-<p><strong>Утверждение: </strong>(<em>свойства ортонормированного
-базиса</em>)</p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>(<em>свойства ортонормированного базиса</em>)</p>
 <ol type="1">
 <li><span class="math inline">\((x, y) = x_1 \overline{y}_1 + \ldots +
 x_n \overline{y}_n\)</span>.</li>
@@ -304,19 +316,21 @@ x_n \overline{y}_n\)</span>.</li>
 <li>Матрица перехода от одного ортонормированного базиса к другому –
 унитарная.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="statement-86">
-<p><strong>Утверждение:
-</strong><strong>Утверждение:</strong><a name="statement-1"></a> В
-конечномерном унитарном пространстве существует ортогональный базис.</p>
-<p><em>Доказательство:</em> процесс ортогонализации Грама-Шмидта для
-унитарного пространства.</p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span><strong>Утверждение:</strong><a name="statement-1"></a>
+В конечномерном унитарном пространстве существует ортогональный
+базис.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> процесс
+ортогонализации Грама-Шмидта для унитарного пространства.</p>
 </div>
 <h2 data-number="19.1" id="изоморфизм-унитарных-пространств">Изоморфизм
 унитарных пространств</h2>
 <div id="definition-89">
-<p><strong>Определение: </strong>Унитарные пространства <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Унитарные пространства <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> <em>изоморфны</em>, если <span
 class="math inline">\(\exists \varphi: U \to W\)</span>:</p>
@@ -329,166 +343,173 @@ class="math inline">\(W\)</span>, как векторных пространст
 </ol>
 </div>
 <div id="statement-87">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> унитарные пространства. Тогда <span
 class="math inline">\(U\)</span> изоморфно <span class="math inline">\(W
 \,\,\,\, \Leftrightarrow \,\,\,\, \dim U = \dim W\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="definition-90">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(U\)</span> подпространство унитарного пространства
-<span class="math inline">\(V\)</span>. <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(U\)</span> подпространство унитарного
+пространства <span class="math inline">\(V\)</span>. <span
 class="math inline">\(U^{\perp} = \{x \in V: \,\,\,\, (x, u) = 0
 \,\,\,\, \forall u \in U\}\)</span> – <em>ортогональное дополнение</em>
 <span class="math inline">\(U\)</span>.</p>
 </div>
 <div id="statement-88">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> унитарное пространство, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> унитарное пространство, <span
 class="math inline">\(U\)</span> – его подпространство. Тогда <span
 class="math inline">\(V = U \oplus U^{\perp}\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="19.2"
 id="линейные-операторы-в-унитарном-пространстве">Линейные операторы в
 унитарном пространстве</h2>
 <div id="statement-89">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math inline">\(\beta\)</span> – полуторалинейная функция, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор. <span
 class="math inline">\(\beta(x, y) = (x, \mathcal{A}(y))\)</span> –
 взаимнооднозначное соответствие между линейными операторами и
 полуторалинейными функциями.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h3 data-number="19.2.1" id="эрмитов-линейный-оператор">Эрмитов линейный
 оператор</h3>
 <div id="definition-91">
-<p><strong>Определение: </strong>Линейный оператор <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Линейный оператор <span
 class="math inline">\(\mathcal{A}\)</span> на унитарном пространстве –
 <em>эрмитов</em>, если <span class="math inline">\(\forall x, y \in V
 \,\,\,\, (\mathcal{A}(x), y) = (x, \mathcal{A}(y))\)</span>.</p>
 </div>
 <div id="statement-90">
-<p><strong>Утверждение: </strong>Линейный оператор <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Линейный оператор <span
 class="math inline">\(\mathcal{A}\)</span> – эрмитов <span
 class="math inline">\(\Leftrightarrow\)</span> матрица <span
 class="math inline">\(A\)</span> линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span> в ортонормированном базисе
 эрмитова.</p>
-<p><em>Доказательство:</em> <span class="math inline">\((\mathcal{A}(x),
-y) = (AX)^T\bar{Y} = X^TA^T\bar{Y} = (x, \mathcal{A}(y)) =
-X^T\bar{A}\bar{Y} \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\((\mathcal{A}(x), y) = (AX)^T\bar{Y} =
+X^TA^T\bar{Y} = (x, \mathcal{A}(y)) = X^T\bar{A}\bar{Y}
+\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-91">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(v\)</span> собственный вектор эрмитова линейного
-оператора с собственным значением <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(v\)</span> собственный вектор эрмитова
+линейного оператора с собственным значением <span
 class="math inline">\(\lambda\)</span>. Тогда <span
 class="math inline">\(\lambda \in \mathbb{R}\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h4 data-number="19.2.1.1"
 id="канонический-вид-эрмитова-линейного-оператора">Канонический вид
 эрмитова линейного оператора</h4>
 <div id="statement-92">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – конечномерное унитарное пространство,
-<span class="math inline">\(\mathcal{A}\)</span> – эрмитов оператор на
-<span class="math inline">\(V\)</span>. Тогда существует
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – конечномерное унитарное
+пространство, <span class="math inline">\(\mathcal{A}\)</span> – эрмитов
+оператор на <span class="math inline">\(V\)</span>. Тогда существует
 ортонормированный базис, в котором матрица линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span> диагональна с вещественными
 числами на диагонали.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>По индукции. <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h3 data-number="19.2.2" id="унитарный-линейный-оператор">Унитарный
 линейный оператор</h3>
 <div id="definition-92">
-<p><strong>Определение: </strong>Линейный оператор <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Линейный оператор <span
 class="math inline">\(\mathcal{A}\)</span> на унитарном пространстве –
 <em>унитарный</em>, если <span class="math inline">\(\forall x, y \in V
 \,\,\,\, (\mathcal{A}(x), \mathcal{A}(y)) = (x, y)\)</span>.</p>
 </div>
 <div id="statement-93">
-<p><strong>Утверждение: </strong>Линейный оператор <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Линейный оператор <span
 class="math inline">\(\mathcal{A}\)</span> – унитарный <span
 class="math inline">\(\Leftrightarrow\)</span> матрица <span
 class="math inline">\(A\)</span> линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span> в ортонормированном базисе
 унитарная.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-94">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(v\)</span> собственный вектор унитарного линейного
-оператора с собственным значением <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(v\)</span> собственный вектор унитарного
+линейного оператора с собственным значением <span
 class="math inline">\(\lambda\)</span>. Тогда <span
 class="math inline">\(|\lambda| = 1\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h4 data-number="19.2.2.1"
 id="канонический-вид-унитарного-линейного-оператора">Канонический вид
 унитарного линейного оператора</h4>
 <div id="statement-95">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – конечномерное унитарное пространство,
-<span class="math inline">\(\mathcal{A}\)</span> – унитарный оператор на
-<span class="math inline">\(V\)</span>. Тогда существует
-ортонормированный базис, в котором матрица линейного оператора <span
-class="math inline">\(\mathcal{A}\)</span> диагональна с числами на
-диагонали по модулю равными <span class="math inline">\(1\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – конечномерное унитарное
+пространство, <span class="math inline">\(\mathcal{A}\)</span> –
+унитарный оператор на <span class="math inline">\(V\)</span>. Тогда
+существует ортонормированный базис, в котором матрица линейного
+оператора <span class="math inline">\(\mathcal{A}\)</span> диагональна с
+числами на диагонали по модулю равными <span
+class="math inline">\(1\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-24">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(V\)</span> – унитарное пространство. <span
 class="math inline">\(\dim V = n\)</span>. <span
 class="math inline">\(q\)</span> – эрмитова квадратичная форма. Тогда
 существует ортонормированный базис, в котором <span
 class="math inline">\(q(x) = \lambda_1 x_1 \overline{x}_1 + \ldots +
 \lambda_n x_n \overline{x}_n\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-93">
-<p><strong>Определение: </strong>Линейный оператор <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Линейный оператор <span
 class="math inline">\(\mathcal{A}\)</span> на унитарном пространстве
 <em>положительно определен</em>, если он эрмитов и <span
 class="math inline">\((x, \mathcal{A}(x)) &gt; 0 \,\,\,\, \forall x \in
 V\)</span>.</p>
 </div>
 <div id="theorem-25">
-<p><strong>Теорема: </strong>(о полярном разложении) В конечномерном
-унитарном пространстве любой невырожденный линейный оператор <span
-class="math inline">\(\mathcal{A}\)</span> единственным образом
-представляется в виде композиции <span class="math inline">\(\mathcal{A}
-= \mathcal{S} \mathcal{R}\)</span>, где <span
-class="math inline">\(S\)</span> – положительно определенный линейный
-оператор, а <span class="math inline">\(\mathcal{R}\)</span> – унитарный
-линейный оператор.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(о полярном
+разложении) В конечномерном унитарном пространстве любой невырожденный
+линейный оператор <span class="math inline">\(\mathcal{A}\)</span>
+единственным образом представляется в виде композиции <span
+class="math inline">\(\mathcal{A} = \mathcal{S} \mathcal{R}\)</span>,
+где <span class="math inline">\(S\)</span> – положительно определенный
+линейный оператор, а <span class="math inline">\(\mathcal{R}\)</span> –
+унитарный линейный оператор.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="19.3"
 id="получение-унитарного-пространства-при-комплексификации-евклидова">Получение
 унитарного пространства при комплексификации евклидова</h2>
 <div id="statement-96">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – евклидово пространство. Тогда <span
-class="math inline">\((x + i y, a + i b) = (x, a) + (y, b) + i ((y, a) -
-(x, b))\)</span> – эрмитова положительно определенная полуторалинейная
-функция.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – евклидово пространство. Тогда
+<span class="math inline">\((x + i y, a + i b) = (x, a) + (y, b) + i
+((y, a) - (x, b))\)</span> – эрмитова положительно определенная
+полуторалинейная функция.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 

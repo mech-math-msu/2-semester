@@ -11,6 +11,7 @@
     
     <title>Положительно определенный линейный оператор</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -258,20 +268,21 @@
 id="положительно-определенный-линейный-оператор">Положительно
 определенный линейный оператор</h1>
 <div id="definition-75">
-<p><strong>Определение: </strong>Линейный оператор <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Линейный оператор <span
 class="math inline">\(\mathcal{A}\)</span> <em>положительно
 определен</em>, если он самосопряженный и <span
 class="math inline">\(\forall x \in V \,\,\,\, (x, \mathcal{A}(x)) &gt;
 0\)</span>.</p>
 </div>
 <div id="statement-74">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(v\)</span> собственный вектор положительно
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(v\)</span> собственный вектор положительно
 определенного линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span>, отвечающий собственному
 значению <span class="math inline">\(\lambda\)</span>. Тогда <span
 class="math inline">\(\lambda &gt; 0\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\mathcal{A}\)</span> – положительно определен,
 следовательно <span class="math inline">\(0 &lt; (v, \mathcal{A}(v)) =
 \lambda (v, v)\)</span>, а так как <span class="math inline">\((v, v)
@@ -280,12 +291,12 @@ class="math inline">\(\,\,\,\,\lambda &gt; 0
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-75">
-<p><strong>Утверждение: </strong>Все собственные значения
-самосопряженного линейного оператора <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Все
+собственные значения самосопряженного линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span> положительны <span
 class="math inline">\(\Leftrightarrow\)</span> <span
 class="math inline">\(\mathcal{A}\)</span> – положительно определен.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\mathcal{A}\)</span> самосопряженный, значит
 диагонализируем, значит <span class="math inline">\(V = V_1 \oplus
 \ldots \oplus V_s\)</span>, значит <span class="math inline">\(\forall
@@ -295,13 +306,14 @@ class="math inline">\(\mathcal{A}(v) = \lambda v \Rightarrow (v,
 \mathcal{A}) = \lambda (v, v) &gt; 0 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="lemma-4">
-<p><strong>Лемма: </strong>Из любого положительно определенного
-линейного оператора <span class="math inline">\(\mathcal{A}\)</span>
-можно извлечь квадратный корень, то есть существует единственный
-положительно определенный линейный оператор <span
-class="math inline">\(\mathcal{B}\)</span>, такой, что <span
-class="math inline">\(\mathcal{B}^2 = \mathcal{A}\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Лемма: </strong></span>Из любого
+положительно определенного линейного оператора <span
+class="math inline">\(\mathcal{A}\)</span> можно извлечь квадратный
+корень, то есть существует единственный положительно определенный
+линейный оператор <span class="math inline">\(\mathcal{B}\)</span>,
+такой, что <span class="math inline">\(\mathcal{B}^2 =
+\mathcal{A}\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\mathcal{A}\)</span> положительно определен, а
 значит диагонализируем, причем на главной диагонали стоят положительные
 числа: <span class="math inline">\(A = \left(\begin{array}{ccc}
@@ -314,17 +326,17 @@ class="math inline">\(\mathcal{A}\)</span> положительно опреде
 </div>
 <h2 data-number="18.1" id="полярное-разложение">Полярное разложение</h2>
 <div id="theorem-22">
-<p><strong>Теорема: </strong>(о полярном разложении) Пусть <span
-class="math inline">\(\mathcal{A}\)</span> невырожденный линейный
-оператор. Тогда <span class="math inline">\(\mathcal{A}\)</span>
-единственным образом представляется в виде <span
-class="math inline">\(\mathcal{A} =
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(о полярном
+разложении) Пусть <span class="math inline">\(\mathcal{A}\)</span>
+невырожденный линейный оператор. Тогда <span
+class="math inline">\(\mathcal{A}\)</span> единственным образом
+представляется в виде <span class="math inline">\(\mathcal{A} =
 \mathcal{A}^{+}\mathcal{A}^{\perp}\)</span>, где <span
 class="math inline">\(\mathcal{A}^{+}\)</span> – положительно
 определенный линейный оператор, а <span
 class="math inline">\(\mathcal{A}^{\perp}\)</span> – ортогональный
 линейный оператор.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>Рассмотрим линейный оператор <span
 class="math inline">\(\mathcal{A}\mathcal{A}^{*}\)</span>. По свойствам
 линейного оператора <span
@@ -362,9 +374,9 @@ class="math inline">\(\mathcal{A}^{\perp}(\mathcal{A}^{\perp})^{*} =
 id="векторные-пространства-над-полем-комплексных-чисел">Векторные
 пространства над полем комплексных чисел</h2>
 <div id="definition-76">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над <span
-class="math inline">\(\mathbb{C}\)</span>. Функция <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+<span class="math inline">\(\mathbb{C}\)</span>. Функция <span
 class="math inline">\(\beta: V \times V \to \mathbb{C}\)</span> –
 <em>полуторалинейная</em>, если <span class="math inline">\(\forall x,
 y, z \in V, \,\,\,\, \lambda \in \mathbb{C}\)</span>:</p>
@@ -380,9 +392,9 @@ z)\)</span>.</li>
 </ol>
 </div>
 <div id="definition-77">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над <span
-class="math inline">\(\mathbb{C}\)</span>, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+<span class="math inline">\(\mathbb{C}\)</span>, <span
 class="math inline">\(\{e_1, \ldots, e_n\}\)</span> – базис <span
 class="math inline">\(V\)</span>, <span
 class="math inline">\(\beta\)</span> – полуторалинейная функция. <span
@@ -394,53 +406,55 @@ class="math inline">\(b_{ij} = \beta(e_i, e_j)\)</span> – <em>матрица
 class="math inline">\(\beta\)</span>.</p>
 </div>
 <div id="statement-76">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(\beta\)</span> – полуторалинейная функция, <span
-class="math inline">\(B\)</span> – ее матрица в базисе <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\beta\)</span> – полуторалинейная функция,
+<span class="math inline">\(B\)</span> – ее матрица в базисе <span
 class="math inline">\(\{e_1, \ldots, e_n\}\)</span>. Тогда <span
 class="math inline">\(\beta(x, y) = X^TB\bar{Y}\)</span>, где <span
 class="math inline">\(X\)</span> и <span
 class="math inline">\(Y\)</span> – столбцы координат векторов <span
 class="math inline">\(x\)</span> и <span
 class="math inline">\(y\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math inline">\(\beta(x, y) = \beta(\displaystyle \sum_{i
 = 1}^{n}\lambda_i e_i, \displaystyle \sum_{j = 1}^{n}\mu_j e_j) =
 \displaystyle \sum_{i, j = 1}^{n}\lambda_i \beta(e_i, e_j) \bar{\mu}_j =
 X^T B \bar{Y} \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-77">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(\beta\)</span> – полуторалинейная функция, <span
-class="math inline">\(B\)</span> – ее матрица в базисе <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\beta\)</span> – полуторалинейная функция,
+<span class="math inline">\(B\)</span> – ее матрица в базисе <span
 class="math inline">\(\{e_1, \ldots, e_n\}\)</span>, <span
 class="math inline">\(\tilde{B}\)</span> – ее матрица в базисе <span
 class="math inline">\(\{\tilde{e}_1, \ldots, \tilde{e}_n\}\)</span>.
 Тогда <span class="math display">\[\tilde{B} = C_{e \to
 \tilde{e}}^TB\bar{C}_{e \to \tilde{e}}\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math display">\[X^TB\bar{Y} = (C\tilde{X})^T B
 \bar{C\tilde{Y}} = \tilde{X}^T \tilde{B} \bar{\tilde{Y}}
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="definition-78">
-<p><strong>Определение: </strong>Полуторалинейная функция <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Полуторалинейная функция <span
 class="math inline">\(\beta\)</span> – <em>эрмитова</em>, если <span
 class="math inline">\(\forall x, y \in V \,\,\,\, \beta(x, y) =
 \overline{\beta(y, x)}\)</span>.</p>
 </div>
 <div id="definition-79">
-<p><strong>Определение: </strong>Матрица <span
-class="math inline">\(n\)</span> на <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Матрица
+<span class="math inline">\(n\)</span> на <span
 class="math inline">\(n\)</span> – <em>эрмитова</em>, если <span
 class="math inline">\(B^T = \overline{B}\)</span>.</p>
 </div>
 <div id="statement-78">
-<p><strong>Утверждение: </strong>Полуторалинейная функция <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Полуторалинейная функция <span
 class="math inline">\(\beta\)</span> – эрмитова <span
 class="math inline">\(\Leftrightarrow\)</span> ее матрица в некотором
 базисе эрмитова.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math display">\[\Rightarrow\]</span></p>
 <p><span class="math inline">\(\beta(x, y) = X^T B \bar{Y} =\)</span>
 (так как <span class="math inline">\(\beta(x, y)\)</span> – число) <span
@@ -451,13 +465,13 @@ class="math inline">\(=(X^T B \bar{Y})^T = \bar{Y}^T B^T X
 <h3 data-number="18.2.1" id="свойства-эрмитовой-матрицы">Свойства
 эрмитовой матрицы</h3>
 <div id="statement-79">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(B\)</span> – эрмитова матрица. Тогда</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(B\)</span> – эрмитова матрица. Тогда</p>
 <ol type="1">
 <li><span class="math inline">\(b_{ii} \in \mathbb{R}\)</span>.</li>
 <li><span class="math inline">\(\det(B) \in \mathbb{R}\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li>Пусть <span class="math inline">\(B = \left(\begin{array}{ccc}
 b_{11} &amp; \dots &amp; b_{1n} \\ \vdots &amp; \ddots &amp; \vdots \\
@@ -479,53 +493,58 @@ class="math inline">\(B^T = \left(\begin{array}{ccc} b_{11} &amp; \dots
 </ol>
 </div>
 <div id="definition-80">
-<p><strong>Определение: </strong><span class="math inline">\(q: V \to
-\mathbb{C}\)</span> – <em>эрмитова квадратичная форма</em>, если <span
-class="math inline">\(\forall x \in V \,\,\,\, q(x) = \beta(x,
-x)\)</span>, где <span class="math inline">\(\beta\)</span> – эрмитова
-функция.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(q: V \to \mathbb{C}\)</span> – <em>эрмитова
+квадратичная форма</em>, если <span class="math inline">\(\forall x \in
+V \,\,\,\, q(x) = \beta(x, x)\)</span>, где <span
+class="math inline">\(\beta\)</span> – эрмитова функция.</p>
 </div>
 <h4 data-number="18.2.1.1"
 id="нахождение-эрмитовой-функции-по-ее-квадратичной-функции">Нахождение
 эрмитовой функции по ее квадратичной функции</h4>
 <div id="statement-80">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(q(x)\)</span> – эрмитова квадратичная форма. Тогда
-<span class="math inline">\(\beta(x, y) = \frac{1}{4}(q(x + y) + i q(x +
-i y) - q(x - y) - i q(x - i y))\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(q(x)\)</span> – эрмитова квадратичная форма.
+Тогда <span class="math inline">\(\beta(x, y) = \frac{1}{4}(q(x + y) + i
+q(x + i y) - q(x - y) - i q(x - i y))\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="statement-81">
-<p><strong>Утверждение: </strong>Эрмитова квадратичная функция принимает
-только вещественные значения.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Эрмитова квадратичная функция принимает только
+вещественные значения.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math inline">\(q(x) = \beta(x, x) = \overline{\beta(x,
 x)} = \overline{q(x)} \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-82">
-<p><strong>Утверждение: </strong>Любая эрмитова полуторалинейная функция
-<span class="math inline">\(\beta\)</span> и соответствующая ей эрмитова
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Любая
+эрмитова полуторалинейная функция <span
+class="math inline">\(\beta\)</span> и соответствующая ей эрмитова
 квадратичная форма <span class="math inline">\(q\)</span> приводятся к
 следующему виду: <span class="math display">\[\beta(x, y) = x_1
 \overline{y}_1 + \ldots + x_k \overline{y}_k - x_{k + 1} \overline{y}_{k
 + 1} - \ldots - x_{k + l} \overline{y}_{k + l}\]</span> <span
 class="math display">\[q(x) = |x_1|^2 + \ldots + |x_k|^2 - |x_{k + 1}|^2
 - \ldots - |x_{k + l}|^2\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="definition-81">
-<p><strong>Определение: </strong><br><span
-class="math inline">\(k\)</span> – <em>положительный индекс
-инерции</em>.<br><br><span class="math inline">\(l\)</span> –
-<em>отрицательный индекс инерции</em>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><br><span class="math inline">\(k\)</span> –
+<em>положительный индекс инерции</em>.<br><br><span
+class="math inline">\(l\)</span> – <em>отрицательный индекс
+инерции</em>.</p>
 </div>
 <div id="theorem-23">
-<p><strong>Теорема: </strong>Положительный и отрицательный индексы
-инерции инварианты полуторалинейной эрмитовой функции.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>Положительный и отрицательный индексы инерции инварианты
+полуторалинейной эрмитовой функции.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="definition-82">
-<p><strong>Определение: </strong>Эрмитова квадратичная форма <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Эрмитова квадратичная форма <span
 class="math inline">\(q\)</span> <em>положительно определенная</em>,
 если <span class="math inline">\(\forall x \in V \,\,\,\, q(x) &gt;
 0\)</span>. Cоответствующая <span class="math inline">\(q\)</span>
@@ -538,28 +557,30 @@ class="math inline">\(\beta\)</span> – <em>положительно
 <h2 data-number="18.3" id="унитарные-пространства">Унитарные
 пространства</h2>
 <div id="definition-83">
-<p><strong>Определение: </strong>Векторное пространство, на котором
-фиксирована положительно определенная эрмитова полуторалинейная функция
-<span class="math inline">\(\beta\)</span> – <em>унитарное</em>. <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Векторное пространство, на котором фиксирована
+положительно определенная эрмитова полуторалинейная функция <span
+class="math inline">\(\beta\)</span> – <em>унитарное</em>. <span
 class="math inline">\(\beta\)</span> называется <em>скалярное
 произведение</em>.</p>
 <p><strong>Обозначение:</strong> <span class="math inline">\(\beta(x, y)
 = (x, y)\)</span></p>
 </div>
 <div id="definition-84">
-<p><strong>Определение: </strong><em>Длина вектора</em> в унитарном
-пространстве со скалярным произведением <span class="math inline">\((x,
-y)\)</span> – это <span class="math inline">\(|x| = \sqrt{(x,
-x)}\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Длина вектора</em> в унитарном пространстве со
+скалярным произведением <span class="math inline">\((x, y)\)</span> –
+это <span class="math inline">\(|x| = \sqrt{(x, x)}\)</span>.</p>
 </div>
 <div id="statement-83">
-<p><strong>Утверждение: </strong>(свойства длины)</p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>(свойства длины)</p>
 <ol type="1">
 <li><span class="math inline">\(|x + y| \le |x| + |y|\)</span></li>
 <li><span class="math inline">\(|(x, y)|^2 = (x, y)(y, x) \le (x, x)(y,
 y)\)</span></li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li><span class="math display">\[(x, y) = |(x, y)|e^{i \varphi}\]</span>
 <span class="math display">\[0 \le (xt + ye^{i \varphi}, xt + ye^{i

@@ -11,7 +11,10 @@
     
     <title>Планарные графы</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,26 +237,37 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="теорема-жордана-1.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="раскраски-плоских-графов.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="теорема-жордана-1.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="раскраски-плоских-графов.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
 
 
-<h1 data-number="6" id="планарные-графы-1">Планарные графы</h1>
+<h1 data-number="7" id="планарные-графы-1">Планарные графы</h1>
 <div id="definition-79">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(A\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(A\)</span> и <span
 class="math inline">\(B\)</span> подмножества множества <span
 class="math inline">\(C\)</span>. <span class="math inline">\(A \sqcup
 B\)</span> обозначает, что <span class="math inline">\(A \cap B =
@@ -256,13 +275,13 @@ B\)</span> обозначает, что <span class="math inline">\(A \cap B =
 B\)</span>.</p>
 </div>
 <div id="definition-80">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(G =
-(V, E, \partial)\)</span> и <span class="math inline">\(G’ = (V’, E’,
-\partial’)\)</span> – графы. <em>Отображение графа</em> <span
-class="math inline">\(G\)</span> <em>в граф</em> <span
-class="math inline">\(G’\)</span> – это <span class="math inline">\(f: V
-\sqcup E \to V’ \sqcup E’\)</span>, такое, что <span
-class="math inline">\(f(V) \subset V’\)</span>, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(G = (V, E, \partial)\)</span> и <span
+class="math inline">\(G’ = (V’, E’, \partial’)\)</span> – графы.
+<em>Отображение графа</em> <span class="math inline">\(G\)</span> <em>в
+граф</em> <span class="math inline">\(G’\)</span> – это <span
+class="math inline">\(f: V \sqcup E \to V’ \sqcup E’\)</span>, такое,
+что <span class="math inline">\(f(V) \subset V’\)</span>, <span
 class="math inline">\(f(E) \subset E’\)</span> и <span
 class="math inline">\(f(\partial(e)) = \partial’(f(e))\,\,\,\, \forall e
 \in E\)</span>. Если отображение <span class="math inline">\(f\)</span>
@@ -277,25 +296,27 @@ class="math inline">\(G’\)</span> – <em>изоморфные</em>.<br>
 G’\)</span>.</p>
 </div>
 <div id="definition-81">
-<p><strong>Определение:</strong> Граф <span class="math inline">\(G =
-(V, E, \partial)\)</span> иногда называют <em>комбинаторным</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Граф
+<span class="math inline">\(G = (V, E, \partial)\)</span> иногда
+называют <em>комбинаторным</em>.</p>
 </div>
 <div id="statement-46">
-<p><strong>Утверждение:</strong> Отношение изоморфности на графах –
-отношение эквивалентности.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Отношение изоморфности на графах – отношение
+эквивалентности.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-47">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(G
-\cong G’\)</span>. Тогда топологические графы <span
-class="math inline">\(X_{G}\)</span> и <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(G \cong G’\)</span>. Тогда топологические
+графы <span class="math inline">\(X_{G}\)</span> и <span
 class="math inline">\(X_{G’}\)</span> гомеоморфны.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="definition-82">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(f:
-X_G \to Y\)</span> – вложение графа <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f: X_G \to Y\)</span> – вложение графа <span
 class="math inline">\(G\)</span> в пространство <span
 class="math inline">\(Y\)</span>. Образ <span
 class="math inline">\(f(X_G) \subset Y\)</span> – <em>геометрическая
@@ -311,36 +332,39 @@ class="math inline">\(X_G\)</span> – <em>вершины и ребра геом
 точек.</p>
 </div>
 <div id="definition-83">
-<p><strong>Определение:</strong> Граф – <em>планарный</em>, если
-существует его вложение в плоскость.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Граф –
+<em>планарный</em>, если существует его вложение в плоскость.</p>
 </div>
 <div id="definition-84">
-<p><strong>Определение:</strong> Геометрическая реализация планарного
-графа – <em>плоский граф</em>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Геометрическая реализация планарного графа – <em>плоский
+граф</em>.</p>
 </div>
 <div id="definition-85">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\Gamma \subset \mathbb{R}^2\)</span> – плоский
-граф. Компоненты линейной связности <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\Gamma \subset \mathbb{R}^2\)</span> –
+плоский граф. Компоненты линейной связности <span
 class="math inline">\(\mathbb{R}^2\setminus \Gamma\)</span> –
 <em>грани</em> <span class="math inline">\(\Gamma\)</span>.</p>
 </div>
 <div id="definition-86">
-<p><strong>Определение:</strong> Граф без циклов – <em>лес</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Граф
+без циклов – <em>лес</em>.</p>
 </div>
 <div id="definition-87">
-<p><strong>Определение:</strong> <em>Подразбиение ребра</em> графа <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Подразбиение ребра</em> графа <span
 class="math inline">\(G\)</span> – это …</p>
 </div>
-<h2 data-number="6.1" id="формула-эйлера-для-плоских-графов">Формула
+<h2 data-number="7.1" id="формула-эйлера-для-плоских-графов">Формула
 Эйлера для плоских графов</h2>
 <div id="theorem-6">
-<p><strong>Теорема:</strong> (формула Эйлера) Пусть <span
-class="math inline">\(G\)</span> – конечный плоский граф. <span
-class="math inline">\(v, e, f, k\)</span> – количество его вершин,
-ребер, граней и компонет связности. Тогда справедлива формула: <span
-class="math display">\[v - e + f = 1 + k\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(формула
+Эйлера) Пусть <span class="math inline">\(G\)</span> – конечный плоский
+граф. <span class="math inline">\(v, e, f, k\)</span> – количество его
+вершин, ребер, граней и компонет связности. Тогда справедлива формула:
+<span class="math display">\[v - e + f = 1 + k\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <p>Можно доказывать для графа, все ребра которого отрезки, так как по
 утверждению можем построить граф, все ребра которого ломаные, а добавив
@@ -407,20 +431,21 @@ class="math inline">\(e\)</span> количество ребер и вершин
 class="math inline">\(b\)</span> можно соединить ломаной, не
 пересекающей <span class="math inline">\(G \setminus e\)</span>.</p>
 <p><span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
-<h2 data-number="6.2"
+<h2 data-number="7.2"
 id="критерий-планарности-графа-теорема-понтрягина-куратовского">Критерий
 планарности графа (теорема Понтрягина-Куратовского)</h2>
 <div id="definition-88">
-<p><strong>Определение:</strong> Графы <em>гомеоморфны</em>, если
-гомеоморфны их топологические графы.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Графы
+<em>гомеоморфны</em>, если гомеоморфны их топологические графы.</p>
 </div>
 <div id="theorem-7">
-<p><strong>Теорема:</strong> Граф <span class="math inline">\(G\)</span>
-– планарен <span class="math inline">\(\Leftrightarrow\)</span> никакой
-подграф графа <span class="math inline">\(G\)</span> не гомеоморфен
-<span class="math inline">\(K_{3, 3}\)</span> или <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Граф <span
+class="math inline">\(G\)</span> – планарен <span
+class="math inline">\(\Leftrightarrow\)</span> никакой подграф графа
+<span class="math inline">\(G\)</span> не гомеоморфен <span
+class="math inline">\(K_{3, 3}\)</span> или <span
 class="math inline">\(K_5\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span></p>
 </div>
 <p>Графы <span class="math inline">\(K_{3, 3}\)</span> и <span
@@ -431,7 +456,7 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="теорема-жордана-1.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

@@ -11,7 +11,10 @@
     
     <title>Функции в \mathbb{R}^n</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,17 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="норма-метрика.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="теорема-о-неявной-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="норма-метрика.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="теорема-о-неявной-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,26 +267,28 @@
 <h1 data-number="10" id="функции-в-mathbbrn">Функции в <span
 class="math inline">\(\mathbb{R}^n\)</span></h1>
 <div id="definition-45">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f\)</span> – функция в <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f\)</span> – функция в <span
 class="math inline">\(\mathbb{R}^n\)</span>. Множество <span
 class="math inline">\(A = \{x \in \mathbb{R}^n: \,\,\,\, f(x) =
 c\}\)</span> – <em>линия уровня</em> (для константы <span
 class="math inline">\(c\)</span>).</p>
 </div>
 <div id="definition-46">
-<p><strong>Определение:</strong> Если <span class="math inline">\(x_0
-\in D_f’\)</span> (множество предельных точек области определения) и
-<span class="math inline">\(\exists a \in \mathbb{R}: \,\,\,\, \forall
-\varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \,\,\,\, \forall x
-\in \mathring{O}_{\delta}(x_0) \cap D_f \,\,\,\, |f(x) - a| &lt;
-\varepsilon\)</span>, то <span class="math inline">\(a\)</span> –
-<em>предел функции</em> <span class="math inline">\(f(x)\)</span> в
-точке <span class="math inline">\(x_0\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+<span class="math inline">\(x_0 \in D_f’\)</span> (множество предельных
+точек области определения) и <span class="math inline">\(\exists a \in
+\mathbb{R}: \,\,\,\, \forall \varepsilon &gt; 0 \,\,\,\, \exists \delta
+&gt; 0: \,\,\,\, \forall x \in \mathring{O}_{\delta}(x_0) \cap D_f
+\,\,\,\, |f(x) - a| &lt; \varepsilon\)</span>, то <span
+class="math inline">\(a\)</span> – <em>предел функции</em> <span
+class="math inline">\(f(x)\)</span> в точке <span
+class="math inline">\(x_0\)</span>.</p>
 </div>
 <div id="definition-47">
-<p><strong>Определение:</strong> Сформулируйте определение по Гейне для
-функции многих переменных.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Сформулируйте определение по Гейне для функции многих
+переменных.</p>
 </div>
 <h2 data-number="10.1" id="локальные-свойства-предела">Локальные
 свойства предела</h2>
@@ -276,10 +297,11 @@ class="math inline">\(c\)</span>).</p>
 Коши.</p>
 <p>Все, что выше надо уметь доказывать.</p>
 <div id="definition-48">
-<p><strong>Определение:</strong> Если <span class="math inline">\(x_0
-\in D_f’\)</span> (множество предельных точек области определения),
-<span class="math inline">\(\gamma(t)\)</span> – непрерывная кривая,
-<span class="math inline">\(\gamma(t_0) = x_0\)</span>, если <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+<span class="math inline">\(x_0 \in D_f’\)</span> (множество предельных
+точек области определения), <span
+class="math inline">\(\gamma(t)\)</span> – непрерывная кривая, <span
+class="math inline">\(\gamma(t_0) = x_0\)</span>, если <span
 class="math inline">\(\exists a \in \mathbb{R}: \,\,\,\, \forall
 \varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \,\,\,\, \forall t
 \in (t_0 - \delta, t_0) \cup (t_0, t_0 + \delta) \,\,\,\, |f(x) - a|
@@ -290,15 +312,16 @@ class="math inline">\(\exists a \in \mathbb{R}: \,\,\,\, \forall
 </div>
 <h2 data-number="10.2" id="непрерывные-функции">Непрерывные функции</h2>
 <div id="definition-49">
-<p><strong>Определение:</strong> Если <span class="math inline">\(x_0
-\in D_f’\)</span> (множество предельных точек области определения). Если
-существует <span class="math inline">\(\displaystyle \lim_{x\to x_0}f(x)
-= x_0\)</span>, то функция <span class="math inline">\(f(x)\)</span>
-<em>непрерывна</em> в точке <span
-class="math inline">\(x_0\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+<span class="math inline">\(x_0 \in D_f’\)</span> (множество предельных
+точек области определения). Если существует <span
+class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = x_0\)</span>,
+то функция <span class="math inline">\(f(x)\)</span> <em>непрерывна</em>
+в точке <span class="math inline">\(x_0\)</span>.</p>
 </div>
 <div id="definition-50">
-<p><strong>Определение:</strong> Множество всех непрерывных на <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество всех непрерывных на <span
 class="math inline">\(A \subset \mathbb{R}^n\)</span> функций
 обозначается <span class="math inline">\(C(A)\)</span>.</p>
 </div>
@@ -308,46 +331,50 @@ id="локальные-свойства-непрерывных-функций">�
 <p>Сумма, произведение и частное непрерывных функций – непрерывная
 функция, композиция непрерывных функций непрерывная функция, …</p>
 <div id="theorem-36">
-<p><strong>Теорема:</strong> Композиция непрерывных функций
-непрерывна.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Композиция
+непрерывных функций непрерывна.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="10.3"
 id="глобальные-свойства-непрерывных-функций">Глобальные свойства
 непрерывных функций</h2>
 <div id="theorem-37">
-<p><strong>Теорема:</strong> (Первая теорема Вейерштрасса) Пусть <span
-class="math inline">\(A \subset \mathbb{R}^n\)</span> - компакт, <span
-class="math inline">\(f(x) \in C(A)\)</span>. Тогда <span
-class="math inline">\(f(x)\)</span> ограничена на <span
-class="math inline">\(A\)</span>.</p>
-<p><em>Доказательство:</em> как будто ничего не изменилось (не, теперь
-компакт, потому что в <span class="math inline">\(\mathbb{R}^n\)</span>
-не только отрезок компакт).</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Первая
+теорема Вейерштрасса) Пусть <span class="math inline">\(A \subset
+\mathbb{R}^n\)</span> – компакт, <span class="math inline">\(f(x) \in
+C(A)\)</span>. Тогда <span class="math inline">\(f(x)\)</span>
+ограничена на <span class="math inline">\(A\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> как будто
+ничего не изменилось (не, теперь компакт, потому что в <span
+class="math inline">\(\mathbb{R}^n\)</span> не только отрезок
+компакт).</p>
 </div>
 <div id="theorem-38">
-<p><strong>Теорема:</strong> (Вторая теорема Вейерштрасса) Пусть <span
-class="math inline">\(A \subset \mathbb{R}^n\)</span> - компакт, <span
-class="math inline">\(f(x) \in C(A)\)</span>. Тогда <span
-class="math inline">\(\exists x_{min}, x_{max} \in A: \,\,\,\,
-f(x_{min}) = \displaystyle\inf_Af(x) \,\,\,\, f(x_{max}) =
-\displaystyle\sup_Af(x)\)</span>.</p>
-<p><em>Доказательство:</em> см. выше.</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Вторая
+теорема Вейерштрасса) Пусть <span class="math inline">\(A \subset
+\mathbb{R}^n\)</span> – компакт, <span class="math inline">\(f(x) \in
+C(A)\)</span>. Тогда <span class="math inline">\(\exists x_{min},
+x_{max} \in A: \,\,\,\, f(x_{min}) = \displaystyle\inf_Af(x) \,\,\,\,
+f(x_{max}) = \displaystyle\sup_Af(x)\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> см.
+выше.</p>
 </div>
 <h2 data-number="10.4"
 id="непрерывная-функция-принимает-все-промежуточные-значения">Непрерывная
 функция принимает все промежуточные значения</h2>
 <div id="theorem-39">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(A \subset
-\mathbb{R}^n\)</span> – линейно связно. <span class="math inline">\(f(x)
-\in C(A)\)</span>. Пусть <span class="math inline">\(x_1, x_2 \in A
-\,\,\,\, f(x_1) = \alpha, \,\,\,\, f(x_2) = \beta \,\,\,\, (\alpha \le
-\beta)\)</span>. Тогда <span class="math inline">\(\forall \varkappa:
-\,\,\,\, \alpha \le \varkappa \le \beta \,\,\,\, \exists x_{\varkappa}
-\in A: \,\,\,\, f(x_{\varkappa}) = \varkappa\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(A\)</span> –
-линейно связно <span class="math inline">\(\Rightarrow \exists
-\gamma(t): \,\,\,\, \gamma(0) = x_1, \gamma(1) = x_2\)</span> (<span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(A \subset \mathbb{R}^n\)</span> – линейно связно.
+<span class="math inline">\(f(x) \in C(A)\)</span>. Пусть <span
+class="math inline">\(x_1, x_2 \in A \,\,\,\, f(x_1) = \alpha, \,\,\,\,
+f(x_2) = \beta \,\,\,\, (\alpha \le \beta)\)</span>. Тогда <span
+class="math inline">\(\forall \varkappa: \,\,\,\, \alpha \le \varkappa
+\le \beta \,\,\,\, \exists x_{\varkappa} \in A: \,\,\,\,
+f(x_{\varkappa}) = \varkappa\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(A\)</span> – линейно связно <span
+class="math inline">\(\Rightarrow \exists \gamma(t): \,\,\,\, \gamma(0)
+= x_1, \gamma(1) = x_2\)</span> (<span
 class="math inline">\(\gamma\)</span> – непрерывная кривая). Тогда <span
 class="math inline">\(f(\gamma(t)) \in C[0, 1]\)</span>, значит по
 теореме о том, что функция одной переменнной принимает все промежуточные
@@ -358,19 +385,20 @@ class="math inline">\(f(\gamma(t)) \in C[0, 1]\)</span>, значит по
 <h2 data-number="10.5" id="равномерная-непрерывность">Равномерная
 непрерывность</h2>
 <div id="definition-51">
-<p><strong>Определение:</strong> Как было так и осталось.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Как
+было так и осталось.</p>
 </div>
 <div id="theorem-40">
-<p><strong>Теорема:</strong> Если функция непрерывна на компакте, то она
-равномерно непрерывна на нем.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если
+функция непрерывна на компакте, то она равномерно непрерывна на нем.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="10.6"
 id="дифференцирование-функций-многих-переменных">Дифференцирование
 функций многих переменных</h2>
 <div id="definition-52">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f(x)\)</span> определена в <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена в <span
 class="math inline">\(O(x_0)\)</span>. Если <span
 class="math inline">\(\exists \displaystyle \lim_{\Delta x_i\to
 x_0}\frac{f(x_{01}, \ldots, x_{0i} + \Delta x_i, \ldots, x_n) -
@@ -380,8 +408,8 @@ f(x_0)}{\Delta x_i} := f’_{x_i} := \frac{\partial f}{\partial x_i}_{|_{x
 по переменной <span class="math inline">\(x_i\)</span>.</p>
 </div>
 <div id="definition-53">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f(x)\)</span> определена в <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена в <span
 class="math inline">\(O(x_0)\)</span>. Если <span
 class="math inline">\(\exists \{A_i\}_{i = 1}^n: \,\,\,\,\)</span><span
 class="math display">\[f(x) - f(x_0) = \displaystyle \sum_{i =
@@ -393,23 +421,25 @@ class="math inline">\(df_{|_{x_0}} = \sum_{i = 1}^{n}A_i(x_i -
 x_{0i})\)</span>.</p>
 </div>
 <div id="theorem-41">
-<p><strong>Теорема:</strong> Если <span class="math inline">\(f\)</span>
-дифференцируема в точке <span class="math inline">\(x_0\)</span>, то
-<span class="math inline">\(\forall i \in \{1, \ldots, n\} \,\,\,\,
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если <span
+class="math inline">\(f\)</span> дифференцируема в точке <span
+class="math inline">\(x_0\)</span>, то <span
+class="math inline">\(\forall i \in \{1, \ldots, n\} \,\,\,\,
 \frac{\partial f}{\partial x_i} = A_i\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math display">\[\displaystyle
-\lim_{\Delta x_i\to x_0}\frac{f(x_{01}, \ldots, x_{0i} + \Delta x_i,
-\ldots, x_n) - f(x_0)}{\Delta x_i} = \displaystyle \lim_{\Delta x_i\to
-x_0}\frac{A_i \Delta x_i + \overline{\overline{o}}(\rho)}{\Delta x_i} =
-A_i \,\,\,\,\blacksquare\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math display">\[\displaystyle \lim_{\Delta x_i\to
+x_0}\frac{f(x_{01}, \ldots, x_{0i} + \Delta x_i, \ldots, x_n) -
+f(x_0)}{\Delta x_i} = \displaystyle \lim_{\Delta x_i\to x_0}\frac{A_i
+\Delta x_i + \overline{\overline{o}}(\rho)}{\Delta x_i} = A_i
+\,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-42">
-<p><strong>Теорема:</strong> Если <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если <span
 class="math inline">\(f(x)\)</span> дифференцируема в точке <span
 class="math inline">\(x_0\)</span>, то <span
 class="math inline">\(f(x)\)</span> непрерывна в точке <span
 class="math inline">\(x_0\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math display">\[|f(x) - f(x_0)| = |\displaystyle \sum_{i
 = 1}^{n}A_i \Delta x_i + \overline{\overline{o}}(\rho)| \le
 |\displaystyle \sum_{i = 1}^{n}A_i \Delta x_i| +
@@ -420,8 +450,8 @@ class="math inline">\(x_0\)</span>.</p>
 <h2 data-number="10.7" id="производная-по-направлению">Производная по
 направлению</h2>
 <div id="definition-54">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f(x)\)</span> дифференцируема в точке <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> дифференцируема в точке <span
 class="math inline">\(x_0\)</span>. Пусть <span class="math inline">\(l
 = (\cos \alpha_1, \cos \alpha_2, \ldots, \cos \alpha_n)\)</span> и <span
 class="math inline">\(||l|| = 1\)</span>.</p>
@@ -432,8 +462,8 @@ class="math inline">\(f\)</span> <em>в направлении</em> <span
 class="math inline">\(l\)</span>.</p>
 </div>
 <div id="definition-55">
-<p><strong>Определение:</strong> Вектор (на самом деле ковектор, т.к.
-вектор из сопряженного пространства) <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Вектор
+(на самом деле ковектор, т.к. вектор из сопряженного пространства) <span
 class="math display">\[\left(\frac{\partial f}{\partial x_1}, \ldots,
 \frac{\partial f}{\partial x_n}\right)\]</span> – <em>градиент
 функции</em> <span class="math inline">\(f\)</span>. Обозначается: <span
@@ -444,13 +474,13 @@ class="math inline">\(\nabla f\)</span>.</p>
 id="направление-градиента-это-направление-наибольшего-изменения-функции">Направление
 градиента – это направление наибольшего изменения функции</h2>
 <div id="theorem-43">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(m =
-\frac{\operatorname{grad} f}{||\operatorname{grad} f||}_{|_{x =
-x_0}}\)</span> (градиент, норма). Тогда <span
-class="math display">\[\displaystyle\max_l \left|\frac{\partial
-f}{\partial l}_{|_{x = x_0}}\right| = \left|\frac{\partial f}{\partial
-m}_{|_{x = x_0}}\right|\]</span></p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(m = \frac{\operatorname{grad}
+f}{||\operatorname{grad} f||}_{|_{x = x_0}}\)</span> (градиент, норма).
+Тогда <span class="math display">\[\displaystyle\max_l
+\left|\frac{\partial f}{\partial l}_{|_{x = x_0}}\right| =
+\left|\frac{\partial f}{\partial m}_{|_{x = x_0}}\right|\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\left|\frac{\partial f}{\partial l}_{|_{x =
 x_0}}\right| = |\operatorname{grad}f|\cdot\cos \varphi \le
 |\operatorname{grad}f|\]</span></p>
@@ -463,15 +493,17 @@ m}_{|_{x = x_0}}\right| = \sqrt{\displaystyle \sum_{i = 1}^{n}
 id="достаточное-условие-дифференцируемости">Достаточное условие
 дифференцируемости</h2>
 <div id="theorem-44">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\forall i
-\in {1, \ldots, n} \,\,\,\, \exists \frac{\partial f}{\partial
-x_i}\)</span> в <span class="math inline">\(B(x_0)\)</span> и <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(\forall i \in {1, \ldots, n} \,\,\,\, \exists
+\frac{\partial f}{\partial x_i}\)</span> в <span
+class="math inline">\(B(x_0)\)</span> и <span
 class="math inline">\(\forall i \in {1, \ldots, n} \,\,\,\,
 \frac{\partial f}{\partial x_i} \in C(B(x_0))\)</span>. Тогда <span
 class="math inline">\(f\)</span> дифференцируема в точке <span
 class="math inline">\(x_0\)</span>.</p>
-<p><em>Доказательство:</em> Докажем для <span
-class="math inline">\(\mathbb{R}^2\)</span> остальное аналогично 😉.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Докажем для
+<span class="math inline">\(\mathbb{R}^2\)</span> остальное аналогично
+😉.</p>
 <p><span class="math display">\[f(x_0 + \Delta x, y_0 + \Delta y) -
 f(x_0, y_0) =\]</span> <span class="math display">\[= f(x_0 + \Delta x,
 y_0 + \Delta y) - f(x_0, y_0 + \Delta y) + f(x_0, y_0 + \Delta y) -
@@ -486,20 +518,21 @@ y + \overline{\overline{o}}(\rho) \,\,\,\,\blacksquare\]</span></p>
 <h2 data-number="10.10" id="равенство-смешанных-производных">Равенство
 смешанных производных</h2>
 <div id="definition-56">
-<p><strong>Определение:</strong> Если <span
-class="math inline">\(f\)</span> и все частные производные до <span
-class="math inline">\(k - 1\)</span> порядка дифференцируемы в
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+<span class="math inline">\(f\)</span> и все частные производные до
+<span class="math inline">\(k - 1\)</span> порядка дифференцируемы в
 окрестности точки <span class="math inline">\(x_0\)</span> и все <span
 class="math inline">\(k\)</span> производные непрерывны в точке <span
 class="math inline">\(x_0\)</span>, то <span class="math inline">\(f \in
 C^k(x_0)\)</span>.</p>
 </div>
 <div id="theorem-45">
-<p><strong>Теорема:</strong> Если <span class="math inline">\(f \in
-C^2(x_0)\)</span>, то <span class="math inline">\(\forall i, j \,\,\,\,
-\frac{\partial^2 f}{\partial x_j \partial x_i} = \frac{\partial^2
-f}{\partial x_i \partial x_j}\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если <span
+class="math inline">\(f \in C^2(x_0)\)</span>, то <span
+class="math inline">\(\forall i, j \,\,\,\, \frac{\partial^2 f}{\partial
+x_j \partial x_i} = \frac{\partial^2 f}{\partial x_i \partial
+x_j}\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>Определим:</p>
 <p><span class="math display">\[\Delta_x f(x_0, y_0) = f(x_0 + \Delta x,
 y_0) - f(x_0, y_0)\]</span> <span class="math display">\[\Delta_y f(x_0,
@@ -523,8 +556,8 @@ class="math inline">\(\Delta_y \Delta_x f(x_0, y_0)
 <h2 data-number="10.11" id="касательная-плоскость-к-графику">Касательная
 плоскость к графику</h2>
 <div id="definition-57">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f\)</span> определена в <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f\)</span> определена в <span
 class="math inline">\(B(x_0)\)</span> и <span
 class="math inline">\(\exists \operatorname{grad}f_{|_{x=x_0}}\)</span>.
 Если угол между направляющим вектором секущей к графику, проходящей
@@ -543,12 +576,12 @@ class="math inline">\(f\)</span> в точке <span
 class="math inline">\(x_0\)</span>.</p>
 </div>
 <div id="theorem-46">
-<p><strong>Теорема:</strong> Если <span class="math inline">\(f\)</span>
-дифференцируема в точке <span class="math inline">\(x_0\)</span>, то
-существует касательная плоскость к графику <span
-class="math inline">\(f\)</span> в точке <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если <span
+class="math inline">\(f\)</span> дифференцируема в точке <span
+class="math inline">\(x_0\)</span>, то существует касательная плоскость
+к графику <span class="math inline">\(f\)</span> в точке <span
 class="math inline">\(x_0\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>Запишем уравнение секущей к графику, проходящей через точки <span
 class="math inline">\((x_{01}, \ldots, x_{0n}, f(x_0))\)</span> и <span
 class="math inline">\((x_{1}, \ldots, x_{n}, f(x))\)</span> в
@@ -579,7 +612,7 @@ f(x_0))^2 + \displaystyle \sum_{i = 1}^{n}(\Delta x_i)^2}} =\]</span>
 id="инвариантность-формы-первого-дифференциала">Инвариантность формы
 первого дифференциала</h2>
 <div id="theorem-47">
-<p><strong>Теорема:</strong> Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(f(x)\)</span> дифференцируема в области <span
 class="math inline">\(\Omega \subset \mathbb{R}^n\)</span>. <span
 class="math inline">\(x(t)\)</span> дифференцируема в области <span
@@ -590,7 +623,7 @@ class="math inline">\(x(t): \,\,\,\, \Phi \to \Omega\)</span>. Тогда
 class="math display">\[\frac{\partial f}{\partial t_j} = \displaystyle
 \sum_{i = 1}^{n} \frac{\partial f}{\partial x_i} \cdot \frac{\partial
 x_i}{\partial t_j}\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>Запишем дифференциал <span
 class="math inline">\(f(x(t))\)</span>:</p>
 <p><span class="math display">\[f(x(t + \Delta t)) - f(x(t)) =\]</span>
@@ -609,10 +642,10 @@ x_i} \cdot \frac{\partial x_i}{\partial t_j}\right) \Delta t_j +
 <h2 data-number="10.13" id="дифференциалы-высших-порядков">Дифференциалы
 высших порядков</h2>
 <div id="definition-58">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(f(x)
-\in C^2(B(x_0))\)</span>. Запишем первый дифференциал <span
-class="math inline">\(f(x)\)</span> в точке <span
-class="math inline">\(x_0\)</span>. <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x) \in C^2(B(x_0))\)</span>. Запишем
+первый дифференциал <span class="math inline">\(f(x)\)</span> в точке
+<span class="math inline">\(x_0\)</span>. <span
 class="math display">\[df(x)_{|_{x_0}} = \displaystyle \sum_{i =
 1}^{n}\frac{\partial f}{\partial x_i}_{|_{x_0}}dx_i\]</span>
 Продифференцируем <span class="math inline">\(df(x):\)</span><span
@@ -627,15 +660,17 @@ x_j\]</span> – это <span class="math inline">\(2\)</span><em>-й
 id="формула-тейлора-для-функций-многих-переменных">Формула Тейлора для
 функций многих переменных</h2>
 <div id="theorem-48">
-<p><strong>Теорема:</strong> <span class="math display">\[f(x) \in
-C^m(B(x_0)), x_0 \in \mathbb{R}^n \Rightarrow \forall x \in B(x_0)
-\,\,\,\, \exists \theta \in [0, 1]:\]</span> <span
-class="math display">\[f(x) - f(x_0) = \displaystyle \sum_{k = 1}^{m -
-1} \frac1{k!} d^kf(x_0) + d^m f(x + \theta (x - x_0))\]</span></p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(t \in [0,
-1]\)</span>. Тогда <span class="math inline">\(x_0 +  t (x - x_0) \in
-B(x_0)\)</span> и <span class="math inline">\(F(t) = f(x_0 +  t (x -
-x_0)) \in C^m[0, 1]\)</span>.</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span><span
+class="math display">\[f(x) \in C^m(B(x_0)), x_0 \in \mathbb{R}^n
+\Rightarrow \forall x \in B(x_0) \,\,\,\, \exists \theta \in [0,
+1]:\]</span> <span class="math display">\[f(x) - f(x_0) = \displaystyle
+\sum_{k = 1}^{m - 1} \frac1{k!} d^kf(x_0) + d^m f(x + \theta (x -
+x_0))\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(t \in [0, 1]\)</span>. Тогда <span
+class="math inline">\(x_0 +  t (x - x_0) \in B(x_0)\)</span> и <span
+class="math inline">\(F(t) = f(x_0 +  t (x - x_0)) \in C^m[0,
+1]\)</span>.</p>
 <p>Докажем по индукции, что <span class="math inline">\(F^{(k)}(t) = d^k
 f(x_0 + t (x - x_0))\)</span>.</p>
 <p><strong>База:</strong> <span class="math display">\[F’(t) =
@@ -673,7 +708,7 @@ id="достаточное-условие-локального-экстрему�
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="норма-метрика.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

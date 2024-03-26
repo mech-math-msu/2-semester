@@ -11,7 +11,10 @@
     
     <title>Теория дискретных функций</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,19 +237,31 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                    </span>
-        <span class="navlink">
-                    </span>
-        <span class="navlink">
-                        <a href="булевы-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                            </span>
+            <span class="navlink">
+                            </span>
+            <span class="navlink">
+                                <a href="булевы-функции.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
 <header id="title-block-header">
+
     <h1 class="title">Теория дискретных функций</h1>
 
     
@@ -252,8 +272,8 @@
 <nav id="TOC" role="doc-toc">
         <h2 id="toc-title" class="toc-title">Содержание</h2>
         <ul>
-        <li><a href="булевы-функции.html" id="toc-булевы-функции">Булевы
-        функции</a>
+        <li><a href="булевы-функции.html#булевы-функции"
+        id="toc-булевы-функции">Булевы функции</a>
         <ul>
         <li><a href="булевы-функции.html#элементарные-булевы-функции"
         id="toc-элементарные-булевы-функции">Элементарные булевы
@@ -261,8 +281,8 @@
         <li><a href="булевы-функции.html#формула"
         id="toc-формула">Формула</a></li>
         </ul></li>
-        <li><a href="булевы-функции-1.html" id="toc-булевы-функции-1">Булевы
-        функции</a>
+        <li><a href="булевы-функции-1.html#булевы-функции-1"
+        id="toc-булевы-функции-1">Булевы функции</a>
         <ul>
         <li><a href="булевы-функции-1.html#эквивалентные-формулы"
         id="toc-эквивалентные-формулы">Эквивалентные формулы</a></li>
@@ -341,7 +361,7 @@
         <li><a href="булевы-функции-1.html#теоремы-поста-о-базисе"
         id="toc-теоремы-поста-о-базисе">Теоремы Поста о базисе</a></li>
         </ul></li>
-        <li><a href="функции-k-значной-логики.html"
+        <li><a href="функции-k-значной-логики.html#функции-k-значной-логики"
         id="toc-функции-k-значной-логики">Функции <span
         class="math inline">\(k\)</span>-значной логики</a>
         <ul>
@@ -434,7 +454,8 @@
         id="toc-представление-функций-в-p_k-полиномами">Представление функций в
         <span class="math inline">\(P_k\)</span> полиномами</a></li>
         </ul></li>
-        <li><a href="абстрактный-конечный-автомат.html"
+        <li><a
+        href="абстрактный-конечный-автомат.html#абстрактный-конечный-автомат"
         id="toc-абстрактный-конечный-автомат">Абстрактный конечный автомат</a>
         <ul>
         <li><a href="абстрактный-конечный-автомат.html#способы-задания"
@@ -498,7 +519,7 @@
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                     </span>
         <span class="navlink">

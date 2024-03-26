@@ -11,6 +11,7 @@
     
     <title>Аффинно-евклидовы пространства</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -257,12 +267,13 @@
 <h1 data-number="23"
 id="аффинно-евклидовы-пространства">Аффинно-евклидовы пространства</h1>
 <div id="definition-115">
-<p><strong>Определение: </strong>Аффинное пространство <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Аффинное пространство <span
 class="math inline">\(\mathbb{A}\)</span> над евклидовым пространстом
 <span class="math inline">\(V\)</span> – <em>аффинно-евклидово</em>.</p>
 </div>
 <div id="definition-116">
-<p><strong>Определение: </strong><span
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
 class="math inline">\(\mathbb{A}\)</span> – аффинно-евклидово
 пространство. <span class="math inline">\(a, b \in \mathbb{A}\)</span>.
 <em>Расстояние</em> от <span class="math inline">\(a\)</span> до <span
@@ -270,8 +281,8 @@ class="math inline">\(b\)</span> – это <span
 class="math inline">\(\rho(a, b) = |\overline{ab}|\)</span>.</p>
 </div>
 <div id="definition-117">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\((\mathbb{A}, U)\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\((\mathbb{A}, U)\)</span> и <span
 class="math inline">\((\mathbb{B}, W)\)</span> аффинно-евклидовы
 пространства. <span class="math inline">\(\mathbb{A}\)</span>
 <em>изоморфно</em> <span class="math inline">\(\mathbb{B}\)</span>, если
@@ -281,14 +292,15 @@ a, b \in \mathbb{A} \,\,\,\, \rho_{\mathbb{A}}(a, b) =
 \rho_{\mathbb{B}}(\Phi(a), \Phi(b))\)</span>.</p>
 </div>
 <div id="statement-118">
-<p><strong>Утверждение: </strong>Аффинно-евклидовы пространства
-изоморфно <span class="math inline">\(\Leftrightarrow\)</span> их
-размерности совпадают. (для конечномерных пространств)</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Аффинно-евклидовы пространства изоморфно <span
+class="math inline">\(\Leftrightarrow\)</span> их размерности совпадают.
+(для конечномерных пространств)</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="definition-118">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(\mathbb{A}\)</span> аффинно-евклидово
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\mathbb{A}\)</span> аффинно-евклидово
 пространство. <span class="math inline">\(\pi\)</span> и <span
 class="math inline">\(\tau\)</span> – плоскости. <em>Расстояние между
 плоскостями</em> <span class="math inline">\(\pi\)</span> и <span
@@ -297,13 +309,13 @@ class="math inline">\(\rho(\pi, \tau) = \inf\{\rho(a, b): \,\,\,\, a \in
 \pi, \,\,\,\, b \in \tau\}\)</span>.</p>
 </div>
 <div id="statement-119">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(\mathbb{A}\)</span> аффинно-евклидово
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\mathbb{A}\)</span> аффинно-евклидово
 пространство. <span class="math inline">\(\pi = a_0 + U\)</span> и <span
 class="math inline">\(\tau = b_0 + W\)</span> – плоскости. Тогда <span
 class="math display">\[\rho(\pi, \tau) = \operatorname{pr}_{U +
 W}\overline{a_0b_0}\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math display">\[\overline{a_0b_0} = \operatorname{pr}_{U
 + W}\overline{a_0b_0} + \operatorname{ort}_{U +
 W}\overline{a_0b_0}\]</span> <span class="math display">\[a = a_0 + u,
@@ -321,8 +333,8 @@ class="math display">\[= |\operatorname{pr}_{U + W}\overline{a_0b_0}|^2
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="definition-119">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(\mathbb{A}\)</span> аффинно-евклидово
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\mathbb{A}\)</span> аффинно-евклидово
 пространство. <span class="math inline">\(\pi = a_0 + U\)</span> и <span
 class="math inline">\(\tau = b_0 + W\)</span> – плоскости. Тогда <span
 class="math inline">\(\tau \perp \pi\)</span> (<span

@@ -11,7 +11,10 @@
     
     <title>Абстрактный конечный автомат</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,16 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="функции-k-значной-логики.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="функции-k-значной-логики.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="search.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -332,18 +352,18 @@ class="math inline">\(b\)</span>. Скучно. Пускай теперь ест
 текущий и (возможно) входом <span class="math inline">\(a\)</span>
 (слайдер отвечает за время).</p>
 <div id="definition-56">
-<p><strong>Определение:</strong> <em>(Конечный абстрактный
-детерминированный) автомат</em> – это <span class="math inline">\((A, Q,
-B, \varphi, \psi)\)</span>, где<br><br> <span
-class="math inline">\(A\)</span> – <em>алфавит(множество)
-входов</em>.<br><br> <span class="math inline">\(Q\)</span> –
-<em>алфавит(множество) состояний</em>.<br><br> <span
-class="math inline">\(B\)</span> – <em>алфавит(множество)
-выходов</em>.<br><br>Множества <span class="math inline">\(A, Q,
-B\)</span> – конечны.<br><br> <span class="math inline">\(\varphi:
-Q\times A \to Q\)</span> – <em>функция переходов</em>.<br><br> <span
-class="math inline">\(\psi: Q \times A \to B\)</span> – <em>функция
-выходов</em>.<br><br></p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>(Конечный абстрактный детерминированный)
+автомат</em> – это <span class="math inline">\((A, Q, B, \varphi,
+\psi)\)</span>, где<br><br> <span class="math inline">\(A\)</span> –
+<em>алфавит(множество) входов</em>.<br><br> <span
+class="math inline">\(Q\)</span> – <em>алфавит(множество)
+состояний</em>.<br><br> <span class="math inline">\(B\)</span> –
+<em>алфавит(множество) выходов</em>.<br><br>Множества <span
+class="math inline">\(A, Q, B\)</span> – конечны.<br><br> <span
+class="math inline">\(\varphi: Q\times A \to Q\)</span> – <em>функция
+переходов</em>.<br><br> <span class="math inline">\(\psi: Q \times A \to
+B\)</span> – <em>функция выходов</em>.<br><br></p>
 </div>
 <center>
 <strong>Алфавит входов</strong>
@@ -367,27 +387,27 @@ class="math inline">\(\psi: Q \times A \to B\)</span> – <em>функция
 </canvas>
 </center>
 <div id="definition-57">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\((A,
-Q, B, \varphi, \psi)\)</span> – автомат. Если <span
-class="math inline">\(\varphi\)</span> зависит от <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\((A, Q, B, \varphi, \psi)\)</span> – автомат.
+Если <span class="math inline">\(\varphi\)</span> зависит от <span
 class="math inline">\(a \in A\)</span> фиктивно, то <span
 class="math inline">\((A, Q, B, \varphi, \psi)\)</span> – <em>автомат
 Мура</em>.</p>
 </div>
 <div id="definition-58">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\((A,
-Q, B, \varphi, \psi)\)</span> – автомат. Если <span
-class="math inline">\(A = A_1 \times \ldots \times A_m\)</span>, то
-<span class="math inline">\((A, Q, B, \varphi, \psi)\)</span>
-<em>имеет</em> <span class="math inline">\(m\)</span>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\((A, Q, B, \varphi, \psi)\)</span> – автомат.
+Если <span class="math inline">\(A = A_1 \times \ldots \times
+A_m\)</span>, то <span class="math inline">\((A, Q, B, \varphi,
+\psi)\)</span> <em>имеет</em> <span class="math inline">\(m\)</span>
 <em>входов</em>.</p>
 </div>
 <div id="definition-59">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\((A,
-Q, B, \varphi, \psi)\)</span> – автомат. Если <span
-class="math inline">\(B = B_1 \times \ldots \times B_m\)</span>, то
-<span class="math inline">\((A, Q, B, \varphi, \psi)\)</span>
-<em>имеет</em> <span class="math inline">\(m\)</span>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\((A, Q, B, \varphi, \psi)\)</span> – автомат.
+Если <span class="math inline">\(B = B_1 \times \ldots \times
+B_m\)</span>, то <span class="math inline">\((A, Q, B, \varphi,
+\psi)\)</span> <em>имеет</em> <span class="math inline">\(m\)</span>
 <em>выходов</em>.</p>
 </div>
 <h3 data-number="4.1.1" id="диаграмма-мура">Диаграмма Мура</h3>
@@ -399,8 +419,9 @@ class="math inline">\(B = B_1 \times \ldots \times B_m\)</span>, то
 id="вспомогательные-функции-для-автомата">Вспомогательные функции для
 автомата</h2>
 <div id="definition-60">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\((A,
-Q, B, \varphi, \psi)\)</span> – автомат.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\((A, Q, B, \varphi, \psi)\)</span> –
+автомат.</p>
 <p>Слова в алфавите <span class="math inline">\(A\)</span> – <em>входные
 слова</em>.</p>
 <p>Слова в алфавите <span class="math inline">\(B\)</span> –
@@ -438,19 +459,20 @@ class="math inline">\(\psi\)</span>, так чтобы они могли при�
 \alpha), a)\)</span> (Только непустое входное слово, так как для выхода
 нужен вход)</p>
 <div id="statement-26">
-<p><strong>Утверждение:</strong><br />
-<span class="math display">\[\varphi(q, \alpha_1 \alpha_2) =
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
+class="math display">\[\varphi(q, \alpha_1 \alpha_2) =
 \varphi(\varphi(q, \alpha_1), \alpha_2)\]</span> <span
 class="math display">\[\psi(q, \alpha_1 \alpha_2) = \psi(\varphi(q,
 \alpha_1), \alpha_2)\]</span></p>
-<p><em>Доказательство:</em> индукция <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> индукция
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-61">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\((A,
-Q, B, \varphi, \psi)\)</span> – автомат. <span class="math inline">\(q
-\in Q\)</span>, <span class="math inline">\(\alpha\)</span> – слово в
-алфавите <span class="math inline">\(A\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\((A, Q, B, \varphi, \psi)\)</span> – автомат.
+<span class="math inline">\(q \in Q\)</span>, <span
+class="math inline">\(\alpha\)</span> – слово в алфавите <span
+class="math inline">\(A\)</span>.</p>
 <p><span class="math inline">\(\overline{\varphi}(q, \alpha) =
 \varphi(q, [\alpha]_0)\varphi(q, [\alpha]_1)\ldots \varphi(q,
 \alpha)\)</span> – <em>слово состояний</em>.</p>
@@ -459,9 +481,9 @@ Q, B, \varphi, \psi)\)</span> – автомат. <span class="math inline">\(q
 <em>слово выходов</em>.</p>
 </div>
 <div id="definition-62">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\((A,
-Q, B, \varphi, \psi)\)</span> – автомат. Зафиксируем <span
-class="math inline">\(q_1 \in Q\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\((A, Q, B, \varphi, \psi)\)</span> – автомат.
+Зафиксируем <span class="math inline">\(q_1 \in Q\)</span>. Тогда <span
 class="math inline">\(\psi: A^{*} \to B^{*}\)</span>. <span
 class="math inline">\(V_{q_1} = (A, Q, B, \varphi, \psi, q_1)\)</span> –
 <em>инициальный конечный автомат</em>.</p>
@@ -473,10 +495,11 @@ class="math inline">\(V_{q_1} = (A, Q, B, \varphi, \psi, q_1)\)</span> –
 id="канонические-уравнения-инициального-автомата">Канонические уравнения
 инициального автомата</h3>
 <div id="definition-63">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(V_{q_1} = (A, Q, B, \varphi, \psi, q_1)\)</span> –
-инициальный атомат. <span class="math inline">\(\alpha\)</span> – слово
-в алфавите <span class="math inline">\(A\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V_{q_1} = (A, Q, B, \varphi, \psi,
+q_1)\)</span> – инициальный атомат. <span
+class="math inline">\(\alpha\)</span> – слово в алфавите <span
+class="math inline">\(A\)</span>.</p>
 <p><span class="math inline">\(\mathcal{Q} = \overline{\varphi}(q_1,
 \alpha)\)</span> – слово состояний.</p>
 <p><span class="math inline">\(\beta = \overline{\psi}(q_1,
@@ -489,12 +512,12 @@ class="math inline">\(V_{q_1} = (A, Q, B, \varphi, \psi, q_1)\)</span> –
 автомата</em>.</p>
 </div>
 <div id="statement-27">
-<p><strong>Утверждение:</strong></p>
-<p><span class="math display">\[\overline{\psi}(q, \alpha_1 \alpha_2) =
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
+class="math display">\[\overline{\psi}(q, \alpha_1 \alpha_2) =
 \overline{\psi}(q, \alpha_1)\overline{\psi}(\varphi(q, \alpha_1),
 \alpha_2)\]</span></p>
-<p><em>Доказательство:</em> индукция <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> индукция
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="4.3" id="автоматы-в-p_2">Автоматы в <span
 class="math inline">\(P_2\)</span></h2>
@@ -524,9 +547,9 @@ a_m(t))\\
 <h2 data-number="4.4" id="автоматы-и-бесконечные-слова">Автоматы и
 бесконечные слова</h2>
 <div id="definition-64">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(A\)</span> – алфавит. Пусть дано отображение <span
-class="math inline">\(\alpha: \mathbb{N} \to A\)</span>. <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(A\)</span> – алфавит. Пусть дано отображение
+<span class="math inline">\(\alpha: \mathbb{N} \to A\)</span>. <span
 class="math inline">\(\alpha(1)\alpha(3)\ldots\)</span> –
 <em>бесконечное слово</em>.</p>
 <p>Множество всех бесконечных слов обозначается <span
@@ -541,19 +564,19 @@ class="math inline">\(A\)</span>.</p>
 <p><span class="math inline">\(\beta(i) = \psi(q, \alpha(1)\ldots
 \alpha(i))\)</span>.</p>
 <div id="definition-65">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\alpha(1)\alpha(3)\ldots\)</span> – бесконечное
-слово. Если существуют <span class="math inline">\(\tau, \tau’ \in
-\mathbb{N}\)</span>, такие, что <span class="math inline">\(\alpha(i +
-\tau) = \alpha(i) \,\,\,\, \forall i &gt; \tau’ + 1\)</span>, то <span
-class="math inline">\(\tau\)</span> – <em>период</em> <span
-class="math inline">\(\alpha\)</span>, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\alpha(1)\alpha(3)\ldots\)</span> –
+бесконечное слово. Если существуют <span class="math inline">\(\tau,
+\tau’ \in \mathbb{N}\)</span>, такие, что <span
+class="math inline">\(\alpha(i + \tau) = \alpha(i) \,\,\,\, \forall i
+&gt; \tau’ + 1\)</span>, то <span class="math inline">\(\tau\)</span> –
+<em>период</em> <span class="math inline">\(\alpha\)</span>, <span
 class="math inline">\(\tau’\)</span> – <em>предпериод</em>.</p>
 </div>
 <div id="theorem-10">
-<p><strong>Теорема:</strong> Конечный инициальный автомат, имеющий <span
-class="math inline">\(n\)</span> состояний, преобразует
-последовательность (бесконечное слово) <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Конечный
+инициальный автомат, имеющий <span class="math inline">\(n\)</span>
+состояний, преобразует последовательность (бесконечное слово) <span
 class="math inline">\(\alpha\)</span> с наименьшим периодом <span
 class="math inline">\(\tau\)</span> в последовательность <span
 class="math inline">\(\beta\)</span> с наименьшим периодом вида <span
@@ -565,7 +588,7 @@ class="math inline">\(|B| \ge 2\)</span>, то каждое такое знач�
 периода достигается при нектором автомате <span
 class="math inline">\(V_q\)</span> и некторой последовательности <span
 class="math inline">\(\alpha\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>Пусть <span class="math inline">\(\alpha_1 = \alpha(1)\ldots
 \alpha(\tau’)\)</span> и <span class="math inline">\(\alpha_2 =
 \alpha(\tau’ + 1)\ldots \alpha(\tau’ + \tau)\)</span>. Тогда <span
@@ -604,14 +627,15 @@ class="math inline">\(m \in \{1, \ldots, n\}\)</span>.</p>
 <h2 data-number="4.5" id="одинаковость-автоматов">«Одинаковость»
 автоматов</h2>
 <div id="definition-66">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(V =
-(A, Q, B, \varphi, \psi)\)</span> и <span class="math inline">\(V’ = (A,
-Q’, B, \varphi’, \psi’)\)</span> – конечные автоматы, <span
-class="math inline">\(q \in Q\)</span>, <span class="math inline">\(q’
-\in Q’\)</span>. Если <span class="math inline">\(\forall \alpha \in
-A^{*} \,\,\,\, \overline{\psi}(q, \alpha) = \overline{\psi’}(q’,
-\alpha)\)</span>, то состояния <span class="math inline">\(q\)</span> и
-<span class="math inline">\(q’\)</span> <em>неотличимы</em> друг от
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V = (A, Q, B, \varphi, \psi)\)</span> и
+<span class="math inline">\(V’ = (A, Q’, B, \varphi’, \psi’)\)</span> –
+конечные автоматы, <span class="math inline">\(q \in Q\)</span>, <span
+class="math inline">\(q’ \in Q’\)</span>. Если <span
+class="math inline">\(\forall \alpha \in A^{*} \,\,\,\,
+\overline{\psi}(q, \alpha) = \overline{\psi’}(q’, \alpha)\)</span>, то
+состояния <span class="math inline">\(q\)</span> и <span
+class="math inline">\(q’\)</span> <em>неотличимы</em> друг от
 друга.<br><br>Если <span class="math inline">\(\exists \alpha \in A^{*}:
 \,\,\,\, \overline{\psi}(q, \alpha) \ne \overline{\psi’}(q’,
 \alpha)\)</span>, то состояния <span class="math inline">\(q\)</span> и
@@ -619,40 +643,42 @@ A^{*} \,\,\,\, \overline{\psi}(q, \alpha) = \overline{\psi’}(q’,
 <em>словом</em> <span class="math inline">\(\alpha\)</span>.</p>
 </div>
 <div id="definition-67">
-<p><strong>Определение:</strong> Если любые два состояния автомата
-отличимы, то автомат <em>приведенного типа</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+любые два состояния автомата отличимы, то автомат <em>приведенного
+типа</em>.</p>
 </div>
 <div id="definition-68">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(V =
-(A, Q, B, \varphi, \psi)\)</span> и <span class="math inline">\(V’ = (A,
-Q’, B, \varphi’, \psi’)\)</span> – конечные автоматы. Если <span
-class="math inline">\(\forall q \in Q \,\,\,\, \exists q’ \in
-Q’\)</span>, такое, что <span class="math inline">\(q\)</span>
-неотличимо от <span class="math inline">\(q’\)</span> и <span
-class="math inline">\(\forall q’ \in Q’ \,\,\,\, \exists q \in
-Q\)</span>, такое, что <span class="math inline">\(q\)</span> неотличимо
-от <span class="math inline">\(q’\)</span>, то автоматы <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V = (A, Q, B, \varphi, \psi)\)</span> и
+<span class="math inline">\(V’ = (A, Q’, B, \varphi’, \psi’)\)</span> –
+конечные автоматы. Если <span class="math inline">\(\forall q \in Q
+\,\,\,\, \exists q’ \in Q’\)</span>, такое, что <span
+class="math inline">\(q\)</span> неотличимо от <span
+class="math inline">\(q’\)</span> и <span class="math inline">\(\forall
+q’ \in Q’ \,\,\,\, \exists q \in Q\)</span>, такое, что <span
+class="math inline">\(q\)</span> неотличимо от <span
+class="math inline">\(q’\)</span>, то автоматы <span
 class="math inline">\(V\)</span> и <span
 class="math inline">\(V’\)</span> <em>неотличимы</em>.</p>
 </div>
 <div id="definition-69">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(V =
-(A, Q, B, \varphi, \psi)\)</span> и <span class="math inline">\(V’ = (A,
-Q’, B, \varphi’, \psi’)\)</span> – конечные автоматы. Если существует
-биективное отображение <span class="math inline">\(\xi: Q \to
-Q’\)</span>, такое, что <span class="math inline">\(\forall a \in A, q
-\in Q\)</span> <span class="math display">\[\xi(\varphi(q, a)) =
-\varphi’(\xi(q), a)\]</span> <span class="math display">\[\psi(q, a) =
-\psi’(\xi(q), a),\]</span> то автоматы <span
-class="math inline">\(V\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V = (A, Q, B, \varphi, \psi)\)</span> и
+<span class="math inline">\(V’ = (A, Q’, B, \varphi’, \psi’)\)</span> –
+конечные автоматы. Если существует биективное отображение <span
+class="math inline">\(\xi: Q \to Q’\)</span>, такое, что <span
+class="math inline">\(\forall a \in A, q \in Q\)</span> <span
+class="math display">\[\xi(\varphi(q, a)) = \varphi’(\xi(q), a)\]</span>
+<span class="math display">\[\psi(q, a) = \psi’(\xi(q), a),\]</span> то
+автоматы <span class="math inline">\(V\)</span> и <span
 class="math inline">\(V’\)</span> <em>изоморфны</em>.</p>
 </div>
 <div id="theorem-11">
-<p><strong>Теорема:</strong> У любого конечного автомата <span
-class="math inline">\(V\)</span> существует единственный с точностью до
-изоморфизма автомат приведенного типа неотличимый от <span
-class="math inline">\(V\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>У любого
+конечного автомата <span class="math inline">\(V\)</span> существует
+единственный с точностью до изоморфизма автомат приведенного типа
+неотличимый от <span class="math inline">\(V\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>Разбиваем <span class="math inline">\(Q\)</span> на <span
 class="math inline">\(Q_1, \ldots, Q_n\)</span> попарно неотличимых
 состояний. Доказываем, что для <span class="math inline">\(q, q’ \in Q_j
@@ -673,15 +699,16 @@ class="math inline">\(\xi: q_i \mapsto q_i’\)</span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-12">
-<p><strong>Теорема:</strong> (Мур #1) Если два состояния автомата <span
-class="math inline">\(V = (A, Q, B, \varphi, \psi)\)</span> отличимы, то
-существует отличающее их слово длины <span class="math inline">\(|Q| -
-1\)</span> и эта оценка неулучшаема.</p>
-<p><em>Доказательство:</em> Рассмотрим отношение эквивалентности <span
-class="math inline">\(\rho_k\)</span> на <span
-class="math inline">\(Q\)</span>. <span class="math inline">\(q_1 \rho_k
-q_2 \Leftrightarrow \forall \alpha \in A^{*}: \,\,\,\, |\alpha| = k
-\,\,\,\, \varphi(q_1, \alpha) = \varphi(q_2, \alpha)\)</span>.</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Мур #1)
+Если два состояния автомата <span class="math inline">\(V = (A, Q, B,
+\varphi, \psi)\)</span> отличимы, то существует отличающее их слово
+длины <span class="math inline">\(|Q| - 1\)</span> и эта оценка
+неулучшаема.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Рассмотрим
+отношение эквивалентности <span class="math inline">\(\rho_k\)</span> на
+<span class="math inline">\(Q\)</span>. <span class="math inline">\(q_1
+\rho_k q_2 \Leftrightarrow \forall \alpha \in A^{*}: \,\,\,\, |\alpha| =
+k \,\,\,\, \varphi(q_1, \alpha) = \varphi(q_2, \alpha)\)</span>.</p>
 <p><span class="math inline">\(Q\)</span> разбивается на классы
 эквивалентности <span class="math inline">\(R_1, \ldots,
 R_n\)</span>.</p>
@@ -712,23 +739,24 @@ R\)</span></p>
 id="распознавание-событий-конечными-автоматами">Распознавание событий
 конечными автоматами</h2>
 <div id="definition-70">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(V =
-(A, Q, B , \varphi, \psi, q)\)</span> – инициальный конечный автомат.
-Любое подмножество <span class="math inline">\(A^{*} \setminus
-\Lambda\)</span> – <em>событие</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V = (A, Q, B , \varphi, \psi, q)\)</span> –
+инициальный конечный автомат. Любое подмножество <span
+class="math inline">\(A^{*} \setminus \Lambda\)</span> –
+<em>событие</em>.</p>
 </div>
 <div id="definition-71">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(V =
-(A, Q, B , \varphi, \psi, q)\)</span> – инициальный конечный автомат,
-<span class="math inline">\(B’ \subset B\)</span>. Множество <span
-class="math inline">\(M = \{\alpha \in A^{*} \setminus \Lambda:
-\,\,\,\,\psi(q, \alpha) \in B’\}\)</span> – событие,
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V = (A, Q, B , \varphi, \psi, q)\)</span> –
+инициальный конечный автомат, <span class="math inline">\(B’ \subset
+B\)</span>. Множество <span class="math inline">\(M = \{\alpha \in A^{*}
+\setminus \Lambda: \,\,\,\,\psi(q, \alpha) \in B’\}\)</span> – событие,
 <em>представимое</em> автоматом <span class="math inline">\(V\)</span>
 посредством <span class="math inline">\(B’\)</span>.</p>
 </div>
 <div id="definition-72">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(M_1\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(M_1\)</span> и <span
 class="math inline">\(M_2\)</span> события. Множество <span
 class="math inline">\(M_1\cdot M_2 = \{\alpha_1 \alpha_2: \,\,\,\,
 \alpha_1 \in M_1, \alpha_2 \in M_2\}\)</span> – <em>произведение
@@ -736,8 +764,8 @@ class="math inline">\(M_1\cdot M_2 = \{\alpha_1 \alpha_2: \,\,\,\,
 class="math inline">\(M_2\)</span>.</p>
 </div>
 <div id="definition-73">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(M\)</span> – событие. Множество <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(M\)</span> – событие. Множество <span
 class="math inline">\(&lt;M&gt; = \{\alpha_1\ldots \alpha_k: \,\,\,\,
 \alpha_i \in M\}\)</span> – <em>итерация события</em> <span
 class="math inline">\(M\)</span>.</p>
@@ -746,8 +774,8 @@ class="math inline">\(M\)</span>.</p>
 id="простейшие-свойства-итерации-и-произведения-событий">Простейшие
 свойства итерации и произведения событий</h3>
 <div id="statement-28">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(M\)</span> – событие. Тогда</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(M\)</span> – событие. Тогда</p>
 <ol type="1">
 <li><span class="math inline">\(M \cdot \varnothing = \varnothing \cdot
 M\)</span></li>
@@ -758,19 +786,21 @@ M\)</span></li>
 <li><span class="math inline">\(&lt;M&gt;\cdot M = M \cdot
 &lt;M&gt;\)</span></li>
 </ol>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-29">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(X, C,
-D\)</span> – события. Тогда <span class="math inline">\(X = XC \cup D
-\,\,\,\, \Leftrightarrow \,\,\,\, X = D &lt;C&gt; \cup D\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(X, C, D\)</span> – события. Тогда <span
+class="math inline">\(X = XC \cup D \,\,\,\, \Leftrightarrow \,\,\,\, X
+= D &lt;C&gt; \cup D\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\not\subset\)</span></p>
 </div>
 <h3 data-number="4.6.2" id="регулярные-события">Регулярные события</h3>
 <div id="definition-74">
-<p><strong>Определение:</strong> <br><br>1. События <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><br><br>1. События <span
 class="math inline">\(\varnothing\)</span> и <span
 class="math inline">\(a \in A\)</span> – <em>регулярные</em>.<br>2. Если
 <span class="math inline">\(R_1\)</span> и <span
@@ -781,19 +811,19 @@ class="math inline">\(&lt;R_1&gt;\)</span> – <em>регулярные</em>
 события.</p>
 </div>
 <div id="statement-30">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(R_{ij}, \,\,\,\, i \in \{0, \ldots, n\}, \,\,\,\,
-j \in \{1, \ldots, n\}\)</span> и <span class="math inline">\(X_1,
-\ldots, X_n\)</span> удовлетворяют системе уравнений: <span
-class="math display">\[X_1 = X_1 \cdot R_{11} \cup \ldots \cup X_n \cdot
-R_{n1} \cup R_{01}\]</span> <span class="math display">\[X_2 = X_1 \cdot
-R_{12} \cup \ldots \cup X_n \cdot R_{n2} \cup R_{02}\]</span> <span
-class="math display">\[\vdots\]</span> <span class="math display">\[X_n
-= X_1 \cdot R_{1n} \cup \ldots \cup X_n \cdot R_{nn} \cup
-R_{0n}\]</span> Тогда <span class="math inline">\(X_1, \ldots,
-X_n\)</span> – регулярные события.</p>
-<p><em>Доказательство:</em> Индукция по <span
-class="math inline">\(n\)</span>.</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(R_{ij}, \,\,\,\, i \in \{0, \ldots, n\},
+\,\,\,\, j \in \{1, \ldots, n\}\)</span> и <span
+class="math inline">\(X_1, \ldots, X_n\)</span> удовлетворяют системе
+уравнений: <span class="math display">\[X_1 = X_1 \cdot R_{11} \cup
+\ldots \cup X_n \cdot R_{n1} \cup R_{01}\]</span> <span
+class="math display">\[X_2 = X_1 \cdot R_{12} \cup \ldots \cup X_n \cdot
+R_{n2} \cup R_{02}\]</span> <span class="math display">\[\vdots\]</span>
+<span class="math display">\[X_n = X_1 \cdot R_{1n} \cup \ldots \cup X_n
+\cdot R_{nn} \cup R_{0n}\]</span> Тогда <span class="math inline">\(X_1,
+\ldots, X_n\)</span> – регулярные события.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Индукция по
+<span class="math inline">\(n\)</span>.</p>
 <p><strong>База:</strong> <span class="math inline">\(n = 1 \Rightarrow
 X_1 = X_1 \cdot R_{11}\cup R_{01}\)</span> следует из утверждения <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
@@ -801,9 +831,9 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-31">
-<p><strong>Утверждение:</strong> События представимые в инициальном
-конечном автомате – регулярные.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>События
+представимые в инициальном конечном автомате – регулярные.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>Пусть <span class="math inline">\(V = (A, Q, B, \varphi, \psi,
 q_1)\)</span>, <span class="math inline">\(Q = \{q_1, \ldots,
 q_n\}\)</span>, <span class="math inline">\(M\)</span> – событие,
@@ -831,18 +861,18 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="4.7" id="обобщенные-источники">Обобщенные
 источники</h2>
 <div id="definition-75">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(A\)</span> – алфавит. <em>Обобщенный источник (в
-алфавите)</em> <span class="math inline">\(A\)</span> – это конечный
-ориентированный граф, каждому ребру которого сопоставлен символ <span
-class="math inline">\(a \in A\)</span> или пустое слово <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(A\)</span> – алфавит. <em>Обобщенный
+источник (в алфавите)</em> <span class="math inline">\(A\)</span> – это
+конечный ориентированный граф, каждому ребру которого сопоставлен символ
+<span class="math inline">\(a \in A\)</span> или пустое слово <span
 class="math inline">\(\Lambda\)</span>, и в котором выбраны начальная
 вершина <span class="math inline">\(v\)</span> и финальная вершина <span
 class="math inline">\(w\)</span>.</p>
 </div>
 <div id="definition-76">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(G\)</span> – обобщенный источник. <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(G\)</span> – обобщенный источник. <span
 class="math inline">\(v_1\)</span> и <span class="math inline">\(v_{n +
 1}\)</span> вершины <span class="math inline">\(G\)</span>.
 Последовательность <span class="math inline">\(\pi_{v_1 \to v_{n + 1}}:
@@ -854,8 +884,8 @@ class="math inline">\([\pi]\)</span> – это слово составленн�
 class="math inline">\(\pi\)</span>.</p>
 </div>
 <div id="definition-77">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(A\)</span> – алфавит, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(A\)</span> – алфавит, <span
 class="math inline">\(G\)</span> – обобщенный источник, <span
 class="math inline">\(\alpha \in A^{*}\)</span>, <span
 class="math inline">\(u\)</span> – вершина <span
@@ -864,8 +894,8 @@ class="math inline">\(G\)</span>. <span class="math inline">\(\theta(u,
 \alpha\}\)</span>.</p>
 </div>
 <div id="definition-78">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(A\)</span> – алфавит, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(A\)</span> – алфавит, <span
 class="math inline">\(G\)</span> – обобщенный источник с начальной
 вершиной <span class="math inline">\(v\)</span> и финальной вершиной
 <span class="math inline">\(w\)</span>. <em>Событие</em> <span
@@ -875,19 +905,19 @@ class="math inline">\(|G| = \{\alpha \in A^{*}: \,\,\,\, w \in \theta(v,
 \alpha)\}\)</span>.</p>
 </div>
 <div id="statement-32">
-<p><strong>Утверждение:</strong> Если <span
-class="math inline">\(R\)</span> – регулярное событие, то существует
-обобщенный источник <span class="math inline">\(G\)</span>, такой, что
-<span class="math inline">\(|G| = R\)</span>.</p>
-<p><em>Доказательство:</em> индукция по определению регулярного события
-с помощью картинок <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Если
+<span class="math inline">\(R\)</span> – регулярное событие, то
+существует обобщенный источник <span class="math inline">\(G\)</span>,
+такой, что <span class="math inline">\(|G| = R\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> индукция по
+определению регулярного события с помощью картинок <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-33">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(G\)</span> – обобщенный источник. Тогда <span
-class="math inline">\(|G|\)</span> представимо.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(G\)</span> – обобщенный источник. Тогда
+<span class="math inline">\(|G|\)</span> представимо.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>Пусть <span class="math inline">\(M = \{v_1, \ldots, v_n\}\)</span> –
 множество вершин <span class="math inline">\(G\)</span>, <span
 class="math inline">\(v_1\)</span> – начальная вершина, <span
@@ -922,45 +952,48 @@ a)\]</span></p>
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-13">
-<p><strong>Теорема:</strong> (Клини) Событие представимо тогда и только
-тогда, когда оно регулярно.</p>
-<p><em>Доказательство:</em> см. <span class="math inline">\(1\)</span> и
-<span class="math inline">\(2\)</span> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Клини)
+Событие представимо тогда и только тогда, когда оно регулярно.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> см. <span
+class="math inline">\(1\)</span> и <span
+class="math inline">\(2\)</span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-34">
-<p><strong>Утверждение:</strong> Существуют непредставимые события.</p>
-<p><em>Доказательство:</em> Множество всех событий континуально,
-множество представимых событий счетно <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Существуют непредставимые события.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Множество
+всех событий континуально, множество представимых событий счетно <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-35">
-<p><strong>Утверждение:</strong> Событие <span
-class="math inline">\(M\)</span> в алфавите <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Событие
+<span class="math inline">\(M\)</span> в алфавите <span
 class="math inline">\(\{0, 1\}\)</span>, состоящее из
 последовательностей с одинаковым количеством нулей и единиц
 непредставимо.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="4.8" id="структурные-автоматы">Структурные
 автоматы</h2>
 <div id="definition-79">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(V_q =
-(\{0, 1\}^n, Q, \{0, 1\}^m, \varphi, \psi, q)\)</span> – инициальный
-конечный автомат. Множество всех автоматных функций <span
-class="math inline">\(f(\alpha) = \overline{\psi}(q, \alpha)\)</span>,
-задаваемых автоматами вида <span class="math inline">\(V_q\)</span>
-обозначается <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V_q = (\{0, 1\}^n, Q, \{0, 1\}^m, \varphi,
+\psi, q)\)</span> – инициальный конечный автомат. Множество всех
+автоматных функций <span class="math inline">\(f(\alpha) =
+\overline{\psi}(q, \alpha)\)</span>, задаваемых автоматами вида <span
+class="math inline">\(V_q\)</span> обозначается <span
 class="math inline">\(P_{\operatorname{авт}}\)</span>.</p>
 </div>
 <div id="definition-80">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(f \in
-P_{\operatorname{авт}}\)</span>, <span class="math inline">\(\alpha \in
-(\{0, 1\}^n)^{*}\)</span>(слово, буквы которого – это последовательности
-нулей и единиц), <span class="math inline">\(\alpha = \alpha(1)\ldots
-\alpha(l)\)</span>, <span class="math inline">\(\alpha(i) =
-(\alpha_1(i), \ldots, \alpha_n(i))\)</span> (функция <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f \in P_{\operatorname{авт}}\)</span>, <span
+class="math inline">\(\alpha \in (\{0, 1\}^n)^{*}\)</span>(слово, буквы
+которого – это последовательности нулей и единиц), <span
+class="math inline">\(\alpha = \alpha(1)\ldots \alpha(l)\)</span>, <span
+class="math inline">\(\alpha(i) = (\alpha_1(i), \ldots,
+\alpha_n(i))\)</span> (функция <span
 class="math inline">\(\alpha_j\)</span> – это <span
 class="math inline">\(j\)</span>-й элемент буквы). Пусть <span
 class="math inline">\(\alpha_j = (\alpha_j(1), \ldots,
@@ -978,7 +1011,7 @@ class="math inline">\(\psi_j\)</span>(см. канонические уравн�
 от <span class="math inline">\(i\)</span>-ого <em>с задержкой</em>.</p>
 </div>
 <div id="definition-81">
-<strong>Определение:</strong>
+<span class="margin-lft"><strong>Определение: </strong></span>
 <details>
 <summary>
 </summary>
@@ -997,7 +1030,8 @@ class="math inline">\(m \ge 1\)</span> стрелок (количество вы
 автомата, задаваемого <span class="math inline">\(f_i\)</span>).</p>
 </div>
 <div id="definition-82">
-<p><strong>Определение:</strong></p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><strong>Определение:</strong></p>
 <ol type="1">
 <li><p>Элемент <span class="math inline">\(E_i \subset E\)</span> –
 <em>схема</em>.</p></li>
@@ -1012,33 +1046,36 @@ class="math inline">\(m \ge 1\)</span> стрелок (количество вы
 </ol>
 </div>
 <div id="definition-83">
-<p><strong>Определение:</strong> Операции <span class="math inline">\(a,
-b, c\)</span> – это операции <em>композиции</em>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Операции <span class="math inline">\(a, b, c\)</span> –
+это операции <em>композиции</em>.</p>
 </div>
 <div id="definition-84">
-<p><strong>Определение:</strong> Множество всех функций, полученных
-операциями композиции из <span class="math inline">\(F \subset
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество всех функций, полученных операциями композиции
+из <span class="math inline">\(F \subset
 P_{\operatorname{авт}}\)</span>, обозначается <span
 class="math inline">\([F]\)</span>.</p>
 </div>
 <div id="definition-85">
-<p><strong>Определение:</strong> <span class="math inline">\(F \subset
-P_{\operatorname{авт}}\)</span> <em>полная</em>, если <span
-class="math inline">\([F] = P_{\operatorname{авт}}\)</span></p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(F \subset P_{\operatorname{авт}}\)</span>
+<em>полная</em>, если <span class="math inline">\([F] =
+P_{\operatorname{авт}}\)</span></p>
 </div>
 <h3 data-number="4.8.1"
 id="пример-полной-относительно-композиций-системы">Пример полной
 относительно композиций системы</h3>
 <div id="definition-86">
-<p><strong>Определение:</strong> Если функция <span
-class="math inline">\(f \in P_{\operatorname{авт}}\)</span> pеализуется
-схемой в сигнатуре, построенной только при помощи операций
-переобозначения входов и выходов, объединения схем и их
-последовательного соединения, то <span class="math inline">\(f\)</span>
-получена <em>суперпозициями</em> из функций <span
-class="math inline">\(\{f_1,\ldots, f_p\}\)</span> данной сигнатуры.
-Множество всех функций, полученных операциями суперпозиции из функций
-множества <span class="math inline">\(F \subset
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+функция <span class="math inline">\(f \in
+P_{\operatorname{авт}}\)</span> pеализуется схемой в сигнатуре,
+построенной только при помощи операций переобозначения входов и выходов,
+объединения схем и их последовательного соединения, то <span
+class="math inline">\(f\)</span> получена <em>суперпозициями</em> из
+функций <span class="math inline">\(\{f_1,\ldots, f_p\}\)</span> данной
+сигнатуры. Множество всех функций, полученных операциями суперпозиции из
+функций множества <span class="math inline">\(F \subset
 P_{\operatorname{авт}}\)</span>, обозначается <span
 class="math inline">\([F]_c\)</span>. Система <span
 class="math inline">\(F \subset P_{\operatorname{авт}}\)</span>
@@ -1046,21 +1083,21 @@ class="math inline">\(F \subset P_{\operatorname{авт}}\)</span>
 class="math inline">\([F]_c = P_{\operatorname{авт}}\)</span>.</p>
 </div>
 <div id="theorem-14">
-<p><strong>Теорема:</strong> В <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>В <span
 class="math inline">\(P_{\operatorname{авт}}\)</span> не существует
 конечной полной относительно суперпозиций системы функций.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="4.9" id="однородные-структуры">Однородные
 структуры</h2>
 <div id="definition-87">
-<p><strong>Определение:</strong> <em>Однородная структура</em> – это
-<span class="math inline">\(\sigma = (\mathbb{Z}^k, E_n, V,
-\varphi)\)</span>, где <br><br> <span
-class="math inline">\(\mathbb{Z}^k\)</span> – множество <span
-class="math inline">\(k\)</span>-мерных целочисленных векторов
-(координаты клеток дискретного пространства (все нормальные люди
-используют <span class="math inline">\(\mathbb{Z}^2\)</span>, но
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Однородная структура</em> – это <span
+class="math inline">\(\sigma = (\mathbb{Z}^k, E_n, V, \varphi)\)</span>,
+где <br><br> <span class="math inline">\(\mathbb{Z}^k\)</span> –
+множество <span class="math inline">\(k\)</span>-мерных целочисленных
+векторов (координаты клеток дискретного пространства (все нормальные
+люди используют <span class="math inline">\(\mathbb{Z}^2\)</span>, но
 математик должен быть ненормальным, особенно, в 01:00))<br><br> <span
 class="math inline">\(E_n = \{0, \ldots, n - 1\}\)</span> – множество
 кодов состояний (каждая клетка в каждый момент времени находится в
@@ -1075,37 +1112,41 @@ class="math inline">\(\varphi: (E_n)^h \to E_n\)</span> – <em>функция
 \ldots, 0) = 0\)</span>.</p>
 </div>
 <div id="definition-88">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\sigma\)</span> – однородная структура.
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\sigma\)</span> – однородная структура.
 <em>Состояние однородной структуры</em> <span
 class="math inline">\(\sigma\)</span> – это функция <span
 class="math inline">\(f: \mathbb{Z}^k \to E_n\)</span>.</p>
 </div>
 <div id="definition-89">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\sigma\)</span> – однородная структура и задано
-некоторое множество ее состояний <span class="math inline">\(F\)</span>.
-<em>Основная (глобальная) функция переходов однородной структуры</em> –
-это <span class="math inline">\(\Phi: F \to F\)</span>, такая, что <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\sigma\)</span> – однородная структура и
+задано некоторое множество ее состояний <span
+class="math inline">\(F\)</span>. <em>Основная (глобальная) функция
+переходов однородной структуры</em> – это <span
+class="math inline">\(\Phi: F \to F\)</span>, такая, что <span
 class="math display">\[\Phi(f)(\alpha) = \varphi(f(\alpha), f(\alpha +
 \alpha_1), \ldots, f(\alpha + \alpha_{h - 1})), \,\,\,\, f \in F,
 \,\,\,\, \alpha \in \mathbb{Z}^k\]</span></p>
 </div>
 <div id="definition-90">
-<p><strong>Определение:</strong> <em>Поведение однородной структуры</em>
-– это последовательность ее состояний <span class="math inline">\(f_0,
-f_1, f_2, \ldots\)</span>, такая, что <span class="math inline">\(f_{i +
-1} = \Phi(f_i)\,\,\,\, \forall i\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Поведение однородной структуры</em> – это
+последовательность ее состояний <span class="math inline">\(f_0, f_1,
+f_2, \ldots\)</span>, такая, что <span class="math inline">\(f_{i + 1} =
+\Phi(f_i)\,\,\,\, \forall i\)</span>.</p>
 </div>
 <div id="definition-91">
-<p><strong>Определение:</strong> <em>Конфигурация однородной
-структуры</em> – это такое ее состояние, при котором только конечное
-число клеток имеют ненулевое значение.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Конфигурация однородной структуры</em> – это такое
+ее состояние, при котором только конечное число клеток имеют ненулевое
+значение.</p>
 </div>
 <div id="statement-36">
-<p><strong>Утверждение:</strong> При переходе к новому состоянию
-конфигурация однородной структуры остается конфигурацией.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>При
+переходе к новому состоянию конфигурация однородной структуры остается
+конфигурацией.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <center>
@@ -1113,37 +1154,40 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </canvas>
 </center>
 <div id="definition-92">
-<p><strong>Определение:</strong> Однородная структура <span
-class="math inline">\(\sigma = (\mathbb{Z}^2, E_k, V, \varphi)\)</span>,
-у которой <span class="math inline">\(V(\alpha)\)</span> квадрат со
-стороной <span class="math inline">\(2\cdot m + 1\)</span> с центром в
-<span class="math inline">\(\alpha, \,\,\,\, \alpha \in
-\mathbb{Z}^2\)</span> – <em>квадратная</em>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Однородная структура <span class="math inline">\(\sigma
+= (\mathbb{Z}^2, E_k, V, \varphi)\)</span>, у которой <span
+class="math inline">\(V(\alpha)\)</span> квадрат со стороной <span
+class="math inline">\(2\cdot m + 1\)</span> с центром в <span
+class="math inline">\(\alpha, \,\,\,\, \alpha \in \mathbb{Z}^2\)</span>
+– <em>квадратная</em>.</p>
 </div>
 <div id="definition-93">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(K
-\subset \mathbb{Z}^2\)</span> – квадрат. <span
-class="math inline">\(V(K) = \displaystyle\bigcup_{\alpha \in
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(K \subset \mathbb{Z}^2\)</span> – квадрат.
+<span class="math inline">\(V(K) = \displaystyle\bigcup_{\alpha \in
 K}V(\alpha)\)</span> – <em>окрестность квадрата</em>.</p>
 </div>
 <div id="statement-37">
-<p><strong>Утверждение:</strong> Окрестность квадрата – квадрат.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Окрестность квадрата – квадрат.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-94">
-<p><strong>Определение:</strong> <em>Состояние окрестности квадрата</em>
-– это функция <span class="math inline">\(f: V(K) \to E_k\)</span>.
-Функция <span class="math inline">\(g = \Phi_K(f)\)</span> – это
-ограничение глобальной функции переходов, определенной на состояниях
-окрестности квадрата на сам квадрат.<br><br>Состояние квадрата –
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Состояние окрестности квадрата</em> – это функция
+<span class="math inline">\(f: V(K) \to E_k\)</span>. Функция <span
+class="math inline">\(g = \Phi_K(f)\)</span> – это ограничение
+глобальной функции переходов, определенной на состояниях окрестности
+квадрата на сам квадрат.<br><br>Состояние квадрата –
 <em>конфигурация</em>.<br><br>Если конфигурация квадрата не принадлежит
 множеству значений <span class="math inline">\(\Phi_K\)</span>, то она
 <em>неконструируемая</em>.</p>
 </div>
 <div id="definition-95">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f_1\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f_1\)</span> и <span
 class="math inline">\(f_2\)</span> – конфигурации квадрата <span
 class="math inline">\(V(V(K))\)</span>. Если <br><br>1. <span
 class="math inline">\({f_1}_{|K} \ne {f_2}_{|K}\)</span><br>2. <span
@@ -1155,15 +1199,15 @@ class="math inline">\(f_1\)</span> и <span
 class="math inline">\(f_2\)</span> – <em>взаимностираемые</em>.</p>
 </div>
 <div id="theorem-15">
-<p><strong>Теорема:</strong> (Мур #100500) Пусть <span
-class="math inline">\(\sigma = (\mathbb{Z}^2, E_k, V, \varphi)\)</span>
-– квадратная однородная структура, где <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Мур
+#100500) Пусть <span class="math inline">\(\sigma = (\mathbb{Z}^2, E_k,
+V, \varphi)\)</span> – квадратная однородная структура, где <span
 class="math inline">\(V(\alpha)\)</span> – квадрат со стороной <span
 class="math inline">\(2\cdot m + 1\)</span>. Тогда существование в <span
 class="math inline">\(\sigma\)</span> взаимностираемых конфигураций
 <span class="math inline">\(\Leftrightarrow\)</span> существуют
 неконструируемые конфигурации.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p>Пусть <span class="math inline">\(f_1\)</span> и <span
 class="math inline">\(f_2\)</span> взаимностираемые конфигурации на
 квадрате <span class="math inline">\(K\)</span>.</p>
@@ -1636,7 +1680,7 @@ window.onload = () => {
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="функции-k-значной-логики.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>
@@ -1644,6 +1688,7 @@ window.onload = () => {
                         <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
                     </span>
         <span class="navlink">
+                        <a href="search.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
                     </span>
     </div>
 </nav>

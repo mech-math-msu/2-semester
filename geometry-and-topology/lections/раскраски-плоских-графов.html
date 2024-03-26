@@ -11,7 +11,10 @@
     
     <title>Раскраски плоских графов</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,32 +237,44 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="планарные-графы-1.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="многоугольники.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="планарные-графы-1.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="многоугольники.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
 
 
-<h1 data-number="7" id="раскраски-плоских-графов">Раскраски плоских
+<h1 data-number="8" id="раскраски-плоских-графов">Раскраски плоских
 графов</h1>
 <div id="definition-89">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\mathcal{C} = \{\operatorname{Col}_i\}\)</span>
-некоторое множество, элементы которого назовем <em>цветами</em> или
-<em>красками</em>. Пусть <span class="math inline">\(G = (V, E,
-\partial)\)</span> – граф. Отображение <span class="math inline">\(\nu:
-V \to \mathcal{C}\)</span> – <em>раскраска</em> графа <span
-class="math inline">\(G\)</span> <em>цветами из множества</em> <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\mathcal{C} =
+\{\operatorname{Col}_i\}\)</span> некоторое множество, элементы которого
+назовем <em>цветами</em> или <em>красками</em>. Пусть <span
+class="math inline">\(G = (V, E, \partial)\)</span> – граф. Отображение
+<span class="math inline">\(\nu: V \to \mathcal{C}\)</span> –
+<em>раскраска</em> графа <span class="math inline">\(G\)</span>
+<em>цветами из множества</em> <span
 class="math inline">\(\mathcal{C}\)</span>. При этом <em>вершина</em>
 <span class="math inline">\(v\)</span> <em>покрашена в цвет</em> <span
 class="math inline">\(\nu(v)\)</span>. Раскраска графа
@@ -264,29 +284,31 @@ class="math inline">\(\nu(v)\)</span>. Раскраска графа
 class="math inline">\(G\)</span>.</p>
 </div>
 <div id="definition-90">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(G =
-(V, E, \partial)\)</span> – граф. <span class="math inline">\(v \in
-V\)</span>. Подграф графа <span class="math inline">\(G\)</span>,
-состоящий из инцидентных <span class="math inline">\(v\)</span> вершин и
-ребер – <em>линк</em> вершины <span class="math inline">\(v\)</span>.
-<strong>Обозначается:</strong> <span
-class="math inline">\(L(v)\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(G = (V, E, \partial)\)</span> – граф. <span
+class="math inline">\(v \in V\)</span>. Подграф графа <span
+class="math inline">\(G\)</span>, состоящий из инцидентных <span
+class="math inline">\(v\)</span> вершин и ребер – <em>линк</em> вершины
+<span class="math inline">\(v\)</span>. <strong>Обозначается:</strong>
+<span class="math inline">\(L(v)\)</span>.</p>
 </div>
 <div id="statement-48">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(G\)</span> – простой конечный плоский граф. Тогда
-у графа <span class="math inline">\(G\)</span> существует вершина
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(G\)</span> – простой конечный плоский граф.
+Тогда у графа <span class="math inline">\(G\)</span> существует вершина
 степени не больше пяти.</p>
-<p><em>Доказательство:</em> сакраментальные формулы + формула Эйлера
-<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span>
+сакраментальные формулы + формула Эйлера <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-8">
-<p><strong>Теорема:</strong> (Хивуда о пяти красках) Пусть <span
-class="math inline">\(G\)</span> – простой конечный плоский граф. Тогда
-хроматическое число графа <span class="math inline">\(G\)</span> не
-превосходит <span class="math inline">\(5\)</span>.</p>
-<p><em>Доказательство:</em> Докажем по индукции по количеству
-вершин.</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Хивуда о
+пяти красках) Пусть <span class="math inline">\(G\)</span> – простой
+конечный плоский граф. Тогда хроматическое число графа <span
+class="math inline">\(G\)</span> не превосходит <span
+class="math inline">\(5\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Докажем по
+индукции по количеству вершин.</p>
 </div>
 <p><strong>База:</strong> Для <span class="math inline">\(n \le
 5\)</span> очевидно <span
@@ -350,23 +372,23 @@ class="math inline">\(v_2\)</span> и <span
 class="math inline">\(v_4\)</span> нельзя соединить ломаной, не
 пересекающей <span class="math inline">\(C
 \,\,\,\,\blacksquare\)</span></p>
-<h2 data-number="7.1" id="лемма-шпернера">Лемма Шпернера</h2>
+<h2 data-number="8.1" id="лемма-шпернера">Лемма Шпернера</h2>
 <div id="definition-91">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\Gamma\)</span> – связный простой плоский граф, и
-выполнены следующие условия: <br><br>1. Любое ребро входит в границу
-<span class="math inline">\(2\)</span>-x граней.<br>2. Любая конечная
-грань ограничена <span class="math inline">\(3\)</span> ребрами (такая
-грань – <em>треугольник</em>).<br>3. Объединение конечных граней <span
-class="math inline">\(W\)</span> – ограничено простой замкнутой
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\Gamma\)</span> – связный простой плоский
+граф, и выполнены следующие условия: <br><br>1. Любое ребро входит в
+границу <span class="math inline">\(2\)</span>-x граней.<br>2. Любая
+конечная грань ограничена <span class="math inline">\(3\)</span> ребрами
+(такая грань – <em>треугольник</em>).<br>3. Объединение конечных граней
+<span class="math inline">\(W\)</span> – ограничено простой замкнутой
 ломаной.<br>Тогда <span class="math inline">\(G\)</span> –
 <em>триангуляция</em> <span class="math inline">\(W\)</span>.</p>
 </div>
 <div id="theorem-9">
-<p><strong>Теорема:</strong> (лемма Шпернера) Пусть <span
-class="math inline">\(W\)</span> – треугольник, <span
-class="math inline">\(\Gamma\)</span> – его триангуляция, причем вершины
-треугольника являются вершинами графа <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(лемма
+Шпернера) Пусть <span class="math inline">\(W\)</span> – треугольник,
+<span class="math inline">\(\Gamma\)</span> – его триангуляция, причем
+вершины треугольника являются вершинами графа <span
 class="math inline">\(G\)</span>. Пусть задана раскраска графа <span
 class="math inline">\(G\)</span> в три цвета и выполнено:</p>
 <ol type="1">
@@ -376,19 +398,20 @@ class="math inline">\(G\)</span> в три цвета и выполнено:</p>
 </ol>
 <p>Тогда существует треугольник триангуляции, вершины которого покрашены
 в различные цвета, и таких треугольников нечетное число.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="lemma-3">
-<p><strong>Лемма:</strong> (лемма Шпернера в двумерном случае) Пусть
-<span class="math inline">\(a = t_0 &lt; t_1 &lt; \ldots &lt; t_{s - 1}
-&lt; t_s = b\)</span> – разбиение отрезка <span
-class="math inline">\([a, b]\)</span>. И эти точки покрашены в два
-цвета, причем точки <span class="math inline">\(a\)</span> и <span
+<p><span class="margin-lft"><strong>Лемма: </strong></span>(лемма
+Шпернера в двумерном случае) Пусть <span class="math inline">\(a = t_0
+&lt; t_1 &lt; \ldots &lt; t_{s - 1} &lt; t_s = b\)</span> – разбиение
+отрезка <span class="math inline">\([a, b]\)</span>. И эти точки
+покрашены в два цвета, причем точки <span
+class="math inline">\(a\)</span> и <span
 class="math inline">\(b\)</span> покрашены в различные цвета. Тогда
 среди отрезков <span class="math inline">\([t_{i - 1}, t_i]\)</span>
 существует отрезок, концы которого покрашены в различные цвета, и таких
 отрезков нечетное число.</p>
-<p><em>Доказательство леммы:</em></p>
+<p><span class="margin-lft"><em>Доказательство леммы:</em></span></p>
 <p><img src="img/lemma-shperner-2d.svg" width="600" height="400" /></p>
 <p><span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <p><img src="img/shperner-2.svg" width="400" height="400" /></p>
@@ -396,9 +419,9 @@ class="math inline">\(b\)</span> покрашены в различные цве
 <p><img src="img/shperner-4.svg" width="400" height="400" /></p>
 <p>картинки лажа, но доказательство понятное <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
-<h3 data-number="7.1.1"
+<h2 data-number="8.2"
 id="как-разрезать-пирог-чтобы-никто-не-обиделся">Как разрезать пирог,
-чтобы никто не обиделся?</h3>
+чтобы никто не обиделся?</h2>
 <p><strong>Упражнение:</strong><a name="exercise-0"></a> Пусть дан
 прямоугольный пирог весом <span class="math inline">\(1\)</span>
 килограмм и три гостя. Нужно разрезать пирог двумя вертикальными
@@ -412,24 +435,24 @@ class="math inline">\(x_1 + x_2 + x_3 = 1\)</span> и <span
 class="math inline">\(x_i &gt; 0\)</span>. (<span
 class="math inline">\(x_i\)</span> – вес <span
 class="math inline">\(i\)</span>-ого куска).</p>
-<h3 data-number="7.1.2" id="теорема-брауэра">Теорема Брауэра</h3>
+<h2 data-number="8.3" id="теорема-брауэра">Теорема Брауэра</h2>
 <div id="definition-92">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(f: X
-\to X\)</span> – отображение. <span class="math inline">\(x \in
-X\)</span> – <em>неподвижная точка отображения</em> <span
-class="math inline">\(f\)</span>, если <span class="math inline">\(f(x)
-= x\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f: X \to X\)</span> – отображение. <span
+class="math inline">\(x \in X\)</span> – <em>неподвижная точка
+отображения</em> <span class="math inline">\(f\)</span>, если <span
+class="math inline">\(f(x) = x\)</span>.</p>
 </div>
 <p><strong>Теорема:</strong><a name="theorem-2"></a> Непрерывное
 отображение замкнутого <span class="math inline">\(n\)</span>-мерного
 шара в себя имеет неподвижную точку.</p>
-<p><em>Доказательство:</em> Вынос мозга <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Вынос мозга
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="планарные-графы-1.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

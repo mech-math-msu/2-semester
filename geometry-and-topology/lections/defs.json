@@ -1,0 +1,677 @@
+[
+    {
+        "keyword": "обобщенным инвариантом дена многогранника",
+        "html": "<p><a href=\"решения-избранных-задач.html#definition-0\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(W\\)</span> – многогранник с множеством\nребер <span class=\"math inline\">\\(E\\)</span>, и <span\nclass=\"math inline\">\\(M\\)</span> – некоторое множество вещественных\nчисел, содержащее длины всех ребер из <span\nclass=\"math inline\">\\(E\\)</span>. Пусть <span\nclass=\"math inline\">\\(f\\)</span> – произвольная функция Дена для <span\nclass=\"math inline\">\\(W\\)</span>, и <span class=\"math inline\">\\(g: M \\to\n\\mathbb{R}\\)</span> – произвольная аддитивная функция. Тогда\n<em>обобщенным инвариантом Дена многогранника</em> <span\nclass=\"math inline\">\\(W\\)</span>, соответствующим паре <span\nclass=\"math inline\">\\((f, g)\\)</span>, назовем число <span\nclass=\"math inline\">\\(\\displaystyle \\sum_{e \\in\nE}g(|e|)f(|\\alpha_e|)\\)</span>, где <span\nclass=\"math inline\">\\(|e|\\)</span> и <span\nclass=\"math inline\">\\(\\alpha_e\\)</span> – длина ребра <span\nclass=\"math inline\">\\(e\\)</span> и величина двугранного угла при этом\nребре соответственно.</p>",
+        "url": "решения-избранных-задач.html#definition-0"
+    },
+    {
+        "keyword": "базис гамеля",
+        "html": "<p><a href=\"решения-избранных-задач.html#definition-1\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(V\\)</span> бесконечномерное векторное\nпространство. <em>Базис Гамеля</em> <span\nclass=\"math inline\">\\(V\\)</span> – это <span class=\"math inline\">\\(F\n\\subset V\\)</span>, такая, что:</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(F\\)</span> – линейно независима, то есть\n<span class=\"math inline\">\\(\\forall \\displaystyle \\sum_{i =\n1}^{m}\\lambda_i f_i \\Rightarrow \\lambda_i = 0\\)</span> (любая конечная\nлинейная комбинация линейно независима)</li>\n<li><span class=\"math inline\">\\(F\\)</span> – полна, то есть любой <span\nclass=\"math inline\">\\(v \\in V\\)</span> представим в виде линейной\nкомбинации <span class=\"math inline\">\\(f_i\\)</span>.</li>\n</ol>",
+        "url": "решения-избранных-задач.html#definition-1"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"граф:-определения.html#definition-2\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(V^{(k)}\\)</span> – это множество всех <span\nclass=\"math inline\">\\(k\\)</span>-элементных подмножеств множества <span\nclass=\"math inline\">\\(V\\)</span>.</p>",
+        "url": "граф:-определения.html#definition-2"
+    },
+    {
+        "keyword": "граф множество ребер ребро множество вершин вершина отношение инцидентности ребер и вершин петля смежная соседняя к инцидентна кратные ребра",
+        "html": "<p><a href=\"граф:-определения.html#definition-3\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Граф</em> – это тройка <span class=\"math inline\">\\(\\{E, V,\n\\sigma\\}\\)</span>, где<br><span class=\"math inline\">\\(E\\)</span> –\n<em>множество ребер</em> (<span class=\"math inline\">\\(e \\in E\\)</span> –\n<em>ребро</em>)<br><span class=\"math inline\">\\(V\\)</span> –\n<em>множество вершин</em> (<span class=\"math inline\">\\(v \\in V\\)</span>\n– <em>вершина</em>)<br><span class=\"math inline\">\\(\\sigma: \\,\\,\\,\\, E\n\\to V^{(1)} \\cup V^{(2)}\\)</span> – <em>отношение инцидентности ребер и\nвершин</em>.<br><br>Если <span class=\"math inline\">\\(\\sigma(e) \\in\nV^{(1)}\\)</span>, то <span class=\"math inline\">\\(e\\)</span> –\n<em>петля</em>.<br>Если <span class=\"math inline\">\\(\\sigma(e) \\in\nV^{(2)} = \\{u, v\\}\\)</span>, то вершина <span\nclass=\"math inline\">\\(u\\)</span> <em>смежная</em> (<em>соседняя к</em>)\nвершине <span class=\"math inline\">\\(v\\)</span>.<br>Если <span\nclass=\"math inline\">\\(v \\in \\sigma(e)\\)</span>, то вершина <span\nclass=\"math inline\">\\(v\\)</span> <em>инцидентна</em> ребру <span\nclass=\"math inline\">\\(e\\)</span>.<br>Если <span\nclass=\"math inline\">\\(\\sigma(e) = \\sigma(e’)\\)</span>, то <span\nclass=\"math inline\">\\(e\\)</span> и <span\nclass=\"math inline\">\\(e’\\)</span> <em>кратные ребра</em>.<br></p>",
+        "url": "граф:-определения.html#definition-3"
+    },
+    {
+        "keyword": "простой",
+        "html": "<p><a href=\"граф:-определения.html#definition-4\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nГраф <em>простой</em>, если в нем нет петель и кратных ребер.<br></p>",
+        "url": "граф:-определения.html#definition-4"
+    },
+    {
+        "keyword": "степень вершины",
+        "html": "<p><a href=\"граф:-определения.html#definition-5\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Степень вершины</em> <span class=\"math inline\">\\(v \\in V\\)</span>\nграфа <span class=\"math inline\">\\(G = \\{E, V, \\sigma\\}\\)</span> – это\nсумма количества ребер инцидентных <span\nclass=\"math inline\">\\(v\\)</span> и не являющихся петлями и удвоенного\nколичества петель инцидентных <span\nclass=\"math inline\">\\(v\\)</span>.</p>",
+        "url": "граф:-определения.html#definition-5"
+    },
+    {
+        "keyword": "маршрут цепь замкнутый цикл путь простой цикл",
+        "html": "<p><a href=\"граф:-определения.html#definition-6\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Маршрут</em> (между вершинами <span\nclass=\"math inline\">\\(v_0\\)</span> и <span\nclass=\"math inline\">\\(v_k\\)</span>) в графе <span\nclass=\"math inline\">\\(G = \\{E, V, \\sigma\\}\\)</span> – это\nпоследовательность <span class=\"math inline\">\\(v_0, e_1, v_1, e_2, v_2,\n\\ldots, e_k, v_k\\)</span>, где <span class=\"math inline\">\\(v_i \\in V\n\\,\\,\\,\\,\\forall i \\in \\{0, \\ldots, k\\}, \\,\\,\\,\\, e_i \\in E\n\\,\\,\\,\\,\\forall i \\in \\{1, \\ldots, k\\}\\)</span> и ребро <span\nclass=\"math inline\">\\(e_i\\)</span> инцидентно вершинам <span\nclass=\"math inline\">\\(v_{i - 1}\\)</span> и <span\nclass=\"math inline\">\\(v_i\\)</span>.<br><br>Если в маршруте <span\nclass=\"math inline\">\\(\\forall i \\ne j \\,\\,\\,\\, e_i \\ne e_j\\)</span>, то\nмаршрут – это <em>цепь</em>.<br>Если в маршруте <span\nclass=\"math inline\">\\(v_0 = v_k\\)</span>, то маршрут\n<em>замкнутый</em>.<br>Замкнутая цепь – это <em>цикл</em>.<br>Если в\nмаршруте <span class=\"math inline\">\\(\\forall i \\ne j \\ne 0 \\ne k\n\\,\\,\\,\\, v_i \\ne v_j\\)</span>, то маршрут – это\n<em>путь</em>.<br>Замкнутый путь – это <em>простой цикл</em>.</p>",
+        "url": "граф:-определения.html#definition-6"
+    },
+    {
+        "keyword": "связный",
+        "html": "<p><a href=\"граф:-определения.html#definition-7\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nГраф <span class=\"math inline\">\\(G = \\{E, V , \\sigma\\}\\)</span>\n<em>связный</em>, если <span class=\"math inline\">\\(\\forall u, v \\in\nV\\)</span> существует маршрут между <span\nclass=\"math inline\">\\(u\\)</span> и <span\nclass=\"math inline\">\\(v\\)</span>.</p>",
+        "url": "граф:-определения.html#definition-7"
+    },
+    {
+        "keyword": "эйлеров обход графа (эйлеров цикл)",
+        "html": "<p><a href=\"граф:-определения.html#definition-8\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Эйлеров обход графа (эйлеров цикл)</em> – это цикл, содержащий все\nвершины графа.</p>",
+        "url": "граф:-определения.html#definition-8"
+    },
+    {
+        "keyword": "эйлеров",
+        "html": "<p><a href=\"граф:-определения.html#definition-9\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли в графе существует эйлеров цикл, то граф – <em>эйлеров</em>.</p>",
+        "url": "граф:-определения.html#definition-9"
+    },
+    {
+        "keyword": "гамильтонов цикл",
+        "html": "<p><a href=\"граф:-определения.html#definition-10\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Гамильтонов цикл</em> – это простой цикл, проходящий через все\nвершины графа.</p>",
+        "url": "граф:-определения.html#definition-10"
+    },
+    {
+        "keyword": "гамильтонов",
+        "html": "<p><a href=\"граф:-определения.html#definition-11\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nГраф <em>гамильтонов</em>, если в нем есть гамильтонов цикл.</p>",
+        "url": "граф:-определения.html#definition-11"
+    },
+    {
+        "keyword": "подграф",
+        "html": "<p><a href=\"граф:-определения.html#definition-12\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(H = (V_H, E_H, \\sigma_H)\\)</span>\n<em>подграф</em> графа <span class=\"math inline\">\\(G = (V_G, E_G,\n\\sigma_G)\\)</span>, если <span class=\"math inline\">\\(V_H \\subset V_G,\n\\,\\,\\,\\, E_H \\subset E_G, \\,\\,\\,\\, \\sigma_H = \\sigma_G\n|_{E_H}\\)</span>.</p>",
+        "url": "граф:-определения.html#definition-12"
+    },
+    {
+        "keyword": "остовный",
+        "html": "<p><a href=\"граф:-определения.html#definition-13\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПодграф <em>остовный</em>, если содержит все вершины исходного.</p>",
+        "url": "граф:-определения.html#definition-13"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"граф:-определения.html#definition-14\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(M \\subset V, \\,\\,\\,\\, G = (V, E,\n\\sigma)\\)</span>. Обозначим <span class=\"math inline\">\\(G(M) = (M, E_M =\n\\{\\sigma^{-1}(M^{(1)} \\cup M^{(2)}), \\sigma |_{E_M}\\})\\)</span>.</p>",
+        "url": "граф:-определения.html#definition-14"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"граф:-определения.html#definition-15\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(G = (V, E, \\sigma), \\,\\,\\,\\, w \\in W,\n\\,\\,\\,\\, v \\in V\\)</span>.</p>",
+        "url": "граф:-определения.html#definition-15"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"граф:-определения.html#definition-16\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nКласс эквивалентности вершины <span class=\"math inline\">\\(v\\)</span>\nграфа <span class=\"math inline\">\\(G\\)</span> обозначается <span\nclass=\"math inline\">\\([v]\\)</span>.</p>",
+        "url": "граф:-определения.html#definition-16"
+    },
+    {
+        "keyword": "компонента связности",
+        "html": "<p><a href=\"граф:-определения.html#definition-17\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Компонента связности</em> вершины <span\nclass=\"math inline\">\\(v\\)</span> графа <span\nclass=\"math inline\">\\(G\\)</span> – это максимальный по включению\nподграф, содержащий <span class=\"math inline\">\\(v\\)</span>.</p>",
+        "url": "граф:-определения.html#definition-17"
+    },
+    {
+        "keyword": "дерево",
+        "html": "<p><a href=\"граф:-определения.html#definition-18\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Дерево</em> – это связный граф без циклов.</p>",
+        "url": "граф:-определения.html#definition-18"
+    },
+    {
+        "keyword": "топология",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-19\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть задано множество <span class=\"math inline\">\\(X\\)</span> и\nнекоторое семейство его подмножеств <span\nclass=\"math inline\">\\(\\tau\\)</span>. Тогда <span\nclass=\"math inline\">\\(\\tau\\)</span> – <em>топология</em> на множестве\n<span class=\"math inline\">\\(X\\)</span>, если выполнены следующие\nаксиомы:</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-19"
+    },
+    {
+        "keyword": "топологическое пространство",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-20\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПара <span class=\"math inline\">\\((X, \\tau)\\)</span>, где <span\nclass=\"math inline\">\\(X\\)</span> – множество, а <span\nclass=\"math inline\">\\(\\tau\\)</span> – топология на нем –\n<em>топологическое пространство</em>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-20"
+    },
+    {
+        "keyword": "точки",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-21\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((X, \\tau)\\)</span> – топологическое\nпространство. Элементы множества <span class=\"math inline\">\\(X\\)</span>\n– <em>точки</em>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-21"
+    },
+    {
+        "keyword": "окрестность точки",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-22\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((X, \\tau)\\)</span> – топологическое\nпространство. Множество <span class=\"math inline\">\\(U \\in \\tau\\)</span>\n– <em>окрестность точки</em> <span class=\"math inline\">\\(x \\in\nX\\)</span>, если <span class=\"math inline\">\\(x \\in U\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-22"
+    },
+    {
+        "keyword": "открытые",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-23\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((X, \\tau)\\)</span> – топологическое\nпространство. Множества <span class=\"math inline\">\\(U \\in \\tau\\)</span>\n– <em>открытые</em> в топологическом пространстве <span\nclass=\"math inline\">\\((X, \\tau)\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-23"
+    },
+    {
+        "keyword": "дискретной",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-24\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nТакая топология называется <em>дискретной</em> и обозначается <span\nclass=\"math inline\">\\(\\tau_d\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-24"
+    },
+    {
+        "keyword": "тривиальная",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-25\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nТопология, состоящая из самого множества <span\nclass=\"math inline\">\\(X\\)</span> и пустого множества <span\nclass=\"math inline\">\\(\\varnothing\\)</span> называется\n<em>тривиальная</em> и обознаяается <span\nclass=\"math inline\">\\(\\tau_0\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-25"
+    },
+    {
+        "keyword": "топология зарисского",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-26\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nСистема множеств на множестве <span class=\"math inline\">\\(X\\)</span>,\nсостоящая из пустого множества, а также из всех подмножеств множества\n<span class=\"math inline\">\\(X\\)</span>, дополнения до которых конечны –\n<em>топология Зарисского</em>. Обозначается: <span\nclass=\"math inline\">\\(\\tau_z\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-26"
+    },
+    {
+        "keyword": "метрика",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-27\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(X\\)</span> – множество. Отображение\n<span class=\"math inline\">\\(\\rho: X\\times X \\to \\mathbb{R}\\)</span> –\n<em>метрика</em>, если:</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-27"
+    },
+    {
+        "keyword": "метрическое пространство точки расстояние между точками",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-28\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПара <span class=\"math inline\">\\((X, \\rho)\\)</span>, где <span\nclass=\"math inline\">\\(X\\)</span> – множество, а <span\nclass=\"math inline\">\\(\\rho\\)</span> – метрика на нем – <em>метрическое\nпространство</em>, элементы множества <span\nclass=\"math inline\">\\(X\\)</span> – <em>точки</em>, <span\nclass=\"math inline\">\\(\\forall x, y \\in X \\,\\,\\,\\, \\rho(x, y)\\)</span> –\n<em>расстояние между точками</em> <span class=\"math inline\">\\(x\\)</span>\nи <span class=\"math inline\">\\(y\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-28"
+    },
+    {
+        "keyword": "норма",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-29\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(V\\)</span> – линейное пространство над\nполем <span class=\"math inline\">\\(\\mathbb{R}\\)</span>. Отображение <span\nclass=\"math inline\">\\(h: V \\to \\mathbb{R}\\)</span> – <em>норма</em>,\nесли:</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-29"
+    },
+    {
+        "keyword": "открытый шар радиуса с центром в точке внутренняя точка внутренность открыто",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-30\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((X, \\rho)\\)</span> – метрическое\nпространство.<br> <em>Открытый шар радиуса</em> <span\nclass=\"math inline\">\\(\\varepsilon\\)</span> <em>с центром в точке</em>\n<span class=\"math inline\">\\(x \\in X\\)</span> – это множество <span\nclass=\"math inline\">\\(\\{y \\in X| \\,\\,\\,\\, \\rho(x, y) &lt;\n\\varepsilon\\}\\)</span>. Обозначается: <span\nclass=\"math inline\">\\(O_{\\varepsilon}(x)\\)</span>. Пусть <span\nclass=\"math inline\">\\(A \\subset X\\)</span>.<br> Точка <span\nclass=\"math inline\">\\(x\\)</span> – <em>внутренняя точка</em> множества\n<span class=\"math inline\">\\(A\\)</span>, если <span\nclass=\"math inline\">\\(\\exists O_{\\varepsilon}(x) \\subset A\\)</span>.<br>\nМножество всех внутренних точек <span class=\"math inline\">\\(A\\)</span> –\n<em>внутренность</em> <span class=\"math inline\">\\(A\\)</span>.\nОбозначается: <span class=\"math inline\">\\(\\operatorname{Int}\nA\\)</span>.<br> Множество <span class=\"math inline\">\\(A\\)</span> –\n<em>открыто</em> в метрическом пространстве <span\nclass=\"math inline\">\\((X, \\rho)\\)</span>, если <span\nclass=\"math inline\">\\(\\operatorname{Int} A = A\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-30"
+    },
+    {
+        "keyword": "метрической",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-31\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((X, \\rho)\\)</span> – метрическое\nпространство. Топология, состоящая из всех открытых в <span\nclass=\"math inline\">\\((X, \\rho)\\)</span> множеств называется\n<em>метрической</em> и обозночается <span\nclass=\"math inline\">\\(\\tau_{\\rho}\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-31"
+    },
+    {
+        "keyword": "база окрестностей",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-32\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(X\\)</span> – множество. Тогда\nсемейство <span class=\"math inline\">\\(\\beta\\)</span> его подмножеств –\n<em>база окрестностей</em>, если:</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-32"
+    },
+    {
+        "keyword": "топология с базой",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-33\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(\\tau_{\\beta}\\)</span> – <em>топология с\nбазой</em> <span class=\"math inline\">\\(\\beta\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-33"
+    },
+    {
+        "keyword": "замкнуто дополнение",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-34\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть задано топологическое пространство <span class=\"math inline\">\\((X,\n\\tau)\\)</span>. <span class=\"math inline\">\\(A \\subset X\\)</span> –\n<em>замкнуто</em>, если его <em>дополнение</em> <span\nclass=\"math inline\">\\(X \\setminus A\\)</span> открыто.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-34"
+    },
+    {
+        "keyword": "точка прикосновения замыкание замкнуто",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-35\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть задано метрическое пространство <span class=\"math inline\">\\((X,\n\\rho)\\)</span>.<br>Точка <span class=\"math inline\">\\(X \\in X\\)</span> –\n<em>точка прикосновения</em> множества <span class=\"math inline\">\\(A\n\\subset X\\)</span>, если <span class=\"math inline\">\\(\\forall\nO_{\\varepsilon}(x) \\,\\,\\,\\, O_{\\varepsilon}(x) \\cap A \\ne\n\\varnothing\\)</span>.<br><br>Множество всех точек прикосновения\nмножества <span class=\"math inline\">\\(A \\subset X\\)</span> –\n<em>замыкание</em> <span class=\"math inline\">\\(A\\)</span>. Обозначается:\n<span\nclass=\"math inline\">\\(\\operatorname{Cl}A\\)</span>.<br><br>Множество\n<span class=\"math inline\">\\(A \\subset X\\)</span> – <em>замкнуто</em>,\nесли <span class=\"math inline\">\\(\\operatorname{Cl}A = A\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-35"
+    },
+    {
+        "keyword": "внутренняя (точка) точка прикосновения",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-36\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((X, \\tau)\\)</span> – топологическое\nпространство, <span class=\"math inline\">\\(A \\subset X\\)</span>.<br>Точка\n<span class=\"math inline\">\\(x \\in X\\)</span> <em>внутренняя (точка)</em>\nмножества <span class=\"math inline\">\\(A\\)</span>, если существует ее\nокрестность, содержащаяся в <span\nclass=\"math inline\">\\(A\\)</span>.<br>Точка <span class=\"math inline\">\\(x\n\\in X\\)</span> <em>точка прикосновения</em> множества <span\nclass=\"math inline\">\\(A\\)</span>, если пересечение любой ее окрестности\nс <span class=\"math inline\">\\(A\\)</span> непусто.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-36"
+    },
+    {
+        "keyword": "внутренность замыкание",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-37\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((X, \\tau)\\)</span> – топологическое\nпространство, <span class=\"math inline\">\\(A \\subset X\\)</span>.\n<br>Множество всех внутренних точек <span\nclass=\"math inline\">\\(A\\)</span> – <em>внутренность</em> <span\nclass=\"math inline\">\\(A\\)</span>.<br>Обозначается: <span\nclass=\"math inline\">\\(\\operatorname{Int} A\\)</span>.<br><br>Множество\nвсех точек прикосновения <span class=\"math inline\">\\(A\\)</span> –\n<em>замыкание</em> <span\nclass=\"math inline\">\\(A\\)</span>.<br>Обозначается: <span\nclass=\"math inline\">\\(\\operatorname{Cl} A\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-37"
+    },
+    {
+        "keyword": "граница",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-38\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nТопологическая <em>граница</em> множества <span class=\"math inline\">\\(A\n\\subset X\\)</span> – это <span class=\"math inline\">\\(\\operatorname{Cl}A\n\\setminus \\operatorname{Int}A\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-38"
+    },
+    {
+        "keyword": "непрерывно в точке",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-39\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть заданы топологические пространства <span class=\"math inline\">\\((X,\n\\tau_x)\\)</span> и <span class=\"math inline\">\\((Y, \\tau_y)\\)</span>.\nОтображение <span class=\"math inline\">\\(f: X \\to Y\\)</span>\n<em>непрерывно в точке</em> <span class=\"math inline\">\\(x_0 \\in\nX\\)</span>, если для каждой окрестности <span\nclass=\"math inline\">\\(V\\)</span> точки <span\nclass=\"math inline\">\\(f(x_0)\\)</span> в <span\nclass=\"math inline\">\\(Y\\)</span> существует окрестность <span\nclass=\"math inline\">\\(U\\)</span> точки <span\nclass=\"math inline\">\\(x_0\\)</span> в <span\nclass=\"math inline\">\\(X\\)</span>, такая что <span\nclass=\"math inline\">\\(f(U) \\subset V\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-39"
+    },
+    {
+        "keyword": "прообраз полный прообраз прообраз множества",
+        "html": "<p><a\nhref=\"топология-и-топологическое-пространство.html#definition-40\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть заданы топологические пространства <span class=\"math inline\">\\((X,\n\\tau_x)\\)</span> и <span class=\"math inline\">\\((Y, \\tau_y)\\)</span>,\nнепрерывное отображение <span class=\"math inline\">\\(f: X \\to Y\\)</span>.\n<br><span class=\"math inline\">\\(x \\in X\\)</span> <em>прообраз</em> точки\n<span class=\"math inline\">\\(y \\in Y\\)</span>, если <span\nclass=\"math inline\">\\(f(x) = y\\)</span>.<br><span\nclass=\"math inline\">\\(f^{-1}(y) = \\{x \\in X: \\,\\,\\,\\, f(x) =\ny\\}\\)</span> – <em>полный прообраз</em> точки <span\nclass=\"math inline\">\\(y in Y\\)</span>.<br><span class=\"math inline\">\\(A\n\\subset Y, \\,\\,\\,\\, f^{-1}(A) = \\{x \\in X: \\,\\,\\,\\, f(x) \\in\nA\\}\\)</span> – <em>прообраз множества</em> <span\nclass=\"math inline\">\\(A\\)</span>.</p>",
+        "url": "топология-и-топологическое-пространство.html#definition-40"
+    },
+    {
+        "keyword": "дизъюнктивное объединение несвязная сумма",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-41\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>дизъюнктивное объединение</em>, <em>несвязная сумма</em>) Пусть\nзаданы топологии <span class=\"math inline\">\\(\\tau_x\\)</span> и <span\nclass=\"math inline\">\\(\\tau_y\\)</span> на непересекающихся множествах\n<span class=\"math inline\">\\(X\\)</span> и <span\nclass=\"math inline\">\\(Y\\)</span>. Тогда на множестве <span\nclass=\"math inline\">\\(X \\cup Y\\)</span> можно задать топологию <span\nclass=\"math inline\">\\(\\tau_x \\cup \\tau_y\\)</span>, то есть множество\n<span class=\"math inline\">\\(A \\subset X \\cup Y\\)</span> открыто тогда и\nтолько тогда, когда оно представляется в виде объединения открытых\nмножеств в топологиях <span class=\"math inline\">\\(X\\)</span> и <span\nclass=\"math inline\">\\(Y\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-41"
+    },
+    {
+        "keyword": "индуцированная топология",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-42\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>индуцированная топология</em>) Пусть задана топология <span\nclass=\"math inline\">\\(\\tau_x\\)</span> на множестве <span\nclass=\"math inline\">\\(X\\)</span>. Пусть <span class=\"math inline\">\\(Y\n\\subset X\\)</span>. Тогда множество <span class=\"math inline\">\\(\\tau_y =\n\\{Y \\cap U| \\,\\,\\,\\, U \\in \\tau_x\\}\\)</span> – топология на <span\nclass=\"math inline\">\\(Y\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-42"
+    },
+    {
+        "keyword": "бинарное отношение",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-43\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Бинарное отношение</em> на множестве <span\nclass=\"math inline\">\\(X\\)</span> – это множество <span\nclass=\"math inline\">\\(R \\subset X \\times X\\)</span>. <span\nclass=\"math inline\">\\((x_1, x_2) \\in R, \\,\\,\\,\\, x_1, x_2 \\in X\\)</span>\nобозначается <span class=\"math inline\">\\(x_1Rx_2\\)</span> или вместо\n<span class=\"math inline\">\\(R\\)</span> можно взять любой другой символ,\nнапример <span class=\"math inline\">\\(x_1 \\sim x_2\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-43"
+    },
+    {
+        "keyword": "отношение эквивалентности",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-44\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nБинарное отношение <span class=\"math inline\">\\(\\sim\\)</span> на\nмножестве <span class=\"math inline\">\\(X\\)</span> <em>отношение\nэквивалентности</em>, если <br>1. (рефлексивность) <span\nclass=\"math inline\">\\(\\forall x \\in X \\,\\,\\,\\, x \\sim x\\)</span>.<br>2.\n(симметричность) <span class=\"math inline\">\\(\\forall x, y \\in X\\)</span>\nесли <span class=\"math inline\">\\(x \\sim y\\)</span>, то <span\nclass=\"math inline\">\\(y \\sim x\\)</span>.<br>3. (транзитивность) <span\nclass=\"math inline\">\\(\\forall x, y, z \\in X\\)</span> если <span\nclass=\"math inline\">\\(x \\sim y\\)</span> и <span class=\"math inline\">\\(x\n\\sim z\\)</span>, то <span class=\"math inline\">\\(y \\sim z\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-44"
+    },
+    {
+        "keyword": "класс эквивалентности",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-45\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть на множестве <span class=\"math inline\">\\(X\\)</span> задано\nотношение эквивалентности <span class=\"math inline\">\\(R\\)</span>, <span\nclass=\"math inline\">\\(x \\in X\\)</span>. Множество <span\nclass=\"math inline\">\\([x]_R = \\{y \\in X: \\,\\,\\,\\, x \\sim y\\}\\)</span> –\n<em>класс эквивалентности</em> элемента <span\nclass=\"math inline\">\\(x\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-45"
+    },
+    {
+        "keyword": "фактор-множество",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-46\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть на множестве <span class=\"math inline\">\\(X\\)</span> задано\nотношение эквивалентности <span class=\"math inline\">\\(R\\)</span>.\n<em>Фактор-множество</em> – это множество всех классов\nэквивалентности.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-46"
+    },
+    {
+        "keyword": "каноническая проекция",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-47\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть на множестве <span class=\"math inline\">\\(X\\)</span> задано\nотношение эквивалентности <span class=\"math inline\">\\(R\\)</span>.\nОтображение <span class=\"math inline\">\\(\\pi: X \\to X/R, \\,\\,\\,\\, \\pi: x\n\\mapsto [x]_R\\)</span> – <em>каноническая проекция</em> на\nфактор-множество.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-47"
+    },
+    {
+        "keyword": "фактор-топология",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-48\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\tau_x\\)</span> топология на множестве\n<span class=\"math inline\">\\(X\\)</span>. Пусть на множестве <span\nclass=\"math inline\">\\(X\\)</span> задано отношение эквивалентности <span\nclass=\"math inline\">\\(R\\)</span>. <span class=\"math inline\">\\(\\tau_R =\n\\{[x]_R \\in X/R: \\,\\,\\,\\, \\pi^{-1}([x]_R) \\in \\tau_x\\}\\)</span> –\n<em>фактор-топология</em> на <span\nclass=\"math inline\">\\(X/R\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-48"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-49\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((X, \\tau_x)\\)</span> – топологическое\nпространство. <span class=\"math inline\">\\(A \\subset X\\)</span>.\nОпределим на <span class=\"math inline\">\\(X\\)</span> отношение\nэквивалентности <span class=\"math inline\">\\(R\\)</span>: <span\nclass=\"math inline\">\\(\\forall x, y \\in X \\,\\,\\,\\, x \\sim y\n\\Leftrightarrow x, y \\in A\\)</span> или <span class=\"math inline\">\\(x =\ny\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-49"
+    },
+    {
+        "keyword": "склеиванием пары точек",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-50\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((X, \\tau_x)\\)</span> – топологическое\nпространство, <span class=\"math inline\">\\(x, y \\in X\\)</span>.\nФактор-пространство <span class=\"math inline\">\\(X/{x, y}\\)</span>\nполучено <em>склеиванием пары точек</em> <span\nclass=\"math inline\">\\(x\\)</span> и <span\nclass=\"math inline\">\\(y\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-50"
+    },
+    {
+        "keyword": "склеиванием концов отрезка",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-51\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nФактор-пространство <span class=\"math inline\">\\([a, b]/\\{a, b\\}\\)</span>\nполучено <em>склеиванием концов отрезка</em> <span\nclass=\"math inline\">\\([a, b]\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-51"
+    },
+    {
+        "keyword": "букет",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-52\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(X \\cap Y = \\varnothing\\)</span>, <span\nclass=\"math inline\">\\((X, \\tau_x), \\,\\,\\,\\, (Y, \\tau_y)\\)</span> –\nтопологические пространства. Тогда фактор-пространство, полученное\nсклеиванием точек <span class=\"math inline\">\\(x \\in X\\)</span> и <span\nclass=\"math inline\">\\(y \\in Y\\)</span> несвязной суммы <span\nclass=\"math inline\">\\(X \\sqcup Y\\)</span> (<span\nclass=\"math inline\">\\((X \\sqcup Y) / {x, y}\\)</span>) – <em>букет</em>\nпространств <span class=\"math inline\">\\(X\\)</span> и <span\nclass=\"math inline\">\\(Y\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-52"
+    },
+    {
+        "keyword": "факторизацией по сюръекции",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-53\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(X\\)</span> топологическое\nпространство, <span class=\"math inline\">\\(f: X \\to Y\\)</span> его\nсюръективное отображение в некоторое множество <span\nclass=\"math inline\">\\(Y\\)</span>. Тогда множество полных прообразов\n<span class=\"math inline\">\\(y \\in Y\\)</span> разбивает <span\nclass=\"math inline\">\\(X\\)</span> на непересекающиеся классы, или что\nтоже самое, задает отношение эквивалентности <span\nclass=\"math inline\">\\(R_f\\)</span> на <span\nclass=\"math inline\">\\(X\\)</span>, при котором <span\nclass=\"math inline\">\\(x \\sim y, \\,\\,\\,\\, x, y \\in X\\)</span> тогда и\nтолько тогда, когда <span class=\"math inline\">\\(f(x) = f(y)\\)</span>.\nФактор-пространство <span class=\"math inline\">\\(X/R_f\\)</span> получено\n<em>факторизацией по сюръекции</em> <span\nclass=\"math inline\">\\(f\\)</span>. <span class=\"math inline\">\\(X /\nR_f\\)</span> обозначается <span class=\"math inline\">\\(X /\nf\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-53"
+    },
+    {
+        "keyword": "гомеоморфизм",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-54\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((X, \\tau_x)\\)</span> и <span\nclass=\"math inline\">\\((Y, tau_y)\\)</span> – топологические пространства.\nОтображение <span class=\"math inline\">\\(f: X \\to Y\\)</span> –\n<em>гомеоморфизм</em>, если <span class=\"math inline\">\\(f\\)</span>\nвзаимнооднозначно и отображения <span class=\"math inline\">\\(f\\)</span> и\n<span class=\"math inline\">\\(f^{-1}\\)</span> непрерывны.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-54"
+    },
+    {
+        "keyword": "связно несвязно",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-55\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nТопологическое пространство <span class=\"math inline\">\\((X,\n\\tau)\\)</span> <em>связно</em>, если <span\nclass=\"math inline\">\\(X\\)</span> нельзя представить в виде объединения\nдвух непустых непересекающихся открытых подмножеств <span\nclass=\"math inline\">\\(X\\)</span>. Если такое представление возможно, то\nпространство <span class=\"math inline\">\\((X, \\tau)\\)</span>\n<em>несвязно</em>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-55"
+    },
+    {
+        "keyword": "связно",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-56\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПодмножество <span class=\"math inline\">\\(A\\)</span> топологического\nпространства <span class=\"math inline\">\\((X, \\tau)\\)</span>\n<em>связно</em>, если связно топологическое пространство <span\nclass=\"math inline\">\\(A\\)</span> с топологией индуцированной из <span\nclass=\"math inline\">\\(X\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-56"
+    },
+    {
+        "keyword": "компонента связности",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-57\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМаксимальное по включению связное подмножество топологического\nпространства <span class=\"math inline\">\\((X, \\tau_x)\\)</span> –\n<em>компонента связности</em> <span\nclass=\"math inline\">\\(X\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-57"
+    },
+    {
+        "keyword": "непрерывная кривая соединяет точки",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-58\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Непрерывная кривая</em> – это отображение <span\nclass=\"math inline\">\\(\\gamma: [a, b] \\to X\\)</span>. При этом говорят,\nчто <span class=\"math inline\">\\(\\gamma\\)</span> <em>соединяет точки</em>\n<span class=\"math inline\">\\(\\gamma(a)\\)</span> и <span\nclass=\"math inline\">\\(\\gamma(b)\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-58"
+    },
+    {
+        "keyword": "линейно связно",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-59\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nТопологическое пространство <span class=\"math inline\">\\((X,\n\\tau_x)\\)</span> – <em>линейно связно</em>, если любые две его точки\nможно соединить непрерывной кривой.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-59"
+    },
+    {
+        "keyword": "линейно связно",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-60\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПодмножество <span class=\"math inline\">\\(A\\)</span> топологического\nпространства <span class=\"math inline\">\\((X, \\tau_x)\\)</span>\n<em>линейно связно</em>, если линейно связно топологическое пространство\n<span class=\"math inline\">\\(A\\)</span> с топологией индуцированной из\n<span class=\"math inline\">\\(X\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-60"
+    },
+    {
+        "keyword": "компонента линейной связности",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-61\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМаксимальное по включению линейно связное подмножество топологического\nпространства <span class=\"math inline\">\\((X, \\tau_x)\\)</span> –\n<em>компонента линейной связности</em> <span\nclass=\"math inline\">\\(X\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-61"
+    },
+    {
+        "keyword": "хаусдорфово",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-62\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nТопологическое пространство <span class=\"math inline\">\\(X\\)</span>\n<em>хаусдорфово</em>, если для любых <span class=\"math inline\">\\(x, y\n\\in X, \\,\\,\\,\\, x \\ne y\\)</span> существуют непересекающиеся окрестности\n<span class=\"math inline\">\\(U\\)</span> и <span\nclass=\"math inline\">\\(V\\)</span>, содержащие <span\nclass=\"math inline\">\\(x\\)</span> и <span\nclass=\"math inline\">\\(y\\)</span> соответственно.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-62"
+    },
+    {
+        "keyword": "нормальное",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-63\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nТопологическое пространство, обладающее свойством из <a\nhref=\"#statement-13\">предыдущего утверждения</a> –\n<em>нормальное</em>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-63"
+    },
+    {
+        "keyword": "открытое покрытие открытое покрытие подпокрытие",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-64\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Открытое покрытие</em> топологического пространства <span\nclass=\"math inline\">\\(X\\)</span> – это семейство <span\nclass=\"math inline\">\\(\\{U\\}_{\\alpha}\\)</span> открытых подмножеств <span\nclass=\"math inline\">\\(X\\)</span>, такое что <span\nclass=\"math inline\">\\(X =\n\\displaystyle\\cup_{\\alpha}U_{\\alpha}\\)</span>.<br><em>Открытое\nпокрытие</em> множества <span class=\"math inline\">\\(Y \\subset X\\)</span>\n– это семейство <span class=\"math inline\">\\(\\{U\\}_{\\alpha}\\)</span>\nоткрытых подмножеств <span class=\"math inline\">\\(X\\)</span>, такое что\n<span class=\"math inline\">\\(Y \\subset\n\\displaystyle\\cup_{\\alpha}U_{\\alpha}\\)</span>.<br> <em>Подпокрытие</em>\n– это подсемейство покрытия, само являющееся покрытием.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-64"
+    },
+    {
+        "keyword": "компактно компакт",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-65\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nТопологическое пространство <span class=\"math inline\">\\(X\\)</span> –\n<em>компактно</em>(<em>компакт</em>), если из любого открытого покрытия\n<span class=\"math inline\">\\(X\\)</span> можно выделить конечное\nподпокрытие.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-65"
+    },
+    {
+        "keyword": "ограничено",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-66\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПодмножество метрического пространства <em>ограничено</em>, если\nсодержится в некотором открытом шаре.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-66"
+    },
+    {
+        "keyword": "локально постоянная",
+        "html": "<p><a\nhref=\"конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-67\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nФункция <span class=\"math inline\">\\(f: X \\to \\mathbb{R}\\)</span>\n<em>локально постоянная</em>, если для любой точки <span\nclass=\"math inline\">\\(x_0 \\in X\\)</span> существует окрестность <span\nclass=\"math inline\">\\(U(x_0)\\)</span>, такая, что <span\nclass=\"math inline\">\\(f\\)</span> постоянна на <span\nclass=\"math inline\">\\(U(x_0)\\)</span>, то есть <span\nclass=\"math inline\">\\(\\forall x \\in U(x_0) \\,\\,\\,\\, f(x) =\nf(x_0)\\)</span>.</p>",
+        "url": "конструкции-(как-получить-новую-топологию-из-уже-существующих).html#definition-67"
+    },
+    {
+        "keyword": "замкнутая незамкнутая",
+        "html": "<p><a href=\"теорема-жордана.html#definition-68\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(X\\)</span> – топологическое\nпространство. Пусть <span class=\"math inline\">\\(\\gamma: [a, b] \\to\nX\\)</span> – непрерывная кривая.<br> <span\nclass=\"math inline\">\\(\\gamma\\)</span> – <em>замкнутая</em>, если <span\nclass=\"math inline\">\\(\\gamma(a) = \\gamma(b)\\)</span>.<br> <span\nclass=\"math inline\">\\(\\gamma\\)</span> – <em>незамкнутая</em>, если <span\nclass=\"math inline\">\\(\\gamma(a) \\ne \\gamma(b)\\)</span>.</p>",
+        "url": "теорема-жордана.html#definition-68"
+    },
+    {
+        "keyword": "кривая без самопересечений кривая без самопересечений",
+        "html": "<p><a href=\"теорема-жордана.html#definition-69\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(X\\)</span> – топологическое\nпространство. Пусть <span class=\"math inline\">\\(\\gamma: [a, b] \\to\nX\\)</span> – непрерывная кривая. <br> Пусть <span\nclass=\"math inline\">\\(\\gamma\\)</span> <strong>незамкнутая</strong>\nкривая. <span class=\"math inline\">\\(\\gamma\\)</span> – <em>кривая без\nсамопересечений</em>, если ее образ <span\nclass=\"math inline\">\\(\\gamma([a, b])\\)</span> – взаимнооднозначен с\n<span class=\"math inline\">\\([a, b]\\)</span>. <br> Пусть <span\nclass=\"math inline\">\\(\\gamma\\)</span> <strong>замкнутая</strong> кривая.\n<span class=\"math inline\">\\(\\gamma\\)</span> – <em>кривая без\nсамопересечений</em>, если только для <span\nclass=\"math inline\">\\(a\\)</span> и <span\nclass=\"math inline\">\\(b\\)</span> выполнено <span\nclass=\"math inline\">\\(\\gamma(a) = \\gamma(b)\\)</span>.</p>",
+        "url": "теорема-жордана.html#definition-69"
+    },
+    {
+        "keyword": "отрезок",
+        "html": "<p><a href=\"теорема-жордана.html#definition-70\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(a, b \\in \\mathbb{R}^n, \\,\\,\\,\\, n &gt;\n1\\)</span>. Множество <span class=\"math inline\">\\(\\{a + (b - a)\\cdot t,\n\\,\\,\\,\\, t \\in [0, 1]\\}\\)</span> – <em>отрезок</em>.</p>",
+        "url": "теорема-жордана.html#definition-70"
+    },
+    {
+        "keyword": "ломаная замкнутая незамкнутая",
+        "html": "<p><a href=\"теорема-жордана.html#definition-71\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Ломаная</em> <span class=\"math inline\">\\(L\\)</span> в <span\nclass=\"math inline\">\\(\\mathbb{R}^n\\)</span> – это последовательность\nточек <span class=\"math inline\">\\(\\{a_i \\in \\mathbb{R}\\}_{i =\n0}^m\\)</span> и последовательность отрезков <span\nclass=\"math inline\">\\(\\{[a_i, a_{i + 1}]\\}_{i = 0}^{m -\n1}\\)</span>.<br>Если <span class=\"math inline\">\\(a_0 = a_m\\)</span>, то\nломаная – <em>замкнутая</em>, иначе ломаная – <em>незамкнутая</em>.</p>",
+        "url": "теорема-жордана.html#definition-71"
+    },
+    {
+        "keyword": "ломаная без самопересечений внутренность ломаной ломаная без самопересечений внутренность ломаной",
+        "html": "<p><a href=\"теорема-жордана.html#definition-72\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(L\\)</span> –\n<strong>незамкнутая</strong> ломаная. <span\nclass=\"math inline\">\\(L\\)</span> – <em>ломаная без самопересечений</em>,\nесли никакие два отрезки <span class=\"math inline\">\\(L\\)</span>, кроме\n<span class=\"math inline\">\\([a_{i - 1}, a_i] \\cap [a_i, a_{i + 1}] =\n\\{a_i\\}, \\,\\,\\,\\, i \\in \\{1, \\ldots, m - 1\\}\\)</span>, не имеют общих\nточек.<br> Все ребра и точки ломаной, кроме <span\nclass=\"math inline\">\\(a_0\\)</span> и <span\nclass=\"math inline\">\\(a_m\\)</span> – <em>внутренность ломаной</em>.\n<br><br> Пусть <span class=\"math inline\">\\(L\\)</span> –\n<strong>замкнутая</strong> ломаная. <span\nclass=\"math inline\">\\(L\\)</span> – <em>ломаная без самопересечений</em>,\nесли никакие два отрезки <span class=\"math inline\">\\(L\\)</span>, кроме\n<span class=\"math inline\">\\([a_{i - 1}, a_i] \\cap [a_i, a_{i + 1}] =\na_i, \\,\\,\\,\\, i \\in \\{1, \\ldots, m - 1\\}\\)</span> и <span\nclass=\"math inline\">\\([a_{m - 1}, a_m]\\cap [a_0, a_1] =\n\\{a_0\\}\\)</span>, не имеют общих точек.<br> Все ребра и точки ломаной –\n<em>внутренность ломаной</em>.</p>",
+        "url": "теорема-жордана.html#definition-72"
+    },
+    {
+        "keyword": "расстояние между подмножествами расстояние от точки до подмножества",
+        "html": "<p><a href=\"теорема-жордана.html#definition-73\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(A\\)</span> и <span\nclass=\"math inline\">\\(B\\)</span> непустые подмножества <span\nclass=\"math inline\">\\(\\mathbb{R}^n\\)</span>. <em>Расстояние между\nподмножествами</em> <span class=\"math inline\">\\(A\\)</span> и <span\nclass=\"math inline\">\\(B\\)</span> – это <span\nclass=\"math inline\">\\(\\rho(A, B) = \\inf \\{\\rho(a, b): \\,\\,\\,\\, a \\in A,\nb \\in B\\}\\)</span>.<br> <em>Расстояние от точки</em> <span\nclass=\"math inline\">\\(a\\)</span> <em>до подмножества</em> <span\nclass=\"math inline\">\\(A\\)</span> - <span\nclass=\"math inline\">\\(\\rho(\\{a\\}, A)\\)</span>.</p>",
+        "url": "теорема-жордана.html#definition-73"
+    },
+    {
+        "keyword": "окрестность",
+        "html": "<p><a href=\"теорема-жордана.html#definition-74\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЛюбое открытое покрытие множества – это его <em>окрестность</em>.</p>",
+        "url": "теорема-жордана.html#definition-74"
+    },
+    {
+        "keyword": "полный",
+        "html": "<p><a href=\"теорема-жордана.html#definition-75\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПростой граф с <span class=\"math inline\">\\(n\\)</span> вершинами –\n<em>полный</em>, если любые две его вершины соединены\nребром..<br><strong>Обозначается:</strong> <span\nclass=\"math inline\">\\(K_n\\)</span>.</p>",
+        "url": "теорема-жордана.html#definition-75"
+    },
+    {
+        "keyword": "полный двудольный граф доли",
+        "html": "<p><a href=\"теорема-жордана.html#definition-76\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(G = (E, V, \\sigma)\\)</span> простой\nграф, <span class=\"math inline\">\\(|V| = n\\)</span>. <span\nclass=\"math inline\">\\(V_1 \\subset V, \\,\\,\\,\\, V_2 \\subset V, \\,\\,\\,\\,\nV_1\\cap V_2 = \\varnothing, \\,\\,\\,\\, V_1\\cup V_2 = V\\)</span>. <span\nclass=\"math inline\">\\(|V_1| = n_1, \\,\\,\\,\\, |V_2| = n_2\\)</span>. Если\nлюбые две вершины из <span class=\"math inline\">\\(V_1\\)</span> и <span\nclass=\"math inline\">\\(V_2\\)</span> соединены ребром, то граф <span\nclass=\"math inline\">\\(G\\)</span> – <em>полный двудольный граф</em>, а\nмножества <span class=\"math inline\">\\(V_1\\)</span> и <span\nclass=\"math inline\">\\(V_2\\)</span> –\n<em>доли</em>.<br><strong>Обозначается:</strong> <span\nclass=\"math inline\">\\(K_{n_1,n_2}\\)</span>.</p>",
+        "url": "теорема-жордана.html#definition-76"
+    },
+    {
+        "keyword": "топологический граф",
+        "html": "<p><a href=\"теорема-жордана.html#definition-77\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(G = (E, V, \\sigma)\\)</span> – граф.\nКаждому ребру <span class=\"math inline\">\\(e \\in E\\)</span> поставим в\nсоответствие отрезок <span class=\"math inline\">\\([a_e, b_e]\\)</span>,\nтак, чтобы полученные отрезки для различных ребер не пересекались.\nРассмотрим дизъюнктивное объединение <span\nclass=\"math inline\">\\(\\displaystyle\\sqcup_{e \\in E}[a_e, b_e]\\)</span>.\nСопоставим каждой вершине графа точку, так чтобы для различных вершин\nточки не совпадали. Рассмотрим множество <span\nclass=\"math inline\">\\((\\displaystyle\\sqcup_{v \\in V}\\{x_v\\}) \\cup\n(\\displaystyle\\sqcup_{e \\in E}[a_e, b_e])\\)</span>. <span\nclass=\"math inline\">\\(\\forall e \\in E\\)</span>, если <span\nclass=\"math inline\">\\(\\sigma^{-1}(e)\\)</span> состоит из одной вершины\n<span class=\"math inline\">\\(v\\)</span>, то склеим концы отрезка <span\nclass=\"math inline\">\\([a_e, b_e]\\)</span> с вершиной <span\nclass=\"math inline\">\\(v\\)</span>. Если <span\nclass=\"math inline\">\\(\\sigma^{-1}(e)\\)</span> состоит из двух вершин\n<span class=\"math inline\">\\(v_1\\)</span> и <span\nclass=\"math inline\">\\(v_2\\)</span>, то склеим <span\nclass=\"math inline\">\\(v_1\\)</span> и <span\nclass=\"math inline\">\\(a_e\\)</span>, <span\nclass=\"math inline\">\\(v_2\\)</span> и <span\nclass=\"math inline\">\\(b_e\\)</span>. Полученное топологическое\nпространство <span class=\"math inline\">\\(X_G\\)</span> –\n<em>топологический граф</em>.</p>",
+        "url": "теорема-жордана.html#definition-77"
+    },
+    {
+        "keyword": "вложение графа в пространство",
+        "html": "<p><a href=\"теорема-жордана.html#definition-78\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(Y\\)</span> – топологическое\nпространство. <span class=\"math inline\">\\(X_G\\)</span> – топологический\nграф. Непрерывное взаимнооднозначное отображение <span\nclass=\"math inline\">\\(f: X_G \\to Y\\)</span> – <em>вложение графа</em>\n<span class=\"math inline\">\\(G\\)</span> <em>в пространство</em> <span\nclass=\"math inline\">\\(Y\\)</span>.</p>",
+        "url": "теорема-жордана.html#definition-78"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"планарные-графы.html#definition-79\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(A\\)</span> и <span\nclass=\"math inline\">\\(B\\)</span> подмножества множества <span\nclass=\"math inline\">\\(C\\)</span>. <span class=\"math inline\">\\(A \\sqcup\nB\\)</span> обозначает, что <span class=\"math inline\">\\(A \\cap B =\n\\varnothing\\)</span> и <span class=\"math inline\">\\(C = A \\cup\nB\\)</span>.</p>",
+        "url": "планарные-графы.html#definition-79"
+    },
+    {
+        "keyword": "отображение графа в граф изоморфизм изоморфные",
+        "html": "<p><a href=\"планарные-графы.html#definition-80\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(G = (V, E, \\partial)\\)</span> и <span\nclass=\"math inline\">\\(G’ = (V’, E’, \\partial’)\\)</span> – графы.\n<em>Отображение графа</em> <span class=\"math inline\">\\(G\\)</span> <em>в\nграф</em> <span class=\"math inline\">\\(G’\\)</span> – это <span\nclass=\"math inline\">\\(f: V \\sqcup E \\to V’ \\sqcup E’\\)</span>, такое,\nчто <span class=\"math inline\">\\(f(V) \\subset V’\\)</span>, <span\nclass=\"math inline\">\\(f(E) \\subset E’\\)</span> и <span\nclass=\"math inline\">\\(f(\\partial(e)) = \\partial’(f(e))\\,\\,\\,\\, \\forall e\n\\in E\\)</span>. Если отображение <span class=\"math inline\">\\(f\\)</span>\nграфов <span class=\"math inline\">\\(G\\)</span> и <span\nclass=\"math inline\">\\(G’\\)</span> взаимнооднозначно, то <span\nclass=\"math inline\">\\(f\\)</span> – <em>изоморфизм</em> графов <span\nclass=\"math inline\">\\(G\\)</span> и <span\nclass=\"math inline\">\\(G’\\)</span>, а графы <span\nclass=\"math inline\">\\(G\\)</span> и <span\nclass=\"math inline\">\\(G’\\)</span> – <em>изоморфные</em>.<br>\n<strong>Обозначается:</strong> <span class=\"math inline\">\\(G \\cong\nG’\\)</span>.</p>",
+        "url": "планарные-графы.html#definition-80"
+    },
+    {
+        "keyword": "комбинаторным",
+        "html": "<p><a href=\"планарные-графы.html#definition-81\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nГраф <span class=\"math inline\">\\(G = (V, E, \\partial)\\)</span> иногда\nназывают <em>комбинаторным</em>.</p>",
+        "url": "планарные-графы.html#definition-81"
+    },
+    {
+        "keyword": "геометрическая реализация вершины и ребра геометрической реализации",
+        "html": "<p><a href=\"планарные-графы.html#definition-82\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f: X_G \\to Y\\)</span> – вложение графа\n<span class=\"math inline\">\\(G\\)</span> в пространство <span\nclass=\"math inline\">\\(Y\\)</span>. Образ <span\nclass=\"math inline\">\\(f(X_G) \\subset Y\\)</span> – <em>геометрическая\nреализация</em> графа <span class=\"math inline\">\\(G\\)</span>. <span\nclass=\"math inline\">\\(f\\)</span>-образы вершин и ребер графа <span\nclass=\"math inline\">\\(X_G\\)</span> – <em>вершины и ребра геометрической\nреализации</em>. Существует взаимнооднозначное соответствие между\nвершинами и ребрами реализации и вершинами и ребрами графа, поэтому их\nможно отождествить и смотреть на геометрическую реализацию, как на\nмножество точек(вершин) <span class=\"math inline\">\\(Y\\)</span>,\nсоединенных непрерывными кривыми без самопересечений. В таком случае\nотображение инцидентности переводит кривую в множество ее концевых\nточек.</p>",
+        "url": "планарные-графы.html#definition-82"
+    },
+    {
+        "keyword": "планарный",
+        "html": "<p><a href=\"планарные-графы.html#definition-83\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nГраф – <em>планарный</em>, если существует его вложение в плоскость.</p>",
+        "url": "планарные-графы.html#definition-83"
+    },
+    {
+        "keyword": "плоский граф",
+        "html": "<p><a href=\"планарные-графы.html#definition-84\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nГеометрическая реализация планарного графа – <em>плоский граф</em>.</p>",
+        "url": "планарные-графы.html#definition-84"
+    },
+    {
+        "keyword": "грани",
+        "html": "<p><a href=\"планарные-графы.html#definition-85\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\Gamma \\subset \\mathbb{R}^2\\)</span> –\nплоский граф. Компоненты линейной связности <span\nclass=\"math inline\">\\(\\mathbb{R}^2\\setminus \\Gamma\\)</span> –\n<em>грани</em> <span class=\"math inline\">\\(\\Gamma\\)</span>.</p>",
+        "url": "планарные-графы.html#definition-85"
+    },
+    {
+        "keyword": "лес",
+        "html": "<p><a href=\"планарные-графы.html#definition-86\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nГраф без циклов – <em>лес</em>.</p>",
+        "url": "планарные-графы.html#definition-86"
+    },
+    {
+        "keyword": "подразбиение ребра",
+        "html": "<p><a href=\"планарные-графы.html#definition-87\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Подразбиение ребра</em> графа <span class=\"math inline\">\\(G\\)</span>\n– это …</p>",
+        "url": "планарные-графы.html#definition-87"
+    },
+    {
+        "keyword": "гомеоморфны",
+        "html": "<p><a href=\"планарные-графы.html#definition-88\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nГрафы <em>гомеоморфны</em>, если гомеоморфны их топологические\nграфы.</p>",
+        "url": "планарные-графы.html#definition-88"
+    },
+    {
+        "keyword": "цветами красками раскраска цветами из множества вершина покрашена в цвет правильная хроматическое число",
+        "html": "<p><a href=\"раскраски-плоских-графов.html#definition-89\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{C} =\n\\{\\operatorname{Col}_i\\}\\)</span> некоторое множество, элементы которого\nназовем <em>цветами</em> или <em>красками</em>. Пусть <span\nclass=\"math inline\">\\(G = (V, E, \\partial)\\)</span> – граф. Отображение\n<span class=\"math inline\">\\(\\nu: V \\to \\mathcal{C}\\)</span> –\n<em>раскраска</em> графа <span class=\"math inline\">\\(G\\)</span>\n<em>цветами из множества</em> <span\nclass=\"math inline\">\\(\\mathcal{C}\\)</span>. При этом <em>вершина</em>\n<span class=\"math inline\">\\(v\\)</span> <em>покрашена в цвет</em> <span\nclass=\"math inline\">\\(\\nu(v)\\)</span>. Раскраска графа\n<em>правильная</em>, если соседние вершины покрашены в различные цвета.\nМинимальное количество красок, необходимое для правильной раскраски\nграфа – <em>хроматическое число</em> графа <span\nclass=\"math inline\">\\(G\\)</span>.</p>",
+        "url": "раскраски-плоских-графов.html#definition-89"
+    },
+    {
+        "keyword": "линк",
+        "html": "<p><a href=\"раскраски-плоских-графов.html#definition-90\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(G = (V, E, \\partial)\\)</span> – граф.\n<span class=\"math inline\">\\(v \\in V\\)</span>. Подграф графа <span\nclass=\"math inline\">\\(G\\)</span>, состоящий из инцидентных <span\nclass=\"math inline\">\\(v\\)</span> вершин и ребер – <em>линк</em> вершины\n<span class=\"math inline\">\\(v\\)</span>. <strong>Обозначается:</strong>\n<span class=\"math inline\">\\(L(v)\\)</span>.</p>",
+        "url": "раскраски-плоских-графов.html#definition-90"
+    },
+    {
+        "keyword": "треугольник триангуляция",
+        "html": "<p><a href=\"раскраски-плоских-графов.html#definition-91\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\Gamma\\)</span> – связный простой\nплоский граф, и выполнены следующие условия: <br><br>1. Любое ребро\nвходит в границу <span class=\"math inline\">\\(2\\)</span>-x граней.<br>2.\nЛюбая конечная грань ограничена <span class=\"math inline\">\\(3\\)</span>\nребрами (такая грань – <em>треугольник</em>).<br>3. Объединение конечных\nграней <span class=\"math inline\">\\(W\\)</span> – ограничено простой\nзамкнутой ломаной.<br>Тогда <span class=\"math inline\">\\(G\\)</span> –\n<em>триангуляция</em> <span class=\"math inline\">\\(W\\)</span>.</p>",
+        "url": "раскраски-плоских-графов.html#definition-91"
+    },
+    {
+        "keyword": "неподвижная точка отображения",
+        "html": "<p><a href=\"раскраски-плоских-графов.html#definition-92\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f: X \\to X\\)</span> – отображение.\n<span class=\"math inline\">\\(x \\in X\\)</span> – <em>неподвижная точка\nотображения</em> <span class=\"math inline\">\\(f\\)</span>, если <span\nclass=\"math inline\">\\(f(x) = x\\)</span>.</p>",
+        "url": "раскраски-плоских-графов.html#definition-92"
+    },
+    {
+        "keyword": "многоугольник внутренность многоугольника внешность многоугольника граница многоугольника",
+        "html": "<p><a href=\"многоугольники.html#definition-93\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(L \\subset \\mathbb{R}^2\\)</span> –\nзамкнутая ломаная без самопересечений. <span class=\"math inline\">\\(F = L\n\\cup \\Omega_1\\)</span> – <em>многоугольник</em>. (<a\nhref=\"#statement-0\"><span class=\"math inline\">\\(\\Omega_1\\)</span> –\nограниченная компонента <span\nclass=\"math inline\">\\(\\mathbb{R}^2\\setminus L\\)</span></a>).<br><br>\n<span class=\"math inline\">\\(\\Omega_1\\)</span> – <em>внутренность\nмногоугольника</em> <span class=\"math inline\">\\(F\\)</span>\n(Обозначается: <span class=\"math inline\">\\(\\operatorname{Int}\nF\\)</span>),<br> <span class=\"math inline\">\\(\\Omega_0\\)</span> –\n<em>внешность многоугольника</em> <span class=\"math inline\">\\(F\\)</span>\n(Обозначается: <span class=\"math inline\">\\(\\operatorname{Out}\nF\\)</span>).<br> <span class=\"math inline\">\\(L\\)</span> – <em>граница\nмногоугольника</em> <span class=\"math inline\">\\(F\\)</span>\n(Обозначается: <span class=\"math inline\">\\(\\partial F\\)</span>).</p>",
+        "url": "многоугольники.html#definition-93"
+    },
+    {
+        "keyword": "пространственный многоугольник плокость многогранника",
+        "html": "<p><a href=\"многоугольники.html#definition-94\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Пространственный многоугольник</em> – это многоугольник, построенный\nв аффинной плоскости <span class=\"math inline\">\\(\\pi \\subset\n\\mathbb{R}^3\\)</span>, при этом <span class=\"math inline\">\\(\\pi\\)</span>\n– <em>плокость многогранника</em>.</p>",
+        "url": "многоугольники.html#definition-94"
+    },
+    {
+        "keyword": "многогранная поверхность граней",
+        "html": "<p><a href=\"многоугольники.html#definition-95\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Многогранная поверхность</em> <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span> в <span\nclass=\"math inline\">\\(\\mathbb{R}^3\\)</span> – это конечное семейство\n<span class=\"math inline\">\\(\\{F_i\\}\\)</span> пространственных\nмногоугольников (<em>граней</em>), для которых выполнены следующие\nусловия:</p>",
+        "url": "многоугольники.html#definition-95"
+    },
+    {
+        "keyword": "вершины и ребра",
+        "html": "<p><a href=\"многоугольники.html#definition-96\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F} = \\{F_i\\}\\)</span> –\nмногогранная поверхность. Вершины и ребра граней <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span> – это <em>вершины и\nребра</em> поверхности <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span>.</p>",
+        "url": "многоугольники.html#definition-96"
+    },
+    {
+        "keyword": "инцидентна граничное внутреннее замкнутая",
+        "html": "<p><a href=\"многоугольники.html#definition-97\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F} = \\{F_i\\}\\)</span> –\nмногогранная поверхность. Вершина (ребро), принадлежащая грани,\n<em>инцидентна</em> этой грани. Ребро инцидентное ровно одной грани –\n<em>граничное</em>, иначе – <em>внутреннее</em>.<br> Если у <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span> нет граничных ребер, то <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span> – <em>замкнутая</em>.</p>",
+        "url": "многоугольники.html#definition-97"
+    },
+    {
+        "keyword": "многогранник",
+        "html": "<p><a href=\"многоугольники.html#definition-98\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Многогранник</em> задается аналогично многоугольнику.</p>",
+        "url": "многоугольники.html#definition-98"
+    },
+    {
+        "keyword": "граф многогранной поверхности",
+        "html": "<p><a href=\"многоугольники.html#definition-99\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F}\\)</span> – многогранная\nповерхность. Пусть <span class=\"math inline\">\\(V\\)</span> – множество\nего вершин, <span class=\"math inline\">\\(E\\)</span> – множество его\nребер. Тогда <span class=\"math inline\">\\(G = (V, E)\\)</span> – простой\nграф, вложенный в <span class=\"math inline\">\\(\\mathbb{R}^3\\)</span>.\n<span class=\"math inline\">\\(G\\)</span> – <em>граф многогранной\nповерхности</em> <span class=\"math inline\">\\(\\mathcal{F}\\)</span>.</p>",
+        "url": "многоугольники.html#definition-99"
+    },
+    {
+        "keyword": "двойственный граф многогранной поверхности",
+        "html": "<p><a href=\"многоугольники.html#definition-100\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F}\\)</span> – многогранная\nповерхность. Пусть <span class=\"math inline\">\\(V’ = \\{F_i\\}\\)</span>,\n<span class=\"math inline\">\\(E’\\)</span> совпадает с множеством ребер\n<span class=\"math inline\">\\(\\mathcal{F}\\)</span>. Пусть <span\nclass=\"math inline\">\\(\\partial’(e) = \\{F_i, F_j\\} \\Leftrightarrow\ne\\)</span> является пересечением граней <span\nclass=\"math inline\">\\(F_i\\)</span> и <span\nclass=\"math inline\">\\(F_j\\)</span>. Полученный граф <span\nclass=\"math inline\">\\(G = (V’, E’, \\partial’)\\)</span> –\n<em>двойственный граф многогранной поверхности</em>.</p>",
+        "url": "многоугольники.html#definition-100"
+    },
+    {
+        "keyword": "гональность степень грани",
+        "html": "<p><a href=\"многоугольники.html#definition-101\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nКоличество ребер, ограничивающих грань многогранной поверхности, –\n<em>гональность</em> или <em>степень грани</em>.</p>",
+        "url": "многоугольники.html#definition-101"
+    },
+    {
+        "keyword": "выпуклое",
+        "html": "<p><a href=\"многоугольники.html#definition-102\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПодмножество множества <span class=\"math inline\">\\(\\mathbb{R}^n\\)</span>\n– <em>выпуклое</em>, если вместе с любыми двумя своими точками содержит\nотрезок, который их соединяет.</p>",
+        "url": "многоугольники.html#definition-102"
+    },
+    {
+        "keyword": "радиальная проекция",
+        "html": "<p><a href=\"многоугольники.html#definition-103\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>радиальная проекция</em>)</p>",
+        "url": "многоугольники.html#definition-103"
+    },
+    {
+        "keyword": "диаграмма шлегеля",
+        "html": "<p><a href=\"многоугольники.html#definition-104\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>диаграмма Шлегеля</em>)</p>",
+        "url": "многоугольники.html#definition-104"
+    },
+    {
+        "keyword": "правильный",
+        "html": "<p><a href=\"многоугольники.html#definition-105\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМногогранник <span class=\"math inline\">\\(W\\)</span> –\n<em>правильный</em>, если каждая его вершина инцидентна одинаковому\nчислу ребер и все двугранные углы между гранями равные.</p>",
+        "url": "многоугольники.html#definition-105"
+    },
+    {
+        "keyword": "граней флаг",
+        "html": "<p><a href=\"многоугольники.html#definition-106\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F} = \\{F_i\\}\\)</span> - <span\nclass=\"math inline\">\\(n\\)</span>-мерный многогранник. Семейство <span\nclass=\"math inline\">\\(F = \\{F_0, \\ldots, F_{n - 1}\\}\\)</span>\n<em>граней</em>(вершины, ребра – это тоже грани) многогранника –\n<em>флаг</em>, если размерность <span class=\"math inline\">\\(F_i\\)</span>\nравна <span class=\"math inline\">\\(i\\)</span> и <span\nclass=\"math inline\">\\(F_i \\subset F_{i + 1} \\,\\,\\,\\, \\forall\ni\\)</span>.</p>",
+        "url": "многоугольники.html#definition-106"
+    },
+    {
+        "keyword": "правильный",
+        "html": "<p><a href=\"многоугольники.html#definition-107\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F} = \\{F_i\\}\\)</span> - <span\nclass=\"math inline\">\\(n\\)</span>-мерный многогранник. <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span> – <em>правильный</em>, если\nдля каждой пары его флагов существует движение многогранника,\nпереводящее один из флагов в другой.</p>",
+        "url": "многоугольники.html#definition-107"
+    },
+    {
+        "keyword": "вектор",
+        "html": "<p><a href=\"многоугольники.html#definition-108\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F} = \\{F_i\\}\\)</span> - <span\nclass=\"math inline\">\\(n\\)</span>-мерный многогранник. <span\nclass=\"math inline\">\\(f = (k_0, \\ldots, k_{n - 1})\\)</span>, где <span\nclass=\"math inline\">\\(k_i\\)</span> – количество <span\nclass=\"math inline\">\\(i\\)</span>-мерных граней многогранника - <span\nclass=\"math inline\">\\(f\\)</span>-<em>вектор</em> многогранника <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span>.</p>",
+        "url": "многоугольники.html#definition-108"
+    },
+    {
+        "keyword": "ёж многогранника",
+        "html": "<p><a href=\"многоугольники.html#definition-109\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F} \\subset\n\\mathbb{R}^3\\)</span> – выпуклый многогранник. Пусть <span\nclass=\"math inline\">\\(F_1, \\ldots, F_m\\)</span> – грани <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span>. Пусть <span\nclass=\"math inline\">\\(\\mathbf{n}_i\\)</span> – единичный вектор,\nперпендикулярный грани <span class=\"math inline\">\\(F_i\\)</span>,\nнаправленный наружу многогранника <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span>, а <span\nclass=\"math inline\">\\(S_i\\)</span> – площадь <span\nclass=\"math inline\">\\(F_i\\)</span>. <span\nclass=\"math inline\">\\(\\boldsymbol{\\xi}_i = S_i \\cdot\n\\mathbf{n}_i\\)</span>. Семейство <span\nclass=\"math inline\">\\(\\{\\boldsymbol{\\xi}_i\\}\\)</span> – <em>ёж\nмногогранника</em> <span class=\"math inline\">\\(\\mathcal{F}\\)</span>.</p>",
+        "url": "многоугольники.html#definition-109"
+    },
+    {
+        "keyword": "разрезан на многоугольники",
+        "html": "<p><a\nhref=\"равновеликость-и-равносоставленность.html#definition-110\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(F\\)</span> и <span\nclass=\"math inline\">\\(F_1, \\ldots, F_m\\)</span> – многоугольники, для\nкоторых выполнено:<br> <span class=\"math inline\">\\(\\forall i \\ne j\n\\,\\,\\,\\, F_i \\cap F_j = \\varnothing\\)</span>.<br> <span\nclass=\"math inline\">\\(F = \\cup_{i = 1}^m F_i\\)</span>.<br> Тогда\nмногоугольник <span class=\"math inline\">\\(F\\)</span> <em>разрезан на\nмногоугольники</em> <span class=\"math inline\">\\(F_i\\)</span>.</p>",
+        "url": "равновеликость-и-равносоставленность.html#definition-110"
+    },
+    {
+        "keyword": "равносоставлены",
+        "html": "<p><a\nhref=\"равновеликость-и-равносоставленность.html#definition-111\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(F\\)</span> и <span\nclass=\"math inline\">\\(G\\)</span> – многоугольники. Пусть <span\nclass=\"math inline\">\\(F\\)</span> разрезан на многоугольники <span\nclass=\"math inline\">\\(F_1, \\ldots, F_s\\)</span> и <span\nclass=\"math inline\">\\(G\\)</span> разрезан на многоугольники <span\nclass=\"math inline\">\\(G_1, \\ldots, G_s\\)</span>. Если <span\nclass=\"math inline\">\\(\\forall i \\in \\{1, \\ldots, s\\} \\,\\,\\,\\, G_i =\nF_i\\)</span>, то многоугольники <span class=\"math inline\">\\(F\\)</span> и\n<span class=\"math inline\">\\(G\\)</span> – <em>равносоставлены</em>.</p>",
+        "url": "равновеликость-и-равносоставленность.html#definition-111"
+    },
+    {
+        "keyword": "равновеликие",
+        "html": "<p><a\nhref=\"равновеликость-и-равносоставленность.html#definition-112\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМногоугольники <em>равновеликие</em>, если они имеют одинаковую\nплощадь.</p>",
+        "url": "равновеликость-и-равносоставленность.html#definition-112"
+    },
+    {
+        "keyword": "разрезан на многогранники",
+        "html": "<p><a\nhref=\"равновеликость-и-равносоставленность.html#definition-113\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(F\\)</span> и <span\nclass=\"math inline\">\\(F_1, \\ldots, F_m\\)</span> – многогранники, для\nкоторых выполнено:<br> <span class=\"math inline\">\\(\\forall i \\ne j\n\\,\\,\\,\\, F_i \\cap F_j = \\varnothing\\)</span>.<br> <span\nclass=\"math inline\">\\(F = \\cup_{i = 1}^m F_i\\)</span>.<br> Тогда\nмногоугольник <span class=\"math inline\">\\(F\\)</span> <em>разрезан на\nмногогранники</em> <span class=\"math inline\">\\(F_i\\)</span>.</p>",
+        "url": "равновеликость-и-равносоставленность.html#definition-113"
+    },
+    {
+        "keyword": "равносоставлены",
+        "html": "<p><a\nhref=\"равновеликость-и-равносоставленность.html#definition-114\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(F\\)</span> и <span\nclass=\"math inline\">\\(G\\)</span> – многогранники. Пусть <span\nclass=\"math inline\">\\(F\\)</span> разрезан на многогранники <span\nclass=\"math inline\">\\(F_1, \\ldots, F_s\\)</span> и <span\nclass=\"math inline\">\\(G\\)</span> разрезан на многогранники <span\nclass=\"math inline\">\\(G_1, \\ldots, G_s\\)</span>. Если <span\nclass=\"math inline\">\\(\\forall i \\in \\{1, \\ldots, s\\} \\,\\,\\,\\, G_i =\nF_i\\)</span>, то многогранники <span class=\"math inline\">\\(F\\)</span> и\n<span class=\"math inline\">\\(G\\)</span> – <em>равносоставлены</em>.</p>",
+        "url": "равновеликость-и-равносоставленность.html#definition-114"
+    },
+    {
+        "keyword": "равновеликие",
+        "html": "<p><a\nhref=\"равновеликость-и-равносоставленность.html#definition-115\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМногогранники <em>равновеликие</em>, если их объемы равны.</p>",
+        "url": "равновеликость-и-равносоставленность.html#definition-115"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a\nhref=\"равновеликость-и-равносоставленность.html#definition-116\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nРассмотрим множество вещественных чисел <span\nclass=\"math inline\">\\(\\mathbb{R}\\)</span>, как векторное пространство\nнад полем <span class=\"math inline\">\\(\\mathbb{Q}\\)</span>. Обозначим\nполученное пространство <span\nclass=\"math inline\">\\(\\mathbb{R}_{Q}\\)</span>.</p>",
+        "url": "равновеликость-и-равносоставленность.html#definition-116"
+    },
+    {
+        "keyword": "функция дена многогранника инвариант дена многогранника",
+        "html": "<p><a\nhref=\"равновеликость-и-равносоставленность.html#definition-117\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(W\\)</span> – многогранник. Пусть <span\nclass=\"math inline\">\\(E\\)</span> множество ребер <span\nclass=\"math inline\">\\(W\\)</span>. Обозначим длину ребра <span\nclass=\"math inline\">\\(e \\in E\\)</span>, как <span\nclass=\"math inline\">\\(|e|\\)</span>, а двугранный угол при ребре <span\nclass=\"math inline\">\\(e\\)</span>, как <span\nclass=\"math inline\">\\(\\alpha_e\\)</span>. Пусть <span\nclass=\"math inline\">\\(\\alpha(W) = \\{\\alpha_e: \\,\\,\\,\\, e \\in\nE\\}\\)</span>. Пусть <span class=\"math inline\">\\(X \\subset\n\\mathbb{R}\\)</span> конечное множество вещественных чисел, содержащее\n<span class=\"math inline\">\\(\\alpha(W)\\)</span> и <span\nclass=\"math inline\">\\(\\pi\\)</span>. Обозначим <span\nclass=\"math inline\">\\(L(X)\\)</span> – линейную оболочку <span\nclass=\"math inline\">\\(X\\)</span>.<br>Линейная функция <span\nclass=\"math inline\">\\(f: L(X) \\to \\mathbb{R}\\)</span>, для которой <span\nclass=\"math inline\">\\(f(\\pi) = 0\\)</span> – <em>функция Дена\nмногогранника</em> <span class=\"math inline\">\\(W\\)</span>, а число <span\nclass=\"math inline\">\\(\\Delta_f(W) = \\displaystyle \\sum_{e \\in E}|e|\\cdot\nf(\\alpha_e)\\)</span> – <em>инвариант Дена многогранника</em> <span\nclass=\"math inline\">\\(W\\)</span>.</p>",
+        "url": "равновеликость-и-равносоставленность.html#definition-117"
+    },
+    {
+        "keyword": "равнодополняемые",
+        "html": "<p><a\nhref=\"равновеликость-и-равносоставленность.html#definition-118\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМногогранники <span class=\"math inline\">\\(A\\)</span> и <span\nclass=\"math inline\">\\(B\\)</span> – <em>равнодополняемые</em>, если\nсуществуют многогранники <span class=\"math inline\">\\(W^A\\)</span> и\n<span class=\"math inline\">\\(W^B\\)</span>, которые можно можно разрезать\nна многогранники <span class=\"math inline\">\\(W^A_0, \\ldots\nW^A_n\\)</span> и <span class=\"math inline\">\\(W^B_0, \\ldots\nW^B_n\\)</span> соответственно, так, чтобы <span\nclass=\"math inline\">\\(W^A_0 = A, \\,\\,\\,\\, W^B_0 = B\\)</span> и <span\nclass=\"math inline\">\\(W^A_i = W^B_i \\,\\,\\,\\, \\forall i \\in \\{1, \\ldots,\nn\\}\\)</span>.</p>",
+        "url": "равновеликость-и-равносоставленность.html#definition-118"
+    },
+    {
+        "keyword": "тетраэдр хилла",
+        "html": "<p><a\nhref=\"равновеликость-и-равносоставленность.html#definition-119\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nТетраэдр, в основании которого расположен равнобедренный прямоугольный\nтреугольник, высота которого падает на один из концов гипотенузы и равна\nдлине катета основания – <em>тетраэдр Хилла</em>.</p>",
+        "url": "равновеликость-и-равносоставленность.html#definition-119"
+    },
+    {
+        "keyword": "координатный тетраэдр",
+        "html": "<p><a\nhref=\"равновеликость-и-равносоставленность.html#definition-120\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Координатный тетраэдр</em> – тетраэдр, координаты которого в\nпрямоугольной системе координат равны: <span class=\"math inline\">\\((0,\n0, 0, 0), \\,\\,\\,\\, (1, 0, 0, 0), \\,\\,\\,\\, (0, 1, 0, 0), \\,\\,\\,\\, (0, 0,\n0, 1)\\)</span>.</p>",
+        "url": "равновеликость-и-равносоставленность.html#definition-120"
+    },
+    {
+        "keyword": "связная многогранная поверхность граней смежны по ребру цепочка многоугольников, соединяющая",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-121\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Связная многогранная поверхность</em> <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span> в <span\nclass=\"math inline\">\\(\\mathbb{R}^n\\)</span> – это конечное семейство\n<span class=\"math inline\">\\(\\{F_i \\subset \\mathbb{R}^n\\}\\)</span>\nпространственных многоугольников (<em>граней</em>), для которых\nвыполнены следующие условия:</p>\n<ol type=\"1\">\n<li><p><span class=\"math inline\">\\(\\forall i \\ne j \\,\\,\\,\\, F_i \\cap\nF_j\\)</span> или пусто, или состоит из одной общей для <span\nclass=\"math inline\">\\(F_i\\)</span> и <span\nclass=\"math inline\">\\(F_j\\)</span> вершины, или состоит из одного общего\nдля <span class=\"math inline\">\\(F_i\\)</span> и <span\nclass=\"math inline\">\\(F_j\\)</span> ребра <span\nclass=\"math inline\">\\(e\\)</span> (в этом случае грани <span\nclass=\"math inline\">\\(F_i\\)</span> и <span\nclass=\"math inline\">\\(F_j\\)</span> <em>смежны по ребру</em> <span\nclass=\"math inline\">\\(e\\)</span>).</p></li>\n<li><p>Для каждого ребра <span class=\"math inline\">\\(e \\in F_i\\)</span>\nсуществует не более одного многоугольника <span\nclass=\"math inline\">\\(F_j \\,\\,\\,\\, j \\ne i\\)</span> смежного с <span\nclass=\"math inline\">\\(F_i\\)</span> по ребру <span\nclass=\"math inline\">\\(e\\)</span>.</p></li>\n<li><p>Для любых многогранников <span class=\"math inline\">\\(F_i\\)</span>\nи <span class=\"math inline\">\\(F_j, \\,\\,\\,\\, i \\ne j\\)</span> существует\nпоследовательность многоугольников <span class=\"math inline\">\\(F_i =\nF_{i1}, F_{i2}, \\ldots, F_{is} = F_j\\)</span>, такие что <span\nclass=\"math inline\">\\(\\forall j \\in \\{1, \\ldots s - 1\\} \\,\\,\\,\\,\nF_{ij}\\)</span> смежен с <span class=\"math inline\">\\(F_{ij+1}\\)</span>\nпо некоторому ребру. Такая последовательность – <em>цепочка\nмногоугольников, соединяющая</em> <span\nclass=\"math inline\">\\(F_i\\)</span> и <span\nclass=\"math inline\">\\(F_j\\)</span>.</p></li>\n<li><p>Для любых двух многогранников, пересекающихся по вершине\nсуществует цепочка, соединяющая их, такая, что каждый из\nмногоугольников, входящих в цепочку, содержит эту вершину.</p></li>\n</ol>\n<p>(Убрали требование «никакие две грани не лежат в одной\nплоскости»)</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-121"
+    },
+    {
+        "keyword": "вершины и ребра",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-122\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F} = \\{F_i\\}\\)</span> –\nмногогранная поверхность <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span> – это <em>вершины и\nребра</em> поверхности <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span>.</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-122"
+    },
+    {
+        "keyword": "инцидентна граничное внутреннее замкнутая",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-123\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F} = \\{F_i\\}\\)</span> –\nмногогранная поверхность. Вершина (ребро), принадлежащая грани,\n<em>инцидентна</em> этой грани. Ребро инцидентное ровно одной грани –\n<em>граничное</em>, иначе – <em>внутреннее</em>.<br> Если у <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span> нет граничных ребер, то <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span> – <em>замкнутая</em>.</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-123"
+    },
+    {
+        "keyword": "мерная",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-124\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nСвязная многогранная поверхность в <span\nclass=\"math inline\">\\(\\mathbb{R}^n\\)</span> - <span\nclass=\"math inline\">\\(n\\)</span>-<em>мерная</em>. (хотя она в <span\nclass=\"math inline\">\\(n + 1\\)</span>)</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-124"
+    },
+    {
+        "keyword": "триангулированная",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-125\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nТак как теперь в определении поверхности не нужно, чтобы грани не лежали\nв одной плоскости, можем разбить каждую грань на треугольники.\nПодученная при этом поверхность – <em>триангулированная</em>.</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-125"
+    },
+    {
+        "keyword": "слово склейки",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-126\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F}\\)</span> – связная\nмногогранная поверхность. Пометим все ребра <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span> стрелками и буквами. Будем\nобходить многогранник по его границе и записывать последовательно буквы\nребер по правилу: если идем в направлении стрелки, то саму букву, иначе\nбукву в степени <span class=\"math inline\">\\(-1\\)</span>. Полученная\nпоследовательность букв – <em>слово склейки</em> поверхности <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span>.</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-126"
+    },
+    {
+        "keyword": "элементарные операции вырезание диска приклеивание ручки вклейка пленки мёбиуса",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-127\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Элементарные операции</em> с поверхностями – это: <br>1.\n<em>Вырезание диска</em>.<br>2. <em>Приклеивание ручки</em>.<br>1.\n<em>Вклейка пленки Мёбиуса</em>.</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-127"
+    },
+    {
+        "keyword": "сфера с ручками",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-128\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Сфера с</em> <span class=\"math inline\">\\(g\\)</span> <em>ручками</em>\n– это поверхность, полученная приклеиванием к сфере <span\nclass=\"math inline\">\\(g\\)</span> ручек.</p>\n<p><strong>Обозначается:</strong> <span\nclass=\"math inline\">\\(M_g\\)</span></p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-128"
+    },
+    {
+        "keyword": "сфера с пленками мёбиуса",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-129\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Сфера с</em> <span class=\"math inline\">\\(m\\)</span> <em>пленками\nМёбиуса</em> – это поверхность, полученная вклейкой в сферу <span\nclass=\"math inline\">\\(m\\)</span> пленок Мёбиуса.</p>\n<p><strong>Обозначается:</strong> <span\nclass=\"math inline\">\\(N_m\\)</span></p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-129"
+    },
+    {
+        "keyword": "модельные поверхности",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-130\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nСфера с <span class=\"math inline\">\\(g\\)</span> ручками и сфера с <span\nclass=\"math inline\">\\(m\\)</span> пленками Мёбиуса – это <em>модельные\nповерхности</em>.</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-130"
+    },
+    {
+        "keyword": "ориентацию согласованы",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-131\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F}\\)</span> – связная\nзамкнутая двумерная многогранная поверхность. <span\nclass=\"math inline\">\\(F_1, \\ldots, F_m\\)</span> – ее грани. У каждой\nграни можно задать <em>ориентацию</em> (направление обхода границы или\nзадать ориентацию плоскости, содержащей грань).<br> Пусть <span\nclass=\"math inline\">\\(e\\)</span> – ребро <span\nclass=\"math inline\">\\(\\mathcal{F}\\)</span>. Оно инцидентно двум граням\n<span class=\"math inline\">\\(F_i\\)</span> и <span\nclass=\"math inline\">\\(F_j\\)</span>, в которых задана ориентация, то есть\nна ребре <span class=\"math inline\">\\(e\\)</span> указаны два направления.\nЕсли эти направления совпадают, то ориентации граней <span\nclass=\"math inline\">\\(F_i\\)</span> и <span\nclass=\"math inline\">\\(F_j\\)</span> – <em>согласованы</em>.</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-131"
+    },
+    {
+        "keyword": "ориентирована ориентация поверхности ориентируемая",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-132\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМногогранная поверхность <em>ориентирована</em>, если у каждой ее грани\nзадана ориентация и для каждой пары смежных граней ориентации\nсогласованы.<br> Семейство согласованных ориентаций граней –\n<em>ориентация поверхности</em>.<br>Если существует ориентация\nповерхности, то поверхность – <em>ориентируемая</em>.</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-132"
+    },
+    {
+        "keyword": "цепочка сохраняет ориентацию цепочка обращает ориентацию",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-133\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\mathcal{F}\\)</span> – связная\nзамкнутая двумерная многогранная поверхность. Рассмотрим замкнутую\nцепочку граней <span class=\"math inline\">\\(F_1, \\ldots, F_m\\)</span>\n(замкнутая - <span class=\"math inline\">\\(F_1\\)</span> смежна с <span\nclass=\"math inline\">\\(F_m\\)</span>). Зададим на каждой грани цепочки\nориентацию. Если ориентации <span class=\"math inline\">\\(F_1\\)</span> и\n<span class=\"math inline\">\\(F_m\\)</span> согласованы, то <em>цепочка\nсохраняет ориентацию</em>, в ином случае <em>цепочка обращает\nориентацию</em>.</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-133"
+    },
+    {
+        "keyword": "эйлерова характеристика",
+        "html": "<p><a\nhref=\"топологическая-классификация-многогранных-поверхностей.html#definition-134\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Эйлерова характеристика</em> многогранной поверхности – это число\n<span class=\"math inline\">\\(v - e + f\\)</span>, где <span\nclass=\"math inline\">\\(v\\)</span> – число вершин, <span\nclass=\"math inline\">\\(e\\)</span> – число ребер и <span\nclass=\"math inline\">\\(f\\)</span> – число граней поверхности.</p>",
+        "url": "топологическая-классификация-многогранных-поверхностей.html#definition-134"
+    }
+]

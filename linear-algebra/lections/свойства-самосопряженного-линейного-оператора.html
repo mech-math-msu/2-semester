@@ -11,6 +11,7 @@
     
     <title>Свойства самосопряженного линейного оператора</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -258,7 +268,8 @@
 id="свойства-самосопряженного-линейного-оператора">Свойства
 самосопряженного линейного оператора</h1>
 <div id="statement-70">
-<p><strong>Утверждение: </strong>(свойства) Пусть <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>(свойства) Пусть <span
 class="math inline">\(\mathcal{A}\)</span> самосопряженный линейный
 оператор.</p>
 <ol type="1">
@@ -271,7 +282,7 @@ class="math inline">\(\lambda\)</span>.</li>
 <li>Собственные вектора, отвечающие различным собственным значениям,
 ортогональны.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li>По теореме <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
@@ -284,18 +295,19 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
 </ol>
 </div>
 <div id="definition-72">
-<p><strong>Определение: </strong>Матрица <span class="math inline">\(A
-\in M_n(\mathbb{R})\)</span> – <em>симметрическая</em>, если <span
-class="math inline">\(A = A^T\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Матрица
+<span class="math inline">\(A \in M_n(\mathbb{R})\)</span> –
+<em>симметрическая</em>, если <span class="math inline">\(A =
+A^T\)</span>.</p>
 </div>
 <div id="corollary-9">
-<p><strong>Следствие: </strong>Пусть <span
-class="math inline">\(A\)</span> – симметрическая вещественная матрица.
-Тогда <span class="math inline">\(\exists D, C \in M_n(\mathbb{R}):
-\,\,\,\, D\)</span> – диагональна, <span
+<p><span class="margin-lft"><strong>Следствие: </strong></span>Пусть
+<span class="math inline">\(A\)</span> – симметрическая вещественная
+матрица. Тогда <span class="math inline">\(\exists D, C \in
+M_n(\mathbb{R}): \,\,\,\, D\)</span> – диагональна, <span
 class="math inline">\(C\)</span> – ортогональна и <span
 class="math inline">\(A = C^{-1}DC\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math inline">\(A\)</span> – симметрическая матрица, а
 значит ей соответствует самосопряженный линейный оператор. По теореме
 существует ортонормированный базис, в котором матрица <span
@@ -307,39 +319,41 @@ class="math inline">\(D\)</span> – диагональна <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-10">
-<p><strong>Следствие: </strong>Для любой симметрической билинейной
-функции существует ортонормированный базис, такой, что в этом базисе
-матрица билинейной функции диагональна и <span
+<p><span class="margin-lft"><strong>Следствие: </strong></span>Для любой
+симметрической билинейной функции существует ортонормированный базис,
+такой, что в этом базисе матрица билинейной функции диагональна и <span
 class="math inline">\(\beta(x, y) = \lambda_1 x_1 y_1 + \ldots +
 \lambda_n x_n y_n\)</span>, а <span class="math inline">\(\lambda_1,
 \ldots, \lambda_n\)</span> – корни характеристического многочлена.</p>
-<p><em>Доказательство:</em> Рассмотрим самосопряженный линейный оператор
-с матрицей билинейной функции <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Рассмотрим
+самосопряженный линейный оператор с матрицей билинейной функции <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-19">
-<p><strong>Теорема: </strong>Для любой квадратичной функции <span
-class="math inline">\(q: V\times V \to \mathbb{R}\)</span> существует
-ортонормированный базис <span class="math inline">\(e\)</span>, в
-котором <span class="math inline">\(q(x) = \lambda_1 x_1^2 + \ldots +
-\lambda_n x_n^2\)</span>, а <span class="math inline">\(\lambda_1,
-\ldots, \lambda_n\)</span> – корни характеристического многочлена в
-некотором данном базисе.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Для любой
+квадратичной функции <span class="math inline">\(q: V\times V \to
+\mathbb{R}\)</span> существует ортонормированный базис <span
+class="math inline">\(e\)</span>, в котором <span
+class="math inline">\(q(x) = \lambda_1 x_1^2 + \ldots + \lambda_n
+x_n^2\)</span>, а <span class="math inline">\(\lambda_1, \ldots,
+\lambda_n\)</span> – корни характеристического многочлена в некотором
+данном базисе.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-73">
-<p><strong>Определение: </strong>Нахождение ортонормированного базиса, в
-котором квадратичная функция равна сумме квадратов – <em>приведение к
-главным осям</em>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Нахождение ортонормированного базиса, в котором
+квадратичная функция равна сумме квадратов – <em>приведение к главным
+осям</em>.</p>
 <p><strong>Например:</strong> Нахождение канонического базиса для кривой
 второго порядка – это приведение к главным осям.</p>
 </div>
-<h2 data-number="17.1"
+<h4 data-number="17.0.0.1"
 id="одновременное-приведение-пары-квадратичных-форм-к-сумме-квадратов">Одновременное
-приведение пары квадратичных форм к сумме квадратов</h2>
+приведение пары квадратичных форм к сумме квадратов</h4>
 <div id="theorem-20">
-<strong>Теорема: </strong>
+<span class="margin-lft"><strong>Теорема: </strong></span>
 <details>
 <summary>
 </summary>
@@ -353,7 +367,7 @@ class="math inline">\(h\)</span> – положительно определен
 существует базис, в котором: <span class="math display">\[q(x) =
 \lambda_1 x_1^2 + \ldots + \lambda_n x_n^2\]</span> <span
 class="math display">\[h(x) = x_1^2 + \ldots + x_n^2\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math inline">\(h\)</span> – положительно определена.
 Пусть <span class="math inline">\(h\)</span> – скалярное произведение.
 Тогда по теореме существует ортонормированный базис, в котором <span
@@ -362,46 +376,47 @@ class="math inline">\(h(x)\)</span> в любом ортонормированн
 имеет нужный вид (так как скалярное произведение) <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
-<h2 data-number="17.2"
+<h2 data-number="17.1"
 id="ортогональный-линейный-оператор">Ортогональный линейный
 оператор</h2>
 <div id="definition-74">
-<p><strong>Определение: </strong><span class="math inline">\(V\)</span>
-– евклидово пространство. Линейный оператор <span
-class="math inline">\(\mathcal{A}\)</span> – <em>ортогональный</em>,
-если он сохраняет скалярное произведение, то есть <span
-class="math inline">\((\mathcal{A}(x), \mathcal{A}(y)) = (x,
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(V\)</span> – евклидово пространство. Линейный
+оператор <span class="math inline">\(\mathcal{A}\)</span> –
+<em>ортогональный</em>, если он сохраняет скалярное произведение, то
+есть <span class="math inline">\((\mathcal{A}(x), \mathcal{A}(y)) = (x,
 y)\)</span>.</p>
 </div>
-<h2 data-number="17.3"
+<h2 data-number="17.2"
 id="свойства-ортогонального-линейного-оператора">Свойства ортогонального
 линейного оператора</h2>
 <div id="statement-71">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math inline">\(\mathcal{A}\)</span> – ортогональный линейный
 оператор <span class="math inline">\(\Leftrightarrow\)</span> в
 ортонормированном базисе матрица <span class="math inline">\(A\)</span>
 линейного оператора <span class="math inline">\(\mathcal{A}\)</span>
 ортогональна, то есть <span class="math inline">\(A^TA = E\)</span>.</p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(A\)</span>
-матрица <span class="math inline">\(\mathcal{A}\)</span> в
-ортонормированном базисе. Тогда <span class="math inline">\(X^TY = (x,
-y) = (\mathcal{A}(x), \mathcal{A}(y)) = (AX)^TAY = X^TA^TAY \Rightarrow
-A^TA = E \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(A\)</span> матрица <span
+class="math inline">\(\mathcal{A}\)</span> в ортонормированном базисе.
+Тогда <span class="math inline">\(X^TY = (x, y) = (\mathcal{A}(x),
+\mathcal{A}(y)) = (AX)^TAY = X^TA^TAY \Rightarrow A^TA = E
+\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-72">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math inline">\(\mathcal{A}\)</span> – ортогональный линейный
 оператор <span class="math inline">\(\Leftrightarrow\)</span> <span
 class="math inline">\(\mathcal{A}\mathcal{A}^{*} =
 \mathcal{I}\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-73">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(\mathcal{A}\)</span> – ортогональный линейный
-оператор. <span class="math inline">\(A\)</span> – его матрица.
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\mathcal{A}\)</span> – ортогональный
+линейный оператор. <span class="math inline">\(A\)</span> – его матрица.
 Тогда</p>
 <ol type="1">
 <li><span class="math inline">\(\mathcal{A}\)</span> сохраняет длины
@@ -416,13 +431,13 @@ class="math inline">\(\mathcal{A}\)</span>, они равны <span
 class="math inline">\(\pm 1\)</span>.</li>
 <li><span class="math inline">\(\mathcal{A}\)</span> невырожден.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
-<h3 data-number="17.3.1"
+<h3 data-number="17.2.1"
 id="канонический-вид-ортогонального-линейного-оператора">Канонический
 вид ортогонального линейного оператора</h3>
 <div id="lemma-3">
-<p><strong>Лемма: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Лемма: </strong></span>Пусть <span
 class="math inline">\(\mathcal{A}\)</span> ортогональный линейный
 оператор на евклидовом пространстве <span
 class="math inline">\(V\)</span>, <span class="math inline">\(\dim V =
@@ -431,11 +446,11 @@ n\)</span>, <span class="math inline">\(U\)</span> – инвариантное
 class="math inline">\(\mathcal{A}\)</span>. Тогда <span
 class="math inline">\(U^{\perp}\)</span> – инвариантное подпространство
 <span class="math inline">\(\mathcal{A}\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-21">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(\mathcal{A}\)</span> ортогональный линейный
 оператор на евклидовом пространстве <span
 class="math inline">\(V\)</span>, <span class="math inline">\(\dim V =
@@ -448,7 +463,7 @@ class="math inline">\(\left(\begin{array}{cc}
 \end{array}\right)\)</span> и не более, чем одного блока <span
 class="math inline">\(1\)</span>, и не более, чем одного блока <span
 class="math inline">\(-1\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 

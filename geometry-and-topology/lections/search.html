@@ -9,7 +9,7 @@
     
     
     
-    <title>Алгебра тензоров</title>
+    <title>Поиск</title>
     <style>
         img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
@@ -250,13 +250,12 @@
         </div>
         <div class="sitenav_right">
             <span class="navlink">
-                                <a href="тензоры.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                                <a href="топологическая-классификация-многогранных-поверхностей.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                             </span>
             <span class="navlink">
                                 <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
                             </span>
             <span class="navlink">
-                                <a href="search.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
                             </span>
         </div>
     </div>
@@ -264,47 +263,64 @@
 
 
 
-<h1 data-number="28" id="алгебра-тензоров">Алгебра тензоров</h1>
-<div id="definition-151">
-<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
-<span class="math inline">\(U\)</span> и <span
-class="math inline">\(W\)</span> векторные пространства над полем <span
-class="math inline">\(F\)</span>. Рассмотрим <span
-class="math inline">\(V = U \times W = \{(u, w): \,\,\,\, u \in U, w \in
-W\}\)</span>. Определим операции сложения <span
-class="math inline">\((u, w) + (u’, w’) = (u + u’, w + w’)\)</span> и
-умножения на числа из <span class="math inline">\(F \,\,\,\, \lambda (u,
-w) = (\lambda u, \lambda w)\)</span></p>
-<p>. Относительно этих операций <span class="math inline">\(V\)</span> –
-векторное пространство. <span class="math inline">\(V\)</span> –
-<em>внешняя прямая сумма</em> <span class="math inline">\(U\)</span> и
-<span class="math inline">\(W\)</span>. Обозначается <span
-class="math inline">\(U \oplus W\)</span>.</p>
-<p>Рассмотрим <span class="math inline">\(\hat{U} = \{(u, 0): \,\,\,\, u
-\in U\}\)</span> и <span class="math inline">\(\hat{W} = \{(0, w):
-\,\,\,\, w \in W\}\)</span>.</p>
-<p><span class="math inline">\(\hat{U}\)</span> и <span
-class="math inline">\(\hat{W}\)</span> подпространства в <span
-class="math inline">\(V\)</span> и <span class="math inline">\(V =
-\hat{U} \oplus_{in} \hat{W} = U \oplus_{out} W\)</span></p>
-<p>Отождествив <span class="math inline">\((u, 0)\)</span> и <span
-class="math inline">\(u\)</span>, <span class="math inline">\((0,
-w)\)</span> и <span class="math inline">\(w\)</span>, можно писать <span
-class="math inline">\(u + w\)</span> вместо <span
-class="math inline">\((u, w)\)</span>.</p>
+<h1 class="unnumbered unlisted" id="search">Поиск</h1>
+<style>
+    h1#search {
+        display: none;
+    }
+    input#searchbar {
+        fontsize: 2rem;
+        width: 16rem;
+        height: 2.5rem;
+        border-radius: 25px;
+        padding-left: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+</style>
+<script type="module">
+    import data from "./defs.json" assert {type: 'json'};
+
+    let ans_div = document.getElementById('answer');
+
+    function search() {
+        let input = document.getElementById('searchbar').value
+        input = input.toLowerCase();
+
+        if (input.length < 3) {
+            return;
+        }
+
+        let ans = "";
+
+        data.forEach((item, i) => {
+            if (item.keyword.includes(input)) {
+                ans += item.html;
+            }
+        });
+
+        ans_div.innerHTML = ans;
+        MathJax.typeset();
+    }
+    window.search = search;
+</script>
+<center>
+<input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Поиск...">
+</center>
+<div id="answer">
+
 </div>
 
 
 <nav id="sitenav">
     <div class="sitenav_right">
         <span class="navlink">
-                        <a href="тензоры.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                        <a href="топологическая-классификация-многогранных-поверхностей.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>
         <span class="navlink">
                         <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
                     </span>
         <span class="navlink">
-                        <a href="search.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
                     </span>
     </div>
 </nav>

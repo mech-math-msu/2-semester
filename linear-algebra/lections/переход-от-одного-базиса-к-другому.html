@@ -11,6 +11,7 @@
     
     <title>Переход от одного базиса к другому</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -260,11 +270,11 @@
 <p>Матрица перехода от базиса <span class="math inline">\(e\)</span> к
 базису <span class="math inline">\(e’\)</span> обозначается <span
 class="math inline">\(C_{e \to e’}\)</span>.</p>
-<h2 data-number="3.1" id="свойства-матрицы-перехода">Свойства матрицы
-перехода</h2>
+<h3 data-number="3.0.1" id="свойства-матрицы-перехода">Свойства матрицы
+перехода</h3>
 <div id="statement-6">
-<p><strong>Утверждение: </strong>(<em>свойства матрицы
-перехода</em>)</p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>(<em>свойства матрицы перехода</em>)</p>
 <p>Пусть <span class="math inline">\(e, e’, e’’\)</span> – базисы в
 некотором конечномерном векторном пространстве.</p>
 <ol type="1">
@@ -276,19 +286,20 @@ e’}^{-1}\)</span>.</li>
 <li><span class="math inline">\(C_{e \to e’}\cdot C_{e’ \to e’’} = C_{e’
 \to e’’}\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
-<h2 data-number="3.2"
+<h2 data-number="3.1"
 id="сумма-и-пересечение-векторных-подпространств">Сумма и пересечение
 векторных подпространств</h2>
 <div id="statement-7">
-<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(U,
-\,\,\,\, W\)</span> подпространства векторного пространства <span
-class="math inline">\(V\)</span>. Тогда <span class="math inline">\(U
-\cap W\)</span> подпространство <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(U, \,\,\,\, W\)</span> подпространства
+векторного пространства <span class="math inline">\(V\)</span>. Тогда
+<span class="math inline">\(U \cap W\)</span> подпространство <span
 class="math inline">\(V\)</span>.</p>
-<p><em>Доказательство:</em> Проверим по определению.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Проверим по
+определению.</p>
 <ol type="1">
 <li><span class="math inline">\(0\)</span> принадлежит и <span
 class="math inline">\(U\)</span>, и <span class="math inline">\(W
@@ -299,30 +310,31 @@ class="math inline">\(U\)</span>, и <span class="math inline">\(W
 </ol>
 </div>
 <div id="definition-10">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(U,
-\,\,\,\, W\)</span> подпространства векторного пространства <span
-class="math inline">\(V\)</span>. <em>сумма</em> <span
-class="math inline">\(U + W\)</span> подпространств <span
-class="math inline">\(U\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(U, \,\,\,\, W\)</span> подпространства
+векторного пространства <span class="math inline">\(V\)</span>.
+<em>сумма</em> <span class="math inline">\(U + W\)</span> подпространств
+<span class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – это <span class="math inline">\(U + W
 = \{u + w: \,\,\,\, u \in U, \,\,\,\, w \in W\}\)</span>.</p>
 </div>
 <div id="statement-8">
-<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(U,
-\,\,\,\, W\)</span> подпространства векторного пространства <span
-class="math inline">\(V\)</span>. Тогда <span class="math inline">\(U +
-W\)</span> – подпространство в <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(U, \,\,\,\, W\)</span> подпространства
+векторного пространства <span class="math inline">\(V\)</span>. Тогда
+<span class="math inline">\(U + W\)</span> – подпространство в <span
 class="math inline">\(V\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-3">
-<p><strong>Теорема: </strong>(<em>формула Грассмана</em>) Пусть <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(<em>формула Грассмана</em>) Пусть <span
 class="math inline">\(U, \,\,\,\, W\)</span> подпространства векторного
 пространства <span class="math inline">\(V\)</span>. <span
 class="math display">\[\dim U + \dim W = \dim (U \cap W) + \dim (U +
 W)\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><img src="img/vectors.png" /></p>
 <p>Пусть <span class="math inline">\(e_1, \ldots, e_k\)</span> – базис в
 <span class="math inline">\(U \cap W\)</span>,<br> <span
@@ -347,25 +359,25 @@ class="math display">\[\underbrace{\mu_1 e_1+\ldots+\mu_k e_k}_{\vec{a}}
 class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
 </ol>
 </div>
-<h2 data-number="3.3" id="прямая-сумма-подпространств-1">Прямая сумма
+<h2 data-number="3.2" id="прямая-сумма-подпространств-1">Прямая сумма
 подпространств</h2>
 <div id="definition-11">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(U,
-\,\,\,\, W\)</span> подпространства векторного пространства <span
-class="math inline">\(V\)</span>. Сумма <span class="math inline">\(U +
-W\)</span> <em>прямая</em>, если <span class="math inline">\(\forall x
-\in U + W \,\,\,\, \exists! \,\,u \in U, w \in W: \,\,\,\, u + w =
-x\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(U, \,\,\,\, W\)</span> подпространства
+векторного пространства <span class="math inline">\(V\)</span>. Сумма
+<span class="math inline">\(U + W\)</span> <em>прямая</em>, если <span
+class="math inline">\(\forall x \in U + W \,\,\,\, \exists! \,\,u \in U,
+w \in W: \,\,\,\, u + w = x\)</span>.</p>
 <p>Обозначается прямая сумма так: <span class="math inline">\(U \oplus
 W\)</span>.</p>
 </div>
 <div id="statement-9">
-<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(U,
-\,\,\,\, W\)</span> подпространства векторного пространства <span
-class="math inline">\(V\)</span>. Тогда <span class="math inline">\(U +
-W\)</span> – прямая <span class="math inline">\(\Leftrightarrow U \cap W
-= \{0\}\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(U, \,\,\,\, W\)</span> подпространства
+векторного пространства <span class="math inline">\(V\)</span>. Тогда
+<span class="math inline">\(U + W\)</span> – прямая <span
+class="math inline">\(\Leftrightarrow U \cap W = \{0\}\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span></p>
 <p>Пусть <span class="math inline">\(U \cap W \ne \{0\}\)</span>, тогда
 <span class="math inline">\(\exists x \in U \cap W\)</span>. <span
@@ -381,12 +393,12 @@ class="math inline">\(u’ - u \in U = w - w’ \in W\)</span>, то есть
 <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-10">
-<p><strong>Утверждение: </strong>Сумма подпространств <span
-class="math inline">\(U = U_1 + U_2 + \ldots + U_n\)</span> – прямая
-<span class="math inline">\(\Leftrightarrow \,\,\,\, \forall i \in \{1,
-\ldots, n\} \,\,\,\, U_i \cap (U_{i + 1} + \ldots + U_n) =
-\{0\}\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Сумма
+подпространств <span class="math inline">\(U = U_1 + U_2 + \ldots +
+U_n\)</span> – прямая <span class="math inline">\(\Leftrightarrow
+\,\,\,\, \forall i \in \{1, \ldots, n\} \,\,\,\, U_i \cap (U_{i + 1} +
+\ldots + U_n) = \{0\}\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math display">\[\Rightarrow\]</span> см. доказательство
 выше. <span class="math display">\[\Leftarrow\]</span> Пусть сумма не
 является прямой, тогда <span class="math inline">\(\exists u \in U:

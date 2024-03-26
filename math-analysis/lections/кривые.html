@@ -11,7 +11,10 @@
     
     <title>Кривые</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,17 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="интеграл-с-переменным-верхним-пределом.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="фигуры-и-площади.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="интеграл-с-переменным-верхним-пределом.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="фигуры-и-площади.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,17 +266,19 @@
 
 <h1 data-number="4" id="кривые">Кривые</h1>
 <div id="statement-11">
-<p><strong>Утверждение:</strong> Отображение <span
-class="math inline">\(\gamma: [a, b] \to \mathbb{R}^n, \,\,\,\,
-\gamma(t): t \in [a, b] \mapsto (x_1(t), \ldots, x_n(t))\)</span> –
-непрерывно на <span class="math inline">\([a, b]\)</span>, тогда и
-только тогда, когда <span class="math inline">\(x_i(t)\)</span> –
-непрерывно на <span class="math inline">\([a, b] \,\,\,\, \forall i \in
-\{1, \ldots, n\}\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Отображение <span class="math inline">\(\gamma: [a, b]
+\to \mathbb{R}^n, \,\,\,\, \gamma(t): t \in [a, b] \mapsto (x_1(t),
+\ldots, x_n(t))\)</span> – непрерывно на <span class="math inline">\([a,
+b]\)</span>, тогда и только тогда, когда <span
+class="math inline">\(x_i(t)\)</span> – непрерывно на <span
+class="math inline">\([a, b] \,\,\,\, \forall i \in \{1, \ldots,
+n\}\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="definition-13">
-<p><strong>Определение:</strong> Непрерывное отображение <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Непрерывное отображение <span
 class="math inline">\(\gamma: [a, b] \to \mathbb{R}^n\)</span> – это
 <em>(непрерывная) кривая</em>.</p>
 <p><span class="math inline">\(t \in [a, b] \,\,\,\, \gamma(t) =
@@ -280,9 +301,9 @@ class="math inline">\(\gamma\)</span> – <em>простая</em>.</p>
 class="math inline">\(\gamma\)</span> – <em>простая замкнутая</em>.</p>
 </div>
 <div id="definition-14">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\mathcal{T} = \{t_i\}_{i = 0}^k\)</span> разбиение
-<span class="math inline">\([a, b]\)</span>, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\mathcal{T} = \{t_i\}_{i = 0}^k\)</span>
+разбиение <span class="math inline">\([a, b]\)</span>, <span
 class="math inline">\(\gamma\)</span> – кривая.</p>
 <p><span class="math inline">\(|l_{\gamma}(\mathcal{T})| = \displaystyle
 \sum_{i = 1}^{k}|\gamma(t_i) - \gamma(t_{i - 1})|\)</span> – <em>длина
@@ -290,21 +311,22 @@ class="math inline">\(\gamma\)</span> – кривая.</p>
 class="math inline">\(\mathcal{T}\)</span>.</p>
 </div>
 <div id="lemma-1">
-<p><strong>Лемма:</strong> Если <span
+<p><span class="margin-lft"><strong>Лемма: </strong></span>Если <span
 class="math inline">\(\mathcal{T}_1 \subset \mathcal{T}_2\)</span>, то
 <span class="math display">\[|l_{\gamma}(\mathcal{T}_1)| \le
 |l_{\gamma}(\mathcal{T}_2)|\]</span></p>
-<p><em>Доказательство:</em> <span class="math inline">\(\mathcal{T}_2
-\setminus \mathcal{T}_1 = \{t^{*}\}, \,\,\,\, t_{j - 1} &lt; t^{*} &lt;
-t_j\)</span>. <br><span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\mathcal{T}_2 \setminus \mathcal{T}_1 = \{t^{*}\},
+\,\,\,\, t_{j - 1} &lt; t^{*} &lt; t_j\)</span>. <br><span
 class="math inline">\(|l_{\gamma}(\mathcal{T}_2)| -
 |l_{\gamma}(\mathcal{T}_1)| \ge 0\)</span> – неравенство треугольника в
 плоскости <span class="math inline">\(\{\gamma(t_{j - 1}),
 \gamma(t^{*}), \gamma(t_{j})\} \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-15">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\gamma\)</span> – кривая. Если множество <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\gamma\)</span> – кривая. Если множество
+<span
 class="math inline">\(\{|l_{\gamma}(\mathcal{T})|\}_{\mathcal{T}}\)</span>
 ограничено сверху, то <span class="math inline">\(\gamma\)</span>
 <em>спрямляемая</em> и <span class="math inline">\(\sup
@@ -312,13 +334,13 @@ class="math inline">\(\{|l_{\gamma}(\mathcal{T})|\}_{\mathcal{T}}\)</span>
 <em>длина кривой</em> <span class="math inline">\(\gamma\)</span>.</p>
 </div>
 <div id="theorem-15">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\gamma(t)
-\in C^1[a, b]\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(\gamma(t) \in C^1[a, b]\)</span>. Тогда <span
 class="math inline">\(\gamma\)</span> – спрямляемая и <span
 class="math display">\[|\gamma| = \displaystyle\int\limits_a^b
 \sqrt{\displaystyle \sum_{i = 1}^{n} x_i’^2(t)} dt\]</span></p>
-<p><em>Доказательство:</em> Докажем, что <span
-class="math inline">\(\gamma\)</span> спрямляемая, то есть <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Докажем, что
+<span class="math inline">\(\gamma\)</span> спрямляемая, то есть <span
 class="math inline">\(\{|l_{\gamma}(\mathcal{T})|\}_{\mathcal{T}}\)</span>
 ограничено сверху. <span class="math display">\[|l_{\gamma}(t)| =
 \displaystyle \sum_{j = 1}^{m} \sqrt{\displaystyle \sum_{i =
@@ -331,11 +353,12 @@ class="math display">\[\le M \sqrt{n} (b - a)\]</span> Следовательн�
 <span class="math inline">\(\gamma\)</span> спрямляемая.</p>
 </div>
 <div id="lemma-2">
-<p><strong>Лемма:</strong> <span
+<p><span class="margin-lft"><strong>Лемма: </strong></span><span
 class="math display">\[\sqrt{\displaystyle \sum_{i = 1}^{n}x_i^2} -
 \sqrt{\displaystyle \sum_{i = 1}^{n}y_i^2} \le \displaystyle \sum_{i =
 1}^{n}|x_i - y_i|\]</span></p>
-<p><em>Доказательство:</em> домножить на сопряженное и поколдовать <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> домножить на
+сопряженное и поколдовать <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <p><span class="math inline">\(f(t) = \sqrt{\displaystyle \sum_{i =
@@ -374,7 +397,7 @@ class="math display">\[\forall \frac{\varepsilon}{n(b - a)} \,\,\,\,
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="интеграл-с-переменным-верхним-пределом.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

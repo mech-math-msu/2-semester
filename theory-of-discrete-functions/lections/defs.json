@@ -1,0 +1,482 @@
+[
+    {
+        "keyword": "конечный упорядоченный набор",
+        "html": "<p><a href=\"булевы-функции.html#definition-0\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Конечный упорядоченный набор</em> – это <span\nclass=\"math inline\">\\((a_1, \\ldots, a_n), \\,\\,\\,\\, a_i \\in A_i \\,\\,\\,\\,\n\\forall i \\in \\{1, \\ldots, n\\}, \\,\\,\\,\\, A_1, \\ldots, A_n\\)</span> –\nнекоторые множества.</p>",
+        "url": "булевы-функции.html#definition-0"
+    },
+    {
+        "keyword": "прямое произведение",
+        "html": "<p><a href=\"булевы-функции.html#definition-1\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Прямое произведение</em> множеств <span\nclass=\"math inline\">\\(A_1\\times A_2\\times\\ldots\\times A_n = \\{(a_1,\n\\ldots, a_n): \\,\\,\\,\\, a_i \\in A_i\\}\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-1"
+    },
+    {
+        "keyword": "значение -ой переменной",
+        "html": "<p><a href=\"булевы-функции.html#definition-2\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Значение</em> <span class=\"math inline\">\\(i\\)</span><em>-ой\nпеременной</em> – это <span class=\"math inline\">\\(i\\)</span>-й элемент\nупорядоченного набора.</p>",
+        "url": "булевы-функции.html#definition-2"
+    },
+    {
+        "keyword": "- мерный булев куб",
+        "html": "<p><a href=\"булевы-функции.html#definition-3\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(n\\)</span><em>- мерный булев куб</em> <span\nclass=\"math inline\">\\(B_n = \\{0, 1\\} \\times \\ldots \\times \\{0, 1\\} =\n\\{0, 1\\}^n = \\{(x_1, \\ldots, x_n): \\,\\,\\,\\, x_i \\in \\{0,\n1\\}\\}\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-3"
+    },
+    {
+        "keyword": "булева функция",
+        "html": "<p><a href=\"булевы-функции.html#definition-4\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Булева функция</em> от <span class=\"math inline\">\\(n\\)</span>\nпеременных – это <span class=\"math inline\">\\(f: \\,\\,\\,\\, B_n \\to \\{0,\n1\\}\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-4"
+    },
+    {
+        "keyword": "существенная переменная",
+        "html": "<p><a href=\"булевы-функции.html#definition-5\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПеременная <span class=\"math inline\">\\(x_i\\)</span> – <em>существенная\nпеременная</em> булевой функции <span class=\"math inline\">\\(f\\)</span>,\nесли <span class=\"math display\">\\[f(x_1, \\ldots, x_{i - 1}, 0, x_{i +\n1}, \\ldots, x_n) \\ne f(x_1, \\ldots, x_{i - 1}, 1, x_{i + 1}, \\ldots,\nx_n),\\]</span></p>",
+        "url": "булевы-функции.html#definition-5"
+    },
+    {
+        "keyword": "равные функции",
+        "html": "<p><a href=\"булевы-функции.html#definition-6\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>равные функции</em>) <span class=\"math inline\">\\(f \\sim g\\)</span>,\nесли <span class=\"math inline\">\\(\\exists\\)</span> цепочка добавлений и\nудалений фиктивных переменных, переводящая <span\nclass=\"math inline\">\\(f\\)</span> в <span\nclass=\"math inline\">\\(g\\)</span> (может быть <span\nclass=\"math inline\">\\(0\\)</span> добавлений и удалений).</p>",
+        "url": "булевы-функции.html#definition-6"
+    },
+    {
+        "keyword": "алфавит",
+        "html": "<p><a href=\"булевы-функции.html#definition-7\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Алфавит</em> – это некоторое множество.</p>",
+        "url": "булевы-функции.html#definition-7"
+    },
+    {
+        "keyword": "слово длины первая буква",
+        "html": "<p><a href=\"булевы-функции.html#definition-8\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Слово</em> <em>длины</em> <span class=\"math inline\">\\(n \\in\n\\mathbb{N}\\)</span> в некотором алфавите <span\nclass=\"math inline\">\\(A\\)</span> – это <span\nclass=\"math inline\">\\(\\alpha: \\,\\,\\,\\, \\{0, \\ldots, n\\} \\to A\\)</span>.\nПри этом <span class=\"math inline\">\\(\\alpha(1)\\)</span> – <em>первая\nбуква</em> …</p>",
+        "url": "булевы-функции.html#definition-8"
+    },
+    {
+        "keyword": "алфавит для функций",
+        "html": "<p><a href=\"булевы-функции.html#definition-9\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Алфавит для функций</em> – это <span class=\"math inline\">\\((X, S,\n\\{(, , , )\\})\\)</span>, где</p>",
+        "url": "булевы-функции.html#definition-9"
+    },
+    {
+        "keyword": "сигнатура",
+        "html": "<p><a href=\"булевы-функции.html#definition-10\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Сигнатура</em> алфавита для функций – это отображение <span\nclass=\"math inline\">\\(\\Sigma: \\,\\,\\,\\, S \\to P_2\\)</span>(множество всех\nбулевых функций).</p>",
+        "url": "булевы-функции.html#definition-10"
+    },
+    {
+        "keyword": "формула формула",
+        "html": "<p><a href=\"булевы-функции.html#definition-11\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(Синтаксис – что является формулой)</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(x_i \\in X, \\,\\,\\,\\, i \\in\n\\mathbb{N}\\)</span> – <em>формула</em>.</li>\n<li>Пусть <span class=\"math inline\">\\(s \\in S, \\,\\,\\,\\, \\Sigma(s) \\in\nP_2^n\\)</span>(множество булевых функций от <span\nclass=\"math inline\">\\(n\\)</span> переменных). Пусть <span\nclass=\"math inline\">\\(\\Phi_1, \\ldots, \\Phi_n\\)</span> – формулы. Тогда\n<span class=\"math inline\">\\(s(\\Phi_1, \\ldots, \\Phi_n)\\)</span> –\n<em>формула</em>.</li>\n</ol>",
+        "url": "булевы-функции.html#definition-11"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"булевы-функции.html#definition-12\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(Семантика – какое значение у формулы)</p>\n<p>Пусть <span class=\"math inline\">\\(\\Phi\\)</span> формула в сигнатуре\n<span class=\"math inline\">\\(\\Sigma\\)</span>. Пусть <span\nclass=\"math inline\">\\(P = \\{x_{i1}, \\ldots, x_{it}\\}\\)</span> множество\nвсех переменных формулы <span class=\"math inline\">\\(\\Phi\\)</span>. <span\nclass=\"math inline\">\\(\\overline{x} = (x_{i1}, \\ldots, x_{it})\\)</span>.\n<span class=\"math inline\">\\(\\alpha = (a_1, \\ldots, a_t) \\in \\{0,\n1\\}^t\\)</span>.</p>\n<p>Тогда значение формулы <span class=\"math inline\">\\(\\Phi\\)</span> на\nнаборе <span class=\"math inline\">\\(\\alpha\\)</span> – это</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(\\Phi[\\overline{x}, \\alpha] =\na_{j}\\)</span>, если <span class=\"math inline\">\\(\\Phi =\nx_{ij}\\)</span>.</li>\n<li>Пусть <span class=\"math inline\">\\(\\Phi = s(\\Phi_1, \\ldots,\n\\Phi_n)\\)</span>. <span class=\"math inline\">\\(\\Phi[\\overline{x}, \\alpha]\n= f(b_1, \\ldots, b_n)\\)</span>, где <span class=\"math inline\">\\(b_i =\n\\Phi_i[\\overline{x}, \\alpha]\\)</span>.</li>\n</ol>",
+        "url": "булевы-функции.html#definition-12"
+    },
+    {
+        "keyword": "задает",
+        "html": "<p><a href=\"булевы-функции.html#definition-13\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nФормула <span class=\"math inline\">\\(\\Phi\\)</span> <em>задает</em>\nфункцию <span class=\"math inline\">\\(f\\)</span> относительно <span\nclass=\"math inline\">\\(P\\)</span>, если <span\nclass=\"math inline\">\\(\\forall \\alpha \\in \\{0, 1\\}^t \\,\\,\\,\\, f(\\alpha) =\n\\Phi[\\overline{x}, \\alpha]\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-13"
+    },
+    {
+        "keyword": "эквивалентны",
+        "html": "<p><a href=\"булевы-функции.html#definition-14\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nФормулы <span class=\"math inline\">\\(\\Phi_1\\)</span> и <span\nclass=\"math inline\">\\(\\Phi_2\\)</span>, заданные в сигнатуре <span\nclass=\"math inline\">\\(\\Sigma\\)</span> <em>эквивалентны</em>, если они\nзадают равные функции относительно объединения своих переменных.</p>",
+        "url": "булевы-функции.html#definition-14"
+    },
+    {
+        "keyword": "двойственная",
+        "html": "<p><a href=\"булевы-функции.html#definition-15\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nБулева функция <span class=\"math inline\">\\(f^{*} =\n\\overline{f(\\overline{x}_1, \\ldots, \\overline{x}_n)}\\)</span> –\n<em>двойственная</em> к функции <span\nclass=\"math inline\">\\(f\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-15"
+    },
+    {
+        "keyword": "самодвойственная",
+        "html": "<p><a href=\"булевы-функции.html#definition-16\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nФункция <span class=\"math inline\">\\(f\\)</span>\n<em>самодвойственная</em>, если <span class=\"math inline\">\\(f^{*} =\nf\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-16"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"булевы-функции.html#definition-17\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math display\">\\[x^{\\sigma} = \\begin{cases}\n    x,\\,\\,\\,\\, \\sigma = 1\\\\\n    \\overline{x},\\,\\,\\,\\, \\sigma = 0\n\\end{cases} \\,\\,\\,\\,\\,\\,\\,\\, \\sigma \\in \\{0, 1\\}\\]</span></p>",
+        "url": "булевы-функции.html#definition-17"
+    },
+    {
+        "keyword": "совершенная дизъюнктивная нормальная форма",
+        "html": "<p><a href=\"булевы-функции.html#definition-18\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Совершенная дизъюнктивная нормальная форма</em> – это правая часть\nравентва из теоремы при <span class=\"math inline\">\\(m = n\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-18"
+    },
+    {
+        "keyword": "совершенная конъюнктивная нормальная форма",
+        "html": "<p><a href=\"булевы-функции.html#definition-19\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Совершенная конъюнктивная нормальная форма</em> получается из СДНФ\nдля двойственной функции по принципу двойственности (принцип\nдвойственности – это, конечно, дичь).</p>",
+        "url": "булевы-функции.html#definition-19"
+    },
+    {
+        "keyword": "полна",
+        "html": "<p><a href=\"булевы-функции.html#definition-20\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nСистема <span class=\"math inline\">\\(\\{f_1, \\ldots, f_n\\}\\)</span>\nбулевых функций <em>полна</em>, если с помощью суперпозиций из нее можно\nполучить любую функцию алгебры логики.</p>",
+        "url": "булевы-функции.html#definition-20"
+    },
+    {
+        "keyword": "операции суперпозиции суперпозициями",
+        "html": "<p><a href=\"булевы-функции.html#definition-21\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Операции суперпозиции</em> – это подстановка переменных, подстановка\nфункции, добавление либо удаление несущественных переменных. Функция,\nполученная из исходной с помощью операций суперпозиции, получена\n<em>суперпозициями</em>.</p>",
+        "url": "булевы-функции.html#definition-21"
+    },
+    {
+        "keyword": "замыкание",
+        "html": "<p><a href=\"булевы-функции.html#definition-22\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(M = \\{f_1, \\ldots, f_n\\}, \\,\\,\\,\\,\nf_i\\)</span> – булева функция. <em>Замыкание</em> <span\nclass=\"math inline\">\\(M\\)</span> – это множество всех булевых функций,\nкоторые можно получить из <span class=\"math inline\">\\(M\\)</span>\nсуперпозициями.</p>",
+        "url": "булевы-функции.html#definition-22"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"булевы-функции.html#definition-23\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nСистема полна, если ее замыкание совпадает с <span\nclass=\"math inline\">\\(P_2\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-23"
+    },
+    {
+        "keyword": "замкнута",
+        "html": "<p><a href=\"булевы-функции.html#definition-24\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nСистема <span class=\"math inline\">\\(M\\)</span> булевых функций\n<em>замкнута</em>, если <span class=\"math inline\">\\([M] =\nM\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-24"
+    },
+    {
+        "keyword": "функции, сохраняющие",
+        "html": "<p><a href=\"булевы-функции.html#definition-25\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>функции, сохраняющие</em> <span class=\"math inline\">\\(0\\)</span>)\n<span class=\"math inline\">\\(T_0 = \\{f \\in P_2: \\,\\,\\,\\, f(0, \\ldots, 0)\n= 0\\}\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-25"
+    },
+    {
+        "keyword": "функции, сохраняющие",
+        "html": "<p><a href=\"булевы-функции.html#definition-26\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>функции, сохраняющие</em> <span class=\"math inline\">\\(1\\)</span>)\n<span class=\"math inline\">\\(T_1 = \\{f \\in P_2: \\,\\,\\,\\, f(1, \\ldots, 1)\n= 1\\}\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-26"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"булевы-функции.html#definition-27\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМножество всех самодвойственных функций обозначается <span\nclass=\"math inline\">\\(S\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-27"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"булевы-функции.html#definition-28\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть даны два двоичных набора <span\nclass=\"math inline\">\\(\\tilde{\\alpha} = (\\alpha_1, \\ldots,\n\\alpha_n)\\)</span> и <span class=\"math inline\">\\(\\tilde{\\beta} =\n(\\beta_1, \\ldots, \\beta_n)\\)</span>. <span\nclass=\"math inline\">\\(\\tilde{\\alpha} \\le \\tilde{\\beta}\\)</span>, если\n<span class=\"math inline\">\\(\\forall i \\in \\{1, \\ldots, n\\}\\,\\,\\,\\,\n\\alpha_i \\le \\beta_i\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-28"
+    },
+    {
+        "keyword": "монотонна",
+        "html": "<p><a href=\"булевы-функции.html#definition-29\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nБулева функция <span class=\"math inline\">\\(f\\)</span>\n<em>монотонна</em>, если для любых наборов <span\nclass=\"math inline\">\\(\\tilde{\\alpha}\\)</span> и <span\nclass=\"math inline\">\\(\\tilde{\\beta}\\)</span>, таких, что <span\nclass=\"math inline\">\\(\\tilde{\\alpha} \\le \\tilde{\\beta} \\,\\,\\,\\,\nf(\\tilde{\\alpha}) \\le f(\\tilde{\\beta})\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-29"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"булевы-функции.html#definition-30\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМножество всех монотонных булевых функций обозначается <span\nclass=\"math inline\">\\(M\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-30"
+    },
+    {
+        "keyword": "линейна",
+        "html": "<p><a href=\"булевы-функции.html#definition-31\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nБулева функция <span class=\"math inline\">\\(f\\)</span> <em>линейна</em>,\nесли она представима в виде <span class=\"math inline\">\\(c_0 + c_1 x_1 +\nc_2 x_2 + \\ldots + c_n x_n, \\,\\,\\,\\, c_i \\in \\{0, 1\\}\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-31"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"булевы-функции.html#definition-32\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМножество всех линейных функций обозначается <span\nclass=\"math inline\">\\(L\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-32"
+    },
+    {
+        "keyword": "предполный",
+        "html": "<p><a href=\"булевы-функции.html#definition-33\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nКласс булевых функций <span class=\"math inline\">\\(F\\)</span>\n<em>предполный</em>, если <span class=\"math inline\">\\([F] \\ne\nP_2\\)</span> и <span class=\"math inline\">\\(\\forall f \\in P_2 \\setminus F\n\\,\\,\\,\\, [F \\cup \\{f\\}] = P_2\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-33"
+    },
+    {
+        "keyword": "полна в",
+        "html": "<p><a href=\"булевы-функции.html#definition-34\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть класс <span class=\"math inline\">\\(F\\)</span> замкнут. Система\n<span class=\"math inline\">\\(K\\)</span> функций из <span\nclass=\"math inline\">\\(F\\)</span> <em>полна в</em> <span\nclass=\"math inline\">\\(F\\)</span>, если <span class=\"math inline\">\\([K] =\nF\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-34"
+    },
+    {
+        "keyword": "базис",
+        "html": "<p><a href=\"булевы-функции.html#definition-35\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть класс <span class=\"math inline\">\\(F\\)</span> замкнут. Система\n<span class=\"math inline\">\\(K \\subset F\\)</span> – <em>базис</em> в\n<span class=\"math inline\">\\(F\\)</span>, если <span\nclass=\"math inline\">\\(K\\)</span> полна в <span\nclass=\"math inline\">\\(F\\)</span> и <span class=\"math inline\">\\(\\forall f\n\\in K \\,\\,\\,\\, K \\setminus f\\)</span> неполна в <span\nclass=\"math inline\">\\(F\\)</span>.</p>",
+        "url": "булевы-функции.html#definition-35"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-36\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(E_k = \\{0, 1, \\ldots, k - 1\\}\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-36"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-37\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(E_k^n = E_k \\times \\ldots \\times\nE_k\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-37"
+    },
+    {
+        "keyword": "функция значной логики",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-38\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(f: E_k \\times \\ldots \\times E_k \\to\nE_k\\)</span> – <em>функция</em> <span class=\"math inline\">\\(k\\)</span> –\n<em>значной логики</em>.</p>",
+        "url": "функции-k-значной-логики.html#definition-38"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-39\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМножество всех функций <span class=\"math inline\">\\(k\\)</span> – значной\nлогики обозначается <span class=\"math inline\">\\(P_k\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-39"
+    },
+    {
+        "keyword": "большая индикаторная функция",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-40\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n(<em>большая индикаторная функция</em>) <span\nclass=\"math inline\">\\(J_{i}(x) = \\begin{cases}k - 1, x = i\\\\0, x \\ne\ni\\end{cases}\\)</span></p>",
+        "url": "функции-k-значной-логики.html#definition-40"
+    },
+    {
+        "keyword": "полна",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-41\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nСистема функций <span class=\"math inline\">\\(k\\)</span> – значной логики\n<em>полна</em>, если с помощью суперпозиций из нее можно получить любую\nфункцию <span class=\"math inline\">\\(P_k\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-41"
+    },
+    {
+        "keyword": "функция вебба",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-42\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(V(x, y) = \\max(x, y) + 1\\)</span> –\n<em>функция Вебба</em>.</p>",
+        "url": "функции-k-значной-логики.html#definition-42"
+    },
+    {
+        "keyword": "замыкание",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-43\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(F\\)</span> система функций <span\nclass=\"math inline\">\\(k\\)</span>-значной логики. <em>замыкание</em>\n<span class=\"math inline\">\\(F\\)</span> – это множество всех функций из\n<span class=\"math inline\">\\(P_k\\)</span>, которые можно получить\nсуперпозициями из функций <span class=\"math inline\">\\(F\\)</span>.\nОбозначается: <span class=\"math inline\">\\([F]\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-43"
+    },
+    {
+        "keyword": "замкнута",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-44\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nСистема <span class=\"math inline\">\\(F\\)</span> функций <span\nclass=\"math inline\">\\(k\\)</span>-значной логики <em>замкнута</em>, если\n<span class=\"math inline\">\\([F] = F\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-44"
+    },
+    {
+        "keyword": "сохраняет множество",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-45\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nФункция <span class=\"math inline\">\\(k\\)</span>-значной логики <span\nclass=\"math inline\">\\(f\\)</span> <em>сохраняет множество</em> <span\nclass=\"math inline\">\\(U \\subset E_k\\)</span>, если <span\nclass=\"math inline\">\\(\\forall \\alpha_1, \\ldots, \\alpha_n \\in U \\,\\,\\,\\,\nf(\\alpha_1, \\ldots, \\alpha_n) \\in U\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-45"
+    },
+    {
+        "keyword": "глубина формулы",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-46\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть задан алфавит <span class=\"math inline\">\\((X, S)\\)</span> с\nсигнатурой <span class=\"math inline\">\\(\\Sigma\\)</span>. <em>Глубина\nформулы</em> <span class=\"math inline\">\\(\\Phi \\,\\,\\,\\,\n\\operatorname{depth}(\\Phi)\\)</span> равна</p>\n<ol type=\"1\">\n<li><span class=\"math inline\">\\(0\\)</span>, если <span\nclass=\"math inline\">\\(\\Phi \\in X\\)</span>.</li>\n<li>Пусть <span class=\"math inline\">\\(\\Phi_1, \\ldots, \\Phi_n\\)</span>\nформулы, у которых известна глубина. Тогда глубина формулы <span\nclass=\"math inline\">\\(s(\\Phi_1, \\ldots, \\Phi_n), s \\in S\\)</span> равна\n<span class=\"math inline\">\\(\\max\\{\\operatorname{depth}(\\Phi_1), \\ldots,\n\\operatorname{depth}(\\Phi_n)\\} + 1\\)</span>.</li>\n</ol>",
+        "url": "функции-k-значной-логики.html#definition-46"
+    },
+    {
+        "keyword": "последовательность кузнецова",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-47\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть дано множество функций <span\nclass=\"math inline\">\\(k\\)</span>-значной логики <span\nclass=\"math inline\">\\(F\\)</span>. <em>Последовательность Кузнецова</em>\nсистемы <span class=\"math inline\">\\(F\\)</span> – это последовательность\nклассов <span class=\"math inline\">\\(G_0, G_1, \\ldots\\)</span>, где <span\nclass=\"math inline\">\\(G_i\\)</span> состоит из всех функций <span\nclass=\"math inline\">\\(k\\)</span>-значной логики от двух переменных,\nтаких, что глубина соответствующих им формул не превосходит <span\nclass=\"math inline\">\\(i\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-47"
+    },
+    {
+        "keyword": "предел последовательности кузнецова",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-48\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Предел последовательности Кузнецова</em> – это <span\nclass=\"math inline\">\\(G\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-48"
+    },
+    {
+        "keyword": "селекторная функция",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-49\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(g^p_i(x_1, \\ldots, x_p) \\,\\,\\,\\,\ng^p_i(\\alpha_1, \\ldots, \\alpha_p) = \\alpha_i\\)</span> – <em>селекторная\nфункция</em> от <span class=\"math inline\">\\(p\\)</span> переменных.</p>",
+        "url": "функции-k-значной-логики.html#definition-49"
+    },
+    {
+        "keyword": "сохраняет",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-50\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(K\\)</span> содержит все селекторные\nфункции от <span class=\"math inline\">\\(p\\)</span> переменных и некоторый\nнабор функций от <span class=\"math inline\">\\(p\\)</span> переменных.\nФункция <span class=\"math inline\">\\(f(x_1, \\ldots, x_n)\\)</span>\n<em>сохраняет</em> <span class=\"math inline\">\\(K\\)</span>, если <span\nclass=\"math inline\">\\(\\forall h_1, \\ldots, h_n, \\,\\,\\,\\, h_i \\in K\n\\,\\,\\,\\, f(h_1(x_1, \\ldots, x_p), \\ldots, h_n(x_1, \\ldots, x_p)) \\in\nK\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-50"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-51\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(K\\)</span> содержит все селекторные\nфункции от <span class=\"math inline\">\\(p\\)</span> переменных и некоторый\nнабор функций от <span class=\"math inline\">\\(p\\)</span> переменных.\nМножество всех функций, сохраняющих <span\nclass=\"math inline\">\\(K\\)</span>, обозначается <span\nclass=\"math inline\">\\(U[K]\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-51"
+    },
+    {
+        "keyword": "существенная",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-52\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nФункция <span class=\"math inline\">\\(f\\)</span> <span\nclass=\"math inline\">\\(k\\)</span>-значной логики <em>существенная</em>,\nесли она существенно зависит более чем от одной переменной.</p>",
+        "url": "функции-k-значной-логики.html#definition-52"
+    },
+    {
+        "keyword": "квадрат",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-53\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Квадрат</em> в <span class=\"math inline\">\\(k\\)</span>-значной логике\n– это <span class=\"math inline\">\\(4\\)</span> набора <span\nclass=\"math inline\">\\((\\alpha_1, \\ldots, \\alpha_{i - 1}, x, \\alpha_{i +\n1}, \\ldots, \\alpha_{j - 1}, y, \\alpha_{j + 1}, \\ldots, \\alpha_n),\n\\,\\,\\,\\, x \\in \\{p_1, p_2\\}, \\,\\,\\,\\, y \\in \\{q_1, q_2\\}\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-53"
+    },
+    {
+        "keyword": "шефферова",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-54\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nФункция <span class=\"math inline\">\\(f\\)</span> <span\nclass=\"math inline\">\\(k\\)</span>-значной логики <em>шефферова</em>, если\n<span class=\"math inline\">\\([\\{f\\}] = P_k\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-54"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"функции-k-значной-логики.html#definition-55\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nБазис системы функций <span class=\"math inline\">\\(F\\)</span> <span\nclass=\"math inline\">\\(k\\)</span>-значной логики – это подмножество <span\nclass=\"math inline\">\\(U \\subset F\\)</span>, такое, что <span\nclass=\"math inline\">\\([U] = F\\)</span> и <span\nclass=\"math inline\">\\(\\forall f \\in U \\,\\,\\,\\, [U \\\\ \\{f\\}] \\ne\nF\\)</span>.</p>",
+        "url": "функции-k-значной-логики.html#definition-55"
+    },
+    {
+        "keyword": "(конечный абстрактный детерминированный) автомат алфавит(множество) входов алфавит(множество) состояний алфавит(множество) выходов функция переходов функция выходов",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-56\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>(Конечный абстрактный детерминированный) автомат</em> – это <span\nclass=\"math inline\">\\((A, Q, B, \\varphi, \\psi)\\)</span>, где<br><br>\n<span class=\"math inline\">\\(A\\)</span> – <em>алфавит(множество)\nвходов</em>.<br><br> <span class=\"math inline\">\\(Q\\)</span> –\n<em>алфавит(множество) состояний</em>.<br><br> <span\nclass=\"math inline\">\\(B\\)</span> – <em>алфавит(множество)\nвыходов</em>.<br><br>Множества <span class=\"math inline\">\\(A, Q,\nB\\)</span> – конечны.<br><br> <span class=\"math inline\">\\(\\varphi:\nQ\\times A \\to Q\\)</span> – <em>функция переходов</em>.<br><br> <span\nclass=\"math inline\">\\(\\psi: Q \\times A \\to B\\)</span> – <em>функция\nвыходов</em>.<br><br></p>",
+        "url": "абстрактный-конечный-автомат.html#definition-56"
+    },
+    {
+        "keyword": "автомат мура",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-57\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((A, Q, B, \\varphi, \\psi)\\)</span> –\nавтомат. Если <span class=\"math inline\">\\(\\varphi\\)</span> зависит от\n<span class=\"math inline\">\\(a \\in A\\)</span> фиктивно, то <span\nclass=\"math inline\">\\((A, Q, B, \\varphi, \\psi)\\)</span> – <em>автомат\nМура</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-57"
+    },
+    {
+        "keyword": "имеет входов",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-58\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((A, Q, B, \\varphi, \\psi)\\)</span> –\nавтомат. Если <span class=\"math inline\">\\(A = A_1 \\times \\ldots \\times\nA_m\\)</span>, то <span class=\"math inline\">\\((A, Q, B, \\varphi,\n\\psi)\\)</span> <em>имеет</em> <span class=\"math inline\">\\(m\\)</span>\n<em>входов</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-58"
+    },
+    {
+        "keyword": "имеет выходов",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-59\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((A, Q, B, \\varphi, \\psi)\\)</span> –\nавтомат. Если <span class=\"math inline\">\\(B = B_1 \\times \\ldots \\times\nB_m\\)</span>, то <span class=\"math inline\">\\((A, Q, B, \\varphi,\n\\psi)\\)</span> <em>имеет</em> <span class=\"math inline\">\\(m\\)</span>\n<em>выходов</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-59"
+    },
+    {
+        "keyword": "входные слова выходные слова",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-60\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((A, Q, B, \\varphi, \\psi)\\)</span> –\nавтомат.</p>\n<p>Слова в алфавите <span class=\"math inline\">\\(A\\)</span> – <em>входные\nслова</em>.</p>\n<p>Слова в алфавите <span class=\"math inline\">\\(B\\)</span> –\n<em>выходные слова</em>.</p>\n<p>Пусть <span class=\"math inline\">\\(\\alpha\\)</span> – слово. <span\nclass=\"math inline\">\\(A\\)</span> – алфавит.</p>\n<p><strong>Обозначения:</strong></p>\n<p><span class=\"math inline\">\\(|\\alpha|\\)</span> – длина слова.</p>\n<p><span class=\"math inline\">\\([\\alpha]_l\\)</span> – первые <span\nclass=\"math inline\">\\(l\\)</span> букв слова <span\nclass=\"math inline\">\\(\\alpha\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\Lambda\\)</span> – пустое слово.</p>\n<p><span class=\"math inline\">\\(A^{*}\\)</span> – множество всех слов в\nалфавите <span class=\"math inline\">\\(A\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\alpha^k\\)</span> – это слово,\nсоставленное из записанного <span class=\"math inline\">\\(k\\)</span> раз\nслова <span class=\"math inline\">\\(\\alpha\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-60"
+    },
+    {
+        "keyword": "слово состояний слово выходов",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-61\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((A, Q, B, \\varphi, \\psi)\\)</span> –\nавтомат. <span class=\"math inline\">\\(q \\in Q\\)</span>, <span\nclass=\"math inline\">\\(\\alpha\\)</span> – слово в алфавите <span\nclass=\"math inline\">\\(A\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\overline{\\varphi}(q, \\alpha) =\n\\varphi(q, [\\alpha]_0)\\varphi(q, [\\alpha]_1)\\ldots \\varphi(q,\n\\alpha)\\)</span> – <em>слово состояний</em>.</p>\n<p><span class=\"math inline\">\\(\\overline{\\psi}(q, \\alpha) = \\psi(q,\n[\\alpha]_0)\\psi(q, [\\alpha]_1)\\ldots \\psi(q, \\alpha)\\)</span> –\n<em>слово выходов</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-61"
+    },
+    {
+        "keyword": "инициальный конечный автомат ограниченно-детерминированная функция",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-62\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\((A, Q, B, \\varphi, \\psi)\\)</span> –\nавтомат. Зафиксируем <span class=\"math inline\">\\(q_1 \\in Q\\)</span>.\nТогда <span class=\"math inline\">\\(\\psi: A^{*} \\to B^{*}\\)</span>. <span\nclass=\"math inline\">\\(V_{q_1} = (A, Q, B, \\varphi, \\psi, q_1)\\)</span> –\n<em>инициальный конечный автомат</em>.</p>\n<p>Отображение <span class=\"math inline\">\\(f(\\alpha) =\n\\overline{\\psi}(q_1, \\alpha)\\)</span> –\n<em>ограниченно-детерминированная функция</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-62"
+    },
+    {
+        "keyword": "канонические уравнения инициального автомата",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-63\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(V_{q_1} = (A, Q, B, \\varphi, \\psi,\nq_1)\\)</span> – инициальный атомат. <span\nclass=\"math inline\">\\(\\alpha\\)</span> – слово в алфавите <span\nclass=\"math inline\">\\(A\\)</span>.</p>\n<p><span class=\"math inline\">\\(\\mathcal{Q} = \\overline{\\varphi}(q_1,\n\\alpha)\\)</span> – слово состояний.</p>\n<p><span class=\"math inline\">\\(\\beta = \\overline{\\psi}(q_1,\n\\alpha)\\)</span> – слово выходов.</p>\n<p><span class=\"math inline\">\\(\\begin{cases}\n  \\mathcal{Q}(1) = q_1\\\\\n  \\mathcal{Q}(t + 1) = \\varphi(\\mathcal{Q}(t), \\alpha(t))\\\\\n  \\beta(t) = \\psi(\\mathcal{Q}(t), \\alpha(t))\n\\end{cases}\\)</span> – <em>канонические уравнения инициального\nавтомата</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-63"
+    },
+    {
+        "keyword": "бесконечное слово",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-64\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(A\\)</span> – алфавит. Пусть дано\nотображение <span class=\"math inline\">\\(\\alpha: \\mathbb{N} \\to\nA\\)</span>. <span\nclass=\"math inline\">\\(\\alpha(1)\\alpha(3)\\ldots\\)</span> –\n<em>бесконечное слово</em>.</p>\n<p>Множество всех бесконечных слов обозначается <span\nclass=\"math inline\">\\(A^{\\infty}\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-64"
+    },
+    {
+        "keyword": "период предпериод",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-65\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\alpha(1)\\alpha(3)\\ldots\\)</span> –\nбесконечное слово. Если существуют <span class=\"math inline\">\\(\\tau,\n\\tau’ \\in \\mathbb{N}\\)</span>, такие, что <span\nclass=\"math inline\">\\(\\alpha(i + \\tau) = \\alpha(i) \\,\\,\\,\\, \\forall i\n&gt; \\tau’ + 1\\)</span>, то <span class=\"math inline\">\\(\\tau\\)</span> –\n<em>период</em> <span class=\"math inline\">\\(\\alpha\\)</span>, <span\nclass=\"math inline\">\\(\\tau’\\)</span> – <em>предпериод</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-65"
+    },
+    {
+        "keyword": "неотличимы отличимы словом",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-66\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(V = (A, Q, B, \\varphi, \\psi)\\)</span>\nи <span class=\"math inline\">\\(V’ = (A, Q’, B, \\varphi’, \\psi’)\\)</span>\n– конечные автоматы, <span class=\"math inline\">\\(q \\in Q\\)</span>, <span\nclass=\"math inline\">\\(q’ \\in Q’\\)</span>. Если <span\nclass=\"math inline\">\\(\\forall \\alpha \\in A^{*} \\,\\,\\,\\,\n\\overline{\\psi}(q, \\alpha) = \\overline{\\psi’}(q’, \\alpha)\\)</span>, то\nсостояния <span class=\"math inline\">\\(q\\)</span> и <span\nclass=\"math inline\">\\(q’\\)</span> <em>неотличимы</em> друг от\nдруга.<br><br>Если <span class=\"math inline\">\\(\\exists \\alpha \\in A^{*}:\n\\,\\,\\,\\, \\overline{\\psi}(q, \\alpha) \\ne \\overline{\\psi’}(q’,\n\\alpha)\\)</span>, то состояния <span class=\"math inline\">\\(q\\)</span> и\n<span class=\"math inline\">\\(q’\\)</span> <em>отличимы</em> друг от друга\n<em>словом</em> <span class=\"math inline\">\\(\\alpha\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-66"
+    },
+    {
+        "keyword": "приведенного типа",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-67\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли любые два состояния автомата отличимы, то автомат <em>приведенного\nтипа</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-67"
+    },
+    {
+        "keyword": "неотличимы",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-68\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(V = (A, Q, B, \\varphi, \\psi)\\)</span>\nи <span class=\"math inline\">\\(V’ = (A, Q’, B, \\varphi’, \\psi’)\\)</span>\n– конечные автоматы. Если <span class=\"math inline\">\\(\\forall q \\in Q\n\\,\\,\\,\\, \\exists q’ \\in Q’\\)</span>, такое, что <span\nclass=\"math inline\">\\(q\\)</span> неотличимо от <span\nclass=\"math inline\">\\(q’\\)</span> и <span class=\"math inline\">\\(\\forall\nq’ \\in Q’ \\,\\,\\,\\, \\exists q \\in Q\\)</span>, такое, что <span\nclass=\"math inline\">\\(q\\)</span> неотличимо от <span\nclass=\"math inline\">\\(q’\\)</span>, то автоматы <span\nclass=\"math inline\">\\(V\\)</span> и <span\nclass=\"math inline\">\\(V’\\)</span> <em>неотличимы</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-68"
+    },
+    {
+        "keyword": "изоморфны",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-69\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(V = (A, Q, B, \\varphi, \\psi)\\)</span>\nи <span class=\"math inline\">\\(V’ = (A, Q’, B, \\varphi’, \\psi’)\\)</span>\n– конечные автоматы. Если существует биективное отображение <span\nclass=\"math inline\">\\(\\xi: Q \\to Q’\\)</span>, такое, что <span\nclass=\"math inline\">\\(\\forall a \\in A, q \\in Q\\)</span> <span\nclass=\"math display\">\\[\\xi(\\varphi(q, a)) = \\varphi’(\\xi(q), a)\\]</span>\n<span class=\"math display\">\\[\\psi(q, a) = \\psi’(\\xi(q), a),\\]</span> то\nавтоматы <span class=\"math inline\">\\(V\\)</span> и <span\nclass=\"math inline\">\\(V’\\)</span> <em>изоморфны</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-69"
+    },
+    {
+        "keyword": "событие",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-70\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(V = (A, Q, B , \\varphi, \\psi,\nq)\\)</span> – инициальный конечный автомат. Любое подмножество <span\nclass=\"math inline\">\\(A^{*} \\setminus \\Lambda\\)</span> –\n<em>событие</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-70"
+    },
+    {
+        "keyword": "представимое",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-71\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(V = (A, Q, B , \\varphi, \\psi,\nq)\\)</span> – инициальный конечный автомат, <span\nclass=\"math inline\">\\(B’ \\subset B\\)</span>. Множество <span\nclass=\"math inline\">\\(M = \\{\\alpha \\in A^{*} \\setminus \\Lambda:\n\\,\\,\\,\\,\\psi(q, \\alpha) \\in B’\\}\\)</span> – событие,\n<em>представимое</em> автоматом <span class=\"math inline\">\\(V\\)</span>\nпосредством <span class=\"math inline\">\\(B’\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-71"
+    },
+    {
+        "keyword": "произведение событий",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-72\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(M_1\\)</span> и <span\nclass=\"math inline\">\\(M_2\\)</span> события. Множество <span\nclass=\"math inline\">\\(M_1\\cdot M_2 = \\{\\alpha_1 \\alpha_2: \\,\\,\\,\\,\n\\alpha_1 \\in M_1, \\alpha_2 \\in M_2\\}\\)</span> – <em>произведение\nсобытий</em> <span class=\"math inline\">\\(M_1\\)</span> и <span\nclass=\"math inline\">\\(M_2\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-72"
+    },
+    {
+        "keyword": "итерация события",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-73\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(M\\)</span> – событие. Множество <span\nclass=\"math inline\">\\(&lt;M&gt; = \\{\\alpha_1\\ldots \\alpha_k: \\,\\,\\,\\,\n\\alpha_i \\in M\\}\\)</span> – <em>итерация события</em> <span\nclass=\"math inline\">\\(M\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-73"
+    },
+    {
+        "keyword": "регулярные регулярные",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-74\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<br><br>1. События <span class=\"math inline\">\\(\\varnothing\\)</span> и\n<span class=\"math inline\">\\(a \\in A\\)</span> –\n<em>регулярные</em>.<br>2. Если <span class=\"math inline\">\\(R_1\\)</span>\nи <span class=\"math inline\">\\(R_2\\)</span> регулярные события, то <span\nclass=\"math inline\">\\(R_1 \\cdot R_2\\)</span>, <span\nclass=\"math inline\">\\(R_1 \\cup R_2\\)</span> и <span\nclass=\"math inline\">\\(&lt;R_1&gt;\\)</span> – <em>регулярные</em>\nсобытия.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-74"
+    },
+    {
+        "keyword": "обобщенный источник (в алфавите)",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-75\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(A\\)</span> – алфавит. <em>Обобщенный\nисточник (в алфавите)</em> <span class=\"math inline\">\\(A\\)</span> – это\nконечный ориентированный граф, каждому ребру которого сопоставлен символ\n<span class=\"math inline\">\\(a \\in A\\)</span> или пустое слово <span\nclass=\"math inline\">\\(\\Lambda\\)</span>, и в котором выбраны начальная\nвершина <span class=\"math inline\">\\(v\\)</span> и финальная вершина <span\nclass=\"math inline\">\\(w\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-75"
+    },
+    {
+        "keyword": "путь",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-76\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(G\\)</span> – обобщенный источник.\n<span class=\"math inline\">\\(v_1\\)</span> и <span\nclass=\"math inline\">\\(v_{n + 1}\\)</span> вершины <span\nclass=\"math inline\">\\(G\\)</span>. Последовательность <span\nclass=\"math inline\">\\(\\pi_{v_1 \\to v_{n + 1}}: \\,\\,\\,\\, v_1, e_1,\n\\ldots, v_n, e_n, v_{n + 1}\\)</span> – <em>путь</em> от вершины <span\nclass=\"math inline\">\\(v_1\\)</span> к вершине <span\nclass=\"math inline\">\\(v_{n + 1}\\)</span>.<br><span\nclass=\"math inline\">\\([\\pi]\\)</span> – это слово составленное из\nсимволов ребер, входящих в путь <span\nclass=\"math inline\">\\(\\pi\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-76"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-77\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(A\\)</span> – алфавит, <span\nclass=\"math inline\">\\(G\\)</span> – обобщенный источник, <span\nclass=\"math inline\">\\(\\alpha \\in A^{*}\\)</span>, <span\nclass=\"math inline\">\\(u\\)</span> – вершина <span\nclass=\"math inline\">\\(G\\)</span>. <span class=\"math inline\">\\(\\theta(u,\n\\alpha) = \\{v \\in G: \\,\\,\\,\\, \\exists \\pi_{u \\to v}: \\,\\,\\,\\, [\\pi] =\n\\alpha\\}\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-77"
+    },
+    {
+        "keyword": "событие определяемое источником",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-78\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(A\\)</span> – алфавит, <span\nclass=\"math inline\">\\(G\\)</span> – обобщенный источник с начальной\nвершиной <span class=\"math inline\">\\(v\\)</span> и финальной вершиной\n<span class=\"math inline\">\\(w\\)</span>. <em>Событие</em> <span\nclass=\"math inline\">\\(|G|\\)</span>, <em>определяемое источником</em>\n<span class=\"math inline\">\\(G\\)</span> – это <span\nclass=\"math inline\">\\(|G| = \\{\\alpha \\in A^{*}: \\,\\,\\,\\, w \\in \\theta(v,\n\\alpha)\\}\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-78"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-79\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(V_q = (\\{0, 1\\}^n, Q, \\{0, 1\\}^m,\n\\varphi, \\psi, q)\\)</span> – инициальный конечный автомат. Множество\nвсех автоматных функций <span class=\"math inline\">\\(f(\\alpha) =\n\\overline{\\psi}(q, \\alpha)\\)</span>, задаваемых автоматами вида <span\nclass=\"math inline\">\\(V_q\\)</span> обозначается <span\nclass=\"math inline\">\\(P_{\\operatorname{авт}}\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-79"
+    },
+    {
+        "keyword": "существенный зависит с задержкой",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-80\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f \\in P_{\\operatorname{авт}}\\)</span>,\n<span class=\"math inline\">\\(\\alpha \\in (\\{0, 1\\}^n)^{*}\\)</span>(слово,\nбуквы которого – это последовательности нулей и единиц), <span\nclass=\"math inline\">\\(\\alpha = \\alpha(1)\\ldots \\alpha(l)\\)</span>, <span\nclass=\"math inline\">\\(\\alpha(i) = (\\alpha_1(i), \\ldots,\n\\alpha_n(i))\\)</span> (функция <span\nclass=\"math inline\">\\(\\alpha_j\\)</span> – это <span\nclass=\"math inline\">\\(j\\)</span>-й элемент буквы). Пусть <span\nclass=\"math inline\">\\(\\alpha_j = (\\alpha_j(1), \\ldots,\n\\alpha_j(l))\\)</span> (взяли <span class=\"math inline\">\\(j\\)</span>-й\nэлемент каждой буквы слова <span class=\"math inline\">\\(\\alpha\\)</span>).\nОпределим функцию <span class=\"math inline\">\\(g(\\alpha_1, \\ldots,\n\\alpha_n) = f(\\alpha)\\)</span>.<br><br> Если <span\nclass=\"math inline\">\\(i\\)</span>-я переменная функции <span\nclass=\"math inline\">\\(g\\)</span> существенная, то <span\nclass=\"math inline\">\\(i\\)</span>-й вход автомата\n<em>существенный</em>.<br><br>Если функция <span\nclass=\"math inline\">\\(\\psi_j\\)</span>(см. канонические уравнения)\nзависит от <span class=\"math inline\">\\(a_i(t)\\)</span> фиктивно, то\n<span class=\"math inline\">\\(j\\)</span>-й выход автомата <em>зависит</em>\nот <span class=\"math inline\">\\(i\\)</span>-ого <em>с задержкой</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-80"
+    },
+    {
+        "keyword": "сигнатура",
+        "html": "<a href=\"абстрактный-конечный-автомат.html#definition-81\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n\n<details>\n<summary>\n</summary>\nТут будет лажа\n</details>\n<p>Пусть <span class=\"math inline\">\\(E\\)</span> – это множество\nсхем-компонент (квадратиков с пометкой). Пусть <span\nclass=\"math inline\">\\(\\Sigma: E \\to \\{f_1, \\ldots, f_p\\} \\subset\nP_{\\operatorname{авт}}\\)</span> (<em>сигнатура</em>).</p>\n<p>Схему <span class=\"math inline\">\\(E_i\\)</span>, которой соответствует\n<span class=\"math inline\">\\(f_i = \\Sigma(E_i)\\)</span>, будем обозначать\nквадратом, в который входит <span class=\"math inline\">\\(n \\ge 0\\)</span>\nстрелок (количество входов автомата, задаваемого <span\nclass=\"math inline\">\\(f_i\\)</span>) и выходит <span\nclass=\"math inline\">\\(m \\ge 1\\)</span> стрелок (количество выходов\nавтомата, задаваемого <span class=\"math inline\">\\(f_i\\)</span>).</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-81"
+    },
+    {
+        "keyword": "схема",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-82\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<strong>Определение:</strong></p>\n<ol type=\"1\">\n<li><p>Элемент <span class=\"math inline\">\\(E_i \\subset E\\)</span> –\n<em>схема</em>.</p></li>\n<li><p>Схема – это штука, полученная при помощи операций:</p></li>\n</ol>\n<ol type=\"a\">\n<li>Переподключения входов и выходов схемы (при переподключении входов\nважно, чтобы все существенные входы сохранились)</li>\n<li>Объединения непересекающихся схем.</li>\n<li>Операции обратной связи (вклеивание стрелки ведущей от выхода,\nзависящего от некоторого входа с задержкой, в этот вход)</li>\n</ol>",
+        "url": "абстрактный-конечный-автомат.html#definition-82"
+    },
+    {
+        "keyword": "композиции",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-83\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nОперации <span class=\"math inline\">\\(a, b, c\\)</span> – это операции\n<em>композиции</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-83"
+    },
+    {
+        "keyword": "",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-84\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nМножество всех функций, полученных операциями композиции из <span\nclass=\"math inline\">\\(F \\subset P_{\\operatorname{авт}}\\)</span>,\nобозначается <span class=\"math inline\">\\([F]\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-84"
+    },
+    {
+        "keyword": "полная",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-85\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<span class=\"math inline\">\\(F \\subset P_{\\operatorname{авт}}\\)</span>\n<em>полная</em>, если <span class=\"math inline\">\\([F] =\nP_{\\operatorname{авт}}\\)</span></p>",
+        "url": "абстрактный-конечный-автомат.html#definition-85"
+    },
+    {
+        "keyword": "суперпозициями полна",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-86\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nЕсли функция <span class=\"math inline\">\\(f \\in\nP_{\\operatorname{авт}}\\)</span> pеализуется схемой в сигнатуре,\nпостроенной только при помощи операций переобозначения входов и выходов,\nобъединения схем и их последовательного соединения, то <span\nclass=\"math inline\">\\(f\\)</span> получена <em>суперпозициями</em> из\nфункций <span class=\"math inline\">\\(\\{f_1,\\ldots, f_p\\}\\)</span> данной\nсигнатуры. Множество всех функций, полученных операциями суперпозиции из\nфункций множества <span class=\"math inline\">\\(F \\subset\nP_{\\operatorname{авт}}\\)</span>, обозначается <span\nclass=\"math inline\">\\([F]_c\\)</span>. Система <span\nclass=\"math inline\">\\(F \\subset P_{\\operatorname{авт}}\\)</span>\n<em>полна</em> относительно суперпозиций, если <span\nclass=\"math inline\">\\([F]_c = P_{\\operatorname{авт}}\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-86"
+    },
+    {
+        "keyword": "однородная структура шаблон соседства клетки функция изменения состояния клетки локальная функция переходов",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-87\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Однородная структура</em> – это <span class=\"math inline\">\\(\\sigma =\n(\\mathbb{Z}^k, E_n, V, \\varphi)\\)</span>, где <br><br> <span\nclass=\"math inline\">\\(\\mathbb{Z}^k\\)</span> – множество <span\nclass=\"math inline\">\\(k\\)</span>-мерных целочисленных векторов\n(координаты клеток дискретного пространства (все нормальные люди\nиспользуют <span class=\"math inline\">\\(\\mathbb{Z}^2\\)</span>, но\nматематик должен быть ненормальным, особенно, в 01:00))<br><br> <span\nclass=\"math inline\">\\(E_n = \\{0, \\ldots, n - 1\\}\\)</span> – множество\nкодов состояний (каждая клетка в каждый момент времени находится в\nкаком-то состоянии) <br><br> <span class=\"math inline\">\\(V = \\{\\alpha_1,\n\\ldots, \\alpha_{h - 1}: \\,\\,\\,\\, \\alpha_i \\in \\mathbb{Z}^k, \\,\\,\\,\\,\n\\alpha_i \\ne \\alpha_j, \\,\\,\\,\\, i \\ne j\\}\\)</span> – <em>шаблон\nсоседства клетки</em> (кого видит клетка)<br><br> <span\nclass=\"math inline\">\\(\\varphi: (E_n)^h \\to E_n\\)</span> – <em>функция\nизменения состояния клетки</em>(<em>локальная функция переходов</em>)\n(зависит от <span class=\"math inline\">\\(h\\)</span> переменных –\nсостояний соседей клетки) и <span class=\"math inline\">\\(\\varphi(0,\n\\ldots, 0) = 0\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-87"
+    },
+    {
+        "keyword": "состояние однородной структуры",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-88\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\sigma\\)</span> – однородная\nструктура. <em>Состояние однородной структуры</em> <span\nclass=\"math inline\">\\(\\sigma\\)</span> – это функция <span\nclass=\"math inline\">\\(f: \\mathbb{Z}^k \\to E_n\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-88"
+    },
+    {
+        "keyword": "основная (глобальная) функция переходов однородной структуры",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-89\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(\\sigma\\)</span> – однородная структура\nи задано некоторое множество ее состояний <span\nclass=\"math inline\">\\(F\\)</span>. <em>Основная (глобальная) функция\nпереходов однородной структуры</em> – это <span\nclass=\"math inline\">\\(\\Phi: F \\to F\\)</span>, такая, что <span\nclass=\"math display\">\\[\\Phi(f)(\\alpha) = \\varphi(f(\\alpha), f(\\alpha +\n\\alpha_1), \\ldots, f(\\alpha + \\alpha_{h - 1})), \\,\\,\\,\\, f \\in F,\n\\,\\,\\,\\, \\alpha \\in \\mathbb{Z}^k\\]</span></p>",
+        "url": "абстрактный-конечный-автомат.html#definition-89"
+    },
+    {
+        "keyword": "поведение однородной структуры",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-90\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Поведение однородной структуры</em> – это последовательность ее\nсостояний <span class=\"math inline\">\\(f_0, f_1, f_2, \\ldots\\)</span>,\nтакая, что <span class=\"math inline\">\\(f_{i + 1} = \\Phi(f_i)\\,\\,\\,\\,\n\\forall i\\)</span>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-90"
+    },
+    {
+        "keyword": "конфигурация однородной структуры",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-91\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Конфигурация однородной структуры</em> – это такое ее состояние, при\nкотором только конечное число клеток имеют ненулевое значение.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-91"
+    },
+    {
+        "keyword": "квадратная",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-92\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nОднородная структура <span class=\"math inline\">\\(\\sigma = (\\mathbb{Z}^2,\nE_k, V, \\varphi)\\)</span>, у которой <span\nclass=\"math inline\">\\(V(\\alpha)\\)</span> квадрат со стороной <span\nclass=\"math inline\">\\(2\\cdot m + 1\\)</span> с центром в <span\nclass=\"math inline\">\\(\\alpha, \\,\\,\\,\\, \\alpha \\in \\mathbb{Z}^2\\)</span>\n– <em>квадратная</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-92"
+    },
+    {
+        "keyword": "окрестность квадрата",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-93\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(K \\subset \\mathbb{Z}^2\\)</span> –\nквадрат. <span class=\"math inline\">\\(V(K) = \\displaystyle\\bigcup_{\\alpha\n\\in K}V(\\alpha)\\)</span> – <em>окрестность квадрата</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-93"
+    },
+    {
+        "keyword": "состояние окрестности квадрата конфигурация неконструируемая",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-94\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\n<em>Состояние окрестности квадрата</em> – это функция <span\nclass=\"math inline\">\\(f: V(K) \\to E_k\\)</span>. Функция <span\nclass=\"math inline\">\\(g = \\Phi_K(f)\\)</span> – это ограничение\nглобальной функции переходов, определенной на состояниях окрестности\nквадрата на сам квадрат.<br><br>Состояние квадрата –\n<em>конфигурация</em>.<br><br>Если конфигурация квадрата не принадлежит\nмножеству значений <span class=\"math inline\">\\(\\Phi_K\\)</span>, то она\n<em>неконструируемая</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-94"
+    },
+    {
+        "keyword": "взаимностираемые",
+        "html": "<p><a href=\"абстрактный-конечный-автомат.html#definition-95\"><span\nclass=\"margin-lft\"><strong>Перейти к определению:</strong></span></a>\nПусть <span class=\"math inline\">\\(f_1\\)</span> и <span\nclass=\"math inline\">\\(f_2\\)</span> – конфигурации квадрата <span\nclass=\"math inline\">\\(V(V(K))\\)</span>. Если <br><br>1. <span\nclass=\"math inline\">\\({f_1}_{|K} \\ne {f_2}_{|K}\\)</span><br>2. <span\nclass=\"math inline\">\\({f_1}_{|V(V(K))\\setminus K} =\n{f_2}_{|V(V(K))\\setminus K}\\)</span><br>3. <span\nclass=\"math inline\">\\(\\Phi_{V(K)}(f_1)_{|K} =\n\\Phi_{V(K)}(f_2)_{|K}\\)</span>, то конфигурации <span\nclass=\"math inline\">\\(f_1\\)</span> и <span\nclass=\"math inline\">\\(f_2\\)</span> – <em>взаимностираемые</em>.</p>",
+        "url": "абстрактный-конечный-автомат.html#definition-95"
+    }
+]

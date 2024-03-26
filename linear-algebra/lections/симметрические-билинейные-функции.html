@@ -11,6 +11,7 @@
     
     <title>Симметрические билинейные функции</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -258,9 +268,9 @@
 id="симметрические-билинейные-функции">Симметрические билинейные
 функции</h1>
 <div id="definition-47">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над полем
-<span class="math inline">\(F\)</span>, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+полем <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\beta: V\times V \to F\)</span> – билинейная
 функция на <span class="math inline">\(V\)</span>.</p>
 <p>Функция <span class="math inline">\(\beta\)</span>
@@ -268,15 +278,15 @@ class="math inline">\(\beta: V\times V \to F\)</span> – билинейная
 \in V \,\,\,\, \beta(x, y) = \beta(y, x)\)</span>.</p>
 </div>
 <div id="statement-53">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над полем
-<span class="math inline">\(F\)</span>.</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+полем <span class="math inline">\(F\)</span>.</p>
 <p><span class="math inline">\(\beta: V\times V \to F\)</span> –
 симметрическая билинейная функция на <span class="math inline">\(V
 \Leftrightarrow\)</span> матрица <span class="math inline">\(B\)</span>
 функции <span class="math inline">\(\beta\)</span> симметричекая, то
 есть <span class="math inline">\(B^T = B\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span> <span
 class="math inline">\(B = (b_{ij})\)</span>. <span
 class="math inline">\(b_{ij} = \beta(e_i, e_j) = \beta(e_j, e_i) =
@@ -288,36 +298,37 @@ class="math inline">\(=(X^TBY)^T = Y^TB^TX = Y^TBX = \beta(y, x)
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-48">
-<p><strong>Определение: </strong>Если в базисе <span
-class="math inline">\(e = \{e_1, \ldots, e_n\}\)</span> матрица <span
-class="math inline">\(B\)</span> билинейной функции <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если в
+базисе <span class="math inline">\(e = \{e_1, \ldots, e_n\}\)</span>
+матрица <span class="math inline">\(B\)</span> билинейной функции <span
 class="math inline">\(\beta\)</span> диагональная, то <span
 class="math inline">\(\beta(x, y) = b_{11}x_1y_1 + \ldots + b_{nn}x_n
 y_n\)</span> и такой вид называется <em>каноническим видом билинейной
 функции</em> <span class="math inline">\(\beta\)</span>.</p>
 </div>
 <div id="definition-49">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(S
-\subset V\)</span>, <span class="math inline">\(V\)</span> – векторное
-пространство. <span class="math inline">\(S^{\perp} = \{x \in V:
-\,\,\,\, \beta(x, s) = 0 \,\,\,\, \forall s \in S\}\)</span> –
-<em>ортогональное дополнение множества</em> <span
-class="math inline">\(S\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(S \subset V\)</span>, <span
+class="math inline">\(V\)</span> – векторное пространство. <span
+class="math inline">\(S^{\perp} = \{x \in V: \,\,\,\, \beta(x, s) = 0
+\,\,\,\, \forall s \in S\}\)</span> – <em>ортогональное дополнение
+множества</em> <span class="math inline">\(S\)</span>.</p>
 </div>
 <div id="statement-54">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над полем
-<span class="math inline">\(F, \,\,\,\, \operatorname{char} F \ne
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+полем <span class="math inline">\(F, \,\,\,\, \operatorname{char} F \ne
 2\)</span> размерности <span class="math inline">\(n\)</span>. <span
 class="math inline">\(\beta: V\times V \to F\)</span> – симметрическая
 билинейная функция на <span class="math inline">\(V\)</span>. Тогда
 существует базис <span class="math inline">\(\{e_1, \ldots,
 e_n\}\)</span>, в котором матрица <span class="math inline">\(B\)</span>
 функции <span class="math inline">\(\beta\)</span> диагональная.</p>
-<p><em>Доказательство:</em> (индукция по <span
-class="math inline">\(n\)</span>) Для <span class="math inline">\(n =
-1\)</span> очевидно. Докажем, что из <span class="math inline">\(n -
-1\)</span> следует <span class="math inline">\(n\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> (индукция по
+<span class="math inline">\(n\)</span>) Для <span
+class="math inline">\(n = 1\)</span> очевидно. Докажем, что из <span
+class="math inline">\(n - 1\)</span> следует <span
+class="math inline">\(n\)</span>.</p>
 <ol type="1">
 <li><span class="math inline">\(\beta\)</span> тождественный ноль, тогда
 в любом базисе матрица <span class="math inline">\(B\)</span>
@@ -359,9 +370,9 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span>(почему матрица 
 <h2 data-number="12.1" id="квадратичные-функции">Квадратичные
 функции</h2>
 <div id="definition-50">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство над полем
-<span class="math inline">\(F\)</span>, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство над
+полем <span class="math inline">\(F\)</span>, <span
 class="math inline">\(\beta: V \times V \to F\)</span> – симметрическая
 билинейная функция на <span class="math inline">\(V\)</span>.<br><span
 class="math inline">\(q: V \to F\)</span> – <em>квадратичная
@@ -380,15 +391,15 @@ class="math inline">\(q(x) = \beta(x, x) = X^TBX = \displaystyle \sum_{i
 class="math inline">\(q\)</span>.</p>
 </div>
 <div id="statement-55">
+<span class="margin-lft"><strong>Утверждение: </strong></span>
 <ol type="1">
-<li><strong>Утверждение: </strong></li>
 <li>Для любой квадратичной функции <span class="math inline">\(q: V \to
 F\)</span> существует базис, в котором <span
 class="math inline">\(q\)</span> имеет канонический вид.</li>
 <li>Любая квадратичная форма может быть некоторой невырожденной линейной
 заменой переменных приведена у каноническому виду.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li>Следует отсюда</li>
 <li>способы такого приведения рассматриваются далее.</li>
@@ -403,14 +414,14 @@ id="приведение-квадратичной-формы-к-канониче
 квадратичной формы к каноничекому виду унитреугольными
 преобразованиями</h3>
 <div id="definition-51">
-<p><strong>Определение: </strong>Матрица <span class="math inline">\(S
-\in M_n(F)\)</span> – <em>унитреугольная</em>, если она
-верхнетреугольная с <span class="math inline">\(1\)</span> на главной
-диагонали.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Матрица
+<span class="math inline">\(S \in M_n(F)\)</span> –
+<em>унитреугольная</em>, если она верхнетреугольная с <span
+class="math inline">\(1\)</span> на главной диагонали.</p>
 </div>
 <div id="definition-52">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(B =
-\left(\begin{array}{ccc}
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(B = \left(\begin{array}{ccc}
 b_{11} &amp; \dots &amp; b_{1n}\\
 \vdots &amp; \ddots &amp; \vdots\\
 b_{n1} &amp; \dots &amp; b_{nn}
@@ -430,9 +441,9 @@ b_{k1} &amp; \dots &amp; b_{kk}
 class="math inline">\(B\)</span>.</p>
 </div>
 <div id="statement-56">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство размерности
-<span class="math inline">\(n\)</span> над полем <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство
+размерности <span class="math inline">\(n\)</span> над полем <span
 class="math inline">\(F\)</span>, <span class="math inline">\(\Delta_i
 \ne 0 \,\,\,\, \forall i\)</span>. Для любой квадратичной формы
 квадратичной функции <span class="math inline">\(q: V \to F\)</span>
@@ -447,8 +458,8 @@ class="math inline">\(q\)</span> в некотором базисе <span
 class="math inline">\(e\)</span> и матрица перехода от <span
 class="math inline">\(e\)</span> к <span
 class="math inline">\(f\)</span> унитреугольная.</p>
-<p><em>Доказательство:</em> (индукция по <span
-class="math inline">\(n\)</span>) <span class="math inline">\(n =
+<p><span class="margin-lft"><em>Доказательство:</em></span> (индукция по
+<span class="math inline">\(n\)</span>) <span class="math inline">\(n =
 1\)</span> очевидно. Докажем, что из <span class="math inline">\(n -
 1\)</span> следует <span class="math inline">\(n\)</span>. Пусть <span
 class="math inline">\(e = \{e_1, \ldots, e_n\}\)</span> – базис <span

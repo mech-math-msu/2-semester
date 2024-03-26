@@ -11,6 +11,7 @@
     
     <title>Тензоры</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -256,13 +266,13 @@
 
 <h1 data-number="27" id="тензоры">Тензоры</h1>
 <div id="definition-136">
-<p><strong>Определение: </strong>Функция от нескольких переменных
-<em>полилинейная</em>, если она линейна по каждому аргументу при
-фиксированном значении остальных.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Функция
+от нескольких переменных <em>полилинейная</em>, если она линейна по
+каждому аргументу при фиксированном значении остальных.</p>
 </div>
 <div id="definition-137">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство, <span
 class="math inline">\(V^{*}\)</span> – сопряженное к <span
 class="math inline">\(V\)</span> пространство. Полилинейная функция
 <span class="math display">\[f: \underbrace{V\times \ldots \times V}_p
@@ -272,7 +282,8 @@ class="math inline">\(V\)</span> пространство. Полилинейн�
 class="math inline">\(p + q\)</span>.</p>
 </div>
 <div id="definition-138">
-<p><strong>Определение: </strong>Множество всех тензоров типа <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество всех тензоров типа <span
 class="math inline">\((p, q)\)</span> обозначается <span
 class="math inline">\(\mathbb{T}^q_p\)</span>.</p>
 </div>
@@ -309,18 +320,19 @@ class="math display">\[= \displaystyle \sum_{i, \ldots, j, k, \ldots, l
 = 1}^{n} u^i \cdot \ldots \cdot w^j \cdot \xi_k \cdot \ldots \cdot
 \zeta_l \cdot t^{k \ldots l}_{i \ldots j}\]</span></p>
 <div id="definition-139">
-<p><strong>Определение: </strong>Числа <span class="math inline">\(t^{k
-\ldots l}_{i \ldots j} = t(e_i, \ldots, e_j, \varepsilon^k, \ldots,
-\varepsilon^l)\)</span> – <em>координаты тензора</em> <span
-class="math inline">\(t\)</span> в базисе <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Числа
+<span class="math inline">\(t^{k \ldots l}_{i \ldots j} = t(e_i, \ldots,
+e_j, \varepsilon^k, \ldots, \varepsilon^l)\)</span> – <em>координаты
+тензора</em> <span class="math inline">\(t\)</span> в базисе <span
 class="math inline">\(e\)</span>.</p>
 </div>
 <h2 data-number="27.2" id="операции-над-тензорами">Операции над
 тензорами</h2>
 <h3 data-number="27.2.1" id="сложение">Сложение</h3>
 <div id="definition-140">
-<p><strong>Определение: </strong>(<em>сложение тензоров</em>) Пусть
-<span class="math inline">\(t_1, t_2 \in \mathbb{T}^q_p\)</span>. <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>сложение тензоров</em>) Пусть <span
+class="math inline">\(t_1, t_2 \in \mathbb{T}^q_p\)</span>. <span
 class="math inline">\((t_1 + t_2)(v_1, \ldots, v_p, f_1, \ldots, f_q) =
 t_1(v_1, \ldots, v_p, f_1, \ldots, f_q) + t_2(v_1, \ldots, v_p, f_1,
 \ldots, f_q)\)</span>.</p>
@@ -328,24 +340,26 @@ t_1(v_1, \ldots, v_p, f_1, \ldots, f_q) + t_2(v_1, \ldots, v_p, f_1,
 <h3 data-number="27.2.2" id="умножение-тензора-на-число">Умножение
 тензора на число</h3>
 <div id="definition-141">
-<p><strong>Определение: </strong>(<em>умножение тензора на число</em>)
-Пусть <span class="math inline">\(t \in \mathbb{T}^q_p, \,\,\,\, \lambda
-\in F\)</span>. <span class="math inline">\((\lambda t)(v_1, \ldots,
-v_p, f_1, \ldots, f_q) = \lambda (t(v_1, \ldots, v_p, f_1, \ldots,
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>умножение тензора на число</em>) Пусть <span
+class="math inline">\(t \in \mathbb{T}^q_p, \,\,\,\, \lambda \in
+F\)</span>. <span class="math inline">\((\lambda t)(v_1, \ldots, v_p,
+f_1, \ldots, f_q) = \lambda (t(v_1, \ldots, v_p, f_1, \ldots,
 f_q))\)</span>.</p>
 </div>
 <div id="statement-129">
-<p><strong>Утверждение: </strong>Относительно операций сложения и
-умножения на число тензоры типа <span class="math inline">\((p,
-q)\)</span> образуют векторное пространство.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Относительно операций сложения и умножения на число
+тензоры типа <span class="math inline">\((p, q)\)</span> образуют
+векторное пространство.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="27.3" id="тензорное-произведение">Тензорное
 произведение</h2>
 <div id="definition-142">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(t \in
-\mathbb{T}^q_p, \,\,\,\, \hat{t} \in
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(t \in \mathbb{T}^q_p, \,\,\,\, \hat{t} \in
 \mathbb{T}^{\hat{q}}_{\hat{p}}\)</span>. <em>Тензорное произведение</em>
 <span class="math inline">\(t \otimes \hat{t}\)</span> – это отображение
 <span class="math display">\[t \otimes \hat{t}: \underbrace{V\times
@@ -359,7 +373,7 @@ f_1, \ldots, f_q)\cdot \hat{t}(u_1, \ldots, u_{\hat{p}}, g_1, \ldots,
 g_{\hat{q}})\]</span></p>
 </div>
 <div id="theorem-34">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(V\)</span> – векторное пространство, <span
 class="math inline">\(V^{*}\)</span> – сопряженное к <span
 class="math inline">\(V\)</span> пространство. <span
@@ -376,17 +390,17 @@ e_{j_q}\]</span></p>
 <p>являются базисом <span class="math inline">\(\mathbb{T}^q_p\)</span>
 и <span class="math inline">\(\dim \mathbb{T}^q_p = n^{p + q}\)</span>,
 где <span class="math inline">\(n = \dim V\)</span></p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="27.4"
 id="изменение-кординат-тензора-при-переходе-к-другому-базису">Изменение
 кординат тензора при переходе к другому базису</h2>
 <div id="statement-130">
-<p><strong>Утверждение: </strong>Пусть <span class="math inline">\(t \in
-\mathbb{T}^q_p\)</span> и координаты <span
-class="math inline">\(t\)</span> в базисе <span class="math inline">\(e
-= \{e_1, \ldots, e_n\}\)</span> – это <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(t \in \mathbb{T}^q_p\)</span> и координаты
+<span class="math inline">\(t\)</span> в базисе <span
+class="math inline">\(e = \{e_1, \ldots, e_n\}\)</span> – это <span
 class="math inline">\(t^{i_1\,\,\ldots\,\,
 i_q}_{j_1\,\,\ldots\,\,j_p}\)</span>.</p>
 <p>Пусть <span class="math inline">\(\hat{e} = \{\hat{e_1}, \ldots,
@@ -407,7 +421,7 @@ class="math inline">\(D\)</span>.</p>
 i_q}_{j_1\,\,\ldots\,\,j_p} = \displaystyle \sum C_{j_1}^{l_1}\ldots
 C_{j_p}^{l_p} t^{k_1\,\,\ldots\,\, k_q}_{l_1\,\,\ldots\,\,l_p}
 D^{i_1}_{k_1}\ldots D^{i_q}_{k_q}\]</span></p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="27.5" id="свертка-тензора">Свертка тензора</h2>
@@ -419,12 +433,12 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 1}^{n}t(v_1, \ldots, v_{r - 1}, e_i, v_{r + 1}, \ldots, v_p, f_1,
 \ldots, f_{s - 1}, \varepsilon^i, f_{s + 1}, \ldots, f_q)\]</span></p>
 <div id="statement-131">
-<p><strong>Утверждение: </strong><span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math inline">\(\bar{t}\)</span> не зависит от выбора базиса.</p>
-<p><em>Доказательство:</em> Можно доказывать для полилинейной функции
-<span class="math inline">\(g(e_i, \varepsilon^i)\)</span>, так как
-остальные аргументы фиксированы. Пусть <span
-class="math inline">\(e\)</span> и <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Можно
+доказывать для полилинейной функции <span class="math inline">\(g(e_i,
+\varepsilon^i)\)</span>, так как остальные аргументы фиксированы. Пусть
+<span class="math inline">\(e\)</span> и <span
 class="math inline">\(\tilde{e}\)</span> базисы в <span
 class="math inline">\(V\)</span>. Необходимо <span
 class="math display">\[\displaystyle \sum_{i}^{n}g(e_i, \varepsilon^i) =
@@ -434,8 +448,8 @@ class="math display">\[\displaystyle \sum_{i}^{n}g(e_i, \varepsilon^i) =
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-143">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(t \in
-\mathbb{T}^q_p\)</span>. Тензор <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(t \in \mathbb{T}^q_p\)</span>. Тензор <span
 class="math inline">\(\bar{t}\)</span> типа <span
 class="math inline">\((p - 1, q - 1)\)</span>, полученный по формуле:
 <span class="math display">\[\bar{t} = \displaystyle \sum_{i =
@@ -446,8 +460,9 @@ class="math inline">\(r\)</span>-ому ковариантному индекс�
 class="math inline">\(s\)</span>-ому контравариантному.</p>
 </div>
 <div id="statement-132">
-<p><strong>Утверждение: </strong>Пусть координаты тензора <span
-class="math inline">\(t \in \mathbb{T}^q_p\)</span> – это <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+координаты тензора <span class="math inline">\(t \in
+\mathbb{T}^q_p\)</span> – это <span
 class="math inline">\(t^{i_1\,\,\ldots\,\,
 i_q}_{j_1\,\,\ldots\,\,j_p}\)</span>. Тогда координаты свертки тензора
 получаются по формуле: <span
@@ -456,69 +471,75 @@ class="math display">\[\hat{t}^{i_1\,\,\ldots\,\,i_{s - 1}i_{s +
 1}\,\,\ldots\,\,j_p} = \displaystyle \sum t^{i_1\,\,\ldots\,\,i_{s -
 1}\,\, l \,\,i_{s + 1}\,\,\ldots\,\, i_q}_{j_1\,\,\ldots\,\,j_{r - 1}
 \,\,l\,\, j_{r + 1}\,\,\ldots\,\,j_p}\]</span></p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="27.6"
 id="симметрические-и-кососимметрические-тензоры">Симметрические и
 кососимметрические тензоры</h2>
 <div id="definition-144">
-<p><strong>Определение: </strong>Тензор <span
-class="math inline">\(t\)</span> типа <span class="math inline">\((p,
-0)\)</span> – <em>симметричный</em>, если <span
-class="math inline">\(\forall \pi \in S_p\)</span> (группа перестановок)
-<span class="math inline">\(\forall v_1, \ldots, v_p \in V \,\,\,\,
-t(v_1, \ldots, v_p) = t(v_{\pi(1)}, \ldots, v_{\pi(p)})\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Тензор
+<span class="math inline">\(t\)</span> типа <span
+class="math inline">\((p, 0)\)</span> – <em>симметричный</em>, если
+<span class="math inline">\(\forall \pi \in S_p\)</span> (группа
+перестановок) <span class="math inline">\(\forall v_1, \ldots, v_p \in V
+\,\,\,\, t(v_1, \ldots, v_p) = t(v_{\pi(1)}, \ldots,
+v_{\pi(p)})\)</span>.</p>
 </div>
 <div id="definition-145">
-<p><strong>Определение: </strong>Множество симметричных тензоров типа
-<span class="math inline">\((p, 0)\)</span> обозначается <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество симметричных тензоров типа <span
+class="math inline">\((p, 0)\)</span> обозначается <span
 class="math inline">\(\mathbb{T}^{+}_p\)</span>.</p>
 </div>
 <div id="statement-133">
-<p><strong>Утверждение: </strong>Множество <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Множество <span
 class="math inline">\(\mathbb{T}^{+}_p\)</span> является
 подпространством в пространстве <span
 class="math inline">\(\mathbb{T}^0_p\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-146">
-<p><strong>Определение: </strong>Тензор <span
-class="math inline">\(t\)</span> типа <span class="math inline">\((p,
-0)\)</span> – <em>кососимметричный</em>, если <span
-class="math inline">\(\forall \pi \in S_p\)</span> (группа перестановок)
-<span class="math inline">\(\forall v_1, \ldots, v_p \in V^{*} \,\,\,\,
-t(v_1, \ldots, v_p) = \operatorname{sgn} (\pi) t(v_{\pi(1)}, \ldots,
-v_{\pi(p)})\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Тензор
+<span class="math inline">\(t\)</span> типа <span
+class="math inline">\((p, 0)\)</span> – <em>кососимметричный</em>, если
+<span class="math inline">\(\forall \pi \in S_p\)</span> (группа
+перестановок) <span class="math inline">\(\forall v_1, \ldots, v_p \in
+V^{*} \,\,\,\, t(v_1, \ldots, v_p) = \operatorname{sgn} (\pi)
+t(v_{\pi(1)}, \ldots, v_{\pi(p)})\)</span>.</p>
 </div>
 <div id="definition-147">
-<p><strong>Определение: </strong>Множество кососимметричных тензоров
-типа <span class="math inline">\((p, 0)\)</span> обозначается <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество кососимметричных тензоров типа <span
+class="math inline">\((p, 0)\)</span> обозначается <span
 class="math inline">\(\Lambda^p(V^{*})\)</span>.</p>
 </div>
 <div id="statement-134">
-<p><strong>Утверждение: </strong>Множество <span
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Множество <span
 class="math inline">\(\Lambda^p(V^{*})\)</span> является
 подпространством в пространстве <span
 class="math inline">\(\mathbb{T}^0_p\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="27.7"
 id="симметрирование-и-альтернирование-тензоров">Симметрирование и
 альтернирование тензоров</h2>
 <div id="definition-148">
-<p><strong>Определение: </strong>Пусть <span class="math inline">\(t \in
-\mathbb{T}^0_p\)</span>, <span class="math inline">\(\sigma \in
-S_n\)</span>. Определим отображение <span
-class="math inline">\(\vartheta_{\sigma}: \mathbb{T}^0_p \to
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(t \in \mathbb{T}^0_p\)</span>, <span
+class="math inline">\(\sigma \in S_n\)</span>. Определим отображение
+<span class="math inline">\(\vartheta_{\sigma}: \mathbb{T}^0_p \to
 \mathbb{T}^0_p \,\,\,\, \,\,\,\, (\vartheta_{\sigma}(t))(v_1, \ldots,
 v_p) = t(v_{\sigma(1)}, \ldots, v_{\sigma(p)}) \,\,\,\, \forall v_1,
 \ldots, v_p \in V\)</span>.</p>
 </div>
 <div id="definition-149">
-<p><strong>Определение: </strong><em>Симметрирование</em> тензора <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Симметрирование</em> тензора <span
 class="math inline">\(t \in \mathbb{T}^0_p\)</span> – это результат
 применения к нему оператора <span
 class="math inline">\(\operatorname{Sym}: t \mapsto
@@ -529,18 +550,19 @@ S_p}\vartheta_{\sigma}(t)\)</span>.</p>
 id="свойства-оператора-симметрирования">Свойства оператора
 симметрирования</h3>
 <div id="statement-135">
+<span class="margin-lft"><strong>Утверждение: </strong></span>
 <ol type="1">
-<li><strong>Утверждение: </strong></li>
 <li><span class="math inline">\(\operatorname{Sym}\circ
 \operatorname{Sym} = \operatorname{Sym}\)</span></li>
 <li><span class="math inline">\(\operatorname{img} \operatorname{Sym} =
 \mathbb{T}^{+}_p\)</span></li>
 </ol>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-150">
-<p><strong>Определение: </strong><em>Альтернирование</em> тензора <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Альтернирование</em> тензора <span
 class="math inline">\(t \in \mathbb{T}^0_p\)</span> – это результат
 применения к нему оператора <span
 class="math inline">\(\operatorname{Alt}: t \mapsto
@@ -551,14 +573,14 @@ S_p}\operatorname{sgn}(\sigma)\vartheta_{\sigma}(t)\)</span>.</p>
 id="свойства-оператора-альтернирования">Свойства оператора
 альтернирования</h3>
 <div id="statement-136">
+<span class="margin-lft"><strong>Утверждение: </strong></span>
 <ol type="1">
-<li><strong>Утверждение: </strong></li>
 <li><span class="math inline">\(\operatorname{Alt}\circ
 \operatorname{Alt} = \operatorname{Alt}\)</span></li>
 <li><span class="math inline">\(\operatorname{img} \operatorname{Alt} =
 \Lambda^p(V^{*})\)</span></li>
 </ol>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 

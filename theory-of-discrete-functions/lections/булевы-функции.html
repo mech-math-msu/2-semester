@@ -11,7 +11,10 @@
     
     <title>Булевы функции</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,17 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="булевы-функции-1.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="булевы-функции-1.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,40 +266,45 @@
 
 <h1 data-number="1" id="булевы-функции">Булевы функции</h1>
 <div id="definition-0">
-<p><strong>Определение:</strong> <em>Конечный упорядоченный набор</em> –
-это <span class="math inline">\((a_1, \ldots, a_n), \,\,\,\, a_i \in A_i
-\,\,\,\, \forall i \in \{1, \ldots, n\}, \,\,\,\, A_1, \ldots,
-A_n\)</span> – некоторые множества.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Конечный упорядоченный набор</em> – это <span
+class="math inline">\((a_1, \ldots, a_n), \,\,\,\, a_i \in A_i \,\,\,\,
+\forall i \in \{1, \ldots, n\}, \,\,\,\, A_1, \ldots, A_n\)</span> –
+некоторые множества.</p>
 </div>
 <p><strong>Упражнение:</strong><a name="exercise-0"></a> Определите
 конечный упорядоченный набор используя множества, а не вот эти вот
 круглые скобочки.</p>
 <div id="definition-1">
-<p><strong>Определение:</strong> <em>Прямое произведение</em> множеств
-<span class="math inline">\(A_1\times A_2\times\ldots\times A_n =
-\{(a_1, \ldots, a_n): \,\,\,\, a_i \in A_i\}\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Прямое произведение</em> множеств <span
+class="math inline">\(A_1\times A_2\times\ldots\times A_n = \{(a_1,
+\ldots, a_n): \,\,\,\, a_i \in A_i\}\)</span>.</p>
 </div>
 <div id="definition-2">
-<p><strong>Определение:</strong> <em>Значение</em> <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Значение</em> <span
 class="math inline">\(i\)</span><em>-ой переменной</em> – это <span
 class="math inline">\(i\)</span>-й элемент упорядоченного набора.</p>
 </div>
 <div id="definition-3">
-<p><strong>Определение:</strong> <span
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
 class="math inline">\(n\)</span><em>- мерный булев куб</em> <span
 class="math inline">\(B_n = \{0, 1\} \times \ldots \times \{0, 1\} =
 \{0, 1\}^n = \{(x_1, \ldots, x_n): \,\,\,\, x_i \in \{0,
 1\}\}\)</span>.</p>
 </div>
 <div id="definition-4">
-<p><strong>Определение:</strong> <em>Булева функция</em> от <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Булева функция</em> от <span
 class="math inline">\(n\)</span> переменных – это <span
 class="math inline">\(f: \,\,\,\, B_n \to \{0, 1\}\)</span>.</p>
 </div>
 <div id="definition-5">
-<p><strong>Определение:</strong> Переменная <span
-class="math inline">\(x_i\)</span> – <em>существенная переменная</em>
-булевой функции <span class="math inline">\(f\)</span>, если <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Переменная <span class="math inline">\(x_i\)</span> –
+<em>существенная переменная</em> булевой функции <span
+class="math inline">\(f\)</span>, если <span
 class="math display">\[f(x_1, \ldots, x_{i - 1}, 0, x_{i + 1}, \ldots,
 x_n) \ne f(x_1, \ldots, x_{i - 1}, 1, x_{i + 1}, \ldots,
 x_n),\]</span></p>
@@ -288,11 +312,12 @@ x_n),\]</span></p>
 <p>иначе переменная <span class="math inline">\(x_i\)</span> –
 <em>фиктивная</em>.</p>
 <div id="definition-6">
-<p><strong>Определение:</strong> (<em>равные функции</em>) <span
-class="math inline">\(f \sim g\)</span>, если <span
-class="math inline">\(\exists\)</span> цепочка добавлений и удалений
-фиктивных переменных, переводящая <span class="math inline">\(f\)</span>
-в <span class="math inline">\(g\)</span> (может быть <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>равные функции</em>) <span class="math inline">\(f
+\sim g\)</span>, если <span class="math inline">\(\exists\)</span>
+цепочка добавлений и удалений фиктивных переменных, переводящая <span
+class="math inline">\(f\)</span> в <span
+class="math inline">\(g\)</span> (может быть <span
 class="math inline">\(0\)</span> добавлений и удалений).</p>
 </div>
 <h2 data-number="1.1" id="элементарные-булевы-функции">Элементарные
@@ -300,11 +325,12 @@ class="math inline">\(0\)</span> добавлений и удалений).</p>
 <p>очевидно</p>
 <h2 data-number="1.2" id="формула">Формула</h2>
 <div id="definition-7">
-<p><strong>Определение:</strong> <em>Алфавит</em> – это некоторое
-множество.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Алфавит</em> – это некоторое множество.</p>
 </div>
 <div id="definition-8">
-<p><strong>Определение:</strong> <em>Слово</em> <em>длины</em> <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Слово</em> <em>длины</em> <span
 class="math inline">\(n \in \mathbb{N}\)</span> в некотором алфавите
 <span class="math inline">\(A\)</span> – это <span
 class="math inline">\(\alpha: \,\,\,\, \{0, \ldots, n\} \to A\)</span>.
@@ -314,8 +340,9 @@ class="math inline">\(\alpha: \,\,\,\, \{0, \ldots, n\} \to A\)</span>.
 <p>Слово длины <span class="math inline">\(0\)</span> обозначается <span
 class="math inline">\(\Lambda\)</span>.</p>
 <div id="definition-9">
-<p><strong>Определение:</strong> <em>Алфавит для функций</em> – это
-<span class="math inline">\((X, S, \{(, , , )\})\)</span>, где</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Алфавит для функций</em> – это <span
+class="math inline">\((X, S, \{(, , , )\})\)</span>, где</p>
 </div>
 <p><span class="math inline">\(X = \{x_1, x_2, \ldots\}\)</span> –
 множество символов переменных.</p>
@@ -325,12 +352,14 @@ class="math inline">\(\Lambda\)</span>.</p>
 состоящее из открывающей круглой скобки, закрывающей круглой скобки и
 запятой :)</p>
 <div id="definition-10">
-<p><strong>Определение:</strong> <em>Сигнатура</em> алфавита для функций
-– это отображение <span class="math inline">\(\Sigma: \,\,\,\, S \to
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Сигнатура</em> алфавита для функций – это
+отображение <span class="math inline">\(\Sigma: \,\,\,\, S \to
 P_2\)</span>(множество всех булевых функций).</p>
 </div>
 <div id="definition-11">
-<p><strong>Определение:</strong> (Синтаксис – что является формулой)</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(Синтаксис – что является формулой)</p>
 <ol type="1">
 <li><span class="math inline">\(x_i \in X, \,\,\,\, i \in
 \mathbb{N}\)</span> – <em>формула</em>.</li>
@@ -343,8 +372,8 @@ class="math inline">\(\Phi_1, \ldots, \Phi_n\)</span> – формулы. Тог
 </ol>
 </div>
 <div id="definition-12">
-<p><strong>Определение:</strong> (Семантика – какое значение у
-формулы)</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(Семантика – какое значение у формулы)</p>
 <p>Пусть <span class="math inline">\(\Phi\)</span> формула в сигнатуре
 <span class="math inline">\(\Sigma\)</span>. Пусть <span
 class="math inline">\(P = \{x_{i1}, \ldots, x_{it}\}\)</span> множество
@@ -365,8 +394,8 @@ x_{ij}\)</span>.</li>
 </ol>
 </div>
 <div id="definition-13">
-<p><strong>Определение:</strong> Формула <span
-class="math inline">\(\Phi\)</span> <em>задает</em> функцию <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Формула
+<span class="math inline">\(\Phi\)</span> <em>задает</em> функцию <span
 class="math inline">\(f\)</span> относительно <span
 class="math inline">\(P\)</span>, если <span
 class="math inline">\(\forall \alpha \in \{0, 1\}^t \,\,\,\, f(\alpha) =
@@ -375,7 +404,7 @@ class="math inline">\(\forall \alpha \in \{0, 1\}^t \,\,\,\, f(\alpha) =
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="index.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

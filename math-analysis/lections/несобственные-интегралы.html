@@ -11,7 +11,10 @@
     
     <title>Несобственные интегралы</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,17 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="фигуры-и-площади.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="функции-ограниченной-вариации.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="фигуры-и-площади.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="функции-ограниченной-вариации.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,11 +267,11 @@
 <h1 data-number="6" id="несобственные-интегралы">Несобственные
 интегралы</h1>
 <div id="definition-21">
-<p><strong>Определение:</strong> Пусть функция <span
-class="math inline">\(f(t)\)</span> определена на полуинтервале <span
-class="math inline">\([a, b)\)</span> и <span class="math inline">\(f(t)
-\in R[a, x]\,\,\,\, \forall x \in [a, b)\)</span>. <span
-class="math inline">\(\displaystyle\lim_{x \to
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+функция <span class="math inline">\(f(t)\)</span> определена на
+полуинтервале <span class="math inline">\([a, b)\)</span> и <span
+class="math inline">\(f(t) \in R[a, x]\,\,\,\, \forall x \in [a,
+b)\)</span>. <span class="math inline">\(\displaystyle\lim_{x \to
 b-0}\displaystyle\int\limits_a^x f(t)dt\)</span> – <em>несобственный
 интеграл I рода</em> функции <span class="math inline">\(f(t)\)</span>
 на <span class="math inline">\([a, b)\)</span>.</p>
@@ -266,8 +285,8 @@ b-0}\displaystyle\int\limits_a^x f(t)dt\)</span> не существует, то
 class="math inline">\(\displaystyle\int\limits_a^b f(t)dt\)</span>.</p>
 </div>
 <div id="definition-22">
-<p><strong>Определение:</strong> Пусть функция <span
-class="math inline">\(f(t)\)</span> определена на <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+функция <span class="math inline">\(f(t)\)</span> определена на <span
 class="math inline">\([a, +\infty)\)</span> и <span
 class="math inline">\(f(t) \in R[a, x]\,\,\,\, \forall x \in [a,
 +\infty)\)</span>. <span class="math inline">\(\displaystyle\lim_{x \to
@@ -285,19 +304,21 @@ class="math inline">\(\displaystyle\int\limits_a^{+\infty}
 f(t)dt\)</span>.</p>
 </div>
 <div id="theorem-17">
-<p><strong>Теорема:</strong> (<em>критерий Коши существования
-несобственного интеграла</em>) <span class="math display">\[\exists
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(<em>критерий Коши существования несобственного
+интеграла</em>) <span class="math display">\[\exists
 \displaystyle\int\limits_a^{+\infty} f(x)dx \Leftrightarrow \forall
 \varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \,\,\,\, \forall x_1,
 x_2 &gt; \delta \,\,\,\, \left|\displaystyle\int\limits_{x_1}^{x_2}
 f(x)dx\right| &lt; \varepsilon\]</span></p>
-<p><em>Доказательство:</em> критерий Коши для функции <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> критерий
+Коши для функции <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="6.1" id="свойства-несобственного-интеграла">Свойства
 несобственного интеграла</h2>
 <div id="statement-19">
-<p><strong>Утверждение:</strong></p>
+<span class="margin-lft"><strong>Утверждение: </strong></span>
 <ol type="1">
 <li>(линейность) Пусть <span class="math inline">\(\exists
 \displaystyle\int\limits_a^w f(x)dx\)</span> и <span
@@ -306,8 +327,8 @@ g(x)dx\)</span>. Тогда <span class="math inline">\(\forall \alpha, \beta
 \in \mathbb{R} \,\,\,\, \exists \alpha \displaystyle\int\limits_a^w
 f(x)dx + \beta \displaystyle\int\limits_a^w g(x)dx\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em> пределы <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> пределы
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <ol start="2" type="1">
 <li>(интегрирование по частям) Пусть существует два из трех: <span
 class="math inline">\(\displaystyle\int\limits_a^w f’(x)g(x)dx\)</span>,
@@ -318,7 +339,7 @@ class="math display">\[\displaystyle\int\limits_a^w f’(x)g(x)dx =
 \displaystyle\lim_{x \to w}f(x)g(x) - \displaystyle\int\limits_a^w
 f(x)g’(x)dx\]</span></li>
 </ol>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <ol start="3" type="1">
 <li>(замена переменной) Пусть <span class="math inline">\(\exists
@@ -331,7 +352,7 @@ class="math inline">\(\displaystyle\lim_{t \to w_1}f(t) = w\)</span>.
 \displaystyle\int\limits_{\alpha}^{w_1} f(\varphi(t)) \varphi’(t)
 dt\]</span></li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol start="4" type="1">
 <li>(интегрирование неравенств) Пусть <span
 class="math inline">\(\exists \displaystyle\int\limits_a^w
@@ -342,8 +363,8 @@ w)\)</span>. Тогда <span
 class="math display">\[\displaystyle\int\limits_a^w f(x)dx \le
 \displaystyle\int\limits_a^w g(x)dx\]</span></li>
 </ol>
-<p><em>Доказательство:</em> пределы <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> пределы
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <ol start="5" type="1">
 <li>(модуль) Если <span class="math inline">\(\exists
 \displaystyle\int\limits_a^w |f(x)|dx\)</span>, то <span
@@ -352,14 +373,14 @@ f(x)dx\)</span> и <span
 class="math display">\[\left|\displaystyle\int\limits_a^w f(x)dx\right|
 \le \left|\displaystyle\int\limits_a^w |f(x)|dx\right|\]</span></li>
 </ol>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\left|\displaystyle\int\limits_{x_1}^{x_2}
 f(x)dx\right| \le \left|\displaystyle\int\limits_{x_1}^{x_2}
 |f(x)|dx\right| &lt; \varepsilon \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="definition-23">
-<p><strong>Определение:</strong></p>
-<p>Если <span class="math inline">\(\exists \displaystyle\int\limits_a^w
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+<span class="math inline">\(\exists \displaystyle\int\limits_a^w
 |f(x)|dx\)</span>, то <span
 class="math inline">\(\displaystyle\int\limits_a^w f(x)dx\)</span> –
 <em>абсолютно сходящийся</em>.</p>
@@ -373,8 +394,8 @@ class="math inline">\(\displaystyle\int\limits_a^w f(x)dx\)</span> –
 id="признаки-сходимости-несобственного-интеграла">Признаки сходимости
 несобственного интеграла</h2>
 <div id="theorem-18">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(0 \le
-f(x) \le g(x)\)</span>.</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(0 \le f(x) \le g(x)\)</span>.</p>
 <p>Если <span class="math inline">\(\exists \displaystyle\int\limits_a^w
 g(x)dx\)</span>, то <span class="math inline">\(\exists
 \displaystyle\int\limits_a^w f(x)dx\)</span>.</p>
@@ -382,13 +403,13 @@ g(x)dx\)</span>, то <span class="math inline">\(\exists
 \displaystyle\int\limits_a^w f(x)dx\)</span>, то <span
 class="math inline">\(\not\exists \displaystyle\int\limits_a^w
 g(x)dx\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall b \in
-[a, w) \,\,\,\, 0 \le \displaystyle\int\limits_a^b f(x)dx \le
-\displaystyle\int\limits_a^b g(x)dx\)</span>. Далее переходим к
-пределам, если <span class="math inline">\(\exists
-\displaystyle\int\limits_a^w g(x)dx\)</span>, то <span
-class="math inline">\(F(b) = \displaystyle\int\limits_a^b
-f(x)dx\)</span> ограничена, также <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall b \in [a, w) \,\,\,\, 0 \le
+\displaystyle\int\limits_a^b f(x)dx \le \displaystyle\int\limits_a^b
+g(x)dx\)</span>. Далее переходим к пределам, если <span
+class="math inline">\(\exists \displaystyle\int\limits_a^w
+g(x)dx\)</span>, то <span class="math inline">\(F(b) =
+\displaystyle\int\limits_a^b f(x)dx\)</span> ограничена, также <span
 class="math inline">\(F(b)\)</span> монотонна(по аддитивности
 интеграла), а следовательно <span
 class="math inline">\(\exists\displaystyle\int\limits_a^w
@@ -396,20 +417,20 @@ f(x)dx\)</span>(почему?) <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-19">
-<p><strong>Теорема:</strong> Если <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Если <span
 class="math inline">\(\displaystyle\lim_{x \to w}\frac{f(x)}{g(x)} =
 1\)</span> и <span class="math inline">\(f(x), g(x) &gt; 0\)</span>, то
 интегралы <span class="math inline">\(\displaystyle\int\limits_a^w
 g(x)dx\)</span> и <span
 class="math inline">\(\displaystyle\int\limits_a^w f(x)dx\)</span>
 сходятся или расходятся одновременно.</p>
-<p><em>Доказательство:</em> Взять <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Взять <span
 class="math inline">\(\varepsilon = 1\)</span> для предела и по
 предыдущей теореме.</p>
 </div>
 <div id="theorem-20">
-<p><strong>Теорема:</strong> (признак Дирихле <span
-class="math inline">\((\mathcal{D})\)</span> и Абеля <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(признак
+Дирихле <span class="math inline">\((\mathcal{D})\)</span> и Абеля <span
 class="math inline">\((\mathcal{A})\)</span>)</p>
 <p>Пусть <span class="math inline">\(f(x)\)</span> и <span
 class="math inline">\(g(x)\)</span> ограничены на <span
@@ -432,7 +453,7 @@ class="math inline">\(\displaystyle\lim_{x\to w}g(x) = 0\)</span> и
 f(x)dx\right| &lt; M\)</span>, то <span class="math inline">\(\exists
 \displaystyle\int\limits_a^w f(x)g(x)dx\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span
 class="math display">\[\left|\displaystyle\int\limits_{x_1}^{x_2}
 f(x)g(x)dx\right| = \left|g(x_1)\displaystyle\int\limits_{x_1}^{\xi}
@@ -449,8 +470,8 @@ f(x)dx\right|\le\]</span> <span class="math display">\[\le
 id="главное-значение-интеграла-в-смысле-коши">Главное значение интеграла
 в смысле Коши</h2>
 <div id="definition-24">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f(x)\)</span> определена на <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена на <span
 class="math inline">\([a, b]\)</span> и не ограничена в точке <span
 class="math inline">\(c \in (a, b)\)</span>. Если <span
 class="math inline">\(\exists \displaystyle\lim_{\varepsilon \to
@@ -463,8 +484,8 @@ class="math inline">\(\displaystyle\int\limits_a^b f(x)dx\)</span> <em>в
 смысле Коши</em>.</p>
 </div>
 <div id="definition-25">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(f(x)\)</span> определена на <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f(x)\)</span> определена на <span
 class="math inline">\(\mathbb{R}\)</span> и не ограничена. Если <span
 class="math inline">\(\exists \displaystyle\lim_{a \to
 +\infty}\displaystyle\int\limits_{-a}^{a} f(x)dx\)</span>, то он
@@ -475,19 +496,21 @@ class="math inline">\(\displaystyle\int\limits_{-\infty}^{+\infty}
 f(x)dx\)</span> <em>в смысле Коши</em>.</p>
 </div>
 <div id="statement-20">
-<p><strong>Утверждение:</strong> <span class="math display">\[\exists
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
+class="math display">\[\exists
 v.p.\displaystyle\int\limits_{-\infty}^{+\infty} f(x)dx \Leftrightarrow
 \exists \displaystyle\int\limits_0^{+\infty} (f(x) -
 f(-x))dx\]</span></p>
-<p><em>Доказательство:</em> <span class="math inline">\(f(x) =
-\frac{f(x) - f(-x)}{2} + \frac{f(x) + f(-x)}{2}\)</span>, где одна из
-дробей четная функция, а другая нечетная, интеграл от нечетной – ноль
-<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(f(x) = \frac{f(x) - f(-x)}{2} + \frac{f(x) +
+f(-x)}{2}\)</span>, где одна из дробей четная функция, а другая
+нечетная, интеграл от нечетной – ноль <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="фигуры-и-площади.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

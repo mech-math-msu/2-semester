@@ -11,6 +11,7 @@
     
     <title>Аннулирующй и минимальный многочлены</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -85,7 +86,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -100,6 +101,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -218,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -230,6 +236,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -258,9 +268,9 @@
 id="аннулирующй-и-минимальный-многочлены">Аннулирующй и минимальный
 многочлены</h1>
 <div id="definition-37">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> векторное пространство над полем <span
-class="math inline">\(F\)</span>, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> векторное пространство над полем
+<span class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>. <span class="math inline">\(f \in
 F[t]\)</span> – <em>аннулирующий многочлен</em> для <span
@@ -274,9 +284,9 @@ class="math inline">\(f(\mathcal{A}) = 0\)</span>.</p>
 1\)</span>, т.к. <span class="math inline">\(\mathcal{A} - 1 \mathcal{I}
 = 0\)</span>.</p>
 <div id="definition-38">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> векторное пространство над полем <span
-class="math inline">\(F\)</span>, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> векторное пространство над полем
+<span class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>. Аннулирующий многочлен <span
 class="math inline">\(\mathcal{A}\)</span> минимальной степени со
@@ -286,13 +296,13 @@ class="math inline">\(\mathcal{A}\)</span>.</p>
 <p>Обозначается: <span
 class="math inline">\(\mu_{\mathcal{A}}(t)\)</span>.</p>
 </div>
-<h2 data-number="9.1"
+<h3 data-number="9.0.1"
 id="простейшие-свойства-аннулирующего-многочлена">Простейшие свойства
-аннулирующего многочлена</h2>
+аннулирующего многочлена</h3>
 <div id="statement-45">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> векторное пространство над полем <span
-class="math inline">\(F\)</span>, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> векторное пространство над полем
+<span class="math inline">\(F\)</span>, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>. Тогда</p>
 <ol type="1">
@@ -303,7 +313,7 @@ class="math inline">\(V\)</span>. Тогда</p>
 class="math inline">\(\mu_{\mathcal{A}}\)</span> совпадает с множеством
 корней характеристического многочлена.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li>Пусть <span class="math inline">\(\zeta(t)\)</span> – аннулирующий
 многочлен оператора <span class="math inline">\(\mathcal{A}\)</span>.
@@ -340,11 +350,12 @@ f(\lambda)e \Rightarrow 0 = \mu_{\mathcal{A}}(\mathcal{A})(e) =
 \mu_{\mathcal{A}}(\lambda) = 0 \,\,\,\,\blacksquare\)</span></li>
 </ol>
 </div>
-<h2 data-number="9.2" id="жорданова-нормальная-форма">Жорданова
+<h2 data-number="9.1" id="жорданова-нормальная-форма">Жорданова
 нормальная форма</h2>
-<h3 data-number="9.2.1" id="определения">Определения</h3>
+<h3 data-number="9.1.1" id="определения">Определения</h3>
 <div id="definition-39">
-<p><strong>Определение: </strong>Квадратная матрица вида <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Квадратная матрица вида <span
 class="math inline">\(\operatorname{J}_k(\lambda) =
 \left(\begin{array}{ccccc}
 \lambda &amp; 1 &amp; 0 &amp; \dots &amp; 0\\
@@ -359,15 +370,15 @@ class="math inline">\(k\)</span>.</p>
 class="math inline">\(\operatorname{J}_k(\lambda)\)</span>.</p>
 </div>
 <div id="definition-40">
-<p><strong>Определение: </strong>Квадратная матрица размера <span
-class="math inline">\(n \times n\)</span>, состоящая из жордановых
-клеток на диагонали и нулей на остальных местах – это <em>жорданова
-матрица</em> размера <span class="math inline">\(n \times
-n\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Квадратная матрица размера <span class="math inline">\(n
+\times n\)</span>, состоящая из жордановых клеток на диагонали и нулей
+на остальных местах – это <em>жорданова матрица</em> размера <span
+class="math inline">\(n \times n\)</span>.</p>
 </div>
 <div id="definition-41">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство, <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство, <span
 class="math inline">\(\mathcal{A}\)</span> – линейный оператор на <span
 class="math inline">\(V\)</span>. Если существует базис, в котором
 матрица <span class="math inline">\(\mathcal{A}\)</span> жорданова, то
@@ -375,10 +386,11 @@ class="math inline">\(V\)</span>. Если существует базис, в �
 форма</em> линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span>.</p>
 </div>
-<h3 data-number="9.2.2" id="простейшие-свойства">Простейшие
+<h3 data-number="9.1.2" id="простейшие-свойства">Простейшие
 свойства</h3>
 <div id="statement-46">
-<p><strong>Утверждение: </strong>Пусть матрица линейного оператора <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+матрица линейного оператора <span
 class="math inline">\(\mathcal{A}\)</span> имеет жорданову нормальную
 форму размера <span class="math inline">\(n \times n\)</span> и состоит
 из жордановых клеток <span
@@ -392,7 +404,7 @@ class="math inline">\(\operatorname{J}_{k_1}(\lambda_1), \ldots,
 class="math inline">\(\operatorname{J}_{k_1}(\lambda_1), \ldots,
 \operatorname{J}_{k_s}(\lambda_s)\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li>очев <span class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
 <li>не очев <span
@@ -400,8 +412,8 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
 </ol>
 </div>
 <div id="statement-47">
+<span class="margin-lft"><strong>Утверждение: </strong></span>
 <ol type="1">
-<li><strong>Утверждение: </strong></li>
 <li><span class="math inline">\(\operatorname{J}_{k}(0)^m =
 \begin{cases}
 m,\,\,\,\, m &lt; k\\
@@ -420,26 +432,26 @@ k - m,\,\,\,\, \lambda = \alpha, k \ge m\\
 0,\,\,\,\, \lambda = \alpha, k &lt; m
 \end{cases}\)</span></li>
 </ol>
-<p><em>Доказательство:</em> все кроме <span
-class="math inline">\(3\)</span> очевидно <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> все кроме
+<span class="math inline">\(3\)</span> очевидно <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-48">
-<p><strong>Утверждение: </strong>Пусть <span
-class="math inline">\(V\)</span> – векторное пространство размерности
-<span class="math inline">\(n\)</span>. Пусть матрица линейного
-оператора <span class="math inline">\(\mathcal{A}\)</span> в некотором
-базисе имеет жорданову нормальную форму <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – векторное пространство
+размерности <span class="math inline">\(n\)</span>. Пусть матрица
+линейного оператора <span class="math inline">\(\mathcal{A}\)</span> в
+некотором базисе имеет жорданову нормальную форму <span
 class="math inline">\(\operatorname{J}_n\)</span>. Тогда <span
 class="math inline">\(\dim V_{\lambda}\)</span> равно количеству
 жордановых клеток в матрице <span
 class="math inline">\(\mathcal{A}\)</span> с <span
 class="math inline">\(\lambda\)</span> на диагонали.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(V_{\lambda} =
-\{v \in V: \,\,\,\, \mathcal{A}(v) = \lambda v\}\)</span>, а это
-множество решений <span class="math inline">\(\mathcal{A} - \lambda
-\mathcal{I} = 0\)</span> или <span
-class="math inline">\(\operatorname{J}_n - \lambda E = 0\)</span>.
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(V_{\lambda} = \{v \in V: \,\,\,\, \mathcal{A}(v) =
+\lambda v\}\)</span>, а это множество решений <span
+class="math inline">\(\mathcal{A} - \lambda \mathcal{I} = 0\)</span> или
+<span class="math inline">\(\operatorname{J}_n - \lambda E = 0\)</span>.
 Следовательно, <span class="math inline">\(\dim V_{\lambda} = n -
 \operatorname{rk}\operatorname{J}_n\)</span>. Ранг жордановой матрицы –
 это сумма рангов составляющих ее клеток <span

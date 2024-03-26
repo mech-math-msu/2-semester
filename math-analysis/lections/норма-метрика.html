@@ -11,7 +11,10 @@
     
     <title>Норма, метрика</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,17 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="интеграл-римана-стилтьеса.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="функции-в-mathbbrn.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="интеграл-римана-стилтьеса.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="функции-в-mathbbrn.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,8 +266,9 @@
 
 <h1 data-number="9" id="норма-метрика">Норма, метрика</h1>
 <div id="definition-32">
-<p><strong>Определение:</strong> Функция <span class="math inline">\(f:
-\mathbb{R}^n \to \mathbb{R}\)</span> – <em>норма</em>, если:</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Функция
+<span class="math inline">\(f: \mathbb{R}^n \to \mathbb{R}\)</span> –
+<em>норма</em>, если:</p>
 <ol type="1">
 <li><span class="math inline">\(\forall x \in \mathbb{R}^n \,\,\,\, f(x)
 \ge 0\)</span></li>
@@ -271,15 +291,15 @@ class="math inline">\(\mathbb{R}^n\)</span> – это попарное прои
 y)\)</span>.</p>
 </div>
 <div id="definition-33">
-<p><strong>Определение:</strong> Норма на <span
-class="math inline">\(\mathbb{R}^n\)</span> задается так: <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Норма
+на <span class="math inline">\(\mathbb{R}^n\)</span> задается так: <span
 class="math inline">\(||x|| = \sqrt{(x, x)}\)</span>.</p>
 <p><strong>Замечание:</strong> Норм много, и это не единственный способ
 задать норму.</p>
 </div>
 <div id="definition-34">
-<p><strong>Определение:</strong> Функция <span
-class="math inline">\(\rho: \mathbb{R}^n \times \mathbb{R}^n \to
+<p><span class="margin-lft"><strong>Определение: </strong></span>Функция
+<span class="math inline">\(\rho: \mathbb{R}^n \times \mathbb{R}^n \to
 \mathbb{R}\)</span> – <em>метрика (функция расстояния)</em>, если:</p>
 <ol type="1">
 <li><span class="math inline">\(\forall x, y \in \mathbb{R}^n \,\,\,\,
@@ -299,19 +319,20 @@ y||\)</span>.</p>
 </div>
 <h2 data-number="9.1" id="пределы">Пределы</h2>
 <div id="definition-35">
-<p><strong>Определение:</strong> Последовательность <span
-class="math inline">\(\{x\}_{k = 1}^{\infty}\)</span> – <em>сходящаяся
-(имеет предел)</em> равный <span class="math inline">\(a \in
-\mathbb{R}^n\)</span>, если <span class="math inline">\(\forall
-\varepsilon &gt; 0 \,\,\,\, \exists K \in N: \,\,\,\, \forall k &gt; K
-\,\,\,\, \rho(x_k, a) &lt; \varepsilon\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Последовательность <span class="math inline">\(\{x\}_{k
+= 1}^{\infty}\)</span> – <em>сходящаяся (имеет предел)</em> равный <span
+class="math inline">\(a \in \mathbb{R}^n\)</span>, если <span
+class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists K \in
+N: \,\,\,\, \forall k &gt; K \,\,\,\, \rho(x_k, a) &lt;
+\varepsilon\)</span>.</p>
 </div>
 <div id="statement-26">
-<p><strong>Утверждение:</strong> <span class="math inline">\(\exists
-\displaystyle\lim_{k \to \infty}\{x_k\} = a \Leftrightarrow \forall i
-\in \{1, \ldots, n\} \,\,\,\,\exists \displaystyle\lim_{k \to
-\infty}\{x_{k_i}\} = a_i\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
+class="math inline">\(\exists \displaystyle\lim_{k \to \infty}\{x_k\} =
+a \Leftrightarrow \forall i \in \{1, \ldots, n\} \,\,\,\,\exists
+\displaystyle\lim_{k \to \infty}\{x_{k_i}\} = a_i\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span> <span
 class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists K \in
 \mathbb{N}: \,\,\,\, \forall k &gt; K \,\,\,\, \sqrt{\displaystyle
@@ -324,22 +345,23 @@ a_i| &lt; \varepsilon \Rightarrow \sqrt{\displaystyle \sum_{i =
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-36">
-<p><strong>Определение:</strong> Множество <span class="math inline">\(A
-\subset \mathbb{R}^n\)</span> – <em>ограничено</em>, если содержится в
-некотором открытом шаре.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество <span class="math inline">\(A \subset
+\mathbb{R}^n\)</span> – <em>ограничено</em>, если содержится в некотором
+открытом шаре.</p>
 </div>
 <h3 data-number="9.1.1" id="теорема-больцано-вейерштрасса">Теорема
 Больцано-Вейерштрасса</h3>
 <div id="theorem-29">
-<p><strong>Теорема:</strong> (Больцано-Вейерштрасса) Пусть
-последовательность <span class="math inline">\(\{x_k\}_{k =
-1}^{\infty}\)</span> – ограниченное множество. Тогда у <span
-class="math inline">\(\{x_k\}\)</span> существует сходящаяся
-подпоследовательность <span class="math inline">\(\{x_{k_m}\}_{m =
-1}^{\infty}\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\{x_k\}_{k =
-1}^{\infty}\)</span> – ограничена, а значит каждая из
-“последовательностей-координат” <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(Больцано-Вейерштрасса) Пусть последовательность <span
+class="math inline">\(\{x_k\}_{k = 1}^{\infty}\)</span> – ограниченное
+множество. Тогда у <span class="math inline">\(\{x_k\}\)</span>
+существует сходящаяся подпоследовательность <span
+class="math inline">\(\{x_{k_m}\}_{m = 1}^{\infty}\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\{x_k\}_{k = 1}^{\infty}\)</span> – ограничена, а
+значит каждая из “последовательностей-координат” <span
 class="math inline">\(\{x_{ik}\}_{k = 1}^{\infty}\)</span> (<span
 class="math inline">\(i \in \{1, \ldots, n\}\)</span> – индекс
 координаты, <span class="math inline">\(k\)</span> – номер элемента
@@ -362,12 +384,13 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="9.2" id="прицип-полноты-кантора">“Прицип полноты
 Кантора”</h2>
 <div id="definition-37">
-<p><strong>Определение:</strong> Множество <span
-class="math inline">\(\Pi_{[a, b]} = \{x \in \mathbb{R}^n: \,\,\,\, a_i
-\le x_i \le b_i\}\)</span> – <em>параллелепипед</em>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество <span class="math inline">\(\Pi_{[a, b]} = \{x
+\in \mathbb{R}^n: \,\,\,\, a_i \le x_i \le b_i\}\)</span> –
+<em>параллелепипед</em>.</p>
 </div>
 <div id="theorem-30">
-<p><strong>Теорема:</strong> Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(\{a_k\}\)</span> и <span
 class="math inline">\(\{b_k\}\)</span>, таковы, что <span
 class="math inline">\(\Pi_{[a_{k+1}, b_{k+1}]} \subset \Pi_{[a_k,
@@ -375,10 +398,11 @@ b_k]}\)</span> и <span class="math inline">\(\forall i \in \{1, \ldots,
 n\} \,\,\,\, |a_{k_i} - b_{k_i}| \to 0, \,\,\,\, k \to \infty\)</span>.
 Тогда <span class="math inline">\(\exists ! \xi: \,\,\,\, \xi \in
 \Pi_{[a_k, b_k]} \,\,\,\, \forall k\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall i \in
-\{1, \ldots, n\} \,\,\,\, [a_{k+1}, b_{k +1}] \subset [a_k,
-b_k]\)</span> и <span class="math inline">\(|b_{k_i} - a_{k_i}| \to 0,
-\,\,\,\, k \to \infty\)</span>, значит по принципу поноты Кантора <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall i \in \{1, \ldots, n\} \,\,\,\, [a_{k+1},
+b_{k +1}] \subset [a_k, b_k]\)</span> и <span
+class="math inline">\(|b_{k_i} - a_{k_i}| \to 0, \,\,\,\, k \to
+\infty\)</span>, значит по принципу поноты Кантора <span
 class="math inline">\(\exists ! \xi_i: \,\,\,\, \xi_i \in [a_{k_i},
 b_{k_i}] \forall k\)</span>. Рассмотрим <span class="math inline">\(\xi
 = (\xi_1, \ldots, \xi_n)\)</span>, удовлетворяющий условиям теоремы
@@ -387,25 +411,26 @@ b_{k_i}] \forall k\)</span>. Рассмотрим <span class="math inline">\(\x
 <h2 data-number="9.3" id="расстояние-между-подмножествами">Расстояние
 между подмножествами</h2>
 <div id="definition-38">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(A, B
-\subset \mathbb{R}^n\)</span>. Тогда <span class="math inline">\(\rho(A,
-B) = \displaystyle\inf_{a \in A, b \in B}\rho(a, b)\)</span> –
-<em>расстояние между множествами</em> <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(A, B \subset \mathbb{R}^n\)</span>. Тогда
+<span class="math inline">\(\rho(A, B) = \displaystyle\inf_{a \in A, b
+\in B}\rho(a, b)\)</span> – <em>расстояние между множествами</em> <span
 class="math inline">\(A\)</span> и <span
 class="math inline">\(B\)</span>.</p>
 </div>
 <div id="theorem-31">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(A, B
-\subset \mathbb{R}^n\)</span> – замкнутые, <span
-class="math inline">\(A\)</span> – ограничено. Если <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(A, B \subset \mathbb{R}^n\)</span> – замкнутые,
+<span class="math inline">\(A\)</span> – ограничено. Если <span
 class="math inline">\(A \cap B = \varnothing\)</span>, то <span
 class="math inline">\(\rho(A, B) &gt; 0\)</span>.</p>
-<p><em>Доказательство:</em> (от противного) Пусть <span
-class="math inline">\(\displaystyle\inf_{x \in A, y \in B}\rho(x, y) =
-0\)</span>. Тогда <span class="math inline">\(\forall k \in \mathbb{N}
-\,\,\,\, \exists x_k \in A, y_k \in B: \,\,\,\, \rho(x_k, y_k) &lt;
-\frac{1}{k} \Rightarrow \{x_k\}_{k = 1}^{\infty}\)</span> – ограничена,
-а значит существует сходящаяся подпоследовательность <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> (от
+противного) Пусть <span class="math inline">\(\displaystyle\inf_{x \in
+A, y \in B}\rho(x, y) = 0\)</span>. Тогда <span
+class="math inline">\(\forall k \in \mathbb{N} \,\,\,\, \exists x_k \in
+A, y_k \in B: \,\,\,\, \rho(x_k, y_k) &lt; \frac{1}{k} \Rightarrow
+\{x_k\}_{k = 1}^{\infty}\)</span> – ограничена, а значит существует
+сходящаяся подпоследовательность <span
 class="math inline">\(\{x_{k_m}\}_{m = 1}^{\infty}\)</span> и <span
 class="math inline">\(\displaystyle \lim_{m\to \infty} x_{k_m} = x_0 \in
 A\)</span>, но <span class="math inline">\(\rho(x_0, y_{k_m}) \le
@@ -415,18 +440,20 @@ A\)</span>, но <span class="math inline">\(\rho(x_0, y_{k_m}) \le
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-32">
-<p><strong>Теорема:</strong> <span class="math inline">\(A \subset
-\mathbb{R}^n\)</span> – замкнуто, <span class="math inline">\(x \not\in
-A\)</span>. Тогда <span class="math inline">\(\exists y \in A: \,\,\,\,
-\rho(x, y) = \rho(x, A)\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall k \in
-\mathbb{N} \,\,\,\, \exists y_k \in A: \,\,\,\, \rho(x, y_k) &lt;
-\rho(x, A) + \frac{1}{k}\)</span>. <span class="math inline">\(\forall k
-\in \mathbb{N} \,\,\,\, \rho(x, y_k) \le \rho(x, A) + 1 \Rightarrow
-\{y_k\}\)</span> – ограничена, а значит существует сходящаяся
-подпоследовательность <span class="math inline">\(\{y_{k_m}\}\)</span> и
-<span class="math inline">\(\displaystyle \lim_{m\to \infty}\{y_{k_m}\}
-= y_0 \in A\)</span>, т.к. <span class="math inline">\(A\)</span> –
+<p><span class="margin-lft"><strong>Теорема: </strong></span><span
+class="math inline">\(A \subset \mathbb{R}^n\)</span> – замкнуто, <span
+class="math inline">\(x \not\in A\)</span>. Тогда <span
+class="math inline">\(\exists y \in A: \,\,\,\, \rho(x, y) = \rho(x,
+A)\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall k \in \mathbb{N} \,\,\,\, \exists y_k \in
+A: \,\,\,\, \rho(x, y_k) &lt; \rho(x, A) + \frac{1}{k}\)</span>. <span
+class="math inline">\(\forall k \in \mathbb{N} \,\,\,\, \rho(x, y_k) \le
+\rho(x, A) + 1 \Rightarrow \{y_k\}\)</span> – ограничена, а значит
+существует сходящаяся подпоследовательность <span
+class="math inline">\(\{y_{k_m}\}\)</span> и <span
+class="math inline">\(\displaystyle \lim_{m\to \infty}\{y_{k_m}\} = y_0
+\in A\)</span>, т.к. <span class="math inline">\(A\)</span> –
 замкнуто.</p>
 <p><span class="math display">\[\rho(x, y_{k_m}) &lt; \rho(x, A) +
 \frac{1}{k}\]</span> <span class="math display">\[\Downarrow\]</span>
@@ -440,23 +467,25 @@ class="math inline">\(\DeclareMathOperator*{\bigtimes}{\text{\Large
 $\times$}}\)</span></p>
 <h2 data-number="9.4" id="компактность">Компактность</h2>
 <div id="definition-39">
-<p><strong>Определение:</strong> <span class="math inline">\(A \subset
-\mathbb{R}^n\)</span> – <em>компакт</em>, если из любого откытого
-покрытия <span class="math inline">\(A\)</span> можно выделить конечное
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(A \subset \mathbb{R}^n\)</span> –
+<em>компакт</em>, если из любого откытого покрытия <span
+class="math inline">\(A\)</span> можно выделить конечное
 подпокрытие.</p>
 </div>
 <div id="definition-40">
-<p><strong>Определение:</strong> <span class="math inline">\(A \subset
-\mathbb{R}^n\)</span> – <em>секвенциальный компакт</em>, если у любой
-последовательности из <span class="math inline">\(A\)</span> существует
-сходящаяся подпоследовательность.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(A \subset \mathbb{R}^n\)</span> –
+<em>секвенциальный компакт</em>, если у любой последовательности из
+<span class="math inline">\(A\)</span> существует сходящаяся
+подпоследовательность.</p>
 </div>
 <div id="theorem-33">
-<p><strong>Теорема:</strong> <span class="math inline">\(A\)</span> -
-секвенциальный компакт <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span><span
+class="math inline">\(A\)</span> – секвенциальный компакт <span
 class="math inline">\(\Leftrightarrow\)</span> <span
 class="math inline">\(A\)</span> – замкнуто и ограничено.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span></p>
 <p>(от противного) Пусть <span class="math inline">\(A\)</span> –
 секвенциальный компакт и <span class="math inline">\(A\)</span>
@@ -472,11 +501,11 @@ class="math inline">\(\{x_k\}\)</span> существует сходящаяся
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-34">
-<p><strong>Теорема:</strong> <span class="math inline">\(A \subset
-\mathbb{R}^n\)</span> – секвенциальный компакт <span
-class="math inline">\(\Leftrightarrow\)</span> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span><span
+class="math inline">\(A \subset \mathbb{R}^n\)</span> – секвенциальный
+компакт <span class="math inline">\(\Leftrightarrow\)</span> <span
 class="math inline">\(A\)</span> – компакт.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span></p>
 <p>(от противного) Пусть существует открытое покрытие <span
 class="math inline">\(A \,\,\,\,
@@ -526,40 +555,44 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="9.5" id="связность">Связность</h2>
 <div id="definition-41">
-<p><strong>Определение:</strong> <span class="math inline">\(A \subset
-\mathbb{R}^n\)</span> – <em>линейно связно</em>, если любые две точки из
-<span class="math inline">\(A\)</span> можно соединить непрерывной
-кривой.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(A \subset \mathbb{R}^n\)</span> – <em>линейно
+связно</em>, если любые две точки из <span
+class="math inline">\(A\)</span> можно соединить непрерывной кривой.</p>
 </div>
 <div id="theorem-35">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(A \subset
-\mathbb{R}^n\)</span> – линейно связно. <span class="math inline">\(B
-\subset \mathbb{R}^n\)</span>. Если <span class="math inline">\(A \cap B
-\ne \varnothing\)</span> и <span class="math inline">\(A \cap
-(\mathbb{R}^n \setminus B) \ne \varnothing\)</span>, то <span
-class="math inline">\(A \cap \partial B \ne \varnothing\)</span>.</p>
-<p><em>Доказательство:</em> без доказательства <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(A \subset \mathbb{R}^n\)</span> – линейно связно.
+<span class="math inline">\(B \subset \mathbb{R}^n\)</span>. Если <span
+class="math inline">\(A \cap B \ne \varnothing\)</span> и <span
+class="math inline">\(A \cap (\mathbb{R}^n \setminus B) \ne
+\varnothing\)</span>, то <span class="math inline">\(A \cap \partial B
+\ne \varnothing\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> без
+доказательства <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-42">
-<p><strong>Определение:</strong> Если <span class="math inline">\(A
-\subset \mathbb{R}^n\)</span> – открыто и линейно связно, то <span
-class="math inline">\(A\)</span> – <em>область</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+<span class="math inline">\(A \subset \mathbb{R}^n\)</span> – открыто и
+линейно связно, то <span class="math inline">\(A\)</span> –
+<em>область</em>.</p>
 </div>
 <div id="definition-43">
-<p><strong>Определение:</strong> Замыкание области – <em>замкнутая
-область</em>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Замыкание области – <em>замкнутая область</em>.</p>
 </div>
 <div id="definition-44">
-<p><strong>Определение:</strong> Если любые две точки множества <span
-class="math inline">\(A \subset \mathbb{R}^n\)</span> можно соединить
-отрезком, содержащащимся в <span class="math inline">\(A\)</span>, то
-<span class="math inline">\(A\)</span> – <em>выпуклое</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Если
+любые две точки множества <span class="math inline">\(A \subset
+\mathbb{R}^n\)</span> можно соединить отрезком, содержащащимся в <span
+class="math inline">\(A\)</span>, то <span
+class="math inline">\(A\)</span> – <em>выпуклое</em>.</p>
 </div>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="интеграл-римана-стилтьеса.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

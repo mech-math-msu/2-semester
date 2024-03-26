@@ -11,7 +11,10 @@
     
     <title>Функции k-значной логики</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,17 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="булевы-функции-1.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="абстрактный-конечный-автомат.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="булевы-функции-1.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="абстрактный-конечный-автомат.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,20 +267,22 @@
 <h1 data-number="3" id="функции-k-значной-логики">Функции <span
 class="math inline">\(k\)</span>-значной логики</h1>
 <div id="definition-36">
-<p><strong>Определение:</strong> <span class="math inline">\(E_k = \{0,
-1, \ldots, k - 1\}\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(E_k = \{0, 1, \ldots, k - 1\}\)</span>.</p>
 </div>
 <div id="definition-37">
-<p><strong>Определение:</strong> <span class="math inline">\(E_k^n = E_k
-\times \ldots \times E_k\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(E_k^n = E_k \times \ldots \times E_k\)</span>.</p>
 </div>
 <div id="definition-38">
-<p><strong>Определение:</strong> <span class="math inline">\(f: E_k
-\times \ldots \times E_k \to E_k\)</span> – <em>функция</em> <span
-class="math inline">\(k\)</span> – <em>значной логики</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(f: E_k \times \ldots \times E_k \to E_k\)</span> –
+<em>функция</em> <span class="math inline">\(k\)</span> – <em>значной
+логики</em>.</p>
 </div>
 <div id="definition-39">
-<p><strong>Определение:</strong> Множество всех функций <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество всех функций <span
 class="math inline">\(k\)</span> – значной логики обозначается <span
 class="math inline">\(P_k\)</span>.</p>
 </div>
@@ -270,43 +291,46 @@ id="аналог-совершенной-дизъюнктивной-нормал�
 совершенной дизъюнктивной нормальной формы для <span
 class="math inline">\(P_k\)</span></h2>
 <div id="definition-40">
-<p><strong>Определение:</strong> (<em>большая индикаторная функция</em>)
-<span class="math inline">\(J_{i}(x) = \begin{cases}k - 1, x = i\\0, x
-\ne i\end{cases}\)</span></p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>большая индикаторная функция</em>) <span
+class="math inline">\(J_{i}(x) = \begin{cases}k - 1, x = i\\0, x \ne
+i\end{cases}\)</span></p>
 </div>
 <div id="statement-14">
-<p><strong>Утверждение:</strong> Любая <span class="math inline">\(f \in
-P_k\)</span> может быть представлена в виде <span
-class="math display">\[f(x_1, \ldots, x_n) = \max_{(\sigma_1, \ldots,
-\sigma_n) \in E_k^n}\{\min(J_{\sigma_1}(x_1),\ldots, J_{\sigma_n}(x_n),
-f(\sigma_1, \ldots, \sigma_n))\}\]</span></p>
-<p><em>Доказательство:</em> аналогично (тоже мне аналогично) <span
-class="math inline">\(P_2 \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Любая
+<span class="math inline">\(f \in P_k\)</span> может быть представлена в
+виде <span class="math display">\[f(x_1, \ldots, x_n) = \max_{(\sigma_1,
+\ldots, \sigma_n) \in E_k^n}\{\min(J_{\sigma_1}(x_1),\ldots,
+J_{\sigma_n}(x_n), f(\sigma_1, \ldots, \sigma_n))\}\]</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> аналогично
+(тоже мне аналогично) <span class="math inline">\(P_2
+\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="3.2" id="полнота-в-p_k">Полнота в <span
 class="math inline">\(P_k\)</span></h2>
 <div id="definition-41">
-<p><strong>Определение:</strong> Система функций <span
-class="math inline">\(k\)</span> – значной логики <em>полна</em>, если с
-помощью суперпозиций из нее можно получить любую функцию <span
-class="math inline">\(P_k\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Система
+функций <span class="math inline">\(k\)</span> – значной логики
+<em>полна</em>, если с помощью суперпозиций из нее можно получить любую
+функцию <span class="math inline">\(P_k\)</span>.</p>
 </div>
 <div id="statement-15">
-<p><strong>Утверждение:</strong> Система <span
-class="math inline">\(\{0, 1, \ldots, k - 1, J_0(x), J_1(x), \ldots,
-J_n(x), \max(x, y), \min(x, y)\}\)</span> полна.</p>
-<p><em>Доказательство:</em> см. теорему <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Система
+<span class="math inline">\(\{0, 1, \ldots, k - 1, J_0(x), J_1(x),
+\ldots, J_n(x), \max(x, y), \min(x, y)\}\)</span> полна.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> см. теорему
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="3.3"
 id="полнота-системы-состоящей-из-функции-вебба">Полнота системы,
 состоящей из функции Вебба</h2>
 <div id="statement-16">
-<p><strong>Утверждение:</strong> Система <span
-class="math inline">\(\{\max(x, y), \overline{x}\}\)</span> полна.</p>
-<p><em>Доказательство:</em> Будем сводить к системе <span
-class="math inline">\(\{0, 1, \ldots, k - 1, J_0(x), J_1(x), \ldots,
-J_n(x), \max(x, y), \min(x, y)\}\)</span>.</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Система
+<span class="math inline">\(\{\max(x, y), \overline{x}\}\)</span>
+полна.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Будем
+сводить к системе <span class="math inline">\(\{0, 1, \ldots, k - 1,
+J_0(x), J_1(x), \ldots, J_n(x), \max(x, y), \min(x, y)\}\)</span>.</p>
 <ol type="1">
 <li><p>Получим константы. <span class="math inline">\(\overline{x} = x +
 1, \overline{\overline{x}} = x + 2, \ldots,
@@ -352,22 +376,24 @@ x\)</span>.</p></li>
 </ol>
 </div>
 <div id="definition-42">
-<p><strong>Определение:</strong> <span class="math inline">\(V(x, y) =
-\max(x, y) + 1\)</span> – <em>функция Вебба</em>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(V(x, y) = \max(x, y) + 1\)</span> – <em>функция
+Вебба</em>.</p>
 </div>
 <div id="statement-17">
-<p><strong>Утверждение:</strong> Система <span
-class="math inline">\(\{V(x, y)\}\)</span> полна.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(V(x, x) =
-\max(x, x) + 1 = \overline{x}\)</span>, а по предыдущей теореме система
-<span class="math inline">\(\{\max(x, y), \overline{x}\}\)</span> полна
-<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Система
+<span class="math inline">\(\{V(x, y)\}\)</span> полна.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(V(x, x) = \max(x, x) + 1 = \overline{x}\)</span>,
+а по предыдущей теореме система <span class="math inline">\(\{\max(x,
+y), \overline{x}\}\)</span> полна <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="3.4" id="замкнутые-классы-и-замыкание-в-p_k">Замкнутые
 классы и замыкание в <span class="math inline">\(P_k\)</span></h2>
 <div id="definition-43">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(F\)</span> система функций <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(F\)</span> система функций <span
 class="math inline">\(k\)</span>-значной логики. <em>замыкание</em>
 <span class="math inline">\(F\)</span> – это множество всех функций из
 <span class="math inline">\(P_k\)</span>, которые можно получить
@@ -375,27 +401,27 @@ class="math inline">\(k\)</span>-значной логики. <em>замыкан
 Обозначается: <span class="math inline">\([F]\)</span>.</p>
 </div>
 <div id="definition-44">
-<p><strong>Определение:</strong> Система <span
-class="math inline">\(F\)</span> функций <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Система
+<span class="math inline">\(F\)</span> функций <span
 class="math inline">\(k\)</span>-значной логики <em>замкнута</em>, если
 <span class="math inline">\([F] = F\)</span>.</p>
 </div>
 <div id="definition-45">
-<p><strong>Определение:</strong> Функция <span
-class="math inline">\(k\)</span>-значной логики <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Функция
+<span class="math inline">\(k\)</span>-значной логики <span
 class="math inline">\(f\)</span> <em>сохраняет множество</em> <span
 class="math inline">\(U \subset E_k\)</span>, если <span
 class="math inline">\(\forall \alpha_1, \ldots, \alpha_n \in U \,\,\,\,
 f(\alpha_1, \ldots, \alpha_n) \in U\)</span>.</p>
 </div>
 <div id="statement-18">
-<p><strong>Утверждение:</strong> Система <span
-class="math inline">\(\{\sim x, \max(x, y)\}\)</span> при <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Система
+<span class="math inline">\(\{\sim x, \max(x, y)\}\)</span> при <span
 class="math inline">\(k \ge 3\)</span> неполна.</p>
-<p><em>Доказательство:</em> Рассмотрим <span class="math inline">\(U =
-\{0, k - 1\}\)</span>. <span class="math inline">\(\sim (k - 1) = 0,
-\,\,\,\, \sim 0 = k - 1 \Rightarrow\)</span> <span
-class="math inline">\(\sim x\)</span> и <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Рассмотрим
+<span class="math inline">\(U = \{0, k - 1\}\)</span>. <span
+class="math inline">\(\sim (k - 1) = 0, \,\,\,\, \sim 0 = k - 1
+\Rightarrow\)</span> <span class="math inline">\(\sim x\)</span> и <span
 class="math inline">\(\max(x, y)\)</span> сохраняют <span
 class="math inline">\(U\)</span>, а значит исходная система неполна
 <span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
@@ -405,11 +431,11 @@ id="алгоритм-распознавания-замкнутости-сист�
 распознавания замкнутости системы в <span
 class="math inline">\(P_k\)</span></h2>
 <div id="definition-46">
-<p><strong>Определение:</strong> Пусть задан алфавит <span
-class="math inline">\((X, S)\)</span> с сигнатурой <span
-class="math inline">\(\Sigma\)</span>. <em>Глубина формулы</em> <span
-class="math inline">\(\Phi \,\,\,\, \operatorname{depth}(\Phi)\)</span>
-равна</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+задан алфавит <span class="math inline">\((X, S)\)</span> с сигнатурой
+<span class="math inline">\(\Sigma\)</span>. <em>Глубина формулы</em>
+<span class="math inline">\(\Phi \,\,\,\,
+\operatorname{depth}(\Phi)\)</span> равна</p>
 <ol type="1">
 <li><span class="math inline">\(0\)</span>, если <span
 class="math inline">\(\Phi \in X\)</span>.</li>
@@ -421,29 +447,29 @@ class="math inline">\(s(\Phi_1, \ldots, \Phi_n), s \in S\)</span> равна
 </ol>
 </div>
 <div id="definition-47">
-<p><strong>Определение:</strong> Пусть дано множество функций <span
-class="math inline">\(k\)</span>-значной логики <span
-class="math inline">\(F\)</span>. <em>Последовательность Кузнецова</em>
-системы <span class="math inline">\(F\)</span> – это последовательность
-классов <span class="math inline">\(G_0, G_1, \ldots\)</span>, где <span
-class="math inline">\(G_i\)</span> состоит из всех функций <span
-class="math inline">\(k\)</span>-значной логики от двух переменных,
-таких, что глубина соответствующих им формул не превосходит <span
-class="math inline">\(i\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+дано множество функций <span class="math inline">\(k\)</span>-значной
+логики <span class="math inline">\(F\)</span>. <em>Последовательность
+Кузнецова</em> системы <span class="math inline">\(F\)</span> – это
+последовательность классов <span class="math inline">\(G_0, G_1,
+\ldots\)</span>, где <span class="math inline">\(G_i\)</span> состоит из
+всех функций <span class="math inline">\(k\)</span>-значной логики от
+двух переменных, таких, что глубина соответствующих им формул не
+превосходит <span class="math inline">\(i\)</span>.</p>
 </div>
 <div id="statement-19">
-<p><strong>Утверждение:</strong> Пусть дано множество функций <span
-class="math inline">\(k\)</span>-значной логики <span
-class="math inline">\(F\)</span>. Последовательность Кузнецова для <span
-class="math inline">\(F\)</span> - <span class="math inline">\(G_0, G_1,
-\ldots\)</span> Тогда</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+дано множество функций <span class="math inline">\(k\)</span>-значной
+логики <span class="math inline">\(F\)</span>. Последовательность
+Кузнецова для <span class="math inline">\(F\)</span> - <span
+class="math inline">\(G_0, G_1, \ldots\)</span> Тогда</p>
 <ol type="1">
 <li><span class="math inline">\(\varnothing = G_0 \subset G_1 \subset
 \ldots \subset G_{s} \subset \ldots\)</span></li>
 <li>Для некоторого <span class="math inline">\(s \,\,\,\, G_0 \subset
 \ldots \subset G_s = G_{s + 1} = \ldots = G\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li><span class="math inline">\(\,\,\,\,\blacksquare\)</span></li>
 <li>Количество функций <span class="math inline">\(k\)</span>-значной
@@ -452,20 +478,23 @@ class="math inline">\(F\)</span> - <span class="math inline">\(G_0, G_1,
 </ol>
 </div>
 <div id="definition-48">
-<p><strong>Определение:</strong> <em>Предел последовательности
-Кузнецова</em> – это <span class="math inline">\(G\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Предел последовательности Кузнецова</em> – это <span
+class="math inline">\(G\)</span>.</p>
 </div>
 <div id="theorem-3">
-<p><strong>Теорема:</strong> Пусть дано множество функций <span
-class="math inline">\(k\)</span>-значной логики <span
-class="math inline">\(F\)</span>. <span class="math inline">\(F\)</span>
-полна <span class="math inline">\(\Leftrightarrow\)</span> предел
-последовательности Кузнецова для <span class="math inline">\(F\)</span>
-содержит функцию Вебба.</p>
-<p><em>Доказательство:</em> Свяжем с каждой функцией последовательности
-Кузнецова для <span class="math inline">\(F\)</span> формулу в
-сингнатуре <span class="math inline">\(\Sigma\)</span>, содержащую
-только переменные <span class="math inline">\(x_1\)</span> и <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть дано
+множество функций <span class="math inline">\(k\)</span>-значной логики
+<span class="math inline">\(F\)</span>. <span
+class="math inline">\(F\)</span> полна <span
+class="math inline">\(\Leftrightarrow\)</span> предел последовательности
+Кузнецова для <span class="math inline">\(F\)</span> содержит функцию
+Вебба.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Свяжем с
+каждой функцией последовательности Кузнецова для <span
+class="math inline">\(F\)</span> формулу в сингнатуре <span
+class="math inline">\(\Sigma\)</span>, содержащую только переменные
+<span class="math inline">\(x_1\)</span> и <span
 class="math inline">\(x_2\)</span>. Пусть <span
 class="math inline">\(\{\Phi_1, \ldots, \Phi_n\}\)</span> все формулы,
 соответствующие фунциям из <span class="math inline">\(G_i\)</span>.
@@ -505,19 +534,19 @@ class="math inline">\(F\)</span> полна.</p>
 </div>
 <h2 data-number="3.6" id="селекторные-функции">Селекторные функции</h2>
 <div id="definition-49">
-<p><strong>Определение:</strong> <span class="math inline">\(g^p_i(x_1,
-\ldots, x_p) \,\,\,\, g^p_i(\alpha_1, \ldots, \alpha_p) =
-\alpha_i\)</span> – <em>селекторная функция</em> от <span
-class="math inline">\(p\)</span> переменных.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(g^p_i(x_1, \ldots, x_p) \,\,\,\, g^p_i(\alpha_1,
+\ldots, \alpha_p) = \alpha_i\)</span> – <em>селекторная функция</em> от
+<span class="math inline">\(p\)</span> переменных.</p>
 </div>
 <h2 data-number="3.7"
 id="сохранение-множества-к-включающего-селекторные-функции">Сохранение
 множества <span class="math inline">\(К\)</span>, включающего
 селекторные функции</h2>
 <div id="definition-50">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(K\)</span> содержит все селекторные функции от
-<span class="math inline">\(p\)</span> переменных и некоторый набор
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(K\)</span> содержит все селекторные функции
+от <span class="math inline">\(p\)</span> переменных и некоторый набор
 функций от <span class="math inline">\(p\)</span> переменных. Функция
 <span class="math inline">\(f(x_1, \ldots, x_n)\)</span>
 <em>сохраняет</em> <span class="math inline">\(K\)</span>, если <span
@@ -526,9 +555,9 @@ class="math inline">\(\forall h_1, \ldots, h_n, \,\,\,\, h_i \in K
 K\)</span>.</p>
 </div>
 <div id="definition-51">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(K\)</span> содержит все селекторные функции от
-<span class="math inline">\(p\)</span> переменных и некоторый набор
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(K\)</span> содержит все селекторные функции
+от <span class="math inline">\(p\)</span> переменных и некоторый набор
 функций от <span class="math inline">\(p\)</span> переменных. Множество
 всех функций, сохраняющих <span class="math inline">\(K\)</span>,
 обозначается <span class="math inline">\(U[K]\)</span>.</p>
@@ -538,16 +567,18 @@ id="описание-класса-s-как-класса-сохранения-н�
 класса <span class="math inline">\(S\)</span>, как класса сохранения
 некоторого множества <span class="math inline">\(К\)</span></h2>
 <div id="statement-20">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(k =
-2\)</span>, <span class="math inline">\(p = 1\)</span>, <span
-class="math inline">\(K = \{x, \overline{x}\}\)</span> (<span
-class="math inline">\(x\)</span> единственная селекторная функция от
-<span class="math inline">\(1\)</span> переменной). Тогда <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(k = 2\)</span>, <span
+class="math inline">\(p = 1\)</span>, <span class="math inline">\(K =
+\{x, \overline{x}\}\)</span> (<span class="math inline">\(x\)</span>
+единственная селекторная функция от <span
+class="math inline">\(1\)</span> переменной). Тогда <span
 class="math inline">\(U[K] = S\)</span>(<span
 class="math inline">\(S\)</span> множество самодвойственных
 функций).</p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(f\)</span>
-сохраняет <span class="math inline">\(K\)</span>. Рассмотрим <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(f\)</span> сохраняет <span
+class="math inline">\(K\)</span>. Рассмотрим <span
 class="math inline">\(f(x_1^{\sigma_1}, \ldots, x_n^{\sigma_n}),
 \sigma_i \in \{0, 1\}\)</span> (через <span
 class="math inline">\(x^{\sigma}\)</span> обозначаем <span
@@ -570,12 +601,12 @@ id="замкнутость-класса-uk-всех-функций-сохран�
 <span class="math inline">\(U[K]\)</span> всех функций, сохраняющих
 <span class="math inline">\(К\)</span></h2>
 <div id="statement-21">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(K\)</span> содержит все селекторные функции от
-<span class="math inline">\(p\)</span> переменных и некоторый набор
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(K\)</span> содержит все селекторные функции
+от <span class="math inline">\(p\)</span> переменных и некоторый набор
 функций от <span class="math inline">\(p\)</span> переменных. Тогда
 <span class="math inline">\(U[K]\)</span> замкнут.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="3.10"
@@ -584,15 +615,16 @@ id="неполнота-системы-f-содержащейся-в-uk-если-
 class="math inline">\(U[K]\)</span>, если функция Вебба не принадлежит
 <span class="math inline">\(K\)</span></h2>
 <div id="statement-22">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(K\)</span> содержит все селекторные функции от
-<span class="math inline">\(p\)</span> переменных, некоторый набор
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(K\)</span> содержит все селекторные функции
+от <span class="math inline">\(p\)</span> переменных, некоторый набор
 функций от <span class="math inline">\(p\)</span> переменных и не
 содержит функцию Вебба. Если система <span class="math inline">\(F
 \subset U[K]\)</span>, то <span class="math inline">\(F\)</span>
 неполна.</p>
-<p><em>Доказательство:</em> Рассмотрим последовательность Кузнецова для
-<span class="math inline">\(F: \,\,\,\, G_0, G_1, \ldots\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Рассмотрим
+последовательность Кузнецова для <span class="math inline">\(F: \,\,\,\,
+G_0, G_1, \ldots\)</span>.</p>
 <p>Докажем по индукции, что <span class="math inline">\(G_i \subset
 U[K]\)</span>, если <span class="math inline">\(F \subset U[K]\)</span>.
 База: <span class="math inline">\(G_0 = \varnothing \subset
@@ -622,33 +654,34 @@ id="существование-для-неполной-системы-f-тако
 множества <span class="math inline">\(K\)</span>, что функция Вебба не
 принадлежит <span class="math inline">\(K\)</span></h2>
 <div id="statement-23">
-<p><strong>Утверждение:</strong> Если система <span
-class="math inline">\(F\)</span> неполна, то существует такое множество
-<span class="math inline">\(K\)</span>, содержащее <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Если
+система <span class="math inline">\(F\)</span> неполна, то существует
+такое множество <span class="math inline">\(K\)</span>, содержащее <span
 class="math inline">\(g_1^2(x_1, x_2), \,\,\,\, g_2^2(x_1,
 x_2)\)</span>, некоторые функции от двух переменных и не содержащее
 функцию Вебба, такое, что <span class="math inline">\(F \subset
 U[K]\)</span>.</p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(G_0
-\subset G_1 \subset \ldots \subset G_m = G_{m + 1} = \ldots = G\)</span>
-последовательность Кузнецова для <span class="math inline">\(F\)</span>.
-Пусть <span class="math inline">\(K = G_m \cup \{g_1^2(x_1, x_2),
-g_2^2(x_1, x_2)\}\)</span>. Далее аналогично предыдущему утверждению в
-обратную сторону <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(G_0 \subset G_1 \subset \ldots \subset G_m = G_{m
++ 1} = \ldots = G\)</span> последовательность Кузнецова для <span
+class="math inline">\(F\)</span>. Пусть <span class="math inline">\(K =
+G_m \cup \{g_1^2(x_1, x_2), g_2^2(x_1, x_2)\}\)</span>. Далее аналогично
+предыдущему утверждению в обратную сторону <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="3.12" id="теорема-кузнецова-о-полноте-в-p_k">Теорема
 Кузнецова о полноте в <span class="math inline">\(P_k\)</span></h2>
 <div id="theorem-4">
-<p><strong>Теорема:</strong> В <span class="math inline">\(P_k\)</span>
-можно выбрать такие не содержащиеся друг в друге замкнутые классы <span
-class="math inline">\(M_1, \ldots, M_n\)</span>, что система функций
-<span class="math inline">\(F\)</span> полна тогда и только тогда, когда
-<span class="math inline">\(F\)</span> не содержится ни в одном из
-классов <span class="math inline">\(M_1, \ldots, M_n\)</span>.</p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(U[K_1],
-\ldots, U[K_s]\)</span> все классы, такие, что <span
-class="math inline">\(K_i\)</span> – содержит <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>В <span
+class="math inline">\(P_k\)</span> можно выбрать такие не содержащиеся
+друг в друге замкнутые классы <span class="math inline">\(M_1, \ldots,
+M_n\)</span>, что система функций <span class="math inline">\(F\)</span>
+полна тогда и только тогда, когда <span class="math inline">\(F\)</span>
+не содержится ни в одном из классов <span class="math inline">\(M_1,
+\ldots, M_n\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(U[K_1], \ldots, U[K_s]\)</span> все классы, такие,
+что <span class="math inline">\(K_i\)</span> – содержит <span
 class="math inline">\(g_1^2(x_1, x_2), \,\,\,\, g_2^2(x_1,
 x_2)\)</span>, некоторые функции от двух переменных и не содержит
 функцию Вебба. Тогда по утверждениям 1 и 2 имеем: <span
@@ -662,17 +695,17 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="3.13" id="существенная-функция-в-p_k">Существенная
 функция в <span class="math inline">\(P_k\)</span></h2>
 <div id="definition-52">
-<p><strong>Определение:</strong> Функция <span
-class="math inline">\(f\)</span> <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Функция
+<span class="math inline">\(f\)</span> <span
 class="math inline">\(k\)</span>-значной логики <em>существенная</em>,
 если она существенно зависит более чем от одной переменной.</p>
 </div>
 <h2 data-number="3.14" id="лемма-с.в.яблонского-о-трех-наборах">Лемма
 С.В.Яблонского о трех наборах</h2>
 <div id="lemma-0">
-<p><strong>Лемма:</strong> Пусть <span class="math inline">\(f(x_1,
-\ldots, x_n)\)</span> существенная функция в <span
-class="math inline">\(P_k\)</span>, принимающая <span
+<p><span class="margin-lft"><strong>Лемма: </strong></span>Пусть <span
+class="math inline">\(f(x_1, \ldots, x_n)\)</span> существенная функция
+в <span class="math inline">\(P_k\)</span>, принимающая <span
 class="math inline">\(l\)</span> значений(<span class="math inline">\(l
 \ge 3\)</span>). Пусть <span class="math inline">\(x_1\)</span>
 существенная переменная <span class="math inline">\(f\)</span>. Тогда
@@ -681,8 +714,8 @@ class="math inline">\(l\)</span> значений(<span class="math inline">\(l
 \,\,\,\, (\alpha, \gamma_2, \ldots, \gamma_n)\)</span>, что <span
 class="math inline">\(f\)</span> принимает на них различные
 значения.</p>
-<p><em>Доказательство:</em> Так как <span
-class="math inline">\(x_1\)</span> существенная, на наборах <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Так как
+<span class="math inline">\(x_1\)</span> существенная, на наборах <span
 class="math inline">\((0, \alpha_2, \ldots, \alpha_n), \ldots, (k- 1,
 \alpha_2, \ldots, \alpha_n)\)</span> функция <span
 class="math inline">\(f\)</span> принимает хотя бы два различных
@@ -712,9 +745,9 @@ id="лемма-о-подмножестве-на-котором-функция-п
 о подмножестве, на котором функция принимает <span
 class="math inline">\(l\)</span> значений</h2>
 <div id="lemma-1">
-<p><strong>Лемма:</strong> Пусть <span class="math inline">\(f(x_1,
-\ldots, x_n)\)</span> существенная функция в <span
-class="math inline">\(P_k\)</span>, принимающая <span
+<p><span class="margin-lft"><strong>Лемма: </strong></span>Пусть <span
+class="math inline">\(f(x_1, \ldots, x_n)\)</span> существенная функция
+в <span class="math inline">\(P_k\)</span>, принимающая <span
 class="math inline">\(l\)</span> значений(<span class="math inline">\(l
 \ge 3\)</span>). Пусть <span class="math inline">\(x_1\)</span>
 существенная переменная <span class="math inline">\(f\)</span>. Тогда
@@ -723,15 +756,16 @@ class="math inline">\(l\)</span> значений(<span class="math inline">\(l
 множестве <span class="math inline">\(G_1 \times \ldots \times
 G_n\)</span> функция <span class="math inline">\(f\)</span> принимает
 <span class="math inline">\(l\)</span> значений.</p>
-<p><em>Доказательство:</em> По лемме существуют три набора <span
-class="math inline">\((\alpha, \alpha_2, \ldots, \alpha_n), \,\,\,\,
-(\beta, \alpha_2, \ldots, \alpha_n), \,\,\,\, (\alpha, \gamma_2, \ldots,
-\gamma_n)\)</span>, такие, что <span class="math inline">\(f\)</span>
-принимает на них различные значения. Пусть <span
-class="math inline">\((\delta_{i1}, \ldots, \delta_{in})\)</span> –
-наборы, на которых функция <span class="math inline">\(f\)</span>
-принимает остальные <span class="math inline">\(l - 3\)</span> значения
-(<span class="math inline">\(i \in \{1, \ldots, l - 3\}\)</span>).</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> По лемме
+существуют три набора <span class="math inline">\((\alpha, \alpha_2,
+\ldots, \alpha_n), \,\,\,\, (\beta, \alpha_2, \ldots, \alpha_n),
+\,\,\,\, (\alpha, \gamma_2, \ldots, \gamma_n)\)</span>, такие, что <span
+class="math inline">\(f\)</span> принимает на них различные значения.
+Пусть <span class="math inline">\((\delta_{i1}, \ldots,
+\delta_{in})\)</span> – наборы, на которых функция <span
+class="math inline">\(f\)</span> принимает остальные <span
+class="math inline">\(l - 3\)</span> значения (<span
+class="math inline">\(i \in \{1, \ldots, l - 3\}\)</span>).</p>
 <p>Пусть <span class="math inline">\(G_i\)</span> – это объединение
 <span class="math inline">\(i\)</span>-х элементов этих наборов, то есть
 <span class="math inline">\(G_1 = \{\alpha, \beta, \delta_{11}, \ldots,
@@ -740,7 +774,8 @@ class="math inline">\((\delta_{i1}, \ldots, \delta_{in})\)</span> –
 <h2 data-number="3.16" id="квадрат-в-p_k">Квадрат в <span
 class="math inline">\(P_k\)</span></h2>
 <div id="definition-53">
-<p><strong>Определение:</strong> <em>Квадрат</em> в <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Квадрат</em> в <span
 class="math inline">\(k\)</span>-значной логике – это <span
 class="math inline">\(4\)</span> набора <span
 class="math inline">\((\alpha_1, \ldots, \alpha_{i - 1}, x, \alpha_{i +
@@ -749,17 +784,18 @@ class="math inline">\((\alpha_1, \ldots, \alpha_{i - 1}, x, \alpha_{i +
 </div>
 <h2 data-number="3.17" id="лемма-о-квадрате">Лемма о квадрате</h2>
 <div id="statement-24">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(f(x_1, \ldots, x_n)\)</span> существенная функция
-в <span class="math inline">\(P_k\)</span>, принимающая <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(f(x_1, \ldots, x_n)\)</span> существенная
+функция в <span class="math inline">\(P_k\)</span>, принимающая <span
 class="math inline">\(l\)</span> значений(<span class="math inline">\(l
 \ge 3\)</span>). Пусть <span class="math inline">\(x_1\)</span>
 существенная переменная <span class="math inline">\(f\)</span>. Тогда
 существует квадрат, на одном наборе которого функция <span
 class="math inline">\(f\)</span> принимает значение отличное от значений
 на остальных наборах.</p>
-<p><em>Доказательство:</em> Записать последовательность пар, заменяя
-<span class="math inline">\(\gamma\)</span> в тройке из леммы о трех
+<p><span class="margin-lft"><em>Доказательство:</em></span> Записать
+последовательность пар, заменяя <span
+class="math inline">\(\gamma\)</span> в тройке из леммы о трех
 значениях</p>
 <p><span class="math display">\[\{(\alpha, \alpha_2, \ldots, \alpha_n),
 (\beta, \alpha_2, \ldots, \alpha_n)\}\]</span> <span
@@ -774,15 +810,16 @@ class="math display">\[\{(\alpha, \gamma_2, \ldots, \gamma_n), (\beta,
 </div>
 <h2 data-number="3.18" id="теорема-слупецкого">Теорема Слупецкого</h2>
 <div id="theorem-5">
-<p><strong>Теорема:</strong> (<em>критерий Слупецкого</em>) Пусть
-система <span class="math inline">\(F\)</span> из <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(<em>критерий Слупецкого</em>) Пусть система <span
+class="math inline">\(F\)</span> из <span
 class="math inline">\(P_k\)</span> содержит все функции одной
 переменной. Тогда</p>
 <p><span class="math inline">\(F\)</span> полна <span
 class="math inline">\(\Leftrightarrow F\)</span> содержит существенную
 функцию, принимающую все <span class="math inline">\(k\)</span>
 значений.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span></p>
 <p><span class="math inline">\(F\)</span> полна. Пусть <span
 class="math inline">\(F\)</span> не содержит существенную функцию,
@@ -919,32 +956,32 @@ class="math inline">\(b_i \,\,\,\,\blacksquare\)</span></p>
 id="замечание-с.в.яблонского-о-возможности-сужения-множества-одноместных-функций">Замечание
 С.В.Яблонского о возможности сужения множества одноместных функций</h2>
 <div id="statement-25">
-<p><strong>Утверждение:</strong> Пусть система <span
-class="math inline">\(F\)</span> из <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+система <span class="math inline">\(F\)</span> из <span
 class="math inline">\(P_k\)</span> содержит все функции одной
 переменной, принимающие не более <span class="math inline">\(k -
 1\)</span> значения. Тогда</p>
 <p><span class="math inline">\(F\)</span> полна <span
 class="math inline">\(\Leftrightarrow F\)</span> содержит существенную
 функцию.</p>
-<p><em>Доказательство:</em> см.выше <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> см.выше
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="3.20" id="теорема-мартина">Теорема Мартина</h2>
 <div id="definition-54">
-<p><strong>Определение:</strong> Функция <span
-class="math inline">\(f\)</span> <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Функция
+<span class="math inline">\(f\)</span> <span
 class="math inline">\(k\)</span>-значной логики <em>шефферова</em>, если
 <span class="math inline">\([\{f\}] = P_k\)</span>.</p>
 </div>
 <div id="theorem-6">
-<p><strong>Теорема:</strong> (Мартин) Функция <span
-class="math inline">\(f\)</span> <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Мартин)
+Функция <span class="math inline">\(f\)</span> <span
 class="math inline">\(k\)</span>-значной логики шефферова <span
 class="math inline">\(\Leftrightarrow f\)</span> порождает все функции
 одной переменной, принимающие не более <span class="math inline">\(k -
 1\)</span> значения.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span></p>
 <p><span class="math display">\[\Leftarrow\]</span> Пусть <span
 class="math inline">\(f\)</span> не является существенной, то есть
@@ -957,8 +994,8 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="3.21" id="теорема-янова">Теорема Янова</h2>
 <div id="definition-55">
-<p><strong>Определение:</strong> Базис системы функций <span
-class="math inline">\(F\)</span> <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Базис
+системы функций <span class="math inline">\(F\)</span> <span
 class="math inline">\(k\)</span>-значной логики – это подмножество <span
 class="math inline">\(U \subset F\)</span>, такое, что <span
 class="math inline">\([U] = F\)</span> и <span
@@ -966,11 +1003,11 @@ class="math inline">\(\forall f \in U \,\,\,\, [U \\ \{f\}] \ne
 F\)</span>.</p>
 </div>
 <div id="theorem-7">
-<p><strong>Теорема:</strong> (Янов) В <span class="math inline">\(P_k,
-\,\,\,\, k \ge 3\)</span> существует замкнутый класс, не содержащий
-базиса.</p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(f_0 = 0,
-f_1(x_1) = \begin{cases}
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Янов) В
+<span class="math inline">\(P_k, \,\,\,\, k \ge 3\)</span> существует
+замкнутый класс, не содержащий базиса.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(f_0 = 0, f_1(x_1) = \begin{cases}
     1, x_1 = 2\\
     0, x_1 \ne 2
 \end{cases}, \ldots, f_i(x_1, \ldots, x_i) = \begin{cases} 1, x_1 =
@@ -981,22 +1018,22 @@ class="math inline">\(M = [\{f_0, f_1, \ldots\}]\)</span>. Далее
 </div>
 <h2 data-number="3.22" id="теорема-мучника">Теорема Мучника</h2>
 <div id="theorem-8">
-<p><strong>Теорема:</strong> (Мучник) В <span class="math inline">\(P_k,
-\,\,\,\, k \ge 3\)</span> существует замкнутый класс, имеющий счетный
-базис.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(Мучник) В
+<span class="math inline">\(P_k, \,\,\,\, k \ge 3\)</span> существует
+замкнутый класс, имеющий счетный базис.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="3.23"
 id="представление-функций-в-p_k-полиномами">Представление функций в
 <span class="math inline">\(P_k\)</span> полиномами</h2>
 <div id="theorem-9">
-<p><strong>Теорема:</strong> Система полиномов по модулю <span
-class="math inline">\(k\)</span> в <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Система
+полиномов по модулю <span class="math inline">\(k\)</span> в <span
 class="math inline">\(P_k\)</span> полна <span
 class="math inline">\(\Leftrightarrow\)</span> <span
 class="math inline">\(k\)</span> – простое.</p>
-<p><em>Доказательство:</em> Записав <span
-class="math inline">\(2\)</span> форму для функции <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Записав
+<span class="math inline">\(2\)</span> форму для функции <span
 class="math inline">\(k\)</span>-значной логики, понимаем, что
 достаточно рассмотреть представимость <span
 class="math inline">\(j_0(x)\)</span> полиномом.</p>
@@ -1015,7 +1052,7 @@ k_1 + \ldots + b_s k_1^s \,\,\mod k \Rightarrow 1 = n k_1 k_2 - b_1 k_1
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="булевы-функции-1.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

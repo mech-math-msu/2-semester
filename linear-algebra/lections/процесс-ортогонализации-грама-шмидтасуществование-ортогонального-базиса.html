@@ -12,6 +12,7 @@
     <title>Процесс ортогонализации Грама-Шмидта(существование
 ортогонального базиса)</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -86,7 +87,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -101,6 +102,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -219,7 +221,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -231,6 +237,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -279,33 +289,34 @@ class="math inline">\(e_1, \ldots, e_{n - 1}\)</span> – ортогональн
 e_i)}{(e_i, e_i)}\)</span>, <span class="math inline">\(e_i \ne
 0\)</span>, так как …</p>
 <div id="theorem-13">
-<p><strong>Теорема: </strong>В любом <span
-class="math inline">\(n\)</span>-мерном евклидовом пространстве
+<p><span class="margin-lft"><strong>Теорема: </strong></span>В любом
+<span class="math inline">\(n\)</span>-мерном евклидовом пространстве
 существоет ортогональный базис.</p>
-<p><em>Доказательство:</em> см. выше <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> см. выше
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-6">
-<p><strong>Следствие: </strong>Пусть <span class="math inline">\(f =
-\{f_1, \ldots, f_n\}\)</span> – базис евклидова пространства <span
-class="math inline">\(V\)</span>. <span class="math inline">\(e = \{e_1,
-\ldots, e_n\}\)</span> – ортогональный базис <span
-class="math inline">\(V\)</span>, полученный ортогонализацией
-Грама-Шмидта. Тогда матрица перехода от <span
+<p><span class="margin-lft"><strong>Следствие: </strong></span>Пусть
+<span class="math inline">\(f = \{f_1, \ldots, f_n\}\)</span> – базис
+евклидова пространства <span class="math inline">\(V\)</span>. <span
+class="math inline">\(e = \{e_1, \ldots, e_n\}\)</span> – ортогональный
+базис <span class="math inline">\(V\)</span>, полученный
+ортогонализацией Грама-Шмидта. Тогда матрица перехода от <span
 class="math inline">\(f\)</span> к <span
 class="math inline">\(e\)</span> унитреугольная.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-66">
-<p><strong>Утверждение: </strong>(о <span
-class="math inline">\(QR\)</span>- разложении) Любая невырожденная
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>(о
+<span class="math inline">\(QR\)</span>- разложении) Любая невырожденная
 квадратная матрица <span class="math inline">\(A\)</span> представима в
 виде произведения унитреугольной матрицы <span
 class="math inline">\(Q\)</span> и ортогональной матрицы <span
 class="math inline">\(R\)</span>.</p>
-<p><em>Доказательство:</em> Невырожденная матрица – это матрица перехода
-между базисами <span class="math inline">\(e\)</span> и <span
+<p><span class="margin-lft"><em>Доказательство:</em></span>
+Невырожденная матрица – это матрица перехода между базисами <span
+class="math inline">\(e\)</span> и <span
 class="math inline">\(f\)</span> некоторого евклидова пространства, то
 есть <span class="math inline">\(A = C_{e \to f}\)</span>. Найдем
 ортогональный базис <span class="math inline">\(e’\)</span> процессом
@@ -320,31 +331,32 @@ class="math inline">\(C_{e \to f} = C_{e \to e’} \cdot C_{e’ \to f}
 <h2 data-number="15.1" id="ортогональное-дополнение">Ортогональное
 дополнение</h2>
 <div id="definition-66">
-<p><strong>Определение: </strong><span class="math inline">\(V\)</span>
-– евклидово пространство, <span class="math inline">\(U\)</span> – его
-подпространство. Множество <span class="math inline">\(U^{\perp} = \{x
-\in V: \,\,\,\, (x, u) = 0 \,\,\,\, \forall u \in U\}\)</span> –
-<em>ортогональное дополнение</em> подпространства <span
-class="math inline">\(U\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(V\)</span> – евклидово пространство, <span
+class="math inline">\(U\)</span> – его подпространство. Множество <span
+class="math inline">\(U^{\perp} = \{x \in V: \,\,\,\, (x, u) = 0
+\,\,\,\, \forall u \in U\}\)</span> – <em>ортогональное дополнение</em>
+подпространства <span class="math inline">\(U\)</span>.</p>
 </div>
 <div id="statement-67">
-<p><strong>Утверждение: </strong><span class="math inline">\(V\)</span>
-– евклидово пространство, <span class="math inline">\(U\)</span> – его
-подпространство. Тогда <span class="math inline">\(U^{\perp}\)</span> –
-подпространство <span class="math inline">\(V\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
+class="math inline">\(V\)</span> – евклидово пространство, <span
+class="math inline">\(U\)</span> – его подпространство. Тогда <span
+class="math inline">\(U^{\perp}\)</span> – подпространство <span
+class="math inline">\(V\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-68">
-<p><strong>Утверждение: </strong><span class="math inline">\(V\)</span>
-– евклидово пространство, <span class="math inline">\(U\)</span> – его
-подпространство. Тогда</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
+class="math inline">\(V\)</span> – евклидово пространство, <span
+class="math inline">\(U\)</span> – его подпространство. Тогда</p>
 <ol type="1">
 <li><span class="math inline">\(U \oplus U^{\perp}\)</span>, в частности
 <span class="math inline">\(U \cap U^{\perp} = \{0\}\)</span></li>
 <li><span class="math inline">\(V = U \oplus U^{\perp}\)</span>.</li>
 </ol>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <ol type="1">
 <li>Пусть <span class="math inline">\(\exists x \in U \cap U^{\perp}
 \Rightarrow (x, x) = 0 \Rightarrow x = 0
@@ -367,18 +379,19 @@ e_n\)</span>, где <span class="math inline">\(x_i = (x, e_i)\)</span>.
 </ol>
 </div>
 <div id="corollary-7">
-<p><strong>Следствие: </strong><span class="math inline">\(V\)</span> –
-евклидово пространство, <span class="math inline">\(U\)</span> – его
-подпространство. Тогда любой вектор <span
-class="math inline">\(x\)</span> из <span
+<p><span class="margin-lft"><strong>Следствие: </strong></span><span
+class="math inline">\(V\)</span> – евклидово пространство, <span
+class="math inline">\(U\)</span> – его подпространство. Тогда любой
+вектор <span class="math inline">\(x\)</span> из <span
 class="math inline">\(V\)</span> единственным образом представляется в
 виде суммы <span class="math inline">\(u + u^{\perp}\)</span>, где <span
 class="math inline">\(u \in U\)</span> и <span
 class="math inline">\(u^{\perp} \in U^{\perp}\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="definition-67">
-<p><strong>Определение: </strong><strong>Определение:</strong></p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><strong>Определение:</strong></p>
 <p><span class="math inline">\(u\)</span> – <em>ортогональная проекция
 вектора</em> <span class="math inline">\(x\)</span> <em>на</em> <span
 class="math inline">\(U\)</span>. Обозначается: <span
@@ -392,8 +405,8 @@ class="math inline">\(\operatorname{ort}_{U}x\)</span>.</p>
 id="расстояния-в-евклидовом-пространстве">Расстояния в евклидовом
 пространстве</h2>
 <div id="definition-68">
-<p><strong>Определение: </strong>Пусть <span
-class="math inline">\(V\)</span> – евклидово пространство.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(V\)</span> – евклидово пространство.</p>
 <p><em>Расстояние между векторами</em> <span class="math inline">\(x, y
 \in V\)</span> – это <span class="math inline">\(\rho(x, y) = |x -
 y|\)</span>.</p>
@@ -429,7 +442,8 @@ class="math inline">\(\operatorname{пр}_{U}x\)</span>.</li>
 <h2 data-number="15.3" id="изоморфизм-евклидовых-пространств">Изоморфизм
 евклидовых пространств</h2>
 <div id="definition-69">
-<p><strong>Определение: </strong>Евклидовы пространства <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Евклидовы пространства <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> <em>изоморфны</em>, если существует
 отображение <span class="math inline">\(\varphi: U \to W\)</span>:</p>
@@ -443,12 +457,12 @@ class="math inline">\(W\)</span>, как векторных пространст
 <p>Обозначается: <span class="math inline">\(U \cong W\)</span>.</p>
 </div>
 <div id="theorem-14">
-<p><strong>Теорема: </strong>Пусть <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
 class="math inline">\(U\)</span> и <span
 class="math inline">\(W\)</span> – конечномерные евклидовы пространства.
 Тогда <span class="math inline">\(U \cong W \Leftrightarrow \dim U =
 \dim V\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><span class="math display">\[\Rightarrow\]</span></p>
 <p><span class="math inline">\(U \cong W \Rightarrow U\)</span>
 изоморфно <span class="math inline">\(W\)</span>, как векторное

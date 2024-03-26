@@ -11,7 +11,10 @@
     
     <title>Теорема о неявной функции</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,16 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="функции-в-mathbbrn.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="функции-в-mathbbrn.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="search.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -247,10 +267,10 @@
 <h1 data-number="11" id="теорема-о-неявной-функции">Теорема о неявной
 функции</h1>
 <div id="theorem-49">
-<p><strong>Теорема:</strong> (О неявной функции) Пусть <span
-class="math inline">\(F: \mathbb{R}^{n + 1} \to \mathbb{R},
-\,\,\,\,\mathbf{x}, \mathbf{x_0} \in \mathbb{R}^n, \,\,\,\, y, y_0 \in
-\mathbb{R}\)</span>.</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(О неявной
+функции) Пусть <span class="math inline">\(F: \mathbb{R}^{n + 1} \to
+\mathbb{R}, \,\,\,\,\mathbf{x}, \mathbf{x_0} \in \mathbb{R}^n, \,\,\,\,
+y, y_0 \in \mathbb{R}\)</span>.</p>
 <p>Пусть <span class="math inline">\(F(\mathbf{x}, y) \in
 C^1(B(\mathbf{x_0}, y_0)), \,\,\,\, F(\mathbf{x_0}, y_0) = 0, \,\,\,\,
 F_y’(\mathbf{x_0}, y_0) \ne 0\)</span>.</p>
@@ -262,7 +282,7 @@ class="math display">\[f(\mathbf{x}) \in C^1(B_{\delta}(\mathbf{x_0})),
 class="math display">\[\forall x_i \,\,\,\, \exists
 f_{x_i}’(\mathbf{x_0}, y_0) = -\frac{F_{x_i}’(\mathbf{x_0},
 y_0)}{F_y’(\mathbf{x_0}, y_0)}\]</span></p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <details>
 <summary>
 <strong>План</strong>
@@ -383,9 +403,9 @@ x_i}}{\frac{\partial F}{\partial y}}(x_{2i} - x_{1i})\]</span></p>
 </div>
 <h2 data-number="11.1" id="матрица-якоби">Матрица Якоби</h2>
 <div id="definition-59">
-<p><strong>Определение:</strong> Отображение <span
-class="math inline">\(f: \mathbb{R}^n \to \mathbb{R}^m\)</span>
-<em>дифференцируемо</em> в точке <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Отображение <span class="math inline">\(f: \mathbb{R}^n
+\to \mathbb{R}^m\)</span> <em>дифференцируемо</em> в точке <span
 class="math inline">\(x_0\)</span>, если существует линейное отображение
 <span class="math inline">\(\varphi: \mathbb{R}^n \to
 \mathbb{R}^m\)</span>, такое, что <span
@@ -396,8 +416,9 @@ f(\mathbf{x_0}) = \varphi(\Delta \mathbf{x}) +
 0\)</span>.</p>
 </div>
 <div id="definition-60">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(f:
-\mathbb{R}^n \to \mathbb{R}^m, \,\,\,\, f(\mathbf{x}) =
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f: \mathbb{R}^n \to \mathbb{R}^m, \,\,\,\,
+f(\mathbf{x}) =
 \left(\begin{array}{c}f_1(\mathbf{x})\\\vdots\\f_m(\mathbf{x})\end{array}\right),
 \,\,\,\, \forall \mathbf{x} \in \mathbb{R}^n\)</span>. Пусть <span
 class="math inline">\(f(\mathbf{x})\)</span> дифференцируемо в <span
@@ -413,8 +434,9 @@ n\)</span>, то определитель матрицы Якоби – <em>як
 class="math display">\[J\]</span></p>
 </div>
 <div id="statement-27">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f:
-\mathbb{R}^n \to \mathbb{R}^m, \,\,\,\, f(\mathbf{x}) =
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(f: \mathbb{R}^n \to \mathbb{R}^m, \,\,\,\,
+f(\mathbf{x}) =
 \left(\begin{array}{c}f_1(\mathbf{x})\\\vdots\\f_m(\mathbf{x})\end{array}\right),
 \,\,\,\, \forall \mathbf{x} \in \mathbb{R}^n\)</span>. Тогда <span
 class="math inline">\(f(\mathbf{x})\)</span> дифференцируемо в точке
@@ -422,16 +444,16 @@ class="math inline">\(f(\mathbf{x})\)</span> дифференцируемо в �
 \Leftrightarrow f_i(\mathbf{x})\)</span> дифференцируема в точке <span
 class="math inline">\(\mathbf{x_0} \,\,\,\, \forall i \in \{1, \ldots,
 m\}\)</span>.</p>
-<p><em>Доказательство:</em> определение <span
-class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> определение
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="11.2" id="теорема-о-неявном-отображении">Теорема о
 неявном отображении</h2>
 <div id="theorem-50">
-<p><strong>Теорема:</strong> (О неявном отображении) Пусть <span
-class="math inline">\(F: \mathbb{R}^{n + m} \to \mathbb{R}^m\)</span> и
-<span class="math inline">\(F(\mathbf{x}, \mathbf{y}) =
-\left(\begin{array}{c}f_1(\mathbf{x},
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(О неявном
+отображении) Пусть <span class="math inline">\(F: \mathbb{R}^{n + m} \to
+\mathbb{R}^m\)</span> и <span class="math inline">\(F(\mathbf{x},
+\mathbf{y}) = \left(\begin{array}{c}f_1(\mathbf{x},
 \mathbf{y})\\\vdots\\f_m(\mathbf{x}, \mathbf{y})\end{array}\right),
 \,\,\,\, \forall \mathbf{x} \in \mathbb{R}^n, \,\,\,\, \mathbf{y} \in
 \mathbb{R}^m\)</span>. Пусть <span class="math inline">\(F \in
@@ -452,13 +474,14 @@ C^1(B(\mathbf{x_0}))\}_{i = 1}^m\)</span> и <span
 class="math inline">\(f_i(\mathbf{x}, \varphi_1(\mathbf{x}), \ldots,
 \varphi_m(\mathbf{x})) = 0 \,\,\,\, \forall i \in \{1, \ldots,
 m\}\)</span>.</p>
-<p><em>Доказательство:</em> индукция по <span
-class="math inline">\(m\)</span> см.стр 32 во втором томе Кудрявцева</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> индукция по
+<span class="math inline">\(m\)</span> см.стр 32 во втором томе
+Кудрявцева</p>
 </div>
 <div id="corollary-1">
-<p><strong>Следствие:</strong> (теорема об обратном отображении) Пусть
-<span class="math inline">\(f: \mathbb{R}^n \to \mathbb{R}^n, \,\,\,\,
-f(\mathbf{x}) =
+<p><span class="margin-lft"><strong>Следствие: </strong></span>(теорема
+об обратном отображении) Пусть <span class="math inline">\(f:
+\mathbb{R}^n \to \mathbb{R}^n, \,\,\,\, f(\mathbf{x}) =
 \left(\begin{array}{c}f_1(\mathbf{x})\\\vdots\\f_m(\mathbf{x})\end{array}\right),
 \,\,\,\, f \in C^1(B(\mathbf{x_0})), \,\,\,\, |J|_{|\mathbf{x_0}} \ne
 0\)</span>. Тогда <span class="math inline">\(\exists
@@ -468,7 +491,7 @@ f(\mathbf{x}) =
 обозначается <span class="math inline">\(\mathbf{x} =
 F^{-1}(\hat{\mathbf{x}})\)</span>) и <span class="math inline">\(F^{-1}
 \in C^1(\hat{B}(\mathbf{x_0}))\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <details>
@@ -479,14 +502,15 @@ class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="11.3" id="функциональная-зависимость">Функциональная
 зависимость</h2>
 <div id="definition-61">
-<p><strong>Определение:</strong> Пусть <span
-class="math inline">\(\Omega \subset \mathbb{R}^n\)</span> - область.
-<span class="math inline">\(\{\varphi_i: \mathbb{R}^n \to \mathbb{R},
-\,\,\,\, \varphi_i \in C^1(\Omega)\}_{i = 1}^m\)</span>. Пусть <span
-class="math inline">\(\hat{\Omega} \subset \displaystyle\bigtimes_{i =
-1}^{m - 1}\varphi_i(\Omega) \subset R^{m - 1}\)</span>. Если <span
-class="math inline">\(\exists \Phi: \mathbb{R}^{m - 1} \to \mathbb{R},
-\,\,\,\, \Phi \in C^1(\hat{\Omega})\)</span>, такое, что <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(\Omega \subset \mathbb{R}^n\)</span> –
+область. <span class="math inline">\(\{\varphi_i: \mathbb{R}^n \to
+\mathbb{R}, \,\,\,\, \varphi_i \in C^1(\Omega)\}_{i = 1}^m\)</span>.
+Пусть <span class="math inline">\(\hat{\Omega} \subset
+\displaystyle\bigtimes_{i = 1}^{m - 1}\varphi_i(\Omega) \subset R^{m -
+1}\)</span>. Если <span class="math inline">\(\exists \Phi:
+\mathbb{R}^{m - 1} \to \mathbb{R}, \,\,\,\, \Phi \in
+C^1(\hat{\Omega})\)</span>, такое, что <span
 class="math inline">\(\varphi_m(\mathbf{x}) =
 \Phi(\varphi_1(\mathbf{x}), \ldots, \varphi_{m - 1}(\mathbf{x}))
 \,\,\,\, \forall \mathbf{x} \in \Omega\)</span>, то функции <span
@@ -501,81 +525,84 @@ class="math inline">\(\exists \varphi_i\)</span> функционально за
 id="необходимые-условия-функциональной-зависимости">Необходимые условия
 функциональной зависимости</h3>
 <div id="statement-28">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(\Omega \subset \mathbb{R}^n\)</span> - область.
-<span class="math inline">\(\{\varphi_i: \mathbb{R}^n \to \mathbb{R},
-\,\,\,\, \varphi_i \in C^1(\Omega)\}_{i = 1}^m\)</span>, <span
-class="math inline">\(m \le n\)</span> и <span
-class="math inline">\(f_1, \ldots, f_m\)</span> - функционально
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\Omega \subset \mathbb{R}^n\)</span> –
+область. <span class="math inline">\(\{\varphi_i: \mathbb{R}^n \to
+\mathbb{R}, \,\,\,\, \varphi_i \in C^1(\Omega)\}_{i = 1}^m\)</span>,
+<span class="math inline">\(m \le n\)</span> и <span
+class="math inline">\(f_1, \ldots, f_m\)</span> – функционально
 зависимы. Тогда <span class="math inline">\(\forall \mathbf{x} \in
 \Omega \,\,\,\, \operatorname{rk} J &lt; m\)</span>, где <span
-class="math inline">\(J\)</span> - матрица Якоби системы <span
+class="math inline">\(J\)</span> – матрица Якоби системы <span
 class="math inline">\(f_1, \ldots, f_m\)</span>.</p>
-<p><em>Доказательство:</em> Функции <span class="math inline">\(f_1,
-\ldots, f_m\)</span> функционально зависимы. Без ограничения общности,
-считаем, что <span class="math inline">\(f_m = \Phi(f_1, \ldots, f_{m -
-1})\)</span>. Имеем <span class="math inline">\(\frac{\partial
-f_m}{\partial x_k} = \displaystyle \sum_{i = 1}^{m - 1}\frac{\partial
-\Phi}{\partial f_i} \frac{\partial f_i}{\partial x_k}\)</span>, то есть
-<span class="math inline">\(m\)</span>-я строка матрицы Якоби линейно
+<p><span class="margin-lft"><em>Доказательство:</em></span> Функции
+<span class="math inline">\(f_1, \ldots, f_m\)</span> функционально
+зависимы. Без ограничения общности, считаем, что <span
+class="math inline">\(f_m = \Phi(f_1, \ldots, f_{m - 1})\)</span>. Имеем
+<span class="math inline">\(\frac{\partial f_m}{\partial x_k} =
+\displaystyle \sum_{i = 1}^{m - 1}\frac{\partial \Phi}{\partial f_i}
+\frac{\partial f_i}{\partial x_k}\)</span>, то есть <span
+class="math inline">\(m\)</span>-я строка матрицы Якоби линейно
 выражается через остальные <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-2">
-<p><strong>Следствие:</strong> Пусть <span class="math inline">\(\Omega
-\subset \mathbb{R}^n\)</span> - область. <span
-class="math inline">\(\{\varphi_i: \mathbb{R}^n \to \mathbb{R}, \,\,\,\,
-\varphi_i \in C^1(\Omega)\}_{i = 1}^m\)</span>, <span
-class="math inline">\(m \le n\)</span>. Если <span
+<p><span class="margin-lft"><strong>Следствие: </strong></span>Пусть
+<span class="math inline">\(\Omega \subset \mathbb{R}^n\)</span> –
+область. <span class="math inline">\(\{\varphi_i: \mathbb{R}^n \to
+\mathbb{R}, \,\,\,\, \varphi_i \in C^1(\Omega)\}_{i = 1}^m\)</span>,
+<span class="math inline">\(m \le n\)</span>. Если <span
 class="math inline">\(\exists \mathbf{x_0} \in \Omega \,\,\,\,
 \operatorname{rk} J = m\)</span> в точке <span
 class="math inline">\(\mathbf{x_0}\)</span>, где <span
-class="math inline">\(J\)</span> - матрица Якоби системы <span
+class="math inline">\(J\)</span> – матрица Якоби системы <span
 class="math inline">\(f_1, \ldots, f_m\)</span>, то <span
-class="math inline">\(f_1, \ldots, f_m\)</span> - функционально
+class="math inline">\(f_1, \ldots, f_m\)</span> – функционально
 независимы.</p>
-<p><em>Доказательство:</em> Такое же как выше. Только надо дописать в
-начало <em>Докажем от противного. Пусть</em>, а в конец
-<em>противоречие</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Такое же как
+выше. Только надо дописать в начало <em>Докажем от противного.
+Пусть</em>, а в конец <em>противоречие</em> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-51">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(\Omega
-\subset \mathbb{R}^n\)</span> - область. <span
-class="math inline">\(\{\varphi_i: \mathbb{R}^n \to \mathbb{R}, \,\,\,\,
-\varphi_i \in C^1(\Omega)\}_{i = 1}^m\)</span>, <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(\Omega \subset \mathbb{R}^n\)</span> – область.
+<span class="math inline">\(\{\varphi_i: \mathbb{R}^n \to \mathbb{R},
+\,\,\,\, \varphi_i \in C^1(\Omega)\}_{i = 1}^m\)</span>, <span
 class="math inline">\(m &gt; n\)</span>. Если <span
 class="math inline">\(\operatorname{rk} J = n\)</span>, где <span
-class="math inline">\(J\)</span> - матрица Якоби системы <span
+class="math inline">\(J\)</span> – матрица Якоби системы <span
 class="math inline">\(f_1, \ldots, f_m\)</span>, то <span
-class="math inline">\(f_1, \ldots, f_m\)</span> - функционально
+class="math inline">\(f_1, \ldots, f_m\)</span> – функционально
 зависимы.</p>
-<p><em>Доказательство:</em> Теорема об обратном отображении <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Теорема об
+обратном отображении <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h3 data-number="11.3.2"
 id="достаточные-условия-функциональной-зависимости">Достаточные условия
 функциональной зависимости</h3>
 <div id="statement-29">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(\Omega \subset \mathbb{R}^n\)</span> - область.
-<span class="math inline">\(\{\varphi_i: \mathbb{R}^n \to \mathbb{R},
-\,\,\,\, \varphi_i \in C^1(\Omega)\}_{i = 1}^m\)</span>. Если <span
-class="math inline">\(\exists \mathbf{x_0} \in \Omega \,\,\,\,
-\operatorname{rk} J &lt; \min(n, m)\)</span> в точке <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(\Omega \subset \mathbb{R}^n\)</span> –
+область. <span class="math inline">\(\{\varphi_i: \mathbb{R}^n \to
+\mathbb{R}, \,\,\,\, \varphi_i \in C^1(\Omega)\}_{i = 1}^m\)</span>.
+Если <span class="math inline">\(\exists \mathbf{x_0} \in \Omega
+\,\,\,\, \operatorname{rk} J &lt; \min(n, m)\)</span> в точке <span
 class="math inline">\(\mathbf{x_0}\)</span>, где <span
-class="math inline">\(J\)</span> - матрица Якоби системы <span
+class="math inline">\(J\)</span> – матрица Якоби системы <span
 class="math inline">\(f_1, \ldots, f_m\)</span>, то <span
-class="math inline">\(f_1, \ldots, f_m\)</span> - функционально
+class="math inline">\(f_1, \ldots, f_m\)</span> – функционально
 зависима.</p>
-<p><em>Доказательство:</em> без доказательства <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> без
+доказательства <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="11.4" id="условный-экстремум">Условный экстремум</h2>
 <div id="definition-62">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(f,
-f_1, \ldots, f_m\)</span> определены в <span
-class="math inline">\(B(\mathbf{x_0}), \,\,\,\, \mathbf{x_0} \in
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f, f_1, \ldots, f_m\)</span> определены в
+<span class="math inline">\(B(\mathbf{x_0}), \,\,\,\, \mathbf{x_0} \in
 \mathbb{R}^n\)</span>. Если <span class="math inline">\(\forall
 \mathbf{x} \in \{\mathbf{x} \in {B}(\mathbf{x_0}): \,\,\,\,
 f_i(\mathbf{x}) = 0, \forall i \in \{1, \ldots, m\}\} \,\,\,\,
@@ -625,29 +652,30 @@ class="math inline">\(\mathbf{x_0}\)</span> точка экстремума фу
 id="необходимое-условие-условного-экстремума">Необходимое условие
 условного экстремума</h3>
 <div id="theorem-52">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f, f_1,
-\ldots, f_m \in C^1(B(\mathbf{x_0}))\)</span>, <span
-class="math inline">\(m \le n\)</span>, <span
-class="math inline">\(\operatorname{rk} \left(\begin{array}{ccc}
-\frac{\partial f_1}{\partial x_1} &amp; \dots &amp; \frac{\partial
-f_1}{\partial x_n} \\ \vdots &amp; \ddots &amp; \vdots \\ \frac{\partial
-f_m}{\partial x_1} &amp; \dots &amp; \frac{\partial f_m}{\partial x_n}
-\end{array}\right) = m \,\,\,\, \forall \mathbf{x} \in
-B(\mathbf{x_0})\)</span> и <span class="math inline">\(f\)</span> имеет
-в точке <span class="math inline">\(\mathbf{x_0}\)</span> условный
-экстремум при условиях связи <span class="math inline">\(f_i(\mathbf{x})
-= 0\)</span>. Тогда <span class="math inline">\(\operatorname{grad}
-f(\mathbf{x_0}), \operatorname{grad} f_1(\mathbf{x_0}),\ldots,
-\operatorname{grad} f_m(\mathbf{x_0})\)</span> – линейно зависимы.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f, f_1, \ldots, f_m \in
+C^1(B(\mathbf{x_0}))\)</span>, <span class="math inline">\(m \le
+n\)</span>, <span class="math inline">\(\operatorname{rk}
+\left(\begin{array}{ccc} \frac{\partial f_1}{\partial x_1} &amp; \dots
+&amp; \frac{\partial f_1}{\partial x_n} \\ \vdots &amp; \ddots &amp;
+\vdots \\ \frac{\partial f_m}{\partial x_1} &amp; \dots &amp;
+\frac{\partial f_m}{\partial x_n} \end{array}\right) = m \,\,\,\,
+\forall \mathbf{x} \in B(\mathbf{x_0})\)</span> и <span
+class="math inline">\(f\)</span> имеет в точке <span
+class="math inline">\(\mathbf{x_0}\)</span> условный экстремум при
+условиях связи <span class="math inline">\(f_i(\mathbf{x}) = 0\)</span>.
+Тогда <span class="math inline">\(\operatorname{grad} f(\mathbf{x_0}),
+\operatorname{grad} f_1(\mathbf{x_0}),\ldots, \operatorname{grad}
+f_m(\mathbf{x_0})\)</span> – линейно зависимы.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="11.5"
 id="метод-множителей-лагранжа-для-нахождения-условного-экстремума">Метод
 множителей Лагранжа для нахождения условного экстремума</h2>
 <div id="definition-63">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(f,
-f_1, \ldots, f_m\)</span> определены в <span
-class="math inline">\(B(\mathbf{x_0})\)</span>. Функция <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(f, f_1, \ldots, f_m\)</span> определены в
+<span class="math inline">\(B(\mathbf{x_0})\)</span>. Функция <span
 class="math inline">\(\mathcal{L}(\lambda_1, \ldots, \lambda_m, x_1,
 \ldots, x_n) = f(\mathbf{x}) + \displaystyle \sum_{i = 1}^{m}\lambda_i
 \cdot f_i(\mathbf{x})\)</span> – <em>функция Лагранжа</em> системы <span
@@ -656,22 +684,22 @@ class="math inline">\(\boldsymbol{\lambda} = (\lambda_1, \ldots,
 \lambda_n)\)</span> – <em>множители Лагранжа</em>.</p>
 </div>
 <div id="theorem-53">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f, f_1,
-\ldots, f_m \in C^1(B(\mathbf{x_0}))\)</span>, <span
-class="math inline">\(m \le n\)</span>, <span
-class="math inline">\(\operatorname{rk} \left(\begin{array}{ccc}
-\frac{\partial f_1}{\partial x_1} &amp; \dots &amp; \frac{\partial
-f_1}{\partial x_n} \\ \vdots &amp; \ddots &amp; \vdots \\ \frac{\partial
-f_m}{\partial x_1} &amp; \dots &amp; \frac{\partial f_m}{\partial x_n}
-\end{array}\right) = m \,\,\,\, \forall \mathbf{x} \in
-B(\mathbf{x_0})\)</span> и <span class="math inline">\(f\)</span> имеет
-в точке <span class="math inline">\(\mathbf{x_0}\)</span> условный
-экстремум при условиях связи <span class="math inline">\(f_i(\mathbf{x})
-= 0\)</span>. Тогда <span class="math inline">\(\exists
-\boldsymbol{\lambda}: \,\,\,\, d\mathcal{L}(\boldsymbol{\lambda},
-\mathbf{x_0}) = 0\)</span>.</p>
-<p><em>Доказательство:</em> Из теоремы имеем <span
-class="math inline">\(\operatorname{grad} f(\mathbf{x_0}),
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f, f_1, \ldots, f_m \in
+C^1(B(\mathbf{x_0}))\)</span>, <span class="math inline">\(m \le
+n\)</span>, <span class="math inline">\(\operatorname{rk}
+\left(\begin{array}{ccc} \frac{\partial f_1}{\partial x_1} &amp; \dots
+&amp; \frac{\partial f_1}{\partial x_n} \\ \vdots &amp; \ddots &amp;
+\vdots \\ \frac{\partial f_m}{\partial x_1} &amp; \dots &amp;
+\frac{\partial f_m}{\partial x_n} \end{array}\right) = m \,\,\,\,
+\forall \mathbf{x} \in B(\mathbf{x_0})\)</span> и <span
+class="math inline">\(f\)</span> имеет в точке <span
+class="math inline">\(\mathbf{x_0}\)</span> условный экстремум при
+условиях связи <span class="math inline">\(f_i(\mathbf{x}) = 0\)</span>.
+Тогда <span class="math inline">\(\exists \boldsymbol{\lambda}: \,\,\,\,
+d\mathcal{L}(\boldsymbol{\lambda}, \mathbf{x_0}) = 0\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Из теоремы
+имеем <span class="math inline">\(\operatorname{grad} f(\mathbf{x_0}),
 \operatorname{grad} f_1(\mathbf{x_0}),\ldots, \operatorname{grad}
 f_m(\mathbf{x_0})\)</span> – линейно зависимы. Так как <span
 class="math inline">\(\operatorname{rk} J = m\)</span>, <span
@@ -689,8 +717,9 @@ class="math inline">\(\operatorname{grad} f_1(\mathbf{x_0}),\ldots,
 1}^{m}f_i(\mathbf{x})d\lambda_i \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-54">
-<p><strong>Теорема:</strong> (Достаточное условие условного экстремума)
-Пусть <span class="math inline">\(f, f_1, \ldots, f_m \in
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(Достаточное условие условного экстремума) Пусть <span
+class="math inline">\(f, f_1, \ldots, f_m \in
 C^1(B(\mathbf{x_0}))\)</span>, <span class="math inline">\(m \le
 n\)</span>, <span class="math inline">\(\operatorname{rk}
 \left(\begin{array}{ccc} \frac{\partial f_1}{\partial x_1} &amp; \dots
@@ -705,12 +734,12 @@ class="math inline">\(d\mathcal{L}(\boldsymbol{\lambda}, \mathbf{x_0}) =
 если <span class="math inline">\(\exists \boldsymbol{\lambda}: \,\,\,\,
 d^2\mathcal{L}(\boldsymbol{\lambda}, если \mathbf{x_0})\)</span>
 положительно или отрицательно определена, иначе экстремума нет.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="функции-в-mathbbrn.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>
@@ -718,6 +747,7 @@ d^2\mathcal{L}(\boldsymbol{\lambda}, если \mathbf{x_0})\)</span>
                         <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
                     </span>
         <span class="navlink">
+                        <a href="search.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
                     </span>
     </div>
 </nav>

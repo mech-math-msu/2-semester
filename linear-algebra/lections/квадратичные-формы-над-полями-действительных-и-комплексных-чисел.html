@@ -12,6 +12,7 @@
     <title>Квадратичные формы над полями действительных и комплексных
 чисел</title>
     <style>
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
         div.sitenav { display: flex; justify-content: space-between; }
         div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
         div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
@@ -86,7 +87,7 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
@@ -101,6 +102,7 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
@@ -219,7 +221,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -231,6 +237,10 @@
     </head>
 <body>
 
+
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
 
 <nav id="sitenav">
     <div class="sitenav">
@@ -269,28 +279,30 @@ x_n^2\)</span>. Считаем, что <span class="math inline">\(\lambda_1 \ne
 class="math inline">\(\lambda_{r + 1} = 0, \ldots, \lambda_{n} =
 0\)</span>.</p>
 <div id="statement-57">
-<p><strong>Утверждение: </strong>Над <span
-class="math inline">\(\mathbb{C}\)</span> в <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Над
+<span class="math inline">\(\mathbb{C}\)</span> в <span
 class="math inline">\(V\)</span> существует базис, в котором</p>
 <p><span class="math inline">\(q(x) = x_1^2 + \ldots +
 x_r^2\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\blacksquare\)</span></p>
 </div>
 <div id="statement-58">
-<p><strong>Утверждение: </strong>Над <span
-class="math inline">\(\mathbb{R}\)</span> в <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Над
+<span class="math inline">\(\mathbb{R}\)</span> в <span
 class="math inline">\(V\)</span> существует базис, в котором <span
 class="math inline">\(q(x) = x_1^2 + \ldots + x_k^2 - x_{k + 1}^2 -
 \ldots - x_{k + l}^2\)</span>, <span class="math inline">\(k + l =
 r\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\lambda_i =
-\frac{1}{\sqrt{|\lambda_i|}} \,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\lambda_i = \frac{1}{\sqrt{|\lambda_i|}}
+\,\,\,\,\blacksquare\)</span></p>
 </div>
-<h2 data-number="13.1" id="индексы-инерции">Индексы инерции</h2>
+<h3 data-number="13.0.1" id="индексы-инерции">Индексы инерции</h3>
 <div id="definition-53">
-<p><strong>Определение: </strong><span class="math inline">\(k\)</span>
-– <em>положительный индекс инерции</em>,</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(k\)</span> – <em>положительный индекс
+инерции</em>,</p>
 <p><span class="math inline">\(l\)</span> – <em>отрицательный индекс
 инерции</em>.</p>
 <p>Еще числа <span class="math inline">\(k\)</span> и <span
@@ -298,21 +310,22 @@ class="math inline">\(l\)</span> называются <em>сигнатура к�
 формы</em>.</p>
 </div>
 <div id="theorem-11">
-<p><strong>Теорема: </strong>Положительный и отрицательный индексы
-инерции инварианты вещественной квадратичной функции <span
-class="math inline">\(q: V \to \mathbb{R}\)</span>, то есть, если в
-базисах <span class="math inline">\(e = \{e_1, \ldots, e_n\}\)</span> и
-<span class="math inline">\(f = \{f_1, \ldots, f_n\}\,\,\,\, q\)</span>
-имеет вид:</p>
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>Положительный и отрицательный индексы инерции инварианты
+вещественной квадратичной функции <span class="math inline">\(q: V \to
+\mathbb{R}\)</span>, то есть, если в базисах <span
+class="math inline">\(e = \{e_1, \ldots, e_n\}\)</span> и <span
+class="math inline">\(f = \{f_1, \ldots, f_n\}\,\,\,\, q\)</span> имеет
+вид:</p>
 <p><span
 class="math display">\[q(x)=x_1^2+\ldots+x_k^2-x_{k+1}^2-\ldots-x_{k+l}^2\]</span>
 <span
 class="math display">\[q(x)=\tilde{x}_1^2+\ldots+\tilde{x}_s^2-\tilde{x}_{s+1}^2-\ldots-\tilde{x}_{s+t}^2\]</span>
 соответственно, то <span class="math inline">\(k = s\)</span> и <span
 class="math inline">\(l = t\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(k + l = s + t =
-r\)</span>, то есть достаточно доказать, что <span
-class="math inline">\(k = s\)</span>. Пусть <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(k + l = s + t = r\)</span>, то есть достаточно
+доказать, что <span class="math inline">\(k = s\)</span>. Пусть <span
 class="math inline">\(k \ne s\)</span>. Без ограничения общности
 считаем, что <span class="math inline">\(s &gt; k\)</span>. Рассмотрим
 подпространства <span class="math inline">\(U = \langle f_1, \ldots,
@@ -327,7 +340,7 @@ class="math inline">\(q(x) = \tilde{x}_1^2+\ldots+\tilde{x}_s^2 &gt;
 -x_{k+1}^2-\ldots-x_{k+l}^2 &lt; 0\)</span>. Противоречие <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
-<h2 data-number="13.2"
+<h2 data-number="13.1"
 id="положительно-определенные-квадратичные-функции">Положительно
 определенные квадратичные функции</h2>
 <p><span class="math inline">\(V\)</span> – векторное пространство над
@@ -335,27 +348,28 @@ id="положительно-определенные-квадратичные-�
 class="math inline">\(q: V \to \mathbb{R}\)</span> – квадратичная
 функция.</p>
 <div id="definition-54">
-<p><strong>Определение: </strong><span class="math inline">\(q\)</span>
-<em>положительно определена</em>, если <span
-class="math inline">\(\forall x \in V,\,\,\,\, x \ne 0 \,\,\,\, q(x)
-&gt; 0\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(q\)</span> <em>положительно определена</em>, если
+<span class="math inline">\(\forall x \in V,\,\,\,\, x \ne 0 \,\,\,\,
+q(x) &gt; 0\)</span>.</p>
 </div>
 <div id="definition-55">
-<p><strong>Определение: </strong><span class="math inline">\(q\)</span>
-<em>отрицательно определена</em>, если <span
-class="math inline">\(\forall x \in V,\,\,\,\, x \ne 0 \,\,\,\, q(x)
-&lt; 0\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math inline">\(q\)</span> <em>отрицательно определена</em>, если
+<span class="math inline">\(\forall x \in V,\,\,\,\, x \ne 0 \,\,\,\,
+q(x) &lt; 0\)</span>.</p>
 </div>
-<h3 data-number="13.2.1" id="критерий-сильвестра">Критерий
+<h3 data-number="13.1.1" id="критерий-сильвестра">Критерий
 Сильвестра</h3>
 <div id="theorem-12">
-<p><strong>Теорема: </strong>(критерий Сильвестра) Вещественная
-симметричекая билинейная функция <span class="math inline">\(\beta:
-V\times V \to \mathbb{R}\)</span> положительно определена <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(критерий
+Сильвестра) Вещественная симметричекая билинейная функция <span
+class="math inline">\(\beta: V\times V \to \mathbb{R}\)</span>
+положительно определена <span
 class="math inline">\(\Leftrightarrow\)</span> все угловые миноры
 матрицы <span class="math inline">\(B\)</span> функции <span
 class="math inline">\(\beta\)</span> положительны.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Leftarrow\]</span> По теореме существует базис,
 в котором <span class="math inline">\(\beta(x, x) = q(x) =
 \frac{\Delta_1}{\Delta_0}x_1^2 + \ldots \frac{\Delta_n}{\Delta_{n -

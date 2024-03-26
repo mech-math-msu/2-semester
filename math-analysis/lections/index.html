@@ -11,7 +11,10 @@
     
     <title>Математический анализ</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,19 +237,31 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                    </span>
-        <span class="navlink">
-                    </span>
-        <span class="navlink">
-                        <a href="неопределенный-интеграл.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                            </span>
+            <span class="navlink">
+                            </span>
+            <span class="navlink">
+                                <a href="неопределенный-интеграл.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
 <header id="title-block-header">
+
     <h1 class="title">Математический анализ</h1>
 
     
@@ -252,7 +272,7 @@
 <nav id="TOC" role="doc-toc">
         <h2 id="toc-title" class="toc-title">Содержание</h2>
         <ul>
-        <li><a href="неопределенный-интеграл.html"
+        <li><a href="неопределенный-интеграл.html#неопределенный-интеграл"
         id="toc-неопределенный-интеграл">Неопределенный интеграл</a>
         <ul>
         <li><a
@@ -270,7 +290,8 @@
         <li><a href="неопределенный-интеграл.html#метод-остроградского"
         id="toc-метод-остроградского">Метод Остроградского</a></li>
         </ul></li>
-        <li><a href="определенный-интеграл-римана.html"
+        <li><a
+        href="определенный-интеграл-римана.html#определенный-интеграл-римана"
         id="toc-определенный-интеграл-римана">Определенный интеграл Римана</a>
         <ul>
         <li><a href="определенный-интеграл-римана.html#определения"
@@ -322,7 +343,8 @@
         <li><a href="определенный-интеграл-римана.html#первая-теорема-о-среднем"
         id="toc-первая-теорема-о-среднем">Первая теорема о среднем</a></li>
         </ul></li>
-        <li><a href="интеграл-с-переменным-верхним-пределом.html"
+        <li><a
+        href="интеграл-с-переменным-верхним-пределом.html#интеграл-с-переменным-верхним-пределом"
         id="toc-интеграл-с-переменным-верхним-пределом">Интеграл с переменным
         верхним пределом</a>
         <ul>
@@ -337,9 +359,9 @@
         href="интеграл-с-переменным-верхним-пределом.html#вторая-теорема-о-средних"
         id="toc-вторая-теорема-о-средних">Вторая теорема о средних</a></li>
         </ul></li>
-        <li><a href="кривые.html" id="toc-кривые">Кривые</a></li>
-        <li><a href="фигуры-и-площади.html" id="toc-фигуры-и-площади">Фигуры и
-        площади</a>
+        <li><a href="кривые.html#кривые" id="toc-кривые">Кривые</a></li>
+        <li><a href="фигуры-и-площади.html#фигуры-и-площади"
+        id="toc-фигуры-и-площади">Фигуры и площади</a>
         <ul>
         <li><a href="фигуры-и-площади.html#верхняя-и-нижняя-площади"
         id="toc-верхняя-и-нижняя-площади">Верхняя и нижняя площади</a></li>
@@ -348,7 +370,7 @@
         id="toc-равенство-определенного-интеграла-площади-под-графиком-функции">Равенство
         определенного интеграла площади под графиком функции</a></li>
         </ul></li>
-        <li><a href="несобственные-интегралы.html"
+        <li><a href="несобственные-интегралы.html#несобственные-интегралы"
         id="toc-несобственные-интегралы">Несобственные интегралы</a>
         <ul>
         <li><a
@@ -364,7 +386,8 @@
         id="toc-главное-значение-интеграла-в-смысле-коши">Главное значение
         интеграла в смысле Коши</a></li>
         </ul></li>
-        <li><a href="функции-ограниченной-вариации.html"
+        <li><a
+        href="функции-ограниченной-вариации.html#функции-ограниченной-вариации"
         id="toc-функции-ограниченной-вариации">Функции ограниченной вариации</a>
         <ul>
         <li><a
@@ -376,7 +399,7 @@
         id="toc-представление-функции-ограниченной-вариации-в-виде-разности-монотонных">Представление
         функции ограниченной вариации в виде разности монотонных</a></li>
         </ul></li>
-        <li><a href="интеграл-римана-стилтьеса.html"
+        <li><a href="интеграл-римана-стилтьеса.html#интеграл-римана-стилтьеса"
         id="toc-интеграл-римана-стилтьеса">Интеграл Римана-Стилтьеса</a>
         <ul>
         <li><a
@@ -411,8 +434,8 @@
         id="toc-вторая-теорема-о-среднем-для-интеграла-римана-усиленная-версия">Вторая
         теорема о среднем для интеграла Римана (усиленная версия)</a></li>
         </ul></li>
-        <li><a href="норма-метрика.html" id="toc-норма-метрика">Норма,
-        метрика</a>
+        <li><a href="норма-метрика.html#норма-метрика"
+        id="toc-норма-метрика">Норма, метрика</a>
         <ul>
         <li><a href="норма-метрика.html#пределы" id="toc-пределы">Пределы</a>
         <ul>
@@ -430,7 +453,7 @@
         <li><a href="норма-метрика.html#связность"
         id="toc-связность">Связность</a></li>
         </ul></li>
-        <li><a href="функции-в-mathbbrn.html"
+        <li><a href="функции-в-mathbbrn.html#функции-в-mathbbrn"
         id="toc-функции-в-mathbbrn">Функции в <span
         class="math inline">\(\mathbb{R}^n\)</span></a>
         <ul>
@@ -498,7 +521,7 @@
         локального экстремума</a></li>
         </ul></li>
         </ul></li>
-        <li><a href="теорема-о-неявной-функции.html"
+        <li><a href="теорема-о-неявной-функции.html#теорема-о-неявной-функции"
         id="toc-теорема-о-неявной-функции">Теорема о неявной функции</a>
         <ul>
         <li><a href="теорема-о-неявной-функции.html#матрица-якоби"
@@ -539,7 +562,7 @@
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                     </span>
         <span class="navlink">

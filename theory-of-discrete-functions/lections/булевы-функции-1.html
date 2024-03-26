@@ -11,7 +11,10 @@
     
     <title>Булевы функции</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,17 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="булевы-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="функции-k-значной-логики.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="булевы-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="функции-k-значной-логики.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -249,8 +268,8 @@
 <h2 data-number="2.1" id="эквивалентные-формулы">Эквивалентные
 формулы</h2>
 <div id="definition-14">
-<p><strong>Определение:</strong> Формулы <span
-class="math inline">\(\Phi_1\)</span> и <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Формулы
+<span class="math inline">\(\Phi_1\)</span> и <span
 class="math inline">\(\Phi_2\)</span>, заданные в сигнатуре <span
 class="math inline">\(\Sigma\)</span> <em>эквивалентны</em>, если они
 задают равные функции относительно объединения своих переменных.</p>
@@ -262,15 +281,15 @@ id="основные-тождества-для-элементарных-функ
 id="двойственность-и-самодвойственность">Двойственность и
 самодвойственность</h2>
 <div id="definition-15">
-<p><strong>Определение:</strong> Булева функция <span
-class="math inline">\(f^{*} = \overline{f(\overline{x}_1, \ldots,
-\overline{x}_n)}\)</span> – <em>двойственная</em> к функции <span
-class="math inline">\(f\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Булева
+функция <span class="math inline">\(f^{*} = \overline{f(\overline{x}_1,
+\ldots, \overline{x}_n)}\)</span> – <em>двойственная</em> к функции
+<span class="math inline">\(f\)</span>.</p>
 </div>
 <div id="definition-16">
-<p><strong>Определение:</strong> Функция <span
-class="math inline">\(f\)</span> <em>самодвойственная</em>, если <span
-class="math inline">\(f^{*} = f\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Функция
+<span class="math inline">\(f\)</span> <em>самодвойственная</em>, если
+<span class="math inline">\(f^{*} = f\)</span>.</p>
 </div>
 <h2 data-number="2.4" id="принцип-двойственности">Принцип
 двойственности</h2>
@@ -279,25 +298,25 @@ class="math inline">\(f^{*} = f\)</span>.</p>
 id="совершенная-дизъюнктивная-нормальная-форма">Совершенная
 дизъюнктивная нормальная форма</h2>
 <div id="definition-17">
-<p><strong>Определение:</strong></p>
-</div>
-<p><span class="math display">\[x^{\sigma} = \begin{cases}
+<p><span class="margin-lft"><strong>Определение: </strong></span><span
+class="math display">\[x^{\sigma} = \begin{cases}
     x,\,\,\,\, \sigma = 1\\
     \overline{x},\,\,\,\, \sigma = 0
 \end{cases} \,\,\,\,\,\,\,\, \sigma \in \{0, 1\}\]</span></p>
+</div>
 <div id="theorem-0">
-<p><strong>Теорема:</strong> (ДНФ) Пусть <span
-class="math inline">\(f\)</span> булева функция от <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(ДНФ) Пусть
+<span class="math inline">\(f\)</span> булева функция от <span
 class="math inline">\(n\)</span> переменных. Тогда <span
 class="math display">\[f(x_1, \ldots, x_n) =
 \displaystyle\bigvee_{(\sigma_1, \ldots,
 \sigma_m)}x_1^{\sigma_1}\cdot\ldots\cdot x_n^{\sigma_m}f(\sigma_1,
 \ldots, \sigma_m, x_{m + 1}, \ldots, x_n)\]</span></p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\((\alpha_1,
-\ldots, \alpha_n)\)</span> произвольный двоичный набор. Если <span
-class="math inline">\(\exists i: \,\,\,\, (\alpha_1, \ldots, \alpha_n)
-\ne (\sigma_1, \ldots, \sigma_n)\)</span>, то <span
-class="math inline">\(x_1^{\sigma_1}\cdot\ldots\cdot
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\((\alpha_1, \ldots, \alpha_n)\)</span> произвольный
+двоичный набор. Если <span class="math inline">\(\exists i: \,\,\,\,
+(\alpha_1, \ldots, \alpha_n) \ne (\sigma_1, \ldots, \sigma_n)\)</span>,
+то <span class="math inline">\(x_1^{\sigma_1}\cdot\ldots\cdot
 x_n^{\sigma_m}f(\sigma_1, \ldots, \sigma_m, x_{m + 1}, \ldots,
 x_n)\)</span> на этом наборе <span class="math inline">\(0\)</span>. То
 есть нужно рассматривать только наборы <span
@@ -309,36 +328,37 @@ class="math inline">\(\alpha_1^{\alpha_1}\cdot\ldots\cdot
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-18">
-<p><strong>Определение:</strong> <em>Совершенная дизъюнктивная
-нормальная форма</em> – это правая часть равентва из теоремы при <span
-class="math inline">\(m = n\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Совершенная дизъюнктивная нормальная форма</em> –
+это правая часть равентва из теоремы при <span class="math inline">\(m =
+n\)</span>.</p>
 </div>
 <div id="definition-19">
-<p><strong>Определение:</strong> <em>Совершенная конъюнктивная
-нормальная форма</em> получается из СДНФ для двойственной функции по
-принципу двойственности (принцип двойственности – это, конечно,
-дичь).</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Совершенная конъюнктивная нормальная форма</em>
+получается из СДНФ для двойственной функции по принципу двойственности
+(принцип двойственности – это, конечно, дичь).</p>
 </div>
 <h2 data-number="2.6" id="полная-система-функций-алгебры-логики">Полная
 система функций алгебры логики</h2>
 <div id="definition-20">
-<p><strong>Определение:</strong> Система <span
-class="math inline">\(\{f_1, \ldots, f_n\}\)</span> булевых функций
-<em>полна</em>, если с помощью суперпозиций из нее можно получить любую
-функцию алгебры логики.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Система
+<span class="math inline">\(\{f_1, \ldots, f_n\}\)</span> булевых
+функций <em>полна</em>, если с помощью суперпозиций из нее можно
+получить любую функцию алгебры логики.</p>
 </div>
 <div id="statement-0">
-<p><strong>Утверждение:</strong> Система <span
-class="math inline">\(\{\overline{x}, x \vee y, x \wedge y\}\)</span>
-полна.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Система
+<span class="math inline">\(\{\overline{x}, x \vee y, x \wedge
+y\}\)</span> полна.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="statement-1">
-<p><strong>Утверждение:</strong> Пусть система <span
-class="math inline">\(M\)</span> полна. Если любую функцию из <span
-class="math inline">\(M\)</span> можно выразить суперпозициями функций
-из <span class="math inline">\(M’\)</span>, то <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+система <span class="math inline">\(M\)</span> полна. Если любую функцию
+из <span class="math inline">\(M\)</span> можно выразить суперпозициями
+функций из <span class="math inline">\(M’\)</span>, то <span
 class="math inline">\(M’\)</span> полна.</p>
 <p><strong>Утверждение:</strong><a name="statement-2"></a> Следующие
 системы полны:</p>
@@ -348,17 +368,17 @@ class="math inline">\(M’\)</span> полна.</p>
 <li><span class="math inline">\(\{x \downarrow y\}\)</span></li>
 <li><span class="math inline">\(\{0, 1, x\cdot y, x + y\}\)</span></li>
 </ol>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="2.7" id="полином-жегалкина">Полином Жегалкина</h2>
 <div id="statement-2">
-<p><strong>Утверждение:</strong> Любая булева функция представима в виде
-полинома по модулю <span class="math inline">\(2\)</span> единственным
-образом.</p>
-<p><em>Доказательство:</em> Система <span class="math inline">\(\{0, 1,
-x\cdot y, x + y\}\)</span> полна, а значит любая функция представима
-полиномом.</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Любая
+булева функция представима в виде полинома по модулю <span
+class="math inline">\(2\)</span> единственным образом.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Система
+<span class="math inline">\(\{0, 1, x\cdot y, x + y\}\)</span> полна, а
+значит любая функция представима полиномом.</p>
 <p>Докажем единственность. Посчитаем количество различных полиномов.
 Количество мономов (произведение некоторых <span class="math inline">\(k
 &lt; n\)</span> переменных) равно количеству подмножеств множества из
@@ -371,29 +391,33 @@ class="math inline">\(2^{2^n} \,\,\,\,\blacksquare\)</span></p>
 <h2 data-number="2.8" id="замыкание-множества-булевых-функций">Замыкание
 множества булевых функций</h2>
 <div id="definition-21">
-<p><strong>Определение:</strong> <em>Операции суперпозиции</em> – это
-подстановка переменных, подстановка функции, добавление либо удаление
-несущественных переменных. Функция, полученная из исходной с помощью
-операций суперпозиции, получена <em>суперпозициями</em>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span><em>Операции суперпозиции</em> – это подстановка
+переменных, подстановка функции, добавление либо удаление несущественных
+переменных. Функция, полученная из исходной с помощью операций
+суперпозиции, получена <em>суперпозициями</em>.</p>
 </div>
 <div id="definition-22">
-<p><strong>Определение:</strong> Пусть <span class="math inline">\(M =
-\{f_1, \ldots, f_n\}, \,\,\,\, f_i\)</span> – булева функция.
-<em>Замыкание</em> <span class="math inline">\(M\)</span> – это
-множество всех булевых функций, которые можно получить из <span
-class="math inline">\(M\)</span> суперпозициями.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+<span class="math inline">\(M = \{f_1, \ldots, f_n\}, \,\,\,\,
+f_i\)</span> – булева функция. <em>Замыкание</em> <span
+class="math inline">\(M\)</span> – это множество всех булевых функций,
+которые можно получить из <span class="math inline">\(M\)</span>
+суперпозициями.</p>
 </div>
 <p><strong>Обозначается:</strong> <span
 class="math inline">\([M]\)</span></p>
 <div id="definition-23">
-<p><strong>Определение:</strong> Система полна, если ее замыкание
-совпадает с <span class="math inline">\(P_2\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Система
+полна, если ее замыкание совпадает с <span
+class="math inline">\(P_2\)</span>.</p>
 </div>
 <h3 data-number="2.8.1" id="простейшие-свойства-замыкания">Простейшие
 свойства замыкания</h3>
 <div id="statement-3">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(M,
-M_1, M_2\)</span> системы булевых функций. Тогда</p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(M, M_1, M_2\)</span> системы булевых
+функций. Тогда</p>
 <ol type="1">
 <li><span class="math inline">\(M \subset [M]\)</span></li>
 <li><span class="math inline">\([\ldots[[[M]]]\ldots] =
@@ -403,13 +427,14 @@ class="math inline">\([M_1] \subset [M_2]\)</span></li>
 <li><span class="math inline">\([M_1] \cup [M_2] \subset [M_1 \cup
 M_2]\)</span></li>
 </ol>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="definition-24">
-<p><strong>Определение:</strong> Система <span
-class="math inline">\(M\)</span> булевых функций <em>замкнута</em>, если
-<span class="math inline">\([M] = M\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Система
+<span class="math inline">\(M\)</span> булевых функций
+<em>замкнута</em>, если <span class="math inline">\([M] =
+M\)</span>.</p>
 </div>
 <p><strong>Пример:</strong> Замыкание любой системы – замкнутое
 множество.</p>
@@ -417,125 +442,132 @@ class="math inline">\(M\)</span> булевых функций <em>замкну�
 классов <span class="math inline">\(T_0\)</span> и <span
 class="math inline">\(T_1\)</span></h2>
 <div id="definition-25">
-<p><strong>Определение:</strong> (<em>функции, сохраняющие</em> <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>функции, сохраняющие</em> <span
 class="math inline">\(0\)</span>) <span class="math inline">\(T_0 = \{f
 \in P_2: \,\,\,\, f(0, \ldots, 0) = 0\}\)</span>.</p>
 </div>
 <div id="definition-26">
-<p><strong>Определение:</strong> (<em>функции, сохраняющие</em> <span
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>(<em>функции, сохраняющие</em> <span
 class="math inline">\(1\)</span>) <span class="math inline">\(T_1 = \{f
 \in P_2: \,\,\,\, f(1, \ldots, 1) = 1\}\)</span>.</p>
 </div>
 <div id="statement-4">
-<p><strong>Утверждение:</strong> <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
 class="math inline">\(T_0\)</span> и <span
 class="math inline">\(T_1\)</span> замкнуты.</p>
-<p><em>Доказательство:</em> проверка по пунктам каждой операции
-суперпозиции <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> проверка по
+пунктам каждой операции суперпозиции <span
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="2.10"
 id="замкнутость-класса-самодвойственных-функций">Замкнутость класса
 самодвойственных функций</h2>
 <div id="definition-27">
-<p><strong>Определение:</strong> Множество всех самодвойственных функций
-обозначается <span class="math inline">\(S\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество всех самодвойственных функций обозначается
+<span class="math inline">\(S\)</span>.</p>
 </div>
 <div id="statement-5">
-<p><strong>Утверждение:</strong> <span class="math inline">\(S\)</span>
-замкнут.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span><span
+class="math inline">\(S\)</span> замкнут.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h3 data-number="2.10.1" id="лемма-о-несамодвойственной-функции">Лемма о
 несамодвойственной функции</h3>
 <div id="statement-6">
-<p><strong>Утверждение:</strong> Пусть <span
-class="math inline">\(f\)</span> не является самодвойственной. Тогда
-суперпозициями из <span class="math inline">\(f\)</span> и <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(f\)</span> не является самодвойственной.
+Тогда суперпозициями из <span class="math inline">\(f\)</span> и <span
 class="math inline">\(\overline{x}\)</span> можно получить
 константу.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(f \not\in S
-\Rightarrow \exists (\alpha_1, \ldots, \alpha_n): \,\,\,\, f(\alpha_1,
-\ldots, \alpha_n) = f(\overline{\alpha}_1, \ldots,
-\overline{\alpha}_n)\)</span>. Пусть <span class="math inline">\(g(x) =
-f(x^{\alpha_1}, \ldots, x^{\alpha_n})\)</span>. Тогда <span
-class="math inline">\(g(0) = f(0^{\alpha_1}, \ldots, 0^{\alpha_n}) =
-f(\overline{\alpha}_1, \ldots, \overline{\alpha}_n) = f(\alpha_1,
-\ldots, \alpha_n) = f(1^{\alpha_1}, \ldots, 1^{\alpha_n}) = g(1)
-\,\,\,\,\blacksquare\)</span></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(f \not\in S \Rightarrow \exists (\alpha_1, \ldots,
+\alpha_n): \,\,\,\, f(\alpha_1, \ldots, \alpha_n) =
+f(\overline{\alpha}_1, \ldots, \overline{\alpha}_n)\)</span>. Пусть
+<span class="math inline">\(g(x) = f(x^{\alpha_1}, \ldots,
+x^{\alpha_n})\)</span>. Тогда <span class="math inline">\(g(0) =
+f(0^{\alpha_1}, \ldots, 0^{\alpha_n}) = f(\overline{\alpha}_1, \ldots,
+\overline{\alpha}_n) = f(\alpha_1, \ldots, \alpha_n) = f(1^{\alpha_1},
+\ldots, 1^{\alpha_n}) = g(1) \,\,\,\,\blacksquare\)</span></p>
 </div>
 <h2 data-number="2.11"
 id="замкнутость-класса-монотонных-функций">Замкнутость класса монотонных
 функций</h2>
 <div id="definition-28">
-<p><strong>Определение:</strong> Пусть даны два двоичных набора <span
-class="math inline">\(\tilde{\alpha} = (\alpha_1, \ldots,
-\alpha_n)\)</span> и <span class="math inline">\(\tilde{\beta} =
-(\beta_1, \ldots, \beta_n)\)</span>. <span
-class="math inline">\(\tilde{\alpha} \le \tilde{\beta}\)</span>, если
-<span class="math inline">\(\forall i \in \{1, \ldots, n\}\,\,\,\,
-\alpha_i \le \beta_i\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+даны два двоичных набора <span class="math inline">\(\tilde{\alpha} =
+(\alpha_1, \ldots, \alpha_n)\)</span> и <span
+class="math inline">\(\tilde{\beta} = (\beta_1, \ldots,
+\beta_n)\)</span>. <span class="math inline">\(\tilde{\alpha} \le
+\tilde{\beta}\)</span>, если <span class="math inline">\(\forall i \in
+\{1, \ldots, n\}\,\,\,\, \alpha_i \le \beta_i\)</span>.</p>
 </div>
 <div id="definition-29">
-<p><strong>Определение:</strong> Булева функция <span
-class="math inline">\(f\)</span> <em>монотонна</em>, если для любых
-наборов <span class="math inline">\(\tilde{\alpha}\)</span> и <span
-class="math inline">\(\tilde{\beta}\)</span>, таких, что <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Булева
+функция <span class="math inline">\(f\)</span> <em>монотонна</em>, если
+для любых наборов <span class="math inline">\(\tilde{\alpha}\)</span> и
+<span class="math inline">\(\tilde{\beta}\)</span>, таких, что <span
 class="math inline">\(\tilde{\alpha} \le \tilde{\beta} \,\,\,\,
 f(\tilde{\alpha}) \le f(\tilde{\beta})\)</span>.</p>
 </div>
 <div id="definition-30">
-<p><strong>Определение:</strong> Множество всех монотонных булевых
-функций обозначается <span class="math inline">\(M\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество всех монотонных булевых функций обозначается
+<span class="math inline">\(M\)</span>.</p>
 </div>
 <div id="statement-7">
-<p><strong>Утверждение:</strong> Класс <span
-class="math inline">\(M\)</span> замкнут.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Класс
+<span class="math inline">\(M\)</span> замкнут.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="2.12" id="лемма-о-немонотонной-функции">Лемма о
 немонотонной функции</h2>
 <div id="statement-8">
-<p><strong>Утверждение:</strong> Если <span class="math inline">\(f
-\not\in M\)</span>, то суперпозициями из <span
-class="math inline">\(f\)</span>, <span class="math inline">\(0\)</span>
-и <span class="math inline">\(1\)</span> можно получить <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Если
+<span class="math inline">\(f \not\in M\)</span>, то суперпозициями из
+<span class="math inline">\(f\)</span>, <span
+class="math inline">\(0\)</span> и <span
+class="math inline">\(1\)</span> можно получить <span
 class="math inline">\(\overline{x}\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 <p><img src="img/img.png" /></p>
 </div>
 <h2 data-number="2.13"
 id="замкнутость-класса-линейных-функций">Замкнутость класса линейных
 функций</h2>
 <div id="definition-31">
-<p><strong>Определение:</strong> Булева функция <span
-class="math inline">\(f\)</span> <em>линейна</em>, если она представима
-в виде <span class="math inline">\(c_0 + c_1 x_1 + c_2 x_2 + \ldots +
-c_n x_n, \,\,\,\, c_i \in \{0, 1\}\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Булева
+функция <span class="math inline">\(f\)</span> <em>линейна</em>, если
+она представима в виде <span class="math inline">\(c_0 + c_1 x_1 + c_2
+x_2 + \ldots + c_n x_n, \,\,\,\, c_i \in \{0, 1\}\)</span>.</p>
 </div>
 <div id="definition-32">
-<p><strong>Определение:</strong> Множество всех линейных функций
-обозначается <span class="math inline">\(L\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение:
+</strong></span>Множество всех линейных функций обозначается <span
+class="math inline">\(L\)</span>.</p>
 </div>
 <div id="statement-9">
-<p><strong>Утверждение:</strong> Класс <span
-class="math inline">\(L\)</span> замкнут.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Класс
+<span class="math inline">\(L\)</span> замкнут.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="2.14" id="лемма-о-нелинейной-функции">Лемма о
 нелинейной функции</h2>
 <div id="statement-10">
-<p><strong>Утверждение:</strong> Пусть <span class="math inline">\(f
-\not\in L\)</span>. Тогда из <span class="math inline">\(f\)</span>,
-<span class="math inline">\(\overline{x}\)</span>, <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Пусть
+<span class="math inline">\(f \not\in L\)</span>. Тогда из <span
+class="math inline">\(f\)</span>, <span
+class="math inline">\(\overline{x}\)</span>, <span
 class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>
 суперпозициями можно получить <span class="math inline">\(x_1 \wedge
 x_2\)</span>.</p>
-<p><em>Доказательство:</em> Запишем <span
-class="math inline">\(f\)</span> полиномом Жегалкина, так как <span
-class="math inline">\(f \not\in L\)</span> в полиноме есть член степени
-большей <span class="math inline">\(1\)</span>. Пусть он содержит <span
-class="math inline">\(x_1\)</span> и <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Запишем
+<span class="math inline">\(f\)</span> полиномом Жегалкина, так как
+<span class="math inline">\(f \not\in L\)</span> в полиноме есть член
+степени большей <span class="math inline">\(1\)</span>. Пусть он
+содержит <span class="math inline">\(x_1\)</span> и <span
 class="math inline">\(x_2\)</span>. Тогда</p>
 <p><span class="math display">\[f = x_1 x_2 f_1(x_3, \ldots, x_n) + x_1
 f_2(x_3, \ldots, x_n) + x_2 f_3(x_3, \ldots, x_n) + f_4(x_3, \ldots,
@@ -573,12 +605,12 @@ x_1 x_2 \vee x_1 x_3 \vee x_2 x_3 &amp; + &amp; + &amp; + &amp; + &amp;
 id="теорема-о-полноте-систем-булевых-функций">Теорема о полноте систем
 булевых функций</h2>
 <div id="statement-11">
-<p><strong>Утверждение:</strong> Система булевых функций <span
-class="math inline">\(F\)</span> полна <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Система
+булевых функций <span class="math inline">\(F\)</span> полна <span
 class="math inline">\(\Leftrightarrow\)</span> <span
 class="math inline">\(F\)</span> не содержится ни в одном из классов
 <span class="math inline">\(T_0, T_1, S, M, L\)</span>.</p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\Rightarrow\]</span></p>
 <p>Ни один из классов <span class="math inline">\([T_0], [T_1], [S],
 [M], [L]\)</span> не является полным, то есть, если <span
@@ -616,12 +648,13 @@ id="из-любой-полной-системы-булевых-функций-м
 любой полной системы булевых функций можно выделить полную систему из
 четырех функций</h2>
 <div id="statement-12">
-<p><strong>Утверждение:</strong> Из любой полной системы булевых функций
-можно выделить полную систему из четырех функций.</p>
-<p><em>Доказательство:</em> Рассмотрим <span
-class="math inline">\(f_{T_0} \not\in T_0, \,\,\,\, f_{T_1} \not\in T_1,
-\,\,\,\, f_S \not\in S, \,\,\,\, f_M \not\in M, \,\,\,\, f_L \not\in
-L\)</span>. Это полная система по теореме. Если <span
+<p><span class="margin-lft"><strong>Утверждение: </strong></span>Из
+любой полной системы булевых функций можно выделить полную систему из
+четырех функций.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Рассмотрим
+<span class="math inline">\(f_{T_0} \not\in T_0, \,\,\,\, f_{T_1}
+\not\in T_1, \,\,\,\, f_S \not\in S, \,\,\,\, f_M \not\in M, \,\,\,\,
+f_L \not\in L\)</span>. Это полная система по теореме. Если <span
 class="math inline">\(f_{T_0}(1, \ldots, 1) = 1\)</span>, то <span
 class="math inline">\(f_{T_0}\)</span> несамодвойственная, т.к. <span
 class="math inline">\(f_{T_0}(0, \ldots, 0) = 1\)</span>, и значит можем
@@ -633,37 +666,40 @@ class="math inline">\(f_{T_0}\)</span> немонотонна, и значит �
 </div>
 <h2 data-number="2.18" id="предполные-классы">Предполные классы</h2>
 <div id="definition-33">
-<p><strong>Определение:</strong> Класс булевых функций <span
-class="math inline">\(F\)</span> <em>предполный</em>, если <span
-class="math inline">\([F] \ne P_2\)</span> и <span
-class="math inline">\(\forall f \in P_2 \setminus F \,\,\,\, [F \cup
-\{f\}] = P_2\)</span>.</p>
+<p><span class="margin-lft"><strong>Определение: </strong></span>Класс
+булевых функций <span class="math inline">\(F\)</span>
+<em>предполный</em>, если <span class="math inline">\([F] \ne
+P_2\)</span> и <span class="math inline">\(\forall f \in P_2 \setminus F
+\,\,\,\, [F \cup \{f\}] = P_2\)</span>.</p>
 </div>
 <div id="corollary-0">
-<p><strong>Следствие:</strong> Любой несовпадающий с <span
-class="math inline">\(P_2\)</span> замкнутый класс булевых функций
-содержится в одном из классов <span class="math inline">\(T_0, T_1, S,
-M, L\)</span>.</p>
-<p><em>Доказательство:</em> Если бы не содержался ни в одном, то был бы
-полной системой, а так как замкнут совпадал бы с <span
-class="math inline">\(P_2 \,\,\,\,\blacksquare\)</span></p>
-</div>
-<div id="statement-13">
-<p><strong>Утверждение:</strong> Предполный класс <span
-class="math inline">\(F\)</span> замкнут.</p>
-<p><em>Доказательство:</em> Пусть не так. Тогда возьмем <span
-class="math inline">\(f \in [F] \setminus F\)</span>. Имеем <span
-class="math inline">\([F \cup \{f\}] = P_2\)</span> и <span
-class="math inline">\([F \cup \{f\}] \subset [[F]] = [F] \ne P_2
+<p><span class="margin-lft"><strong>Следствие: </strong></span>Любой
+несовпадающий с <span class="math inline">\(P_2\)</span> замкнутый класс
+булевых функций содержится в одном из классов <span
+class="math inline">\(T_0, T_1, S, M, L\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Если бы не
+содержался ни в одном, то был бы полной системой, а так как замкнут
+совпадал бы с <span class="math inline">\(P_2
 \,\,\,\,\blacksquare\)</span></p>
 </div>
+<div id="statement-13">
+<p><span class="margin-lft"><strong>Утверждение:
+</strong></span>Предполный класс <span class="math inline">\(F\)</span>
+замкнут.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть не
+так. Тогда возьмем <span class="math inline">\(f \in [F] \setminus
+F\)</span>. Имеем <span class="math inline">\([F \cup \{f\}] =
+P_2\)</span> и <span class="math inline">\([F \cup \{f\}] \subset [[F]]
+= [F] \ne P_2 \,\,\,\,\blacksquare\)</span></p>
+</div>
 <div id="corollary-1">
-<p><strong>Следствие:</strong> Предполными классами в <span
+<p><span class="margin-lft"><strong>Следствие:
+</strong></span>Предполными классами в <span
 class="math inline">\(P_2\)</span> являются только классы <span
 class="math inline">\(T_0, T_1, S, M, L\)</span>.</p>
-<p><em>Доказательство:</em> Если класс <span
-class="math inline">\(F\)</span> предполный, то он содержится в одном из
-классов <span class="math inline">\(T_0, T_1, S, M, L\)</span>.
+<p><span class="margin-lft"><em>Доказательство:</em></span> Если класс
+<span class="math inline">\(F\)</span> предполный, то он содержится в
+одном из классов <span class="math inline">\(T_0, T_1, S, M, L\)</span>.
 Обозначим этот класс <span class="math inline">\(Q\)</span>. Пусть <span
 class="math inline">\(F \ne Q\)</span>. Возьмем <span
 class="math inline">\(f \in Q \setminus F \,\,\,\, [F \cup \{f\}]
@@ -678,8 +714,8 @@ class="math inline">\(T_0, T_1, S, M, L\)</span> в другом не содре
 id="полнота-относительно-замкнутого-класса">Полнота относительно
 замкнутого класса</h2>
 <div id="definition-34">
-<p><strong>Определение:</strong> Пусть класс <span
-class="math inline">\(F\)</span> замкнут. Система <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+класс <span class="math inline">\(F\)</span> замкнут. Система <span
 class="math inline">\(K\)</span> функций из <span
 class="math inline">\(F\)</span> <em>полна в</em> <span
 class="math inline">\(F\)</span>, если <span class="math inline">\([K] =
@@ -688,8 +724,8 @@ F\)</span>.</p>
 <h2 data-number="2.20" id="базис-замкнутого-класса">Базис замкнутого
 класса</h2>
 <div id="definition-35">
-<p><strong>Определение:</strong> Пусть класс <span
-class="math inline">\(F\)</span> замкнут. Система <span
+<p><span class="margin-lft"><strong>Определение: </strong></span>Пусть
+класс <span class="math inline">\(F\)</span> замкнут. Система <span
 class="math inline">\(K \subset F\)</span> – <em>базис</em> в <span
 class="math inline">\(F\)</span>, если <span
 class="math inline">\(K\)</span> полна в <span
@@ -700,14 +736,14 @@ class="math inline">\(F\)</span>.</p>
 <h2 data-number="2.21" id="теоремы-поста-о-базисе">Теоремы Поста о
 базисе</h2>
 <div id="theorem-1">
-<p><strong>Теорема:</strong> В каждом замкнутом классе существует
-конечный базис.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>В каждом
+замкнутом классе существует конечный базис.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <div id="theorem-2">
-<p><strong>Теорема:</strong> Существует счетное число замкнутых
-классов.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Существует
+счетное число замкнутых классов.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <p><span
 class="math inline">\(\DeclareMathOperator*{\bigplus}{\text{\Huge
@@ -715,7 +751,7 @@ $+$}}\)</span></p>
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="булевы-функции.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>

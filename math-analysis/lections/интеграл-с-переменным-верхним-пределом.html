@@ -11,7 +11,10 @@
     
     <title>Интеграл с переменным верхним пределом</title>
     <style>
-        div.sitenav { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        img.logo { position: fixed; left: 20px; top: 20px; width: 70px; height: 70px; }
+        div.sitenav { display: flex; justify-content: space-between; }
+        div.sitenav_right { display: flex; flex-direction: row; justify-content: flex-end; align-items: center; flex-grow: 0; }
+        div.sitenav_left { display: flex; flex-direction: row; justify-content: flex-start; align-items: center; flex-grow: 0; }
         span.navlink { margin-left: 10px; }
         span.navlink-label { display: inline-block; min-width: 4em; }
         html {
@@ -83,13 +86,13 @@
             max-width: 100%;
         }
 
-        h1 {
+        h1, h2 {
             padding-bottom: 3px;
             border-bottom: 1px solid black;
         }
 
         h1.title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             border: none;
         }
         h2.toc-title {
@@ -98,19 +101,20 @@
 
         h1, h2, h3, h4 {
             margin: 1rem 0;
+            margin-left: 0px;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
         }
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         ol, ul {
@@ -216,7 +220,11 @@
         }
 
 
-    </style>
+
+
+        .margin-lft {
+            margin-left: 0px;
+        }    </style>
 
     
     <script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
@@ -229,17 +237,28 @@
 <body>
 
 
+<a href="https://mech-math-msu.github.io/everything/#/">
+    <img src="ico.png" alt="" class="logo">
+</a>
+
 <nav id="sitenav">
     <div class="sitenav">
-        <span class="navlink">
-                        <a href="определенный-интеграл-римана.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
-                    </span>
-        <span class="navlink">
-                        <a href="кривые.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
-                    </span>
+        <div class="sitenav_left">
+            <span class="navlink">
+                <a href="search.html" accesskey="s" rel="search"><i class="fa-solid fa-search fa-sm" style="color: #363636;"></i></a>
+            </span>
+        </div>
+        <div class="sitenav_right">
+            <span class="navlink">
+                                <a href="определенный-интеграл-римана.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="index.html" accesskey="h" rel="top"><i class="fa-solid fa-book fa-sm" style="color: #363636;"></i></a>
+                            </span>
+            <span class="navlink">
+                                <a href="кривые.html" accesskey="p" rel="next"><i class="fa-solid fa-angle-right fa-sm" style="color: #363636;"></i></a>
+                            </span>
+        </div>
     </div>
 </nav>
 
@@ -248,32 +267,36 @@
 <h1 data-number="3" id="интеграл-с-переменным-верхним-пределом">Интеграл
 с переменным верхним пределом</h1>
 <div id="theorem-8">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x) \in
-R[a, b]\)</span>. Тогда <span class="math inline">\(F(x) =
-\displaystyle\int\limits_a^x f(t)dt\)</span> непрерывна на отрезке <span
-class="math inline">\([a, b]\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(f(x) \in R[a, b]
-\Rightarrow \exists c &gt; 0: \,\,\,\, |f(x)| &lt; c \,\,\,\, \forall x
-\in [a, b]\)</span>. <span class="math inline">\(|F(x + \Delta x) -
-F(x)| = \left|\displaystyle\int\limits_a^{x + \Delta x} f(t)dt -
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x) \in R[a, b]\)</span>. Тогда <span
+class="math inline">\(F(x) = \displaystyle\int\limits_a^x
+f(t)dt\)</span> непрерывна на отрезке <span class="math inline">\([a,
+b]\)</span>.</p>
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(f(x) \in R[a, b] \Rightarrow \exists c &gt; 0:
+\,\,\,\, |f(x)| &lt; c \,\,\,\, \forall x \in [a, b]\)</span>. <span
+class="math inline">\(|F(x + \Delta x) - F(x)| =
+\left|\displaystyle\int\limits_a^{x + \Delta x} f(t)dt -
 \displaystyle\int\limits_a^{x} f(t)dt\right|=\)</span> <span
 class="math inline">\(= \left|\displaystyle\int\limits_{x}^{x + \Delta
 x} f(t)dt\right| \le \left|\displaystyle\int\limits_{x}^{x + \Delta x}
 |f(t)|dt \right| \le |\Delta x|c \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-9">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x) \in
-R[a, b]\)</span>, <span class="math inline">\(f(x)\)</span> непрерывна в
-точке <span class="math inline">\(x_0 \in [a, b]\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x) \in R[a, b]\)</span>, <span
+class="math inline">\(f(x)\)</span> непрерывна в точке <span
+class="math inline">\(x_0 \in [a, b]\)</span>. Тогда <span
 class="math inline">\(F(x) = \displaystyle\int\limits_a^x
 f(t)dt\)</span> дифференцируема в точке <span
 class="math inline">\(x_0\)</span> и <span class="math inline">\(F’(x_0)
 = f(x_0)\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math inline">\(\forall
-\varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \,\,\,\, \forall t: 0
-&lt; |t - x_0| &lt; \delta \,\,\,\, |f(t) - f(x_0)| &lt;
-\varepsilon\)</span>. <span class="math inline">\(\left|\frac{1}{\Delta
-x}(F(x + \Delta x) - F(x)) - f(x_0)\right| = \left|\frac{1}{\Delta
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists \delta
+&gt; 0: \,\,\,\, \forall t: 0 &lt; |t - x_0| &lt; \delta \,\,\,\, |f(t)
+- f(x_0)| &lt; \varepsilon\)</span>. <span
+class="math inline">\(\left|\frac{1}{\Delta x}(F(x + \Delta x) - F(x)) -
+f(x_0)\right| = \left|\frac{1}{\Delta
 x}\left(\displaystyle\int\limits_a^{x + \Delta x} f(t)dt -
 \displaystyle\int\limits_a^{x} f(t)dt\right) -
 f(x_0)\right|=\)</span></p>
@@ -289,25 +312,26 @@ x}\right|\left|\Delta x\right| = \varepsilon
 \,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="corollary-0">
-<p><strong>Следствие:</strong> Пусть <span class="math inline">\(f(x)
-\in R[a, b]\)</span> и <span class="math inline">\(f(x) \in C(a,
-b)\)</span>. Тогда <span class="math inline">\(F(x) =
-\displaystyle\int\limits_a^x f(t)dt\)</span> – первообразная <span
+<p><span class="margin-lft"><strong>Следствие: </strong></span>Пусть
+<span class="math inline">\(f(x) \in R[a, b]\)</span> и <span
+class="math inline">\(f(x) \in C(a, b)\)</span>. Тогда <span
+class="math inline">\(F(x) = \displaystyle\int\limits_a^x
+f(t)dt\)</span> – первообразная <span
 class="math inline">\(f(x)\)</span> на <span class="math inline">\((a,
 b)\)</span> и <span class="math inline">\(F(x) \in C[a, b]\)</span>.</p>
-<p><em>Доказательство:</em></p>
+<p><span class="margin-lft"><em>Доказательство:</em></span></p>
 </div>
 <h2 data-number="3.1" id="формула-ньютона-лейбница">Формула
 Ньютона-Лейбница</h2>
 <div id="theorem-10">
-<p><strong>Теорема:</strong> (формула Ньютона-Лейбница) Пусть <span
-class="math inline">\(f(x) \in R[a, b]\)</span>, <span
-class="math inline">\(\Phi(x)\)</span> – первообразная <span
-class="math inline">\(f(x)\)</span> на <span class="math inline">\((a,
-b)\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(формула
+Ньютона-Лейбница) Пусть <span class="math inline">\(f(x) \in R[a,
+b]\)</span>, <span class="math inline">\(\Phi(x)\)</span> –
+первообразная <span class="math inline">\(f(x)\)</span> на <span
+class="math inline">\((a, b)\)</span>. Тогда <span
 class="math display">\[\displaystyle\int\limits_a^b f(x)dx = \Phi(b) -
 \Phi(a)\]</span></p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math inline">\(\displaystyle\int\limits_a^x f(t)dt = \Phi(x) +
 C\)</span>, так как один и два. Подставим <span class="math inline">\(x
 = a \Rightarrow C = -\Phi(a) \Rightarrow \displaystyle\int\limits_a^x
@@ -316,17 +340,18 @@ class="math inline">\(x = b\)</span>, получаем требуемое рав
 class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
 </div>
 <div id="theorem-11">
-<p><strong>Теорема:</strong> (обобщение формулы Ньютона-Лейбница) Пусть
-<span class="math inline">\(f(x) \in R[a, b]\)</span> и <span
-class="math inline">\(f(x) \in C([a, b] \setminus \{x_i\}_{i =
-1}^n)\)</span>, <span class="math inline">\(\Phi(x) \in C^([a,
-b])\)</span>, <span class="math inline">\(\Phi’(x) = f(x) \,\,\,\,
-\forall x \in [a, b] \setminus \{x_i\}_{i = 1}^n\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(обобщение
+формулы Ньютона-Лейбница) Пусть <span class="math inline">\(f(x) \in
+R[a, b]\)</span> и <span class="math inline">\(f(x) \in C([a, b]
+\setminus \{x_i\}_{i = 1}^n)\)</span>, <span
+class="math inline">\(\Phi(x) \in C^([a, b])\)</span>, <span
+class="math inline">\(\Phi’(x) = f(x) \,\,\,\, \forall x \in [a, b]
+\setminus \{x_i\}_{i = 1}^n\)</span>. Тогда <span
 class="math display">\[\displaystyle\int\limits_a^b f(x)dx = \Phi(b) -
 \Phi(a)\]</span></p>
-<p><em>Доказательство:</em> Пусть <span class="math inline">\(x_0 = a,
-\,\,\,\, x_{n + 1} = b\)</span>. Тогда <span
-class="math inline">\(\displaystyle\int\limits_a^b f(x)dx =
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
+class="math inline">\(x_0 = a, \,\,\,\, x_{n + 1} = b\)</span>. Тогда
+<span class="math inline">\(\displaystyle\int\limits_a^b f(x)dx =
 \displaystyle \sum_{i = 0}^{n}\displaystyle\int\limits_{x_i}^{x_{i + 1}}
 f(x)dx = \displaystyle \sum_{i = 0}^{n} \Phi(x_{i + 1}) - \Phi(x_{i}) =
 \Phi(b) - \Phi(a) \,\,\,\,\blacksquare\)</span></p>
@@ -335,9 +360,10 @@ f(x)dx = \displaystyle \sum_{i = 0}^{n} \Phi(x_{i + 1}) - \Phi(x_{i}) =
 id="интегрирование-по-частям-и-замена-переменной-для-определенного-интеграла">Интегрирование
 по частям и замена переменной для определенного интеграла</h2>
 <div id="theorem-12">
-<p><strong>Теорема:</strong> (замена переменной при интегрировании
-определенного интеграла) Пусть <span class="math inline">\(f(x) \in R[a,
-b], \,\,\,\, \varphi(t) \in C^{1}[\alpha, \beta]\)</span>(<span
+<p><span class="margin-lft"><strong>Теорема: </strong></span>(замена
+переменной при интегрировании определенного интеграла) Пусть <span
+class="math inline">\(f(x) \in R[a, b], \,\,\,\, \varphi(t) \in
+C^{1}[\alpha, \beta]\)</span>(<span
 class="math inline">\(\varphi(x)\)</span> непрерывна, и ее производная
 непрерывна), <span class="math inline">\(\varphi([\alpha, \beta])
 \subset [a, b], \,\,\,\,\varphi(\alpha) = a, \,\,\,\, \varphi(\beta) =
@@ -345,7 +371,7 @@ b\)</span>. Тогда <span
 class="math display">\[\displaystyle\int\limits_a^b f(x)dx =
 \displaystyle\int\limits_{\alpha}^{\beta}
 f(\varphi(t))\varphi’(t)dt\]</span></p>
-<p><em>Доказательство:</em> Пусть <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> Пусть <span
 class="math inline">\(\Phi(x)\)</span> – первообразная <span
 class="math inline">\(f(x)\)</span> на <span class="math inline">\((a,
 b) \Rightarrow \Phi(\varphi(t))\)</span> – первообразная для <span
@@ -356,13 +382,13 @@ f(\varphi(t))\varphi’(t)dt = \Phi(\varphi(\beta)) -
 \,\,\,\,\blacksquare\]</span></p>
 </div>
 <div id="theorem-13">
-<p><strong>Теорема:</strong> (интегрирование по частям определенного
-интеграла) Пусть <span class="math inline">\(f(x), g(x) \in R[a,
-b]\)</span>. Тогда <span
+<p><span class="margin-lft"><strong>Теорема:
+</strong></span>(интегрирование по частям определенного интеграла) Пусть
+<span class="math inline">\(f(x), g(x) \in R[a, b]\)</span>. Тогда <span
 class="math display">\[\displaystyle\int\limits_a^b f(x)g’(x)dx =
 \left.f(x)g(x)\right\rvert_{a}^{b} - \displaystyle\int\limits_a^b
 f’(x)g(x)dx\]</span></p>
-<p><em>Доказательство:</em> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
 class="math display">\[\left.f(x)g(x)\right\rvert_{a}^{b} =
 \displaystyle\int\limits_a^b \left(f(x)g(x)\right)’dx
 \,\,\,\,\blacksquare\]</span></p>
@@ -370,15 +396,16 @@ class="math display">\[\left.f(x)g(x)\right\rvert_{a}^{b} =
 <h2 data-number="3.3" id="вторая-теорема-о-средних">Вторая теорема о
 средних</h2>
 <div id="theorem-14">
-<p><strong>Теорема:</strong> Пусть <span class="math inline">\(f(x) \in
-C[a, b], \,\,\,\, g(x) \in C^1[a, b], \,\,\,\, g(x)\)</span> – монотонно
-возрастает. Тогда <span class="math inline">\(\exists c \in [a,
-b]\)</span>:</p>
+<p><span class="margin-lft"><strong>Теорема: </strong></span>Пусть <span
+class="math inline">\(f(x) \in C[a, b], \,\,\,\, g(x) \in C^1[a, b],
+\,\,\,\, g(x)\)</span> – монотонно возрастает. Тогда <span
+class="math inline">\(\exists c \in [a, b]\)</span>:</p>
 <p><span class="math display">\[\displaystyle\int\limits_a^b f(x)g(x)dx
 = g(a)\displaystyle\int\limits_a^c f(x)dx +
 g(b)\displaystyle\int\limits_c^b f(x)dx\]</span></p>
-<p><em>Доказательство:</em> <span class="math inline">\(F(x) =
-\displaystyle\int\limits_x^b f(t)dt\)</span> <span
+<p><span class="margin-lft"><em>Доказательство:</em></span> <span
+class="math inline">\(F(x) = \displaystyle\int\limits_x^b
+f(t)dt\)</span> <span
 class="math display">\[\displaystyle\int\limits_a^b f(x)g(x)dx =
 -\displaystyle\int\limits_a^b g(x)dF(x) = -\left.g(x)F(x)\right|_{a}^{b}
 + \displaystyle\int\limits_a^b F(x)g’(x)dx=\]</span> <span
@@ -393,7 +420,7 @@ g(b)\displaystyle\int\limits_c^b f(x)dx
 
 
 <nav id="sitenav">
-    <div class="sitenav">
+    <div class="sitenav_right">
         <span class="navlink">
                         <a href="определенный-интеграл-римана.html" accesskey="n" rel="previous"><i class="fa-solid fa-angle-left fa-sm" style="color: #363636;"></i></a>
                     </span>
